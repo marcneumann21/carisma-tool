@@ -1,0 +1,1131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_INSeoINVEfG2M-ml6d0mJw" name="euaiactcompliance" URI="" metaclassReference="_TkKQQINVEfG2M-ml6d0mJw _TkK3UINVEfG2M-ml6d0mJw _TkK3UYNVEfG2M-ml6d0mJw _TkK3UoNVEfG2M-ml6d0mJw _TkLeYINVEfG2M-ml6d0mJw _TkLeYYNVEfG2M-ml6d0mJw">
+  <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Mf3uIINVEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NMDesYNVEfG2M-ml6d0mJw" source="PapyrusVersion">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NMDesoNVEfG2M-ml6d0mJw" key="Version" value="0.0.0"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NMDes4NVEfG2M-ml6d0mJw" key="Comment" value="&lt;undefined>"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NMDetINVEfG2M-ml6d0mJw" key="Copyright" value=""/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NMDetYNVEfG2M-ml6d0mJw" key="Date" value=""/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NMDetoNVEfG2M-ml6d0mJw" key="Author" value="&lt;undefined>"/>
+    </eAnnotations>
+    <contents xmi:type="ecore:EPackage" xmi:id="_q2y-YYNXEfG2M-ml6d0mJw" name="euaiactcompliance" nsURI="http:///schemas/euaiactcompliance/_q2y-YINXEfG2M-ml6d0mJw/4" nsPrefix="euaiactcompliance">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q20MiYNXEfG2M-ml6d0mJw" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_q20MioNXEfG2M-ml6d0mJw" key="Version" value="0.0.5"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_q20Mi4NXEfG2M-ml6d0mJw" key="Comment" value="added Stereotypes"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_q20MjINXEfG2M-ml6d0mJw" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_q20MjYNXEfG2M-ml6d0mJw" key="Date" value="2026-07-19"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_q20MjoNXEfG2M-ml6d0mJw" key="Author" value="Marc Neumann"/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_q2y-YoNXEfG2M-ml6d0mJw" name="AnnexIIIUseCase">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q2y-Y4NXEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_K3NHMINVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-ZINXEfG2M-ml6d0mJw" name="BiometricIdentification" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-ZoNXEfG2M-ml6d0mJw" name="BiometricCategorisation" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-aINXEfG2M-ml6d0mJw" name="CriticalInfrastructure" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-aoNXEfG2M-ml6d0mJw" name="Education" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-bINXEfG2M-ml6d0mJw" name="HumanEmployment" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-boNXEfG2M-ml6d0mJw" name="EssentialServices" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-cINXEfG2M-ml6d0mJw" name="Law" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-coNXEfG2M-ml6d0mJw" name="Migration" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-dINXEfG2M-ml6d0mJw" name="Justice" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-doNXEfG2M-ml6d0mJw" name="NarrowProceduralTask" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-eINXEfG2M-ml6d0mJw" name="ImprovesHumanActivity" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-eoNXEfG2M-ml6d0mJw" name="PreparatoryTask" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_q2y-fINXEfG2M-ml6d0mJw" name="base_UseCase" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//UseCase"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_q2y-foNXEfG2M-ml6d0mJw" name="Profiling">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q2y-f4NXEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_NMDesINVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_q2y-gINXEfG2M-ml6d0mJw" name="base_UseCase" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//UseCase"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_q2y-goNXEfG2M-ml6d0mJw" name="SafetyComponent">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q2y-g4NXEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ONr60INVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-hINXEfG2M-ml6d0mJw" name="Machinery" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-hoNXEfG2M-ml6d0mJw" name="Toy" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-iINXEfG2M-ml6d0mJw" name="Elevator" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-ioNXEfG2M-ml6d0mJw" name="Medical" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-jINXEfG2M-ml6d0mJw" name="InVitroDiagnostics" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-joNXEfG2M-ml6d0mJw" name="PersonalProtective" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-kINXEfG2M-ml6d0mJw" name="CivilAviation" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-koNXEfG2M-ml6d0mJw" name="RailSystem" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-lINXEfG2M-ml6d0mJw" name="Agricultural" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_q2y-loNXEfG2M-ml6d0mJw" name="base_Component" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Component"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_q2y-mINXEfG2M-ml6d0mJw" name="HumanInteraction">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q2y-mYNXEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_VqiG4INVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_q2y-moNXEfG2M-ml6d0mJw" name="base_UseCase" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//UseCase"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_q2y-nINXEfG2M-ml6d0mJw" name="SyntheticContent">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q2y-nYNXEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_YbmgUINVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_q2y-noNXEfG2M-ml6d0mJw" name="base_UseCase" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//UseCase"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_q2y-oINXEfG2M-ml6d0mJw" name="EmotionRecognitionNotify">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q2y-oYNXEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_Zjv0IINVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_q2y-ooNXEfG2M-ml6d0mJw" name="base_UseCase" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//UseCase"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_q2y-pINXEfG2M-ml6d0mJw" name="BiometricCategorizationNotify">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q2y-pYNXEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_avQlAINVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_q2y-poNXEfG2M-ml6d0mJw" name="base_UseCase" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//UseCase"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_q2y-qINXEfG2M-ml6d0mJw" name="Deepfake">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q2y-qYNXEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_cO8PEINVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_q2y-qoNXEfG2M-ml6d0mJw" name="base_UseCase" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//UseCase"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_q2y-rINXEfG2M-ml6d0mJw" name="PublicInterestText">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q2y-rYNXEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_dwDcgINVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_q2y-roNXEfG2M-ml6d0mJw" name="base_UseCase" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//UseCase"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_q2y-sINXEfG2M-ml6d0mJw" name="ManipulativeBehaviour">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q2y-sYNXEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_hGyu0INVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_q2y-soNXEfG2M-ml6d0mJw" name="base_UseCase" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//UseCase"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_q2y-tINXEfG2M-ml6d0mJw" name="ExploitingVulnerability">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q2y-tYNXEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_h9o3QINVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-toNXEfG2M-ml6d0mJw" name="Age" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-uINXEfG2M-ml6d0mJw" name="Disability" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-uoNXEfG2M-ml6d0mJw" name="Social" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-vINXEfG2M-ml6d0mJw" name="Economic" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_q2y-voNXEfG2M-ml6d0mJw" name="base_UseCase" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//UseCase"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_q2y-wINXEfG2M-ml6d0mJw" name="SocialScoring">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q2y-wYNXEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_i3DLgINVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_q2y-woNXEfG2M-ml6d0mJw" name="base_UseCase" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//UseCase"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_q2y-xINXEfG2M-ml6d0mJw" name="PredictivePolicing">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q2y-xYNXEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_jxVCcINVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_q2y-xoNXEfG2M-ml6d0mJw" name="base_UseCase" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//UseCase"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_q2y-yINXEfG2M-ml6d0mJw" name="FacialRecognition">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q2y-yYNXEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_kpINIINVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-yoNXEfG2M-ml6d0mJw" name="Internet" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-zINXEfG2M-ml6d0mJw" name="CCTV" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_q2y-zoNXEfG2M-ml6d0mJw" name="base_UseCase" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//UseCase"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_q2y-0INXEfG2M-ml6d0mJw" name="EmotionRecognition">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q2y-0YNXEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_lkkhsINVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-0oNXEfG2M-ml6d0mJw" name="Race" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-1INXEfG2M-ml6d0mJw" name="Politics" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-1oNXEfG2M-ml6d0mJw" name="UnionMembership" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-2INXEfG2M-ml6d0mJw" name="Religion" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-2oNXEfG2M-ml6d0mJw" name="Sexuality" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_q2y-3INXEfG2M-ml6d0mJw" name="base_UseCase" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//UseCase"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_q2y-3oNXEfG2M-ml6d0mJw" name="BiometricCategorization">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q2y-34NXEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_mXTmMINVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_q2y-4INXEfG2M-ml6d0mJw" name="base_UseCase" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//UseCase"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_q2y-4oNXEfG2M-ml6d0mJw" name="BiometricIdentification">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q2y-44NXEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_naNNoINVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-5INXEfG2M-ml6d0mJw" name="PublicSpace" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-5oNXEfG2M-ml6d0mJw" name="VictimSearch" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-6INXEfG2M-ml6d0mJw" name="ThreatPrevention" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_q2y-6oNXEfG2M-ml6d0mJw" name="CriminalSuspectSearch" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_q2y-7INXEfG2M-ml6d0mJw" name="base_UseCase" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//UseCase"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_q2y-7oNXEfG2M-ml6d0mJw" name="AISystem">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q2y-74NXEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_lMlNkINXEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_q2y-8INXEfG2M-ml6d0mJw" name="base_Component" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Component"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_oCCNMYNWEfG2M-ml6d0mJw" name="euaiactcompliance" nsURI="http:///schemas/euaiactcompliance/_oCCNMINWEfG2M-ml6d0mJw/3" nsPrefix="euaiactcompliance">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oCDbWYNWEfG2M-ml6d0mJw" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oCDbWoNWEfG2M-ml6d0mJw" key="Version" value="0.0.4"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oCDbW4NWEfG2M-ml6d0mJw" key="Comment" value="add Tags to AnnexIIIUseCase&#xA;&#x9;"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oCDbXINWEfG2M-ml6d0mJw" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oCDbXYNWEfG2M-ml6d0mJw" key="Date" value="2026-07-19"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oCDbXoNWEfG2M-ml6d0mJw" key="Author" value="Marc Neumann"/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_oCCNMoNWEfG2M-ml6d0mJw" name="AnnexIIIUseCase">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oCCNM4NWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_K3NHMINVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_oCCNNINWEfG2M-ml6d0mJw" name="BiometricIdentification" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_oCCNNoNWEfG2M-ml6d0mJw" name="BiometricCategorisation" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_oCCNOINWEfG2M-ml6d0mJw" name="CriticalInfrastructure" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_oCCNOoNWEfG2M-ml6d0mJw" name="Education" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_oCCNPINWEfG2M-ml6d0mJw" name="HumanEmployment" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_oCCNPoNWEfG2M-ml6d0mJw" name="EssentialServices" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_oCCNQINWEfG2M-ml6d0mJw" name="Law" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_oCCNQoNWEfG2M-ml6d0mJw" name="Migration" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_oCCNRINWEfG2M-ml6d0mJw" name="Justice" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_oCCNRoNWEfG2M-ml6d0mJw" name="NarrowProceduralTask" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_oCCNSINWEfG2M-ml6d0mJw" name="ImprovesHumanActivity" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_oCCNSoNWEfG2M-ml6d0mJw" name="PreparatoryTask" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_oCCNTINWEfG2M-ml6d0mJw" name="Profiling">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oCCNTYNWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_NMDesINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_oCCNToNWEfG2M-ml6d0mJw" name="SafetyComponent">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oCCNT4NWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ONr60INVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_oCCNUINWEfG2M-ml6d0mJw" name="Machinery" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_oCCNUoNWEfG2M-ml6d0mJw" name="Toy" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_oCCNVINWEfG2M-ml6d0mJw" name="Elevator" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_oCCNVoNWEfG2M-ml6d0mJw" name="Medical" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_oCCNWINWEfG2M-ml6d0mJw" name="InVitroDiagnostics" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_oCCNWoNWEfG2M-ml6d0mJw" name="PersonalProtective" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_oCCNXINWEfG2M-ml6d0mJw" name="CivilAviation" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_oCCNXoNWEfG2M-ml6d0mJw" name="RailSystem" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_oCCNYINWEfG2M-ml6d0mJw" name="Agricultural" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_oCCNYoNWEfG2M-ml6d0mJw" name="HumanInteraction">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oCC0QINWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_VqiG4INVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_oCC0QYNWEfG2M-ml6d0mJw" name="SyntheticContent">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oCC0QoNWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_YbmgUINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_oCC0Q4NWEfG2M-ml6d0mJw" name="EmotionRecognitionNotify">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oCC0RINWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_Zjv0IINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_oCC0RYNWEfG2M-ml6d0mJw" name="BiometricCategorizationNotify">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oCC0RoNWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_avQlAINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_oCC0R4NWEfG2M-ml6d0mJw" name="Deepfake">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oCC0SINWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_cO8PEINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_oCC0SYNWEfG2M-ml6d0mJw" name="PublicInterestText">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oCC0SoNWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_dwDcgINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_oCC0S4NWEfG2M-ml6d0mJw" name="ManipulativeBehaviour">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oCC0TINWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_hGyu0INVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_oCC0TYNWEfG2M-ml6d0mJw" name="ExploitingVulnerability">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oCC0ToNWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_h9o3QINVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_oCC0T4NWEfG2M-ml6d0mJw" name="Age" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_oCC0UYNWEfG2M-ml6d0mJw" name="Disability" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_oCC0U4NWEfG2M-ml6d0mJw" name="Social" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_oCC0VYNWEfG2M-ml6d0mJw" name="Economic" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_oCC0V4NWEfG2M-ml6d0mJw" name="SocialScoring">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oCC0WINWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_i3DLgINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_oCC0WYNWEfG2M-ml6d0mJw" name="PredictivePolicing">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oCC0WoNWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_jxVCcINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_oCC0W4NWEfG2M-ml6d0mJw" name="FacialRecognition">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oCC0XINWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_kpINIINVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_oCC0XYNWEfG2M-ml6d0mJw" name="Internet" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_oCC0X4NWEfG2M-ml6d0mJw" name="CCTV" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_oCC0YYNWEfG2M-ml6d0mJw" name="EmotionRecognition">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oCC0YoNWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_lkkhsINVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_oCC0Y4NWEfG2M-ml6d0mJw" name="Race" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_oCC0ZYNWEfG2M-ml6d0mJw" name="Politics" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_oCC0Z4NWEfG2M-ml6d0mJw" name="UnionMembership" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_oCC0aYNWEfG2M-ml6d0mJw" name="Religion" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_oCC0a4NWEfG2M-ml6d0mJw" name="Sexuality" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_oCC0bYNWEfG2M-ml6d0mJw" name="BiometricCategorization">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oCC0boNWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_mXTmMINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_oCC0b4NWEfG2M-ml6d0mJw" name="BiometricIdentification">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oCC0cINWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_naNNoINVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_oCC0cYNWEfG2M-ml6d0mJw" name="PublicSpace" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_oCC0c4NWEfG2M-ml6d0mJw" name="VictimSearch" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_oCC0dYNWEfG2M-ml6d0mJw" name="ThreatPrevention" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_oCC0d4NWEfG2M-ml6d0mJw" name="CriminalSuspectSearch" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_FG3DwINWEfG2M-ml6d0mJw" name="euaiactcompliance" nsURI="http:///schemas/euaiactcompliance/_FG2csINWEfG2M-ml6d0mJw/2" nsPrefix="euaiactcompliance">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FG3q24NWEfG2M-ml6d0mJw" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FG3q3INWEfG2M-ml6d0mJw" key="Version" value="0.0.3"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FG3q3YNWEfG2M-ml6d0mJw" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FG3q3oNWEfG2M-ml6d0mJw" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FG3q34NWEfG2M-ml6d0mJw" key="Date" value="2026-07-19"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FG3q4INWEfG2M-ml6d0mJw" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_FG3DwYNWEfG2M-ml6d0mJw" name="AnnexIIIUseCase">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FG3DwoNWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_K3NHMINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_FG3Dw4NWEfG2M-ml6d0mJw" name="Profiling">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FG3DxINWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_NMDesINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_FG3DxYNWEfG2M-ml6d0mJw" name="SafetyComponent">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FG3DxoNWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ONr60INVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_FG3Dx4NWEfG2M-ml6d0mJw" name="Machinery" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_FG3DyYNWEfG2M-ml6d0mJw" name="Toy" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_FG3Dy4NWEfG2M-ml6d0mJw" name="Elevator" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_FG3DzYNWEfG2M-ml6d0mJw" name="HumanInteraction">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FG3DzoNWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_VqiG4INVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_FG3Dz4NWEfG2M-ml6d0mJw" name="SyntheticContent">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FG3D0INWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_YbmgUINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_FG3D0YNWEfG2M-ml6d0mJw" name="EmotionRecognitionNotify">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FG3D0oNWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_Zjv0IINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_FG3D04NWEfG2M-ml6d0mJw" name="BiometricCategorizationNotify">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FG3D1INWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_avQlAINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_FG3D1YNWEfG2M-ml6d0mJw" name="Deepfake">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FG3D1oNWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_cO8PEINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_FG3D14NWEfG2M-ml6d0mJw" name="PublicInterestText">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FG3D2INWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_dwDcgINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_FG3D2YNWEfG2M-ml6d0mJw" name="ManipulativeBehaviour">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FG3D2oNWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_hGyu0INVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_FG3D24NWEfG2M-ml6d0mJw" name="ExploitingVulnerability">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FG3D3INWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_h9o3QINVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_FG3D3YNWEfG2M-ml6d0mJw" name="Age" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_FG3D34NWEfG2M-ml6d0mJw" name="Disability" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_FG3D4YNWEfG2M-ml6d0mJw" name="Social" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_FG3D44NWEfG2M-ml6d0mJw" name="Economic" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_FG3D5YNWEfG2M-ml6d0mJw" name="SocialScoring">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FG3D5oNWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_i3DLgINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_FG3D54NWEfG2M-ml6d0mJw" name="PredictivePolicing">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FG3D6INWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_jxVCcINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_FG3D6YNWEfG2M-ml6d0mJw" name="FacialRecognition">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FG3D6oNWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_kpINIINVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_FG3D64NWEfG2M-ml6d0mJw" name="Internet" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_FG3D7YNWEfG2M-ml6d0mJw" name="CCTV" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_FG3D74NWEfG2M-ml6d0mJw" name="EmotionRecognition">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FG3D8INWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_lkkhsINVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_FG3D8YNWEfG2M-ml6d0mJw" name="Race" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_FG3D84NWEfG2M-ml6d0mJw" name="Politics" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_FG3D9YNWEfG2M-ml6d0mJw" name="UnionMembership" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_FG3D94NWEfG2M-ml6d0mJw" name="Religion" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_FG3D-YNWEfG2M-ml6d0mJw" name="Sexuality" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_FG3D-4NWEfG2M-ml6d0mJw" name="BiometricCategorization">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FG3D_INWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_mXTmMINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_FG3D_YNWEfG2M-ml6d0mJw" name="BiometricIdentification">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FG3D_oNWEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_naNNoINVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_FG3D_4NWEfG2M-ml6d0mJw" name="PublicSpace" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_FG3EAYNWEfG2M-ml6d0mJw" name="VictimSearch" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_FG3EA4NWEfG2M-ml6d0mJw" name="ThreatPrevention" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_FG3EBYNWEfG2M-ml6d0mJw" name="CriminalSuspectSearch" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_yANjAINVEfG2M-ml6d0mJw" name="euaiactcompliance" nsURI="http:///schemas/euaiactcompliance/_yAMU4INVEfG2M-ml6d0mJw/1" nsPrefix="euaiactcompliance">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yAOKFINVEfG2M-ml6d0mJw" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yAOKFYNVEfG2M-ml6d0mJw" key="Version" value="0.0.2"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yAOKFoNVEfG2M-ml6d0mJw" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yAOKF4NVEfG2M-ml6d0mJw" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yAOKGINVEfG2M-ml6d0mJw" key="Date" value="2026-07-19"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yAOKGYNVEfG2M-ml6d0mJw" key="Author" value="Marc Neumann"/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_yANjAYNVEfG2M-ml6d0mJw" name="AnnexIIIUseCase">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yANjAoNVEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_K3NHMINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_yANjA4NVEfG2M-ml6d0mJw" name="Profiling">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yANjBINVEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_NMDesINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_yANjBYNVEfG2M-ml6d0mJw" name="SafetyComponent">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yANjBoNVEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ONr60INVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_yANjB4NVEfG2M-ml6d0mJw" name="HumanInteraction">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yANjCINVEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_VqiG4INVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_yANjCYNVEfG2M-ml6d0mJw" name="SyntheticContent">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yANjCoNVEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_YbmgUINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_yANjC4NVEfG2M-ml6d0mJw" name="EmotionRecognitionNotify">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yANjDINVEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_Zjv0IINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_yANjDYNVEfG2M-ml6d0mJw" name="BiometricCategorizationNotify">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yANjDoNVEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_avQlAINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_yANjD4NVEfG2M-ml6d0mJw" name="Deepfake">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yANjEINVEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_cO8PEINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_yANjEYNVEfG2M-ml6d0mJw" name="PublicInterestText">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yANjEoNVEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_dwDcgINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_yANjE4NVEfG2M-ml6d0mJw" name="ManipulativeBehaviour">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yANjFINVEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_hGyu0INVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_yANjFYNVEfG2M-ml6d0mJw" name="ExploitingVulnerability">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yANjFoNVEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_h9o3QINVEfG2M-ml6d0mJw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_yANjF4NVEfG2M-ml6d0mJw" name="Age" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_yANjGYNVEfG2M-ml6d0mJw" name="Disability" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_yANjG4NVEfG2M-ml6d0mJw" name="Social" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_yANjHYNVEfG2M-ml6d0mJw" name="Economic" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_yANjH4NVEfG2M-ml6d0mJw" name="SocialScoring">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yANjIINVEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_i3DLgINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_yANjIYNVEfG2M-ml6d0mJw" name="PredictivePolicing">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yANjIoNVEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_jxVCcINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_yANjI4NVEfG2M-ml6d0mJw" name="FacialRecognition">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yANjJINVEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_kpINIINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_yANjJYNVEfG2M-ml6d0mJw" name="EmotionRecognition">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yANjJoNVEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_lkkhsINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_yANjJ4NVEfG2M-ml6d0mJw" name="BiometricCategorization">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yANjKINVEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_mXTmMINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_yANjKYNVEfG2M-ml6d0mJw" name="BiometricIdentification">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yANjKoNVEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_naNNoINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_Mf3uIYNVEfG2M-ml6d0mJw" name="euaiactcompliance" nsURI="http:///schemas/euaiactcompliance/_Mf3HEINVEfG2M-ml6d0mJw/0" nsPrefix="euaiactcompliance">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Mf3uJINVEfG2M-ml6d0mJw" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Mf3uJYNVEfG2M-ml6d0mJw" key="Version" value="0.0.1"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Mf3uJoNVEfG2M-ml6d0mJw" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Mf3uJ4NVEfG2M-ml6d0mJw" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Mf3uKINVEfG2M-ml6d0mJw" key="Date" value="2026-07-19"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Mf3uKYNVEfG2M-ml6d0mJw" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_Mf3uIoNVEfG2M-ml6d0mJw" name="AnnexIIIUseCase">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Mf3uI4NVEfG2M-ml6d0mJw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_K3NHMINVEfG2M-ml6d0mJw"/>
+      </eClassifiers>
+    </contents>
+  </eAnnotations>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_TkKQQINVEfG2M-ml6d0mJw" alias="Component">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Component"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_TkK3UINVEfG2M-ml6d0mJw" alias="UseCase">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#UseCase"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_TkK3UYNVEfG2M-ml6d0mJw" alias="Association">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Association"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_TkK3UoNVEfG2M-ml6d0mJw" alias="Dependency">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Dependency"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_TkLeYINVEfG2M-ml6d0mJw" alias="Artifact">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Artifact"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_TkLeYYNVEfG2M-ml6d0mJw" alias="Actor">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Actor"/>
+  </elementImport>
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_IQJlYINVEfG2M-ml6d0mJw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_IQJlYYNVEfG2M-ml6d0mJw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_METAMODELS/UML.metamodel.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_K3NHMINVEfG2M-ml6d0mJw" name="AnnexIIIUseCase">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_MCXdUINWEfG2M-ml6d0mJw" name="BiometricIdentification">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_M5LJgINWEfG2M-ml6d0mJw" name="BiometricCategorisation">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_NxIFMINWEfG2M-ml6d0mJw" name="CriticalInfrastructure">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_OrxvkINWEfG2M-ml6d0mJw" name="Education">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_PkOagINWEfG2M-ml6d0mJw" name="HumanEmployment">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_QUh2EINWEfG2M-ml6d0mJw" name="EssentialServices">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_RIAhcINWEfG2M-ml6d0mJw" name="Law">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_SfR2YINWEfG2M-ml6d0mJw" name="Migration">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_TZxIsINWEfG2M-ml6d0mJw" name="Justice">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_UJpGcINWEfG2M-ml6d0mJw" name="NarrowProceduralTask">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_U8A-kINWEfG2M-ml6d0mJw" name="ImprovesHumanActivity">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_WB8r4INWEfG2M-ml6d0mJw" name="PreparatoryTask">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_dieooYNXEfG2M-ml6d0mJw" name="base_UseCase" association="_diczcINXEfG2M-ml6d0mJw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#UseCase"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dieoooNXEfG2M-ml6d0mJw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_NMDesINVEfG2M-ml6d0mJw" name="Profiling">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_eDiHQINXEfG2M-ml6d0mJw" name="base_UseCase" association="_eDgSEINXEfG2M-ml6d0mJw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#UseCase"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eDiHQYNXEfG2M-ml6d0mJw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_ONr60INVEfG2M-ml6d0mJw" name="SafetyComponent">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_BoCMcINWEfG2M-ml6d0mJw" name="Machinery">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Crl7MINWEfG2M-ml6d0mJw" name="Toy">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_D1KyYINWEfG2M-ml6d0mJw" name="Elevator">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_GFXTYINWEfG2M-ml6d0mJw" name="Medical">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_HcVGUINWEfG2M-ml6d0mJw" name="InVitroDiagnostics">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_IYiP4INWEfG2M-ml6d0mJw" name="PersonalProtective">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_JQADYINWEfG2M-ml6d0mJw" name="CivilAviation">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_KAd3AINWEfG2M-ml6d0mJw" name="RailSystem">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_KytMQINWEfG2M-ml6d0mJw" name="Agricultural">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_nIeSgYNXEfG2M-ml6d0mJw" name="base_Component" association="_nIdEYINXEfG2M-ml6d0mJw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Component"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nIeSgoNXEfG2M-ml6d0mJw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_VqiG4INVEfG2M-ml6d0mJw" name="HumanInteraction">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_c8VOoINXEfG2M-ml6d0mJw" name="base_UseCase" association="_c8TZcINXEfG2M-ml6d0mJw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#UseCase"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_c8VOoYNXEfG2M-ml6d0mJw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_YbmgUINVEfG2M-ml6d0mJw" name="SyntheticContent">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_bn7AcINXEfG2M-ml6d0mJw" name="base_UseCase" association="_bn5yUINXEfG2M-ml6d0mJw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#UseCase"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bn7AcYNXEfG2M-ml6d0mJw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_Zjv0IINVEfG2M-ml6d0mJw" name="EmotionRecognitionNotification">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_az9z8INXEfG2M-ml6d0mJw" name="base_UseCase" association="_az7-wINXEfG2M-ml6d0mJw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#UseCase"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_az9z8YNXEfG2M-ml6d0mJw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_avQlAINVEfG2M-ml6d0mJw" name="BiometricCategorizationNotification">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_aNozwYNXEfG2M-ml6d0mJw" name="base_UseCase" association="_aNnloINXEfG2M-ml6d0mJw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#UseCase"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aNozwoNXEfG2M-ml6d0mJw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_cO8PEINVEfG2M-ml6d0mJw" name="Deepfake">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Zc1o8YNXEfG2M-ml6d0mJw" name="base_UseCase" association="_ZczzwINXEfG2M-ml6d0mJw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#UseCase"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Zc1o8oNXEfG2M-ml6d0mJw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_dwDcgINVEfG2M-ml6d0mJw" name="PublicInterestText">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Yi8zkINXEfG2M-ml6d0mJw" name="base_UseCase" association="_Yi7lcINXEfG2M-ml6d0mJw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#UseCase"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Yi8zkYNXEfG2M-ml6d0mJw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_hGyu0INVEfG2M-ml6d0mJw" name="ManipulativeBehaviour">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_XjtkIYNXEfG2M-ml6d0mJw" name="base_UseCase" association="_XjsWAINXEfG2M-ml6d0mJw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#UseCase"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XjtkIoNXEfG2M-ml6d0mJw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_h9o3QINVEfG2M-ml6d0mJw" name="ExploitingVulnerability">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_r8mawINVEfG2M-ml6d0mJw" name="Age">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_tx6WkINVEfG2M-ml6d0mJw" name="Disability">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_vB2UcINVEfG2M-ml6d0mJw" name="Social">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_wFFTEINVEfG2M-ml6d0mJw" name="Economic">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_iBiN4YNXEfG2M-ml6d0mJw" name="base_UseCase" association="_iBgYsINXEfG2M-ml6d0mJw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#UseCase"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iBiN4oNXEfG2M-ml6d0mJw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_i3DLgINVEfG2M-ml6d0mJw" name="SocialScoring">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_jVmd0YNXEfG2M-ml6d0mJw" name="base_UseCase" association="_jVlPsINXEfG2M-ml6d0mJw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#UseCase"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jVmd0oNXEfG2M-ml6d0mJw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_jxVCcINVEfG2M-ml6d0mJw" name="PredictivePolicing">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_WaxmIYNXEfG2M-ml6d0mJw" name="base_UseCase" association="_Wavw8INXEfG2M-ml6d0mJw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#UseCase"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WaxmIoNXEfG2M-ml6d0mJw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_kpINIINVEfG2M-ml6d0mJw" name="FacialRecognition">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_0CSIcINVEfG2M-ml6d0mJw" name="Internet">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_0zF6UINVEfG2M-ml6d0mJw" name="CCTV">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_XBYTIYNXEfG2M-ml6d0mJw" name="base_UseCase" association="_XBXFAINXEfG2M-ml6d0mJw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#UseCase"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XBYTIoNXEfG2M-ml6d0mJw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_lkkhsINVEfG2M-ml6d0mJw" name="EmotionRecognition">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_2jI7oINVEfG2M-ml6d0mJw" name="Race">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_4GWa0INVEfG2M-ml6d0mJw" name="Politics">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_5M4lEINVEfG2M-ml6d0mJw" name="UnionMembership">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_6c1xEINVEfG2M-ml6d0mJw" name="Religion">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_75LzQINVEfG2M-ml6d0mJw" name="Sexuality">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_kEpVIYNXEfG2M-ml6d0mJw" name="base_UseCase" association="_kEoHAINXEfG2M-ml6d0mJw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#UseCase"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kEpVIoNXEfG2M-ml6d0mJw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_mXTmMINVEfG2M-ml6d0mJw" name="BiometricCategorisation">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_i03IQINXEfG2M-ml6d0mJw" name="base_UseCase" association="_i016IINXEfG2M-ml6d0mJw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#UseCase"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_i03IQYNXEfG2M-ml6d0mJw"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_dBi5IIT0EfGE5cY8bDPypw" name="LawfullyAcquiredDatasets">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_eGM0EIT0EfGE5cY8bDPypw" name="LawEnforcement">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_naNNoINVEfG2M-ml6d0mJw" name="BiometricIdentification">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_9sGiYINVEfG2M-ml6d0mJw" name="PublicSpace">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-fmb4INVEfG2M-ml6d0mJw" name="VictimSearch">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="__WTaYINVEfG2M-ml6d0mJw" name="ThreatPrevention">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ANSFsINWEfG2M-ml6d0mJw" name="CriminalSuspectSearch">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_VvTnQINXEfG2M-ml6d0mJw" name="base_UseCase" association="_VvM5kINXEfG2M-ml6d0mJw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#UseCase"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VvTnQYNXEfG2M-ml6d0mJw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_VvM5kINXEfG2M-ml6d0mJw" name="E_BiometricIdentification_UseCase27" memberEnd="_VvSZIINXEfG2M-ml6d0mJw _VvTnQINXEfG2M-ml6d0mJw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_VvSZIINXEfG2M-ml6d0mJw" name="extension_BiometricIdentification" type="_naNNoINVEfG2M-ml6d0mJw" aggregation="composite" association="_VvM5kINXEfG2M-ml6d0mJw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_Wavw8INXEfG2M-ml6d0mJw" name="E_PredictivePolicing_UseCase28" memberEnd="_WaxmIINXEfG2M-ml6d0mJw _WaxmIYNXEfG2M-ml6d0mJw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_WaxmIINXEfG2M-ml6d0mJw" name="extension_PredictivePolicing" type="_jxVCcINVEfG2M-ml6d0mJw" aggregation="composite" association="_Wavw8INXEfG2M-ml6d0mJw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_XBXFAINXEfG2M-ml6d0mJw" name="E_FacialRecognition_UseCase29" memberEnd="_XBYTIINXEfG2M-ml6d0mJw _XBYTIYNXEfG2M-ml6d0mJw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_XBYTIINXEfG2M-ml6d0mJw" name="extension_FacialRecognition" type="_kpINIINVEfG2M-ml6d0mJw" aggregation="composite" association="_XBXFAINXEfG2M-ml6d0mJw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_XjsWAINXEfG2M-ml6d0mJw" name="E_ManipulativeBehaviour_UseCase30" memberEnd="_XjtkIINXEfG2M-ml6d0mJw _XjtkIYNXEfG2M-ml6d0mJw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_XjtkIINXEfG2M-ml6d0mJw" name="extension_ManipulativeBehaviour" type="_hGyu0INVEfG2M-ml6d0mJw" aggregation="composite" association="_XjsWAINXEfG2M-ml6d0mJw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_Yi7lcINXEfG2M-ml6d0mJw" name="E_PublicInterestText_UseCase31" memberEnd="_Yi8MgINXEfG2M-ml6d0mJw _Yi8zkINXEfG2M-ml6d0mJw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_Yi8MgINXEfG2M-ml6d0mJw" name="extension_PublicInterestText" type="_dwDcgINVEfG2M-ml6d0mJw" aggregation="composite" association="_Yi7lcINXEfG2M-ml6d0mJw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_ZczzwINXEfG2M-ml6d0mJw" name="E_Deepfake_UseCase32" memberEnd="_Zc1o8INXEfG2M-ml6d0mJw _Zc1o8YNXEfG2M-ml6d0mJw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_Zc1o8INXEfG2M-ml6d0mJw" name="extension_Deepfake" type="_cO8PEINVEfG2M-ml6d0mJw" aggregation="composite" association="_ZczzwINXEfG2M-ml6d0mJw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_aNnloINXEfG2M-ml6d0mJw" name="E_BiometricCategorizationNotification_UseCase1" memberEnd="_aNozwINXEfG2M-ml6d0mJw _aNozwYNXEfG2M-ml6d0mJw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_aNozwINXEfG2M-ml6d0mJw" name="extension_BiometricCategorizationNotification" type="_avQlAINVEfG2M-ml6d0mJw" aggregation="composite" association="_aNnloINXEfG2M-ml6d0mJw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_az7-wINXEfG2M-ml6d0mJw" name="E_EmotionRecognitionNotification_UseCase1" memberEnd="_az9M4INXEfG2M-ml6d0mJw _az9z8INXEfG2M-ml6d0mJw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_az9M4INXEfG2M-ml6d0mJw" name="extension_EmotionRecognitionNotification" type="_Zjv0IINVEfG2M-ml6d0mJw" aggregation="composite" association="_az7-wINXEfG2M-ml6d0mJw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_bn5yUINXEfG2M-ml6d0mJw" name="E_SyntheticContent_UseCase35" memberEnd="_bn6ZYINXEfG2M-ml6d0mJw _bn7AcINXEfG2M-ml6d0mJw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_bn6ZYINXEfG2M-ml6d0mJw" name="extension_SyntheticContent" type="_YbmgUINVEfG2M-ml6d0mJw" aggregation="composite" association="_bn5yUINXEfG2M-ml6d0mJw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_c8TZcINXEfG2M-ml6d0mJw" name="E_HumanInteraction_UseCase36" memberEnd="_c8UnkINXEfG2M-ml6d0mJw _c8VOoINXEfG2M-ml6d0mJw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_c8UnkINXEfG2M-ml6d0mJw" name="extension_HumanInteraction" type="_VqiG4INVEfG2M-ml6d0mJw" aggregation="composite" association="_c8TZcINXEfG2M-ml6d0mJw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_diczcINXEfG2M-ml6d0mJw" name="E_AnnexIIIUseCase_UseCase37" memberEnd="_dieooINXEfG2M-ml6d0mJw _dieooYNXEfG2M-ml6d0mJw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_dieooINXEfG2M-ml6d0mJw" name="extension_AnnexIIIUseCase" type="_K3NHMINVEfG2M-ml6d0mJw" aggregation="composite" association="_diczcINXEfG2M-ml6d0mJw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_eDgSEINXEfG2M-ml6d0mJw" name="E_Profiling_UseCase38" memberEnd="_eDhgMINXEfG2M-ml6d0mJw _eDiHQINXEfG2M-ml6d0mJw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_eDhgMINXEfG2M-ml6d0mJw" name="extension_Profiling" type="_NMDesINVEfG2M-ml6d0mJw" aggregation="composite" association="_eDgSEINXEfG2M-ml6d0mJw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_iBgYsINXEfG2M-ml6d0mJw" name="E_ExploitingVulnerability_UseCase39" memberEnd="_iBiN4INXEfG2M-ml6d0mJw _iBiN4YNXEfG2M-ml6d0mJw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_iBiN4INXEfG2M-ml6d0mJw" name="extension_ExploitingVulnerability" type="_h9o3QINVEfG2M-ml6d0mJw" aggregation="composite" association="_iBgYsINXEfG2M-ml6d0mJw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_i016IINXEfG2M-ml6d0mJw" name="E_BiometricCategorisation_UseCase1" memberEnd="_i02hMINXEfG2M-ml6d0mJw _i03IQINXEfG2M-ml6d0mJw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_i02hMINXEfG2M-ml6d0mJw" name="extension_BiometricCategorisation" type="_mXTmMINVEfG2M-ml6d0mJw" aggregation="composite" association="_i016IINXEfG2M-ml6d0mJw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_jVlPsINXEfG2M-ml6d0mJw" name="E_SocialScoring_UseCase41" memberEnd="_jVmd0INXEfG2M-ml6d0mJw _jVmd0YNXEfG2M-ml6d0mJw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_jVmd0INXEfG2M-ml6d0mJw" name="extension_SocialScoring" type="_i3DLgINVEfG2M-ml6d0mJw" aggregation="composite" association="_jVlPsINXEfG2M-ml6d0mJw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_kEoHAINXEfG2M-ml6d0mJw" name="E_EmotionRecognition_UseCase42" memberEnd="_kEpVIINXEfG2M-ml6d0mJw _kEpVIYNXEfG2M-ml6d0mJw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_kEpVIINXEfG2M-ml6d0mJw" name="extension_EmotionRecognition" type="_lkkhsINVEfG2M-ml6d0mJw" aggregation="composite" association="_kEoHAINXEfG2M-ml6d0mJw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_lMlNkINXEfG2M-ml6d0mJw" name="AISystem">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_msBAAINXEfG2M-ml6d0mJw" name="base_Component" association="_mr_K0INXEfG2M-ml6d0mJw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Component"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_msBAAYNXEfG2M-ml6d0mJw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_mr_K0INXEfG2M-ml6d0mJw" name="E_AISystem_Component44" memberEnd="_msAY8INXEfG2M-ml6d0mJw _msBAAINXEfG2M-ml6d0mJw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_msAY8INXEfG2M-ml6d0mJw" name="extension_AISystem" type="_lMlNkINXEfG2M-ml6d0mJw" aggregation="composite" association="_mr_K0INXEfG2M-ml6d0mJw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_nIdEYINXEfG2M-ml6d0mJw" name="E_SafetyComponent_Component45" memberEnd="_nIeSgINXEfG2M-ml6d0mJw _nIeSgYNXEfG2M-ml6d0mJw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_nIeSgINXEfG2M-ml6d0mJw" name="extension_SafetyComponent" type="_ONr60INVEfG2M-ml6d0mJw" aggregation="composite" association="_nIdEYINXEfG2M-ml6d0mJw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_O_ZjIITrEfGE5cY8bDPypw" name="Provider">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_UnAr4YTrEfGE5cY8bDPypw" name="base_Actor" association="_Um_dwITrEfGE5cY8bDPypw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Actor"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UnAr4oTrEfGE5cY8bDPypw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_Um_dwITrEfGE5cY8bDPypw" name="E_Provider_Actor49" memberEnd="_UnAr4ITrEfGE5cY8bDPypw _UnAr4YTrEfGE5cY8bDPypw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_UnAr4ITrEfGE5cY8bDPypw" name="extension_Provider" type="_O_ZjIITrEfGE5cY8bDPypw" aggregation="composite" association="_Um_dwITrEfGE5cY8bDPypw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_eoKAsITrEfGE5cY8bDPypw" name="GeneralDescriptionAISystem">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_AMw_0ITsEfGE5cY8bDPypw" name="Purpose">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_BrV2oITsEfGE5cY8bDPypw" name="Provider">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_CqcjMITsEfGE5cY8bDPypw" name="Version">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_D5l24ITsEfGE5cY8bDPypw" name="Interaction">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_E9dusITsEfGE5cY8bDPypw" name="Deployment">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_GJ66wITsEfGE5cY8bDPypw" name="Hardware">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ISoTsITsEfGE5cY8bDPypw" name="VisualDocumentation">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_JVNyEITsEfGE5cY8bDPypw" name="Interface">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_KUvVYITsEfGE5cY8bDPypw" name="Instructions">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_NsPAMITtEfGE5cY8bDPypw" name="base_Artifact" association="_NsNLAITtEfGE5cY8bDPypw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Artifact"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NsPAMYTtEfGE5cY8bDPypw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_h3jU4ITrEfGE5cY8bDPypw" name="DetailedDescriptionAISystem">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-8enMITsEfGE5cY8bDPypw" name="Capabilities">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="__7wS4ITsEfGE5cY8bDPypw" name="Accuracy">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_BWucEITtEfGE5cY8bDPypw" name="PredictableRisks">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_EkNEsITtEfGE5cY8bDPypw" name="HumanOversightPostAssessment">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_FytfMITtEfGE5cY8bDPypw" name="InputSpecification">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_O__HEYTtEfGE5cY8bDPypw" name="base_Artifact" association="_O_948ITtEfGE5cY8bDPypw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Artifact"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_O__HEoTtEfGE5cY8bDPypw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_iw7M4ITrEfGE5cY8bDPypw" name="DetailedInformationAISystem">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_NaXpkITsEfGE5cY8bDPypw" name="Developement">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_TKgcMITsEfGE5cY8bDPypw" name="ThirdPartyElements">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_UxBHAITsEfGE5cY8bDPypw" name="DesignSpecification">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_WCjnYITsEfGE5cY8bDPypw" name="DesignDecision">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_X2tsoITsEfGE5cY8bDPypw" name="Objective">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ZQ0TIITsEfGE5cY8bDPypw" name="ExpectedOutput">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_eX798ITsEfGE5cY8bDPypw" name="Compromise">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_gTRCMITsEfGE5cY8bDPypw" name="Architecture">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_hh9p8ITsEfGE5cY8bDPypw" name="Resources">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_kMKmYITsEfGE5cY8bDPypw" name="TrainingMethods">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_mVVSUITsEfGE5cY8bDPypw" name="TrainingDataDescription">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_s87RYITsEfGE5cY8bDPypw" name="TrainingDataSelection">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_vN4nYITsEfGE5cY8bDPypw" name="TrainingDataLabeling">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_xpfHIITsEfGE5cY8bDPypw" name="TrainingDataCleaning">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_15wpgITsEfGE5cY8bDPypw" name="HumanOversightPreassessment">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_3g7boITsEfGE5cY8bDPypw" name="PlannedModification">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_4uez4ITsEfGE5cY8bDPypw" name="ValidationProcess">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_5_ESAITsEfGE5cY8bDPypw" name="TestingProcess">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_7eHp8ITsEfGE5cY8bDPypw" name="Parameter">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_8hqxoITsEfGE5cY8bDPypw" name="Cybersecurity">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_OhUOEITtEfGE5cY8bDPypw" name="base_Artifact" association="_OhS_8ITtEfGE5cY8bDPypw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Artifact"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OhUOEYTtEfGE5cY8bDPypw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_mOp4AITrEfGE5cY8bDPypw" name="DescriptionPerformanceMetrics">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_R3PoEYTtEfGE5cY8bDPypw" name="base_Artifact" association="_R3OZ8ITtEfGE5cY8bDPypw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Artifact"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R3PoEoTtEfGE5cY8bDPypw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_nY42gITrEfGE5cY8bDPypw" name="DescriptionRiskManagement">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_TBLEkYTtEfGE5cY8bDPypw" name="base_Artifact" association="_TBJ2cITtEfGE5cY8bDPypw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Artifact"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TBLEkoTtEfGE5cY8bDPypw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_o4bWoITrEfGE5cY8bDPypw" name="DescriptionProviderRelevantChanges">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_TgpO0ITtEfGE5cY8bDPypw" name="base_Artifact" association="_TgoAsITtEfGE5cY8bDPypw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Artifact"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TgpO0YTtEfGE5cY8bDPypw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_18zy8ITrEfGE5cY8bDPypw" name="ListHarmonisedStandards">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Q1G1oITtEfGE5cY8bDPypw" name="base_Artifact" association="_Q1FngITtEfGE5cY8bDPypw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Artifact"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Q1G1oYTtEfGE5cY8bDPypw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_21DpkITrEfGE5cY8bDPypw" name="CopyEUConformityDeclaration">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_P4k78YTtEfGE5cY8bDPypw" name="base_Artifact" association="_P4jGwITtEfGE5cY8bDPypw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Artifact"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_P4k78oTtEfGE5cY8bDPypw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3iNDcITrEfGE5cY8bDPypw" name="DescriptionAISystemPostMarketPhase">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_QZJSYYTtEfGE5cY8bDPypw" name="base_Artifact" association="_QZIrUITtEfGE5cY8bDPypw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Artifact"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QZJSYoTtEfGE5cY8bDPypw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_NsNLAITtEfGE5cY8bDPypw" name="E_GeneralDescriptionAISystem_Artifact59" memberEnd="_NsOZIITtEfGE5cY8bDPypw _NsPAMITtEfGE5cY8bDPypw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_NsOZIITtEfGE5cY8bDPypw" name="extension_GeneralDescriptionAISystem" type="_eoKAsITrEfGE5cY8bDPypw" aggregation="composite" association="_NsNLAITtEfGE5cY8bDPypw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_OhS_8ITtEfGE5cY8bDPypw" name="E_DetailedInformationAISystem_Artifact60" memberEnd="_OhTnAITtEfGE5cY8bDPypw _OhUOEITtEfGE5cY8bDPypw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_OhTnAITtEfGE5cY8bDPypw" name="extension_DetailedInformationAISystem" type="_iw7M4ITrEfGE5cY8bDPypw" aggregation="composite" association="_OhS_8ITtEfGE5cY8bDPypw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_O_948ITtEfGE5cY8bDPypw" name="E_DetailedDescriptionAISystem_Artifact61" memberEnd="_O__HEITtEfGE5cY8bDPypw _O__HEYTtEfGE5cY8bDPypw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_O__HEITtEfGE5cY8bDPypw" name="extension_DetailedDescriptionAISystem" type="_h3jU4ITrEfGE5cY8bDPypw" aggregation="composite" association="_O_948ITtEfGE5cY8bDPypw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_P4jGwITtEfGE5cY8bDPypw" name="E_CopyEUConformityDeclaration_Artifact62" memberEnd="_P4k78ITtEfGE5cY8bDPypw _P4k78YTtEfGE5cY8bDPypw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_P4k78ITtEfGE5cY8bDPypw" name="extension_CopyEUConformityDeclaration" type="_21DpkITrEfGE5cY8bDPypw" aggregation="composite" association="_P4jGwITtEfGE5cY8bDPypw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_QZIrUITtEfGE5cY8bDPypw" name="E_DescriptionAISystemPostMarketPhase_Artifact63" memberEnd="_QZJSYITtEfGE5cY8bDPypw _QZJSYYTtEfGE5cY8bDPypw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_QZJSYITtEfGE5cY8bDPypw" name="extension_DescriptionAISystemPostMarketPhase" type="_3iNDcITrEfGE5cY8bDPypw" aggregation="composite" association="_QZIrUITtEfGE5cY8bDPypw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_Q1FngITtEfGE5cY8bDPypw" name="E_ListHarmonisedStandards_Artifact64" memberEnd="_Q1GOkITtEfGE5cY8bDPypw _Q1G1oITtEfGE5cY8bDPypw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_Q1GOkITtEfGE5cY8bDPypw" name="extension_ListHarmonisedStandards" type="_18zy8ITrEfGE5cY8bDPypw" aggregation="composite" association="_Q1FngITtEfGE5cY8bDPypw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_R3OZ8ITtEfGE5cY8bDPypw" name="E_DescriptionPerformanceMetrics_Artifact65" memberEnd="_R3PoEITtEfGE5cY8bDPypw _R3PoEYTtEfGE5cY8bDPypw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_R3PoEITtEfGE5cY8bDPypw" name="extension_DescriptionPerformanceMetrics" type="_mOp4AITrEfGE5cY8bDPypw" aggregation="composite" association="_R3OZ8ITtEfGE5cY8bDPypw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_TBJ2cITtEfGE5cY8bDPypw" name="E_DescriptionRiskManagement_Artifact66" memberEnd="_TBLEkITtEfGE5cY8bDPypw _TBLEkYTtEfGE5cY8bDPypw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_TBLEkITtEfGE5cY8bDPypw" name="extension_DescriptionRiskManagement" type="_nY42gITrEfGE5cY8bDPypw" aggregation="composite" association="_TBJ2cITtEfGE5cY8bDPypw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_TgoAsITtEfGE5cY8bDPypw" name="E_DescriptionProviderRelevantChanges_Artifact67" memberEnd="_TgonwITtEfGE5cY8bDPypw _TgpO0ITtEfGE5cY8bDPypw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_TgonwITtEfGE5cY8bDPypw" name="extension_DescriptionProviderRelevantChanges" type="_o4bWoITrEfGE5cY8bDPypw" aggregation="composite" association="_TgoAsITtEfGE5cY8bDPypw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_HTmNsITuEfGE5cY8bDPypw" name="Documents">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Ily1YITuEfGE5cY8bDPypw" name="base_Dependency" association="_IlxAMITuEfGE5cY8bDPypw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Dependency"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ily1YYTuEfGE5cY8bDPypw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_IlxAMITuEfGE5cY8bDPypw" name="E_Documents_Dependency77" memberEnd="_IlyOUITuEfGE5cY8bDPypw _Ily1YITuEfGE5cY8bDPypw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_IlyOUITuEfGE5cY8bDPypw" name="extension_Documents" type="_HTmNsITuEfGE5cY8bDPypw" aggregation="composite" association="_IlxAMITuEfGE5cY8bDPypw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_6mfR8IXqEfGgqdWy7jy8xw" name="TransparencyObligation">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_XIIGcIXrEfGgqdWy7jy8xw" name="base_Artifact" association="_XIDN8IXrEfGgqdWy7jy8xw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Artifact"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XIIGcYXrEfGgqdWy7jy8xw"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ofs2AIaKEfGgqdWy7jy8xw" name="HumanInteraction">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_o8T5gIaKEfGgqdWy7jy8xw" name="SyntheticContent">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_pWZNcIaKEfGgqdWy7jy8xw" name="EmotionRecognitionNotification">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_puinsIaKEfGgqdWy7jy8xw" name="BiometricCategorizationNotification">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_qD5MoIaKEfGgqdWy7jy8xw" name="Deepfake">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_qbhpgIaKEfGgqdWy7jy8xw" name="PublicInterestText">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_XIDN8IXrEfGgqdWy7jy8xw" name="E_TransparencyObligation_Artifact79" memberEnd="_XIHfYIXrEfGgqdWy7jy8xw _XIIGcIXrEfGgqdWy7jy8xw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_XIHfYIXrEfGgqdWy7jy8xw" name="extension_TransparencyObligation" type="_6mfR8IXqEfGgqdWy7jy8xw" aggregation="composite" association="_XIDN8IXrEfGgqdWy7jy8xw"/>
+  </packagedElement>
+</uml:Profile>

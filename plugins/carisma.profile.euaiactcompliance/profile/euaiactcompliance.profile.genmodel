@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
+    modelDirectory="/carisma.profile.euaiactcompliance/src" modelPluginID="carisma.profile.euaiactcompliance"
+    modelName="Euaiactcompliance" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.uml2.uml.ecore.importer" complianceLevel="21.0" copyrightFields="false"
+    usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.eclipse.uml2.types/model/Types.genmodel#//types ../../org.eclipse.uml2.uml/model/UML.genmodel#//uml"
+    operationReflection="true" importOrganizing="true">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
+    <details key="UNSETTABLE_PRIMITIVE_ATTRIBUTES" value="IGNORE"/>
+    <details key="OPPOSITE_ROLE_NAMES" value="IGNORE"/>
+    <details key="DUPLICATE_FEATURES" value="DISCARD"/>
+    <details key="ANNOTATION_DETAILS" value="PROCESS"/>
+    <details key="PROPERTY_DEFAULT_EXPRESSIONS" value="IGNORE"/>
+    <details key="DUPLICATE_FEATURE_INHERITANCE" value="DISCARD"/>
+    <details key="COMMENTS" value="PROCESS"/>
+    <details key="DERIVED_FEATURES" value="PROCESS"/>
+    <details key="SUPER_CLASS_ORDER" value="PROCESS"/>
+    <details key="DUPLICATE_OPERATION_INHERITANCE" value="DISCARD"/>
+    <details key="REDEFINING_OPERATIONS" value="REPORT"/>
+    <details key="INVARIANT_CONSTRAINTS" value="PROCESS"/>
+    <details key="UNION_PROPERTIES" value="REPORT"/>
+    <details key="DUPLICATE_OPERATIONS" value="DISCARD"/>
+    <details key="NON_API_INVARIANTS" value="IGNORE"/>
+    <details key="CAMEL_CASE_NAMES" value="IGNORE"/>
+    <details key="SUBSETTING_PROPERTIES" value="REPORT"/>
+    <details key="OPERATION_BODIES" value="IGNORE"/>
+    <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
+    <details key="UNTYPED_PROPERTIES" value="REPORT"/>
+    <details key="REDEFINING_PROPERTIES" value="REPORT"/>
+    <details key="INVOCATION_DELEGATES" value="IGNORE"/>
+    <details key="VALIDATION_DELEGATES" value="IGNORE"/>
+    <details key="NULLABLE_ENUM_ATTRIBUTES" value="IGNORE"/>
+  </genAnnotations>
+  <foreignModel>euaiactcompliance.profile.uml</foreignModel>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="Euaiactcompliance" disposableProviderFactory="true"
+      ecorePackage="euaiactcompliance.profile.ecore#/">
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//AnnexIIIUseCase">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//AnnexIIIUseCase/BiometricIdentification"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//AnnexIIIUseCase/BiometricCategorisation"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//AnnexIIIUseCase/CriticalInfrastructure"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//AnnexIIIUseCase/Education"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//AnnexIIIUseCase/HumanEmployment"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//AnnexIIIUseCase/EssentialServices"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//AnnexIIIUseCase/Law"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//AnnexIIIUseCase/Migration"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//AnnexIIIUseCase/Justice"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//AnnexIIIUseCase/NarrowProceduralTask"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//AnnexIIIUseCase/ImprovesHumanActivity"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//AnnexIIIUseCase/PreparatoryTask"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//AnnexIIIUseCase/base_UseCase"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//Profiling">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//Profiling/base_UseCase"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//SafetyComponent">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//SafetyComponent/Machinery"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//SafetyComponent/Toy"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//SafetyComponent/Elevator"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//SafetyComponent/Medical"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//SafetyComponent/InVitroDiagnostics"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//SafetyComponent/PersonalProtective"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//SafetyComponent/CivilAviation"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//SafetyComponent/RailSystem"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//SafetyComponent/Agricultural"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//SafetyComponent/base_Component"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//HumanInteraction">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//HumanInteraction/base_UseCase"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//SyntheticContent">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//SyntheticContent/base_UseCase"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//EmotionRecognitionNotification">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//EmotionRecognitionNotification/base_UseCase"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//BiometricCategorizationNotification">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//BiometricCategorizationNotification/base_UseCase"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//Deepfake">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//Deepfake/base_UseCase"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//PublicInterestText">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//PublicInterestText/base_UseCase"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//ManipulativeBehaviour">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//ManipulativeBehaviour/base_UseCase"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//ExploitingVulnerability">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//ExploitingVulnerability/Age"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//ExploitingVulnerability/Disability"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//ExploitingVulnerability/Social"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//ExploitingVulnerability/Economic"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//ExploitingVulnerability/base_UseCase"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//SocialScoring">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//SocialScoring/base_UseCase"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//PredictivePolicing">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//PredictivePolicing/base_UseCase"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//FacialRecognition">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//FacialRecognition/Internet"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//FacialRecognition/CCTV"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//FacialRecognition/base_UseCase"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//EmotionRecognition">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//EmotionRecognition/Race"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//EmotionRecognition/Politics"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//EmotionRecognition/UnionMembership"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//EmotionRecognition/Religion"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//EmotionRecognition/Sexuality"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//EmotionRecognition/base_UseCase"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//BiometricCategorisation">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//BiometricCategorisation/base_UseCase"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//BiometricCategorisation/LawfullyAcquiredDatasets"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//BiometricCategorisation/LawEnforcement"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//BiometricIdentification">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//BiometricIdentification/PublicSpace"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//BiometricIdentification/VictimSearch"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//BiometricIdentification/ThreatPrevention"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//BiometricIdentification/CriminalSuspectSearch"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//BiometricIdentification/base_UseCase"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//AISystem">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//AISystem/base_Component"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//Provider">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//Provider/base_Actor"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//GeneralDescriptionAISystem">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//GeneralDescriptionAISystem/Purpose"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//GeneralDescriptionAISystem/Provider"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//GeneralDescriptionAISystem/Version"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//GeneralDescriptionAISystem/Interaction"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//GeneralDescriptionAISystem/Deployment"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//GeneralDescriptionAISystem/Hardware"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//GeneralDescriptionAISystem/VisualDocumentation"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//GeneralDescriptionAISystem/Interface"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//GeneralDescriptionAISystem/Instructions"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//GeneralDescriptionAISystem/base_Artifact"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//DetailedDescriptionAISystem">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//DetailedDescriptionAISystem/Capabilities"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//DetailedDescriptionAISystem/Accuracy"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//DetailedDescriptionAISystem/PredictableRisks"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//DetailedDescriptionAISystem/HumanOversightPostAssessment"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//DetailedDescriptionAISystem/InputSpecification"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//DetailedDescriptionAISystem/base_Artifact"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//DetailedInformationAISystem">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//DetailedInformationAISystem/Developement"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//DetailedInformationAISystem/ThirdPartyElements"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//DetailedInformationAISystem/DesignSpecification"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//DetailedInformationAISystem/DesignDecision"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//DetailedInformationAISystem/Objective"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//DetailedInformationAISystem/ExpectedOutput"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//DetailedInformationAISystem/Compromise"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//DetailedInformationAISystem/Architecture"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//DetailedInformationAISystem/Resources"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//DetailedInformationAISystem/TrainingMethods"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//DetailedInformationAISystem/TrainingDataDescription"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//DetailedInformationAISystem/TrainingDataSelection"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//DetailedInformationAISystem/TrainingDataLabeling"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//DetailedInformationAISystem/TrainingDataCleaning"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//DetailedInformationAISystem/HumanOversightPreassessment"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//DetailedInformationAISystem/PlannedModification"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//DetailedInformationAISystem/ValidationProcess"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//DetailedInformationAISystem/TestingProcess"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//DetailedInformationAISystem/Parameter"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//DetailedInformationAISystem/Cybersecurity"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//DetailedInformationAISystem/base_Artifact"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//DescriptionPerformanceMetrics">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//DescriptionPerformanceMetrics/base_Artifact"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//DescriptionRiskManagement">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//DescriptionRiskManagement/base_Artifact"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//DescriptionProviderRelevantChanges">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//DescriptionProviderRelevantChanges/base_Artifact"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//ListHarmonisedStandards">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//ListHarmonisedStandards/base_Artifact"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//CopyEUConformityDeclaration">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//CopyEUConformityDeclaration/base_Artifact"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//DescriptionAISystemPostMarketPhase">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//DescriptionAISystemPostMarketPhase/base_Artifact"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//Documents">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//Documents/base_Dependency"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="euaiactcompliance.profile.ecore#//TransparencyObligation">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference euaiactcompliance.profile.ecore#//TransparencyObligation/base_Artifact"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//TransparencyObligation/HumanInteraction"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//TransparencyObligation/SyntheticContent"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//TransparencyObligation/EmotionRecognitionNotification"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//TransparencyObligation/BiometricCategorizationNotification"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//TransparencyObligation/Deepfake"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute euaiactcompliance.profile.ecore#//TransparencyObligation/PublicInterestText"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

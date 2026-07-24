@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="carisma.carismacheck">
+      <check
+            description="test"
+            id="carisma.check.euaiactriskclassification"
+            implementingClass="carisma.check.euaiactriskclassification.check.EUAIActRiskClassificationCheck"
+            name="EU AI Act Risk Classification"
+            publisher="Marc Neumann"
+            targetModelType="UML2">
+      </check>
+   </extension>
+
+</plugin>

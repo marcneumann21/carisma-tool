@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated euaiactcompliance.profile -->
+      <package
+            uri="http:///euaiactcompliance.ecore"
+            class="euaiactcompliance.EuaiactcompliancePackage"
+            genModel="profile/euaiactcompliance.profile.genmodel"/>
+   </extension>
+   <extension
+         point="org.eclipse.uml2.uml.generated_package">
+      <profile
+            location="platform:/plugin/carisma.profile.euaiactcompliance/profile/euaiactcompliance.profile.uml#_INSeoINVEfG2M-ml6d0mJw"
+            uri="http://www.umlsec.de/profiles/UMLsec/euaiactcompliance">
+      </profile>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.uri_mapping">
+      <mapping
+            source="pathmap://UMLsec/euaiactcompliance.uml"
+            target="platform:/plugin/carisma.profile.euaiactcompliance/profile/euaiactcompliance.profile.uml">
+      </mapping>
+   </extension>
+   <extension
+         point="org.eclipse.papyrus.uml.extensionpoints.UMLProfile">
+      <profile
+            iconpath="icons/Logo16x16.png"
+            name="UMLsec.EUAIActCompliance"
+            path="pathmap://UMLsec/euaiactcompliance.uml">
+      </profile>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="euaiactcompliance.EuaiactcompliancePackage"
+            genModel="profile/euaiactcompliance.profile.genmodel"
+            uri="http:///euaiactcompliance.ecore">
+      </package>
+   </extension>
+
+</plugin>

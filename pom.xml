@@ -92,6 +92,11 @@
     <module>tests/carisma.umlchange.efficiency.tests</module>
     <module>tests/carisma.check.ids.tests</module>
     <module>report-aggregate-module</module>
+    
+    <module>plugins/carisma.profile.euaiactcompliance</module>
+    <module>plugins/carisma.check.euaiactriskclassification</module>
+    <module>plugins/carisma.check.euaiactdocumentation</module>
+    
   </modules>
   <properties>
     <tycho-version>4.0.13</tycho-version>

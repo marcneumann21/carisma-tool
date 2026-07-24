@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: EU AI Act Riskclassification Checks
+Bundle-SymbolicName: carisma.check.euaiactriskclassification;singleton:=true
+Bundle-Vendor: Marc Neumann
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: carisma.core;bundle-version="[1.4.0,2.0.0)",
+ carisma.profile.euaiactcompliance;bundle-version="1.0.0"
+Automatic-Module-Name: carisma.check.riskclassification
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Export-Package: carisma.check.euaiactriskclassification.classification,
+ carisma.check.euaiactriskclassification.riskclass

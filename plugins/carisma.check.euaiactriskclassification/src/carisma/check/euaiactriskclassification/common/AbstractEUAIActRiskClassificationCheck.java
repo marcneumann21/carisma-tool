@@ -1,0 +1,76 @@
+package carisma.check.euaiactriskclassification.common;
+
+import java.util.Map;
+
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.uml2.uml.Model;
+import carisma.core.analysis.AnalysisHost;
+import carisma.core.analysis.DummyHost;
+import carisma.core.analysis.result.AnalysisResultMessage;
+import carisma.core.analysis.result.StatusType;
+import carisma.core.checks.CarismaCheck;
+import carisma.core.checks.CheckParameter;
+
+/**
+ * Abstract super class for the EU AI Act Riskclassification check.
+ * Strongly inspired by the Abstract super class {@link AbstractMLTop10Check} for the ML Security Top 10 checks.
+ * 
+ * @author Marc Neumann
+ * @see AbstractMLTop10Check
+ */
+public abstract class AbstractEUAIActRiskClassificationCheck implements CarismaCheck {
+
+	/**
+	 * AnalysisHost for report.
+	 */
+	protected AnalysisHost analysisHost;
+
+	/**
+	 * The model to check.
+	 */
+	protected Model model = null;
+
+	/**
+	 * A flag to store, whether at least one error has been detected.
+	 */
+	protected boolean errorDetected = false;
+
+	protected void addInfo(String message) {
+		this.analysisHost.addResultMessage(new AnalysisResultMessage(StatusType.INFO, message));
+	}
+
+	protected void addWarning(String message) {
+		this.analysisHost.addResultMessage(new AnalysisResultMessage(StatusType.WARNING, message));
+	}
+
+	protected void addError(String message) {
+		this.analysisHost.addResultMessage(new AnalysisResultMessage(StatusType.ERROR, message));
+		this.errorDetected = true;
+	}
+
+	@Override
+	public final boolean perform(final Map<String, CheckParameter> parameters, final AnalysisHost newHost) {
+		if (newHost != null) {
+			this.analysisHost = newHost;
+		} else {
+			this.analysisHost = new DummyHost(true);
+		}
+
+		Resource currentModel = this.analysisHost.getAnalyzedModel();
+		if (currentModel.getContents().isEmpty()) {
+			addError("Empty model");
+			this.analysisHost.appendLineToReport("Empty model");
+			return false;
+		}
+		if (!(currentModel.getContents().get(0) instanceof Model)) {
+			addError("Content is not a model!");
+			this.analysisHost.appendLineToReport("Content is not a model!");
+			return false;
+		}
+
+		this.model = (Model) currentModel.getContents().get(0);
+		return runCheck();
+	}
+
+	public abstract boolean runCheck();
+}
