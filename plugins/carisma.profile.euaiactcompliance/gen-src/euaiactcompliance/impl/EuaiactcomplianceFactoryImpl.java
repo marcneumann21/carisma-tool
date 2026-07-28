@@ -5,6 +5,7 @@ package euaiactcompliance.impl;
 import euaiactcompliance.*;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -56,36 +57,33 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case EuaiactcompliancePackage.ANNEX_III_USE_CASE: return createAnnexIIIUseCase();
 			case EuaiactcompliancePackage.PROFILING: return createProfiling();
-			case EuaiactcompliancePackage.SAFETY_COMPONENT: return createSafetyComponent();
+			case EuaiactcompliancePackage.PRODUCT_EMBEDDING: return createProductEmbedding();
 			case EuaiactcompliancePackage.HUMAN_INTERACTION: return createHumanInteraction();
 			case EuaiactcompliancePackage.SYNTHETIC_CONTENT: return createSyntheticContent();
-			case EuaiactcompliancePackage.EMOTION_RECOGNITION_NOTIFICATION: return createEmotionRecognitionNotification();
-			case EuaiactcompliancePackage.BIOMETRIC_CATEGORIZATION_NOTIFICATION: return createBiometricCategorizationNotification();
 			case EuaiactcompliancePackage.DEEPFAKE: return createDeepfake();
 			case EuaiactcompliancePackage.PUBLIC_INTEREST_TEXT: return createPublicInterestText();
 			case EuaiactcompliancePackage.MANIPULATIVE_BEHAVIOUR: return createManipulativeBehaviour();
-			case EuaiactcompliancePackage.EXPLOITING_VULNERABILITY: return createExploitingVulnerability();
+			case EuaiactcompliancePackage.EXPLOITING_HUMAN_VULNERABILITY: return createExploitingHumanVulnerability();
 			case EuaiactcompliancePackage.SOCIAL_SCORING: return createSocialScoring();
-			case EuaiactcompliancePackage.PREDICTIVE_POLICING: return createPredictivePolicing();
-			case EuaiactcompliancePackage.FACIAL_RECOGNITION: return createFacialRecognition();
-			case EuaiactcompliancePackage.EMOTION_RECOGNITION: return createEmotionRecognition();
-			case EuaiactcompliancePackage.BIOMETRIC_CATEGORISATION: return createBiometricCategorisation();
-			case EuaiactcompliancePackage.BIOMETRIC_IDENTIFICATION: return createBiometricIdentification();
+			case EuaiactcompliancePackage.FACIAL_IMAGE_SCRAPING: return createFacialImageScraping();
 			case EuaiactcompliancePackage.AI_SYSTEM: return createAISystem();
 			case EuaiactcompliancePackage.PROVIDER: return createProvider();
-			case EuaiactcompliancePackage.GENERAL_DESCRIPTION_AI_SYSTEM: return createGeneralDescriptionAISystem();
-			case EuaiactcompliancePackage.DETAILED_DESCRIPTION_AI_SYSTEM: return createDetailedDescriptionAISystem();
-			case EuaiactcompliancePackage.DETAILED_INFORMATION_AI_SYSTEM: return createDetailedInformationAISystem();
-			case EuaiactcompliancePackage.DESCRIPTION_PERFORMANCE_METRICS: return createDescriptionPerformanceMetrics();
-			case EuaiactcompliancePackage.DESCRIPTION_RISK_MANAGEMENT: return createDescriptionRiskManagement();
-			case EuaiactcompliancePackage.DESCRIPTION_PROVIDER_RELEVANT_CHANGES: return createDescriptionProviderRelevantChanges();
 			case EuaiactcompliancePackage.LIST_HARMONISED_STANDARDS: return createListHarmonisedStandards();
-			case EuaiactcompliancePackage.COPY_EU_CONFORMITY_DECLARATION: return createCopyEUConformityDeclaration();
-			case EuaiactcompliancePackage.DESCRIPTION_AI_SYSTEM_POST_MARKET_PHASE: return createDescriptionAISystemPostMarketPhase();
-			case EuaiactcompliancePackage.DOCUMENTS: return createDocuments();
-			case EuaiactcompliancePackage.TRANSPARENCY_OBLIGATION: return createTransparencyObligation();
+			case EuaiactcompliancePackage.PROVIDES: return createProvides();
+			case EuaiactcompliancePackage.CRITICAL_INFRASTRUCTURE: return createCriticalInfrastructure();
+			case EuaiactcompliancePackage.ML_MODEL: return createMLModel();
+			case EuaiactcompliancePackage.EDUCATION: return createEducation();
+			case EuaiactcompliancePackage.HUMAN_EMPLOYMENT: return createHumanEmployment();
+			case EuaiactcompliancePackage.TRAINING_DATA: return createTrainingData();
+			case EuaiactcompliancePackage.THIRD_PARTY_COMPONENT: return createThirdPartyComponent();
+			case EuaiactcompliancePackage.ESSENTIAL_SERVICE: return createEssentialService();
+			case EuaiactcompliancePackage.LAW_ENFORCEMENT: return createLawEnforcement();
+			case EuaiactcompliancePackage.MIGRATION_BORDER: return createMigrationBorder();
+			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE: return createJusticeDemocracyUseCase();
+			case EuaiactcompliancePackage.BIOMETRIC_IDENTIFICATION: return createBiometricIdentification();
+			case EuaiactcompliancePackage.BIOMETRIC_CATEGORISATION: return createBiometricCategorisation();
+			case EuaiactcompliancePackage.EMOTION_RECOGNITION: return createEmotionRecognition();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -97,9 +95,32 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public AnnexIIIUseCase createAnnexIIIUseCase() {
-		AnnexIIIUseCaseImpl annexIIIUseCase = new AnnexIIIUseCaseImpl();
-		return annexIIIUseCase;
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case EuaiactcompliancePackage.CATEGORY:
+				return createCategoryFromString(eDataType, initialValue);
+			case EuaiactcompliancePackage.ROLE:
+				return createRoleFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case EuaiactcompliancePackage.CATEGORY:
+				return convertCategoryToString(eDataType, instanceValue);
+			case EuaiactcompliancePackage.ROLE:
+				return convertRoleToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
 	}
 
 	/**
@@ -119,9 +140,9 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public SafetyComponent createSafetyComponent() {
-		SafetyComponentImpl safetyComponent = new SafetyComponentImpl();
-		return safetyComponent;
+	public ProductEmbedding createProductEmbedding() {
+		ProductEmbeddingImpl productEmbedding = new ProductEmbeddingImpl();
+		return productEmbedding;
 	}
 
 	/**
@@ -144,28 +165,6 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 	public SyntheticContent createSyntheticContent() {
 		SyntheticContentImpl syntheticContent = new SyntheticContentImpl();
 		return syntheticContent;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EmotionRecognitionNotification createEmotionRecognitionNotification() {
-		EmotionRecognitionNotificationImpl emotionRecognitionNotification = new EmotionRecognitionNotificationImpl();
-		return emotionRecognitionNotification;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public BiometricCategorizationNotification createBiometricCategorizationNotification() {
-		BiometricCategorizationNotificationImpl biometricCategorizationNotification = new BiometricCategorizationNotificationImpl();
-		return biometricCategorizationNotification;
 	}
 
 	/**
@@ -207,9 +206,9 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public ExploitingVulnerability createExploitingVulnerability() {
-		ExploitingVulnerabilityImpl exploitingVulnerability = new ExploitingVulnerabilityImpl();
-		return exploitingVulnerability;
+	public ExploitingHumanVulnerability createExploitingHumanVulnerability() {
+		ExploitingHumanVulnerabilityImpl exploitingHumanVulnerability = new ExploitingHumanVulnerabilityImpl();
+		return exploitingHumanVulnerability;
 	}
 
 	/**
@@ -229,53 +228,9 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public PredictivePolicing createPredictivePolicing() {
-		PredictivePolicingImpl predictivePolicing = new PredictivePolicingImpl();
-		return predictivePolicing;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public FacialRecognition createFacialRecognition() {
-		FacialRecognitionImpl facialRecognition = new FacialRecognitionImpl();
-		return facialRecognition;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EmotionRecognition createEmotionRecognition() {
-		EmotionRecognitionImpl emotionRecognition = new EmotionRecognitionImpl();
-		return emotionRecognition;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public BiometricCategorisation createBiometricCategorisation() {
-		BiometricCategorisationImpl biometricCategorisation = new BiometricCategorisationImpl();
-		return biometricCategorisation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public BiometricIdentification createBiometricIdentification() {
-		BiometricIdentificationImpl biometricIdentification = new BiometricIdentificationImpl();
-		return biometricIdentification;
+	public FacialImageScraping createFacialImageScraping() {
+		FacialImageScrapingImpl facialImageScraping = new FacialImageScrapingImpl();
+		return facialImageScraping;
 	}
 
 	/**
@@ -306,72 +261,6 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public GeneralDescriptionAISystem createGeneralDescriptionAISystem() {
-		GeneralDescriptionAISystemImpl generalDescriptionAISystem = new GeneralDescriptionAISystemImpl();
-		return generalDescriptionAISystem;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public DetailedDescriptionAISystem createDetailedDescriptionAISystem() {
-		DetailedDescriptionAISystemImpl detailedDescriptionAISystem = new DetailedDescriptionAISystemImpl();
-		return detailedDescriptionAISystem;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public DetailedInformationAISystem createDetailedInformationAISystem() {
-		DetailedInformationAISystemImpl detailedInformationAISystem = new DetailedInformationAISystemImpl();
-		return detailedInformationAISystem;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public DescriptionPerformanceMetrics createDescriptionPerformanceMetrics() {
-		DescriptionPerformanceMetricsImpl descriptionPerformanceMetrics = new DescriptionPerformanceMetricsImpl();
-		return descriptionPerformanceMetrics;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public DescriptionRiskManagement createDescriptionRiskManagement() {
-		DescriptionRiskManagementImpl descriptionRiskManagement = new DescriptionRiskManagementImpl();
-		return descriptionRiskManagement;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public DescriptionProviderRelevantChanges createDescriptionProviderRelevantChanges() {
-		DescriptionProviderRelevantChangesImpl descriptionProviderRelevantChanges = new DescriptionProviderRelevantChangesImpl();
-		return descriptionProviderRelevantChanges;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public ListHarmonisedStandards createListHarmonisedStandards() {
 		ListHarmonisedStandardsImpl listHarmonisedStandards = new ListHarmonisedStandardsImpl();
 		return listHarmonisedStandards;
@@ -383,9 +272,9 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public CopyEUConformityDeclaration createCopyEUConformityDeclaration() {
-		CopyEUConformityDeclarationImpl copyEUConformityDeclaration = new CopyEUConformityDeclarationImpl();
-		return copyEUConformityDeclaration;
+	public Provides createProvides() {
+		ProvidesImpl provides = new ProvidesImpl();
+		return provides;
 	}
 
 	/**
@@ -394,9 +283,9 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public DescriptionAISystemPostMarketPhase createDescriptionAISystemPostMarketPhase() {
-		DescriptionAISystemPostMarketPhaseImpl descriptionAISystemPostMarketPhase = new DescriptionAISystemPostMarketPhaseImpl();
-		return descriptionAISystemPostMarketPhase;
+	public CriticalInfrastructure createCriticalInfrastructure() {
+		CriticalInfrastructureImpl criticalInfrastructure = new CriticalInfrastructureImpl();
+		return criticalInfrastructure;
 	}
 
 	/**
@@ -405,9 +294,9 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public Documents createDocuments() {
-		DocumentsImpl documents = new DocumentsImpl();
-		return documents;
+	public MLModel createMLModel() {
+		MLModelImpl mlModel = new MLModelImpl();
+		return mlModel;
 	}
 
 	/**
@@ -416,9 +305,159 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public TransparencyObligation createTransparencyObligation() {
-		TransparencyObligationImpl transparencyObligation = new TransparencyObligationImpl();
-		return transparencyObligation;
+	public Education createEducation() {
+		EducationImpl education = new EducationImpl();
+		return education;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public HumanEmployment createHumanEmployment() {
+		HumanEmploymentImpl humanEmployment = new HumanEmploymentImpl();
+		return humanEmployment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public TrainingData createTrainingData() {
+		TrainingDataImpl trainingData = new TrainingDataImpl();
+		return trainingData;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ThirdPartyComponent createThirdPartyComponent() {
+		ThirdPartyComponentImpl thirdPartyComponent = new ThirdPartyComponentImpl();
+		return thirdPartyComponent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EssentialService createEssentialService() {
+		EssentialServiceImpl essentialService = new EssentialServiceImpl();
+		return essentialService;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public LawEnforcement createLawEnforcement() {
+		LawEnforcementImpl lawEnforcement = new LawEnforcementImpl();
+		return lawEnforcement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public MigrationBorder createMigrationBorder() {
+		MigrationBorderImpl migrationBorder = new MigrationBorderImpl();
+		return migrationBorder;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public JusticeDemocracyUseCase createJusticeDemocracyUseCase() {
+		JusticeDemocracyUseCaseImpl justiceDemocracyUseCase = new JusticeDemocracyUseCaseImpl();
+		return justiceDemocracyUseCase;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public BiometricIdentification createBiometricIdentification() {
+		BiometricIdentificationImpl biometricIdentification = new BiometricIdentificationImpl();
+		return biometricIdentification;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public BiometricCategorisation createBiometricCategorisation() {
+		BiometricCategorisationImpl biometricCategorisation = new BiometricCategorisationImpl();
+		return biometricCategorisation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EmotionRecognition createEmotionRecognition() {
+		EmotionRecognitionImpl emotionRecognition = new EmotionRecognitionImpl();
+		return emotionRecognition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Category createCategoryFromString(EDataType eDataType, String initialValue) {
+		Category result = Category.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertCategoryToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Role createRoleFromString(EDataType eDataType, String initialValue) {
+		Role result = Role.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertRoleToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

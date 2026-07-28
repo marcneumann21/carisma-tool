@@ -1,14 +1,13 @@
 package carisma.check.euaiactriskclassification.check;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
 import org.eclipse.uml2.uml.Component;
 
 import carisma.check.euaiactriskclassification.classification.EUAIActRiskClassifier;
+import carisma.check.euaiactriskclassification.classification.EUAIActRiskClassificationResult;
 import carisma.check.euaiactriskclassification.common.AbstractEUAIActRiskClassificationCheck;
-import carisma.check.euaiactriskclassification.obligation.EUAIActRiskClassificationObligation;
 import carisma.check.euaiactriskclassification.riskclass.EUAIActRiskClass;
 import carisma.core.checks.CarismaCheckWithID;
 import carisma.profile.euaiactcompliance.EUAIActCompliance;
@@ -33,29 +32,30 @@ public class EUAIActRiskClassificationCheck extends AbstractEUAIActRiskClassific
 				EUAIActCompliance.AISystem);
 
 		if (aiSystems.isEmpty()) {
-			addInfo("Your model does not contain any AI system. Therefore, it cannot be classified into one of the EU AI Act risk classes.");
+			addInfo("Your model does not contain any AI systems.");
 			return false;
 		}
 		addInfo("Your model contains " + aiSystems.size() + " AI system(s).");
 
-		EUAIActRiskClassifier classifier = new EUAIActRiskClassifier();
-
 		for (Component aiSystem : aiSystems) {
-			List<String> reasons = new ArrayList<>();
-			EUAIActRiskClass riskClass = classifier.classify(aiSystem, reasons);
-			List<String> obligations = EUAIActRiskClassificationObligation.getObligations(riskClass);
+			EUAIActRiskClassifier classifier = new EUAIActRiskClassifier(aiSystem);
+			EUAIActRiskClassificationResult result = classifier.classify();
 
-			addInfo("AI System '" + aiSystem.getName() + "' is classified as: "
-					+ EUAIActRiskClassifier.getDisplayName(riskClass));
+			EUAIActRiskClass riskClass = result.riskClass();
+			List<String> reasons = result.reasons();
+			List<String> obligations = result.obligations();
+
+			addInfo("AI System '" + aiSystem.getName() + "' is classified as: " + riskClass);
 			addInfo("Reason(s):");
 			addInfo("=======");
 			for (String reason : reasons) {
 				addInfo(reason);
 			}
 			addInfo("\n");
-			if (riskClass == EUAIActRiskClass.UNACCEPTABLE) {
-				addInfo("No requirements, because the system must not be placed on the market, put into service or used (Art. 5: Prohibited AI Practices).");
-				return false;
+
+			if (riskClass == EUAIActRiskClass.Unacceptable) {
+				addInfo("No Obligations. The system must not be placed on the market, put into service or used according to Article 5.");
+				continue;
 			} else {
 				addInfo("Resulting Obligation(s):");
 				addInfo("================");

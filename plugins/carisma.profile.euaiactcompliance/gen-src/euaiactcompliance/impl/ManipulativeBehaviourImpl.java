@@ -23,12 +23,54 @@ import org.eclipse.uml2.uml.UseCase;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link euaiactcompliance.impl.ManipulativeBehaviourImpl#isSubliminalTechniques <em>Subliminal Techniques</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.ManipulativeBehaviourImpl#isDeceptiveTechniques <em>Deceptive Techniques</em>}</li>
  *   <li>{@link euaiactcompliance.impl.ManipulativeBehaviourImpl#getBase_UseCase <em>Base Use Case</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ManipulativeBehaviourImpl extends MinimalEObjectImpl.Container implements ManipulativeBehaviour {
+	/**
+	 * The default value of the '{@link #isSubliminalTechniques() <em>Subliminal Techniques</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSubliminalTechniques()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean SUBLIMINAL_TECHNIQUES_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isSubliminalTechniques() <em>Subliminal Techniques</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSubliminalTechniques()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean subliminalTechniques = SUBLIMINAL_TECHNIQUES_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isDeceptiveTechniques() <em>Deceptive Techniques</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isDeceptiveTechniques()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean DECEPTIVE_TECHNIQUES_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isDeceptiveTechniques() <em>Deceptive Techniques</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isDeceptiveTechniques()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean deceptiveTechniques = DECEPTIVE_TECHNIQUES_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getBase_UseCase() <em>Base Use Case</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -56,6 +98,52 @@ public class ManipulativeBehaviourImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	protected EClass eStaticClass() {
 		return EuaiactcompliancePackage.Literals.MANIPULATIVE_BEHAVIOUR;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSubliminalTechniques() {
+		return subliminalTechniques;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSubliminalTechniques(boolean newSubliminalTechniques) {
+		boolean oldSubliminalTechniques = subliminalTechniques;
+		subliminalTechniques = newSubliminalTechniques;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.MANIPULATIVE_BEHAVIOUR__SUBLIMINAL_TECHNIQUES, oldSubliminalTechniques, subliminalTechniques));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isDeceptiveTechniques() {
+		return deceptiveTechniques;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDeceptiveTechniques(boolean newDeceptiveTechniques) {
+		boolean oldDeceptiveTechniques = deceptiveTechniques;
+		deceptiveTechniques = newDeceptiveTechniques;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.MANIPULATIVE_BEHAVIOUR__DECEPTIVE_TECHNIQUES, oldDeceptiveTechniques, deceptiveTechniques));
 	}
 
 	/**
@@ -106,6 +194,10 @@ public class ManipulativeBehaviourImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case EuaiactcompliancePackage.MANIPULATIVE_BEHAVIOUR__SUBLIMINAL_TECHNIQUES:
+				return isSubliminalTechniques();
+			case EuaiactcompliancePackage.MANIPULATIVE_BEHAVIOUR__DECEPTIVE_TECHNIQUES:
+				return isDeceptiveTechniques();
 			case EuaiactcompliancePackage.MANIPULATIVE_BEHAVIOUR__BASE_USE_CASE:
 				if (resolve) return getBase_UseCase();
 				return basicGetBase_UseCase();
@@ -121,6 +213,12 @@ public class ManipulativeBehaviourImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case EuaiactcompliancePackage.MANIPULATIVE_BEHAVIOUR__SUBLIMINAL_TECHNIQUES:
+				setSubliminalTechniques((Boolean)newValue);
+				return;
+			case EuaiactcompliancePackage.MANIPULATIVE_BEHAVIOUR__DECEPTIVE_TECHNIQUES:
+				setDeceptiveTechniques((Boolean)newValue);
+				return;
 			case EuaiactcompliancePackage.MANIPULATIVE_BEHAVIOUR__BASE_USE_CASE:
 				setBase_UseCase((UseCase)newValue);
 				return;
@@ -136,6 +234,12 @@ public class ManipulativeBehaviourImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case EuaiactcompliancePackage.MANIPULATIVE_BEHAVIOUR__SUBLIMINAL_TECHNIQUES:
+				setSubliminalTechniques(SUBLIMINAL_TECHNIQUES_EDEFAULT);
+				return;
+			case EuaiactcompliancePackage.MANIPULATIVE_BEHAVIOUR__DECEPTIVE_TECHNIQUES:
+				setDeceptiveTechniques(DECEPTIVE_TECHNIQUES_EDEFAULT);
+				return;
 			case EuaiactcompliancePackage.MANIPULATIVE_BEHAVIOUR__BASE_USE_CASE:
 				setBase_UseCase((UseCase)null);
 				return;
@@ -151,10 +255,32 @@ public class ManipulativeBehaviourImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case EuaiactcompliancePackage.MANIPULATIVE_BEHAVIOUR__SUBLIMINAL_TECHNIQUES:
+				return subliminalTechniques != SUBLIMINAL_TECHNIQUES_EDEFAULT;
+			case EuaiactcompliancePackage.MANIPULATIVE_BEHAVIOUR__DECEPTIVE_TECHNIQUES:
+				return deceptiveTechniques != DECEPTIVE_TECHNIQUES_EDEFAULT;
 			case EuaiactcompliancePackage.MANIPULATIVE_BEHAVIOUR__BASE_USE_CASE:
 				return base_UseCase != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (SubliminalTechniques: ");
+		result.append(subliminalTechniques);
+		result.append(", DeceptiveTechniques: ");
+		result.append(deceptiveTechniques);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ManipulativeBehaviourImpl

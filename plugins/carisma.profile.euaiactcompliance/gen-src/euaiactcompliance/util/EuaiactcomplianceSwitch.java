@@ -66,21 +66,15 @@ public class EuaiactcomplianceSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case EuaiactcompliancePackage.ANNEX_III_USE_CASE: {
-				AnnexIIIUseCase annexIIIUseCase = (AnnexIIIUseCase)theEObject;
-				T result = caseAnnexIIIUseCase(annexIIIUseCase);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case EuaiactcompliancePackage.PROFILING: {
 				Profiling profiling = (Profiling)theEObject;
 				T result = caseProfiling(profiling);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EuaiactcompliancePackage.SAFETY_COMPONENT: {
-				SafetyComponent safetyComponent = (SafetyComponent)theEObject;
-				T result = caseSafetyComponent(safetyComponent);
+			case EuaiactcompliancePackage.PRODUCT_EMBEDDING: {
+				ProductEmbedding productEmbedding = (ProductEmbedding)theEObject;
+				T result = caseProductEmbedding(productEmbedding);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -93,18 +87,6 @@ public class EuaiactcomplianceSwitch<T> extends Switch<T> {
 			case EuaiactcompliancePackage.SYNTHETIC_CONTENT: {
 				SyntheticContent syntheticContent = (SyntheticContent)theEObject;
 				T result = caseSyntheticContent(syntheticContent);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case EuaiactcompliancePackage.EMOTION_RECOGNITION_NOTIFICATION: {
-				EmotionRecognitionNotification emotionRecognitionNotification = (EmotionRecognitionNotification)theEObject;
-				T result = caseEmotionRecognitionNotification(emotionRecognitionNotification);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case EuaiactcompliancePackage.BIOMETRIC_CATEGORIZATION_NOTIFICATION: {
-				BiometricCategorizationNotification biometricCategorizationNotification = (BiometricCategorizationNotification)theEObject;
-				T result = caseBiometricCategorizationNotification(biometricCategorizationNotification);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -126,9 +108,9 @@ public class EuaiactcomplianceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EuaiactcompliancePackage.EXPLOITING_VULNERABILITY: {
-				ExploitingVulnerability exploitingVulnerability = (ExploitingVulnerability)theEObject;
-				T result = caseExploitingVulnerability(exploitingVulnerability);
+			case EuaiactcompliancePackage.EXPLOITING_HUMAN_VULNERABILITY: {
+				ExploitingHumanVulnerability exploitingHumanVulnerability = (ExploitingHumanVulnerability)theEObject;
+				T result = caseExploitingHumanVulnerability(exploitingHumanVulnerability);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -138,33 +120,9 @@ public class EuaiactcomplianceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EuaiactcompliancePackage.PREDICTIVE_POLICING: {
-				PredictivePolicing predictivePolicing = (PredictivePolicing)theEObject;
-				T result = casePredictivePolicing(predictivePolicing);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case EuaiactcompliancePackage.FACIAL_RECOGNITION: {
-				FacialRecognition facialRecognition = (FacialRecognition)theEObject;
-				T result = caseFacialRecognition(facialRecognition);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case EuaiactcompliancePackage.EMOTION_RECOGNITION: {
-				EmotionRecognition emotionRecognition = (EmotionRecognition)theEObject;
-				T result = caseEmotionRecognition(emotionRecognition);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case EuaiactcompliancePackage.BIOMETRIC_CATEGORISATION: {
-				BiometricCategorisation biometricCategorisation = (BiometricCategorisation)theEObject;
-				T result = caseBiometricCategorisation(biometricCategorisation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case EuaiactcompliancePackage.BIOMETRIC_IDENTIFICATION: {
-				BiometricIdentification biometricIdentification = (BiometricIdentification)theEObject;
-				T result = caseBiometricIdentification(biometricIdentification);
+			case EuaiactcompliancePackage.FACIAL_IMAGE_SCRAPING: {
+				FacialImageScraping facialImageScraping = (FacialImageScraping)theEObject;
+				T result = caseFacialImageScraping(facialImageScraping);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -180,89 +138,98 @@ public class EuaiactcomplianceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EuaiactcompliancePackage.GENERAL_DESCRIPTION_AI_SYSTEM: {
-				GeneralDescriptionAISystem generalDescriptionAISystem = (GeneralDescriptionAISystem)theEObject;
-				T result = caseGeneralDescriptionAISystem(generalDescriptionAISystem);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case EuaiactcompliancePackage.DETAILED_DESCRIPTION_AI_SYSTEM: {
-				DetailedDescriptionAISystem detailedDescriptionAISystem = (DetailedDescriptionAISystem)theEObject;
-				T result = caseDetailedDescriptionAISystem(detailedDescriptionAISystem);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case EuaiactcompliancePackage.DETAILED_INFORMATION_AI_SYSTEM: {
-				DetailedInformationAISystem detailedInformationAISystem = (DetailedInformationAISystem)theEObject;
-				T result = caseDetailedInformationAISystem(detailedInformationAISystem);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case EuaiactcompliancePackage.DESCRIPTION_PERFORMANCE_METRICS: {
-				DescriptionPerformanceMetrics descriptionPerformanceMetrics = (DescriptionPerformanceMetrics)theEObject;
-				T result = caseDescriptionPerformanceMetrics(descriptionPerformanceMetrics);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case EuaiactcompliancePackage.DESCRIPTION_RISK_MANAGEMENT: {
-				DescriptionRiskManagement descriptionRiskManagement = (DescriptionRiskManagement)theEObject;
-				T result = caseDescriptionRiskManagement(descriptionRiskManagement);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case EuaiactcompliancePackage.DESCRIPTION_PROVIDER_RELEVANT_CHANGES: {
-				DescriptionProviderRelevantChanges descriptionProviderRelevantChanges = (DescriptionProviderRelevantChanges)theEObject;
-				T result = caseDescriptionProviderRelevantChanges(descriptionProviderRelevantChanges);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case EuaiactcompliancePackage.LIST_HARMONISED_STANDARDS: {
 				ListHarmonisedStandards listHarmonisedStandards = (ListHarmonisedStandards)theEObject;
 				T result = caseListHarmonisedStandards(listHarmonisedStandards);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EuaiactcompliancePackage.COPY_EU_CONFORMITY_DECLARATION: {
-				CopyEUConformityDeclaration copyEUConformityDeclaration = (CopyEUConformityDeclaration)theEObject;
-				T result = caseCopyEUConformityDeclaration(copyEUConformityDeclaration);
+			case EuaiactcompliancePackage.PROVIDES: {
+				Provides provides = (Provides)theEObject;
+				T result = caseProvides(provides);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EuaiactcompliancePackage.DESCRIPTION_AI_SYSTEM_POST_MARKET_PHASE: {
-				DescriptionAISystemPostMarketPhase descriptionAISystemPostMarketPhase = (DescriptionAISystemPostMarketPhase)theEObject;
-				T result = caseDescriptionAISystemPostMarketPhase(descriptionAISystemPostMarketPhase);
+			case EuaiactcompliancePackage.CRITICAL_INFRASTRUCTURE: {
+				CriticalInfrastructure criticalInfrastructure = (CriticalInfrastructure)theEObject;
+				T result = caseCriticalInfrastructure(criticalInfrastructure);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EuaiactcompliancePackage.DOCUMENTS: {
-				Documents documents = (Documents)theEObject;
-				T result = caseDocuments(documents);
+			case EuaiactcompliancePackage.ML_MODEL: {
+				MLModel mlModel = (MLModel)theEObject;
+				T result = caseMLModel(mlModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EuaiactcompliancePackage.TRANSPARENCY_OBLIGATION: {
-				TransparencyObligation transparencyObligation = (TransparencyObligation)theEObject;
-				T result = caseTransparencyObligation(transparencyObligation);
+			case EuaiactcompliancePackage.EDUCATION: {
+				Education education = (Education)theEObject;
+				T result = caseEducation(education);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EuaiactcompliancePackage.HUMAN_EMPLOYMENT: {
+				HumanEmployment humanEmployment = (HumanEmployment)theEObject;
+				T result = caseHumanEmployment(humanEmployment);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EuaiactcompliancePackage.TRAINING_DATA: {
+				TrainingData trainingData = (TrainingData)theEObject;
+				T result = caseTrainingData(trainingData);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EuaiactcompliancePackage.THIRD_PARTY_COMPONENT: {
+				ThirdPartyComponent thirdPartyComponent = (ThirdPartyComponent)theEObject;
+				T result = caseThirdPartyComponent(thirdPartyComponent);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EuaiactcompliancePackage.ESSENTIAL_SERVICE: {
+				EssentialService essentialService = (EssentialService)theEObject;
+				T result = caseEssentialService(essentialService);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EuaiactcompliancePackage.LAW_ENFORCEMENT: {
+				LawEnforcement lawEnforcement = (LawEnforcement)theEObject;
+				T result = caseLawEnforcement(lawEnforcement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EuaiactcompliancePackage.MIGRATION_BORDER: {
+				MigrationBorder migrationBorder = (MigrationBorder)theEObject;
+				T result = caseMigrationBorder(migrationBorder);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE: {
+				JusticeDemocracyUseCase justiceDemocracyUseCase = (JusticeDemocracyUseCase)theEObject;
+				T result = caseJusticeDemocracyUseCase(justiceDemocracyUseCase);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EuaiactcompliancePackage.BIOMETRIC_IDENTIFICATION: {
+				BiometricIdentification biometricIdentification = (BiometricIdentification)theEObject;
+				T result = caseBiometricIdentification(biometricIdentification);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EuaiactcompliancePackage.BIOMETRIC_CATEGORISATION: {
+				BiometricCategorisation biometricCategorisation = (BiometricCategorisation)theEObject;
+				T result = caseBiometricCategorisation(biometricCategorisation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EuaiactcompliancePackage.EMOTION_RECOGNITION: {
+				EmotionRecognition emotionRecognition = (EmotionRecognition)theEObject;
+				T result = caseEmotionRecognition(emotionRecognition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			default: return defaultCase(theEObject);
 		}
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Annex III Use Case</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Annex III Use Case</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAnnexIIIUseCase(AnnexIIIUseCase object) {
-		return null;
 	}
 
 	/**
@@ -281,17 +248,17 @@ public class EuaiactcomplianceSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Safety Component</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Product Embedding</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Safety Component</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Product Embedding</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSafetyComponent(SafetyComponent object) {
+	public T caseProductEmbedding(ProductEmbedding object) {
 		return null;
 	}
 
@@ -322,36 +289,6 @@ public class EuaiactcomplianceSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSyntheticContent(SyntheticContent object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Emotion Recognition Notification</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Emotion Recognition Notification</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEmotionRecognitionNotification(EmotionRecognitionNotification object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Biometric Categorization Notification</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Biometric Categorization Notification</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseBiometricCategorizationNotification(BiometricCategorizationNotification object) {
 		return null;
 	}
 
@@ -401,17 +338,17 @@ public class EuaiactcomplianceSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Exploiting Vulnerability</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Exploiting Human Vulnerability</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Exploiting Vulnerability</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Exploiting Human Vulnerability</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseExploitingVulnerability(ExploitingVulnerability object) {
+	public T caseExploitingHumanVulnerability(ExploitingHumanVulnerability object) {
 		return null;
 	}
 
@@ -431,77 +368,17 @@ public class EuaiactcomplianceSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Predictive Policing</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Facial Image Scraping</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Predictive Policing</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facial Image Scraping</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePredictivePolicing(PredictivePolicing object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Facial Recognition</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Facial Recognition</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFacialRecognition(FacialRecognition object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Emotion Recognition</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Emotion Recognition</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEmotionRecognition(EmotionRecognition object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Biometric Categorisation</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Biometric Categorisation</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseBiometricCategorisation(BiometricCategorisation object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Biometric Identification</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Biometric Identification</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseBiometricIdentification(BiometricIdentification object) {
+	public T caseFacialImageScraping(FacialImageScraping object) {
 		return null;
 	}
 
@@ -536,96 +413,6 @@ public class EuaiactcomplianceSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>General Description AI System</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>General Description AI System</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGeneralDescriptionAISystem(GeneralDescriptionAISystem object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Detailed Description AI System</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Detailed Description AI System</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDetailedDescriptionAISystem(DetailedDescriptionAISystem object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Detailed Information AI System</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Detailed Information AI System</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDetailedInformationAISystem(DetailedInformationAISystem object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Description Performance Metrics</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Description Performance Metrics</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDescriptionPerformanceMetrics(DescriptionPerformanceMetrics object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Description Risk Management</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Description Risk Management</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDescriptionRiskManagement(DescriptionRiskManagement object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Description Provider Relevant Changes</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Description Provider Relevant Changes</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDescriptionProviderRelevantChanges(DescriptionProviderRelevantChanges object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>List Harmonised Standards</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -641,62 +428,212 @@ public class EuaiactcomplianceSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Copy EU Conformity Declaration</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Provides</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Copy EU Conformity Declaration</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Provides</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCopyEUConformityDeclaration(CopyEUConformityDeclaration object) {
+	public T caseProvides(Provides object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Description AI System Post Market Phase</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Critical Infrastructure</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Description AI System Post Market Phase</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Critical Infrastructure</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDescriptionAISystemPostMarketPhase(DescriptionAISystemPostMarketPhase object) {
+	public T caseCriticalInfrastructure(CriticalInfrastructure object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Documents</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>ML Model</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Documents</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>ML Model</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDocuments(Documents object) {
+	public T caseMLModel(MLModel object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Transparency Obligation</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Education</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Transparency Obligation</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Education</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTransparencyObligation(TransparencyObligation object) {
+	public T caseEducation(Education object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Human Employment</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Human Employment</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseHumanEmployment(HumanEmployment object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Training Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Training Data</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTrainingData(TrainingData object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Third Party Component</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Third Party Component</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseThirdPartyComponent(ThirdPartyComponent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Essential Service</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Essential Service</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEssentialService(EssentialService object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Law Enforcement</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Law Enforcement</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLawEnforcement(LawEnforcement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Migration Border</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Migration Border</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMigrationBorder(MigrationBorder object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Justice Democracy Use Case</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Justice Democracy Use Case</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJusticeDemocracyUseCase(JusticeDemocracyUseCase object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Biometric Identification</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Biometric Identification</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBiometricIdentification(BiometricIdentification object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Biometric Categorisation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Biometric Categorisation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBiometricCategorisation(BiometricCategorisation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Emotion Recognition</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Emotion Recognition</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEmotionRecognition(EmotionRecognition object) {
 		return null;
 	}
 

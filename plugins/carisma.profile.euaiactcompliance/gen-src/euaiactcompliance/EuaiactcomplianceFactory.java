@@ -22,15 +22,6 @@ public interface EuaiactcomplianceFactory extends EFactory {
 	EuaiactcomplianceFactory eINSTANCE = euaiactcompliance.impl.EuaiactcomplianceFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Annex III Use Case</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Annex III Use Case</em>'.
-	 * @generated
-	 */
-	AnnexIIIUseCase createAnnexIIIUseCase();
-
-	/**
 	 * Returns a new object of class '<em>Profiling</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -40,13 +31,13 @@ public interface EuaiactcomplianceFactory extends EFactory {
 	Profiling createProfiling();
 
 	/**
-	 * Returns a new object of class '<em>Safety Component</em>'.
+	 * Returns a new object of class '<em>Product Embedding</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Safety Component</em>'.
+	 * @return a new object of class '<em>Product Embedding</em>'.
 	 * @generated
 	 */
-	SafetyComponent createSafetyComponent();
+	ProductEmbedding createProductEmbedding();
 
 	/**
 	 * Returns a new object of class '<em>Human Interaction</em>'.
@@ -65,24 +56,6 @@ public interface EuaiactcomplianceFactory extends EFactory {
 	 * @generated
 	 */
 	SyntheticContent createSyntheticContent();
-
-	/**
-	 * Returns a new object of class '<em>Emotion Recognition Notification</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Emotion Recognition Notification</em>'.
-	 * @generated
-	 */
-	EmotionRecognitionNotification createEmotionRecognitionNotification();
-
-	/**
-	 * Returns a new object of class '<em>Biometric Categorization Notification</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Biometric Categorization Notification</em>'.
-	 * @generated
-	 */
-	BiometricCategorizationNotification createBiometricCategorizationNotification();
 
 	/**
 	 * Returns a new object of class '<em>Deepfake</em>'.
@@ -112,13 +85,13 @@ public interface EuaiactcomplianceFactory extends EFactory {
 	ManipulativeBehaviour createManipulativeBehaviour();
 
 	/**
-	 * Returns a new object of class '<em>Exploiting Vulnerability</em>'.
+	 * Returns a new object of class '<em>Exploiting Human Vulnerability</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Exploiting Vulnerability</em>'.
+	 * @return a new object of class '<em>Exploiting Human Vulnerability</em>'.
 	 * @generated
 	 */
-	ExploitingVulnerability createExploitingVulnerability();
+	ExploitingHumanVulnerability createExploitingHumanVulnerability();
 
 	/**
 	 * Returns a new object of class '<em>Social Scoring</em>'.
@@ -130,49 +103,13 @@ public interface EuaiactcomplianceFactory extends EFactory {
 	SocialScoring createSocialScoring();
 
 	/**
-	 * Returns a new object of class '<em>Predictive Policing</em>'.
+	 * Returns a new object of class '<em>Facial Image Scraping</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Predictive Policing</em>'.
+	 * @return a new object of class '<em>Facial Image Scraping</em>'.
 	 * @generated
 	 */
-	PredictivePolicing createPredictivePolicing();
-
-	/**
-	 * Returns a new object of class '<em>Facial Recognition</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Facial Recognition</em>'.
-	 * @generated
-	 */
-	FacialRecognition createFacialRecognition();
-
-	/**
-	 * Returns a new object of class '<em>Emotion Recognition</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Emotion Recognition</em>'.
-	 * @generated
-	 */
-	EmotionRecognition createEmotionRecognition();
-
-	/**
-	 * Returns a new object of class '<em>Biometric Categorisation</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Biometric Categorisation</em>'.
-	 * @generated
-	 */
-	BiometricCategorisation createBiometricCategorisation();
-
-	/**
-	 * Returns a new object of class '<em>Biometric Identification</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Biometric Identification</em>'.
-	 * @generated
-	 */
-	BiometricIdentification createBiometricIdentification();
+	FacialImageScraping createFacialImageScraping();
 
 	/**
 	 * Returns a new object of class '<em>AI System</em>'.
@@ -193,60 +130,6 @@ public interface EuaiactcomplianceFactory extends EFactory {
 	Provider createProvider();
 
 	/**
-	 * Returns a new object of class '<em>General Description AI System</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>General Description AI System</em>'.
-	 * @generated
-	 */
-	GeneralDescriptionAISystem createGeneralDescriptionAISystem();
-
-	/**
-	 * Returns a new object of class '<em>Detailed Description AI System</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Detailed Description AI System</em>'.
-	 * @generated
-	 */
-	DetailedDescriptionAISystem createDetailedDescriptionAISystem();
-
-	/**
-	 * Returns a new object of class '<em>Detailed Information AI System</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Detailed Information AI System</em>'.
-	 * @generated
-	 */
-	DetailedInformationAISystem createDetailedInformationAISystem();
-
-	/**
-	 * Returns a new object of class '<em>Description Performance Metrics</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Description Performance Metrics</em>'.
-	 * @generated
-	 */
-	DescriptionPerformanceMetrics createDescriptionPerformanceMetrics();
-
-	/**
-	 * Returns a new object of class '<em>Description Risk Management</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Description Risk Management</em>'.
-	 * @generated
-	 */
-	DescriptionRiskManagement createDescriptionRiskManagement();
-
-	/**
-	 * Returns a new object of class '<em>Description Provider Relevant Changes</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Description Provider Relevant Changes</em>'.
-	 * @generated
-	 */
-	DescriptionProviderRelevantChanges createDescriptionProviderRelevantChanges();
-
-	/**
 	 * Returns a new object of class '<em>List Harmonised Standards</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -256,40 +139,130 @@ public interface EuaiactcomplianceFactory extends EFactory {
 	ListHarmonisedStandards createListHarmonisedStandards();
 
 	/**
-	 * Returns a new object of class '<em>Copy EU Conformity Declaration</em>'.
+	 * Returns a new object of class '<em>Provides</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Copy EU Conformity Declaration</em>'.
+	 * @return a new object of class '<em>Provides</em>'.
 	 * @generated
 	 */
-	CopyEUConformityDeclaration createCopyEUConformityDeclaration();
+	Provides createProvides();
 
 	/**
-	 * Returns a new object of class '<em>Description AI System Post Market Phase</em>'.
+	 * Returns a new object of class '<em>Critical Infrastructure</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Description AI System Post Market Phase</em>'.
+	 * @return a new object of class '<em>Critical Infrastructure</em>'.
 	 * @generated
 	 */
-	DescriptionAISystemPostMarketPhase createDescriptionAISystemPostMarketPhase();
+	CriticalInfrastructure createCriticalInfrastructure();
 
 	/**
-	 * Returns a new object of class '<em>Documents</em>'.
+	 * Returns a new object of class '<em>ML Model</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Documents</em>'.
+	 * @return a new object of class '<em>ML Model</em>'.
 	 * @generated
 	 */
-	Documents createDocuments();
+	MLModel createMLModel();
 
 	/**
-	 * Returns a new object of class '<em>Transparency Obligation</em>'.
+	 * Returns a new object of class '<em>Education</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Transparency Obligation</em>'.
+	 * @return a new object of class '<em>Education</em>'.
 	 * @generated
 	 */
-	TransparencyObligation createTransparencyObligation();
+	Education createEducation();
+
+	/**
+	 * Returns a new object of class '<em>Human Employment</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Human Employment</em>'.
+	 * @generated
+	 */
+	HumanEmployment createHumanEmployment();
+
+	/**
+	 * Returns a new object of class '<em>Training Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Training Data</em>'.
+	 * @generated
+	 */
+	TrainingData createTrainingData();
+
+	/**
+	 * Returns a new object of class '<em>Third Party Component</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Third Party Component</em>'.
+	 * @generated
+	 */
+	ThirdPartyComponent createThirdPartyComponent();
+
+	/**
+	 * Returns a new object of class '<em>Essential Service</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Essential Service</em>'.
+	 * @generated
+	 */
+	EssentialService createEssentialService();
+
+	/**
+	 * Returns a new object of class '<em>Law Enforcement</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Law Enforcement</em>'.
+	 * @generated
+	 */
+	LawEnforcement createLawEnforcement();
+
+	/**
+	 * Returns a new object of class '<em>Migration Border</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Migration Border</em>'.
+	 * @generated
+	 */
+	MigrationBorder createMigrationBorder();
+
+	/**
+	 * Returns a new object of class '<em>Justice Democracy Use Case</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Justice Democracy Use Case</em>'.
+	 * @generated
+	 */
+	JusticeDemocracyUseCase createJusticeDemocracyUseCase();
+
+	/**
+	 * Returns a new object of class '<em>Biometric Identification</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Biometric Identification</em>'.
+	 * @generated
+	 */
+	BiometricIdentification createBiometricIdentification();
+
+	/**
+	 * Returns a new object of class '<em>Biometric Categorisation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Biometric Categorisation</em>'.
+	 * @generated
+	 */
+	BiometricCategorisation createBiometricCategorisation();
+
+	/**
+	 * Returns a new object of class '<em>Emotion Recognition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Emotion Recognition</em>'.
+	 * @generated
+	 */
+	EmotionRecognition createEmotionRecognition();
 
 	/**
 	 * Returns the package supported by this factory.

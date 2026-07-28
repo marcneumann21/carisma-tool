@@ -3,40 +3,40 @@
 package euaiactcompliance.impl;
 
 import euaiactcompliance.AISystem;
-import euaiactcompliance.AnnexIIIUseCase;
 import euaiactcompliance.BiometricCategorisation;
-import euaiactcompliance.BiometricCategorizationNotification;
 import euaiactcompliance.BiometricIdentification;
-import euaiactcompliance.CopyEUConformityDeclaration;
+import euaiactcompliance.Category;
+import euaiactcompliance.CriticalInfrastructure;
 import euaiactcompliance.Deepfake;
-import euaiactcompliance.DescriptionAISystemPostMarketPhase;
-import euaiactcompliance.DescriptionPerformanceMetrics;
-import euaiactcompliance.DescriptionProviderRelevantChanges;
-import euaiactcompliance.DescriptionRiskManagement;
-import euaiactcompliance.DetailedDescriptionAISystem;
-import euaiactcompliance.DetailedInformationAISystem;
-import euaiactcompliance.Documents;
+import euaiactcompliance.Education;
 import euaiactcompliance.EmotionRecognition;
-import euaiactcompliance.EmotionRecognitionNotification;
+import euaiactcompliance.EssentialService;
 import euaiactcompliance.EuaiactcomplianceFactory;
 import euaiactcompliance.EuaiactcompliancePackage;
-import euaiactcompliance.ExploitingVulnerability;
-import euaiactcompliance.FacialRecognition;
-import euaiactcompliance.GeneralDescriptionAISystem;
+import euaiactcompliance.ExploitingHumanVulnerability;
+import euaiactcompliance.FacialImageScraping;
+import euaiactcompliance.HumanEmployment;
 import euaiactcompliance.HumanInteraction;
+import euaiactcompliance.JusticeDemocracyUseCase;
+import euaiactcompliance.LawEnforcement;
 import euaiactcompliance.ListHarmonisedStandards;
+import euaiactcompliance.MLModel;
 import euaiactcompliance.ManipulativeBehaviour;
-import euaiactcompliance.PredictivePolicing;
+import euaiactcompliance.MigrationBorder;
+import euaiactcompliance.ProductEmbedding;
 import euaiactcompliance.Profiling;
 import euaiactcompliance.Provider;
+import euaiactcompliance.Provides;
 import euaiactcompliance.PublicInterestText;
-import euaiactcompliance.SafetyComponent;
+import euaiactcompliance.Role;
 import euaiactcompliance.SocialScoring;
 import euaiactcompliance.SyntheticContent;
-import euaiactcompliance.TransparencyObligation;
+import euaiactcompliance.ThirdPartyComponent;
+import euaiactcompliance.TrainingData;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
@@ -59,13 +59,6 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass annexIIIUseCaseEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass profilingEClass = null;
 
 	/**
@@ -73,7 +66,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass safetyComponentEClass = null;
+	private EClass productEmbeddingEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -88,20 +81,6 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	private EClass syntheticContentEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass emotionRecognitionNotificationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass biometricCategorizationNotificationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -129,7 +108,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass exploitingVulnerabilityEClass = null;
+	private EClass exploitingHumanVulnerabilityEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -143,35 +122,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass predictivePolicingEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass facialRecognitionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass emotionRecognitionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass biometricCategorisationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass biometricIdentificationEClass = null;
+	private EClass facialImageScrapingEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -192,48 +143,6 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass generalDescriptionAISystemEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass detailedDescriptionAISystemEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass detailedInformationAISystemEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass descriptionPerformanceMetricsEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass descriptionRiskManagementEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass descriptionProviderRelevantChangesEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass listHarmonisedStandardsEClass = null;
 
 	/**
@@ -241,28 +150,112 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass copyEUConformityDeclarationEClass = null;
+	private EClass providesEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass descriptionAISystemPostMarketPhaseEClass = null;
+	private EClass criticalInfrastructureEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass documentsEClass = null;
+	private EClass mlModelEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass transparencyObligationEClass = null;
+	private EClass educationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass humanEmploymentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass trainingDataEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass thirdPartyComponentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass essentialServiceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass lawEnforcementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass migrationBorderEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass justiceDemocracyUseCaseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass biometricIdentificationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass biometricCategorisationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass emotionRecognitionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum categoryEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum roleEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -335,146 +328,6 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EClass getAnnexIIIUseCase() {
-		return annexIIIUseCaseEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAnnexIIIUseCase_BiometricIdentification() {
-		return (EAttribute)annexIIIUseCaseEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAnnexIIIUseCase_BiometricCategorisation() {
-		return (EAttribute)annexIIIUseCaseEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAnnexIIIUseCase_CriticalInfrastructure() {
-		return (EAttribute)annexIIIUseCaseEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAnnexIIIUseCase_Education() {
-		return (EAttribute)annexIIIUseCaseEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAnnexIIIUseCase_HumanEmployment() {
-		return (EAttribute)annexIIIUseCaseEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAnnexIIIUseCase_EssentialServices() {
-		return (EAttribute)annexIIIUseCaseEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAnnexIIIUseCase_Law() {
-		return (EAttribute)annexIIIUseCaseEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAnnexIIIUseCase_Migration() {
-		return (EAttribute)annexIIIUseCaseEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAnnexIIIUseCase_Justice() {
-		return (EAttribute)annexIIIUseCaseEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAnnexIIIUseCase_NarrowProceduralTask() {
-		return (EAttribute)annexIIIUseCaseEClass.getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAnnexIIIUseCase_ImprovesHumanActivity() {
-		return (EAttribute)annexIIIUseCaseEClass.getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAnnexIIIUseCase_PreparatoryTask() {
-		return (EAttribute)annexIIIUseCaseEClass.getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getAnnexIIIUseCase_Base_UseCase() {
-		return (EReference)annexIIIUseCaseEClass.getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getProfiling() {
 		return profilingEClass;
 	}
@@ -495,8 +348,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EClass getSafetyComponent() {
-		return safetyComponentEClass;
+	public EClass getProductEmbedding() {
+		return productEmbeddingEClass;
 	}
 
 	/**
@@ -505,8 +358,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSafetyComponent_Machinery() {
-		return (EAttribute)safetyComponentEClass.getEStructuralFeatures().get(0);
+	public EReference getProductEmbedding_Base_Component() {
+		return (EReference)productEmbeddingEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -515,8 +368,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSafetyComponent_Toy() {
-		return (EAttribute)safetyComponentEClass.getEStructuralFeatures().get(1);
+	public EAttribute getProductEmbedding_FailureEndangerSafety() {
+		return (EAttribute)productEmbeddingEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -525,8 +378,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSafetyComponent_Elevator() {
-		return (EAttribute)safetyComponentEClass.getEStructuralFeatures().get(2);
+	public EAttribute getProductEmbedding_ThirdPartyConformityAssessment() {
+		return (EAttribute)productEmbeddingEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -535,8 +388,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSafetyComponent_Medical() {
-		return (EAttribute)safetyComponentEClass.getEStructuralFeatures().get(3);
+	public EAttribute getProductEmbedding_ProductCategory() {
+		return (EAttribute)productEmbeddingEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -545,58 +398,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSafetyComponent_InVitroDiagnostics() {
-		return (EAttribute)safetyComponentEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getSafetyComponent_PersonalProtective() {
-		return (EAttribute)safetyComponentEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getSafetyComponent_CivilAviation() {
-		return (EAttribute)safetyComponentEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getSafetyComponent_RailSystem() {
-		return (EAttribute)safetyComponentEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getSafetyComponent_Agricultural() {
-		return (EAttribute)safetyComponentEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getSafetyComponent_Base_Component() {
-		return (EReference)safetyComponentEClass.getEStructuralFeatures().get(9);
+	public EAttribute getProductEmbedding_Role() {
+		return (EAttribute)productEmbeddingEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -637,46 +440,6 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	@Override
 	public EReference getSyntheticContent_Base_UseCase() {
 		return (EReference)syntheticContentEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getEmotionRecognitionNotification() {
-		return emotionRecognitionNotificationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getEmotionRecognitionNotification_Base_UseCase() {
-		return (EReference)emotionRecognitionNotificationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getBiometricCategorizationNotification() {
-		return biometricCategorizationNotificationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getBiometricCategorizationNotification_Base_UseCase() {
-		return (EReference)biometricCategorizationNotificationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -735,8 +498,28 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
+	public EAttribute getManipulativeBehaviour_SubliminalTechniques() {
+		return (EAttribute)manipulativeBehaviourEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getManipulativeBehaviour_DeceptiveTechniques() {
+		return (EAttribute)manipulativeBehaviourEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EReference getManipulativeBehaviour_Base_UseCase() {
-		return (EReference)manipulativeBehaviourEClass.getEStructuralFeatures().get(0);
+		return (EReference)manipulativeBehaviourEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -745,8 +528,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EClass getExploitingVulnerability() {
-		return exploitingVulnerabilityEClass;
+	public EClass getExploitingHumanVulnerability() {
+		return exploitingHumanVulnerabilityEClass;
 	}
 
 	/**
@@ -755,8 +538,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getExploitingVulnerability_Age() {
-		return (EAttribute)exploitingVulnerabilityEClass.getEStructuralFeatures().get(0);
+	public EAttribute getExploitingHumanVulnerability_Age() {
+		return (EAttribute)exploitingHumanVulnerabilityEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -765,8 +548,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getExploitingVulnerability_Disability() {
-		return (EAttribute)exploitingVulnerabilityEClass.getEStructuralFeatures().get(1);
+	public EAttribute getExploitingHumanVulnerability_Disability() {
+		return (EAttribute)exploitingHumanVulnerabilityEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -775,8 +558,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getExploitingVulnerability_Social() {
-		return (EAttribute)exploitingVulnerabilityEClass.getEStructuralFeatures().get(2);
+	public EAttribute getExploitingHumanVulnerability_Social() {
+		return (EAttribute)exploitingHumanVulnerabilityEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -785,8 +568,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getExploitingVulnerability_Economic() {
-		return (EAttribute)exploitingVulnerabilityEClass.getEStructuralFeatures().get(3);
+	public EAttribute getExploitingHumanVulnerability_Economic() {
+		return (EAttribute)exploitingHumanVulnerabilityEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -795,8 +578,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EReference getExploitingVulnerability_Base_UseCase() {
-		return (EReference)exploitingVulnerabilityEClass.getEStructuralFeatures().get(4);
+	public EReference getExploitingHumanVulnerability_Base_UseCase() {
+		return (EReference)exploitingHumanVulnerabilityEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -825,8 +608,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EClass getPredictivePolicing() {
-		return predictivePolicingEClass;
+	public EClass getFacialImageScraping() {
+		return facialImageScrapingEClass;
 	}
 
 	/**
@@ -835,8 +618,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EReference getPredictivePolicing_Base_UseCase() {
-		return (EReference)predictivePolicingEClass.getEStructuralFeatures().get(0);
+	public EAttribute getFacialImageScraping_Internet() {
+		return (EAttribute)facialImageScrapingEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -845,8 +628,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EClass getFacialRecognition() {
-		return facialRecognitionEClass;
+	public EAttribute getFacialImageScraping_CCTV() {
+		return (EAttribute)facialImageScrapingEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -855,198 +638,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFacialRecognition_Internet() {
-		return (EAttribute)facialRecognitionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getFacialRecognition_CCTV() {
-		return (EAttribute)facialRecognitionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getFacialRecognition_Base_UseCase() {
-		return (EReference)facialRecognitionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getEmotionRecognition() {
-		return emotionRecognitionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getEmotionRecognition_Race() {
-		return (EAttribute)emotionRecognitionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getEmotionRecognition_Politics() {
-		return (EAttribute)emotionRecognitionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getEmotionRecognition_UnionMembership() {
-		return (EAttribute)emotionRecognitionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getEmotionRecognition_Religion() {
-		return (EAttribute)emotionRecognitionEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getEmotionRecognition_Sexuality() {
-		return (EAttribute)emotionRecognitionEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getEmotionRecognition_Base_UseCase() {
-		return (EReference)emotionRecognitionEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getBiometricCategorisation() {
-		return biometricCategorisationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getBiometricCategorisation_Base_UseCase() {
-		return (EReference)biometricCategorisationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getBiometricCategorisation_LawfullyAcquiredDatasets() {
-		return (EAttribute)biometricCategorisationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getBiometricCategorisation_LawEnforcement() {
-		return (EAttribute)biometricCategorisationEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getBiometricIdentification() {
-		return biometricIdentificationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getBiometricIdentification_PublicSpace() {
-		return (EAttribute)biometricIdentificationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getBiometricIdentification_VictimSearch() {
-		return (EAttribute)biometricIdentificationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getBiometricIdentification_ThreatPrevention() {
-		return (EAttribute)biometricIdentificationEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getBiometricIdentification_CriminalSuspectSearch() {
-		return (EAttribute)biometricIdentificationEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getBiometricIdentification_Base_UseCase() {
-		return (EReference)biometricIdentificationEClass.getEStructuralFeatures().get(4);
+	public EReference getFacialImageScraping_Base_UseCase() {
+		return (EReference)facialImageScrapingEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1075,6 +668,256 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
+	public EAttribute getAISystem_Purpose() {
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAISystem_Version() {
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAISystem_ExternalInteraction() {
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAISystem_MarketPlacementForm() {
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAISystem_Hardware() {
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAISystem_VisualDocumentation() {
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAISystem_UserInterface() {
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAISystem_Instructions() {
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAISystem_DevelopmentProcess() {
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAISystem_DesignSpecification() {
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAISystem_DesignDecision() {
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAISystem_DesignTradeOffs() {
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAISystem_Resources() {
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAISystem_HumanOversightPreassessment() {
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAISystem_PlannedModification() {
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAISystem_Cybersecurity() {
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(16);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAISystem_HumanOversightPostAssessment() {
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(17);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAISystem_UpdateRequirements() {
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(18);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAISystem_PredictableRisks() {
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(19);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAISystem_PerformanceMetricsSuitability() {
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(20);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAISystem_RiskManagement() {
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(21);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAISystem_RelevantChanges() {
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(22);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAISystem_HarmonisedStandards() {
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(23);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAISystem_CopyEUConformityDeclaration() {
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(24);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAISystem_PostMarketMonitoring() {
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(25);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getProvider() {
 		return providerEClass;
 	}
@@ -1087,466 +930,6 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	@Override
 	public EReference getProvider_Base_Actor() {
 		return (EReference)providerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getGeneralDescriptionAISystem() {
-		return generalDescriptionAISystemEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getGeneralDescriptionAISystem_Purpose() {
-		return (EAttribute)generalDescriptionAISystemEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getGeneralDescriptionAISystem_Provider() {
-		return (EAttribute)generalDescriptionAISystemEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getGeneralDescriptionAISystem_Version() {
-		return (EAttribute)generalDescriptionAISystemEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getGeneralDescriptionAISystem_Interaction() {
-		return (EAttribute)generalDescriptionAISystemEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getGeneralDescriptionAISystem_Deployment() {
-		return (EAttribute)generalDescriptionAISystemEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getGeneralDescriptionAISystem_Hardware() {
-		return (EAttribute)generalDescriptionAISystemEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getGeneralDescriptionAISystem_VisualDocumentation() {
-		return (EAttribute)generalDescriptionAISystemEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getGeneralDescriptionAISystem_Interface() {
-		return (EAttribute)generalDescriptionAISystemEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getGeneralDescriptionAISystem_Instructions() {
-		return (EAttribute)generalDescriptionAISystemEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getGeneralDescriptionAISystem_Base_Artifact() {
-		return (EReference)generalDescriptionAISystemEClass.getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getDetailedDescriptionAISystem() {
-		return detailedDescriptionAISystemEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDetailedDescriptionAISystem_Capabilities() {
-		return (EAttribute)detailedDescriptionAISystemEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDetailedDescriptionAISystem_Accuracy() {
-		return (EAttribute)detailedDescriptionAISystemEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDetailedDescriptionAISystem_PredictableRisks() {
-		return (EAttribute)detailedDescriptionAISystemEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDetailedDescriptionAISystem_HumanOversightPostAssessment() {
-		return (EAttribute)detailedDescriptionAISystemEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDetailedDescriptionAISystem_InputSpecification() {
-		return (EAttribute)detailedDescriptionAISystemEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getDetailedDescriptionAISystem_Base_Artifact() {
-		return (EReference)detailedDescriptionAISystemEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getDetailedInformationAISystem() {
-		return detailedInformationAISystemEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDetailedInformationAISystem_Developement() {
-		return (EAttribute)detailedInformationAISystemEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDetailedInformationAISystem_ThirdPartyElements() {
-		return (EAttribute)detailedInformationAISystemEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDetailedInformationAISystem_DesignSpecification() {
-		return (EAttribute)detailedInformationAISystemEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDetailedInformationAISystem_DesignDecision() {
-		return (EAttribute)detailedInformationAISystemEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDetailedInformationAISystem_Objective() {
-		return (EAttribute)detailedInformationAISystemEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDetailedInformationAISystem_ExpectedOutput() {
-		return (EAttribute)detailedInformationAISystemEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDetailedInformationAISystem_Compromise() {
-		return (EAttribute)detailedInformationAISystemEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDetailedInformationAISystem_Architecture() {
-		return (EAttribute)detailedInformationAISystemEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDetailedInformationAISystem_Resources() {
-		return (EAttribute)detailedInformationAISystemEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDetailedInformationAISystem_TrainingMethods() {
-		return (EAttribute)detailedInformationAISystemEClass.getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDetailedInformationAISystem_TrainingDataDescription() {
-		return (EAttribute)detailedInformationAISystemEClass.getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDetailedInformationAISystem_TrainingDataSelection() {
-		return (EAttribute)detailedInformationAISystemEClass.getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDetailedInformationAISystem_TrainingDataLabeling() {
-		return (EAttribute)detailedInformationAISystemEClass.getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDetailedInformationAISystem_TrainingDataCleaning() {
-		return (EAttribute)detailedInformationAISystemEClass.getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDetailedInformationAISystem_HumanOversightPreassessment() {
-		return (EAttribute)detailedInformationAISystemEClass.getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDetailedInformationAISystem_PlannedModification() {
-		return (EAttribute)detailedInformationAISystemEClass.getEStructuralFeatures().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDetailedInformationAISystem_ValidationProcess() {
-		return (EAttribute)detailedInformationAISystemEClass.getEStructuralFeatures().get(16);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDetailedInformationAISystem_TestingProcess() {
-		return (EAttribute)detailedInformationAISystemEClass.getEStructuralFeatures().get(17);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDetailedInformationAISystem_Parameter() {
-		return (EAttribute)detailedInformationAISystemEClass.getEStructuralFeatures().get(18);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDetailedInformationAISystem_Cybersecurity() {
-		return (EAttribute)detailedInformationAISystemEClass.getEStructuralFeatures().get(19);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getDetailedInformationAISystem_Base_Artifact() {
-		return (EReference)detailedInformationAISystemEClass.getEStructuralFeatures().get(20);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getDescriptionPerformanceMetrics() {
-		return descriptionPerformanceMetricsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getDescriptionPerformanceMetrics_Base_Artifact() {
-		return (EReference)descriptionPerformanceMetricsEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getDescriptionRiskManagement() {
-		return descriptionRiskManagementEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getDescriptionRiskManagement_Base_Artifact() {
-		return (EReference)descriptionRiskManagementEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getDescriptionProviderRelevantChanges() {
-		return descriptionProviderRelevantChangesEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getDescriptionProviderRelevantChanges_Base_Artifact() {
-		return (EReference)descriptionProviderRelevantChangesEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1575,8 +958,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EClass getCopyEUConformityDeclaration() {
-		return copyEUConformityDeclarationEClass;
+	public EClass getProvides() {
+		return providesEClass;
 	}
 
 	/**
@@ -1585,8 +968,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EReference getCopyEUConformityDeclaration_Base_Artifact() {
-		return (EReference)copyEUConformityDeclarationEClass.getEStructuralFeatures().get(0);
+	public EReference getProvides_Base_Association() {
+		return (EReference)providesEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1595,8 +978,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EClass getDescriptionAISystemPostMarketPhase() {
-		return descriptionAISystemPostMarketPhaseEClass;
+	public EClass getCriticalInfrastructure() {
+		return criticalInfrastructureEClass;
 	}
 
 	/**
@@ -1605,8 +988,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EReference getDescriptionAISystemPostMarketPhase_Base_Artifact() {
-		return (EReference)descriptionAISystemPostMarketPhaseEClass.getEStructuralFeatures().get(0);
+	public EAttribute getCriticalInfrastructure_DigitalInfrastructure() {
+		return (EAttribute)criticalInfrastructureEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1615,8 +998,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EClass getDocuments() {
-		return documentsEClass;
+	public EAttribute getCriticalInfrastructure_RoadTraffic() {
+		return (EAttribute)criticalInfrastructureEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1625,8 +1008,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EReference getDocuments_Base_Dependency() {
-		return (EReference)documentsEClass.getEStructuralFeatures().get(0);
+	public EAttribute getCriticalInfrastructure_WaterSupply() {
+		return (EAttribute)criticalInfrastructureEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1635,8 +1018,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EClass getTransparencyObligation() {
-		return transparencyObligationEClass;
+	public EAttribute getCriticalInfrastructure_GasSupply() {
+		return (EAttribute)criticalInfrastructureEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1645,8 +1028,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EReference getTransparencyObligation_Base_Artifact() {
-		return (EReference)transparencyObligationEClass.getEStructuralFeatures().get(0);
+	public EAttribute getCriticalInfrastructure_HeatSupply() {
+		return (EAttribute)criticalInfrastructureEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1655,8 +1038,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTransparencyObligation_HumanInteraction() {
-		return (EAttribute)transparencyObligationEClass.getEStructuralFeatures().get(1);
+	public EAttribute getCriticalInfrastructure_ElectricitySupply() {
+		return (EAttribute)criticalInfrastructureEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1665,8 +1048,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTransparencyObligation_SyntheticContent() {
-		return (EAttribute)transparencyObligationEClass.getEStructuralFeatures().get(2);
+	public EAttribute getCriticalInfrastructure_ExceptionJustification() {
+		return (EAttribute)criticalInfrastructureEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1675,8 +1058,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTransparencyObligation_EmotionRecognitionNotification() {
-		return (EAttribute)transparencyObligationEClass.getEStructuralFeatures().get(3);
+	public EAttribute getCriticalInfrastructure_ImprovesHumanActivity() {
+		return (EAttribute)criticalInfrastructureEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -1685,8 +1068,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTransparencyObligation_BiometricCategorizationNotification() {
-		return (EAttribute)transparencyObligationEClass.getEStructuralFeatures().get(4);
+	public EAttribute getCriticalInfrastructure_NarrowProceduralTask() {
+		return (EAttribute)criticalInfrastructureEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -1695,8 +1078,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTransparencyObligation_Deepfake() {
-		return (EAttribute)transparencyObligationEClass.getEStructuralFeatures().get(5);
+	public EAttribute getCriticalInfrastructure_PreparatoryTask() {
+		return (EAttribute)criticalInfrastructureEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -1705,8 +1088,1308 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTransparencyObligation_PublicInterestText() {
-		return (EAttribute)transparencyObligationEClass.getEStructuralFeatures().get(6);
+	public EAttribute getCriticalInfrastructure_DecisionPatternDetection() {
+		return (EAttribute)criticalInfrastructureEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getCriticalInfrastructure_Base_UseCase() {
+		return (EReference)criticalInfrastructureEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getMLModel() {
+		return mlModelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMLModel_Parameter() {
+		return (EAttribute)mlModelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMLModel_TrainingMethods() {
+		return (EAttribute)mlModelEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMLModel_Objective() {
+		return (EAttribute)mlModelEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMLModel_ValidationProcess() {
+		return (EAttribute)mlModelEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMLModel_ExpectedOutput() {
+		return (EAttribute)mlModelEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMLModel_TestingProcess() {
+		return (EAttribute)mlModelEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMLModel_Accuracy() {
+		return (EAttribute)mlModelEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMLModel_Capabilities() {
+		return (EAttribute)mlModelEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMLModel_TestReports() {
+		return (EAttribute)mlModelEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getMLModel_Base_Component() {
+		return (EReference)mlModelEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMLModel_InputSpecification() {
+		return (EAttribute)mlModelEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEducation() {
+		return educationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEducation_AccessAdmission() {
+		return (EAttribute)educationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEducation_LearningOutcomeEvaluation() {
+		return (EAttribute)educationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEducation_EducationLevelAssessment() {
+		return (EAttribute)educationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEducation_ExamMonitoring() {
+		return (EAttribute)educationEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEducation_NarrowProceduralTask() {
+		return (EAttribute)educationEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEducation_ImprovesHumanActivity() {
+		return (EAttribute)educationEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEducation_DecisionPatternDetection() {
+		return (EAttribute)educationEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEducation_PreparatoryTask() {
+		return (EAttribute)educationEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEducation_ExceptionJustification() {
+		return (EAttribute)educationEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getEducation_Base_UseCase() {
+		return (EReference)educationEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getHumanEmployment() {
+		return humanEmploymentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getHumanEmployment_Recruitment() {
+		return (EAttribute)humanEmploymentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getHumanEmployment_WorkConditionsDecisions() {
+		return (EAttribute)humanEmploymentEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getHumanEmployment_DecisionPatternDetection() {
+		return (EAttribute)humanEmploymentEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getHumanEmployment_ImprovesHumanActivity() {
+		return (EAttribute)humanEmploymentEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getHumanEmployment_PreparatoryTask() {
+		return (EAttribute)humanEmploymentEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getHumanEmployment_ExceptionJustification() {
+		return (EAttribute)humanEmploymentEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getHumanEmployment_NarrowProceduralTask() {
+		return (EAttribute)humanEmploymentEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getHumanEmployment_Base_UseCase() {
+		return (EReference)humanEmploymentEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTrainingData() {
+		return trainingDataEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTrainingData_Cleaning() {
+		return (EAttribute)trainingDataEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTrainingData_Labeling() {
+		return (EAttribute)trainingDataEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTrainingData_Selection() {
+		return (EAttribute)trainingDataEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTrainingData_Description() {
+		return (EAttribute)trainingDataEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTrainingData_Origin() {
+		return (EAttribute)trainingDataEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTrainingData_Scope() {
+		return (EAttribute)trainingDataEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getTrainingData_Base_Artifact() {
+		return (EReference)trainingDataEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getThirdPartyComponent() {
+		return thirdPartyComponentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getThirdPartyComponent_Origin() {
+		return (EAttribute)thirdPartyComponentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getThirdPartyComponent_IntegrationDescription() {
+		return (EAttribute)thirdPartyComponentEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getThirdPartyComponent_Base_Component() {
+		return (EReference)thirdPartyComponentEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEssentialService() {
+		return essentialServiceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEssentialService_Creditworthiness() {
+		return (EAttribute)essentialServiceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEssentialService_PublicBenefitsEligibility() {
+		return (EAttribute)essentialServiceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEssentialService_FraudDetectionOnly() {
+		return (EAttribute)essentialServiceEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEssentialService_InsuranceRiskPricing() {
+		return (EAttribute)essentialServiceEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEssentialService_PreparatoryTask() {
+		return (EAttribute)essentialServiceEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEssentialService_NarrowProceduralTask() {
+		return (EAttribute)essentialServiceEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEssentialService_ExceptionJustification() {
+		return (EAttribute)essentialServiceEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEssentialService_ImprovesHumanActivity() {
+		return (EAttribute)essentialServiceEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEssentialService_DecisionPatternDetection() {
+		return (EAttribute)essentialServiceEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getEssentialService_Base_UseCase() {
+		return (EReference)essentialServiceEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getLawEnforcement() {
+		return lawEnforcementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLawEnforcement_VictimRiskAssessment() {
+		return (EAttribute)lawEnforcementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLawEnforcement_LieDetection() {
+		return (EAttribute)lawEnforcementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLawEnforcement_EvidenceReliability() {
+		return (EAttribute)lawEnforcementEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLawEnforcement_OffendingRiskAssessment() {
+		return (EAttribute)lawEnforcementEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLawEnforcement_SolelyProfilingBased() {
+		return (EAttribute)lawEnforcementEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLawEnforcement_NarrowProceduralTask() {
+		return (EAttribute)lawEnforcementEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLawEnforcement_ExceptionJustification() {
+		return (EAttribute)lawEnforcementEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLawEnforcement_DecisionPatternDetection() {
+		return (EAttribute)lawEnforcementEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLawEnforcement_PreparatoryTask() {
+		return (EAttribute)lawEnforcementEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLawEnforcement_ImprovesHumanActivity() {
+		return (EAttribute)lawEnforcementEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getLawEnforcement_Base_UseCase() {
+		return (EReference)lawEnforcementEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getMigrationBorder() {
+		return migrationBorderEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMigrationBorder_LieDetection() {
+		return (EAttribute)migrationBorderEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMigrationBorder_EntryRiskAssessment() {
+		return (EAttribute)migrationBorderEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMigrationBorder_AsylumVisaResidencePermitsApplication() {
+		return (EAttribute)migrationBorderEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMigrationBorder_TravelDocumentVerificationOnly() {
+		return (EAttribute)migrationBorderEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMigrationBorder_PersonIdentification() {
+		return (EAttribute)migrationBorderEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMigrationBorder_ImprovesHumanActivity() {
+		return (EAttribute)migrationBorderEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMigrationBorder_NarrowProceduralTask() {
+		return (EAttribute)migrationBorderEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMigrationBorder_ExceptionJustification() {
+		return (EAttribute)migrationBorderEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMigrationBorder_PreparatoryTask() {
+		return (EAttribute)migrationBorderEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMigrationBorder_DecisionPatternDetection() {
+		return (EAttribute)migrationBorderEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getMigrationBorder_Base_UseCase() {
+		return (EReference)migrationBorderEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getJusticeDemocracyUseCase() {
+		return justiceDemocracyUseCaseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getJusticeDemocracyUseCase_JudicialSupport() {
+		return (EAttribute)justiceDemocracyUseCaseEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getJusticeDemocracyUseCase_ElectionInfluence() {
+		return (EAttribute)justiceDemocracyUseCaseEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getJusticeDemocracyUseCase_NoDirectExposure() {
+		return (EAttribute)justiceDemocracyUseCaseEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getJusticeDemocracyUseCase_DecisionPatternDetection() {
+		return (EAttribute)justiceDemocracyUseCaseEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getJusticeDemocracyUseCase_ImprovesHumanActivity() {
+		return (EAttribute)justiceDemocracyUseCaseEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getJusticeDemocracyUseCase_PreparatoryTask() {
+		return (EAttribute)justiceDemocracyUseCaseEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getJusticeDemocracyUseCase_NarrowProceduralTask() {
+		return (EAttribute)justiceDemocracyUseCaseEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getJusticeDemocracyUseCase_ExceptionJustification() {
+		return (EAttribute)justiceDemocracyUseCaseEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getJusticeDemocracyUseCase_Base_UseCase() {
+		return (EReference)justiceDemocracyUseCaseEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getBiometricIdentification() {
+		return biometricIdentificationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBiometricIdentification_VerificationOnly() {
+		return (EAttribute)biometricIdentificationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBiometricIdentification_RealTime() {
+		return (EAttribute)biometricIdentificationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBiometricIdentification_PubliclyAccessibleSpace() {
+		return (EAttribute)biometricIdentificationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBiometricIdentification_LawEnforcementPurpose() {
+		return (EAttribute)biometricIdentificationEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBiometricIdentification_VictimSearch() {
+		return (EAttribute)biometricIdentificationEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBiometricIdentification_ImminentThreatPrevention() {
+		return (EAttribute)biometricIdentificationEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBiometricIdentification_SeriousCrimeSuspectSearch() {
+		return (EAttribute)biometricIdentificationEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBiometricIdentification_NarrowProceduralTask() {
+		return (EAttribute)biometricIdentificationEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBiometricIdentification_ImprovesHumanActivity() {
+		return (EAttribute)biometricIdentificationEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBiometricIdentification_DecisionPatternDetection() {
+		return (EAttribute)biometricIdentificationEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBiometricIdentification_PreparatoryTask() {
+		return (EAttribute)biometricIdentificationEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBiometricIdentification_ExceptionJustification() {
+		return (EAttribute)biometricIdentificationEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getBiometricIdentification_Base_UseCase() {
+		return (EReference)biometricIdentificationEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getBiometricCategorisation() {
+		return biometricCategorisationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBiometricCategorisation_DeduceRace() {
+		return (EAttribute)biometricCategorisationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBiometricCategorisation_DeducePoliticalOpinion() {
+		return (EAttribute)biometricCategorisationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBiometricCategorisation_DeduceReligiousBelief() {
+		return (EAttribute)biometricCategorisationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBiometricCategorisation_DeduceUnionMembership() {
+		return (EAttribute)biometricCategorisationEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBiometricCategorisation_DeduceSexuality() {
+		return (EAttribute)biometricCategorisationEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBiometricCategorisation_LawfulDatasetLabeling() {
+		return (EAttribute)biometricCategorisationEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBiometricCategorisation_LawEnforcementCategorisation() {
+		return (EAttribute)biometricCategorisationEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBiometricCategorisation_NarrowProceduralTask() {
+		return (EAttribute)biometricCategorisationEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBiometricCategorisation_ImprovesHumanActivity() {
+		return (EAttribute)biometricCategorisationEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBiometricCategorisation_DecisionPatternDetection() {
+		return (EAttribute)biometricCategorisationEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBiometricCategorisation_PreparatoryTask() {
+		return (EAttribute)biometricCategorisationEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBiometricCategorisation_ExceptionJustification() {
+		return (EAttribute)biometricCategorisationEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getBiometricCategorisation_Base_UseCase() {
+		return (EReference)biometricCategorisationEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEmotionRecognition() {
+		return emotionRecognitionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEmotionRecognition_Education() {
+		return (EAttribute)emotionRecognitionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEmotionRecognition_Workplace() {
+		return (EAttribute)emotionRecognitionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEmotionRecognition_MedicalOrSafetyReason() {
+		return (EAttribute)emotionRecognitionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEmotionRecognition_NarrowProceduralTask() {
+		return (EAttribute)emotionRecognitionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEmotionRecognition_ImprovesHumanActivity() {
+		return (EAttribute)emotionRecognitionEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEmotionRecognition_DecisionPatternDetection() {
+		return (EAttribute)emotionRecognitionEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEmotionRecognition_PreparatoryTask() {
+		return (EAttribute)emotionRecognitionEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEmotionRecognition_ExceptionJustification() {
+		return (EAttribute)emotionRecognitionEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getEmotionRecognition_Base_UseCase() {
+		return (EReference)emotionRecognitionEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getCategory() {
+		return categoryEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getRole() {
+		return roleEEnum;
 	}
 
 	/**
@@ -1738,47 +2421,21 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		isCreated = true;
 
 		// Create classes and their features
-		annexIIIUseCaseEClass = createEClass(ANNEX_III_USE_CASE);
-		createEAttribute(annexIIIUseCaseEClass, ANNEX_III_USE_CASE__BIOMETRIC_IDENTIFICATION);
-		createEAttribute(annexIIIUseCaseEClass, ANNEX_III_USE_CASE__BIOMETRIC_CATEGORISATION);
-		createEAttribute(annexIIIUseCaseEClass, ANNEX_III_USE_CASE__CRITICAL_INFRASTRUCTURE);
-		createEAttribute(annexIIIUseCaseEClass, ANNEX_III_USE_CASE__EDUCATION);
-		createEAttribute(annexIIIUseCaseEClass, ANNEX_III_USE_CASE__HUMAN_EMPLOYMENT);
-		createEAttribute(annexIIIUseCaseEClass, ANNEX_III_USE_CASE__ESSENTIAL_SERVICES);
-		createEAttribute(annexIIIUseCaseEClass, ANNEX_III_USE_CASE__LAW);
-		createEAttribute(annexIIIUseCaseEClass, ANNEX_III_USE_CASE__MIGRATION);
-		createEAttribute(annexIIIUseCaseEClass, ANNEX_III_USE_CASE__JUSTICE);
-		createEAttribute(annexIIIUseCaseEClass, ANNEX_III_USE_CASE__NARROW_PROCEDURAL_TASK);
-		createEAttribute(annexIIIUseCaseEClass, ANNEX_III_USE_CASE__IMPROVES_HUMAN_ACTIVITY);
-		createEAttribute(annexIIIUseCaseEClass, ANNEX_III_USE_CASE__PREPARATORY_TASK);
-		createEReference(annexIIIUseCaseEClass, ANNEX_III_USE_CASE__BASE_USE_CASE);
-
 		profilingEClass = createEClass(PROFILING);
 		createEReference(profilingEClass, PROFILING__BASE_USE_CASE);
 
-		safetyComponentEClass = createEClass(SAFETY_COMPONENT);
-		createEAttribute(safetyComponentEClass, SAFETY_COMPONENT__MACHINERY);
-		createEAttribute(safetyComponentEClass, SAFETY_COMPONENT__TOY);
-		createEAttribute(safetyComponentEClass, SAFETY_COMPONENT__ELEVATOR);
-		createEAttribute(safetyComponentEClass, SAFETY_COMPONENT__MEDICAL);
-		createEAttribute(safetyComponentEClass, SAFETY_COMPONENT__IN_VITRO_DIAGNOSTICS);
-		createEAttribute(safetyComponentEClass, SAFETY_COMPONENT__PERSONAL_PROTECTIVE);
-		createEAttribute(safetyComponentEClass, SAFETY_COMPONENT__CIVIL_AVIATION);
-		createEAttribute(safetyComponentEClass, SAFETY_COMPONENT__RAIL_SYSTEM);
-		createEAttribute(safetyComponentEClass, SAFETY_COMPONENT__AGRICULTURAL);
-		createEReference(safetyComponentEClass, SAFETY_COMPONENT__BASE_COMPONENT);
+		productEmbeddingEClass = createEClass(PRODUCT_EMBEDDING);
+		createEReference(productEmbeddingEClass, PRODUCT_EMBEDDING__BASE_COMPONENT);
+		createEAttribute(productEmbeddingEClass, PRODUCT_EMBEDDING__FAILURE_ENDANGER_SAFETY);
+		createEAttribute(productEmbeddingEClass, PRODUCT_EMBEDDING__THIRD_PARTY_CONFORMITY_ASSESSMENT);
+		createEAttribute(productEmbeddingEClass, PRODUCT_EMBEDDING__PRODUCT_CATEGORY);
+		createEAttribute(productEmbeddingEClass, PRODUCT_EMBEDDING__ROLE);
 
 		humanInteractionEClass = createEClass(HUMAN_INTERACTION);
 		createEReference(humanInteractionEClass, HUMAN_INTERACTION__BASE_USE_CASE);
 
 		syntheticContentEClass = createEClass(SYNTHETIC_CONTENT);
 		createEReference(syntheticContentEClass, SYNTHETIC_CONTENT__BASE_USE_CASE);
-
-		emotionRecognitionNotificationEClass = createEClass(EMOTION_RECOGNITION_NOTIFICATION);
-		createEReference(emotionRecognitionNotificationEClass, EMOTION_RECOGNITION_NOTIFICATION__BASE_USE_CASE);
-
-		biometricCategorizationNotificationEClass = createEClass(BIOMETRIC_CATEGORIZATION_NOTIFICATION);
-		createEReference(biometricCategorizationNotificationEClass, BIOMETRIC_CATEGORIZATION_NOTIFICATION__BASE_USE_CASE);
 
 		deepfakeEClass = createEClass(DEEPFAKE);
 		createEReference(deepfakeEClass, DEEPFAKE__BASE_USE_CASE);
@@ -1787,124 +2444,218 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		createEReference(publicInterestTextEClass, PUBLIC_INTEREST_TEXT__BASE_USE_CASE);
 
 		manipulativeBehaviourEClass = createEClass(MANIPULATIVE_BEHAVIOUR);
+		createEAttribute(manipulativeBehaviourEClass, MANIPULATIVE_BEHAVIOUR__SUBLIMINAL_TECHNIQUES);
+		createEAttribute(manipulativeBehaviourEClass, MANIPULATIVE_BEHAVIOUR__DECEPTIVE_TECHNIQUES);
 		createEReference(manipulativeBehaviourEClass, MANIPULATIVE_BEHAVIOUR__BASE_USE_CASE);
 
-		exploitingVulnerabilityEClass = createEClass(EXPLOITING_VULNERABILITY);
-		createEAttribute(exploitingVulnerabilityEClass, EXPLOITING_VULNERABILITY__AGE);
-		createEAttribute(exploitingVulnerabilityEClass, EXPLOITING_VULNERABILITY__DISABILITY);
-		createEAttribute(exploitingVulnerabilityEClass, EXPLOITING_VULNERABILITY__SOCIAL);
-		createEAttribute(exploitingVulnerabilityEClass, EXPLOITING_VULNERABILITY__ECONOMIC);
-		createEReference(exploitingVulnerabilityEClass, EXPLOITING_VULNERABILITY__BASE_USE_CASE);
+		exploitingHumanVulnerabilityEClass = createEClass(EXPLOITING_HUMAN_VULNERABILITY);
+		createEAttribute(exploitingHumanVulnerabilityEClass, EXPLOITING_HUMAN_VULNERABILITY__AGE);
+		createEAttribute(exploitingHumanVulnerabilityEClass, EXPLOITING_HUMAN_VULNERABILITY__DISABILITY);
+		createEAttribute(exploitingHumanVulnerabilityEClass, EXPLOITING_HUMAN_VULNERABILITY__SOCIAL);
+		createEAttribute(exploitingHumanVulnerabilityEClass, EXPLOITING_HUMAN_VULNERABILITY__ECONOMIC);
+		createEReference(exploitingHumanVulnerabilityEClass, EXPLOITING_HUMAN_VULNERABILITY__BASE_USE_CASE);
 
 		socialScoringEClass = createEClass(SOCIAL_SCORING);
 		createEReference(socialScoringEClass, SOCIAL_SCORING__BASE_USE_CASE);
 
-		predictivePolicingEClass = createEClass(PREDICTIVE_POLICING);
-		createEReference(predictivePolicingEClass, PREDICTIVE_POLICING__BASE_USE_CASE);
-
-		facialRecognitionEClass = createEClass(FACIAL_RECOGNITION);
-		createEAttribute(facialRecognitionEClass, FACIAL_RECOGNITION__INTERNET);
-		createEAttribute(facialRecognitionEClass, FACIAL_RECOGNITION__CCTV);
-		createEReference(facialRecognitionEClass, FACIAL_RECOGNITION__BASE_USE_CASE);
-
-		emotionRecognitionEClass = createEClass(EMOTION_RECOGNITION);
-		createEAttribute(emotionRecognitionEClass, EMOTION_RECOGNITION__RACE);
-		createEAttribute(emotionRecognitionEClass, EMOTION_RECOGNITION__POLITICS);
-		createEAttribute(emotionRecognitionEClass, EMOTION_RECOGNITION__UNION_MEMBERSHIP);
-		createEAttribute(emotionRecognitionEClass, EMOTION_RECOGNITION__RELIGION);
-		createEAttribute(emotionRecognitionEClass, EMOTION_RECOGNITION__SEXUALITY);
-		createEReference(emotionRecognitionEClass, EMOTION_RECOGNITION__BASE_USE_CASE);
-
-		biometricCategorisationEClass = createEClass(BIOMETRIC_CATEGORISATION);
-		createEReference(biometricCategorisationEClass, BIOMETRIC_CATEGORISATION__BASE_USE_CASE);
-		createEAttribute(biometricCategorisationEClass, BIOMETRIC_CATEGORISATION__LAWFULLY_ACQUIRED_DATASETS);
-		createEAttribute(biometricCategorisationEClass, BIOMETRIC_CATEGORISATION__LAW_ENFORCEMENT);
-
-		biometricIdentificationEClass = createEClass(BIOMETRIC_IDENTIFICATION);
-		createEAttribute(biometricIdentificationEClass, BIOMETRIC_IDENTIFICATION__PUBLIC_SPACE);
-		createEAttribute(biometricIdentificationEClass, BIOMETRIC_IDENTIFICATION__VICTIM_SEARCH);
-		createEAttribute(biometricIdentificationEClass, BIOMETRIC_IDENTIFICATION__THREAT_PREVENTION);
-		createEAttribute(biometricIdentificationEClass, BIOMETRIC_IDENTIFICATION__CRIMINAL_SUSPECT_SEARCH);
-		createEReference(biometricIdentificationEClass, BIOMETRIC_IDENTIFICATION__BASE_USE_CASE);
+		facialImageScrapingEClass = createEClass(FACIAL_IMAGE_SCRAPING);
+		createEAttribute(facialImageScrapingEClass, FACIAL_IMAGE_SCRAPING__INTERNET);
+		createEAttribute(facialImageScrapingEClass, FACIAL_IMAGE_SCRAPING__CCTV);
+		createEReference(facialImageScrapingEClass, FACIAL_IMAGE_SCRAPING__BASE_USE_CASE);
 
 		aiSystemEClass = createEClass(AI_SYSTEM);
 		createEReference(aiSystemEClass, AI_SYSTEM__BASE_COMPONENT);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__PURPOSE);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__VERSION);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__EXTERNAL_INTERACTION);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__MARKET_PLACEMENT_FORM);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__HARDWARE);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__VISUAL_DOCUMENTATION);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__USER_INTERFACE);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__INSTRUCTIONS);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__DEVELOPMENT_PROCESS);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__DESIGN_SPECIFICATION);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__DESIGN_DECISION);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__DESIGN_TRADE_OFFS);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__RESOURCES);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__HUMAN_OVERSIGHT_PREASSESSMENT);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__PLANNED_MODIFICATION);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__CYBERSECURITY);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__HUMAN_OVERSIGHT_POST_ASSESSMENT);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__UPDATE_REQUIREMENTS);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__PREDICTABLE_RISKS);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__PERFORMANCE_METRICS_SUITABILITY);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__RISK_MANAGEMENT);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__RELEVANT_CHANGES);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__HARMONISED_STANDARDS);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__COPY_EU_CONFORMITY_DECLARATION);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__POST_MARKET_MONITORING);
 
 		providerEClass = createEClass(PROVIDER);
 		createEReference(providerEClass, PROVIDER__BASE_ACTOR);
 
-		generalDescriptionAISystemEClass = createEClass(GENERAL_DESCRIPTION_AI_SYSTEM);
-		createEAttribute(generalDescriptionAISystemEClass, GENERAL_DESCRIPTION_AI_SYSTEM__PURPOSE);
-		createEAttribute(generalDescriptionAISystemEClass, GENERAL_DESCRIPTION_AI_SYSTEM__PROVIDER);
-		createEAttribute(generalDescriptionAISystemEClass, GENERAL_DESCRIPTION_AI_SYSTEM__VERSION);
-		createEAttribute(generalDescriptionAISystemEClass, GENERAL_DESCRIPTION_AI_SYSTEM__INTERACTION);
-		createEAttribute(generalDescriptionAISystemEClass, GENERAL_DESCRIPTION_AI_SYSTEM__DEPLOYMENT);
-		createEAttribute(generalDescriptionAISystemEClass, GENERAL_DESCRIPTION_AI_SYSTEM__HARDWARE);
-		createEAttribute(generalDescriptionAISystemEClass, GENERAL_DESCRIPTION_AI_SYSTEM__VISUAL_DOCUMENTATION);
-		createEAttribute(generalDescriptionAISystemEClass, GENERAL_DESCRIPTION_AI_SYSTEM__INTERFACE);
-		createEAttribute(generalDescriptionAISystemEClass, GENERAL_DESCRIPTION_AI_SYSTEM__INSTRUCTIONS);
-		createEReference(generalDescriptionAISystemEClass, GENERAL_DESCRIPTION_AI_SYSTEM__BASE_ARTIFACT);
-
-		detailedDescriptionAISystemEClass = createEClass(DETAILED_DESCRIPTION_AI_SYSTEM);
-		createEAttribute(detailedDescriptionAISystemEClass, DETAILED_DESCRIPTION_AI_SYSTEM__CAPABILITIES);
-		createEAttribute(detailedDescriptionAISystemEClass, DETAILED_DESCRIPTION_AI_SYSTEM__ACCURACY);
-		createEAttribute(detailedDescriptionAISystemEClass, DETAILED_DESCRIPTION_AI_SYSTEM__PREDICTABLE_RISKS);
-		createEAttribute(detailedDescriptionAISystemEClass, DETAILED_DESCRIPTION_AI_SYSTEM__HUMAN_OVERSIGHT_POST_ASSESSMENT);
-		createEAttribute(detailedDescriptionAISystemEClass, DETAILED_DESCRIPTION_AI_SYSTEM__INPUT_SPECIFICATION);
-		createEReference(detailedDescriptionAISystemEClass, DETAILED_DESCRIPTION_AI_SYSTEM__BASE_ARTIFACT);
-
-		detailedInformationAISystemEClass = createEClass(DETAILED_INFORMATION_AI_SYSTEM);
-		createEAttribute(detailedInformationAISystemEClass, DETAILED_INFORMATION_AI_SYSTEM__DEVELOPEMENT);
-		createEAttribute(detailedInformationAISystemEClass, DETAILED_INFORMATION_AI_SYSTEM__THIRD_PARTY_ELEMENTS);
-		createEAttribute(detailedInformationAISystemEClass, DETAILED_INFORMATION_AI_SYSTEM__DESIGN_SPECIFICATION);
-		createEAttribute(detailedInformationAISystemEClass, DETAILED_INFORMATION_AI_SYSTEM__DESIGN_DECISION);
-		createEAttribute(detailedInformationAISystemEClass, DETAILED_INFORMATION_AI_SYSTEM__OBJECTIVE);
-		createEAttribute(detailedInformationAISystemEClass, DETAILED_INFORMATION_AI_SYSTEM__EXPECTED_OUTPUT);
-		createEAttribute(detailedInformationAISystemEClass, DETAILED_INFORMATION_AI_SYSTEM__COMPROMISE);
-		createEAttribute(detailedInformationAISystemEClass, DETAILED_INFORMATION_AI_SYSTEM__ARCHITECTURE);
-		createEAttribute(detailedInformationAISystemEClass, DETAILED_INFORMATION_AI_SYSTEM__RESOURCES);
-		createEAttribute(detailedInformationAISystemEClass, DETAILED_INFORMATION_AI_SYSTEM__TRAINING_METHODS);
-		createEAttribute(detailedInformationAISystemEClass, DETAILED_INFORMATION_AI_SYSTEM__TRAINING_DATA_DESCRIPTION);
-		createEAttribute(detailedInformationAISystemEClass, DETAILED_INFORMATION_AI_SYSTEM__TRAINING_DATA_SELECTION);
-		createEAttribute(detailedInformationAISystemEClass, DETAILED_INFORMATION_AI_SYSTEM__TRAINING_DATA_LABELING);
-		createEAttribute(detailedInformationAISystemEClass, DETAILED_INFORMATION_AI_SYSTEM__TRAINING_DATA_CLEANING);
-		createEAttribute(detailedInformationAISystemEClass, DETAILED_INFORMATION_AI_SYSTEM__HUMAN_OVERSIGHT_PREASSESSMENT);
-		createEAttribute(detailedInformationAISystemEClass, DETAILED_INFORMATION_AI_SYSTEM__PLANNED_MODIFICATION);
-		createEAttribute(detailedInformationAISystemEClass, DETAILED_INFORMATION_AI_SYSTEM__VALIDATION_PROCESS);
-		createEAttribute(detailedInformationAISystemEClass, DETAILED_INFORMATION_AI_SYSTEM__TESTING_PROCESS);
-		createEAttribute(detailedInformationAISystemEClass, DETAILED_INFORMATION_AI_SYSTEM__PARAMETER);
-		createEAttribute(detailedInformationAISystemEClass, DETAILED_INFORMATION_AI_SYSTEM__CYBERSECURITY);
-		createEReference(detailedInformationAISystemEClass, DETAILED_INFORMATION_AI_SYSTEM__BASE_ARTIFACT);
-
-		descriptionPerformanceMetricsEClass = createEClass(DESCRIPTION_PERFORMANCE_METRICS);
-		createEReference(descriptionPerformanceMetricsEClass, DESCRIPTION_PERFORMANCE_METRICS__BASE_ARTIFACT);
-
-		descriptionRiskManagementEClass = createEClass(DESCRIPTION_RISK_MANAGEMENT);
-		createEReference(descriptionRiskManagementEClass, DESCRIPTION_RISK_MANAGEMENT__BASE_ARTIFACT);
-
-		descriptionProviderRelevantChangesEClass = createEClass(DESCRIPTION_PROVIDER_RELEVANT_CHANGES);
-		createEReference(descriptionProviderRelevantChangesEClass, DESCRIPTION_PROVIDER_RELEVANT_CHANGES__BASE_ARTIFACT);
-
 		listHarmonisedStandardsEClass = createEClass(LIST_HARMONISED_STANDARDS);
 		createEReference(listHarmonisedStandardsEClass, LIST_HARMONISED_STANDARDS__BASE_ARTIFACT);
 
-		copyEUConformityDeclarationEClass = createEClass(COPY_EU_CONFORMITY_DECLARATION);
-		createEReference(copyEUConformityDeclarationEClass, COPY_EU_CONFORMITY_DECLARATION__BASE_ARTIFACT);
+		providesEClass = createEClass(PROVIDES);
+		createEReference(providesEClass, PROVIDES__BASE_ASSOCIATION);
 
-		descriptionAISystemPostMarketPhaseEClass = createEClass(DESCRIPTION_AI_SYSTEM_POST_MARKET_PHASE);
-		createEReference(descriptionAISystemPostMarketPhaseEClass, DESCRIPTION_AI_SYSTEM_POST_MARKET_PHASE__BASE_ARTIFACT);
+		criticalInfrastructureEClass = createEClass(CRITICAL_INFRASTRUCTURE);
+		createEAttribute(criticalInfrastructureEClass, CRITICAL_INFRASTRUCTURE__DIGITAL_INFRASTRUCTURE);
+		createEAttribute(criticalInfrastructureEClass, CRITICAL_INFRASTRUCTURE__ROAD_TRAFFIC);
+		createEAttribute(criticalInfrastructureEClass, CRITICAL_INFRASTRUCTURE__WATER_SUPPLY);
+		createEAttribute(criticalInfrastructureEClass, CRITICAL_INFRASTRUCTURE__GAS_SUPPLY);
+		createEAttribute(criticalInfrastructureEClass, CRITICAL_INFRASTRUCTURE__HEAT_SUPPLY);
+		createEAttribute(criticalInfrastructureEClass, CRITICAL_INFRASTRUCTURE__ELECTRICITY_SUPPLY);
+		createEAttribute(criticalInfrastructureEClass, CRITICAL_INFRASTRUCTURE__EXCEPTION_JUSTIFICATION);
+		createEAttribute(criticalInfrastructureEClass, CRITICAL_INFRASTRUCTURE__IMPROVES_HUMAN_ACTIVITY);
+		createEAttribute(criticalInfrastructureEClass, CRITICAL_INFRASTRUCTURE__NARROW_PROCEDURAL_TASK);
+		createEAttribute(criticalInfrastructureEClass, CRITICAL_INFRASTRUCTURE__PREPARATORY_TASK);
+		createEAttribute(criticalInfrastructureEClass, CRITICAL_INFRASTRUCTURE__DECISION_PATTERN_DETECTION);
+		createEReference(criticalInfrastructureEClass, CRITICAL_INFRASTRUCTURE__BASE_USE_CASE);
 
-		documentsEClass = createEClass(DOCUMENTS);
-		createEReference(documentsEClass, DOCUMENTS__BASE_DEPENDENCY);
+		mlModelEClass = createEClass(ML_MODEL);
+		createEAttribute(mlModelEClass, ML_MODEL__PARAMETER);
+		createEAttribute(mlModelEClass, ML_MODEL__TRAINING_METHODS);
+		createEAttribute(mlModelEClass, ML_MODEL__OBJECTIVE);
+		createEAttribute(mlModelEClass, ML_MODEL__VALIDATION_PROCESS);
+		createEAttribute(mlModelEClass, ML_MODEL__EXPECTED_OUTPUT);
+		createEAttribute(mlModelEClass, ML_MODEL__TESTING_PROCESS);
+		createEAttribute(mlModelEClass, ML_MODEL__ACCURACY);
+		createEAttribute(mlModelEClass, ML_MODEL__CAPABILITIES);
+		createEAttribute(mlModelEClass, ML_MODEL__TEST_REPORTS);
+		createEReference(mlModelEClass, ML_MODEL__BASE_COMPONENT);
+		createEAttribute(mlModelEClass, ML_MODEL__INPUT_SPECIFICATION);
 
-		transparencyObligationEClass = createEClass(TRANSPARENCY_OBLIGATION);
-		createEReference(transparencyObligationEClass, TRANSPARENCY_OBLIGATION__BASE_ARTIFACT);
-		createEAttribute(transparencyObligationEClass, TRANSPARENCY_OBLIGATION__HUMAN_INTERACTION);
-		createEAttribute(transparencyObligationEClass, TRANSPARENCY_OBLIGATION__SYNTHETIC_CONTENT);
-		createEAttribute(transparencyObligationEClass, TRANSPARENCY_OBLIGATION__EMOTION_RECOGNITION_NOTIFICATION);
-		createEAttribute(transparencyObligationEClass, TRANSPARENCY_OBLIGATION__BIOMETRIC_CATEGORIZATION_NOTIFICATION);
-		createEAttribute(transparencyObligationEClass, TRANSPARENCY_OBLIGATION__DEEPFAKE);
-		createEAttribute(transparencyObligationEClass, TRANSPARENCY_OBLIGATION__PUBLIC_INTEREST_TEXT);
+		educationEClass = createEClass(EDUCATION);
+		createEAttribute(educationEClass, EDUCATION__ACCESS_ADMISSION);
+		createEAttribute(educationEClass, EDUCATION__LEARNING_OUTCOME_EVALUATION);
+		createEAttribute(educationEClass, EDUCATION__EDUCATION_LEVEL_ASSESSMENT);
+		createEAttribute(educationEClass, EDUCATION__EXAM_MONITORING);
+		createEAttribute(educationEClass, EDUCATION__NARROW_PROCEDURAL_TASK);
+		createEAttribute(educationEClass, EDUCATION__IMPROVES_HUMAN_ACTIVITY);
+		createEAttribute(educationEClass, EDUCATION__DECISION_PATTERN_DETECTION);
+		createEAttribute(educationEClass, EDUCATION__PREPARATORY_TASK);
+		createEAttribute(educationEClass, EDUCATION__EXCEPTION_JUSTIFICATION);
+		createEReference(educationEClass, EDUCATION__BASE_USE_CASE);
+
+		humanEmploymentEClass = createEClass(HUMAN_EMPLOYMENT);
+		createEAttribute(humanEmploymentEClass, HUMAN_EMPLOYMENT__RECRUITMENT);
+		createEAttribute(humanEmploymentEClass, HUMAN_EMPLOYMENT__WORK_CONDITIONS_DECISIONS);
+		createEAttribute(humanEmploymentEClass, HUMAN_EMPLOYMENT__DECISION_PATTERN_DETECTION);
+		createEAttribute(humanEmploymentEClass, HUMAN_EMPLOYMENT__IMPROVES_HUMAN_ACTIVITY);
+		createEAttribute(humanEmploymentEClass, HUMAN_EMPLOYMENT__PREPARATORY_TASK);
+		createEAttribute(humanEmploymentEClass, HUMAN_EMPLOYMENT__EXCEPTION_JUSTIFICATION);
+		createEAttribute(humanEmploymentEClass, HUMAN_EMPLOYMENT__NARROW_PROCEDURAL_TASK);
+		createEReference(humanEmploymentEClass, HUMAN_EMPLOYMENT__BASE_USE_CASE);
+
+		trainingDataEClass = createEClass(TRAINING_DATA);
+		createEAttribute(trainingDataEClass, TRAINING_DATA__CLEANING);
+		createEAttribute(trainingDataEClass, TRAINING_DATA__LABELING);
+		createEAttribute(trainingDataEClass, TRAINING_DATA__SELECTION);
+		createEAttribute(trainingDataEClass, TRAINING_DATA__DESCRIPTION);
+		createEAttribute(trainingDataEClass, TRAINING_DATA__ORIGIN);
+		createEAttribute(trainingDataEClass, TRAINING_DATA__SCOPE);
+		createEReference(trainingDataEClass, TRAINING_DATA__BASE_ARTIFACT);
+
+		thirdPartyComponentEClass = createEClass(THIRD_PARTY_COMPONENT);
+		createEAttribute(thirdPartyComponentEClass, THIRD_PARTY_COMPONENT__ORIGIN);
+		createEAttribute(thirdPartyComponentEClass, THIRD_PARTY_COMPONENT__INTEGRATION_DESCRIPTION);
+		createEReference(thirdPartyComponentEClass, THIRD_PARTY_COMPONENT__BASE_COMPONENT);
+
+		essentialServiceEClass = createEClass(ESSENTIAL_SERVICE);
+		createEAttribute(essentialServiceEClass, ESSENTIAL_SERVICE__CREDITWORTHINESS);
+		createEAttribute(essentialServiceEClass, ESSENTIAL_SERVICE__PUBLIC_BENEFITS_ELIGIBILITY);
+		createEAttribute(essentialServiceEClass, ESSENTIAL_SERVICE__FRAUD_DETECTION_ONLY);
+		createEAttribute(essentialServiceEClass, ESSENTIAL_SERVICE__INSURANCE_RISK_PRICING);
+		createEAttribute(essentialServiceEClass, ESSENTIAL_SERVICE__PREPARATORY_TASK);
+		createEAttribute(essentialServiceEClass, ESSENTIAL_SERVICE__NARROW_PROCEDURAL_TASK);
+		createEAttribute(essentialServiceEClass, ESSENTIAL_SERVICE__EXCEPTION_JUSTIFICATION);
+		createEAttribute(essentialServiceEClass, ESSENTIAL_SERVICE__IMPROVES_HUMAN_ACTIVITY);
+		createEAttribute(essentialServiceEClass, ESSENTIAL_SERVICE__DECISION_PATTERN_DETECTION);
+		createEReference(essentialServiceEClass, ESSENTIAL_SERVICE__BASE_USE_CASE);
+
+		lawEnforcementEClass = createEClass(LAW_ENFORCEMENT);
+		createEAttribute(lawEnforcementEClass, LAW_ENFORCEMENT__VICTIM_RISK_ASSESSMENT);
+		createEAttribute(lawEnforcementEClass, LAW_ENFORCEMENT__LIE_DETECTION);
+		createEAttribute(lawEnforcementEClass, LAW_ENFORCEMENT__EVIDENCE_RELIABILITY);
+		createEAttribute(lawEnforcementEClass, LAW_ENFORCEMENT__OFFENDING_RISK_ASSESSMENT);
+		createEAttribute(lawEnforcementEClass, LAW_ENFORCEMENT__SOLELY_PROFILING_BASED);
+		createEAttribute(lawEnforcementEClass, LAW_ENFORCEMENT__NARROW_PROCEDURAL_TASK);
+		createEAttribute(lawEnforcementEClass, LAW_ENFORCEMENT__EXCEPTION_JUSTIFICATION);
+		createEAttribute(lawEnforcementEClass, LAW_ENFORCEMENT__DECISION_PATTERN_DETECTION);
+		createEAttribute(lawEnforcementEClass, LAW_ENFORCEMENT__PREPARATORY_TASK);
+		createEAttribute(lawEnforcementEClass, LAW_ENFORCEMENT__IMPROVES_HUMAN_ACTIVITY);
+		createEReference(lawEnforcementEClass, LAW_ENFORCEMENT__BASE_USE_CASE);
+
+		migrationBorderEClass = createEClass(MIGRATION_BORDER);
+		createEAttribute(migrationBorderEClass, MIGRATION_BORDER__LIE_DETECTION);
+		createEAttribute(migrationBorderEClass, MIGRATION_BORDER__ENTRY_RISK_ASSESSMENT);
+		createEAttribute(migrationBorderEClass, MIGRATION_BORDER__ASYLUM_VISA_RESIDENCE_PERMITS_APPLICATION);
+		createEAttribute(migrationBorderEClass, MIGRATION_BORDER__TRAVEL_DOCUMENT_VERIFICATION_ONLY);
+		createEAttribute(migrationBorderEClass, MIGRATION_BORDER__PERSON_IDENTIFICATION);
+		createEAttribute(migrationBorderEClass, MIGRATION_BORDER__IMPROVES_HUMAN_ACTIVITY);
+		createEAttribute(migrationBorderEClass, MIGRATION_BORDER__NARROW_PROCEDURAL_TASK);
+		createEAttribute(migrationBorderEClass, MIGRATION_BORDER__EXCEPTION_JUSTIFICATION);
+		createEAttribute(migrationBorderEClass, MIGRATION_BORDER__PREPARATORY_TASK);
+		createEAttribute(migrationBorderEClass, MIGRATION_BORDER__DECISION_PATTERN_DETECTION);
+		createEReference(migrationBorderEClass, MIGRATION_BORDER__BASE_USE_CASE);
+
+		justiceDemocracyUseCaseEClass = createEClass(JUSTICE_DEMOCRACY_USE_CASE);
+		createEAttribute(justiceDemocracyUseCaseEClass, JUSTICE_DEMOCRACY_USE_CASE__JUDICIAL_SUPPORT);
+		createEAttribute(justiceDemocracyUseCaseEClass, JUSTICE_DEMOCRACY_USE_CASE__ELECTION_INFLUENCE);
+		createEAttribute(justiceDemocracyUseCaseEClass, JUSTICE_DEMOCRACY_USE_CASE__NO_DIRECT_EXPOSURE);
+		createEAttribute(justiceDemocracyUseCaseEClass, JUSTICE_DEMOCRACY_USE_CASE__DECISION_PATTERN_DETECTION);
+		createEAttribute(justiceDemocracyUseCaseEClass, JUSTICE_DEMOCRACY_USE_CASE__IMPROVES_HUMAN_ACTIVITY);
+		createEAttribute(justiceDemocracyUseCaseEClass, JUSTICE_DEMOCRACY_USE_CASE__PREPARATORY_TASK);
+		createEAttribute(justiceDemocracyUseCaseEClass, JUSTICE_DEMOCRACY_USE_CASE__NARROW_PROCEDURAL_TASK);
+		createEAttribute(justiceDemocracyUseCaseEClass, JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION_JUSTIFICATION);
+		createEReference(justiceDemocracyUseCaseEClass, JUSTICE_DEMOCRACY_USE_CASE__BASE_USE_CASE);
+
+		biometricIdentificationEClass = createEClass(BIOMETRIC_IDENTIFICATION);
+		createEAttribute(biometricIdentificationEClass, BIOMETRIC_IDENTIFICATION__VERIFICATION_ONLY);
+		createEAttribute(biometricIdentificationEClass, BIOMETRIC_IDENTIFICATION__REAL_TIME);
+		createEAttribute(biometricIdentificationEClass, BIOMETRIC_IDENTIFICATION__PUBLICLY_ACCESSIBLE_SPACE);
+		createEAttribute(biometricIdentificationEClass, BIOMETRIC_IDENTIFICATION__LAW_ENFORCEMENT_PURPOSE);
+		createEAttribute(biometricIdentificationEClass, BIOMETRIC_IDENTIFICATION__VICTIM_SEARCH);
+		createEAttribute(biometricIdentificationEClass, BIOMETRIC_IDENTIFICATION__IMMINENT_THREAT_PREVENTION);
+		createEAttribute(biometricIdentificationEClass, BIOMETRIC_IDENTIFICATION__SERIOUS_CRIME_SUSPECT_SEARCH);
+		createEAttribute(biometricIdentificationEClass, BIOMETRIC_IDENTIFICATION__NARROW_PROCEDURAL_TASK);
+		createEAttribute(biometricIdentificationEClass, BIOMETRIC_IDENTIFICATION__IMPROVES_HUMAN_ACTIVITY);
+		createEAttribute(biometricIdentificationEClass, BIOMETRIC_IDENTIFICATION__DECISION_PATTERN_DETECTION);
+		createEAttribute(biometricIdentificationEClass, BIOMETRIC_IDENTIFICATION__PREPARATORY_TASK);
+		createEAttribute(biometricIdentificationEClass, BIOMETRIC_IDENTIFICATION__EXCEPTION_JUSTIFICATION);
+		createEReference(biometricIdentificationEClass, BIOMETRIC_IDENTIFICATION__BASE_USE_CASE);
+
+		biometricCategorisationEClass = createEClass(BIOMETRIC_CATEGORISATION);
+		createEAttribute(biometricCategorisationEClass, BIOMETRIC_CATEGORISATION__DEDUCE_RACE);
+		createEAttribute(biometricCategorisationEClass, BIOMETRIC_CATEGORISATION__DEDUCE_POLITICAL_OPINION);
+		createEAttribute(biometricCategorisationEClass, BIOMETRIC_CATEGORISATION__DEDUCE_RELIGIOUS_BELIEF);
+		createEAttribute(biometricCategorisationEClass, BIOMETRIC_CATEGORISATION__DEDUCE_UNION_MEMBERSHIP);
+		createEAttribute(biometricCategorisationEClass, BIOMETRIC_CATEGORISATION__DEDUCE_SEXUALITY);
+		createEAttribute(biometricCategorisationEClass, BIOMETRIC_CATEGORISATION__LAWFUL_DATASET_LABELING);
+		createEAttribute(biometricCategorisationEClass, BIOMETRIC_CATEGORISATION__LAW_ENFORCEMENT_CATEGORISATION);
+		createEAttribute(biometricCategorisationEClass, BIOMETRIC_CATEGORISATION__NARROW_PROCEDURAL_TASK);
+		createEAttribute(biometricCategorisationEClass, BIOMETRIC_CATEGORISATION__IMPROVES_HUMAN_ACTIVITY);
+		createEAttribute(biometricCategorisationEClass, BIOMETRIC_CATEGORISATION__DECISION_PATTERN_DETECTION);
+		createEAttribute(biometricCategorisationEClass, BIOMETRIC_CATEGORISATION__PREPARATORY_TASK);
+		createEAttribute(biometricCategorisationEClass, BIOMETRIC_CATEGORISATION__EXCEPTION_JUSTIFICATION);
+		createEReference(biometricCategorisationEClass, BIOMETRIC_CATEGORISATION__BASE_USE_CASE);
+
+		emotionRecognitionEClass = createEClass(EMOTION_RECOGNITION);
+		createEAttribute(emotionRecognitionEClass, EMOTION_RECOGNITION__EDUCATION);
+		createEAttribute(emotionRecognitionEClass, EMOTION_RECOGNITION__WORKPLACE);
+		createEAttribute(emotionRecognitionEClass, EMOTION_RECOGNITION__MEDICAL_OR_SAFETY_REASON);
+		createEAttribute(emotionRecognitionEClass, EMOTION_RECOGNITION__NARROW_PROCEDURAL_TASK);
+		createEAttribute(emotionRecognitionEClass, EMOTION_RECOGNITION__IMPROVES_HUMAN_ACTIVITY);
+		createEAttribute(emotionRecognitionEClass, EMOTION_RECOGNITION__DECISION_PATTERN_DETECTION);
+		createEAttribute(emotionRecognitionEClass, EMOTION_RECOGNITION__PREPARATORY_TASK);
+		createEAttribute(emotionRecognitionEClass, EMOTION_RECOGNITION__EXCEPTION_JUSTIFICATION);
+		createEReference(emotionRecognitionEClass, EMOTION_RECOGNITION__BASE_USE_CASE);
+
+		// Create enums
+		categoryEEnum = createEEnum(CATEGORY);
+		roleEEnum = createEEnum(ROLE);
 	}
 
 	/**
@@ -1931,8 +2682,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
 		UMLPackage theUMLPackage = (UMLPackage)EPackage.Registry.INSTANCE.getEPackage(UMLPackage.eNS_URI);
+		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -1941,47 +2692,21 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(annexIIIUseCaseEClass, AnnexIIIUseCase.class, "AnnexIIIUseCase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAnnexIIIUseCase_BiometricIdentification(), theTypesPackage.getBoolean(), "BiometricIdentification", null, 1, 1, AnnexIIIUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAnnexIIIUseCase_BiometricCategorisation(), theTypesPackage.getBoolean(), "BiometricCategorisation", null, 1, 1, AnnexIIIUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAnnexIIIUseCase_CriticalInfrastructure(), theTypesPackage.getBoolean(), "CriticalInfrastructure", null, 1, 1, AnnexIIIUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAnnexIIIUseCase_Education(), theTypesPackage.getBoolean(), "Education", null, 1, 1, AnnexIIIUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAnnexIIIUseCase_HumanEmployment(), theTypesPackage.getBoolean(), "HumanEmployment", null, 1, 1, AnnexIIIUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAnnexIIIUseCase_EssentialServices(), theTypesPackage.getBoolean(), "EssentialServices", null, 1, 1, AnnexIIIUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAnnexIIIUseCase_Law(), theTypesPackage.getBoolean(), "Law", null, 1, 1, AnnexIIIUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAnnexIIIUseCase_Migration(), theTypesPackage.getBoolean(), "Migration", null, 1, 1, AnnexIIIUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAnnexIIIUseCase_Justice(), theTypesPackage.getBoolean(), "Justice", null, 1, 1, AnnexIIIUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAnnexIIIUseCase_NarrowProceduralTask(), theTypesPackage.getBoolean(), "NarrowProceduralTask", null, 1, 1, AnnexIIIUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAnnexIIIUseCase_ImprovesHumanActivity(), theTypesPackage.getBoolean(), "ImprovesHumanActivity", null, 1, 1, AnnexIIIUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAnnexIIIUseCase_PreparatoryTask(), theTypesPackage.getBoolean(), "PreparatoryTask", null, 1, 1, AnnexIIIUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAnnexIIIUseCase_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, AnnexIIIUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
 		initEClass(profilingEClass, Profiling.class, "Profiling", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getProfiling_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, Profiling.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(safetyComponentEClass, SafetyComponent.class, "SafetyComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSafetyComponent_Machinery(), theTypesPackage.getBoolean(), "Machinery", null, 1, 1, SafetyComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getSafetyComponent_Toy(), theTypesPackage.getBoolean(), "Toy", null, 1, 1, SafetyComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getSafetyComponent_Elevator(), theTypesPackage.getBoolean(), "Elevator", null, 1, 1, SafetyComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getSafetyComponent_Medical(), theTypesPackage.getBoolean(), "Medical", null, 1, 1, SafetyComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getSafetyComponent_InVitroDiagnostics(), theTypesPackage.getBoolean(), "InVitroDiagnostics", null, 1, 1, SafetyComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getSafetyComponent_PersonalProtective(), theTypesPackage.getBoolean(), "PersonalProtective", null, 1, 1, SafetyComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getSafetyComponent_CivilAviation(), theTypesPackage.getBoolean(), "CivilAviation", null, 1, 1, SafetyComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getSafetyComponent_RailSystem(), theTypesPackage.getBoolean(), "RailSystem", null, 1, 1, SafetyComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getSafetyComponent_Agricultural(), theTypesPackage.getBoolean(), "Agricultural", null, 1, 1, SafetyComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSafetyComponent_Base_Component(), theUMLPackage.getComponent(), null, "base_Component", null, 0, 1, SafetyComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEClass(productEmbeddingEClass, ProductEmbedding.class, "ProductEmbedding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getProductEmbedding_Base_Component(), theUMLPackage.getComponent(), null, "base_Component", null, 0, 1, ProductEmbedding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getProductEmbedding_FailureEndangerSafety(), theTypesPackage.getBoolean(), "FailureEndangerSafety", null, 1, 1, ProductEmbedding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getProductEmbedding_ThirdPartyConformityAssessment(), theTypesPackage.getString(), "ThirdPartyConformityAssessment", null, 1, 1, ProductEmbedding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getProductEmbedding_ProductCategory(), this.getCategory(), "ProductCategory", null, 1, 1, ProductEmbedding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getProductEmbedding_Role(), this.getRole(), "Role", null, 1, 1, ProductEmbedding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(humanInteractionEClass, HumanInteraction.class, "HumanInteraction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getHumanInteraction_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, HumanInteraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(syntheticContentEClass, SyntheticContent.class, "SyntheticContent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSyntheticContent_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, SyntheticContent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(emotionRecognitionNotificationEClass, EmotionRecognitionNotification.class, "EmotionRecognitionNotification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEmotionRecognitionNotification_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, EmotionRecognitionNotification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(biometricCategorizationNotificationEClass, BiometricCategorizationNotification.class, "BiometricCategorizationNotification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBiometricCategorizationNotification_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, BiometricCategorizationNotification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(deepfakeEClass, Deepfake.class, "Deepfake", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDeepfake_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, Deepfake.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1990,124 +2715,230 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		initEReference(getPublicInterestText_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, PublicInterestText.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(manipulativeBehaviourEClass, ManipulativeBehaviour.class, "ManipulativeBehaviour", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getManipulativeBehaviour_SubliminalTechniques(), theTypesPackage.getBoolean(), "SubliminalTechniques", null, 1, 1, ManipulativeBehaviour.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getManipulativeBehaviour_DeceptiveTechniques(), theTypesPackage.getBoolean(), "DeceptiveTechniques", null, 1, 1, ManipulativeBehaviour.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getManipulativeBehaviour_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, ManipulativeBehaviour.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(exploitingVulnerabilityEClass, ExploitingVulnerability.class, "ExploitingVulnerability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getExploitingVulnerability_Age(), theTypesPackage.getBoolean(), "Age", null, 1, 1, ExploitingVulnerability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getExploitingVulnerability_Disability(), theTypesPackage.getBoolean(), "Disability", null, 1, 1, ExploitingVulnerability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getExploitingVulnerability_Social(), theTypesPackage.getBoolean(), "Social", null, 1, 1, ExploitingVulnerability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getExploitingVulnerability_Economic(), theTypesPackage.getBoolean(), "Economic", null, 1, 1, ExploitingVulnerability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getExploitingVulnerability_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, ExploitingVulnerability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEClass(exploitingHumanVulnerabilityEClass, ExploitingHumanVulnerability.class, "ExploitingHumanVulnerability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getExploitingHumanVulnerability_Age(), theTypesPackage.getBoolean(), "Age", null, 1, 1, ExploitingHumanVulnerability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getExploitingHumanVulnerability_Disability(), theTypesPackage.getBoolean(), "Disability", null, 1, 1, ExploitingHumanVulnerability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getExploitingHumanVulnerability_Social(), theTypesPackage.getBoolean(), "Social", null, 1, 1, ExploitingHumanVulnerability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getExploitingHumanVulnerability_Economic(), theTypesPackage.getBoolean(), "Economic", null, 1, 1, ExploitingHumanVulnerability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getExploitingHumanVulnerability_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, ExploitingHumanVulnerability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(socialScoringEClass, SocialScoring.class, "SocialScoring", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSocialScoring_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, SocialScoring.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(predictivePolicingEClass, PredictivePolicing.class, "PredictivePolicing", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPredictivePolicing_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, PredictivePolicing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(facialRecognitionEClass, FacialRecognition.class, "FacialRecognition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFacialRecognition_Internet(), theTypesPackage.getBoolean(), "Internet", null, 1, 1, FacialRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getFacialRecognition_CCTV(), theTypesPackage.getBoolean(), "CCTV", null, 1, 1, FacialRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getFacialRecognition_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, FacialRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(emotionRecognitionEClass, EmotionRecognition.class, "EmotionRecognition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEmotionRecognition_Race(), theTypesPackage.getBoolean(), "Race", null, 1, 1, EmotionRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getEmotionRecognition_Politics(), theTypesPackage.getBoolean(), "Politics", null, 1, 1, EmotionRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getEmotionRecognition_UnionMembership(), theTypesPackage.getBoolean(), "UnionMembership", null, 1, 1, EmotionRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getEmotionRecognition_Religion(), theTypesPackage.getBoolean(), "Religion", null, 1, 1, EmotionRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getEmotionRecognition_Sexuality(), theTypesPackage.getBoolean(), "Sexuality", null, 1, 1, EmotionRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getEmotionRecognition_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, EmotionRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(biometricCategorisationEClass, BiometricCategorisation.class, "BiometricCategorisation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBiometricCategorisation_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, BiometricCategorisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getBiometricCategorisation_LawfullyAcquiredDatasets(), theTypesPackage.getBoolean(), "LawfullyAcquiredDatasets", null, 1, 1, BiometricCategorisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getBiometricCategorisation_LawEnforcement(), theTypesPackage.getBoolean(), "LawEnforcement", null, 1, 1, BiometricCategorisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(biometricIdentificationEClass, BiometricIdentification.class, "BiometricIdentification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getBiometricIdentification_PublicSpace(), theTypesPackage.getBoolean(), "PublicSpace", null, 1, 1, BiometricIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getBiometricIdentification_VictimSearch(), theTypesPackage.getBoolean(), "VictimSearch", null, 1, 1, BiometricIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getBiometricIdentification_ThreatPrevention(), theTypesPackage.getBoolean(), "ThreatPrevention", null, 1, 1, BiometricIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getBiometricIdentification_CriminalSuspectSearch(), theTypesPackage.getBoolean(), "CriminalSuspectSearch", null, 1, 1, BiometricIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getBiometricIdentification_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, BiometricIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEClass(facialImageScrapingEClass, FacialImageScraping.class, "FacialImageScraping", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFacialImageScraping_Internet(), theTypesPackage.getBoolean(), "Internet", null, 1, 1, FacialImageScraping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getFacialImageScraping_CCTV(), theTypesPackage.getBoolean(), "CCTV", null, 1, 1, FacialImageScraping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getFacialImageScraping_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, FacialImageScraping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(aiSystemEClass, AISystem.class, "AISystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAISystem_Base_Component(), theUMLPackage.getComponent(), null, "base_Component", null, 0, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_Purpose(), theTypesPackage.getString(), "Purpose", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_Version(), theTypesPackage.getString(), "Version", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_ExternalInteraction(), theTypesPackage.getString(), "ExternalInteraction", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_MarketPlacementForm(), theTypesPackage.getString(), "MarketPlacementForm", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_Hardware(), theTypesPackage.getString(), "Hardware", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_VisualDocumentation(), theTypesPackage.getBoolean(), "VisualDocumentation", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_UserInterface(), theTypesPackage.getString(), "UserInterface", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_Instructions(), theTypesPackage.getString(), "Instructions", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_DevelopmentProcess(), theTypesPackage.getString(), "DevelopmentProcess", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_DesignSpecification(), theTypesPackage.getString(), "DesignSpecification", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_DesignDecision(), theTypesPackage.getString(), "DesignDecision", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_DesignTradeOffs(), theTypesPackage.getString(), "DesignTradeOffs", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_Resources(), theTypesPackage.getString(), "Resources", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_HumanOversightPreassessment(), theTypesPackage.getString(), "HumanOversightPreassessment", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_PlannedModification(), theTypesPackage.getString(), "PlannedModification", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_Cybersecurity(), theTypesPackage.getString(), "Cybersecurity", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_HumanOversightPostAssessment(), theTypesPackage.getString(), "HumanOversightPostAssessment", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_UpdateRequirements(), theTypesPackage.getString(), "UpdateRequirements", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_PredictableRisks(), theTypesPackage.getString(), "PredictableRisks", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_PerformanceMetricsSuitability(), theTypesPackage.getString(), "PerformanceMetricsSuitability", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_RiskManagement(), theTypesPackage.getString(), "RiskManagement", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_RelevantChanges(), theTypesPackage.getString(), "RelevantChanges", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_HarmonisedStandards(), theTypesPackage.getString(), "HarmonisedStandards", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_CopyEUConformityDeclaration(), theTypesPackage.getBoolean(), "CopyEUConformityDeclaration", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_PostMarketMonitoring(), theTypesPackage.getString(), "PostMarketMonitoring", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(providerEClass, Provider.class, "Provider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getProvider_Base_Actor(), theUMLPackage.getActor(), null, "base_Actor", null, 0, 1, Provider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(generalDescriptionAISystemEClass, GeneralDescriptionAISystem.class, "GeneralDescriptionAISystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGeneralDescriptionAISystem_Purpose(), theTypesPackage.getBoolean(), "Purpose", null, 1, 1, GeneralDescriptionAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getGeneralDescriptionAISystem_Provider(), theTypesPackage.getBoolean(), "Provider", null, 1, 1, GeneralDescriptionAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getGeneralDescriptionAISystem_Version(), theTypesPackage.getBoolean(), "Version", null, 1, 1, GeneralDescriptionAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getGeneralDescriptionAISystem_Interaction(), theTypesPackage.getBoolean(), "Interaction", null, 1, 1, GeneralDescriptionAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getGeneralDescriptionAISystem_Deployment(), theTypesPackage.getBoolean(), "Deployment", null, 1, 1, GeneralDescriptionAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getGeneralDescriptionAISystem_Hardware(), theTypesPackage.getBoolean(), "Hardware", null, 1, 1, GeneralDescriptionAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getGeneralDescriptionAISystem_VisualDocumentation(), theTypesPackage.getBoolean(), "VisualDocumentation", null, 1, 1, GeneralDescriptionAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getGeneralDescriptionAISystem_Interface(), theTypesPackage.getBoolean(), "Interface", null, 1, 1, GeneralDescriptionAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getGeneralDescriptionAISystem_Instructions(), theTypesPackage.getBoolean(), "Instructions", null, 1, 1, GeneralDescriptionAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getGeneralDescriptionAISystem_Base_Artifact(), theUMLPackage.getArtifact(), null, "base_Artifact", null, 0, 1, GeneralDescriptionAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(detailedDescriptionAISystemEClass, DetailedDescriptionAISystem.class, "DetailedDescriptionAISystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDetailedDescriptionAISystem_Capabilities(), theTypesPackage.getBoolean(), "Capabilities", null, 1, 1, DetailedDescriptionAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDetailedDescriptionAISystem_Accuracy(), theTypesPackage.getBoolean(), "Accuracy", null, 1, 1, DetailedDescriptionAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDetailedDescriptionAISystem_PredictableRisks(), theTypesPackage.getBoolean(), "PredictableRisks", null, 1, 1, DetailedDescriptionAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDetailedDescriptionAISystem_HumanOversightPostAssessment(), theTypesPackage.getBoolean(), "HumanOversightPostAssessment", null, 1, 1, DetailedDescriptionAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDetailedDescriptionAISystem_InputSpecification(), theTypesPackage.getBoolean(), "InputSpecification", null, 1, 1, DetailedDescriptionAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getDetailedDescriptionAISystem_Base_Artifact(), theUMLPackage.getArtifact(), null, "base_Artifact", null, 0, 1, DetailedDescriptionAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(detailedInformationAISystemEClass, DetailedInformationAISystem.class, "DetailedInformationAISystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDetailedInformationAISystem_Developement(), theTypesPackage.getBoolean(), "Developement", null, 1, 1, DetailedInformationAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDetailedInformationAISystem_ThirdPartyElements(), theTypesPackage.getBoolean(), "ThirdPartyElements", null, 1, 1, DetailedInformationAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDetailedInformationAISystem_DesignSpecification(), theTypesPackage.getBoolean(), "DesignSpecification", null, 1, 1, DetailedInformationAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDetailedInformationAISystem_DesignDecision(), theTypesPackage.getBoolean(), "DesignDecision", null, 1, 1, DetailedInformationAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDetailedInformationAISystem_Objective(), theTypesPackage.getBoolean(), "Objective", null, 1, 1, DetailedInformationAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDetailedInformationAISystem_ExpectedOutput(), theTypesPackage.getBoolean(), "ExpectedOutput", null, 1, 1, DetailedInformationAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDetailedInformationAISystem_Compromise(), theTypesPackage.getBoolean(), "Compromise", null, 1, 1, DetailedInformationAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDetailedInformationAISystem_Architecture(), theTypesPackage.getBoolean(), "Architecture", null, 1, 1, DetailedInformationAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDetailedInformationAISystem_Resources(), theTypesPackage.getBoolean(), "Resources", null, 1, 1, DetailedInformationAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDetailedInformationAISystem_TrainingMethods(), theTypesPackage.getBoolean(), "TrainingMethods", null, 1, 1, DetailedInformationAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDetailedInformationAISystem_TrainingDataDescription(), theTypesPackage.getBoolean(), "TrainingDataDescription", null, 1, 1, DetailedInformationAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDetailedInformationAISystem_TrainingDataSelection(), theTypesPackage.getBoolean(), "TrainingDataSelection", null, 1, 1, DetailedInformationAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDetailedInformationAISystem_TrainingDataLabeling(), theTypesPackage.getBoolean(), "TrainingDataLabeling", null, 1, 1, DetailedInformationAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDetailedInformationAISystem_TrainingDataCleaning(), theTypesPackage.getBoolean(), "TrainingDataCleaning", null, 1, 1, DetailedInformationAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDetailedInformationAISystem_HumanOversightPreassessment(), theTypesPackage.getBoolean(), "HumanOversightPreassessment", null, 1, 1, DetailedInformationAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDetailedInformationAISystem_PlannedModification(), theTypesPackage.getBoolean(), "PlannedModification", null, 1, 1, DetailedInformationAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDetailedInformationAISystem_ValidationProcess(), theTypesPackage.getBoolean(), "ValidationProcess", null, 1, 1, DetailedInformationAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDetailedInformationAISystem_TestingProcess(), theTypesPackage.getBoolean(), "TestingProcess", null, 1, 1, DetailedInformationAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDetailedInformationAISystem_Parameter(), theTypesPackage.getBoolean(), "Parameter", null, 1, 1, DetailedInformationAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDetailedInformationAISystem_Cybersecurity(), theTypesPackage.getBoolean(), "Cybersecurity", null, 1, 1, DetailedInformationAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getDetailedInformationAISystem_Base_Artifact(), theUMLPackage.getArtifact(), null, "base_Artifact", null, 0, 1, DetailedInformationAISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(descriptionPerformanceMetricsEClass, DescriptionPerformanceMetrics.class, "DescriptionPerformanceMetrics", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDescriptionPerformanceMetrics_Base_Artifact(), theUMLPackage.getArtifact(), null, "base_Artifact", null, 0, 1, DescriptionPerformanceMetrics.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(descriptionRiskManagementEClass, DescriptionRiskManagement.class, "DescriptionRiskManagement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDescriptionRiskManagement_Base_Artifact(), theUMLPackage.getArtifact(), null, "base_Artifact", null, 0, 1, DescriptionRiskManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(descriptionProviderRelevantChangesEClass, DescriptionProviderRelevantChanges.class, "DescriptionProviderRelevantChanges", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDescriptionProviderRelevantChanges_Base_Artifact(), theUMLPackage.getArtifact(), null, "base_Artifact", null, 0, 1, DescriptionProviderRelevantChanges.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
 		initEClass(listHarmonisedStandardsEClass, ListHarmonisedStandards.class, "ListHarmonisedStandards", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getListHarmonisedStandards_Base_Artifact(), theUMLPackage.getArtifact(), null, "base_Artifact", null, 0, 1, ListHarmonisedStandards.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(copyEUConformityDeclarationEClass, CopyEUConformityDeclaration.class, "CopyEUConformityDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCopyEUConformityDeclaration_Base_Artifact(), theUMLPackage.getArtifact(), null, "base_Artifact", null, 0, 1, CopyEUConformityDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEClass(providesEClass, Provides.class, "Provides", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getProvides_Base_Association(), theUMLPackage.getAssociation(), null, "base_Association", null, 0, 1, Provides.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(descriptionAISystemPostMarketPhaseEClass, DescriptionAISystemPostMarketPhase.class, "DescriptionAISystemPostMarketPhase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDescriptionAISystemPostMarketPhase_Base_Artifact(), theUMLPackage.getArtifact(), null, "base_Artifact", null, 0, 1, DescriptionAISystemPostMarketPhase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEClass(criticalInfrastructureEClass, CriticalInfrastructure.class, "CriticalInfrastructure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCriticalInfrastructure_DigitalInfrastructure(), theTypesPackage.getBoolean(), "DigitalInfrastructure", null, 1, 1, CriticalInfrastructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCriticalInfrastructure_RoadTraffic(), theTypesPackage.getBoolean(), "RoadTraffic", null, 1, 1, CriticalInfrastructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCriticalInfrastructure_WaterSupply(), theTypesPackage.getBoolean(), "WaterSupply", null, 1, 1, CriticalInfrastructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCriticalInfrastructure_GasSupply(), theTypesPackage.getBoolean(), "GasSupply", null, 1, 1, CriticalInfrastructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCriticalInfrastructure_HeatSupply(), theTypesPackage.getBoolean(), "HeatSupply", null, 1, 1, CriticalInfrastructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCriticalInfrastructure_ElectricitySupply(), theTypesPackage.getBoolean(), "ElectricitySupply", null, 1, 1, CriticalInfrastructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCriticalInfrastructure_ExceptionJustification(), theTypesPackage.getString(), "ExceptionJustification", null, 1, 1, CriticalInfrastructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCriticalInfrastructure_ImprovesHumanActivity(), theTypesPackage.getBoolean(), "ImprovesHumanActivity", null, 1, 1, CriticalInfrastructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCriticalInfrastructure_NarrowProceduralTask(), theTypesPackage.getBoolean(), "NarrowProceduralTask", null, 1, 1, CriticalInfrastructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCriticalInfrastructure_PreparatoryTask(), theTypesPackage.getBoolean(), "PreparatoryTask", null, 1, 1, CriticalInfrastructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCriticalInfrastructure_DecisionPatternDetection(), theTypesPackage.getBoolean(), "DecisionPatternDetection", null, 1, 1, CriticalInfrastructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getCriticalInfrastructure_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, CriticalInfrastructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(documentsEClass, Documents.class, "Documents", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDocuments_Base_Dependency(), theUMLPackage.getDependency(), null, "base_Dependency", null, 0, 1, Documents.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEClass(mlModelEClass, MLModel.class, "MLModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMLModel_Parameter(), theTypesPackage.getString(), "Parameter", null, 1, 1, MLModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getMLModel_TrainingMethods(), theTypesPackage.getString(), "TrainingMethods", null, 1, 1, MLModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getMLModel_Objective(), theTypesPackage.getString(), "Objective", null, 1, 1, MLModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getMLModel_ValidationProcess(), theTypesPackage.getString(), "ValidationProcess", null, 1, 1, MLModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getMLModel_ExpectedOutput(), theTypesPackage.getString(), "ExpectedOutput", null, 1, 1, MLModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getMLModel_TestingProcess(), theTypesPackage.getString(), "TestingProcess", null, 1, 1, MLModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getMLModel_Accuracy(), theTypesPackage.getString(), "Accuracy", null, 1, 1, MLModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getMLModel_Capabilities(), theTypesPackage.getString(), "Capabilities", null, 1, 1, MLModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getMLModel_TestReports(), theTypesPackage.getBoolean(), "TestReports", null, 1, 1, MLModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getMLModel_Base_Component(), theUMLPackage.getComponent(), null, "base_Component", null, 0, 1, MLModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getMLModel_InputSpecification(), theTypesPackage.getString(), "InputSpecification", null, 1, 1, MLModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(transparencyObligationEClass, TransparencyObligation.class, "TransparencyObligation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTransparencyObligation_Base_Artifact(), theUMLPackage.getArtifact(), null, "base_Artifact", null, 0, 1, TransparencyObligation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getTransparencyObligation_HumanInteraction(), theTypesPackage.getBoolean(), "HumanInteraction", null, 1, 1, TransparencyObligation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getTransparencyObligation_SyntheticContent(), theTypesPackage.getBoolean(), "SyntheticContent", null, 1, 1, TransparencyObligation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getTransparencyObligation_EmotionRecognitionNotification(), theTypesPackage.getBoolean(), "EmotionRecognitionNotification", null, 1, 1, TransparencyObligation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getTransparencyObligation_BiometricCategorizationNotification(), theTypesPackage.getBoolean(), "BiometricCategorizationNotification", null, 1, 1, TransparencyObligation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getTransparencyObligation_Deepfake(), theTypesPackage.getBoolean(), "Deepfake", null, 1, 1, TransparencyObligation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getTransparencyObligation_PublicInterestText(), theTypesPackage.getBoolean(), "PublicInterestText", null, 1, 1, TransparencyObligation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEClass(educationEClass, Education.class, "Education", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEducation_AccessAdmission(), theTypesPackage.getBoolean(), "AccessAdmission", null, 1, 1, Education.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEducation_LearningOutcomeEvaluation(), theTypesPackage.getBoolean(), "LearningOutcomeEvaluation", null, 1, 1, Education.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEducation_EducationLevelAssessment(), theTypesPackage.getBoolean(), "EducationLevelAssessment", null, 1, 1, Education.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEducation_ExamMonitoring(), theTypesPackage.getBoolean(), "ExamMonitoring", null, 1, 1, Education.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEducation_NarrowProceduralTask(), theTypesPackage.getBoolean(), "NarrowProceduralTask", null, 1, 1, Education.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEducation_ImprovesHumanActivity(), theTypesPackage.getBoolean(), "ImprovesHumanActivity", null, 1, 1, Education.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEducation_DecisionPatternDetection(), theTypesPackage.getBoolean(), "DecisionPatternDetection", null, 1, 1, Education.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEducation_PreparatoryTask(), theTypesPackage.getBoolean(), "PreparatoryTask", null, 1, 1, Education.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEducation_ExceptionJustification(), theTypesPackage.getString(), "ExceptionJustification", null, 1, 1, Education.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getEducation_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, Education.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(humanEmploymentEClass, HumanEmployment.class, "HumanEmployment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getHumanEmployment_Recruitment(), theTypesPackage.getBoolean(), "Recruitment", null, 1, 1, HumanEmployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getHumanEmployment_WorkConditionsDecisions(), theTypesPackage.getBoolean(), "WorkConditionsDecisions", null, 1, 1, HumanEmployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getHumanEmployment_DecisionPatternDetection(), theTypesPackage.getBoolean(), "DecisionPatternDetection", null, 1, 1, HumanEmployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getHumanEmployment_ImprovesHumanActivity(), theTypesPackage.getBoolean(), "ImprovesHumanActivity", null, 1, 1, HumanEmployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getHumanEmployment_PreparatoryTask(), theTypesPackage.getBoolean(), "PreparatoryTask", null, 1, 1, HumanEmployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getHumanEmployment_ExceptionJustification(), theTypesPackage.getString(), "ExceptionJustification", null, 1, 1, HumanEmployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getHumanEmployment_NarrowProceduralTask(), theTypesPackage.getBoolean(), "NarrowProceduralTask", null, 1, 1, HumanEmployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getHumanEmployment_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, HumanEmployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(trainingDataEClass, TrainingData.class, "TrainingData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTrainingData_Cleaning(), theTypesPackage.getString(), "Cleaning", null, 1, 1, TrainingData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTrainingData_Labeling(), theTypesPackage.getString(), "Labeling", null, 1, 1, TrainingData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTrainingData_Selection(), theTypesPackage.getString(), "Selection", null, 1, 1, TrainingData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTrainingData_Description(), theTypesPackage.getString(), "Description", null, 1, 1, TrainingData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTrainingData_Origin(), theTypesPackage.getString(), "Origin", null, 1, 1, TrainingData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTrainingData_Scope(), theTypesPackage.getString(), "Scope", null, 1, 1, TrainingData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getTrainingData_Base_Artifact(), theUMLPackage.getArtifact(), null, "base_Artifact", null, 0, 1, TrainingData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(thirdPartyComponentEClass, ThirdPartyComponent.class, "ThirdPartyComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getThirdPartyComponent_Origin(), theTypesPackage.getString(), "Origin", null, 1, 1, ThirdPartyComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getThirdPartyComponent_IntegrationDescription(), theTypesPackage.getString(), "IntegrationDescription", null, 1, 1, ThirdPartyComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getThirdPartyComponent_Base_Component(), theUMLPackage.getComponent(), null, "base_Component", null, 0, 1, ThirdPartyComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(essentialServiceEClass, EssentialService.class, "EssentialService", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEssentialService_Creditworthiness(), theTypesPackage.getBoolean(), "Creditworthiness", null, 1, 1, EssentialService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEssentialService_PublicBenefitsEligibility(), theTypesPackage.getBoolean(), "PublicBenefitsEligibility", null, 1, 1, EssentialService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEssentialService_FraudDetectionOnly(), theTypesPackage.getBoolean(), "FraudDetectionOnly", null, 1, 1, EssentialService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEssentialService_InsuranceRiskPricing(), theTypesPackage.getBoolean(), "InsuranceRiskPricing", null, 1, 1, EssentialService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEssentialService_PreparatoryTask(), theTypesPackage.getBoolean(), "PreparatoryTask", null, 1, 1, EssentialService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEssentialService_NarrowProceduralTask(), theTypesPackage.getBoolean(), "NarrowProceduralTask", null, 1, 1, EssentialService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEssentialService_ExceptionJustification(), theTypesPackage.getString(), "ExceptionJustification", null, 1, 1, EssentialService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEssentialService_ImprovesHumanActivity(), theTypesPackage.getBoolean(), "ImprovesHumanActivity", null, 1, 1, EssentialService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEssentialService_DecisionPatternDetection(), theTypesPackage.getBoolean(), "DecisionPatternDetection", null, 1, 1, EssentialService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getEssentialService_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, EssentialService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(lawEnforcementEClass, LawEnforcement.class, "LawEnforcement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLawEnforcement_VictimRiskAssessment(), theTypesPackage.getBoolean(), "VictimRiskAssessment", null, 1, 1, LawEnforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getLawEnforcement_LieDetection(), theTypesPackage.getBoolean(), "LieDetection", null, 1, 1, LawEnforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getLawEnforcement_EvidenceReliability(), theTypesPackage.getBoolean(), "EvidenceReliability", null, 1, 1, LawEnforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getLawEnforcement_OffendingRiskAssessment(), theTypesPackage.getBoolean(), "OffendingRiskAssessment", null, 1, 1, LawEnforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getLawEnforcement_SolelyProfilingBased(), theTypesPackage.getBoolean(), "SolelyProfilingBased", null, 1, 1, LawEnforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getLawEnforcement_NarrowProceduralTask(), theTypesPackage.getBoolean(), "NarrowProceduralTask", null, 1, 1, LawEnforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getLawEnforcement_ExceptionJustification(), theTypesPackage.getString(), "ExceptionJustification", null, 1, 1, LawEnforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getLawEnforcement_DecisionPatternDetection(), theTypesPackage.getBoolean(), "DecisionPatternDetection", null, 1, 1, LawEnforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getLawEnforcement_PreparatoryTask(), theTypesPackage.getBoolean(), "PreparatoryTask", null, 1, 1, LawEnforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getLawEnforcement_ImprovesHumanActivity(), theTypesPackage.getBoolean(), "ImprovesHumanActivity", null, 1, 1, LawEnforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getLawEnforcement_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, LawEnforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(migrationBorderEClass, MigrationBorder.class, "MigrationBorder", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMigrationBorder_LieDetection(), theTypesPackage.getBoolean(), "LieDetection", null, 1, 1, MigrationBorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getMigrationBorder_EntryRiskAssessment(), theTypesPackage.getBoolean(), "EntryRiskAssessment", null, 1, 1, MigrationBorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getMigrationBorder_AsylumVisaResidencePermitsApplication(), theTypesPackage.getBoolean(), "AsylumVisaResidencePermitsApplication", null, 1, 1, MigrationBorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getMigrationBorder_TravelDocumentVerificationOnly(), theTypesPackage.getBoolean(), "TravelDocumentVerificationOnly", null, 1, 1, MigrationBorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getMigrationBorder_PersonIdentification(), theTypesPackage.getBoolean(), "PersonIdentification", null, 1, 1, MigrationBorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getMigrationBorder_ImprovesHumanActivity(), theTypesPackage.getBoolean(), "ImprovesHumanActivity", null, 1, 1, MigrationBorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getMigrationBorder_NarrowProceduralTask(), theTypesPackage.getBoolean(), "NarrowProceduralTask", null, 1, 1, MigrationBorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getMigrationBorder_ExceptionJustification(), theTypesPackage.getString(), "ExceptionJustification", null, 1, 1, MigrationBorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getMigrationBorder_PreparatoryTask(), theTypesPackage.getBoolean(), "PreparatoryTask", null, 1, 1, MigrationBorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getMigrationBorder_DecisionPatternDetection(), theTypesPackage.getBoolean(), "DecisionPatternDetection", null, 1, 1, MigrationBorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getMigrationBorder_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, MigrationBorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(justiceDemocracyUseCaseEClass, JusticeDemocracyUseCase.class, "JusticeDemocracyUseCase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getJusticeDemocracyUseCase_JudicialSupport(), theTypesPackage.getBoolean(), "JudicialSupport", null, 1, 1, JusticeDemocracyUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getJusticeDemocracyUseCase_ElectionInfluence(), theTypesPackage.getBoolean(), "ElectionInfluence", null, 1, 1, JusticeDemocracyUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getJusticeDemocracyUseCase_NoDirectExposure(), theTypesPackage.getBoolean(), "NoDirectExposure", null, 1, 1, JusticeDemocracyUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getJusticeDemocracyUseCase_DecisionPatternDetection(), theTypesPackage.getBoolean(), "DecisionPatternDetection", null, 1, 1, JusticeDemocracyUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getJusticeDemocracyUseCase_ImprovesHumanActivity(), theTypesPackage.getBoolean(), "ImprovesHumanActivity", null, 1, 1, JusticeDemocracyUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getJusticeDemocracyUseCase_PreparatoryTask(), theTypesPackage.getBoolean(), "PreparatoryTask", null, 1, 1, JusticeDemocracyUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getJusticeDemocracyUseCase_NarrowProceduralTask(), theTypesPackage.getBoolean(), "NarrowProceduralTask", null, 1, 1, JusticeDemocracyUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getJusticeDemocracyUseCase_ExceptionJustification(), theTypesPackage.getString(), "ExceptionJustification", null, 1, 1, JusticeDemocracyUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getJusticeDemocracyUseCase_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, JusticeDemocracyUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(biometricIdentificationEClass, BiometricIdentification.class, "BiometricIdentification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getBiometricIdentification_VerificationOnly(), theTypesPackage.getBoolean(), "VerificationOnly", null, 1, 1, BiometricIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBiometricIdentification_RealTime(), theTypesPackage.getBoolean(), "RealTime", null, 1, 1, BiometricIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBiometricIdentification_PubliclyAccessibleSpace(), theTypesPackage.getBoolean(), "PubliclyAccessibleSpace", null, 1, 1, BiometricIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBiometricIdentification_LawEnforcementPurpose(), theTypesPackage.getBoolean(), "LawEnforcementPurpose", null, 1, 1, BiometricIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBiometricIdentification_VictimSearch(), theTypesPackage.getBoolean(), "VictimSearch", null, 1, 1, BiometricIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBiometricIdentification_ImminentThreatPrevention(), theTypesPackage.getBoolean(), "ImminentThreatPrevention", null, 1, 1, BiometricIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBiometricIdentification_SeriousCrimeSuspectSearch(), theTypesPackage.getBoolean(), "SeriousCrimeSuspectSearch", null, 1, 1, BiometricIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBiometricIdentification_NarrowProceduralTask(), theTypesPackage.getBoolean(), "NarrowProceduralTask", null, 1, 1, BiometricIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBiometricIdentification_ImprovesHumanActivity(), theTypesPackage.getBoolean(), "ImprovesHumanActivity", null, 1, 1, BiometricIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBiometricIdentification_DecisionPatternDetection(), theTypesPackage.getBoolean(), "DecisionPatternDetection", null, 1, 1, BiometricIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBiometricIdentification_PreparatoryTask(), theTypesPackage.getBoolean(), "PreparatoryTask", null, 1, 1, BiometricIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBiometricIdentification_ExceptionJustification(), theTypesPackage.getString(), "ExceptionJustification", null, 1, 1, BiometricIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBiometricIdentification_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, BiometricIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(biometricCategorisationEClass, BiometricCategorisation.class, "BiometricCategorisation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getBiometricCategorisation_DeduceRace(), theTypesPackage.getBoolean(), "DeduceRace", null, 1, 1, BiometricCategorisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBiometricCategorisation_DeducePoliticalOpinion(), theTypesPackage.getBoolean(), "DeducePoliticalOpinion", null, 1, 1, BiometricCategorisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBiometricCategorisation_DeduceReligiousBelief(), theTypesPackage.getBoolean(), "DeduceReligiousBelief", null, 1, 1, BiometricCategorisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBiometricCategorisation_DeduceUnionMembership(), theTypesPackage.getBoolean(), "DeduceUnionMembership", null, 1, 1, BiometricCategorisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBiometricCategorisation_DeduceSexuality(), theTypesPackage.getBoolean(), "DeduceSexuality", null, 1, 1, BiometricCategorisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBiometricCategorisation_LawfulDatasetLabeling(), theTypesPackage.getBoolean(), "LawfulDatasetLabeling", null, 1, 1, BiometricCategorisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBiometricCategorisation_LawEnforcementCategorisation(), theTypesPackage.getBoolean(), "LawEnforcementCategorisation", null, 1, 1, BiometricCategorisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBiometricCategorisation_NarrowProceduralTask(), theTypesPackage.getBoolean(), "NarrowProceduralTask", null, 1, 1, BiometricCategorisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBiometricCategorisation_ImprovesHumanActivity(), theTypesPackage.getBoolean(), "ImprovesHumanActivity", null, 1, 1, BiometricCategorisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBiometricCategorisation_DecisionPatternDetection(), theTypesPackage.getBoolean(), "DecisionPatternDetection", null, 1, 1, BiometricCategorisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBiometricCategorisation_PreparatoryTask(), theTypesPackage.getBoolean(), "PreparatoryTask", null, 1, 1, BiometricCategorisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBiometricCategorisation_ExceptionJustification(), theTypesPackage.getString(), "ExceptionJustification", null, 1, 1, BiometricCategorisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBiometricCategorisation_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, BiometricCategorisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(emotionRecognitionEClass, EmotionRecognition.class, "EmotionRecognition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEmotionRecognition_Education(), theTypesPackage.getBoolean(), "Education", null, 1, 1, EmotionRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEmotionRecognition_Workplace(), theTypesPackage.getBoolean(), "Workplace", null, 1, 1, EmotionRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEmotionRecognition_MedicalOrSafetyReason(), theTypesPackage.getBoolean(), "MedicalOrSafetyReason", null, 1, 1, EmotionRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEmotionRecognition_NarrowProceduralTask(), theTypesPackage.getBoolean(), "NarrowProceduralTask", null, 1, 1, EmotionRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEmotionRecognition_ImprovesHumanActivity(), theTypesPackage.getBoolean(), "ImprovesHumanActivity", null, 1, 1, EmotionRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEmotionRecognition_DecisionPatternDetection(), theTypesPackage.getBoolean(), "DecisionPatternDetection", null, 1, 1, EmotionRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEmotionRecognition_PreparatoryTask(), theTypesPackage.getBoolean(), "PreparatoryTask", null, 1, 1, EmotionRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEmotionRecognition_ExceptionJustification(), theTypesPackage.getString(), "ExceptionJustification", null, 1, 1, EmotionRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getEmotionRecognition_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, EmotionRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(categoryEEnum, Category.class, "Category");
+		addEEnumLiteral(categoryEEnum, Category.MACHINERY);
+		addEEnumLiteral(categoryEEnum, Category.TOY);
+		addEEnumLiteral(categoryEEnum, Category.ELEVATOR);
+		addEEnumLiteral(categoryEEnum, Category.MEDICAL);
+		addEEnumLiteral(categoryEEnum, Category.IN_VITRO_DIAGNOSTICS);
+		addEEnumLiteral(categoryEEnum, Category.PERSONAL_PROTECTION);
+		addEEnumLiteral(categoryEEnum, Category.CIVIL_AVIATION);
+		addEEnumLiteral(categoryEEnum, Category.RAIL_SYTEM);
+		addEEnumLiteral(categoryEEnum, Category.AGRICULTURAL);
+
+		initEEnum(roleEEnum, Role.class, "Role");
+		addEEnumLiteral(roleEEnum, Role.SAFETY_COMPONENT);
+		addEEnumLiteral(roleEEnum, Role.PRODUCT_ITSELF);
 
 		// Create resource
 		createResource(eNS_URI);

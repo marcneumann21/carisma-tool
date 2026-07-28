@@ -6,40 +6,44 @@ import java.util.List;
 import carisma.check.euaiactriskclassification.riskclass.EUAIActRiskClass;
 
 // TODO JavaDoc
-public final class EUAIActRiskClassificationObligation {
+public class EUAIActRiskClassificationObligation {
 
 	private EUAIActRiskClassificationObligation() {
 	}
 
 	public static List<String> getObligations(EUAIActRiskClass riskClass) {
-		List<String> requirements = new ArrayList<>();
+		List<String> obligations = new ArrayList<>();
 		switch (riskClass) {
-		case HIGH:
-			requirements.add("Establishment of a continuous risk management system (Art. 9)");
-			requirements.add("Data and data governance (Art. 10)");
-			requirements.add(
-					"Technical documentation in accordance with Annex IV (Art. 11) => run EU AI Act Documentation Check");
-			requirements.add("Record keeping (Art. 12)");
-			requirements.add("Transparency and provision of information to deployers (Art. 13)");
-			requirements.add("Human oversight (Art. 14)");
-			requirements.add("Accuracy, robustness and cybersecurity (Art. 15)");
-			requirements.add("Quality management system of the provider (Art. 17)");
-			requirements.add("Conformity assessment before placing on the market (Art. 43)");
+		case Unacceptable:
+			obligations.add("No Obligations. The system must not be placed on the market, put into service or used according to Article 5.");
 			break;
-		case LIMITED:
-			requirements.add("Inform natural persons that they are interacting with an AI system (Art. 50 Par. 1)");
-			requirements.add("Mark AI-generated content in a machine-readable format (Art. 50 Par. 2)");
-			requirements
-					.add("Inform persons exposed to emotion recognition or biometric categorisation (Art. 50 Par. 3)");
-			requirements.add("Disclose deep fakes (Art. 50 Par. 4)");
+		case High:
+			obligations.add("Establishment of a continuous risk management system according to Article 9.");
+			obligations.add("Data and data governance according to Article 10.");
+			obligations.add(
+					"Technical documentation according to Article 11 and Annex IV. => run EU AI Act Documentation Check");
+			obligations.add("Record keeping according to Article 12.");
+			obligations.add("Transparency and provision of information to deployers according to Article 13.");
+			obligations.add("Human oversight according to Article 14.");
+			obligations.add("Accuracy, robustness and cybersecurity according to Article 15.");
+			obligations.add("Quality management system of the provider according to Article 17.");
+			obligations.add("Conformity assessment before placing on the market according to Article 43.");
+			obligations.add("EU declaration of conformity according to Article 47.");
+			obligations.add("CE marking according to Article 48.");
+			obligations.add("Registration in the EU database before placing on the market according to Article 49.");
+			obligations.add("Post-market monitoring system and plan according to Article 72.");
 			break;
-		case MINIMAL:
-			requirements.add("No mandatory obligation. Voluntary codes of conduct possible. (Art. 95)");
+		case Limited:
+			// Empty on purpose: the Article 50 obligations are collected per use case in
+		    // EUAIActRiskClassifier.checkLimitedRisk(), so only the triggered ones appear.
+			break;
+		case Minimal:
+			obligations.add("No mandatory obligation. Voluntary codes of conduct possible according to Article 95.");
 			break;
 		default:
-			requirements.add("Classification not possible - requirements cannot be determined.");
+			obligations.add("Classification not possible.");
 			break;
 		}
-		return requirements;
+		return obligations;
 	}
 }

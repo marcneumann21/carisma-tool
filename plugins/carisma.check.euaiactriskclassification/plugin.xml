@@ -7,7 +7,7 @@
             description="test"
             id="carisma.check.euaiactriskclassification"
             implementingClass="carisma.check.euaiactriskclassification.check.EUAIActRiskClassificationCheck"
-            name="EU AI Act Risk Classification"
+            name="EU AI Act Risk Classification Check"
             publisher="Marc Neumann"
             targetModelType="UML2">
       </check>

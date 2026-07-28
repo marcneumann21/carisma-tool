@@ -15,9 +15,19 @@ import org.eclipse.uml2.uml.UseCase;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link euaiactcompliance.BiometricCategorisation#isDeduceRace <em>Deduce Race</em>}</li>
+ *   <li>{@link euaiactcompliance.BiometricCategorisation#isDeducePoliticalOpinion <em>Deduce Political Opinion</em>}</li>
+ *   <li>{@link euaiactcompliance.BiometricCategorisation#isDeduceReligiousBelief <em>Deduce Religious Belief</em>}</li>
+ *   <li>{@link euaiactcompliance.BiometricCategorisation#isDeduceUnionMembership <em>Deduce Union Membership</em>}</li>
+ *   <li>{@link euaiactcompliance.BiometricCategorisation#isDeduceSexuality <em>Deduce Sexuality</em>}</li>
+ *   <li>{@link euaiactcompliance.BiometricCategorisation#isLawfulDatasetLabeling <em>Lawful Dataset Labeling</em>}</li>
+ *   <li>{@link euaiactcompliance.BiometricCategorisation#isLawEnforcementCategorisation <em>Law Enforcement Categorisation</em>}</li>
+ *   <li>{@link euaiactcompliance.BiometricCategorisation#isNarrowProceduralTask <em>Narrow Procedural Task</em>}</li>
+ *   <li>{@link euaiactcompliance.BiometricCategorisation#isImprovesHumanActivity <em>Improves Human Activity</em>}</li>
+ *   <li>{@link euaiactcompliance.BiometricCategorisation#isDecisionPatternDetection <em>Decision Pattern Detection</em>}</li>
+ *   <li>{@link euaiactcompliance.BiometricCategorisation#isPreparatoryTask <em>Preparatory Task</em>}</li>
+ *   <li>{@link euaiactcompliance.BiometricCategorisation#getExceptionJustification <em>Exception Justification</em>}</li>
  *   <li>{@link euaiactcompliance.BiometricCategorisation#getBase_UseCase <em>Base Use Case</em>}</li>
- *   <li>{@link euaiactcompliance.BiometricCategorisation#isLawfullyAcquiredDatasets <em>Lawfully Acquired Datasets</em>}</li>
- *   <li>{@link euaiactcompliance.BiometricCategorisation#isLawEnforcement <em>Law Enforcement</em>}</li>
  * </ul>
  *
  * @see euaiactcompliance.EuaiactcompliancePackage#getBiometricCategorisation()
@@ -25,6 +35,270 @@ import org.eclipse.uml2.uml.UseCase;
  * @generated
  */
 public interface BiometricCategorisation extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Deduce Race</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Deduce Race</em>' attribute.
+	 * @see #setDeduceRace(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getBiometricCategorisation_DeduceRace()
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isDeduceRace();
+
+	/**
+	 * Sets the value of the '{@link euaiactcompliance.BiometricCategorisation#isDeduceRace <em>Deduce Race</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Deduce Race</em>' attribute.
+	 * @see #isDeduceRace()
+	 * @generated
+	 */
+	void setDeduceRace(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Deduce Political Opinion</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Deduce Political Opinion</em>' attribute.
+	 * @see #setDeducePoliticalOpinion(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getBiometricCategorisation_DeducePoliticalOpinion()
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isDeducePoliticalOpinion();
+
+	/**
+	 * Sets the value of the '{@link euaiactcompliance.BiometricCategorisation#isDeducePoliticalOpinion <em>Deduce Political Opinion</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Deduce Political Opinion</em>' attribute.
+	 * @see #isDeducePoliticalOpinion()
+	 * @generated
+	 */
+	void setDeducePoliticalOpinion(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Deduce Religious Belief</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Deduce Religious Belief</em>' attribute.
+	 * @see #setDeduceReligiousBelief(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getBiometricCategorisation_DeduceReligiousBelief()
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isDeduceReligiousBelief();
+
+	/**
+	 * Sets the value of the '{@link euaiactcompliance.BiometricCategorisation#isDeduceReligiousBelief <em>Deduce Religious Belief</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Deduce Religious Belief</em>' attribute.
+	 * @see #isDeduceReligiousBelief()
+	 * @generated
+	 */
+	void setDeduceReligiousBelief(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Deduce Union Membership</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Deduce Union Membership</em>' attribute.
+	 * @see #setDeduceUnionMembership(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getBiometricCategorisation_DeduceUnionMembership()
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isDeduceUnionMembership();
+
+	/**
+	 * Sets the value of the '{@link euaiactcompliance.BiometricCategorisation#isDeduceUnionMembership <em>Deduce Union Membership</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Deduce Union Membership</em>' attribute.
+	 * @see #isDeduceUnionMembership()
+	 * @generated
+	 */
+	void setDeduceUnionMembership(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Deduce Sexuality</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Deduce Sexuality</em>' attribute.
+	 * @see #setDeduceSexuality(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getBiometricCategorisation_DeduceSexuality()
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isDeduceSexuality();
+
+	/**
+	 * Sets the value of the '{@link euaiactcompliance.BiometricCategorisation#isDeduceSexuality <em>Deduce Sexuality</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Deduce Sexuality</em>' attribute.
+	 * @see #isDeduceSexuality()
+	 * @generated
+	 */
+	void setDeduceSexuality(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Lawful Dataset Labeling</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lawful Dataset Labeling</em>' attribute.
+	 * @see #setLawfulDatasetLabeling(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getBiometricCategorisation_LawfulDatasetLabeling()
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isLawfulDatasetLabeling();
+
+	/**
+	 * Sets the value of the '{@link euaiactcompliance.BiometricCategorisation#isLawfulDatasetLabeling <em>Lawful Dataset Labeling</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Lawful Dataset Labeling</em>' attribute.
+	 * @see #isLawfulDatasetLabeling()
+	 * @generated
+	 */
+	void setLawfulDatasetLabeling(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Law Enforcement Categorisation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Law Enforcement Categorisation</em>' attribute.
+	 * @see #setLawEnforcementCategorisation(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getBiometricCategorisation_LawEnforcementCategorisation()
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isLawEnforcementCategorisation();
+
+	/**
+	 * Sets the value of the '{@link euaiactcompliance.BiometricCategorisation#isLawEnforcementCategorisation <em>Law Enforcement Categorisation</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Law Enforcement Categorisation</em>' attribute.
+	 * @see #isLawEnforcementCategorisation()
+	 * @generated
+	 */
+	void setLawEnforcementCategorisation(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Narrow Procedural Task</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Narrow Procedural Task</em>' attribute.
+	 * @see #setNarrowProceduralTask(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getBiometricCategorisation_NarrowProceduralTask()
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isNarrowProceduralTask();
+
+	/**
+	 * Sets the value of the '{@link euaiactcompliance.BiometricCategorisation#isNarrowProceduralTask <em>Narrow Procedural Task</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Narrow Procedural Task</em>' attribute.
+	 * @see #isNarrowProceduralTask()
+	 * @generated
+	 */
+	void setNarrowProceduralTask(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Improves Human Activity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Improves Human Activity</em>' attribute.
+	 * @see #setImprovesHumanActivity(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getBiometricCategorisation_ImprovesHumanActivity()
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isImprovesHumanActivity();
+
+	/**
+	 * Sets the value of the '{@link euaiactcompliance.BiometricCategorisation#isImprovesHumanActivity <em>Improves Human Activity</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Improves Human Activity</em>' attribute.
+	 * @see #isImprovesHumanActivity()
+	 * @generated
+	 */
+	void setImprovesHumanActivity(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Decision Pattern Detection</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Decision Pattern Detection</em>' attribute.
+	 * @see #setDecisionPatternDetection(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getBiometricCategorisation_DecisionPatternDetection()
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isDecisionPatternDetection();
+
+	/**
+	 * Sets the value of the '{@link euaiactcompliance.BiometricCategorisation#isDecisionPatternDetection <em>Decision Pattern Detection</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Decision Pattern Detection</em>' attribute.
+	 * @see #isDecisionPatternDetection()
+	 * @generated
+	 */
+	void setDecisionPatternDetection(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Preparatory Task</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Preparatory Task</em>' attribute.
+	 * @see #setPreparatoryTask(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getBiometricCategorisation_PreparatoryTask()
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isPreparatoryTask();
+
+	/**
+	 * Sets the value of the '{@link euaiactcompliance.BiometricCategorisation#isPreparatoryTask <em>Preparatory Task</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Preparatory Task</em>' attribute.
+	 * @see #isPreparatoryTask()
+	 * @generated
+	 */
+	void setPreparatoryTask(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Exception Justification</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Exception Justification</em>' attribute.
+	 * @see #setExceptionJustification(String)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getBiometricCategorisation_ExceptionJustification()
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @generated
+	 */
+	String getExceptionJustification();
+
+	/**
+	 * Sets the value of the '{@link euaiactcompliance.BiometricCategorisation#getExceptionJustification <em>Exception Justification</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Exception Justification</em>' attribute.
+	 * @see #getExceptionJustification()
+	 * @generated
+	 */
+	void setExceptionJustification(String value);
+
 	/**
 	 * Returns the value of the '<em><b>Base Use Case</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -46,49 +320,5 @@ public interface BiometricCategorisation extends EObject {
 	 * @generated
 	 */
 	void setBase_UseCase(UseCase value);
-
-	/**
-	 * Returns the value of the '<em><b>Lawfully Acquired Datasets</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lawfully Acquired Datasets</em>' attribute.
-	 * @see #setLawfullyAcquiredDatasets(boolean)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getBiometricCategorisation_LawfullyAcquiredDatasets()
-	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
-	 * @generated
-	 */
-	boolean isLawfullyAcquiredDatasets();
-
-	/**
-	 * Sets the value of the '{@link euaiactcompliance.BiometricCategorisation#isLawfullyAcquiredDatasets <em>Lawfully Acquired Datasets</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Lawfully Acquired Datasets</em>' attribute.
-	 * @see #isLawfullyAcquiredDatasets()
-	 * @generated
-	 */
-	void setLawfullyAcquiredDatasets(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Law Enforcement</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Law Enforcement</em>' attribute.
-	 * @see #setLawEnforcement(boolean)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getBiometricCategorisation_LawEnforcement()
-	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
-	 * @generated
-	 */
-	boolean isLawEnforcement();
-
-	/**
-	 * Sets the value of the '{@link euaiactcompliance.BiometricCategorisation#isLawEnforcement <em>Law Enforcement</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Law Enforcement</em>' attribute.
-	 * @see #isLawEnforcement()
-	 * @generated
-	 */
-	void setLawEnforcement(boolean value);
 
 } // BiometricCategorisation

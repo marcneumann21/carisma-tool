@@ -6,48 +6,33 @@ import carisma.modeltype.uml2.CarismaProfileDescriptor;
 
 public enum EUAIActCompliance {
 
-	// AI System
-	AISystem("AISystem"),
+	// System elements
+	AISystem("AISystem"), MLModel("MLModel"), TrainingData("TrainingData"), ThirdPartyComponent("ThirdPartyComponent"),
+	ProductEmbedding("ProductEmbedding"),
 
 	// Actors
-	Provider("Provider"), Deployer("Deployer"), AffectedPerson("AffectedPerson"),
+	Provider("Provider"),
 
 	// Actor associations
-	Operates("Operates"), AffectedBy("AffectedBy"),
+	Provides("Provides"),
 
-	// Documentation dependency
-	Documents("Documents"),
+	// Unacceptable risk (Art. 5)
+	ManipulativeBehaviour("ManipulativeBehaviour"), ExploitingHumanVulnerability("ExploitingHumanVulnerability"),
+	SocialScoring("SocialScoring"), FacialImageScraping("FacialImageScraping"),
 
-	// Unacceptable Risk
-	ManipulativeBehaviour("ManipulativeBehaviour"), ExploitingVulnerability("ExploitingVulnerability"),
-	SocialScoring("SocialScoring"), PredictivePolicing("PredictivePolicing"), FacialRecognition("FacialRecognition"),
-	EmotionRecognition("EmotionRecognition"), BiometricCategorisation("BiometricCategorisation"),
-	BiometricIdentification("BiometricIdentification"),
+	// High risk (Art. 6, Annex III)
+	AnnexIIIUseCase("AnnexIIIUseCase"), BiometricIdentification("BiometricIdentification"),
+	BiometricCategorisation("BiometricCategorisation"), EmotionRecognition("EmotionRecognition"),
+	CriticalInfrastructure("CriticalInfrastructure"), Education("Education"), HumanEmployment("HumanEmployment"),
+	EssentialService("EssentialService"), LawEnforcement("LawEnforcement"), MigrationBorder("MigrationBorder"),
+	JusticeDemocracyUseCase("JusticeDemocracyUseCase"), Profiling("Profiling"),
 
-	// High Risk
-	SafetyComponent("SafetyComponent"), AnnexIIIUseCase("AnnexIIIUseCase"), Profiling("Profiling"),
-
-	// Limited Risk
-	HumanInteraction("HumanInteraction"), SyntheticContent("SyntheticContent"),
-	EmotionRecognitionNotification("EmotionRecognitionNotification"), Deepfake("Deepfake"),
-	PublicInterestText("PublicInterestText"),
-	BiometricCategorizationNotification("BiometricCategorizationNotification"),
-
-	// Documentation
-	GeneralDescriptionAISystem("GeneralDescriptionAISystem"),
-	DetailedDescriptionAISystem("DetailedDescriptionAISystem"),
-	DetailedInformationAISystem("DetailedInformationAISystem"),
-	DescriptionPerformanceMetrics("DescriptionPerformanceMetrics"),
-	DescriptionRiskManagement("DescriptionRiskManagement"),
-	DescriptionProviderRelevantChanges("DescriptionProviderRelevantChanges"),
-	ListHarmonisedStandards("ListHarmonisedStandards"), CopyEUConformityDeclaration("CopyEUConformityDeclaration"),
-	DescriptionAISystemPostMarketPhase("DescriptionAISystemPostMarketPhase"),
-	
-	// Documentation Limited Risk
-	TransparencyObligation("TransparencyObligation");
+	// Limited risk / transparency obligations (Art. 50)
+	HumanInteraction("HumanInteraction"), SyntheticContent("SyntheticContent"), Deepfake("Deepfake"),
+	PublicInterestText("PublicInterestText");
 
 	private static final String PROFILE_NAME = "euaiactcompliance";
-	private static final String PROFILE_VERSION = "1";
+	private static final String PROFILE_VERSION = "2";
 	private static final String PROFILE_URI = "platform:/carisma.profile.euaiactcompliance/profile/euaiactcompliance.profile.uml";
 
 	public static final CarismaProfileDescriptor DESCRIPTOR = new CarismaProfileDescriptor(PROFILE_NAME,
@@ -59,6 +44,7 @@ public enum EUAIActCompliance {
 		readableName = newName;
 	}
 
+	@Override
 	public String toString() {
 		return readableName;
 	}
@@ -75,19 +61,20 @@ public enum EUAIActCompliance {
 	/**
 	 * Checks whether the given stereotype corresponds to the one represented by
 	 * this enum literal.
-	 * 
-	 * @param stereotype
-	 * @return
+	 *
+	 * @param stereotype the stereotype to compare with
+	 * @return true if the stereotype matches this literal
 	 */
 	public boolean isEqual(Stereotype stereotype) {
 		return contains(stereotype) && stereotype.getName().equalsIgnoreCase(this.readableName);
 	}
 
 	/**
-	 * Checks whether the given Stereotype is a UMLsec stereotype.
-	 * 
-	 * @param stereotype
-	 * @return
+	 * Checks whether the given Stereotype belongs to the EU AI Act compliance
+	 * profile.
+	 *
+	 * @param stereotype the stereotype to check
+	 * @return true if the stereotype is part of this profile
 	 */
 	public static boolean contains(Stereotype stereotype) {
 		return (stereotype.getProfile().getDefinition().getNsURI().contains(DESCRIPTOR.getProfileName()));

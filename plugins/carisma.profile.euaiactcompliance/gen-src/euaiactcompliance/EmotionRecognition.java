@@ -15,11 +15,14 @@ import org.eclipse.uml2.uml.UseCase;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link euaiactcompliance.EmotionRecognition#isRace <em>Race</em>}</li>
- *   <li>{@link euaiactcompliance.EmotionRecognition#isPolitics <em>Politics</em>}</li>
- *   <li>{@link euaiactcompliance.EmotionRecognition#isUnionMembership <em>Union Membership</em>}</li>
- *   <li>{@link euaiactcompliance.EmotionRecognition#isReligion <em>Religion</em>}</li>
- *   <li>{@link euaiactcompliance.EmotionRecognition#isSexuality <em>Sexuality</em>}</li>
+ *   <li>{@link euaiactcompliance.EmotionRecognition#isEducation <em>Education</em>}</li>
+ *   <li>{@link euaiactcompliance.EmotionRecognition#isWorkplace <em>Workplace</em>}</li>
+ *   <li>{@link euaiactcompliance.EmotionRecognition#isMedicalOrSafetyReason <em>Medical Or Safety Reason</em>}</li>
+ *   <li>{@link euaiactcompliance.EmotionRecognition#isNarrowProceduralTask <em>Narrow Procedural Task</em>}</li>
+ *   <li>{@link euaiactcompliance.EmotionRecognition#isImprovesHumanActivity <em>Improves Human Activity</em>}</li>
+ *   <li>{@link euaiactcompliance.EmotionRecognition#isDecisionPatternDetection <em>Decision Pattern Detection</em>}</li>
+ *   <li>{@link euaiactcompliance.EmotionRecognition#isPreparatoryTask <em>Preparatory Task</em>}</li>
+ *   <li>{@link euaiactcompliance.EmotionRecognition#getExceptionJustification <em>Exception Justification</em>}</li>
  *   <li>{@link euaiactcompliance.EmotionRecognition#getBase_UseCase <em>Base Use Case</em>}</li>
  * </ul>
  *
@@ -29,114 +32,180 @@ import org.eclipse.uml2.uml.UseCase;
  */
 public interface EmotionRecognition extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Race</b></em>' attribute.
+	 * Returns the value of the '<em><b>Education</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Race</em>' attribute.
-	 * @see #setRace(boolean)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getEmotionRecognition_Race()
+	 * @return the value of the '<em>Education</em>' attribute.
+	 * @see #setEducation(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getEmotionRecognition_Education()
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
 	 * @generated
 	 */
-	boolean isRace();
+	boolean isEducation();
 
 	/**
-	 * Sets the value of the '{@link euaiactcompliance.EmotionRecognition#isRace <em>Race</em>}' attribute.
+	 * Sets the value of the '{@link euaiactcompliance.EmotionRecognition#isEducation <em>Education</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Race</em>' attribute.
-	 * @see #isRace()
+	 * @param value the new value of the '<em>Education</em>' attribute.
+	 * @see #isEducation()
 	 * @generated
 	 */
-	void setRace(boolean value);
+	void setEducation(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Politics</b></em>' attribute.
+	 * Returns the value of the '<em><b>Workplace</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Politics</em>' attribute.
-	 * @see #setPolitics(boolean)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getEmotionRecognition_Politics()
+	 * @return the value of the '<em>Workplace</em>' attribute.
+	 * @see #setWorkplace(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getEmotionRecognition_Workplace()
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
 	 * @generated
 	 */
-	boolean isPolitics();
+	boolean isWorkplace();
 
 	/**
-	 * Sets the value of the '{@link euaiactcompliance.EmotionRecognition#isPolitics <em>Politics</em>}' attribute.
+	 * Sets the value of the '{@link euaiactcompliance.EmotionRecognition#isWorkplace <em>Workplace</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Politics</em>' attribute.
-	 * @see #isPolitics()
+	 * @param value the new value of the '<em>Workplace</em>' attribute.
+	 * @see #isWorkplace()
 	 * @generated
 	 */
-	void setPolitics(boolean value);
+	void setWorkplace(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Union Membership</b></em>' attribute.
+	 * Returns the value of the '<em><b>Medical Or Safety Reason</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Union Membership</em>' attribute.
-	 * @see #setUnionMembership(boolean)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getEmotionRecognition_UnionMembership()
+	 * @return the value of the '<em>Medical Or Safety Reason</em>' attribute.
+	 * @see #setMedicalOrSafetyReason(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getEmotionRecognition_MedicalOrSafetyReason()
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
 	 * @generated
 	 */
-	boolean isUnionMembership();
+	boolean isMedicalOrSafetyReason();
 
 	/**
-	 * Sets the value of the '{@link euaiactcompliance.EmotionRecognition#isUnionMembership <em>Union Membership</em>}' attribute.
+	 * Sets the value of the '{@link euaiactcompliance.EmotionRecognition#isMedicalOrSafetyReason <em>Medical Or Safety Reason</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Union Membership</em>' attribute.
-	 * @see #isUnionMembership()
+	 * @param value the new value of the '<em>Medical Or Safety Reason</em>' attribute.
+	 * @see #isMedicalOrSafetyReason()
 	 * @generated
 	 */
-	void setUnionMembership(boolean value);
+	void setMedicalOrSafetyReason(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Religion</b></em>' attribute.
+	 * Returns the value of the '<em><b>Narrow Procedural Task</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Religion</em>' attribute.
-	 * @see #setReligion(boolean)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getEmotionRecognition_Religion()
+	 * @return the value of the '<em>Narrow Procedural Task</em>' attribute.
+	 * @see #setNarrowProceduralTask(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getEmotionRecognition_NarrowProceduralTask()
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
 	 * @generated
 	 */
-	boolean isReligion();
+	boolean isNarrowProceduralTask();
 
 	/**
-	 * Sets the value of the '{@link euaiactcompliance.EmotionRecognition#isReligion <em>Religion</em>}' attribute.
+	 * Sets the value of the '{@link euaiactcompliance.EmotionRecognition#isNarrowProceduralTask <em>Narrow Procedural Task</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Religion</em>' attribute.
-	 * @see #isReligion()
+	 * @param value the new value of the '<em>Narrow Procedural Task</em>' attribute.
+	 * @see #isNarrowProceduralTask()
 	 * @generated
 	 */
-	void setReligion(boolean value);
+	void setNarrowProceduralTask(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Sexuality</b></em>' attribute.
+	 * Returns the value of the '<em><b>Improves Human Activity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sexuality</em>' attribute.
-	 * @see #setSexuality(boolean)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getEmotionRecognition_Sexuality()
+	 * @return the value of the '<em>Improves Human Activity</em>' attribute.
+	 * @see #setImprovesHumanActivity(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getEmotionRecognition_ImprovesHumanActivity()
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
 	 * @generated
 	 */
-	boolean isSexuality();
+	boolean isImprovesHumanActivity();
 
 	/**
-	 * Sets the value of the '{@link euaiactcompliance.EmotionRecognition#isSexuality <em>Sexuality</em>}' attribute.
+	 * Sets the value of the '{@link euaiactcompliance.EmotionRecognition#isImprovesHumanActivity <em>Improves Human Activity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Sexuality</em>' attribute.
-	 * @see #isSexuality()
+	 * @param value the new value of the '<em>Improves Human Activity</em>' attribute.
+	 * @see #isImprovesHumanActivity()
 	 * @generated
 	 */
-	void setSexuality(boolean value);
+	void setImprovesHumanActivity(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Decision Pattern Detection</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Decision Pattern Detection</em>' attribute.
+	 * @see #setDecisionPatternDetection(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getEmotionRecognition_DecisionPatternDetection()
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isDecisionPatternDetection();
+
+	/**
+	 * Sets the value of the '{@link euaiactcompliance.EmotionRecognition#isDecisionPatternDetection <em>Decision Pattern Detection</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Decision Pattern Detection</em>' attribute.
+	 * @see #isDecisionPatternDetection()
+	 * @generated
+	 */
+	void setDecisionPatternDetection(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Preparatory Task</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Preparatory Task</em>' attribute.
+	 * @see #setPreparatoryTask(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getEmotionRecognition_PreparatoryTask()
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isPreparatoryTask();
+
+	/**
+	 * Sets the value of the '{@link euaiactcompliance.EmotionRecognition#isPreparatoryTask <em>Preparatory Task</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Preparatory Task</em>' attribute.
+	 * @see #isPreparatoryTask()
+	 * @generated
+	 */
+	void setPreparatoryTask(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Exception Justification</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Exception Justification</em>' attribute.
+	 * @see #setExceptionJustification(String)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getEmotionRecognition_ExceptionJustification()
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @generated
+	 */
+	String getExceptionJustification();
+
+	/**
+	 * Sets the value of the '{@link euaiactcompliance.EmotionRecognition#getExceptionJustification <em>Exception Justification</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Exception Justification</em>' attribute.
+	 * @see #getExceptionJustification()
+	 * @generated
+	 */
+	void setExceptionJustification(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Base Use Case</b></em>' reference.

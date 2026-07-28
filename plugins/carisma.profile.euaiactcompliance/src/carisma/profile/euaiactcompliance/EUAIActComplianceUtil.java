@@ -7,6 +7,8 @@ import java.util.Set;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.uml2.uml.Element;
+import org.eclipse.uml2.uml.EnumerationLiteral;
+import org.eclipse.uml2.uml.StringExpression;
 import org.eclipse.uml2.uml.Stereotype;
 
 import carisma.modeltype.uml2.StereotypeApplication;
@@ -87,24 +89,6 @@ public final class EUAIActComplianceUtil {
 	}
 
 	/**
-	 * Checks whether at least one of the given boolean tags is set to {@code true}.
-	 *
-	 * @param element    the element to look for the stereotype.
-	 * @param stereotype the stereotype containing the attributes of interest.
-	 * @param tags       the tags of interest.
-	 * @return true, if at least one of the attributes is set to 'true'.
-	 */
-	public static boolean isAnyTaggedValueTrue(final Element element, final EUAIActCompliance stereotype,
-			final String[] tags) {
-		for (String tag : tags) {
-			if (isTaggedValueTrue(element, stereotype, tag)) {
-				return true;
-			}
-		}
-		return false;
-	}
-
-	/**
 	 * Returns a list of the tag values of the UMLsec stereotype at the given
 	 * element stereoParent.
 	 * 
@@ -173,40 +157,98 @@ public final class EUAIActComplianceUtil {
 	}
 
 	/**
+	 * Checks whether at least one of the given boolean tags is set to {@code true}.
+	 *
+	 * @param element    the element to look for the stereotype.
+	 * @param stereotype the stereotype containing the attributes of interest.
+	 * @param tags       the tags of interest.
+	 * @return true, if at least one of the attributes is set to 'true'.
+	 */
+	public static boolean isAnyTaggedValueTrue(final Element element, final EUAIActCompliance stereotype,
+			final String[] tags) {
+		for (String tag : tags) {
+			if (isTaggedValueTrue(element, stereotype, tag)) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
 	 * Returns the names of all boolean tags from the given list that are set to
 	 * {@code true}.
 	 *
-	 * @param element the element to look for the stereotype.
-	 * @param type    the stereotype containing the attributes of interest.
-	 * @param tags    the tags of interest.
-	 * @return list of tag names whose value is 'true', empty if otherwise.
+	 * @param element    the element to look for the stereotype.
+	 * @param stereotype the stereotype containing the attributes of interest.
+	 * @param tags       the tags of interest.
+	 * @return list of tag names whose value is 'true', empty otherwise.
 	 */
-	public static List<String> getTrueTags(final Element element, final EUAIActCompliance type, final String[] tags) {
-		List<String> trueTags = new ArrayList<String>();
+	public static List<String> getTrueTags(final Element element, final EUAIActCompliance stereotype,
+			final String[] tags) {
+		List<String> trueTags = new ArrayList<>();
 		for (String tag : tags) {
-			if (isTaggedValueTrue(element, type, tag)) {
+			if (isTaggedValueTrue(element, stereotype, tag)) {
 				trueTags.add(tag);
 			}
 		}
 		return trueTags;
 	}
-	
+
 	/**
 	 * Returns the names of all boolean tags from the given list that are set to
 	 * {@code false}.
 	 *
-	 * @param element the element to look for the stereotype.
-	 * @param type    the stereotype containing the attributes of interest.
-	 * @param tags    the tags of interest.
-	 * @return list of tag names whose value is 'false', empty if otherwise.
+	 * @param element    the element to look for the stereotype.
+	 * @param stereotype the stereotype containing the attributes of interest.
+	 * @param tags       the tags of interest.
+	 * @return list of tag names whose value is 'false', empty otherwise.
 	 */
-	public static List<String> getFalseTags(final Element element, final EUAIActCompliance type, final String[] tags) {
-		List<String> falseTags = new ArrayList<String>();
+	public static List<String> getFalseTags(final Element element, final EUAIActCompliance stereotype,
+			final String[] tags) {
+		List<String> falseTags = new ArrayList<>();
 		for (String tag : tags) {
-			if (!isTaggedValueTrue(element, type, tag)) {
+			if (!isTaggedValueTrue(element, stereotype, tag)) {
 				falseTags.add(tag);
 			}
 		}
 		return falseTags;
+	}
+
+	/**
+	 * ...
+	 *
+	 * @param element    the element to look for the stereotype.
+	 * @param stereotype the stereotype containing the attribute of interest.
+	 * @param attribute  the name of the enum typed tag.
+	 * @return the name of the enumeration literal, null otherwise
+	 */
+	public static String getEnumValue(final Element element, final EUAIActCompliance stereotype, String attribute) {
+		String enumValue = null;
+		List<Object> taggedValues = getTaggedValues(attribute, stereotype, element);
+		for (Object oj : taggedValues) {
+			if (oj instanceof EnumerationLiteral) {
+				enumValue = oj.toString();
+			}
+		}
+		return enumValue;
+	}
+
+	/**
+	 * ...
+	 *
+	 * @param element    the element to look for the stereotype.
+	 * @param stereotype the stereotype containing the attribute of interest.
+	 * @param attribute  the name of the String typed tag.
+	 * @return the name of the attribute, null otherwise
+	 */
+	public static String getStringValue(final Element element, final EUAIActCompliance stereotype, String attribute) {
+		String stringValue = null;
+		List<Object> taggedValues = getTaggedValues(attribute, stereotype, element);
+		for (Object oj : taggedValues) {
+			if (oj instanceof StringExpression) {
+				stringValue = oj.toString();
+			}
+		}
+		return stringValue;
 	}
 }

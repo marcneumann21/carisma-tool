@@ -68,16 +68,12 @@ public class EuaiactcomplianceAdapterFactory extends AdapterFactoryImpl {
 	protected EuaiactcomplianceSwitch<Adapter> modelSwitch =
 		new EuaiactcomplianceSwitch<Adapter>() {
 			@Override
-			public Adapter caseAnnexIIIUseCase(AnnexIIIUseCase object) {
-				return createAnnexIIIUseCaseAdapter();
-			}
-			@Override
 			public Adapter caseProfiling(Profiling object) {
 				return createProfilingAdapter();
 			}
 			@Override
-			public Adapter caseSafetyComponent(SafetyComponent object) {
-				return createSafetyComponentAdapter();
+			public Adapter caseProductEmbedding(ProductEmbedding object) {
+				return createProductEmbeddingAdapter();
 			}
 			@Override
 			public Adapter caseHumanInteraction(HumanInteraction object) {
@@ -86,14 +82,6 @@ public class EuaiactcomplianceAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseSyntheticContent(SyntheticContent object) {
 				return createSyntheticContentAdapter();
-			}
-			@Override
-			public Adapter caseEmotionRecognitionNotification(EmotionRecognitionNotification object) {
-				return createEmotionRecognitionNotificationAdapter();
-			}
-			@Override
-			public Adapter caseBiometricCategorizationNotification(BiometricCategorizationNotification object) {
-				return createBiometricCategorizationNotificationAdapter();
 			}
 			@Override
 			public Adapter caseDeepfake(Deepfake object) {
@@ -108,32 +96,16 @@ public class EuaiactcomplianceAdapterFactory extends AdapterFactoryImpl {
 				return createManipulativeBehaviourAdapter();
 			}
 			@Override
-			public Adapter caseExploitingVulnerability(ExploitingVulnerability object) {
-				return createExploitingVulnerabilityAdapter();
+			public Adapter caseExploitingHumanVulnerability(ExploitingHumanVulnerability object) {
+				return createExploitingHumanVulnerabilityAdapter();
 			}
 			@Override
 			public Adapter caseSocialScoring(SocialScoring object) {
 				return createSocialScoringAdapter();
 			}
 			@Override
-			public Adapter casePredictivePolicing(PredictivePolicing object) {
-				return createPredictivePolicingAdapter();
-			}
-			@Override
-			public Adapter caseFacialRecognition(FacialRecognition object) {
-				return createFacialRecognitionAdapter();
-			}
-			@Override
-			public Adapter caseEmotionRecognition(EmotionRecognition object) {
-				return createEmotionRecognitionAdapter();
-			}
-			@Override
-			public Adapter caseBiometricCategorisation(BiometricCategorisation object) {
-				return createBiometricCategorisationAdapter();
-			}
-			@Override
-			public Adapter caseBiometricIdentification(BiometricIdentification object) {
-				return createBiometricIdentificationAdapter();
+			public Adapter caseFacialImageScraping(FacialImageScraping object) {
+				return createFacialImageScrapingAdapter();
 			}
 			@Override
 			public Adapter caseAISystem(AISystem object) {
@@ -144,48 +116,64 @@ public class EuaiactcomplianceAdapterFactory extends AdapterFactoryImpl {
 				return createProviderAdapter();
 			}
 			@Override
-			public Adapter caseGeneralDescriptionAISystem(GeneralDescriptionAISystem object) {
-				return createGeneralDescriptionAISystemAdapter();
-			}
-			@Override
-			public Adapter caseDetailedDescriptionAISystem(DetailedDescriptionAISystem object) {
-				return createDetailedDescriptionAISystemAdapter();
-			}
-			@Override
-			public Adapter caseDetailedInformationAISystem(DetailedInformationAISystem object) {
-				return createDetailedInformationAISystemAdapter();
-			}
-			@Override
-			public Adapter caseDescriptionPerformanceMetrics(DescriptionPerformanceMetrics object) {
-				return createDescriptionPerformanceMetricsAdapter();
-			}
-			@Override
-			public Adapter caseDescriptionRiskManagement(DescriptionRiskManagement object) {
-				return createDescriptionRiskManagementAdapter();
-			}
-			@Override
-			public Adapter caseDescriptionProviderRelevantChanges(DescriptionProviderRelevantChanges object) {
-				return createDescriptionProviderRelevantChangesAdapter();
-			}
-			@Override
 			public Adapter caseListHarmonisedStandards(ListHarmonisedStandards object) {
 				return createListHarmonisedStandardsAdapter();
 			}
 			@Override
-			public Adapter caseCopyEUConformityDeclaration(CopyEUConformityDeclaration object) {
-				return createCopyEUConformityDeclarationAdapter();
+			public Adapter caseProvides(Provides object) {
+				return createProvidesAdapter();
 			}
 			@Override
-			public Adapter caseDescriptionAISystemPostMarketPhase(DescriptionAISystemPostMarketPhase object) {
-				return createDescriptionAISystemPostMarketPhaseAdapter();
+			public Adapter caseCriticalInfrastructure(CriticalInfrastructure object) {
+				return createCriticalInfrastructureAdapter();
 			}
 			@Override
-			public Adapter caseDocuments(Documents object) {
-				return createDocumentsAdapter();
+			public Adapter caseMLModel(MLModel object) {
+				return createMLModelAdapter();
 			}
 			@Override
-			public Adapter caseTransparencyObligation(TransparencyObligation object) {
-				return createTransparencyObligationAdapter();
+			public Adapter caseEducation(Education object) {
+				return createEducationAdapter();
+			}
+			@Override
+			public Adapter caseHumanEmployment(HumanEmployment object) {
+				return createHumanEmploymentAdapter();
+			}
+			@Override
+			public Adapter caseTrainingData(TrainingData object) {
+				return createTrainingDataAdapter();
+			}
+			@Override
+			public Adapter caseThirdPartyComponent(ThirdPartyComponent object) {
+				return createThirdPartyComponentAdapter();
+			}
+			@Override
+			public Adapter caseEssentialService(EssentialService object) {
+				return createEssentialServiceAdapter();
+			}
+			@Override
+			public Adapter caseLawEnforcement(LawEnforcement object) {
+				return createLawEnforcementAdapter();
+			}
+			@Override
+			public Adapter caseMigrationBorder(MigrationBorder object) {
+				return createMigrationBorderAdapter();
+			}
+			@Override
+			public Adapter caseJusticeDemocracyUseCase(JusticeDemocracyUseCase object) {
+				return createJusticeDemocracyUseCaseAdapter();
+			}
+			@Override
+			public Adapter caseBiometricIdentification(BiometricIdentification object) {
+				return createBiometricIdentificationAdapter();
+			}
+			@Override
+			public Adapter caseBiometricCategorisation(BiometricCategorisation object) {
+				return createBiometricCategorisationAdapter();
+			}
+			@Override
+			public Adapter caseEmotionRecognition(EmotionRecognition object) {
+				return createEmotionRecognitionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -208,20 +196,6 @@ public class EuaiactcomplianceAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.AnnexIIIUseCase <em>Annex III Use Case</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see euaiactcompliance.AnnexIIIUseCase
-	 * @generated
-	 */
-	public Adapter createAnnexIIIUseCaseAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link euaiactcompliance.Profiling <em>Profiling</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -236,16 +210,16 @@ public class EuaiactcomplianceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.SafetyComponent <em>Safety Component</em>}'.
+	 * Creates a new adapter for an object of class '{@link euaiactcompliance.ProductEmbedding <em>Product Embedding</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see euaiactcompliance.SafetyComponent
+	 * @see euaiactcompliance.ProductEmbedding
 	 * @generated
 	 */
-	public Adapter createSafetyComponentAdapter() {
+	public Adapter createProductEmbeddingAdapter() {
 		return null;
 	}
 
@@ -274,34 +248,6 @@ public class EuaiactcomplianceAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSyntheticContentAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.EmotionRecognitionNotification <em>Emotion Recognition Notification</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see euaiactcompliance.EmotionRecognitionNotification
-	 * @generated
-	 */
-	public Adapter createEmotionRecognitionNotificationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.BiometricCategorizationNotification <em>Biometric Categorization Notification</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see euaiactcompliance.BiometricCategorizationNotification
-	 * @generated
-	 */
-	public Adapter createBiometricCategorizationNotificationAdapter() {
 		return null;
 	}
 
@@ -348,16 +294,16 @@ public class EuaiactcomplianceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.ExploitingVulnerability <em>Exploiting Vulnerability</em>}'.
+	 * Creates a new adapter for an object of class '{@link euaiactcompliance.ExploitingHumanVulnerability <em>Exploiting Human Vulnerability</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see euaiactcompliance.ExploitingVulnerability
+	 * @see euaiactcompliance.ExploitingHumanVulnerability
 	 * @generated
 	 */
-	public Adapter createExploitingVulnerabilityAdapter() {
+	public Adapter createExploitingHumanVulnerabilityAdapter() {
 		return null;
 	}
 
@@ -376,72 +322,16 @@ public class EuaiactcomplianceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.PredictivePolicing <em>Predictive Policing</em>}'.
+	 * Creates a new adapter for an object of class '{@link euaiactcompliance.FacialImageScraping <em>Facial Image Scraping</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see euaiactcompliance.PredictivePolicing
+	 * @see euaiactcompliance.FacialImageScraping
 	 * @generated
 	 */
-	public Adapter createPredictivePolicingAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.FacialRecognition <em>Facial Recognition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see euaiactcompliance.FacialRecognition
-	 * @generated
-	 */
-	public Adapter createFacialRecognitionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.EmotionRecognition <em>Emotion Recognition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see euaiactcompliance.EmotionRecognition
-	 * @generated
-	 */
-	public Adapter createEmotionRecognitionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.BiometricCategorisation <em>Biometric Categorisation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see euaiactcompliance.BiometricCategorisation
-	 * @generated
-	 */
-	public Adapter createBiometricCategorisationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.BiometricIdentification <em>Biometric Identification</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see euaiactcompliance.BiometricIdentification
-	 * @generated
-	 */
-	public Adapter createBiometricIdentificationAdapter() {
+	public Adapter createFacialImageScrapingAdapter() {
 		return null;
 	}
 
@@ -474,90 +364,6 @@ public class EuaiactcomplianceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.GeneralDescriptionAISystem <em>General Description AI System</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see euaiactcompliance.GeneralDescriptionAISystem
-	 * @generated
-	 */
-	public Adapter createGeneralDescriptionAISystemAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.DetailedDescriptionAISystem <em>Detailed Description AI System</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see euaiactcompliance.DetailedDescriptionAISystem
-	 * @generated
-	 */
-	public Adapter createDetailedDescriptionAISystemAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.DetailedInformationAISystem <em>Detailed Information AI System</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see euaiactcompliance.DetailedInformationAISystem
-	 * @generated
-	 */
-	public Adapter createDetailedInformationAISystemAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.DescriptionPerformanceMetrics <em>Description Performance Metrics</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see euaiactcompliance.DescriptionPerformanceMetrics
-	 * @generated
-	 */
-	public Adapter createDescriptionPerformanceMetricsAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.DescriptionRiskManagement <em>Description Risk Management</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see euaiactcompliance.DescriptionRiskManagement
-	 * @generated
-	 */
-	public Adapter createDescriptionRiskManagementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.DescriptionProviderRelevantChanges <em>Description Provider Relevant Changes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see euaiactcompliance.DescriptionProviderRelevantChanges
-	 * @generated
-	 */
-	public Adapter createDescriptionProviderRelevantChangesAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link euaiactcompliance.ListHarmonisedStandards <em>List Harmonised Standards</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -572,58 +378,198 @@ public class EuaiactcomplianceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.CopyEUConformityDeclaration <em>Copy EU Conformity Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link euaiactcompliance.Provides <em>Provides</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see euaiactcompliance.CopyEUConformityDeclaration
+	 * @see euaiactcompliance.Provides
 	 * @generated
 	 */
-	public Adapter createCopyEUConformityDeclarationAdapter() {
+	public Adapter createProvidesAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.DescriptionAISystemPostMarketPhase <em>Description AI System Post Market Phase</em>}'.
+	 * Creates a new adapter for an object of class '{@link euaiactcompliance.CriticalInfrastructure <em>Critical Infrastructure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see euaiactcompliance.DescriptionAISystemPostMarketPhase
+	 * @see euaiactcompliance.CriticalInfrastructure
 	 * @generated
 	 */
-	public Adapter createDescriptionAISystemPostMarketPhaseAdapter() {
+	public Adapter createCriticalInfrastructureAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.Documents <em>Documents</em>}'.
+	 * Creates a new adapter for an object of class '{@link euaiactcompliance.MLModel <em>ML Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see euaiactcompliance.Documents
+	 * @see euaiactcompliance.MLModel
 	 * @generated
 	 */
-	public Adapter createDocumentsAdapter() {
+	public Adapter createMLModelAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.TransparencyObligation <em>Transparency Obligation</em>}'.
+	 * Creates a new adapter for an object of class '{@link euaiactcompliance.Education <em>Education</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see euaiactcompliance.TransparencyObligation
+	 * @see euaiactcompliance.Education
 	 * @generated
 	 */
-	public Adapter createTransparencyObligationAdapter() {
+	public Adapter createEducationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link euaiactcompliance.HumanEmployment <em>Human Employment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see euaiactcompliance.HumanEmployment
+	 * @generated
+	 */
+	public Adapter createHumanEmploymentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link euaiactcompliance.TrainingData <em>Training Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see euaiactcompliance.TrainingData
+	 * @generated
+	 */
+	public Adapter createTrainingDataAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link euaiactcompliance.ThirdPartyComponent <em>Third Party Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see euaiactcompliance.ThirdPartyComponent
+	 * @generated
+	 */
+	public Adapter createThirdPartyComponentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link euaiactcompliance.EssentialService <em>Essential Service</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see euaiactcompliance.EssentialService
+	 * @generated
+	 */
+	public Adapter createEssentialServiceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link euaiactcompliance.LawEnforcement <em>Law Enforcement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see euaiactcompliance.LawEnforcement
+	 * @generated
+	 */
+	public Adapter createLawEnforcementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link euaiactcompliance.MigrationBorder <em>Migration Border</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see euaiactcompliance.MigrationBorder
+	 * @generated
+	 */
+	public Adapter createMigrationBorderAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link euaiactcompliance.JusticeDemocracyUseCase <em>Justice Democracy Use Case</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see euaiactcompliance.JusticeDemocracyUseCase
+	 * @generated
+	 */
+	public Adapter createJusticeDemocracyUseCaseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link euaiactcompliance.BiometricIdentification <em>Biometric Identification</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see euaiactcompliance.BiometricIdentification
+	 * @generated
+	 */
+	public Adapter createBiometricIdentificationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link euaiactcompliance.BiometricCategorisation <em>Biometric Categorisation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see euaiactcompliance.BiometricCategorisation
+	 * @generated
+	 */
+	public Adapter createBiometricCategorisationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link euaiactcompliance.EmotionRecognition <em>Emotion Recognition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see euaiactcompliance.EmotionRecognition
+	 * @generated
+	 */
+	public Adapter createEmotionRecognitionAdapter() {
 		return null;
 	}
 
