@@ -6,8 +6,13 @@ import java.util.List;
 import java.util.Set;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.uml2.uml.Actor;
+import org.eclipse.uml2.uml.Association;
+import org.eclipse.uml2.uml.Component;
+import org.eclipse.uml2.uml.Dependency;
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.EnumerationLiteral;
+import org.eclipse.uml2.uml.NamedElement;
 import org.eclipse.uml2.uml.StringExpression;
 import org.eclipse.uml2.uml.Stereotype;
 
@@ -214,8 +219,9 @@ public final class EUAIActComplianceUtil {
 		return falseTags;
 	}
 
+	// TODO JavaDoc
 	/**
-	 * ...
+	 * 
 	 *
 	 * @param element    the element to look for the stereotype.
 	 * @param stereotype the stereotype containing the attribute of interest.
@@ -233,15 +239,16 @@ public final class EUAIActComplianceUtil {
 		return enumValue;
 	}
 
+	// TODO JavaDoc
 	/**
-	 * ...
+	 * 
 	 *
 	 * @param element    the element to look for the stereotype.
 	 * @param stereotype the stereotype containing the attribute of interest.
 	 * @param attribute  the name of the String typed tag.
 	 * @return the name of the attribute, null otherwise
 	 */
-	public static String getStringValue(final Element element, final EUAIActCompliance stereotype, String attribute) {
+	public static String getStringValue(Element element, EUAIActCompliance stereotype, String attribute) {
 		String stringValue = null;
 		List<Object> taggedValues = getTaggedValues(attribute, stereotype, element);
 		for (Object oj : taggedValues) {
@@ -250,5 +257,43 @@ public final class EUAIActComplianceUtil {
 			}
 		}
 		return stringValue;
+	}
+
+	// TODO JavaDoc
+	/**
+	 * 
+	 *
+	 * @param element    the element to look for the stereotype.
+	 * @param stereotype the stereotype containing the attribute of interest.
+	 * @param attribute  the name of the String typed tag.
+	 * @return the name of the attribute, null otherwise
+	 */
+	public static String getAssociationActorEnd(Component component, EUAIActCompliance associationStereotype,
+			EUAIActCompliance actorStereotype) {
+		for (Association ass : component.getAssociations()) {
+			if (!hasStereotype(ass, associationStereotype)) {
+				continue;
+			}
+			for (Element el : ass.getRelatedElements()) {
+				if ((el instanceof Actor) && hasStereotype(el, actorStereotype)) {
+					return ((NamedElement) el).getName();
+				}
+			}
+		}
+		return null;
+	}
+
+	// TODO JavaDoc
+	public static <T extends Element> Set<T> getConnectedElements(final Component system , final Class<T> type, final EUAIActCompliance stereo) {
+		Set<T> elements = new HashSet<T>(getStereotypedElements(system, type, stereo));
+		elements.remove(system);
+		for (Dependency dep : system.getClientDependencies()) {
+			for (NamedElement supplier : dep.getSuppliers()) {
+				if (type.isInstance(supplier) && hasStereotype(supplier, stereo)) {
+					elements.add(type.cast(supplier));
+				}
+			}
+		}
+		return elements;
 	}
 }

@@ -1,13 +1,14 @@
 package carisma.check.euaiactdocumentation.check;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
 import org.eclipse.uml2.uml.Component;
 
 import carisma.check.euaiactdocumentation.common.AbstractEUAIActDocumentationCheck;
-import carisma.check.euaiactdocumentation.verification.EUAIActDocumentationVerifier;
+import carisma.check.euaiactdocumentation.generation.EUAIActDocumentationGenerator;
+import carisma.check.euaiactdocumentation.section.EUAIActDocumentationSectionResult;
+import carisma.check.euaiactriskclassification.classification.EUAIActRiskClassificationResult;
 import carisma.check.euaiactriskclassification.classification.EUAIActRiskClassifier;
 import carisma.check.euaiactriskclassification.riskclass.EUAIActRiskClass;
 import carisma.core.checks.CarismaCheckWithID;
@@ -31,63 +32,45 @@ public class EUAIActDocumentationCheck extends AbstractEUAIActDocumentationCheck
 				EUAIActCompliance.AISystem);
 
 		if (aiSystems.isEmpty()) {
-			addInfo("Your model does not contain any AI system.");
+			addInfo("Your model does not contain any AI systems.");
 			return false;
 		}
 		addInfo("Your model contains " + aiSystems.size() + " AI system(s).");
 
-		EUAIActRiskClassifier classifier = new EUAIActRiskClassifier();
-		boolean completeDocumentation = true;
-
 		for (Component aiSystem : aiSystems) {
-			List<String> reasons = new ArrayList<>();
-			EUAIActRiskClass riskClass = classifier.classify(aiSystem, reasons);
-			EUAIActDocumentationVerifier verifier = new EUAIActDocumentationVerifier(riskClass);
+			EUAIActRiskClassifier classifier = new EUAIActRiskClassifier(aiSystem);
+			EUAIActRiskClassificationResult result = classifier.classify();
+			EUAIActRiskClass riskClass = result.riskClass();
 
-			addInfo("AI System '" + aiSystem.getName() + "' is classified as: "
-					+ EUAIActRiskClassifier.getDisplayName(riskClass));
+			EUAIActDocumentationGenerator generator = new EUAIActDocumentationGenerator(aiSystem);
 
-			if (riskClass == EUAIActRiskClass.UNACCEPTABLE) {
-				addInfo("No required documentations, because the system must not be placed on the market, put into service or used (Art. 5: Prohibited AI Practices).");
-				return false;
-			}
-
-			List<String> requiredDocumentation = new ArrayList<>();
-			List<String> foundDocumentation = new ArrayList<>();
-			List<String> missingDocumentation = new ArrayList<>();
-
-			boolean completeAISystemDocumentation = verifier.verify(aiSystem, requiredDocumentation, foundDocumentation,
-					missingDocumentation);
-
-			if (requiredDocumentation.isEmpty()) {
-				addInfo("No documentation is required for this risk class.");
+			if (riskClass == EUAIActRiskClass.Unacceptable) {
+				addInfo("No required Documentation. The system must not be placed on the market, put into service or used according to Article 5.");
 				continue;
 			}
 
-			addInfo("Required Documentation(s):");
-			addInfo("================");
-			for (String documentation : requiredDocumentation) {
-				addInfo(documentation);
-			}
-			addInfo("\n");
-			addInfo("Found Documentation(s):");
-			addInfo("================");
-			for (String documentation : foundDocumentation) {
-				addInfo(documentation);
-			}
-			addInfo("\n");
-			addInfo("Missing Documentation(s):");
-			addInfo("================");
-			for (String documentation : missingDocumentation) {
-				addInfo(documentation);
-			}
+			addInfo("Documentation for AI System '" + aiSystem.getName() + "' (" + riskClass + ")");
 
-			if (!completeAISystemDocumentation) {
-				completeDocumentation = false;
+			List<EUAIActDocumentationSectionResult> sections = generator.generate();
+			for (EUAIActDocumentationSectionResult section : sections) {
+				addInfo(section.sectionName().toString());
+				addInfo("================");
+				addInfo("Found Documentation(s):");
+				for (String documentation : section.foundDocumentation()) {
+					addInfo(documentation);
+				}
+				addInfo("Missing Documentation(s):");
+				for (String documentation : section.missingDocumentation()) {
+					addInfo(documentation);
+				}
+				addInfo("\n");
+				if (!section.missingDocumentation().isEmpty()) {
+					return false;
+				}
 			}
 		}
+		return true;
 
-		return completeDocumentation;
 	}
 
 	@Override
