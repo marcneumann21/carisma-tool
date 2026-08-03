@@ -29,14 +29,13 @@ import org.eclipse.uml2.uml.Component;
  *   <li>{@link euaiactcompliance.AISystem#getDesignDecision <em>Design Decision</em>}</li>
  *   <li>{@link euaiactcompliance.AISystem#getDesignTradeOffs <em>Design Trade Offs</em>}</li>
  *   <li>{@link euaiactcompliance.AISystem#getResources <em>Resources</em>}</li>
- *   <li>{@link euaiactcompliance.AISystem#getHumanOversightPreassessment <em>Human Oversight Preassessment</em>}</li>
+ *   <li>{@link euaiactcompliance.AISystem#getHumanOversightPreAssessment <em>Human Oversight Pre Assessment</em>}</li>
  *   <li>{@link euaiactcompliance.AISystem#getPlannedModification <em>Planned Modification</em>}</li>
  *   <li>{@link euaiactcompliance.AISystem#getCybersecurity <em>Cybersecurity</em>}</li>
  *   <li>{@link euaiactcompliance.AISystem#getHumanOversightPostAssessment <em>Human Oversight Post Assessment</em>}</li>
  *   <li>{@link euaiactcompliance.AISystem#getUpdateRequirements <em>Update Requirements</em>}</li>
  *   <li>{@link euaiactcompliance.AISystem#getPredictableRisks <em>Predictable Risks</em>}</li>
  *   <li>{@link euaiactcompliance.AISystem#getPerformanceMetricsSuitability <em>Performance Metrics Suitability</em>}</li>
- *   <li>{@link euaiactcompliance.AISystem#getRiskManagement <em>Risk Management</em>}</li>
  *   <li>{@link euaiactcompliance.AISystem#getRelevantChanges <em>Relevant Changes</em>}</li>
  *   <li>{@link euaiactcompliance.AISystem#getHarmonisedStandards <em>Harmonised Standards</em>}</li>
  *   <li>{@link euaiactcompliance.AISystem#isCopyEUConformityDeclaration <em>Copy EU Conformity Declaration</em>}</li>
@@ -357,26 +356,26 @@ public interface AISystem extends EObject {
 	void setResources(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Human Oversight Preassessment</b></em>' attribute.
+	 * Returns the value of the '<em><b>Human Oversight Pre Assessment</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Human Oversight Preassessment</em>' attribute.
-	 * @see #setHumanOversightPreassessment(String)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getAISystem_HumanOversightPreassessment()
+	 * @return the value of the '<em>Human Oversight Pre Assessment</em>' attribute.
+	 * @see #setHumanOversightPreAssessment(String)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getAISystem_HumanOversightPreAssessment()
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getHumanOversightPreassessment();
+	String getHumanOversightPreAssessment();
 
 	/**
-	 * Sets the value of the '{@link euaiactcompliance.AISystem#getHumanOversightPreassessment <em>Human Oversight Preassessment</em>}' attribute.
+	 * Sets the value of the '{@link euaiactcompliance.AISystem#getHumanOversightPreAssessment <em>Human Oversight Pre Assessment</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Human Oversight Preassessment</em>' attribute.
-	 * @see #getHumanOversightPreassessment()
+	 * @param value the new value of the '<em>Human Oversight Pre Assessment</em>' attribute.
+	 * @see #getHumanOversightPreAssessment()
 	 * @generated
 	 */
-	void setHumanOversightPreassessment(String value);
+	void setHumanOversightPreAssessment(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Planned Modification</b></em>' attribute.
@@ -509,28 +508,6 @@ public interface AISystem extends EObject {
 	 * @generated
 	 */
 	void setPerformanceMetricsSuitability(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Risk Management</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Risk Management</em>' attribute.
-	 * @see #setRiskManagement(String)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getAISystem_RiskManagement()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
-	 */
-	String getRiskManagement();
-
-	/**
-	 * Sets the value of the '{@link euaiactcompliance.AISystem#getRiskManagement <em>Risk Management</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Risk Management</em>' attribute.
-	 * @see #getRiskManagement()
-	 * @generated
-	 */
-	void setRiskManagement(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Relevant Changes</b></em>' attribute.

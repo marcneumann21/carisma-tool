@@ -25,7 +25,7 @@ public enum EUAIActCompliance {
 	BiometricCategorisation("BiometricCategorisation"), EmotionRecognition("EmotionRecognition"),
 	CriticalInfrastructure("CriticalInfrastructure"), Education("Education"), HumanEmployment("HumanEmployment"),
 	EssentialService("EssentialService"), LawEnforcement("LawEnforcement"), MigrationBorder("MigrationBorder"),
-	JusticeDemocracyUseCase("JusticeDemocracyUseCase"), Profiling("Profiling"),
+	JusticeDemocracyUseCase("JusticeDemocracyUseCase"), Profiling("Profiling"), RiskManagement("RiskManagement"),
 
 	// Limited risk / transparency obligations (Art. 50)
 	HumanInteraction("HumanInteraction"), SyntheticContent("SyntheticContent"), Deepfake("Deepfake"),

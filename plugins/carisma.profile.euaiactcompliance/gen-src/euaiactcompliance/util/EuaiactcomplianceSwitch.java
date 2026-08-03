@@ -138,12 +138,6 @@ public class EuaiactcomplianceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EuaiactcompliancePackage.LIST_HARMONISED_STANDARDS: {
-				ListHarmonisedStandards listHarmonisedStandards = (ListHarmonisedStandards)theEObject;
-				T result = caseListHarmonisedStandards(listHarmonisedStandards);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case EuaiactcompliancePackage.PROVIDES: {
 				Provides provides = (Provides)theEObject;
 				T result = caseProvides(provides);
@@ -225,6 +219,12 @@ public class EuaiactcomplianceSwitch<T> extends Switch<T> {
 			case EuaiactcompliancePackage.EMOTION_RECOGNITION: {
 				EmotionRecognition emotionRecognition = (EmotionRecognition)theEObject;
 				T result = caseEmotionRecognition(emotionRecognition);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EuaiactcompliancePackage.RISK_MANAGEMENT: {
+				RiskManagement riskManagement = (RiskManagement)theEObject;
+				T result = caseRiskManagement(riskManagement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -409,21 +409,6 @@ public class EuaiactcomplianceSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseProvider(Provider object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>List Harmonised Standards</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>List Harmonised Standards</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseListHarmonisedStandards(ListHarmonisedStandards object) {
 		return null;
 	}
 
@@ -634,6 +619,21 @@ public class EuaiactcomplianceSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEmotionRecognition(EmotionRecognition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Risk Management</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Risk Management</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRiskManagement(RiskManagement object) {
 		return null;
 	}
 

@@ -37,14 +37,13 @@ import org.eclipse.uml2.uml.Component;
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getDesignDecision <em>Design Decision</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getDesignTradeOffs <em>Design Trade Offs</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getResources <em>Resources</em>}</li>
- *   <li>{@link euaiactcompliance.impl.AISystemImpl#getHumanOversightPreassessment <em>Human Oversight Preassessment</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.AISystemImpl#getHumanOversightPreAssessment <em>Human Oversight Pre Assessment</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getPlannedModification <em>Planned Modification</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getCybersecurity <em>Cybersecurity</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getHumanOversightPostAssessment <em>Human Oversight Post Assessment</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getUpdateRequirements <em>Update Requirements</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getPredictableRisks <em>Predictable Risks</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getPerformanceMetricsSuitability <em>Performance Metrics Suitability</em>}</li>
- *   <li>{@link euaiactcompliance.impl.AISystemImpl#getRiskManagement <em>Risk Management</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getRelevantChanges <em>Relevant Changes</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getHarmonisedStandards <em>Harmonised Standards</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#isCopyEUConformityDeclaration <em>Copy EU Conformity Declaration</em>}</li>
@@ -325,24 +324,24 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	protected String resources = RESOURCES_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getHumanOversightPreassessment() <em>Human Oversight Preassessment</em>}' attribute.
+	 * The default value of the '{@link #getHumanOversightPreAssessment() <em>Human Oversight Pre Assessment</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getHumanOversightPreassessment()
+	 * @see #getHumanOversightPreAssessment()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String HUMAN_OVERSIGHT_PREASSESSMENT_EDEFAULT = null;
+	protected static final String HUMAN_OVERSIGHT_PRE_ASSESSMENT_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getHumanOversightPreassessment() <em>Human Oversight Preassessment</em>}' attribute.
+	 * The cached value of the '{@link #getHumanOversightPreAssessment() <em>Human Oversight Pre Assessment</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getHumanOversightPreassessment()
+	 * @see #getHumanOversightPreAssessment()
 	 * @generated
 	 * @ordered
 	 */
-	protected String humanOversightPreassessment = HUMAN_OVERSIGHT_PREASSESSMENT_EDEFAULT;
+	protected String humanOversightPreAssessment = HUMAN_OVERSIGHT_PRE_ASSESSMENT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getPlannedModification() <em>Planned Modification</em>}' attribute.
@@ -463,26 +462,6 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @ordered
 	 */
 	protected String performanceMetricsSuitability = PERFORMANCE_METRICS_SUITABILITY_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getRiskManagement() <em>Risk Management</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRiskManagement()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String RISK_MANAGEMENT_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getRiskManagement() <em>Risk Management</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRiskManagement()
-	 * @generated
-	 * @ordered
-	 */
-	protected String riskManagement = RISK_MANAGEMENT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getRelevantChanges() <em>Relevant Changes</em>}' attribute.
@@ -928,8 +907,8 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
-	public String getHumanOversightPreassessment() {
-		return humanOversightPreassessment;
+	public String getHumanOversightPreAssessment() {
+		return humanOversightPreAssessment;
 	}
 
 	/**
@@ -938,11 +917,11 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
-	public void setHumanOversightPreassessment(String newHumanOversightPreassessment) {
-		String oldHumanOversightPreassessment = humanOversightPreassessment;
-		humanOversightPreassessment = newHumanOversightPreassessment;
+	public void setHumanOversightPreAssessment(String newHumanOversightPreAssessment) {
+		String oldHumanOversightPreAssessment = humanOversightPreAssessment;
+		humanOversightPreAssessment = newHumanOversightPreAssessment;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__HUMAN_OVERSIGHT_PREASSESSMENT, oldHumanOversightPreassessment, humanOversightPreassessment));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__HUMAN_OVERSIGHT_PRE_ASSESSMENT, oldHumanOversightPreAssessment, humanOversightPreAssessment));
 	}
 
 	/**
@@ -1089,29 +1068,6 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
-	public String getRiskManagement() {
-		return riskManagement;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setRiskManagement(String newRiskManagement) {
-		String oldRiskManagement = riskManagement;
-		riskManagement = newRiskManagement;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__RISK_MANAGEMENT, oldRiskManagement, riskManagement));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getRelevantChanges() {
 		return relevantChanges;
 	}
@@ -1235,8 +1191,8 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 				return getDesignTradeOffs();
 			case EuaiactcompliancePackage.AI_SYSTEM__RESOURCES:
 				return getResources();
-			case EuaiactcompliancePackage.AI_SYSTEM__HUMAN_OVERSIGHT_PREASSESSMENT:
-				return getHumanOversightPreassessment();
+			case EuaiactcompliancePackage.AI_SYSTEM__HUMAN_OVERSIGHT_PRE_ASSESSMENT:
+				return getHumanOversightPreAssessment();
 			case EuaiactcompliancePackage.AI_SYSTEM__PLANNED_MODIFICATION:
 				return getPlannedModification();
 			case EuaiactcompliancePackage.AI_SYSTEM__CYBERSECURITY:
@@ -1249,8 +1205,6 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 				return getPredictableRisks();
 			case EuaiactcompliancePackage.AI_SYSTEM__PERFORMANCE_METRICS_SUITABILITY:
 				return getPerformanceMetricsSuitability();
-			case EuaiactcompliancePackage.AI_SYSTEM__RISK_MANAGEMENT:
-				return getRiskManagement();
 			case EuaiactcompliancePackage.AI_SYSTEM__RELEVANT_CHANGES:
 				return getRelevantChanges();
 			case EuaiactcompliancePackage.AI_SYSTEM__HARMONISED_STANDARDS:
@@ -1313,8 +1267,8 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 			case EuaiactcompliancePackage.AI_SYSTEM__RESOURCES:
 				setResources((String)newValue);
 				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__HUMAN_OVERSIGHT_PREASSESSMENT:
-				setHumanOversightPreassessment((String)newValue);
+			case EuaiactcompliancePackage.AI_SYSTEM__HUMAN_OVERSIGHT_PRE_ASSESSMENT:
+				setHumanOversightPreAssessment((String)newValue);
 				return;
 			case EuaiactcompliancePackage.AI_SYSTEM__PLANNED_MODIFICATION:
 				setPlannedModification((String)newValue);
@@ -1333,9 +1287,6 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 				return;
 			case EuaiactcompliancePackage.AI_SYSTEM__PERFORMANCE_METRICS_SUITABILITY:
 				setPerformanceMetricsSuitability((String)newValue);
-				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__RISK_MANAGEMENT:
-				setRiskManagement((String)newValue);
 				return;
 			case EuaiactcompliancePackage.AI_SYSTEM__RELEVANT_CHANGES:
 				setRelevantChanges((String)newValue);
@@ -1403,8 +1354,8 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 			case EuaiactcompliancePackage.AI_SYSTEM__RESOURCES:
 				setResources(RESOURCES_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__HUMAN_OVERSIGHT_PREASSESSMENT:
-				setHumanOversightPreassessment(HUMAN_OVERSIGHT_PREASSESSMENT_EDEFAULT);
+			case EuaiactcompliancePackage.AI_SYSTEM__HUMAN_OVERSIGHT_PRE_ASSESSMENT:
+				setHumanOversightPreAssessment(HUMAN_OVERSIGHT_PRE_ASSESSMENT_EDEFAULT);
 				return;
 			case EuaiactcompliancePackage.AI_SYSTEM__PLANNED_MODIFICATION:
 				setPlannedModification(PLANNED_MODIFICATION_EDEFAULT);
@@ -1423,9 +1374,6 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 				return;
 			case EuaiactcompliancePackage.AI_SYSTEM__PERFORMANCE_METRICS_SUITABILITY:
 				setPerformanceMetricsSuitability(PERFORMANCE_METRICS_SUITABILITY_EDEFAULT);
-				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__RISK_MANAGEMENT:
-				setRiskManagement(RISK_MANAGEMENT_EDEFAULT);
 				return;
 			case EuaiactcompliancePackage.AI_SYSTEM__RELEVANT_CHANGES:
 				setRelevantChanges(RELEVANT_CHANGES_EDEFAULT);
@@ -1479,8 +1427,8 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 				return DESIGN_TRADE_OFFS_EDEFAULT == null ? designTradeOffs != null : !DESIGN_TRADE_OFFS_EDEFAULT.equals(designTradeOffs);
 			case EuaiactcompliancePackage.AI_SYSTEM__RESOURCES:
 				return RESOURCES_EDEFAULT == null ? resources != null : !RESOURCES_EDEFAULT.equals(resources);
-			case EuaiactcompliancePackage.AI_SYSTEM__HUMAN_OVERSIGHT_PREASSESSMENT:
-				return HUMAN_OVERSIGHT_PREASSESSMENT_EDEFAULT == null ? humanOversightPreassessment != null : !HUMAN_OVERSIGHT_PREASSESSMENT_EDEFAULT.equals(humanOversightPreassessment);
+			case EuaiactcompliancePackage.AI_SYSTEM__HUMAN_OVERSIGHT_PRE_ASSESSMENT:
+				return HUMAN_OVERSIGHT_PRE_ASSESSMENT_EDEFAULT == null ? humanOversightPreAssessment != null : !HUMAN_OVERSIGHT_PRE_ASSESSMENT_EDEFAULT.equals(humanOversightPreAssessment);
 			case EuaiactcompliancePackage.AI_SYSTEM__PLANNED_MODIFICATION:
 				return PLANNED_MODIFICATION_EDEFAULT == null ? plannedModification != null : !PLANNED_MODIFICATION_EDEFAULT.equals(plannedModification);
 			case EuaiactcompliancePackage.AI_SYSTEM__CYBERSECURITY:
@@ -1493,8 +1441,6 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 				return PREDICTABLE_RISKS_EDEFAULT == null ? predictableRisks != null : !PREDICTABLE_RISKS_EDEFAULT.equals(predictableRisks);
 			case EuaiactcompliancePackage.AI_SYSTEM__PERFORMANCE_METRICS_SUITABILITY:
 				return PERFORMANCE_METRICS_SUITABILITY_EDEFAULT == null ? performanceMetricsSuitability != null : !PERFORMANCE_METRICS_SUITABILITY_EDEFAULT.equals(performanceMetricsSuitability);
-			case EuaiactcompliancePackage.AI_SYSTEM__RISK_MANAGEMENT:
-				return RISK_MANAGEMENT_EDEFAULT == null ? riskManagement != null : !RISK_MANAGEMENT_EDEFAULT.equals(riskManagement);
 			case EuaiactcompliancePackage.AI_SYSTEM__RELEVANT_CHANGES:
 				return RELEVANT_CHANGES_EDEFAULT == null ? relevantChanges != null : !RELEVANT_CHANGES_EDEFAULT.equals(relevantChanges);
 			case EuaiactcompliancePackage.AI_SYSTEM__HARMONISED_STANDARDS:
@@ -1543,8 +1489,8 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 		result.append(designTradeOffs);
 		result.append(", Resources: ");
 		result.append(resources);
-		result.append(", HumanOversightPreassessment: ");
-		result.append(humanOversightPreassessment);
+		result.append(", HumanOversightPreAssessment: ");
+		result.append(humanOversightPreAssessment);
 		result.append(", PlannedModification: ");
 		result.append(plannedModification);
 		result.append(", Cybersecurity: ");
@@ -1557,8 +1503,6 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 		result.append(predictableRisks);
 		result.append(", PerformanceMetricsSuitability: ");
 		result.append(performanceMetricsSuitability);
-		result.append(", RiskManagement: ");
-		result.append(riskManagement);
 		result.append(", RelevantChanges: ");
 		result.append(relevantChanges);
 		result.append(", HarmonisedStandards: ");

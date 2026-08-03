@@ -13,7 +13,6 @@ import org.eclipse.uml2.uml.Dependency;
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.EnumerationLiteral;
 import org.eclipse.uml2.uml.NamedElement;
-import org.eclipse.uml2.uml.StringExpression;
 import org.eclipse.uml2.uml.Stereotype;
 
 import carisma.modeltype.uml2.StereotypeApplication;
@@ -233,7 +232,7 @@ public final class EUAIActComplianceUtil {
 		List<Object> taggedValues = getTaggedValues(attribute, stereotype, element);
 		for (Object oj : taggedValues) {
 			if (oj instanceof EnumerationLiteral) {
-				enumValue = oj.toString();
+				enumValue = ((EnumerationLiteral) oj).getName();
 			}
 		}
 		return enumValue;
@@ -252,11 +251,31 @@ public final class EUAIActComplianceUtil {
 		String stringValue = null;
 		List<Object> taggedValues = getTaggedValues(attribute, stereotype, element);
 		for (Object oj : taggedValues) {
-			if (oj instanceof StringExpression) {
+			if (oj instanceof String) {
 				stringValue = oj.toString();
 			}
 		}
 		return stringValue;
+	}
+
+	// TODO JavaDoc
+	/**
+	 * 
+	 *
+	 * @param element    the element to look for the stereotype.
+	 * @param stereotype the stereotype containing the attribute of interest.
+	 * @param attribute  the name of the String typed tag.
+	 * @return the name of the attribute, null otherwise
+	 */
+	public static Boolean getBooleanValue(Element element, EUAIActCompliance stereotype, String attribute) {
+		Boolean booleanValue = null;
+		List<Object> taggedValues = getTaggedValues(attribute, stereotype, element);
+		for (Object oj : taggedValues) {
+			if (oj instanceof Boolean) {
+				booleanValue = (Boolean) oj;
+			}
+		}
+		return booleanValue;
 	}
 
 	// TODO JavaDoc
@@ -284,16 +303,45 @@ public final class EUAIActComplianceUtil {
 	}
 
 	// TODO JavaDoc
-	public static <T extends Element> Set<T> getConnectedElements(final Component system , final Class<T> type, final EUAIActCompliance stereo) {
-		Set<T> elements = new HashSet<T>(getStereotypedElements(system, type, stereo));
+	public static <T extends Element> Set<T> getConnectedElements(Component system, Class<T> type,
+			EUAIActCompliance stereotype) {
+		Set<T> elements = new HashSet<T>(getStereotypedElements(system, type, stereotype));
 		elements.remove(system);
+
 		for (Dependency dep : system.getClientDependencies()) {
-			for (NamedElement supplier : dep.getSuppliers()) {
-				if (type.isInstance(supplier) && hasStereotype(supplier, stereo)) {
-					elements.add(type.cast(supplier));
+			for (Element el : dep.getSuppliers()) {
+				if (type.isInstance(el) && hasStereotype(el, stereotype)) {
+					elements.add(type.cast(el));
 				}
 			}
 		}
+
+		return elements;
+	}
+
+	// TODO JavaDoc
+	public static List<String> getAllConnectedElements(Component system) {
+		List<String> elements = new ArrayList<>();
+
+		// nested components
+		for (Element element : system.getOwnedElements()) {
+			if (element instanceof Component) {
+				String relation = "'" + system.getName() + "' contains '" + ((Component) element).getName() + "'";
+				if (!elements.contains(relation)) {
+					elements.add(relation);
+				}
+			}
+		}
+
+		// dependencies to other components
+		for (Dependency dependency : system.getClientDependencies()) {
+			for (NamedElement supplier : dependency.getSuppliers()) {
+				if (supplier instanceof Component) {
+					elements.add("'" + system.getName() + "' uses '" + supplier.getName() + "'");
+				}
+			}
+		}
+
 		return elements;
 	}
 }

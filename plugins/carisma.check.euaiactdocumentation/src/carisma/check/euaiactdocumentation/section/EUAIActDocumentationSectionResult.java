@@ -8,5 +8,5 @@ import java.util.List;
  *
  */
 public record EUAIActDocumentationSectionResult(EUAIActDocumentationSection sectionName, List<String> foundDocumentation,
-		List<String> missingDocumentation) {
+		List<String> missingDocumentation, List<String> notes) {
 };

@@ -672,13 +672,13 @@ public interface EuaiactcompliancePackage extends EPackage {
 	int AI_SYSTEM__RESOURCES = 13;
 
 	/**
-	 * The feature id for the '<em><b>Human Oversight Preassessment</b></em>' attribute.
+	 * The feature id for the '<em><b>Human Oversight Pre Assessment</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AI_SYSTEM__HUMAN_OVERSIGHT_PREASSESSMENT = 14;
+	int AI_SYSTEM__HUMAN_OVERSIGHT_PRE_ASSESSMENT = 14;
 
 	/**
 	 * The feature id for the '<em><b>Planned Modification</b></em>' attribute.
@@ -735,22 +735,13 @@ public interface EuaiactcompliancePackage extends EPackage {
 	int AI_SYSTEM__PERFORMANCE_METRICS_SUITABILITY = 20;
 
 	/**
-	 * The feature id for the '<em><b>Risk Management</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AI_SYSTEM__RISK_MANAGEMENT = 21;
-
-	/**
 	 * The feature id for the '<em><b>Relevant Changes</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AI_SYSTEM__RELEVANT_CHANGES = 22;
+	int AI_SYSTEM__RELEVANT_CHANGES = 21;
 
 	/**
 	 * The feature id for the '<em><b>Harmonised Standards</b></em>' attribute.
@@ -759,7 +750,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AI_SYSTEM__HARMONISED_STANDARDS = 23;
+	int AI_SYSTEM__HARMONISED_STANDARDS = 22;
 
 	/**
 	 * The feature id for the '<em><b>Copy EU Conformity Declaration</b></em>' attribute.
@@ -768,7 +759,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AI_SYSTEM__COPY_EU_CONFORMITY_DECLARATION = 24;
+	int AI_SYSTEM__COPY_EU_CONFORMITY_DECLARATION = 23;
 
 	/**
 	 * The feature id for the '<em><b>Post Market Monitoring</b></em>' attribute.
@@ -777,7 +768,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AI_SYSTEM__POST_MARKET_MONITORING = 25;
+	int AI_SYSTEM__POST_MARKET_MONITORING = 24;
 
 	/**
 	 * The number of structural features of the '<em>AI System</em>' class.
@@ -786,7 +777,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AI_SYSTEM_FEATURE_COUNT = 26;
+	int AI_SYSTEM_FEATURE_COUNT = 25;
 
 	/**
 	 * The number of operations of the '<em>AI System</em>' class.
@@ -835,43 +826,6 @@ public interface EuaiactcompliancePackage extends EPackage {
 	int PROVIDER_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link euaiactcompliance.impl.ListHarmonisedStandardsImpl <em>List Harmonised Standards</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see euaiactcompliance.impl.ListHarmonisedStandardsImpl
-	 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getListHarmonisedStandards()
-	 * @generated
-	 */
-	int LIST_HARMONISED_STANDARDS = 12;
-
-	/**
-	 * The feature id for the '<em><b>Base Artifact</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIST_HARMONISED_STANDARDS__BASE_ARTIFACT = 0;
-
-	/**
-	 * The number of structural features of the '<em>List Harmonised Standards</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIST_HARMONISED_STANDARDS_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>List Harmonised Standards</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIST_HARMONISED_STANDARDS_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link euaiactcompliance.impl.ProvidesImpl <em>Provides</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -879,7 +833,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getProvides()
 	 * @generated
 	 */
-	int PROVIDES = 13;
+	int PROVIDES = 12;
 
 	/**
 	 * The feature id for the '<em><b>Base Association</b></em>' reference.
@@ -916,7 +870,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getCriticalInfrastructure()
 	 * @generated
 	 */
-	int CRITICAL_INFRASTRUCTURE = 14;
+	int CRITICAL_INFRASTRUCTURE = 13;
 
 	/**
 	 * The feature id for the '<em><b>Digital Infrastructure</b></em>' attribute.
@@ -1052,7 +1006,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getMLModel()
 	 * @generated
 	 */
-	int ML_MODEL = 15;
+	int ML_MODEL = 14;
 
 	/**
 	 * The feature id for the '<em><b>Parameter</b></em>' attribute.
@@ -1179,7 +1133,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getEducation()
 	 * @generated
 	 */
-	int EDUCATION = 16;
+	int EDUCATION = 15;
 
 	/**
 	 * The feature id for the '<em><b>Access Admission</b></em>' attribute.
@@ -1297,7 +1251,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getHumanEmployment()
 	 * @generated
 	 */
-	int HUMAN_EMPLOYMENT = 17;
+	int HUMAN_EMPLOYMENT = 16;
 
 	/**
 	 * The feature id for the '<em><b>Recruitment</b></em>' attribute.
@@ -1397,7 +1351,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getTrainingData()
 	 * @generated
 	 */
-	int TRAINING_DATA = 18;
+	int TRAINING_DATA = 17;
 
 	/**
 	 * The feature id for the '<em><b>Cleaning</b></em>' attribute.
@@ -1488,7 +1442,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getThirdPartyComponent()
 	 * @generated
 	 */
-	int THIRD_PARTY_COMPONENT = 19;
+	int THIRD_PARTY_COMPONENT = 18;
 
 	/**
 	 * The feature id for the '<em><b>Origin</b></em>' attribute.
@@ -1543,7 +1497,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getEssentialService()
 	 * @generated
 	 */
-	int ESSENTIAL_SERVICE = 20;
+	int ESSENTIAL_SERVICE = 19;
 
 	/**
 	 * The feature id for the '<em><b>Creditworthiness</b></em>' attribute.
@@ -1661,7 +1615,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getLawEnforcement()
 	 * @generated
 	 */
-	int LAW_ENFORCEMENT = 21;
+	int LAW_ENFORCEMENT = 20;
 
 	/**
 	 * The feature id for the '<em><b>Victim Risk Assessment</b></em>' attribute.
@@ -1788,7 +1742,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getMigrationBorder()
 	 * @generated
 	 */
-	int MIGRATION_BORDER = 22;
+	int MIGRATION_BORDER = 21;
 
 	/**
 	 * The feature id for the '<em><b>Lie Detection</b></em>' attribute.
@@ -1915,7 +1869,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getJusticeDemocracyUseCase()
 	 * @generated
 	 */
-	int JUSTICE_DEMOCRACY_USE_CASE = 23;
+	int JUSTICE_DEMOCRACY_USE_CASE = 22;
 
 	/**
 	 * The feature id for the '<em><b>Judicial Support</b></em>' attribute.
@@ -2024,7 +1978,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getBiometricIdentification()
 	 * @generated
 	 */
-	int BIOMETRIC_IDENTIFICATION = 24;
+	int BIOMETRIC_IDENTIFICATION = 23;
 
 	/**
 	 * The feature id for the '<em><b>Verification Only</b></em>' attribute.
@@ -2169,7 +2123,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getBiometricCategorisation()
 	 * @generated
 	 */
-	int BIOMETRIC_CATEGORISATION = 25;
+	int BIOMETRIC_CATEGORISATION = 24;
 
 	/**
 	 * The feature id for the '<em><b>Deduce Race</b></em>' attribute.
@@ -2314,7 +2268,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getEmotionRecognition()
 	 * @generated
 	 */
-	int EMOTION_RECOGNITION = 26;
+	int EMOTION_RECOGNITION = 25;
 
 	/**
 	 * The feature id for the '<em><b>Education</b></em>' attribute.
@@ -2414,6 +2368,115 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @ordered
 	 */
 	int EMOTION_RECOGNITION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link euaiactcompliance.impl.RiskManagementImpl <em>Risk Management</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see euaiactcompliance.impl.RiskManagementImpl
+	 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getRiskManagement()
+	 * @generated
+	 */
+	int RISK_MANAGEMENT = 26;
+
+	/**
+	 * The feature id for the '<em><b>Risk Identification</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RISK_MANAGEMENT__RISK_IDENTIFICATION = 0;
+
+	/**
+	 * The feature id for the '<em><b>Risk Estimation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RISK_MANAGEMENT__RISK_ESTIMATION = 1;
+
+	/**
+	 * The feature id for the '<em><b>Post Market Risk Evaluation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RISK_MANAGEMENT__POST_MARKET_RISK_EVALUATION = 2;
+
+	/**
+	 * The feature id for the '<em><b>Risk Mitigation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RISK_MANAGEMENT__RISK_MITIGATION = 3;
+
+	/**
+	 * The feature id for the '<em><b>Residual Risk</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RISK_MANAGEMENT__RESIDUAL_RISK = 4;
+
+	/**
+	 * The feature id for the '<em><b>Testing Procedure</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RISK_MANAGEMENT__TESTING_PROCEDURE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Testing Metrics</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RISK_MANAGEMENT__TESTING_METRICS = 6;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerable Groups Assessment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RISK_MANAGEMENT__VULNERABLE_GROUPS_ASSESSMENT = 7;
+
+	/**
+	 * The feature id for the '<em><b>Base Artifact</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RISK_MANAGEMENT__BASE_ARTIFACT = 8;
+
+	/**
+	 * The number of structural features of the '<em>Risk Management</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RISK_MANAGEMENT_FEATURE_COUNT = 9;
+
+	/**
+	 * The number of operations of the '<em>Risk Management</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RISK_MANAGEMENT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link euaiactcompliance.Category <em>Category</em>}' enum.
@@ -2943,15 +3006,15 @@ public interface EuaiactcompliancePackage extends EPackage {
 	EAttribute getAISystem_Resources();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.AISystem#getHumanOversightPreassessment <em>Human Oversight Preassessment</em>}'.
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.AISystem#getHumanOversightPreAssessment <em>Human Oversight Pre Assessment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Human Oversight Preassessment</em>'.
-	 * @see euaiactcompliance.AISystem#getHumanOversightPreassessment()
+	 * @return the meta object for the attribute '<em>Human Oversight Pre Assessment</em>'.
+	 * @see euaiactcompliance.AISystem#getHumanOversightPreAssessment()
 	 * @see #getAISystem()
 	 * @generated
 	 */
-	EAttribute getAISystem_HumanOversightPreassessment();
+	EAttribute getAISystem_HumanOversightPreAssessment();
 
 	/**
 	 * Returns the meta object for the attribute '{@link euaiactcompliance.AISystem#getPlannedModification <em>Planned Modification</em>}'.
@@ -3020,17 +3083,6 @@ public interface EuaiactcompliancePackage extends EPackage {
 	EAttribute getAISystem_PerformanceMetricsSuitability();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.AISystem#getRiskManagement <em>Risk Management</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Risk Management</em>'.
-	 * @see euaiactcompliance.AISystem#getRiskManagement()
-	 * @see #getAISystem()
-	 * @generated
-	 */
-	EAttribute getAISystem_RiskManagement();
-
-	/**
 	 * Returns the meta object for the attribute '{@link euaiactcompliance.AISystem#getRelevantChanges <em>Relevant Changes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3094,27 +3146,6 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getProvider_Base_Actor();
-
-	/**
-	 * Returns the meta object for class '{@link euaiactcompliance.ListHarmonisedStandards <em>List Harmonised Standards</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>List Harmonised Standards</em>'.
-	 * @see euaiactcompliance.ListHarmonisedStandards
-	 * @generated
-	 */
-	EClass getListHarmonisedStandards();
-
-	/**
-	 * Returns the meta object for the reference '{@link euaiactcompliance.ListHarmonisedStandards#getBase_Artifact <em>Base Artifact</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Artifact</em>'.
-	 * @see euaiactcompliance.ListHarmonisedStandards#getBase_Artifact()
-	 * @see #getListHarmonisedStandards()
-	 * @generated
-	 */
-	EReference getListHarmonisedStandards_Base_Artifact();
 
 	/**
 	 * Returns the meta object for class '{@link euaiactcompliance.Provides <em>Provides</em>}'.
@@ -4665,6 +4696,115 @@ public interface EuaiactcompliancePackage extends EPackage {
 	EReference getEmotionRecognition_Base_UseCase();
 
 	/**
+	 * Returns the meta object for class '{@link euaiactcompliance.RiskManagement <em>Risk Management</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Risk Management</em>'.
+	 * @see euaiactcompliance.RiskManagement
+	 * @generated
+	 */
+	EClass getRiskManagement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.RiskManagement#getRiskIdentification <em>Risk Identification</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Risk Identification</em>'.
+	 * @see euaiactcompliance.RiskManagement#getRiskIdentification()
+	 * @see #getRiskManagement()
+	 * @generated
+	 */
+	EAttribute getRiskManagement_RiskIdentification();
+
+	/**
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.RiskManagement#getRiskEstimation <em>Risk Estimation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Risk Estimation</em>'.
+	 * @see euaiactcompliance.RiskManagement#getRiskEstimation()
+	 * @see #getRiskManagement()
+	 * @generated
+	 */
+	EAttribute getRiskManagement_RiskEstimation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.RiskManagement#getPostMarketRiskEvaluation <em>Post Market Risk Evaluation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Post Market Risk Evaluation</em>'.
+	 * @see euaiactcompliance.RiskManagement#getPostMarketRiskEvaluation()
+	 * @see #getRiskManagement()
+	 * @generated
+	 */
+	EAttribute getRiskManagement_PostMarketRiskEvaluation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.RiskManagement#getRiskMitigation <em>Risk Mitigation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Risk Mitigation</em>'.
+	 * @see euaiactcompliance.RiskManagement#getRiskMitigation()
+	 * @see #getRiskManagement()
+	 * @generated
+	 */
+	EAttribute getRiskManagement_RiskMitigation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.RiskManagement#getResidualRisk <em>Residual Risk</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Residual Risk</em>'.
+	 * @see euaiactcompliance.RiskManagement#getResidualRisk()
+	 * @see #getRiskManagement()
+	 * @generated
+	 */
+	EAttribute getRiskManagement_ResidualRisk();
+
+	/**
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.RiskManagement#getTestingProcedure <em>Testing Procedure</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Testing Procedure</em>'.
+	 * @see euaiactcompliance.RiskManagement#getTestingProcedure()
+	 * @see #getRiskManagement()
+	 * @generated
+	 */
+	EAttribute getRiskManagement_TestingProcedure();
+
+	/**
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.RiskManagement#getTestingMetrics <em>Testing Metrics</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Testing Metrics</em>'.
+	 * @see euaiactcompliance.RiskManagement#getTestingMetrics()
+	 * @see #getRiskManagement()
+	 * @generated
+	 */
+	EAttribute getRiskManagement_TestingMetrics();
+
+	/**
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.RiskManagement#getVulnerableGroupsAssessment <em>Vulnerable Groups Assessment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Vulnerable Groups Assessment</em>'.
+	 * @see euaiactcompliance.RiskManagement#getVulnerableGroupsAssessment()
+	 * @see #getRiskManagement()
+	 * @generated
+	 */
+	EAttribute getRiskManagement_VulnerableGroupsAssessment();
+
+	/**
+	 * Returns the meta object for the reference '{@link euaiactcompliance.RiskManagement#getBase_Artifact <em>Base Artifact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Base Artifact</em>'.
+	 * @see euaiactcompliance.RiskManagement#getBase_Artifact()
+	 * @see #getRiskManagement()
+	 * @generated
+	 */
+	EReference getRiskManagement_Base_Artifact();
+
+	/**
 	 * Returns the meta object for enum '{@link euaiactcompliance.Category <em>Category</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5106,12 +5246,12 @@ public interface EuaiactcompliancePackage extends EPackage {
 		EAttribute AI_SYSTEM__RESOURCES = eINSTANCE.getAISystem_Resources();
 
 		/**
-		 * The meta object literal for the '<em><b>Human Oversight Preassessment</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Human Oversight Pre Assessment</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute AI_SYSTEM__HUMAN_OVERSIGHT_PREASSESSMENT = eINSTANCE.getAISystem_HumanOversightPreassessment();
+		EAttribute AI_SYSTEM__HUMAN_OVERSIGHT_PRE_ASSESSMENT = eINSTANCE.getAISystem_HumanOversightPreAssessment();
 
 		/**
 		 * The meta object literal for the '<em><b>Planned Modification</b></em>' attribute feature.
@@ -5162,14 +5302,6 @@ public interface EuaiactcompliancePackage extends EPackage {
 		EAttribute AI_SYSTEM__PERFORMANCE_METRICS_SUITABILITY = eINSTANCE.getAISystem_PerformanceMetricsSuitability();
 
 		/**
-		 * The meta object literal for the '<em><b>Risk Management</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute AI_SYSTEM__RISK_MANAGEMENT = eINSTANCE.getAISystem_RiskManagement();
-
-		/**
 		 * The meta object literal for the '<em><b>Relevant Changes</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5218,24 +5350,6 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * @generated
 		 */
 		EReference PROVIDER__BASE_ACTOR = eINSTANCE.getProvider_Base_Actor();
-
-		/**
-		 * The meta object literal for the '{@link euaiactcompliance.impl.ListHarmonisedStandardsImpl <em>List Harmonised Standards</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see euaiactcompliance.impl.ListHarmonisedStandardsImpl
-		 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getListHarmonisedStandards()
-		 * @generated
-		 */
-		EClass LIST_HARMONISED_STANDARDS = eINSTANCE.getListHarmonisedStandards();
-
-		/**
-		 * The meta object literal for the '<em><b>Base Artifact</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LIST_HARMONISED_STANDARDS__BASE_ARTIFACT = eINSTANCE.getListHarmonisedStandards_Base_Artifact();
 
 		/**
 		 * The meta object literal for the '{@link euaiactcompliance.impl.ProvidesImpl <em>Provides</em>}' class.
@@ -6400,6 +6514,88 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * @generated
 		 */
 		EReference EMOTION_RECOGNITION__BASE_USE_CASE = eINSTANCE.getEmotionRecognition_Base_UseCase();
+
+		/**
+		 * The meta object literal for the '{@link euaiactcompliance.impl.RiskManagementImpl <em>Risk Management</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see euaiactcompliance.impl.RiskManagementImpl
+		 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getRiskManagement()
+		 * @generated
+		 */
+		EClass RISK_MANAGEMENT = eINSTANCE.getRiskManagement();
+
+		/**
+		 * The meta object literal for the '<em><b>Risk Identification</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RISK_MANAGEMENT__RISK_IDENTIFICATION = eINSTANCE.getRiskManagement_RiskIdentification();
+
+		/**
+		 * The meta object literal for the '<em><b>Risk Estimation</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RISK_MANAGEMENT__RISK_ESTIMATION = eINSTANCE.getRiskManagement_RiskEstimation();
+
+		/**
+		 * The meta object literal for the '<em><b>Post Market Risk Evaluation</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RISK_MANAGEMENT__POST_MARKET_RISK_EVALUATION = eINSTANCE.getRiskManagement_PostMarketRiskEvaluation();
+
+		/**
+		 * The meta object literal for the '<em><b>Risk Mitigation</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RISK_MANAGEMENT__RISK_MITIGATION = eINSTANCE.getRiskManagement_RiskMitigation();
+
+		/**
+		 * The meta object literal for the '<em><b>Residual Risk</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RISK_MANAGEMENT__RESIDUAL_RISK = eINSTANCE.getRiskManagement_ResidualRisk();
+
+		/**
+		 * The meta object literal for the '<em><b>Testing Procedure</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RISK_MANAGEMENT__TESTING_PROCEDURE = eINSTANCE.getRiskManagement_TestingProcedure();
+
+		/**
+		 * The meta object literal for the '<em><b>Testing Metrics</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RISK_MANAGEMENT__TESTING_METRICS = eINSTANCE.getRiskManagement_TestingMetrics();
+
+		/**
+		 * The meta object literal for the '<em><b>Vulnerable Groups Assessment</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RISK_MANAGEMENT__VULNERABLE_GROUPS_ASSESSMENT = eINSTANCE.getRiskManagement_VulnerableGroupsAssessment();
+
+		/**
+		 * The meta object literal for the '<em><b>Base Artifact</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RISK_MANAGEMENT__BASE_ARTIFACT = eINSTANCE.getRiskManagement_Base_Artifact();
 
 		/**
 		 * The meta object literal for the '{@link euaiactcompliance.Category <em>Category</em>}' enum.

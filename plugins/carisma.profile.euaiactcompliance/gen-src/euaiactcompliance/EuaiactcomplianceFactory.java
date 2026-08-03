@@ -130,15 +130,6 @@ public interface EuaiactcomplianceFactory extends EFactory {
 	Provider createProvider();
 
 	/**
-	 * Returns a new object of class '<em>List Harmonised Standards</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>List Harmonised Standards</em>'.
-	 * @generated
-	 */
-	ListHarmonisedStandards createListHarmonisedStandards();
-
-	/**
 	 * Returns a new object of class '<em>Provides</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -263,6 +254,15 @@ public interface EuaiactcomplianceFactory extends EFactory {
 	 * @generated
 	 */
 	EmotionRecognition createEmotionRecognition();
+
+	/**
+	 * Returns a new object of class '<em>Risk Management</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Risk Management</em>'.
+	 * @generated
+	 */
+	RiskManagement createRiskManagement();
 
 	/**
 	 * Returns the package supported by this factory.

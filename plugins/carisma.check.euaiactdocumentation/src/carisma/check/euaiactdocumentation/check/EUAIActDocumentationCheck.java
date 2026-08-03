@@ -1,5 +1,6 @@
 package carisma.check.euaiactdocumentation.check;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -37,39 +38,86 @@ public class EUAIActDocumentationCheck extends AbstractEUAIActDocumentationCheck
 		}
 		addInfo("Your model contains " + aiSystems.size() + " AI system(s).");
 
+		boolean completeDocumentation = true;
 		for (Component aiSystem : aiSystems) {
 			EUAIActRiskClassifier classifier = new EUAIActRiskClassifier(aiSystem);
 			EUAIActRiskClassificationResult result = classifier.classify();
 			EUAIActRiskClass riskClass = result.riskClass();
 
-			EUAIActDocumentationGenerator generator = new EUAIActDocumentationGenerator(aiSystem);
+			addInfo("Documentation for AI System '" + aiSystem.getName() + "' (" + riskClass + "):");
 
+			boolean highRisk = false;
 			if (riskClass == EUAIActRiskClass.Unacceptable) {
-				addInfo("No required Documentation. The system must not be placed on the market, put into service or used according to Article 5.");
+				addInfo("No technical documentation is generated, because the AI system must not be placed on the market, put into service or used according to Article 5.");
+				continue;
+			} else if (riskClass == EUAIActRiskClass.High) {
+				addInfo("The technical documentation according to Article 11 and Annex IV is mandatory for this AI system.");
+				highRisk = true;
+			} else if (riskClass == EUAIActRiskClass.Limited) {
+				addInfo("The technical documentation according to Article 11 and Annex IV is not mandatory for this AI system. The following documentation is listed for transparency purposes.");
+			} else if (riskClass == EUAIActRiskClass.Minimal) {
+				addInfo("No technical documentation is generated, because the AI system is classified as minimal risk.");
+				continue;
+			} else {
+				addInfo("No technical documentation is generated, because the risk class of the AI system could not be determined. Assign at least one use case to the AI system.");
 				continue;
 			}
 
-			addInfo("Documentation for AI System '" + aiSystem.getName() + "' (" + riskClass + ")");
-
+			EUAIActDocumentationGenerator generator = new EUAIActDocumentationGenerator(aiSystem, highRisk);
 			List<EUAIActDocumentationSectionResult> sections = generator.generate();
 			for (EUAIActDocumentationSectionResult section : sections) {
+
+				// only sections with content printed
+				if (riskClass != EUAIActRiskClass.High && section.foundDocumentation().isEmpty()) {
+					continue;
+				}
+
+				List<String> sectionNotes = new ArrayList<>();
+
+				sectionNotes.addAll(section.notes());
+
+				addInfo("================================");
 				addInfo(section.sectionName().toString());
-				addInfo("================");
+				addInfo("================================");
+
 				addInfo("Found Documentation(s):");
-				for (String documentation : section.foundDocumentation()) {
-					addInfo(documentation);
+				addInfo("=========================");
+				if (section.foundDocumentation().isEmpty()) {
+					addInfo("None");
+				} else {
+					for (String documentation : section.foundDocumentation()) {
+						addInfo(documentation);
+					}
 				}
-				addInfo("Missing Documentation(s):");
-				for (String documentation : section.missingDocumentation()) {
-					addInfo(documentation);
+				addInfo("");
+
+				if (riskClass == EUAIActRiskClass.High) {
+					addInfo("Missing Documentation(s):");
+					addInfo("=========================");
+					if (section.missingDocumentation().isEmpty()) {
+						addInfo("None");
+					} else {
+						for (String documentation : section.missingDocumentation()) {
+							addInfo(documentation);
+						}
+						completeDocumentation = false;
+					}
+					addInfo("");
 				}
-				addInfo("\n");
-				if (!section.missingDocumentation().isEmpty()) {
-					return false;
+
+				addInfo("Note(s):");
+				addInfo("===========");
+				if (sectionNotes.isEmpty()) {
+					addInfo("None");
+				} else {
+					for (String note : sectionNotes) {
+						addInfo(note);
+					}
 				}
+				addInfo("");
 			}
 		}
-		return true;
+		return completeDocumentation;
 
 	}
 

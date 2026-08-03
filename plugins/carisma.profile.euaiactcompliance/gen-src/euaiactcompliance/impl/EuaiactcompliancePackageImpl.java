@@ -19,7 +19,6 @@ import euaiactcompliance.HumanEmployment;
 import euaiactcompliance.HumanInteraction;
 import euaiactcompliance.JusticeDemocracyUseCase;
 import euaiactcompliance.LawEnforcement;
-import euaiactcompliance.ListHarmonisedStandards;
 import euaiactcompliance.MLModel;
 import euaiactcompliance.ManipulativeBehaviour;
 import euaiactcompliance.MigrationBorder;
@@ -28,6 +27,7 @@ import euaiactcompliance.Profiling;
 import euaiactcompliance.Provider;
 import euaiactcompliance.Provides;
 import euaiactcompliance.PublicInterestText;
+import euaiactcompliance.RiskManagement;
 import euaiactcompliance.Role;
 import euaiactcompliance.SocialScoring;
 import euaiactcompliance.SyntheticContent;
@@ -143,13 +143,6 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass listHarmonisedStandardsEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass providesEClass = null;
 
 	/**
@@ -242,6 +235,13 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	private EClass emotionRecognitionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass riskManagementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -798,7 +798,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_HumanOversightPreassessment() {
+	public EAttribute getAISystem_HumanOversightPreAssessment() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(14);
 	}
 
@@ -868,7 +868,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_RiskManagement() {
+	public EAttribute getAISystem_RelevantChanges() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(21);
 	}
 
@@ -878,7 +878,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_RelevantChanges() {
+	public EAttribute getAISystem_HarmonisedStandards() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(22);
 	}
 
@@ -888,7 +888,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_HarmonisedStandards() {
+	public EAttribute getAISystem_CopyEUConformityDeclaration() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(23);
 	}
 
@@ -898,18 +898,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_CopyEUConformityDeclaration() {
-		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(24);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getAISystem_PostMarketMonitoring() {
-		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(25);
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(24);
 	}
 
 	/**
@@ -930,26 +920,6 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	@Override
 	public EReference getProvider_Base_Actor() {
 		return (EReference)providerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getListHarmonisedStandards() {
-		return listHarmonisedStandardsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getListHarmonisedStandards_Base_Artifact() {
-		return (EReference)listHarmonisedStandardsEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2378,6 +2348,106 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
+	public EClass getRiskManagement() {
+		return riskManagementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRiskManagement_RiskIdentification() {
+		return (EAttribute)riskManagementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRiskManagement_RiskEstimation() {
+		return (EAttribute)riskManagementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRiskManagement_PostMarketRiskEvaluation() {
+		return (EAttribute)riskManagementEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRiskManagement_RiskMitigation() {
+		return (EAttribute)riskManagementEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRiskManagement_ResidualRisk() {
+		return (EAttribute)riskManagementEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRiskManagement_TestingProcedure() {
+		return (EAttribute)riskManagementEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRiskManagement_TestingMetrics() {
+		return (EAttribute)riskManagementEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRiskManagement_VulnerableGroupsAssessment() {
+		return (EAttribute)riskManagementEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getRiskManagement_Base_Artifact() {
+		return (EReference)riskManagementEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getCategory() {
 		return categoryEEnum;
 	}
@@ -2478,14 +2548,13 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		createEAttribute(aiSystemEClass, AI_SYSTEM__DESIGN_DECISION);
 		createEAttribute(aiSystemEClass, AI_SYSTEM__DESIGN_TRADE_OFFS);
 		createEAttribute(aiSystemEClass, AI_SYSTEM__RESOURCES);
-		createEAttribute(aiSystemEClass, AI_SYSTEM__HUMAN_OVERSIGHT_PREASSESSMENT);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__HUMAN_OVERSIGHT_PRE_ASSESSMENT);
 		createEAttribute(aiSystemEClass, AI_SYSTEM__PLANNED_MODIFICATION);
 		createEAttribute(aiSystemEClass, AI_SYSTEM__CYBERSECURITY);
 		createEAttribute(aiSystemEClass, AI_SYSTEM__HUMAN_OVERSIGHT_POST_ASSESSMENT);
 		createEAttribute(aiSystemEClass, AI_SYSTEM__UPDATE_REQUIREMENTS);
 		createEAttribute(aiSystemEClass, AI_SYSTEM__PREDICTABLE_RISKS);
 		createEAttribute(aiSystemEClass, AI_SYSTEM__PERFORMANCE_METRICS_SUITABILITY);
-		createEAttribute(aiSystemEClass, AI_SYSTEM__RISK_MANAGEMENT);
 		createEAttribute(aiSystemEClass, AI_SYSTEM__RELEVANT_CHANGES);
 		createEAttribute(aiSystemEClass, AI_SYSTEM__HARMONISED_STANDARDS);
 		createEAttribute(aiSystemEClass, AI_SYSTEM__COPY_EU_CONFORMITY_DECLARATION);
@@ -2493,9 +2562,6 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 
 		providerEClass = createEClass(PROVIDER);
 		createEReference(providerEClass, PROVIDER__BASE_ACTOR);
-
-		listHarmonisedStandardsEClass = createEClass(LIST_HARMONISED_STANDARDS);
-		createEReference(listHarmonisedStandardsEClass, LIST_HARMONISED_STANDARDS__BASE_ARTIFACT);
 
 		providesEClass = createEClass(PROVIDES);
 		createEReference(providesEClass, PROVIDES__BASE_ASSOCIATION);
@@ -2653,6 +2719,17 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		createEAttribute(emotionRecognitionEClass, EMOTION_RECOGNITION__EXCEPTION_JUSTIFICATION);
 		createEReference(emotionRecognitionEClass, EMOTION_RECOGNITION__BASE_USE_CASE);
 
+		riskManagementEClass = createEClass(RISK_MANAGEMENT);
+		createEAttribute(riskManagementEClass, RISK_MANAGEMENT__RISK_IDENTIFICATION);
+		createEAttribute(riskManagementEClass, RISK_MANAGEMENT__RISK_ESTIMATION);
+		createEAttribute(riskManagementEClass, RISK_MANAGEMENT__POST_MARKET_RISK_EVALUATION);
+		createEAttribute(riskManagementEClass, RISK_MANAGEMENT__RISK_MITIGATION);
+		createEAttribute(riskManagementEClass, RISK_MANAGEMENT__RESIDUAL_RISK);
+		createEAttribute(riskManagementEClass, RISK_MANAGEMENT__TESTING_PROCEDURE);
+		createEAttribute(riskManagementEClass, RISK_MANAGEMENT__TESTING_METRICS);
+		createEAttribute(riskManagementEClass, RISK_MANAGEMENT__VULNERABLE_GROUPS_ASSESSMENT);
+		createEReference(riskManagementEClass, RISK_MANAGEMENT__BASE_ARTIFACT);
+
 		// Create enums
 		categoryEEnum = createEEnum(CATEGORY);
 		roleEEnum = createEEnum(ROLE);
@@ -2749,14 +2826,13 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		initEAttribute(getAISystem_DesignDecision(), theTypesPackage.getString(), "DesignDecision", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAISystem_DesignTradeOffs(), theTypesPackage.getString(), "DesignTradeOffs", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAISystem_Resources(), theTypesPackage.getString(), "Resources", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAISystem_HumanOversightPreassessment(), theTypesPackage.getString(), "HumanOversightPreassessment", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_HumanOversightPreAssessment(), theTypesPackage.getString(), "HumanOversightPreAssessment", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAISystem_PlannedModification(), theTypesPackage.getString(), "PlannedModification", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAISystem_Cybersecurity(), theTypesPackage.getString(), "Cybersecurity", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAISystem_HumanOversightPostAssessment(), theTypesPackage.getString(), "HumanOversightPostAssessment", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAISystem_UpdateRequirements(), theTypesPackage.getString(), "UpdateRequirements", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAISystem_PredictableRisks(), theTypesPackage.getString(), "PredictableRisks", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAISystem_PerformanceMetricsSuitability(), theTypesPackage.getString(), "PerformanceMetricsSuitability", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAISystem_RiskManagement(), theTypesPackage.getString(), "RiskManagement", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAISystem_RelevantChanges(), theTypesPackage.getString(), "RelevantChanges", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAISystem_HarmonisedStandards(), theTypesPackage.getString(), "HarmonisedStandards", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAISystem_CopyEUConformityDeclaration(), theTypesPackage.getBoolean(), "CopyEUConformityDeclaration", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -2764,9 +2840,6 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 
 		initEClass(providerEClass, Provider.class, "Provider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getProvider_Base_Actor(), theUMLPackage.getActor(), null, "base_Actor", null, 0, 1, Provider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(listHarmonisedStandardsEClass, ListHarmonisedStandards.class, "ListHarmonisedStandards", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getListHarmonisedStandards_Base_Artifact(), theUMLPackage.getArtifact(), null, "base_Artifact", null, 0, 1, ListHarmonisedStandards.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(providesEClass, Provides.class, "Provides", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getProvides_Base_Association(), theUMLPackage.getAssociation(), null, "base_Association", null, 0, 1, Provides.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -2923,6 +2996,17 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		initEAttribute(getEmotionRecognition_PreparatoryTask(), theTypesPackage.getBoolean(), "PreparatoryTask", null, 1, 1, EmotionRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getEmotionRecognition_ExceptionJustification(), theTypesPackage.getString(), "ExceptionJustification", null, 1, 1, EmotionRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getEmotionRecognition_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, EmotionRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(riskManagementEClass, RiskManagement.class, "RiskManagement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRiskManagement_RiskIdentification(), theTypesPackage.getString(), "RiskIdentification", null, 1, 1, RiskManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getRiskManagement_RiskEstimation(), theTypesPackage.getString(), "RiskEstimation", null, 1, 1, RiskManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getRiskManagement_PostMarketRiskEvaluation(), theTypesPackage.getString(), "PostMarketRiskEvaluation", null, 1, 1, RiskManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getRiskManagement_RiskMitigation(), theTypesPackage.getString(), "RiskMitigation", null, 1, 1, RiskManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getRiskManagement_ResidualRisk(), theTypesPackage.getString(), "ResidualRisk", null, 1, 1, RiskManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getRiskManagement_TestingProcedure(), theTypesPackage.getString(), "TestingProcedure", null, 1, 1, RiskManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getRiskManagement_TestingMetrics(), theTypesPackage.getString(), "TestingMetrics", null, 1, 1, RiskManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getRiskManagement_VulnerableGroupsAssessment(), theTypesPackage.getString(), "VulnerableGroupsAssessment", null, 1, 1, RiskManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getRiskManagement_Base_Artifact(), theUMLPackage.getArtifact(), null, "base_Artifact", null, 0, 1, RiskManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(categoryEEnum, Category.class, "Category");

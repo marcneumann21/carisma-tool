@@ -69,7 +69,6 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 			case EuaiactcompliancePackage.FACIAL_IMAGE_SCRAPING: return createFacialImageScraping();
 			case EuaiactcompliancePackage.AI_SYSTEM: return createAISystem();
 			case EuaiactcompliancePackage.PROVIDER: return createProvider();
-			case EuaiactcompliancePackage.LIST_HARMONISED_STANDARDS: return createListHarmonisedStandards();
 			case EuaiactcompliancePackage.PROVIDES: return createProvides();
 			case EuaiactcompliancePackage.CRITICAL_INFRASTRUCTURE: return createCriticalInfrastructure();
 			case EuaiactcompliancePackage.ML_MODEL: return createMLModel();
@@ -84,6 +83,7 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 			case EuaiactcompliancePackage.BIOMETRIC_IDENTIFICATION: return createBiometricIdentification();
 			case EuaiactcompliancePackage.BIOMETRIC_CATEGORISATION: return createBiometricCategorisation();
 			case EuaiactcompliancePackage.EMOTION_RECOGNITION: return createEmotionRecognition();
+			case EuaiactcompliancePackage.RISK_MANAGEMENT: return createRiskManagement();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -261,17 +261,6 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public ListHarmonisedStandards createListHarmonisedStandards() {
-		ListHarmonisedStandardsImpl listHarmonisedStandards = new ListHarmonisedStandardsImpl();
-		return listHarmonisedStandards;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Provides createProvides() {
 		ProvidesImpl provides = new ProvidesImpl();
 		return provides;
@@ -418,6 +407,17 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 	public EmotionRecognition createEmotionRecognition() {
 		EmotionRecognitionImpl emotionRecognition = new EmotionRecognitionImpl();
 		return emotionRecognition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public RiskManagement createRiskManagement() {
+		RiskManagementImpl riskManagement = new RiskManagementImpl();
+		return riskManagement;
 	}
 
 	/**

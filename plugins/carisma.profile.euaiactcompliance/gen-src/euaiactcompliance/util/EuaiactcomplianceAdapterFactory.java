@@ -116,10 +116,6 @@ public class EuaiactcomplianceAdapterFactory extends AdapterFactoryImpl {
 				return createProviderAdapter();
 			}
 			@Override
-			public Adapter caseListHarmonisedStandards(ListHarmonisedStandards object) {
-				return createListHarmonisedStandardsAdapter();
-			}
-			@Override
 			public Adapter caseProvides(Provides object) {
 				return createProvidesAdapter();
 			}
@@ -174,6 +170,10 @@ public class EuaiactcomplianceAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseEmotionRecognition(EmotionRecognition object) {
 				return createEmotionRecognitionAdapter();
+			}
+			@Override
+			public Adapter caseRiskManagement(RiskManagement object) {
+				return createRiskManagementAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -360,20 +360,6 @@ public class EuaiactcomplianceAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createProviderAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.ListHarmonisedStandards <em>List Harmonised Standards</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see euaiactcompliance.ListHarmonisedStandards
-	 * @generated
-	 */
-	public Adapter createListHarmonisedStandardsAdapter() {
 		return null;
 	}
 
@@ -570,6 +556,20 @@ public class EuaiactcomplianceAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEmotionRecognitionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link euaiactcompliance.RiskManagement <em>Risk Management</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see euaiactcompliance.RiskManagement
+	 * @generated
+	 */
+	public Adapter createRiskManagementAdapter() {
 		return null;
 	}
 
