@@ -27,7 +27,7 @@ import org.eclipse.uml2.uml.Component;
  * <ul>
  *   <li>{@link euaiactcompliance.impl.ProductEmbeddingImpl#getBase_Component <em>Base Component</em>}</li>
  *   <li>{@link euaiactcompliance.impl.ProductEmbeddingImpl#isFailureEndangerSafety <em>Failure Endanger Safety</em>}</li>
- *   <li>{@link euaiactcompliance.impl.ProductEmbeddingImpl#getThirdPartyConformityAssessment <em>Third Party Conformity Assessment</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.ProductEmbeddingImpl#isThirdPartyConformityAssessment <em>Third Party Conformity Assessment</em>}</li>
  *   <li>{@link euaiactcompliance.impl.ProductEmbeddingImpl#getProductCategory <em>Product Category</em>}</li>
  *   <li>{@link euaiactcompliance.impl.ProductEmbeddingImpl#getRole <em>Role</em>}</li>
  * </ul>
@@ -66,24 +66,24 @@ public class ProductEmbeddingImpl extends MinimalEObjectImpl.Container implement
 	protected boolean failureEndangerSafety = FAILURE_ENDANGER_SAFETY_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getThirdPartyConformityAssessment() <em>Third Party Conformity Assessment</em>}' attribute.
+	 * The default value of the '{@link #isThirdPartyConformityAssessment() <em>Third Party Conformity Assessment</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getThirdPartyConformityAssessment()
+	 * @see #isThirdPartyConformityAssessment()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String THIRD_PARTY_CONFORMITY_ASSESSMENT_EDEFAULT = null;
+	protected static final boolean THIRD_PARTY_CONFORMITY_ASSESSMENT_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getThirdPartyConformityAssessment() <em>Third Party Conformity Assessment</em>}' attribute.
+	 * The cached value of the '{@link #isThirdPartyConformityAssessment() <em>Third Party Conformity Assessment</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getThirdPartyConformityAssessment()
+	 * @see #isThirdPartyConformityAssessment()
 	 * @generated
 	 * @ordered
 	 */
-	protected String thirdPartyConformityAssessment = THIRD_PARTY_CONFORMITY_ASSESSMENT_EDEFAULT;
+	protected boolean thirdPartyConformityAssessment = THIRD_PARTY_CONFORMITY_ASSESSMENT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getProductCategory() <em>Product Category</em>}' attribute.
@@ -113,7 +113,7 @@ public class ProductEmbeddingImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Role ROLE_EDEFAULT = Role.SAFETY_COMPONENT;
+	protected static final Role ROLE_EDEFAULT = Role.COMPONENT;
 
 	/**
 	 * The cached value of the '{@link #getRole() <em>Role</em>}' attribute.
@@ -213,7 +213,7 @@ public class ProductEmbeddingImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public String getThirdPartyConformityAssessment() {
+	public boolean isThirdPartyConformityAssessment() {
 		return thirdPartyConformityAssessment;
 	}
 
@@ -223,8 +223,8 @@ public class ProductEmbeddingImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public void setThirdPartyConformityAssessment(String newThirdPartyConformityAssessment) {
-		String oldThirdPartyConformityAssessment = thirdPartyConformityAssessment;
+	public void setThirdPartyConformityAssessment(boolean newThirdPartyConformityAssessment) {
+		boolean oldThirdPartyConformityAssessment = thirdPartyConformityAssessment;
 		thirdPartyConformityAssessment = newThirdPartyConformityAssessment;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.PRODUCT_EMBEDDING__THIRD_PARTY_CONFORMITY_ASSESSMENT, oldThirdPartyConformityAssessment, thirdPartyConformityAssessment));
@@ -290,7 +290,7 @@ public class ProductEmbeddingImpl extends MinimalEObjectImpl.Container implement
 			case EuaiactcompliancePackage.PRODUCT_EMBEDDING__FAILURE_ENDANGER_SAFETY:
 				return isFailureEndangerSafety();
 			case EuaiactcompliancePackage.PRODUCT_EMBEDDING__THIRD_PARTY_CONFORMITY_ASSESSMENT:
-				return getThirdPartyConformityAssessment();
+				return isThirdPartyConformityAssessment();
 			case EuaiactcompliancePackage.PRODUCT_EMBEDDING__PRODUCT_CATEGORY:
 				return getProductCategory();
 			case EuaiactcompliancePackage.PRODUCT_EMBEDDING__ROLE:
@@ -314,7 +314,7 @@ public class ProductEmbeddingImpl extends MinimalEObjectImpl.Container implement
 				setFailureEndangerSafety((Boolean)newValue);
 				return;
 			case EuaiactcompliancePackage.PRODUCT_EMBEDDING__THIRD_PARTY_CONFORMITY_ASSESSMENT:
-				setThirdPartyConformityAssessment((String)newValue);
+				setThirdPartyConformityAssessment((Boolean)newValue);
 				return;
 			case EuaiactcompliancePackage.PRODUCT_EMBEDDING__PRODUCT_CATEGORY:
 				setProductCategory((Category)newValue);
@@ -366,7 +366,7 @@ public class ProductEmbeddingImpl extends MinimalEObjectImpl.Container implement
 			case EuaiactcompliancePackage.PRODUCT_EMBEDDING__FAILURE_ENDANGER_SAFETY:
 				return failureEndangerSafety != FAILURE_ENDANGER_SAFETY_EDEFAULT;
 			case EuaiactcompliancePackage.PRODUCT_EMBEDDING__THIRD_PARTY_CONFORMITY_ASSESSMENT:
-				return THIRD_PARTY_CONFORMITY_ASSESSMENT_EDEFAULT == null ? thirdPartyConformityAssessment != null : !THIRD_PARTY_CONFORMITY_ASSESSMENT_EDEFAULT.equals(thirdPartyConformityAssessment);
+				return thirdPartyConformityAssessment != THIRD_PARTY_CONFORMITY_ASSESSMENT_EDEFAULT;
 			case EuaiactcompliancePackage.PRODUCT_EMBEDDING__PRODUCT_CATEGORY:
 				return productCategory != PRODUCT_CATEGORY_EDEFAULT;
 			case EuaiactcompliancePackage.PRODUCT_EMBEDDING__ROLE:

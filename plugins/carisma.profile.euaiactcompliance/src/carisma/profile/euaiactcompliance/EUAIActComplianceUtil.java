@@ -198,35 +198,7 @@ public final class EUAIActComplianceUtil {
 		return trueTags;
 	}
 
-	/**
-	 * Returns the names of all boolean tags from the given list that are set to
-	 * {@code false}.
-	 *
-	 * @param element    the element to look for the stereotype.
-	 * @param stereotype the stereotype containing the attributes of interest.
-	 * @param tags       the tags of interest.
-	 * @return list of tag names whose value is 'false', empty otherwise.
-	 */
-	public static List<String> getFalseTags(final Element element, final EUAIActCompliance stereotype,
-			final String[] tags) {
-		List<String> falseTags = new ArrayList<>();
-		for (String tag : tags) {
-			if (!isTaggedValueTrue(element, stereotype, tag)) {
-				falseTags.add(tag);
-			}
-		}
-		return falseTags;
-	}
-
 	// TODO JavaDoc
-	/**
-	 * 
-	 *
-	 * @param element    the element to look for the stereotype.
-	 * @param stereotype the stereotype containing the attribute of interest.
-	 * @param attribute  the name of the enum typed tag.
-	 * @return the name of the enumeration literal, null otherwise
-	 */
 	public static String getEnumValue(final Element element, final EUAIActCompliance stereotype, String attribute) {
 		String enumValue = null;
 		List<Object> taggedValues = getTaggedValues(attribute, stereotype, element);
@@ -239,14 +211,6 @@ public final class EUAIActComplianceUtil {
 	}
 
 	// TODO JavaDoc
-	/**
-	 * 
-	 *
-	 * @param element    the element to look for the stereotype.
-	 * @param stereotype the stereotype containing the attribute of interest.
-	 * @param attribute  the name of the String typed tag.
-	 * @return the name of the attribute, null otherwise
-	 */
 	public static String getStringValue(Element element, EUAIActCompliance stereotype, String attribute) {
 		String stringValue = null;
 		List<Object> taggedValues = getTaggedValues(attribute, stereotype, element);
@@ -259,14 +223,6 @@ public final class EUAIActComplianceUtil {
 	}
 
 	// TODO JavaDoc
-	/**
-	 * 
-	 *
-	 * @param element    the element to look for the stereotype.
-	 * @param stereotype the stereotype containing the attribute of interest.
-	 * @param attribute  the name of the String typed tag.
-	 * @return the name of the attribute, null otherwise
-	 */
 	public static Boolean getBooleanValue(Element element, EUAIActCompliance stereotype, String attribute) {
 		Boolean booleanValue = null;
 		List<Object> taggedValues = getTaggedValues(attribute, stereotype, element);
@@ -279,14 +235,6 @@ public final class EUAIActComplianceUtil {
 	}
 
 	// TODO JavaDoc
-	/**
-	 * 
-	 *
-	 * @param element    the element to look for the stereotype.
-	 * @param stereotype the stereotype containing the attribute of interest.
-	 * @param attribute  the name of the String typed tag.
-	 * @return the name of the attribute, null otherwise
-	 */
 	public static String getAssociationActorEnd(Component component, EUAIActCompliance associationStereotype,
 			EUAIActCompliance actorStereotype) {
 		for (Association ass : component.getAssociations()) {
@@ -337,7 +285,10 @@ public final class EUAIActComplianceUtil {
 		for (Dependency dependency : system.getClientDependencies()) {
 			for (NamedElement supplier : dependency.getSuppliers()) {
 				if (supplier instanceof Component) {
-					elements.add("'" + system.getName() + "' uses '" + supplier.getName() + "'");
+					String relation = "'" + system.getName() + "' uses '" + supplier.getName() + "'";
+					if (!elements.contains(relation)) {
+						elements.add(relation);
+					}
 				}
 			}
 		}

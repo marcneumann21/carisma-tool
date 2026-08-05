@@ -261,13 +261,22 @@ public interface EuaiactcompliancePackage extends EPackage {
 	int DEEPFAKE__BASE_USE_CASE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Creative Work</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEEPFAKE__CREATIVE_WORK = 1;
+
+	/**
 	 * The number of structural features of the '<em>Deepfake</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DEEPFAKE_FEATURE_COUNT = 1;
+	int DEEPFAKE_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Deepfake</em>' class.
@@ -298,13 +307,22 @@ public interface EuaiactcompliancePackage extends EPackage {
 	int PUBLIC_INTEREST_TEXT__BASE_USE_CASE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Human Review</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUBLIC_INTEREST_TEXT__HUMAN_REVIEW = 1;
+
+	/**
 	 * The number of structural features of the '<em>Public Interest Text</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PUBLIC_INTEREST_TEXT_FEATURE_COUNT = 1;
+	int PUBLIC_INTEREST_TEXT_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Public Interest Text</em>' class.
@@ -1590,13 +1608,22 @@ public interface EuaiactcompliancePackage extends EPackage {
 	int ESSENTIAL_SERVICE__BASE_USE_CASE = 9;
 
 	/**
+	 * The feature id for the '<em><b>Emergency</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESSENTIAL_SERVICE__EMERGENCY = 10;
+
+	/**
 	 * The number of structural features of the '<em>Essential Service</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ESSENTIAL_SERVICE_FEATURE_COUNT = 10;
+	int ESSENTIAL_SERVICE_FEATURE_COUNT = 11;
 
 	/**
 	 * The number of operations of the '<em>Essential Service</em>' class.
@@ -1717,13 +1744,22 @@ public interface EuaiactcompliancePackage extends EPackage {
 	int LAW_ENFORCEMENT__BASE_USE_CASE = 10;
 
 	/**
+	 * The feature id for the '<em><b>Supports Human Assessment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAW_ENFORCEMENT__SUPPORTS_HUMAN_ASSESSMENT = 11;
+
+	/**
 	 * The number of structural features of the '<em>Law Enforcement</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LAW_ENFORCEMENT_FEATURE_COUNT = 11;
+	int LAW_ENFORCEMENT_FEATURE_COUNT = 12;
 
 	/**
 	 * The number of operations of the '<em>Law Enforcement</em>' class.
@@ -2553,11 +2589,11 @@ public interface EuaiactcompliancePackage extends EPackage {
 	EAttribute getProductEmbedding_FailureEndangerSafety();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.ProductEmbedding#getThirdPartyConformityAssessment <em>Third Party Conformity Assessment</em>}'.
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.ProductEmbedding#isThirdPartyConformityAssessment <em>Third Party Conformity Assessment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Third Party Conformity Assessment</em>'.
-	 * @see euaiactcompliance.ProductEmbedding#getThirdPartyConformityAssessment()
+	 * @see euaiactcompliance.ProductEmbedding#isThirdPartyConformityAssessment()
 	 * @see #getProductEmbedding()
 	 * @generated
 	 */
@@ -2649,6 +2685,17 @@ public interface EuaiactcompliancePackage extends EPackage {
 	EReference getDeepfake_Base_UseCase();
 
 	/**
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.Deepfake#isCreativeWork <em>Creative Work</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Creative Work</em>'.
+	 * @see euaiactcompliance.Deepfake#isCreativeWork()
+	 * @see #getDeepfake()
+	 * @generated
+	 */
+	EAttribute getDeepfake_CreativeWork();
+
+	/**
 	 * Returns the meta object for class '{@link euaiactcompliance.PublicInterestText <em>Public Interest Text</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2668,6 +2715,17 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPublicInterestText_Base_UseCase();
+
+	/**
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.PublicInterestText#isHumanReview <em>Human Review</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Human Review</em>'.
+	 * @see euaiactcompliance.PublicInterestText#isHumanReview()
+	 * @see #getPublicInterestText()
+	 * @generated
+	 */
+	EAttribute getPublicInterestText_HumanReview();
 
 	/**
 	 * Returns the meta object for class '{@link euaiactcompliance.ManipulativeBehaviour <em>Manipulative Behaviour</em>}'.
@@ -3910,6 +3968,17 @@ public interface EuaiactcompliancePackage extends EPackage {
 	EReference getEssentialService_Base_UseCase();
 
 	/**
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.EssentialService#isEmergency <em>Emergency</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Emergency</em>'.
+	 * @see euaiactcompliance.EssentialService#isEmergency()
+	 * @see #getEssentialService()
+	 * @generated
+	 */
+	EAttribute getEssentialService_Emergency();
+
+	/**
 	 * Returns the meta object for class '{@link euaiactcompliance.LawEnforcement <em>Law Enforcement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4039,6 +4108,17 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLawEnforcement_Base_UseCase();
+
+	/**
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.LawEnforcement#isSupportsHumanAssessment <em>Supports Human Assessment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Supports Human Assessment</em>'.
+	 * @see euaiactcompliance.LawEnforcement#isSupportsHumanAssessment()
+	 * @see #getLawEnforcement()
+	 * @generated
+	 */
+	EAttribute getLawEnforcement_SupportsHumanAssessment();
 
 	/**
 	 * Returns the meta object for class '{@link euaiactcompliance.MigrationBorder <em>Migration Border</em>}'.
@@ -4970,6 +5050,14 @@ public interface EuaiactcompliancePackage extends EPackage {
 		EReference DEEPFAKE__BASE_USE_CASE = eINSTANCE.getDeepfake_Base_UseCase();
 
 		/**
+		 * The meta object literal for the '<em><b>Creative Work</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DEEPFAKE__CREATIVE_WORK = eINSTANCE.getDeepfake_CreativeWork();
+
+		/**
 		 * The meta object literal for the '{@link euaiactcompliance.impl.PublicInterestTextImpl <em>Public Interest Text</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4986,6 +5074,14 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * @generated
 		 */
 		EReference PUBLIC_INTEREST_TEXT__BASE_USE_CASE = eINSTANCE.getPublicInterestText_Base_UseCase();
+
+		/**
+		 * The meta object literal for the '<em><b>Human Review</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PUBLIC_INTEREST_TEXT__HUMAN_REVIEW = eINSTANCE.getPublicInterestText_HumanReview();
 
 		/**
 		 * The meta object literal for the '{@link euaiactcompliance.impl.ManipulativeBehaviourImpl <em>Manipulative Behaviour</em>}' class.
@@ -5928,6 +6024,14 @@ public interface EuaiactcompliancePackage extends EPackage {
 		EReference ESSENTIAL_SERVICE__BASE_USE_CASE = eINSTANCE.getEssentialService_Base_UseCase();
 
 		/**
+		 * The meta object literal for the '<em><b>Emergency</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ESSENTIAL_SERVICE__EMERGENCY = eINSTANCE.getEssentialService_Emergency();
+
+		/**
 		 * The meta object literal for the '{@link euaiactcompliance.impl.LawEnforcementImpl <em>Law Enforcement</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6024,6 +6128,14 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * @generated
 		 */
 		EReference LAW_ENFORCEMENT__BASE_USE_CASE = eINSTANCE.getLawEnforcement_Base_UseCase();
+
+		/**
+		 * The meta object literal for the '<em><b>Supports Human Assessment</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LAW_ENFORCEMENT__SUPPORTS_HUMAN_ASSESSMENT = eINSTANCE.getLawEnforcement_SupportsHumanAssessment();
 
 		/**
 		 * The meta object literal for the '{@link euaiactcompliance.impl.MigrationBorderImpl <em>Migration Border</em>}' class.

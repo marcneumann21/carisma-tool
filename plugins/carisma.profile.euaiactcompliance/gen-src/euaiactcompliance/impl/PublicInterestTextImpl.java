@@ -24,6 +24,7 @@ import org.eclipse.uml2.uml.UseCase;
  * </p>
  * <ul>
  *   <li>{@link euaiactcompliance.impl.PublicInterestTextImpl#getBase_UseCase <em>Base Use Case</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.PublicInterestTextImpl#isHumanReview <em>Human Review</em>}</li>
  * </ul>
  *
  * @generated
@@ -38,6 +39,26 @@ public class PublicInterestTextImpl extends MinimalEObjectImpl.Container impleme
 	 * @ordered
 	 */
 	protected UseCase base_UseCase;
+
+	/**
+	 * The default value of the '{@link #isHumanReview() <em>Human Review</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isHumanReview()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean HUMAN_REVIEW_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isHumanReview() <em>Human Review</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isHumanReview()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean humanReview = HUMAN_REVIEW_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -104,11 +125,36 @@ public class PublicInterestTextImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
+	public boolean isHumanReview() {
+		return humanReview;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setHumanReview(boolean newHumanReview) {
+		boolean oldHumanReview = humanReview;
+		humanReview = newHumanReview;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.PUBLIC_INTEREST_TEXT__HUMAN_REVIEW, oldHumanReview, humanReview));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case EuaiactcompliancePackage.PUBLIC_INTEREST_TEXT__BASE_USE_CASE:
 				if (resolve) return getBase_UseCase();
 				return basicGetBase_UseCase();
+			case EuaiactcompliancePackage.PUBLIC_INTEREST_TEXT__HUMAN_REVIEW:
+				return isHumanReview();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -123,6 +169,9 @@ public class PublicInterestTextImpl extends MinimalEObjectImpl.Container impleme
 		switch (featureID) {
 			case EuaiactcompliancePackage.PUBLIC_INTEREST_TEXT__BASE_USE_CASE:
 				setBase_UseCase((UseCase)newValue);
+				return;
+			case EuaiactcompliancePackage.PUBLIC_INTEREST_TEXT__HUMAN_REVIEW:
+				setHumanReview((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -139,6 +188,9 @@ public class PublicInterestTextImpl extends MinimalEObjectImpl.Container impleme
 			case EuaiactcompliancePackage.PUBLIC_INTEREST_TEXT__BASE_USE_CASE:
 				setBase_UseCase((UseCase)null);
 				return;
+			case EuaiactcompliancePackage.PUBLIC_INTEREST_TEXT__HUMAN_REVIEW:
+				setHumanReview(HUMAN_REVIEW_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -153,8 +205,26 @@ public class PublicInterestTextImpl extends MinimalEObjectImpl.Container impleme
 		switch (featureID) {
 			case EuaiactcompliancePackage.PUBLIC_INTEREST_TEXT__BASE_USE_CASE:
 				return base_UseCase != null;
+			case EuaiactcompliancePackage.PUBLIC_INTEREST_TEXT__HUMAN_REVIEW:
+				return humanReview != HUMAN_REVIEW_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (HumanReview: ");
+		result.append(humanReview);
+		result.append(')');
+		return result.toString();
 	}
 
 } //PublicInterestTextImpl

@@ -10,7 +10,8 @@ public enum EUAIActDocumentationSection {
 	DescriptionProviderRelevantChanges("Annex IV(6) Description of relevant changes made by the provider to the AI system through its lifecycle"),
 	ListHarmonisedStandards("Annex IV(7) List of the harmonised standards applied in full or in part"),
 	CopyEUConformityDeclaration("Annex IV(8) Copy of the EU declaration of conformity according to Article 47"),
-	DescriptionAISystemPostMarketPhase("Annex IV(9) Detailed description to evaluate the AI systems performance in the post-market phase");
+	DescriptionAISystemPostMarketPhase("Annex IV(9) Detailed description to evaluate the AI systems performance in the post-market phase"), 
+	TransparencyObligations("Article 50 Transparency obligations for providers and deployers");
 
 	private final String readableName;
 

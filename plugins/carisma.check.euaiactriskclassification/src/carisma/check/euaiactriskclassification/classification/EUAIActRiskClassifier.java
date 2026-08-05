@@ -17,6 +17,7 @@ public class EUAIActRiskClassifier {
 	private final Component aiSystem;
 	private final List<String> reasons = new ArrayList<>();
 	private final List<String> additionalObligations = new ArrayList<>();
+	private final List<String> notes = new ArrayList<>();
 
 	public EUAIActRiskClassifier(Component aiSystem) {
 		this.aiSystem = aiSystem;
@@ -40,9 +41,7 @@ public class EUAIActRiskClassifier {
 		}
 
 		for (UseCase uc : this.aiSystem.getUseCases()) {
-
 			// prohibited AI practices according to Article 5
-			// if this AI system is unacceptable risk, skip it
 			if (checkUnacceptableRisk(uc)) {
 				unacceptableRisk = true;
 				continue;
@@ -71,7 +70,7 @@ public class EUAIActRiskClassifier {
 			return buildClassificationResult(EUAIActRiskClass.Limited);
 		}
 
-		this.reasons.add("No characteristics of a higher risk class were found.");
+		this.reasons.add("No signs of higher risk classes were found.");
 		return buildClassificationResult(EUAIActRiskClass.Minimal);
 
 	}
@@ -87,14 +86,15 @@ public class EUAIActRiskClassifier {
 			return true;
 		}
 
-		boolean productItself;
+		boolean productItself = false;
+		boolean component = false;
 		if (role.equalsIgnoreCase("ProductItself")) {
 			productItself = true;
-		} else if (role.equalsIgnoreCase("SafetyComponent")) {
-			productItself = false;
+		} else if (role.equalsIgnoreCase("Component")) {
+			component = true;
 		} else {
 			this.reasons.add("Safety component '" + this.aiSystem.getName() + "': the role '" + role
-					+ "' is not a valid value. Therefore it is assumed to be high risk according to Article 6(1) until the specification is provided.");
+					+ "' is not a valid value. Therefore it is assumed to be high risk according to Article 6(1) until a valid role is provided.");
 			return true;
 		}
 
@@ -106,16 +106,15 @@ public class EUAIActRiskClassifier {
 			return true;
 		}
 
-		// TODO Test if it can be null
-		if (!productItself) {
+		if (component) {
 			Boolean failureEndangerSafety = EUAIActComplianceUtil.getBooleanValue(this.aiSystem,
 					EUAIActCompliance.ProductEmbedding, "FailureEndangerSafety");
 			if (failureEndangerSafety == null) {
 				this.reasons.add("Safety component '" + this.aiSystem.getName()
-						+ "': it is not specified whether a failure of the AI system endangers the health and safety of persons or property.  Therefore it is assumed to be high risk according to Article 6(1) until the specification is provided.");
+						+ "': it is not specified if a failure of the AI system endangers the health and safety of persons or property. Therefore it is assumed to be high risk according to Article 6(1) until the specification is provided.");
 				return true;
 			}
-			if (!failureEndangerSafety.booleanValue()) {
+			if (failureEndangerSafety.equals(Boolean.FALSE)) {
 				this.reasons.add("Safety component '" + this.aiSystem.getName()
 						+ "': the AI system is a component of a product, but a failure of it does not endanger the health and safety of persons or property, therefore it is not a safety component according to Article 3(14).");
 				return false;
@@ -129,7 +128,7 @@ public class EUAIActRiskClassifier {
 					+ "': it is not specified whether the product has to undergo a third party conformity assessment. Therefore it is assumed to be high risk according to Article 6(1) until the specification is provided.");
 			return true;
 		}
-		if (!thirdPartyAssessment.booleanValue()) {
+		if (thirdPartyAssessment.equals(Boolean.FALSE)) {
 			this.reasons.add("Safety component '" + this.aiSystem.getName()
 					+ "': the product does not have to undergo a third party conformity assessment, therefore the AI system is not high risk according to Article 6(1)(b).");
 			return false;
@@ -138,18 +137,18 @@ public class EUAIActRiskClassifier {
 		if (productItself) {
 			this.reasons.add("Safety component '" + this.aiSystem.getName()
 					+ "': the AI system is itself a product of the category " + productCategory + " of Annex I.");
-		} else {
+		} else if (component) {
 			this.reasons.add("Safety component '" + this.aiSystem.getName()
 					+ "': the AI system is a safety component of a product of the category " + productCategory
 					+ " of Annex I.");
 		}
 		this.additionalObligations
 				.add("The AI system has to undergo a third party conformity assessment according to Article 6(1).");
+
 		return true;
 	}
 
 	// TODO JavaDoc
-	// Maybe to UNDERTERMINED when justification is not possible
 	private boolean checkUnacceptableRisk(UseCase uc) {
 		boolean ucUnacceptableRisk = false;
 		if (EUAIActComplianceUtil.hasStereotype(uc, EUAIActCompliance.ManipulativeBehaviour)) {
@@ -263,7 +262,6 @@ public class EUAIActRiskClassifier {
 		}
 
 		// Article 5(1)(h) real-time remote biometric identification for law enforcement
-		// TODO add Annex II?
 		if (EUAIActComplianceUtil.hasStereotype(uc, EUAIActCompliance.BiometricIdentification)
 				&& !EUAIActComplianceUtil.isTaggedValueTrue(uc, EUAIActCompliance.BiometricIdentification,
 						"VerificationOnly")
@@ -284,9 +282,13 @@ public class EUAIActRiskClassifier {
 				this.reasons.add("'" + uc.getName()
 						+ "': uses 'real-time' remote biometric identification in publicly accessible spaces for the purpose of law enforcement, but is covered by the exception "
 						+ String.join(", ", exceptions)
-						+ ", therefore it is not unacceptable risk, but requires a prior authorisation and a registration according to Article 5(1)(h)(iii), Article 5(2), Article 5(3).");
+						+ ", therefore it is not unacceptable risk according to Article 5(1)(h), but is subject to the conditions of Article 5(2), Article 5(3), Article 5(4).");
 				this.additionalObligations.add(
 						"The deployer has to complete a fundamental rights impact assessment and has to register the AI system in the EU database before each use according to Article 5(2), Article 27, Article 49.");
+				this.additionalObligations.add(
+						"Each individual use has to be authorised in advance by a judicial authority or an independent administrative authority according to Article 5(3).");
+				this.additionalObligations.add(
+						"Each individual use has to be notified to the relevant market surveillance authority and the national data protection authority according to Article 5(4).");
 			}
 		}
 		return ucUnacceptableRisk;
@@ -455,6 +457,8 @@ public class EUAIActRiskClassifier {
 			} else {
 				this.reasons.add("'" + uc.getName() + "': the area of application of '" + stereotype.toString()
 						+ "' is not specified. A precise justification is not possible without this specification.");
+				this.additionalObligations.add(
+						"Registration of this AI system and provider in the EU database before placing this AI system on the market according to Article 49(1).");
 				return false;
 			}
 		}
@@ -463,6 +467,8 @@ public class EUAIActRiskClassifier {
 			this.reasons.add("'" + uc.getName()
 					+ "': performs profiling of natural persons, therefore high risk according to Article 6(3), "
 					+ reference + ".");
+			this.additionalObligations.add(
+					"Registration of this AI system and provider in the EU database before placing this AI system on the market according to Article 49(1).");
 			return false;
 		}
 
@@ -476,7 +482,7 @@ public class EUAIActRiskClassifier {
 			this.additionalObligations.add(
 					"The provider has to document the justification assessment before the AI system is placed on the market and has to register the AI system according to Article 6(4), Article 49(2).");
 			if (justification == null || justification.isBlank()) {
-				this.reasons.add("'" + uc.getName()
+				this.notes.add("'" + uc.getName()
 						+ "': Document the assessment of the exception in 'ExceptionJustification'.");
 			}
 
@@ -485,57 +491,82 @@ public class EUAIActRiskClassifier {
 
 		this.reasons.add("'" + uc.getName() + "': area of application " + String.join(", ", trueAttributes)
 				+ ", therefore high risk according to Article 6(2), " + reference + ".");
+		this.additionalObligations.add(
+				"Registration of this AI system and provider in the EU database before placing this AI system on the market according to Article 49(1).");
 		return false;
 	}
 
 	// TODO JavaDoc
 	private boolean checkLimitedRisk(UseCase uc) {
-		boolean limitedRisk = false;
+		boolean ucLimitedRisk = false;
+
+		// Article 50(1)
 		if (EUAIActComplianceUtil.hasStereotype(uc, EUAIActCompliance.HumanInteraction)) {
 			this.reasons.add("'" + uc.getName()
 					+ "': interacts directly with natural persons, therefore subject to the transparency obligation according to Article 50(1).");
 			this.additionalObligations.add(
-					"Inform natural persons that they are interacting with an AI system according to Article 50(1).");
-			limitedRisk = true;
+					"The provider has to inform natural persons that they are interacting with an AI system according to Article 50(1).");
+			ucLimitedRisk = true;
 		}
+
+		// Article 50(2)
 		if (EUAIActComplianceUtil.hasStereotype(uc, EUAIActCompliance.SyntheticContent)) {
 			this.reasons.add("'" + uc.getName()
 					+ "': generates synthetic audio, image, video or text content, therefore subject to the transparency obligation according to Article 50(2).");
-			this.additionalObligations
-					.add("Mark AI-generated content in a machine-readable format according to Article 50(2).");
-			limitedRisk = true;
+			this.additionalObligations.add(
+					"The provider has to mark the output in a machine-readable format according to Article 50(2).");
+			ucLimitedRisk = true;
 		}
+
+		// Article 50(3)
 		if (EUAIActComplianceUtil.hasStereotype(uc, EUAIActCompliance.EmotionRecognition)
 				|| EUAIActComplianceUtil.hasStereotype(uc, EUAIActCompliance.BiometricCategorisation)) {
 			this.reasons.add("'" + uc.getName()
 					+ "': exposes natural persons to emotion recognition or biometric categorisation, therefore subject to the transparency obligation according to Article 50(3).");
 			this.additionalObligations.add(
-					"Inform persons exposed to emotion recognition or biometric categorisation according to Article 50(3).");
-			limitedRisk = true;
+					"The deployer has to inform the natural persons exposed to emotion recognition or biometric categorisation according to Article 50(3).");
+			ucLimitedRisk = true;
 		}
+
+		// Article 50(4)
 		if (EUAIActComplianceUtil.hasStereotype(uc, EUAIActCompliance.Deepfake)) {
-			this.reasons.add("'" + uc.getName()
-					+ "': generates or manipulates deep fake content, therefore subject to the transparency obligation according to Article 50(4).");
-			this.additionalObligations.add("Disclose deep fakes according to Article 50(4).");
-			limitedRisk = true;
+			if (EUAIActComplianceUtil.isTaggedValueTrue(uc, EUAIActCompliance.Deepfake, "CreativeWork")) {
+				this.reasons.add("'" + uc.getName()
+						+ "': generates or manipulates deep fake content as part of an artistic, creative, satirical or fictional work, therefore the disclosure is limited according to Article 50(4).");
+			} else {
+				this.reasons.add("'" + uc.getName()
+						+ "': generates or manipulates deep fake content, therefore subject to the transparency obligation according to Article 50(4).");
+			}
+			this.additionalObligations.add("The deployer has to disclose deep fakes according to Article 50(4).");
+			ucLimitedRisk = true;
 		}
+
+		// Article 50(4)
 		if (EUAIActComplianceUtil.hasStereotype(uc, EUAIActCompliance.PublicInterestText)) {
-			this.reasons.add("'" + uc.getName()
-					+ "': generates text which is published to inform the public on matters of public interest, therefore subject to the transparency obligation according to Article 50(4).");
-			this.additionalObligations.add(
-					"Disclose AI-generated text published to inform the public on matters of public interest according to Article 50(4).");
-			limitedRisk = true;
+			if (EUAIActComplianceUtil.isTaggedValueTrue(uc, EUAIActCompliance.PublicInterestText, "HumanReview")) {
+				this.reasons.add("'" + uc.getName()
+						+ "': generates text which is published to inform the public on matters of public interest, but the text has undergone a human review and a natural or legal person holds editorial responsibility, therefore not subject to the transparency obligation according to Article 50(4).");
+			} else {
+				this.reasons.add("'" + uc.getName()
+						+ "': generates text which is published to inform the public on matters of public interest, therefore subject to the transparency obligation according to Article 50(4).");
+				this.additionalObligations.add(
+						"The deployer has to disclose AI-generated text published to inform the public on matters of public interest according to Article 50(4).");
+				ucLimitedRisk = true;
+			}
 		}
-		return limitedRisk;
+
+		return ucLimitedRisk;
 	}
 
+	// TODO JavaDoc
 	private EUAIActRiskClassificationResult buildClassificationResult(EUAIActRiskClass riskClass) {
-		List<String> obligations = new ArrayList<>(EUAIActRiskClassificationObligation.getObligations(riskClass));
+		List<String> obligations = new ArrayList<>(
+				EUAIActRiskClassificationObligation.getObligations(riskClass));
 		for (String ob : this.additionalObligations) {
 			if (!obligations.contains(ob)) {
 				obligations.add(ob);
 			}
 		}
-		return new EUAIActRiskClassificationResult(riskClass, this.reasons, obligations);
+		return new EUAIActRiskClassificationResult(riskClass, this.reasons, obligations, this.notes);
 	}
 }

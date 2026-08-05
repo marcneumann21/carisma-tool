@@ -33,6 +33,7 @@ import org.eclipse.uml2.uml.UseCase;
  *   <li>{@link euaiactcompliance.impl.EssentialServiceImpl#isImprovesHumanActivity <em>Improves Human Activity</em>}</li>
  *   <li>{@link euaiactcompliance.impl.EssentialServiceImpl#isDecisionPatternDetection <em>Decision Pattern Detection</em>}</li>
  *   <li>{@link euaiactcompliance.impl.EssentialServiceImpl#getBase_UseCase <em>Base Use Case</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.EssentialServiceImpl#isEmergency <em>Emergency</em>}</li>
  * </ul>
  *
  * @generated
@@ -227,6 +228,26 @@ public class EssentialServiceImpl extends MinimalEObjectImpl.Container implement
 	 * @ordered
 	 */
 	protected UseCase base_UseCase;
+
+	/**
+	 * The default value of the '{@link #isEmergency() <em>Emergency</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isEmergency()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean EMERGENCY_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isEmergency() <em>Emergency</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isEmergency()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean emergency = EMERGENCY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -500,6 +521,29 @@ public class EssentialServiceImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
+	public boolean isEmergency() {
+		return emergency;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setEmergency(boolean newEmergency) {
+		boolean oldEmergency = emergency;
+		emergency = newEmergency;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.ESSENTIAL_SERVICE__EMERGENCY, oldEmergency, emergency));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__CREDITWORTHINESS:
@@ -523,6 +567,8 @@ public class EssentialServiceImpl extends MinimalEObjectImpl.Container implement
 			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__BASE_USE_CASE:
 				if (resolve) return getBase_UseCase();
 				return basicGetBase_UseCase();
+			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__EMERGENCY:
+				return isEmergency();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -564,6 +610,9 @@ public class EssentialServiceImpl extends MinimalEObjectImpl.Container implement
 				return;
 			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__BASE_USE_CASE:
 				setBase_UseCase((UseCase)newValue);
+				return;
+			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__EMERGENCY:
+				setEmergency((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -607,6 +656,9 @@ public class EssentialServiceImpl extends MinimalEObjectImpl.Container implement
 			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__BASE_USE_CASE:
 				setBase_UseCase((UseCase)null);
 				return;
+			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__EMERGENCY:
+				setEmergency(EMERGENCY_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -639,6 +691,8 @@ public class EssentialServiceImpl extends MinimalEObjectImpl.Container implement
 				return decisionPatternDetection != DECISION_PATTERN_DETECTION_EDEFAULT;
 			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__BASE_USE_CASE:
 				return base_UseCase != null;
+			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__EMERGENCY:
+				return emergency != EMERGENCY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -671,6 +725,8 @@ public class EssentialServiceImpl extends MinimalEObjectImpl.Container implement
 		result.append(improvesHumanActivity);
 		result.append(", DecisionPatternDetection: ");
 		result.append(decisionPatternDetection);
+		result.append(", Emergency: ");
+		result.append(emergency);
 		result.append(')');
 		return result.toString();
 	}

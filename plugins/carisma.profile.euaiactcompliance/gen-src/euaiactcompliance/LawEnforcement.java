@@ -26,6 +26,7 @@ import org.eclipse.uml2.uml.UseCase;
  *   <li>{@link euaiactcompliance.LawEnforcement#isPreparatoryTask <em>Preparatory Task</em>}</li>
  *   <li>{@link euaiactcompliance.LawEnforcement#isImprovesHumanActivity <em>Improves Human Activity</em>}</li>
  *   <li>{@link euaiactcompliance.LawEnforcement#getBase_UseCase <em>Base Use Case</em>}</li>
+ *   <li>{@link euaiactcompliance.LawEnforcement#isSupportsHumanAssessment <em>Supports Human Assessment</em>}</li>
  * </ul>
  *
  * @see euaiactcompliance.EuaiactcompliancePackage#getLawEnforcement()
@@ -274,5 +275,27 @@ public interface LawEnforcement extends EObject {
 	 * @generated
 	 */
 	void setBase_UseCase(UseCase value);
+
+	/**
+	 * Returns the value of the '<em><b>Supports Human Assessment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Supports Human Assessment</em>' attribute.
+	 * @see #setSupportsHumanAssessment(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getLawEnforcement_SupportsHumanAssessment()
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isSupportsHumanAssessment();
+
+	/**
+	 * Sets the value of the '{@link euaiactcompliance.LawEnforcement#isSupportsHumanAssessment <em>Supports Human Assessment</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Supports Human Assessment</em>' attribute.
+	 * @see #isSupportsHumanAssessment()
+	 * @generated
+	 */
+	void setSupportsHumanAssessment(boolean value);
 
 } // LawEnforcement

@@ -89,14 +89,14 @@ public enum Category implements Enumerator {
 	CIVIL_AVIATION(6, "CivilAviation", "CivilAviation"),
 
 	/**
-	 * The '<em><b>Rail Sytem</b></em>' literal object.
+	 * The '<em><b>Rail System</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #RAIL_SYTEM_VALUE
+	 * @see #RAIL_SYSTEM_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	RAIL_SYTEM(7, "RailSytem", "RailSytem"),
+	RAIL_SYSTEM(7, "RailSystem", "RailSystem"),
 
 	/**
 	 * The '<em><b>Agricultural</b></em>' literal object.
@@ -106,7 +106,57 @@ public enum Category implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	AGRICULTURAL(8, "Agricultural", "Agricultural");
+	AGRICULTURAL(8, "Agricultural", "Agricultural"),
+
+	/**
+	 * The '<em><b>Two Three Wheel Vehicle</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #TWO_THREE_WHEEL_VEHICLE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	TWO_THREE_WHEEL_VEHICLE(9, "TwoThreeWheelVehicle", "TwoThreeWheelVehicle"),
+
+	/**
+	 * The '<em><b>Marine</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MARINE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	MARINE(10, "Marine", "Marine"),
+
+	/**
+	 * The '<em><b>Unmanned Aircraft</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UNMANNED_AIRCRAFT_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	UNMANNED_AIRCRAFT(11, "UnmannedAircraft", "UnmannedAircraft"),
+
+	/**
+	 * The '<em><b>Motor Vehicle</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MOTOR_VEHICLE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	MOTOR_VEHICLE(12, "MotorVehicle", "MotorVehicle"),
+
+	/**
+	 * The '<em><b>Motor Vehicle Safety</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MOTOR_VEHICLE_SAFETY_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	MOTOR_VEHICLE_SAFETY(13, "MotorVehicleSafety", "MotorVehicleSafety");
 
 	/**
 	 * The '<em><b>Machinery</b></em>' literal value.
@@ -186,15 +236,15 @@ public enum Category implements Enumerator {
 	public static final int CIVIL_AVIATION_VALUE = 6;
 
 	/**
-	 * The '<em><b>Rail Sytem</b></em>' literal value.
+	 * The '<em><b>Rail System</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #RAIL_SYTEM
-	 * @model name="RailSytem"
+	 * @see #RAIL_SYSTEM
+	 * @model name="RailSystem"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int RAIL_SYTEM_VALUE = 7;
+	public static final int RAIL_SYSTEM_VALUE = 7;
 
 	/**
 	 * The '<em><b>Agricultural</b></em>' literal value.
@@ -206,6 +256,61 @@ public enum Category implements Enumerator {
 	 * @ordered
 	 */
 	public static final int AGRICULTURAL_VALUE = 8;
+
+	/**
+	 * The '<em><b>Two Three Wheel Vehicle</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #TWO_THREE_WHEEL_VEHICLE
+	 * @model name="TwoThreeWheelVehicle"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int TWO_THREE_WHEEL_VEHICLE_VALUE = 9;
+
+	/**
+	 * The '<em><b>Marine</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MARINE
+	 * @model name="Marine"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int MARINE_VALUE = 10;
+
+	/**
+	 * The '<em><b>Unmanned Aircraft</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UNMANNED_AIRCRAFT
+	 * @model name="UnmannedAircraft"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int UNMANNED_AIRCRAFT_VALUE = 11;
+
+	/**
+	 * The '<em><b>Motor Vehicle</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MOTOR_VEHICLE
+	 * @model name="MotorVehicle"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int MOTOR_VEHICLE_VALUE = 12;
+
+	/**
+	 * The '<em><b>Motor Vehicle Safety</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MOTOR_VEHICLE_SAFETY
+	 * @model name="MotorVehicleSafety"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int MOTOR_VEHICLE_SAFETY_VALUE = 13;
 
 	/**
 	 * An array of all the '<em><b>Category</b></em>' enumerators.
@@ -222,8 +327,13 @@ public enum Category implements Enumerator {
 			IN_VITRO_DIAGNOSTICS,
 			PERSONAL_PROTECTION,
 			CIVIL_AVIATION,
-			RAIL_SYTEM,
+			RAIL_SYSTEM,
 			AGRICULTURAL,
+			TWO_THREE_WHEEL_VEHICLE,
+			MARINE,
+			UNMANNED_AIRCRAFT,
+			MOTOR_VEHICLE,
+			MOTOR_VEHICLE_SAFETY,
 		};
 
 	/**
@@ -287,8 +397,13 @@ public enum Category implements Enumerator {
 			case IN_VITRO_DIAGNOSTICS_VALUE: return IN_VITRO_DIAGNOSTICS;
 			case PERSONAL_PROTECTION_VALUE: return PERSONAL_PROTECTION;
 			case CIVIL_AVIATION_VALUE: return CIVIL_AVIATION;
-			case RAIL_SYTEM_VALUE: return RAIL_SYTEM;
+			case RAIL_SYSTEM_VALUE: return RAIL_SYSTEM;
 			case AGRICULTURAL_VALUE: return AGRICULTURAL;
+			case TWO_THREE_WHEEL_VEHICLE_VALUE: return TWO_THREE_WHEEL_VEHICLE;
+			case MARINE_VALUE: return MARINE;
+			case UNMANNED_AIRCRAFT_VALUE: return UNMANNED_AIRCRAFT;
+			case MOTOR_VEHICLE_VALUE: return MOTOR_VEHICLE;
+			case MOTOR_VEHICLE_SAFETY_VALUE: return MOTOR_VEHICLE_SAFETY;
 		}
 		return null;
 	}

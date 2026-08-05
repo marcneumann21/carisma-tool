@@ -25,6 +25,7 @@ import org.eclipse.uml2.uml.UseCase;
  *   <li>{@link euaiactcompliance.EssentialService#isImprovesHumanActivity <em>Improves Human Activity</em>}</li>
  *   <li>{@link euaiactcompliance.EssentialService#isDecisionPatternDetection <em>Decision Pattern Detection</em>}</li>
  *   <li>{@link euaiactcompliance.EssentialService#getBase_UseCase <em>Base Use Case</em>}</li>
+ *   <li>{@link euaiactcompliance.EssentialService#isEmergency <em>Emergency</em>}</li>
  * </ul>
  *
  * @see euaiactcompliance.EuaiactcompliancePackage#getEssentialService()
@@ -251,5 +252,27 @@ public interface EssentialService extends EObject {
 	 * @generated
 	 */
 	void setBase_UseCase(UseCase value);
+
+	/**
+	 * Returns the value of the '<em><b>Emergency</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Emergency</em>' attribute.
+	 * @see #setEmergency(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getEssentialService_Emergency()
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isEmergency();
+
+	/**
+	 * Sets the value of the '{@link euaiactcompliance.EssentialService#isEmergency <em>Emergency</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Emergency</em>' attribute.
+	 * @see #isEmergency()
+	 * @generated
+	 */
+	void setEmergency(boolean value);
 
 } // EssentialService

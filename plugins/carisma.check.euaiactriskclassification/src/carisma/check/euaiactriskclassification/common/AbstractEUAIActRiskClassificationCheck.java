@@ -13,10 +13,9 @@ import carisma.core.checks.CheckParameter;
 
 /**
  * Abstract super class for the EU AI Act Riskclassification check.
- * Strongly inspired by the Abstract super class {@link AbstractMLTop10Check} for the ML Security Top 10 checks.
  * 
  * @author Marc Neumann
- * @see AbstractMLTop10Check
+ * 
  */
 public abstract class AbstractEUAIActRiskClassificationCheck implements CarismaCheck {
 

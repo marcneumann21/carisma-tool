@@ -1,6 +1,5 @@
 package carisma.check.euaiactdocumentation.check;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -33,9 +32,10 @@ public class EUAIActDocumentationCheck extends AbstractEUAIActDocumentationCheck
 				EUAIActCompliance.AISystem);
 
 		if (aiSystems.isEmpty()) {
-			addInfo("Your model does not contain any AI systems.");
+			addError("Your model does not contain any AI systems.");
 			return false;
 		}
+
 		addInfo("Your model contains " + aiSystems.size() + " AI system(s).");
 
 		boolean completeDocumentation = true;
@@ -48,7 +48,8 @@ public class EUAIActDocumentationCheck extends AbstractEUAIActDocumentationCheck
 
 			boolean highRisk = false;
 			if (riskClass == EUAIActRiskClass.Unacceptable) {
-				addInfo("No technical documentation is generated, because the AI system must not be placed on the market, put into service or used according to Article 5.");
+				addWarning(
+						"No technical documentation is generated, because the AI system must not be placed on the market, put into service or used according to Article 5.");
 				continue;
 			} else if (riskClass == EUAIActRiskClass.High) {
 				addInfo("The technical documentation according to Article 11 and Annex IV is mandatory for this AI system.");
@@ -67,14 +68,12 @@ public class EUAIActDocumentationCheck extends AbstractEUAIActDocumentationCheck
 			List<EUAIActDocumentationSectionResult> sections = generator.generate();
 			for (EUAIActDocumentationSectionResult section : sections) {
 
-				// only sections with content printed
-				if (riskClass != EUAIActRiskClass.High && section.foundDocumentation().isEmpty()) {
+				// for not high risk systems only sections with content are printed,
+				// because Annex IV is not mandatory for them
+				if (riskClass != EUAIActRiskClass.High && section.foundDocumentation().isEmpty()
+						&& section.notes().isEmpty()) {
 					continue;
 				}
-
-				List<String> sectionNotes = new ArrayList<>();
-
-				sectionNotes.addAll(section.notes());
 
 				addInfo("================================");
 				addInfo(section.sectionName().toString());
@@ -107,10 +106,10 @@ public class EUAIActDocumentationCheck extends AbstractEUAIActDocumentationCheck
 
 				addInfo("Note(s):");
 				addInfo("===========");
-				if (sectionNotes.isEmpty()) {
+				if (section.notes().isEmpty()) {
 					addInfo("None");
 				} else {
-					for (String note : sectionNotes) {
+					for (String note : section.notes()) {
 						addInfo(note);
 					}
 				}

@@ -32,11 +32,13 @@ public class EUAIActRiskClassificationCheck extends AbstractEUAIActRiskClassific
 				EUAIActCompliance.AISystem);
 
 		if (aiSystems.isEmpty()) {
-			addInfo("Your model does not contain any AI systems.");
+			addError("Your model does not contain any AI systems.");
 			return false;
 		}
+		
 		addInfo("Your model contains " + aiSystems.size() + " AI system(s).");
 
+		boolean noUnacceptableRisk = true;
 		for (Component aiSystem : aiSystems) {
 			EUAIActRiskClassifier classifier = new EUAIActRiskClassifier(aiSystem);
 			EUAIActRiskClassificationResult result = classifier.classify();
@@ -44,6 +46,7 @@ public class EUAIActRiskClassificationCheck extends AbstractEUAIActRiskClassific
 			EUAIActRiskClass riskClass = result.riskClass();
 			List<String> reasons = result.reasons();
 			List<String> obligations = result.obligations();
+			List<String> notes = result.notes();
 
 			addInfo("AI System '" + aiSystem.getName() + "' is classified as: " + riskClass);
 			addInfo("Reason(s):");
@@ -51,10 +54,11 @@ public class EUAIActRiskClassificationCheck extends AbstractEUAIActRiskClassific
 			for (String reason : reasons) {
 				addInfo(reason);
 			}
-			addInfo("\n");
+			addInfo("");
 
 			if (riskClass == EUAIActRiskClass.Unacceptable) {
-				addInfo("No Obligations. The system must not be placed on the market, put into service or used according to Article 5.");
+				addWarning("No Obligations. The system must not be placed on the market, put into service or used according to Article 5.");
+				noUnacceptableRisk = false;
 				continue;
 			} else {
 				addInfo("Resulting Obligation(s):");
@@ -62,9 +66,17 @@ public class EUAIActRiskClassificationCheck extends AbstractEUAIActRiskClassific
 				for (String obligation : obligations) {
 					addInfo(obligation);
 				}
+				addInfo("");
+				addInfo("Note(s):");
+				addInfo("=======");
+				for (String note : notes) {
+					addInfo(note);
+				}
+				addInfo("");
 			}
+			
 		}
-		return true;
+		return noUnacceptableRisk;
 
 	}
 

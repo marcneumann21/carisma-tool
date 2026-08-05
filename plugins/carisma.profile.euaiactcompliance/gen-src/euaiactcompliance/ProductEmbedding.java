@@ -17,7 +17,7 @@ import org.eclipse.uml2.uml.Component;
  * <ul>
  *   <li>{@link euaiactcompliance.ProductEmbedding#getBase_Component <em>Base Component</em>}</li>
  *   <li>{@link euaiactcompliance.ProductEmbedding#isFailureEndangerSafety <em>Failure Endanger Safety</em>}</li>
- *   <li>{@link euaiactcompliance.ProductEmbedding#getThirdPartyConformityAssessment <em>Third Party Conformity Assessment</em>}</li>
+ *   <li>{@link euaiactcompliance.ProductEmbedding#isThirdPartyConformityAssessment <em>Third Party Conformity Assessment</em>}</li>
  *   <li>{@link euaiactcompliance.ProductEmbedding#getProductCategory <em>Product Category</em>}</li>
  *   <li>{@link euaiactcompliance.ProductEmbedding#getRole <em>Role</em>}</li>
  * </ul>
@@ -76,22 +76,22 @@ public interface ProductEmbedding extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Third Party Conformity Assessment</em>' attribute.
-	 * @see #setThirdPartyConformityAssessment(String)
+	 * @see #setThirdPartyConformityAssessment(boolean)
 	 * @see euaiactcompliance.EuaiactcompliancePackage#getProductEmbedding_ThirdPartyConformityAssessment()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
 	 * @generated
 	 */
-	String getThirdPartyConformityAssessment();
+	boolean isThirdPartyConformityAssessment();
 
 	/**
-	 * Sets the value of the '{@link euaiactcompliance.ProductEmbedding#getThirdPartyConformityAssessment <em>Third Party Conformity Assessment</em>}' attribute.
+	 * Sets the value of the '{@link euaiactcompliance.ProductEmbedding#isThirdPartyConformityAssessment <em>Third Party Conformity Assessment</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Third Party Conformity Assessment</em>' attribute.
-	 * @see #getThirdPartyConformityAssessment()
+	 * @see #isThirdPartyConformityAssessment()
 	 * @generated
 	 */
-	void setThirdPartyConformityAssessment(String value);
+	void setThirdPartyConformityAssessment(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Product Category</b></em>' attribute.

@@ -468,6 +468,16 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
+	public EAttribute getDeepfake_CreativeWork() {
+		return (EAttribute)deepfakeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getPublicInterestText() {
 		return publicInterestTextEClass;
 	}
@@ -480,6 +490,16 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	@Override
 	public EReference getPublicInterestText_Base_UseCase() {
 		return (EReference)publicInterestTextEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPublicInterestText_HumanReview() {
+		return (EAttribute)publicInterestTextEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1628,6 +1648,16 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
+	public EAttribute getEssentialService_Emergency() {
+		return (EAttribute)essentialServiceEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getLawEnforcement() {
 		return lawEnforcementEClass;
 	}
@@ -1740,6 +1770,16 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	@Override
 	public EReference getLawEnforcement_Base_UseCase() {
 		return (EReference)lawEnforcementEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLawEnforcement_SupportsHumanAssessment() {
+		return (EAttribute)lawEnforcementEClass.getEStructuralFeatures().get(11);
 	}
 
 	/**
@@ -2509,9 +2549,11 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 
 		deepfakeEClass = createEClass(DEEPFAKE);
 		createEReference(deepfakeEClass, DEEPFAKE__BASE_USE_CASE);
+		createEAttribute(deepfakeEClass, DEEPFAKE__CREATIVE_WORK);
 
 		publicInterestTextEClass = createEClass(PUBLIC_INTEREST_TEXT);
 		createEReference(publicInterestTextEClass, PUBLIC_INTEREST_TEXT__BASE_USE_CASE);
+		createEAttribute(publicInterestTextEClass, PUBLIC_INTEREST_TEXT__HUMAN_REVIEW);
 
 		manipulativeBehaviourEClass = createEClass(MANIPULATIVE_BEHAVIOUR);
 		createEAttribute(manipulativeBehaviourEClass, MANIPULATIVE_BEHAVIOUR__SUBLIMINAL_TECHNIQUES);
@@ -2640,6 +2682,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		createEAttribute(essentialServiceEClass, ESSENTIAL_SERVICE__IMPROVES_HUMAN_ACTIVITY);
 		createEAttribute(essentialServiceEClass, ESSENTIAL_SERVICE__DECISION_PATTERN_DETECTION);
 		createEReference(essentialServiceEClass, ESSENTIAL_SERVICE__BASE_USE_CASE);
+		createEAttribute(essentialServiceEClass, ESSENTIAL_SERVICE__EMERGENCY);
 
 		lawEnforcementEClass = createEClass(LAW_ENFORCEMENT);
 		createEAttribute(lawEnforcementEClass, LAW_ENFORCEMENT__VICTIM_RISK_ASSESSMENT);
@@ -2653,6 +2696,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		createEAttribute(lawEnforcementEClass, LAW_ENFORCEMENT__PREPARATORY_TASK);
 		createEAttribute(lawEnforcementEClass, LAW_ENFORCEMENT__IMPROVES_HUMAN_ACTIVITY);
 		createEReference(lawEnforcementEClass, LAW_ENFORCEMENT__BASE_USE_CASE);
+		createEAttribute(lawEnforcementEClass, LAW_ENFORCEMENT__SUPPORTS_HUMAN_ASSESSMENT);
 
 		migrationBorderEClass = createEClass(MIGRATION_BORDER);
 		createEAttribute(migrationBorderEClass, MIGRATION_BORDER__LIE_DETECTION);
@@ -2775,7 +2819,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		initEClass(productEmbeddingEClass, ProductEmbedding.class, "ProductEmbedding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getProductEmbedding_Base_Component(), theUMLPackage.getComponent(), null, "base_Component", null, 0, 1, ProductEmbedding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getProductEmbedding_FailureEndangerSafety(), theTypesPackage.getBoolean(), "FailureEndangerSafety", null, 1, 1, ProductEmbedding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getProductEmbedding_ThirdPartyConformityAssessment(), theTypesPackage.getString(), "ThirdPartyConformityAssessment", null, 1, 1, ProductEmbedding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getProductEmbedding_ThirdPartyConformityAssessment(), theTypesPackage.getBoolean(), "ThirdPartyConformityAssessment", null, 1, 1, ProductEmbedding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getProductEmbedding_ProductCategory(), this.getCategory(), "ProductCategory", null, 1, 1, ProductEmbedding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getProductEmbedding_Role(), this.getRole(), "Role", null, 1, 1, ProductEmbedding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -2787,9 +2831,11 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 
 		initEClass(deepfakeEClass, Deepfake.class, "Deepfake", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDeepfake_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, Deepfake.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDeepfake_CreativeWork(), theTypesPackage.getBoolean(), "CreativeWork", null, 1, 1, Deepfake.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(publicInterestTextEClass, PublicInterestText.class, "PublicInterestText", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPublicInterestText_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, PublicInterestText.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getPublicInterestText_HumanReview(), theTypesPackage.getBoolean(), "HumanReview", null, 1, 1, PublicInterestText.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(manipulativeBehaviourEClass, ManipulativeBehaviour.class, "ManipulativeBehaviour", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getManipulativeBehaviour_SubliminalTechniques(), theTypesPackage.getBoolean(), "SubliminalTechniques", null, 1, 1, ManipulativeBehaviour.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -2918,6 +2964,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		initEAttribute(getEssentialService_ImprovesHumanActivity(), theTypesPackage.getBoolean(), "ImprovesHumanActivity", null, 1, 1, EssentialService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getEssentialService_DecisionPatternDetection(), theTypesPackage.getBoolean(), "DecisionPatternDetection", null, 1, 1, EssentialService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getEssentialService_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, EssentialService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEssentialService_Emergency(), theTypesPackage.getBoolean(), "Emergency", null, 1, 1, EssentialService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(lawEnforcementEClass, LawEnforcement.class, "LawEnforcement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLawEnforcement_VictimRiskAssessment(), theTypesPackage.getBoolean(), "VictimRiskAssessment", null, 1, 1, LawEnforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -2931,6 +2978,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		initEAttribute(getLawEnforcement_PreparatoryTask(), theTypesPackage.getBoolean(), "PreparatoryTask", null, 1, 1, LawEnforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getLawEnforcement_ImprovesHumanActivity(), theTypesPackage.getBoolean(), "ImprovesHumanActivity", null, 1, 1, LawEnforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getLawEnforcement_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, LawEnforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getLawEnforcement_SupportsHumanAssessment(), theTypesPackage.getBoolean(), "SupportsHumanAssessment", null, 1, 1, LawEnforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(migrationBorderEClass, MigrationBorder.class, "MigrationBorder", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMigrationBorder_LieDetection(), theTypesPackage.getBoolean(), "LieDetection", null, 1, 1, MigrationBorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -3017,11 +3065,16 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		addEEnumLiteral(categoryEEnum, Category.IN_VITRO_DIAGNOSTICS);
 		addEEnumLiteral(categoryEEnum, Category.PERSONAL_PROTECTION);
 		addEEnumLiteral(categoryEEnum, Category.CIVIL_AVIATION);
-		addEEnumLiteral(categoryEEnum, Category.RAIL_SYTEM);
+		addEEnumLiteral(categoryEEnum, Category.RAIL_SYSTEM);
 		addEEnumLiteral(categoryEEnum, Category.AGRICULTURAL);
+		addEEnumLiteral(categoryEEnum, Category.TWO_THREE_WHEEL_VEHICLE);
+		addEEnumLiteral(categoryEEnum, Category.MARINE);
+		addEEnumLiteral(categoryEEnum, Category.UNMANNED_AIRCRAFT);
+		addEEnumLiteral(categoryEEnum, Category.MOTOR_VEHICLE);
+		addEEnumLiteral(categoryEEnum, Category.MOTOR_VEHICLE_SAFETY);
 
 		initEEnum(roleEEnum, Role.class, "Role");
-		addEEnumLiteral(roleEEnum, Role.SAFETY_COMPONENT);
+		addEEnumLiteral(roleEEnum, Role.COMPONENT);
 		addEEnumLiteral(roleEEnum, Role.PRODUCT_ITSELF);
 
 		// Create resource

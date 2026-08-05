@@ -16,6 +16,7 @@ import org.eclipse.uml2.uml.UseCase;
  * </p>
  * <ul>
  *   <li>{@link euaiactcompliance.PublicInterestText#getBase_UseCase <em>Base Use Case</em>}</li>
+ *   <li>{@link euaiactcompliance.PublicInterestText#isHumanReview <em>Human Review</em>}</li>
  * </ul>
  *
  * @see euaiactcompliance.EuaiactcompliancePackage#getPublicInterestText()
@@ -44,5 +45,27 @@ public interface PublicInterestText extends EObject {
 	 * @generated
 	 */
 	void setBase_UseCase(UseCase value);
+
+	/**
+	 * Returns the value of the '<em><b>Human Review</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Human Review</em>' attribute.
+	 * @see #setHumanReview(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getPublicInterestText_HumanReview()
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isHumanReview();
+
+	/**
+	 * Sets the value of the '{@link euaiactcompliance.PublicInterestText#isHumanReview <em>Human Review</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Human Review</em>' attribute.
+	 * @see #isHumanReview()
+	 * @generated
+	 */
+	void setHumanReview(boolean value);
 
 } // PublicInterestText

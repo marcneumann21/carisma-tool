@@ -7,6 +7,6 @@ import java.util.List;
  * Data container for the documentation.
  *
  */
-public record EUAIActDocumentationSectionResult(EUAIActDocumentationSection sectionName, List<String> foundDocumentation,
-		List<String> missingDocumentation, List<String> notes) {
+public record EUAIActDocumentationSectionResult(EUAIActDocumentationSection sectionName,
+		List<String> foundDocumentation, List<String> missingDocumentation, List<String> notes) {
 };

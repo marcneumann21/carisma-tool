@@ -19,14 +19,14 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum Role implements Enumerator {
 	/**
-	 * The '<em><b>Safety Component</b></em>' literal object.
+	 * The '<em><b>Component</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #SAFETY_COMPONENT_VALUE
+	 * @see #COMPONENT_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	SAFETY_COMPONENT(0, "SafetyComponent", "SafetyComponent"),
+	COMPONENT(0, "Component", "Component"),
 
 	/**
 	 * The '<em><b>Product Itself</b></em>' literal object.
@@ -39,15 +39,15 @@ public enum Role implements Enumerator {
 	PRODUCT_ITSELF(1, "ProductItself", "ProductItself");
 
 	/**
-	 * The '<em><b>Safety Component</b></em>' literal value.
+	 * The '<em><b>Component</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #SAFETY_COMPONENT
-	 * @model name="SafetyComponent"
+	 * @see #COMPONENT
+	 * @model name="Component"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int SAFETY_COMPONENT_VALUE = 0;
+	public static final int COMPONENT_VALUE = 0;
 
 	/**
 	 * The '<em><b>Product Itself</b></em>' literal value.
@@ -68,7 +68,7 @@ public enum Role implements Enumerator {
 	 */
 	private static final Role[] VALUES_ARRAY =
 		new Role[] {
-			SAFETY_COMPONENT,
+			COMPONENT,
 			PRODUCT_ITSELF,
 		};
 
@@ -126,7 +126,7 @@ public enum Role implements Enumerator {
 	 */
 	public static Role get(int value) {
 		switch (value) {
-			case SAFETY_COMPONENT_VALUE: return SAFETY_COMPONENT;
+			case COMPONENT_VALUE: return COMPONENT;
 			case PRODUCT_ITSELF_VALUE: return PRODUCT_ITSELF;
 		}
 		return null;

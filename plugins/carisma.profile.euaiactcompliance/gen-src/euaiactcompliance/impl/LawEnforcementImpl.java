@@ -34,6 +34,7 @@ import org.eclipse.uml2.uml.UseCase;
  *   <li>{@link euaiactcompliance.impl.LawEnforcementImpl#isPreparatoryTask <em>Preparatory Task</em>}</li>
  *   <li>{@link euaiactcompliance.impl.LawEnforcementImpl#isImprovesHumanActivity <em>Improves Human Activity</em>}</li>
  *   <li>{@link euaiactcompliance.impl.LawEnforcementImpl#getBase_UseCase <em>Base Use Case</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.LawEnforcementImpl#isSupportsHumanAssessment <em>Supports Human Assessment</em>}</li>
  * </ul>
  *
  * @generated
@@ -248,6 +249,26 @@ public class LawEnforcementImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected UseCase base_UseCase;
+
+	/**
+	 * The default value of the '{@link #isSupportsHumanAssessment() <em>Supports Human Assessment</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSupportsHumanAssessment()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean SUPPORTS_HUMAN_ASSESSMENT_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isSupportsHumanAssessment() <em>Supports Human Assessment</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSupportsHumanAssessment()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean supportsHumanAssessment = SUPPORTS_HUMAN_ASSESSMENT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -544,6 +565,29 @@ public class LawEnforcementImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
+	public boolean isSupportsHumanAssessment() {
+		return supportsHumanAssessment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSupportsHumanAssessment(boolean newSupportsHumanAssessment) {
+		boolean oldSupportsHumanAssessment = supportsHumanAssessment;
+		supportsHumanAssessment = newSupportsHumanAssessment;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.LAW_ENFORCEMENT__SUPPORTS_HUMAN_ASSESSMENT, oldSupportsHumanAssessment, supportsHumanAssessment));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case EuaiactcompliancePackage.LAW_ENFORCEMENT__VICTIM_RISK_ASSESSMENT:
@@ -569,6 +613,8 @@ public class LawEnforcementImpl extends MinimalEObjectImpl.Container implements 
 			case EuaiactcompliancePackage.LAW_ENFORCEMENT__BASE_USE_CASE:
 				if (resolve) return getBase_UseCase();
 				return basicGetBase_UseCase();
+			case EuaiactcompliancePackage.LAW_ENFORCEMENT__SUPPORTS_HUMAN_ASSESSMENT:
+				return isSupportsHumanAssessment();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -613,6 +659,9 @@ public class LawEnforcementImpl extends MinimalEObjectImpl.Container implements 
 				return;
 			case EuaiactcompliancePackage.LAW_ENFORCEMENT__BASE_USE_CASE:
 				setBase_UseCase((UseCase)newValue);
+				return;
+			case EuaiactcompliancePackage.LAW_ENFORCEMENT__SUPPORTS_HUMAN_ASSESSMENT:
+				setSupportsHumanAssessment((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -659,6 +708,9 @@ public class LawEnforcementImpl extends MinimalEObjectImpl.Container implements 
 			case EuaiactcompliancePackage.LAW_ENFORCEMENT__BASE_USE_CASE:
 				setBase_UseCase((UseCase)null);
 				return;
+			case EuaiactcompliancePackage.LAW_ENFORCEMENT__SUPPORTS_HUMAN_ASSESSMENT:
+				setSupportsHumanAssessment(SUPPORTS_HUMAN_ASSESSMENT_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -693,6 +745,8 @@ public class LawEnforcementImpl extends MinimalEObjectImpl.Container implements 
 				return improvesHumanActivity != IMPROVES_HUMAN_ACTIVITY_EDEFAULT;
 			case EuaiactcompliancePackage.LAW_ENFORCEMENT__BASE_USE_CASE:
 				return base_UseCase != null;
+			case EuaiactcompliancePackage.LAW_ENFORCEMENT__SUPPORTS_HUMAN_ASSESSMENT:
+				return supportsHumanAssessment != SUPPORTS_HUMAN_ASSESSMENT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -727,6 +781,8 @@ public class LawEnforcementImpl extends MinimalEObjectImpl.Container implements 
 		result.append(preparatoryTask);
 		result.append(", ImprovesHumanActivity: ");
 		result.append(improvesHumanActivity);
+		result.append(", SupportsHumanAssessment: ");
+		result.append(supportsHumanAssessment);
 		result.append(')');
 		return result.toString();
 	}

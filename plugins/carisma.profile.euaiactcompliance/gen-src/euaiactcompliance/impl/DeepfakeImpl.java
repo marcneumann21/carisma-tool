@@ -24,6 +24,7 @@ import org.eclipse.uml2.uml.UseCase;
  * </p>
  * <ul>
  *   <li>{@link euaiactcompliance.impl.DeepfakeImpl#getBase_UseCase <em>Base Use Case</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.DeepfakeImpl#isCreativeWork <em>Creative Work</em>}</li>
  * </ul>
  *
  * @generated
@@ -38,6 +39,26 @@ public class DeepfakeImpl extends MinimalEObjectImpl.Container implements Deepfa
 	 * @ordered
 	 */
 	protected UseCase base_UseCase;
+
+	/**
+	 * The default value of the '{@link #isCreativeWork() <em>Creative Work</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isCreativeWork()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean CREATIVE_WORK_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isCreativeWork() <em>Creative Work</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isCreativeWork()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean creativeWork = CREATIVE_WORK_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -104,11 +125,36 @@ public class DeepfakeImpl extends MinimalEObjectImpl.Container implements Deepfa
 	 * @generated
 	 */
 	@Override
+	public boolean isCreativeWork() {
+		return creativeWork;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setCreativeWork(boolean newCreativeWork) {
+		boolean oldCreativeWork = creativeWork;
+		creativeWork = newCreativeWork;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.DEEPFAKE__CREATIVE_WORK, oldCreativeWork, creativeWork));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case EuaiactcompliancePackage.DEEPFAKE__BASE_USE_CASE:
 				if (resolve) return getBase_UseCase();
 				return basicGetBase_UseCase();
+			case EuaiactcompliancePackage.DEEPFAKE__CREATIVE_WORK:
+				return isCreativeWork();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -123,6 +169,9 @@ public class DeepfakeImpl extends MinimalEObjectImpl.Container implements Deepfa
 		switch (featureID) {
 			case EuaiactcompliancePackage.DEEPFAKE__BASE_USE_CASE:
 				setBase_UseCase((UseCase)newValue);
+				return;
+			case EuaiactcompliancePackage.DEEPFAKE__CREATIVE_WORK:
+				setCreativeWork((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -139,6 +188,9 @@ public class DeepfakeImpl extends MinimalEObjectImpl.Container implements Deepfa
 			case EuaiactcompliancePackage.DEEPFAKE__BASE_USE_CASE:
 				setBase_UseCase((UseCase)null);
 				return;
+			case EuaiactcompliancePackage.DEEPFAKE__CREATIVE_WORK:
+				setCreativeWork(CREATIVE_WORK_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -153,8 +205,26 @@ public class DeepfakeImpl extends MinimalEObjectImpl.Container implements Deepfa
 		switch (featureID) {
 			case EuaiactcompliancePackage.DEEPFAKE__BASE_USE_CASE:
 				return base_UseCase != null;
+			case EuaiactcompliancePackage.DEEPFAKE__CREATIVE_WORK:
+				return creativeWork != CREATIVE_WORK_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (CreativeWork: ");
+		result.append(creativeWork);
+		result.append(')');
+		return result.toString();
 	}
 
 } //DeepfakeImpl
