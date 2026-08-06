@@ -81,6 +81,7 @@ public class EUAIActDocumentationGenerator {
 				"UpdateRequirements", "Update requirements", "Annex IV(1)(c)");
 
 		// Annex IV(1)(d) market placement form
+		// EmbeddedInHardware, Download, API
 		documentMandatoryString(foundDocumentation, missingDocumentation, notes, this.aiSystem,
 				EUAIActCompliance.AISystem, "MarketPlacementForm", "Form of placing on the market", "Annex IV(1)(d)");
 
@@ -89,8 +90,14 @@ public class EUAIActDocumentationGenerator {
 				EUAIActCompliance.AISystem, "Hardware", "Description of the hardware", "Annex IV(1)(e)");
 
 		// Annex IV(1)(f) visual documentation
-		documentConditionalBoolean(foundDocumentation, notes, this.aiSystem, EUAIActCompliance.AISystem,
-				"VisualDocumentation", "Photographs or illustrations", "Annex IV(1)(f)");
+		if (EUAIActComplianceUtil.hasStereotype(this.aiSystem, EUAIActCompliance.ProductEmbedding)) {
+			documentMandatoryBoolean(foundDocumentation, missingDocumentation, notes, this.aiSystem,
+					EUAIActCompliance.AISystem, "VisualDocumentation", "Photographs or illustrations",
+					"Annex IV(1)(f)");
+		} else {
+			addNote(notes, "Photographs or illustrations",
+					"not applicable, because the AI system is not modelled as part of a product", "Annex IV(1)(f)");
+		}
 
 		// Annex IV(1)(g) ui
 		documentMandatoryString(foundDocumentation, missingDocumentation, notes, this.aiSystem,
