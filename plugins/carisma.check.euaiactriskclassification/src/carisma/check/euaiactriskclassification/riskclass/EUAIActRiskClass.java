@@ -7,8 +7,8 @@ package carisma.check.euaiactriskclassification.riskclass;
  * @author Marc Neumann
  */
 public enum EUAIActRiskClass {
-	Unacceptable("Unnacceptable Risk (Article 5)"), High("High Risk (Article 6 and Annex I/III)"),
-	Limited("Limited Risk (Article 50)"), Minimal("Minimal Risk"), Undetermined("No Risk Class appliciable");
+	Unacceptable("Unacceptable Risk (Article 5)"), High("High Risk (Article 6 and Annex I/III)"),
+	Limited("Limited Risk (Article 50)"), Minimal("Minimal Risk"), Undetermined("No Risk Class applicable");
 
 	private final String readableName;
 

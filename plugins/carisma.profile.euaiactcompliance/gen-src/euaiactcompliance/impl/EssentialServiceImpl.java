@@ -5,13 +5,19 @@ package euaiactcompliance.impl;
 import euaiactcompliance.EssentialService;
 import euaiactcompliance.EuaiactcompliancePackage;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 import org.eclipse.uml2.uml.UseCase;
 
@@ -27,13 +33,10 @@ import org.eclipse.uml2.uml.UseCase;
  *   <li>{@link euaiactcompliance.impl.EssentialServiceImpl#isPublicBenefitsEligibility <em>Public Benefits Eligibility</em>}</li>
  *   <li>{@link euaiactcompliance.impl.EssentialServiceImpl#isFraudDetectionOnly <em>Fraud Detection Only</em>}</li>
  *   <li>{@link euaiactcompliance.impl.EssentialServiceImpl#isInsuranceRiskPricing <em>Insurance Risk Pricing</em>}</li>
- *   <li>{@link euaiactcompliance.impl.EssentialServiceImpl#isPreparatoryTask <em>Preparatory Task</em>}</li>
- *   <li>{@link euaiactcompliance.impl.EssentialServiceImpl#isNarrowProceduralTask <em>Narrow Procedural Task</em>}</li>
- *   <li>{@link euaiactcompliance.impl.EssentialServiceImpl#getExceptionJustification <em>Exception Justification</em>}</li>
- *   <li>{@link euaiactcompliance.impl.EssentialServiceImpl#isImprovesHumanActivity <em>Improves Human Activity</em>}</li>
- *   <li>{@link euaiactcompliance.impl.EssentialServiceImpl#isDecisionPatternDetection <em>Decision Pattern Detection</em>}</li>
  *   <li>{@link euaiactcompliance.impl.EssentialServiceImpl#getBase_UseCase <em>Base Use Case</em>}</li>
  *   <li>{@link euaiactcompliance.impl.EssentialServiceImpl#isEmergency <em>Emergency</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.EssentialServiceImpl#getExceptionJustification <em>Exception Justification</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.EssentialServiceImpl#getException <em>Exception</em>}</li>
  * </ul>
  *
  * @generated
@@ -120,106 +123,6 @@ public class EssentialServiceImpl extends MinimalEObjectImpl.Container implement
 	protected boolean insuranceRiskPricing = INSURANCE_RISK_PRICING_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isPreparatoryTask() <em>Preparatory Task</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isPreparatoryTask()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean PREPARATORY_TASK_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isPreparatoryTask() <em>Preparatory Task</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isPreparatoryTask()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean preparatoryTask = PREPARATORY_TASK_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isNarrowProceduralTask() <em>Narrow Procedural Task</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isNarrowProceduralTask()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean NARROW_PROCEDURAL_TASK_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isNarrowProceduralTask() <em>Narrow Procedural Task</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isNarrowProceduralTask()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean narrowProceduralTask = NARROW_PROCEDURAL_TASK_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getExceptionJustification() <em>Exception Justification</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExceptionJustification()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String EXCEPTION_JUSTIFICATION_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getExceptionJustification() <em>Exception Justification</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExceptionJustification()
-	 * @generated
-	 * @ordered
-	 */
-	protected String exceptionJustification = EXCEPTION_JUSTIFICATION_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isImprovesHumanActivity() <em>Improves Human Activity</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isImprovesHumanActivity()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean IMPROVES_HUMAN_ACTIVITY_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isImprovesHumanActivity() <em>Improves Human Activity</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isImprovesHumanActivity()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean improvesHumanActivity = IMPROVES_HUMAN_ACTIVITY_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isDecisionPatternDetection() <em>Decision Pattern Detection</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isDecisionPatternDetection()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean DECISION_PATTERN_DETECTION_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isDecisionPatternDetection() <em>Decision Pattern Detection</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isDecisionPatternDetection()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean decisionPatternDetection = DECISION_PATTERN_DETECTION_EDEFAULT;
-
-	/**
 	 * The cached value of the '{@link #getBase_UseCase() <em>Base Use Case</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -248,6 +151,36 @@ public class EssentialServiceImpl extends MinimalEObjectImpl.Container implement
 	 * @ordered
 	 */
 	protected boolean emergency = EMERGENCY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getExceptionJustification() <em>Exception Justification</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExceptionJustification()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String EXCEPTION_JUSTIFICATION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getExceptionJustification() <em>Exception Justification</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExceptionJustification()
+	 * @generated
+	 * @ordered
+	 */
+	protected String exceptionJustification = EXCEPTION_JUSTIFICATION_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getException() <em>Exception</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getException()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<euaiactcompliance.Exception> exception;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -366,121 +299,6 @@ public class EssentialServiceImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public boolean isPreparatoryTask() {
-		return preparatoryTask;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setPreparatoryTask(boolean newPreparatoryTask) {
-		boolean oldPreparatoryTask = preparatoryTask;
-		preparatoryTask = newPreparatoryTask;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.ESSENTIAL_SERVICE__PREPARATORY_TASK, oldPreparatoryTask, preparatoryTask));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isNarrowProceduralTask() {
-		return narrowProceduralTask;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setNarrowProceduralTask(boolean newNarrowProceduralTask) {
-		boolean oldNarrowProceduralTask = narrowProceduralTask;
-		narrowProceduralTask = newNarrowProceduralTask;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.ESSENTIAL_SERVICE__NARROW_PROCEDURAL_TASK, oldNarrowProceduralTask, narrowProceduralTask));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getExceptionJustification() {
-		return exceptionJustification;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setExceptionJustification(String newExceptionJustification) {
-		String oldExceptionJustification = exceptionJustification;
-		exceptionJustification = newExceptionJustification;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.ESSENTIAL_SERVICE__EXCEPTION_JUSTIFICATION, oldExceptionJustification, exceptionJustification));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isImprovesHumanActivity() {
-		return improvesHumanActivity;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setImprovesHumanActivity(boolean newImprovesHumanActivity) {
-		boolean oldImprovesHumanActivity = improvesHumanActivity;
-		improvesHumanActivity = newImprovesHumanActivity;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.ESSENTIAL_SERVICE__IMPROVES_HUMAN_ACTIVITY, oldImprovesHumanActivity, improvesHumanActivity));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isDecisionPatternDetection() {
-		return decisionPatternDetection;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setDecisionPatternDetection(boolean newDecisionPatternDetection) {
-		boolean oldDecisionPatternDetection = decisionPatternDetection;
-		decisionPatternDetection = newDecisionPatternDetection;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.ESSENTIAL_SERVICE__DECISION_PATTERN_DETECTION, oldDecisionPatternDetection, decisionPatternDetection));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public UseCase getBase_UseCase() {
 		if (base_UseCase != null && base_UseCase.eIsProxy()) {
 			InternalEObject oldBase_UseCase = (InternalEObject)base_UseCase;
@@ -544,6 +362,42 @@ public class EssentialServiceImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
+	public String getExceptionJustification() {
+		return exceptionJustification;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setExceptionJustification(String newExceptionJustification) {
+		String oldExceptionJustification = exceptionJustification;
+		exceptionJustification = newExceptionJustification;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.ESSENTIAL_SERVICE__EXCEPTION_JUSTIFICATION, oldExceptionJustification, exceptionJustification));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<euaiactcompliance.Exception> getException() {
+		if (exception == null) {
+			exception = new EDataTypeUniqueEList<euaiactcompliance.Exception>(euaiactcompliance.Exception.class, this, EuaiactcompliancePackage.ESSENTIAL_SERVICE__EXCEPTION);
+		}
+		return exception;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__CREDITWORTHINESS:
@@ -554,21 +408,15 @@ public class EssentialServiceImpl extends MinimalEObjectImpl.Container implement
 				return isFraudDetectionOnly();
 			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__INSURANCE_RISK_PRICING:
 				return isInsuranceRiskPricing();
-			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__PREPARATORY_TASK:
-				return isPreparatoryTask();
-			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__NARROW_PROCEDURAL_TASK:
-				return isNarrowProceduralTask();
-			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__EXCEPTION_JUSTIFICATION:
-				return getExceptionJustification();
-			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__IMPROVES_HUMAN_ACTIVITY:
-				return isImprovesHumanActivity();
-			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__DECISION_PATTERN_DETECTION:
-				return isDecisionPatternDetection();
 			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__BASE_USE_CASE:
 				if (resolve) return getBase_UseCase();
 				return basicGetBase_UseCase();
 			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__EMERGENCY:
 				return isEmergency();
+			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__EXCEPTION_JUSTIFICATION:
+				return getExceptionJustification();
+			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__EXCEPTION:
+				return getException();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -578,6 +426,7 @@ public class EssentialServiceImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -593,26 +442,18 @@ public class EssentialServiceImpl extends MinimalEObjectImpl.Container implement
 			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__INSURANCE_RISK_PRICING:
 				setInsuranceRiskPricing((Boolean)newValue);
 				return;
-			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__PREPARATORY_TASK:
-				setPreparatoryTask((Boolean)newValue);
-				return;
-			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__NARROW_PROCEDURAL_TASK:
-				setNarrowProceduralTask((Boolean)newValue);
-				return;
-			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__EXCEPTION_JUSTIFICATION:
-				setExceptionJustification((String)newValue);
-				return;
-			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__IMPROVES_HUMAN_ACTIVITY:
-				setImprovesHumanActivity((Boolean)newValue);
-				return;
-			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__DECISION_PATTERN_DETECTION:
-				setDecisionPatternDetection((Boolean)newValue);
-				return;
 			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__BASE_USE_CASE:
 				setBase_UseCase((UseCase)newValue);
 				return;
 			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__EMERGENCY:
 				setEmergency((Boolean)newValue);
+				return;
+			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__EXCEPTION_JUSTIFICATION:
+				setExceptionJustification((String)newValue);
+				return;
+			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__EXCEPTION:
+				getException().clear();
+				getException().addAll((Collection<? extends euaiactcompliance.Exception>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -638,26 +479,17 @@ public class EssentialServiceImpl extends MinimalEObjectImpl.Container implement
 			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__INSURANCE_RISK_PRICING:
 				setInsuranceRiskPricing(INSURANCE_RISK_PRICING_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__PREPARATORY_TASK:
-				setPreparatoryTask(PREPARATORY_TASK_EDEFAULT);
-				return;
-			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__NARROW_PROCEDURAL_TASK:
-				setNarrowProceduralTask(NARROW_PROCEDURAL_TASK_EDEFAULT);
-				return;
-			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__EXCEPTION_JUSTIFICATION:
-				setExceptionJustification(EXCEPTION_JUSTIFICATION_EDEFAULT);
-				return;
-			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__IMPROVES_HUMAN_ACTIVITY:
-				setImprovesHumanActivity(IMPROVES_HUMAN_ACTIVITY_EDEFAULT);
-				return;
-			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__DECISION_PATTERN_DETECTION:
-				setDecisionPatternDetection(DECISION_PATTERN_DETECTION_EDEFAULT);
-				return;
 			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__BASE_USE_CASE:
 				setBase_UseCase((UseCase)null);
 				return;
 			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__EMERGENCY:
 				setEmergency(EMERGENCY_EDEFAULT);
+				return;
+			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__EXCEPTION_JUSTIFICATION:
+				setExceptionJustification(EXCEPTION_JUSTIFICATION_EDEFAULT);
+				return;
+			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__EXCEPTION:
+				getException().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -679,20 +511,14 @@ public class EssentialServiceImpl extends MinimalEObjectImpl.Container implement
 				return fraudDetectionOnly != FRAUD_DETECTION_ONLY_EDEFAULT;
 			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__INSURANCE_RISK_PRICING:
 				return insuranceRiskPricing != INSURANCE_RISK_PRICING_EDEFAULT;
-			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__PREPARATORY_TASK:
-				return preparatoryTask != PREPARATORY_TASK_EDEFAULT;
-			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__NARROW_PROCEDURAL_TASK:
-				return narrowProceduralTask != NARROW_PROCEDURAL_TASK_EDEFAULT;
-			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__EXCEPTION_JUSTIFICATION:
-				return EXCEPTION_JUSTIFICATION_EDEFAULT == null ? exceptionJustification != null : !EXCEPTION_JUSTIFICATION_EDEFAULT.equals(exceptionJustification);
-			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__IMPROVES_HUMAN_ACTIVITY:
-				return improvesHumanActivity != IMPROVES_HUMAN_ACTIVITY_EDEFAULT;
-			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__DECISION_PATTERN_DETECTION:
-				return decisionPatternDetection != DECISION_PATTERN_DETECTION_EDEFAULT;
 			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__BASE_USE_CASE:
 				return base_UseCase != null;
 			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__EMERGENCY:
 				return emergency != EMERGENCY_EDEFAULT;
+			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__EXCEPTION_JUSTIFICATION:
+				return EXCEPTION_JUSTIFICATION_EDEFAULT == null ? exceptionJustification != null : !EXCEPTION_JUSTIFICATION_EDEFAULT.equals(exceptionJustification);
+			case EuaiactcompliancePackage.ESSENTIAL_SERVICE__EXCEPTION:
+				return exception != null && !exception.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -715,18 +541,12 @@ public class EssentialServiceImpl extends MinimalEObjectImpl.Container implement
 		result.append(fraudDetectionOnly);
 		result.append(", InsuranceRiskPricing: ");
 		result.append(insuranceRiskPricing);
-		result.append(", PreparatoryTask: ");
-		result.append(preparatoryTask);
-		result.append(", NarrowProceduralTask: ");
-		result.append(narrowProceduralTask);
-		result.append(", ExceptionJustification: ");
-		result.append(exceptionJustification);
-		result.append(", ImprovesHumanActivity: ");
-		result.append(improvesHumanActivity);
-		result.append(", DecisionPatternDetection: ");
-		result.append(decisionPatternDetection);
 		result.append(", Emergency: ");
 		result.append(emergency);
+		result.append(", ExceptionJustification: ");
+		result.append(exceptionJustification);
+		result.append(", Exception: ");
+		result.append(exception);
 		result.append(')');
 		return result.toString();
 	}

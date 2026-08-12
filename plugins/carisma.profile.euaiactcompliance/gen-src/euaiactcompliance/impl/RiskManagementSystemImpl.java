@@ -3,7 +3,7 @@
 package euaiactcompliance.impl;
 
 import euaiactcompliance.EuaiactcompliancePackage;
-import euaiactcompliance.RiskManagement;
+import euaiactcompliance.RiskManagementSystem;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -17,26 +17,26 @@ import org.eclipse.uml2.uml.Artifact;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Risk Management</b></em>'.
+ * An implementation of the model object '<em><b>Risk Management System</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link euaiactcompliance.impl.RiskManagementImpl#getRiskIdentification <em>Risk Identification</em>}</li>
- *   <li>{@link euaiactcompliance.impl.RiskManagementImpl#getRiskEstimation <em>Risk Estimation</em>}</li>
- *   <li>{@link euaiactcompliance.impl.RiskManagementImpl#getPostMarketRiskEvaluation <em>Post Market Risk Evaluation</em>}</li>
- *   <li>{@link euaiactcompliance.impl.RiskManagementImpl#getRiskMitigation <em>Risk Mitigation</em>}</li>
- *   <li>{@link euaiactcompliance.impl.RiskManagementImpl#getResidualRisk <em>Residual Risk</em>}</li>
- *   <li>{@link euaiactcompliance.impl.RiskManagementImpl#getTestingProcedure <em>Testing Procedure</em>}</li>
- *   <li>{@link euaiactcompliance.impl.RiskManagementImpl#getTestingMetrics <em>Testing Metrics</em>}</li>
- *   <li>{@link euaiactcompliance.impl.RiskManagementImpl#getVulnerableGroupsAssessment <em>Vulnerable Groups Assessment</em>}</li>
- *   <li>{@link euaiactcompliance.impl.RiskManagementImpl#getBase_Artifact <em>Base Artifact</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.RiskManagementSystemImpl#getRiskIdentification <em>Risk Identification</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.RiskManagementSystemImpl#getRiskEstimation <em>Risk Estimation</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.RiskManagementSystemImpl#getPostMarketRiskEvaluation <em>Post Market Risk Evaluation</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.RiskManagementSystemImpl#getRiskMitigation <em>Risk Mitigation</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.RiskManagementSystemImpl#getResidualRisk <em>Residual Risk</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.RiskManagementSystemImpl#getTestingProcedure <em>Testing Procedure</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.RiskManagementSystemImpl#getTestingMetrics <em>Testing Metrics</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.RiskManagementSystemImpl#getVulnerableGroupsAssessment <em>Vulnerable Groups Assessment</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.RiskManagementSystemImpl#getBase_Artifact <em>Base Artifact</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class RiskManagementImpl extends MinimalEObjectImpl.Container implements RiskManagement {
+public class RiskManagementSystemImpl extends MinimalEObjectImpl.Container implements RiskManagementSystem {
 	/**
 	 * The default value of the '{@link #getRiskIdentification() <em>Risk Identification</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -212,7 +212,7 @@ public class RiskManagementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RiskManagementImpl() {
+	protected RiskManagementSystemImpl() {
 		super();
 	}
 
@@ -223,7 +223,7 @@ public class RiskManagementImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EuaiactcompliancePackage.Literals.RISK_MANAGEMENT;
+		return EuaiactcompliancePackage.Literals.RISK_MANAGEMENT_SYSTEM;
 	}
 
 	/**
@@ -246,7 +246,7 @@ public class RiskManagementImpl extends MinimalEObjectImpl.Container implements 
 		String oldRiskIdentification = riskIdentification;
 		riskIdentification = newRiskIdentification;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.RISK_MANAGEMENT__RISK_IDENTIFICATION, oldRiskIdentification, riskIdentification));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RISK_IDENTIFICATION, oldRiskIdentification, riskIdentification));
 	}
 
 	/**
@@ -269,7 +269,7 @@ public class RiskManagementImpl extends MinimalEObjectImpl.Container implements 
 		String oldRiskEstimation = riskEstimation;
 		riskEstimation = newRiskEstimation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.RISK_MANAGEMENT__RISK_ESTIMATION, oldRiskEstimation, riskEstimation));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RISK_ESTIMATION, oldRiskEstimation, riskEstimation));
 	}
 
 	/**
@@ -292,7 +292,7 @@ public class RiskManagementImpl extends MinimalEObjectImpl.Container implements 
 		String oldPostMarketRiskEvaluation = postMarketRiskEvaluation;
 		postMarketRiskEvaluation = newPostMarketRiskEvaluation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.RISK_MANAGEMENT__POST_MARKET_RISK_EVALUATION, oldPostMarketRiskEvaluation, postMarketRiskEvaluation));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__POST_MARKET_RISK_EVALUATION, oldPostMarketRiskEvaluation, postMarketRiskEvaluation));
 	}
 
 	/**
@@ -315,7 +315,7 @@ public class RiskManagementImpl extends MinimalEObjectImpl.Container implements 
 		String oldRiskMitigation = riskMitigation;
 		riskMitigation = newRiskMitigation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.RISK_MANAGEMENT__RISK_MITIGATION, oldRiskMitigation, riskMitigation));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RISK_MITIGATION, oldRiskMitigation, riskMitigation));
 	}
 
 	/**
@@ -338,7 +338,7 @@ public class RiskManagementImpl extends MinimalEObjectImpl.Container implements 
 		String oldResidualRisk = residualRisk;
 		residualRisk = newResidualRisk;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.RISK_MANAGEMENT__RESIDUAL_RISK, oldResidualRisk, residualRisk));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RESIDUAL_RISK, oldResidualRisk, residualRisk));
 	}
 
 	/**
@@ -361,7 +361,7 @@ public class RiskManagementImpl extends MinimalEObjectImpl.Container implements 
 		String oldTestingProcedure = testingProcedure;
 		testingProcedure = newTestingProcedure;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.RISK_MANAGEMENT__TESTING_PROCEDURE, oldTestingProcedure, testingProcedure));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__TESTING_PROCEDURE, oldTestingProcedure, testingProcedure));
 	}
 
 	/**
@@ -384,7 +384,7 @@ public class RiskManagementImpl extends MinimalEObjectImpl.Container implements 
 		String oldTestingMetrics = testingMetrics;
 		testingMetrics = newTestingMetrics;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.RISK_MANAGEMENT__TESTING_METRICS, oldTestingMetrics, testingMetrics));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__TESTING_METRICS, oldTestingMetrics, testingMetrics));
 	}
 
 	/**
@@ -407,7 +407,7 @@ public class RiskManagementImpl extends MinimalEObjectImpl.Container implements 
 		String oldVulnerableGroupsAssessment = vulnerableGroupsAssessment;
 		vulnerableGroupsAssessment = newVulnerableGroupsAssessment;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.RISK_MANAGEMENT__VULNERABLE_GROUPS_ASSESSMENT, oldVulnerableGroupsAssessment, vulnerableGroupsAssessment));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__VULNERABLE_GROUPS_ASSESSMENT, oldVulnerableGroupsAssessment, vulnerableGroupsAssessment));
 	}
 
 	/**
@@ -422,7 +422,7 @@ public class RiskManagementImpl extends MinimalEObjectImpl.Container implements 
 			base_Artifact = (Artifact)eResolveProxy(oldBase_Artifact);
 			if (base_Artifact != oldBase_Artifact) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EuaiactcompliancePackage.RISK_MANAGEMENT__BASE_ARTIFACT, oldBase_Artifact, base_Artifact));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__BASE_ARTIFACT, oldBase_Artifact, base_Artifact));
 			}
 		}
 		return base_Artifact;
@@ -447,7 +447,7 @@ public class RiskManagementImpl extends MinimalEObjectImpl.Container implements 
 		Artifact oldBase_Artifact = base_Artifact;
 		base_Artifact = newBase_Artifact;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.RISK_MANAGEMENT__BASE_ARTIFACT, oldBase_Artifact, base_Artifact));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__BASE_ARTIFACT, oldBase_Artifact, base_Artifact));
 	}
 
 	/**
@@ -458,23 +458,23 @@ public class RiskManagementImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__RISK_IDENTIFICATION:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RISK_IDENTIFICATION:
 				return getRiskIdentification();
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__RISK_ESTIMATION:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RISK_ESTIMATION:
 				return getRiskEstimation();
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__POST_MARKET_RISK_EVALUATION:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__POST_MARKET_RISK_EVALUATION:
 				return getPostMarketRiskEvaluation();
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__RISK_MITIGATION:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RISK_MITIGATION:
 				return getRiskMitigation();
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__RESIDUAL_RISK:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RESIDUAL_RISK:
 				return getResidualRisk();
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__TESTING_PROCEDURE:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__TESTING_PROCEDURE:
 				return getTestingProcedure();
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__TESTING_METRICS:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__TESTING_METRICS:
 				return getTestingMetrics();
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__VULNERABLE_GROUPS_ASSESSMENT:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__VULNERABLE_GROUPS_ASSESSMENT:
 				return getVulnerableGroupsAssessment();
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__BASE_ARTIFACT:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__BASE_ARTIFACT:
 				if (resolve) return getBase_Artifact();
 				return basicGetBase_Artifact();
 		}
@@ -489,31 +489,31 @@ public class RiskManagementImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__RISK_IDENTIFICATION:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RISK_IDENTIFICATION:
 				setRiskIdentification((String)newValue);
 				return;
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__RISK_ESTIMATION:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RISK_ESTIMATION:
 				setRiskEstimation((String)newValue);
 				return;
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__POST_MARKET_RISK_EVALUATION:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__POST_MARKET_RISK_EVALUATION:
 				setPostMarketRiskEvaluation((String)newValue);
 				return;
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__RISK_MITIGATION:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RISK_MITIGATION:
 				setRiskMitigation((String)newValue);
 				return;
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__RESIDUAL_RISK:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RESIDUAL_RISK:
 				setResidualRisk((String)newValue);
 				return;
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__TESTING_PROCEDURE:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__TESTING_PROCEDURE:
 				setTestingProcedure((String)newValue);
 				return;
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__TESTING_METRICS:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__TESTING_METRICS:
 				setTestingMetrics((String)newValue);
 				return;
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__VULNERABLE_GROUPS_ASSESSMENT:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__VULNERABLE_GROUPS_ASSESSMENT:
 				setVulnerableGroupsAssessment((String)newValue);
 				return;
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__BASE_ARTIFACT:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__BASE_ARTIFACT:
 				setBase_Artifact((Artifact)newValue);
 				return;
 		}
@@ -528,31 +528,31 @@ public class RiskManagementImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__RISK_IDENTIFICATION:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RISK_IDENTIFICATION:
 				setRiskIdentification(RISK_IDENTIFICATION_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__RISK_ESTIMATION:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RISK_ESTIMATION:
 				setRiskEstimation(RISK_ESTIMATION_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__POST_MARKET_RISK_EVALUATION:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__POST_MARKET_RISK_EVALUATION:
 				setPostMarketRiskEvaluation(POST_MARKET_RISK_EVALUATION_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__RISK_MITIGATION:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RISK_MITIGATION:
 				setRiskMitigation(RISK_MITIGATION_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__RESIDUAL_RISK:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RESIDUAL_RISK:
 				setResidualRisk(RESIDUAL_RISK_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__TESTING_PROCEDURE:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__TESTING_PROCEDURE:
 				setTestingProcedure(TESTING_PROCEDURE_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__TESTING_METRICS:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__TESTING_METRICS:
 				setTestingMetrics(TESTING_METRICS_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__VULNERABLE_GROUPS_ASSESSMENT:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__VULNERABLE_GROUPS_ASSESSMENT:
 				setVulnerableGroupsAssessment(VULNERABLE_GROUPS_ASSESSMENT_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__BASE_ARTIFACT:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__BASE_ARTIFACT:
 				setBase_Artifact((Artifact)null);
 				return;
 		}
@@ -567,23 +567,23 @@ public class RiskManagementImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__RISK_IDENTIFICATION:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RISK_IDENTIFICATION:
 				return RISK_IDENTIFICATION_EDEFAULT == null ? riskIdentification != null : !RISK_IDENTIFICATION_EDEFAULT.equals(riskIdentification);
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__RISK_ESTIMATION:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RISK_ESTIMATION:
 				return RISK_ESTIMATION_EDEFAULT == null ? riskEstimation != null : !RISK_ESTIMATION_EDEFAULT.equals(riskEstimation);
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__POST_MARKET_RISK_EVALUATION:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__POST_MARKET_RISK_EVALUATION:
 				return POST_MARKET_RISK_EVALUATION_EDEFAULT == null ? postMarketRiskEvaluation != null : !POST_MARKET_RISK_EVALUATION_EDEFAULT.equals(postMarketRiskEvaluation);
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__RISK_MITIGATION:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RISK_MITIGATION:
 				return RISK_MITIGATION_EDEFAULT == null ? riskMitigation != null : !RISK_MITIGATION_EDEFAULT.equals(riskMitigation);
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__RESIDUAL_RISK:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RESIDUAL_RISK:
 				return RESIDUAL_RISK_EDEFAULT == null ? residualRisk != null : !RESIDUAL_RISK_EDEFAULT.equals(residualRisk);
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__TESTING_PROCEDURE:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__TESTING_PROCEDURE:
 				return TESTING_PROCEDURE_EDEFAULT == null ? testingProcedure != null : !TESTING_PROCEDURE_EDEFAULT.equals(testingProcedure);
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__TESTING_METRICS:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__TESTING_METRICS:
 				return TESTING_METRICS_EDEFAULT == null ? testingMetrics != null : !TESTING_METRICS_EDEFAULT.equals(testingMetrics);
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__VULNERABLE_GROUPS_ASSESSMENT:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__VULNERABLE_GROUPS_ASSESSMENT:
 				return VULNERABLE_GROUPS_ASSESSMENT_EDEFAULT == null ? vulnerableGroupsAssessment != null : !VULNERABLE_GROUPS_ASSESSMENT_EDEFAULT.equals(vulnerableGroupsAssessment);
-			case EuaiactcompliancePackage.RISK_MANAGEMENT__BASE_ARTIFACT:
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__BASE_ARTIFACT:
 				return base_Artifact != null;
 		}
 		return super.eIsSet(featureID);
@@ -619,4 +619,4 @@ public class RiskManagementImpl extends MinimalEObjectImpl.Container implements 
 		return result.toString();
 	}
 
-} //RiskManagementImpl
+} //RiskManagementSystemImpl

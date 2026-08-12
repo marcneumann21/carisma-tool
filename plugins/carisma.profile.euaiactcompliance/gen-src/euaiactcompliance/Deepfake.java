@@ -17,6 +17,7 @@ import org.eclipse.uml2.uml.UseCase;
  * <ul>
  *   <li>{@link euaiactcompliance.Deepfake#getBase_UseCase <em>Base Use Case</em>}</li>
  *   <li>{@link euaiactcompliance.Deepfake#isCreativeWork <em>Creative Work</em>}</li>
+ *   <li>{@link euaiactcompliance.Deepfake#isLawEnforcementAuthorised <em>Law Enforcement Authorised</em>}</li>
  * </ul>
  *
  * @see euaiactcompliance.EuaiactcompliancePackage#getDeepfake()
@@ -67,5 +68,27 @@ public interface Deepfake extends EObject {
 	 * @generated
 	 */
 	void setCreativeWork(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Law Enforcement Authorised</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Law Enforcement Authorised</em>' attribute.
+	 * @see #setLawEnforcementAuthorised(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getDeepfake_LawEnforcementAuthorised()
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isLawEnforcementAuthorised();
+
+	/**
+	 * Sets the value of the '{@link euaiactcompliance.Deepfake#isLawEnforcementAuthorised <em>Law Enforcement Authorised</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Law Enforcement Authorised</em>' attribute.
+	 * @see #isLawEnforcementAuthorised()
+	 * @generated
+	 */
+	void setLawEnforcementAuthorised(boolean value);
 
 } // Deepfake

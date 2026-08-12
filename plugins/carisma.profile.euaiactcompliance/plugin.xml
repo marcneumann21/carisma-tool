@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated euaiactcompliance.profile -->
       <package
-            uri="http:///euaiactcompliance.ecore"
+            uri="http://www.umlsec.de/profiles/UMLsec/euaiactcompliance.ecore"
             class="euaiactcompliance.EuaiactcompliancePackage"
             genModel="profile/euaiactcompliance.profile.genmodel"/>
    </extension>
@@ -17,7 +17,7 @@
          point="org.eclipse.uml2.uml.generated_package">
       <profile
             location="platform:/plugin/carisma.profile.euaiactcompliance/profile/euaiactcompliance.profile.uml#_INSeoINVEfG2M-ml6d0mJw"
-            uri="http://www.umlsec.de/profiles/UMLsec/euaiactcompliance">
+            uri="http://www.umlsec.de/profiles/UMLsec/euaiactcompliance.ecore">
       </profile>
    </extension>
    <extension
@@ -40,7 +40,7 @@
       <package
             class="euaiactcompliance.EuaiactcompliancePackage"
             genModel="profile/euaiactcompliance.profile.genmodel"
-            uri="http:///euaiactcompliance.ecore">
+            uri="http://www.umlsec.de/profiles/UMLsec/euaiactcompliance.ecore">
       </package>
    </extension>
 

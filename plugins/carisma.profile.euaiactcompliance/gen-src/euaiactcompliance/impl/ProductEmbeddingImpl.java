@@ -2,18 +2,24 @@
  */
 package euaiactcompliance.impl;
 
-import euaiactcompliance.Category;
 import euaiactcompliance.EuaiactcompliancePackage;
+import euaiactcompliance.ProductCategory;
 import euaiactcompliance.ProductEmbedding;
 import euaiactcompliance.Role;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 import org.eclipse.uml2.uml.Component;
 
@@ -86,24 +92,14 @@ public class ProductEmbeddingImpl extends MinimalEObjectImpl.Container implement
 	protected boolean thirdPartyConformityAssessment = THIRD_PARTY_CONFORMITY_ASSESSMENT_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getProductCategory() <em>Product Category</em>}' attribute.
+	 * The cached value of the '{@link #getProductCategory() <em>Product Category</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getProductCategory()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Category PRODUCT_CATEGORY_EDEFAULT = Category.MACHINERY;
-
-	/**
-	 * The cached value of the '{@link #getProductCategory() <em>Product Category</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProductCategory()
-	 * @generated
-	 * @ordered
-	 */
-	protected Category productCategory = PRODUCT_CATEGORY_EDEFAULT;
+	protected EList<ProductCategory> productCategory;
 
 	/**
 	 * The default value of the '{@link #getRole() <em>Role</em>}' attribute.
@@ -236,21 +232,11 @@ public class ProductEmbeddingImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public Category getProductCategory() {
+	public EList<ProductCategory> getProductCategory() {
+		if (productCategory == null) {
+			productCategory = new EDataTypeEList<ProductCategory>(ProductCategory.class, this, EuaiactcompliancePackage.PRODUCT_EMBEDDING__PRODUCT_CATEGORY);
+		}
 		return productCategory;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setProductCategory(Category newProductCategory) {
-		Category oldProductCategory = productCategory;
-		productCategory = newProductCategory == null ? PRODUCT_CATEGORY_EDEFAULT : newProductCategory;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.PRODUCT_EMBEDDING__PRODUCT_CATEGORY, oldProductCategory, productCategory));
 	}
 
 	/**
@@ -304,6 +290,7 @@ public class ProductEmbeddingImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -317,7 +304,8 @@ public class ProductEmbeddingImpl extends MinimalEObjectImpl.Container implement
 				setThirdPartyConformityAssessment((Boolean)newValue);
 				return;
 			case EuaiactcompliancePackage.PRODUCT_EMBEDDING__PRODUCT_CATEGORY:
-				setProductCategory((Category)newValue);
+				getProductCategory().clear();
+				getProductCategory().addAll((Collection<? extends ProductCategory>)newValue);
 				return;
 			case EuaiactcompliancePackage.PRODUCT_EMBEDDING__ROLE:
 				setRole((Role)newValue);
@@ -344,7 +332,7 @@ public class ProductEmbeddingImpl extends MinimalEObjectImpl.Container implement
 				setThirdPartyConformityAssessment(THIRD_PARTY_CONFORMITY_ASSESSMENT_EDEFAULT);
 				return;
 			case EuaiactcompliancePackage.PRODUCT_EMBEDDING__PRODUCT_CATEGORY:
-				setProductCategory(PRODUCT_CATEGORY_EDEFAULT);
+				getProductCategory().clear();
 				return;
 			case EuaiactcompliancePackage.PRODUCT_EMBEDDING__ROLE:
 				setRole(ROLE_EDEFAULT);
@@ -368,7 +356,7 @@ public class ProductEmbeddingImpl extends MinimalEObjectImpl.Container implement
 			case EuaiactcompliancePackage.PRODUCT_EMBEDDING__THIRD_PARTY_CONFORMITY_ASSESSMENT:
 				return thirdPartyConformityAssessment != THIRD_PARTY_CONFORMITY_ASSESSMENT_EDEFAULT;
 			case EuaiactcompliancePackage.PRODUCT_EMBEDDING__PRODUCT_CATEGORY:
-				return productCategory != PRODUCT_CATEGORY_EDEFAULT;
+				return productCategory != null && !productCategory.isEmpty();
 			case EuaiactcompliancePackage.PRODUCT_EMBEDDING__ROLE:
 				return role != ROLE_EDEFAULT;
 		}

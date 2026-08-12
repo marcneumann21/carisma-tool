@@ -2,7 +2,34 @@
  */
 package euaiactcompliance.util;
 
-import euaiactcompliance.*;
+import euaiactcompliance.AISystem;
+import euaiactcompliance.BiometricCategorisation;
+import euaiactcompliance.BiometricIdentification;
+import euaiactcompliance.CriticalInfrastructure;
+import euaiactcompliance.Deepfake;
+import euaiactcompliance.Education;
+import euaiactcompliance.EmotionRecognition;
+import euaiactcompliance.EssentialService;
+import euaiactcompliance.EuaiactcompliancePackage;
+import euaiactcompliance.ExploitingHumanVulnerability;
+import euaiactcompliance.FacialImageScraping;
+import euaiactcompliance.HumanEmployment;
+import euaiactcompliance.HumanInteraction;
+import euaiactcompliance.JusticeDemocracyUseCase;
+import euaiactcompliance.LawEnforcement;
+import euaiactcompliance.ManipulativeBehaviour;
+import euaiactcompliance.MigrationBorder;
+import euaiactcompliance.ProductEmbedding;
+import euaiactcompliance.Profiling;
+import euaiactcompliance.Provider;
+import euaiactcompliance.Provides;
+import euaiactcompliance.PublicInterestText;
+import euaiactcompliance.RiskManagementSystem;
+import euaiactcompliance.SelfDevelopedModel;
+import euaiactcompliance.SocialScoring;
+import euaiactcompliance.SyntheticContent;
+import euaiactcompliance.ThirdPartyComponent;
+import euaiactcompliance.TrainingData;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -150,9 +177,9 @@ public class EuaiactcomplianceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EuaiactcompliancePackage.ML_MODEL: {
-				MLModel mlModel = (MLModel)theEObject;
-				T result = caseMLModel(mlModel);
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL: {
+				SelfDevelopedModel selfDevelopedModel = (SelfDevelopedModel)theEObject;
+				T result = caseSelfDevelopedModel(selfDevelopedModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -222,9 +249,9 @@ public class EuaiactcomplianceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EuaiactcompliancePackage.RISK_MANAGEMENT: {
-				RiskManagement riskManagement = (RiskManagement)theEObject;
-				T result = caseRiskManagement(riskManagement);
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM: {
+				RiskManagementSystem riskManagementSystem = (RiskManagementSystem)theEObject;
+				T result = caseRiskManagementSystem(riskManagementSystem);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -443,17 +470,17 @@ public class EuaiactcomplianceSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>ML Model</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Self Developed Model</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>ML Model</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Self Developed Model</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMLModel(MLModel object) {
+	public T caseSelfDevelopedModel(SelfDevelopedModel object) {
 		return null;
 	}
 
@@ -623,17 +650,17 @@ public class EuaiactcomplianceSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Risk Management</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Risk Management System</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Risk Management</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Risk Management System</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRiskManagement(RiskManagement object) {
+	public T caseRiskManagementSystem(RiskManagementSystem object) {
 		return null;
 	}
 

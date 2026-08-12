@@ -6,5 +6,5 @@ import carisma.check.euaiactriskclassification.riskclass.EUAIActRiskClass;
 
 // TODO JavaDoc 
 public record EUAIActRiskClassificationResult(EUAIActRiskClass riskClass, List<String> reasons,
-		List<String> obligations, List<String> notes) {
+		List<String> obligations, List<String> additionalObligations, List<String> notes) {
 };

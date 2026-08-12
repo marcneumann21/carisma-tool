@@ -2,6 +2,8 @@
  */
 package euaiactcompliance;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 import org.eclipse.uml2.uml.UseCase;
@@ -22,12 +24,9 @@ import org.eclipse.uml2.uml.UseCase;
  *   <li>{@link euaiactcompliance.BiometricCategorisation#isDeduceSexuality <em>Deduce Sexuality</em>}</li>
  *   <li>{@link euaiactcompliance.BiometricCategorisation#isLawfulDatasetLabeling <em>Lawful Dataset Labeling</em>}</li>
  *   <li>{@link euaiactcompliance.BiometricCategorisation#isLawEnforcementCategorisation <em>Law Enforcement Categorisation</em>}</li>
- *   <li>{@link euaiactcompliance.BiometricCategorisation#isNarrowProceduralTask <em>Narrow Procedural Task</em>}</li>
- *   <li>{@link euaiactcompliance.BiometricCategorisation#isImprovesHumanActivity <em>Improves Human Activity</em>}</li>
- *   <li>{@link euaiactcompliance.BiometricCategorisation#isDecisionPatternDetection <em>Decision Pattern Detection</em>}</li>
- *   <li>{@link euaiactcompliance.BiometricCategorisation#isPreparatoryTask <em>Preparatory Task</em>}</li>
- *   <li>{@link euaiactcompliance.BiometricCategorisation#getExceptionJustification <em>Exception Justification</em>}</li>
  *   <li>{@link euaiactcompliance.BiometricCategorisation#getBase_UseCase <em>Base Use Case</em>}</li>
+ *   <li>{@link euaiactcompliance.BiometricCategorisation#getException <em>Exception</em>}</li>
+ *   <li>{@link euaiactcompliance.BiometricCategorisation#getExceptionJustification <em>Exception Justification</em>}</li>
  * </ul>
  *
  * @see euaiactcompliance.EuaiactcompliancePackage#getBiometricCategorisation()
@@ -190,92 +189,40 @@ public interface BiometricCategorisation extends EObject {
 	void setLawEnforcementCategorisation(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Narrow Procedural Task</b></em>' attribute.
+	 * Returns the value of the '<em><b>Base Use Case</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Narrow Procedural Task</em>' attribute.
-	 * @see #setNarrowProceduralTask(boolean)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getBiometricCategorisation_NarrowProceduralTask()
-	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @return the value of the '<em>Base Use Case</em>' reference.
+	 * @see #setBase_UseCase(UseCase)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getBiometricCategorisation_Base_UseCase()
+	 * @model ordered="false"
 	 * @generated
 	 */
-	boolean isNarrowProceduralTask();
+	UseCase getBase_UseCase();
 
 	/**
-	 * Sets the value of the '{@link euaiactcompliance.BiometricCategorisation#isNarrowProceduralTask <em>Narrow Procedural Task</em>}' attribute.
+	 * Sets the value of the '{@link euaiactcompliance.BiometricCategorisation#getBase_UseCase <em>Base Use Case</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Narrow Procedural Task</em>' attribute.
-	 * @see #isNarrowProceduralTask()
+	 * @param value the new value of the '<em>Base Use Case</em>' reference.
+	 * @see #getBase_UseCase()
 	 * @generated
 	 */
-	void setNarrowProceduralTask(boolean value);
+	void setBase_UseCase(UseCase value);
 
 	/**
-	 * Returns the value of the '<em><b>Improves Human Activity</b></em>' attribute.
+	 * Returns the value of the '<em><b>Exception</b></em>' attribute list.
+	 * The list contents are of type {@link euaiactcompliance.Exception}.
+	 * The literals are from the enumeration {@link euaiactcompliance.Exception}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Improves Human Activity</em>' attribute.
-	 * @see #setImprovesHumanActivity(boolean)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getBiometricCategorisation_ImprovesHumanActivity()
-	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @return the value of the '<em>Exception</em>' attribute list.
+	 * @see euaiactcompliance.Exception
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getBiometricCategorisation_Exception()
+	 * @model ordered="false"
 	 * @generated
 	 */
-	boolean isImprovesHumanActivity();
-
-	/**
-	 * Sets the value of the '{@link euaiactcompliance.BiometricCategorisation#isImprovesHumanActivity <em>Improves Human Activity</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Improves Human Activity</em>' attribute.
-	 * @see #isImprovesHumanActivity()
-	 * @generated
-	 */
-	void setImprovesHumanActivity(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Decision Pattern Detection</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Decision Pattern Detection</em>' attribute.
-	 * @see #setDecisionPatternDetection(boolean)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getBiometricCategorisation_DecisionPatternDetection()
-	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
-	 * @generated
-	 */
-	boolean isDecisionPatternDetection();
-
-	/**
-	 * Sets the value of the '{@link euaiactcompliance.BiometricCategorisation#isDecisionPatternDetection <em>Decision Pattern Detection</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Decision Pattern Detection</em>' attribute.
-	 * @see #isDecisionPatternDetection()
-	 * @generated
-	 */
-	void setDecisionPatternDetection(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Preparatory Task</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Preparatory Task</em>' attribute.
-	 * @see #setPreparatoryTask(boolean)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getBiometricCategorisation_PreparatoryTask()
-	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
-	 * @generated
-	 */
-	boolean isPreparatoryTask();
-
-	/**
-	 * Sets the value of the '{@link euaiactcompliance.BiometricCategorisation#isPreparatoryTask <em>Preparatory Task</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Preparatory Task</em>' attribute.
-	 * @see #isPreparatoryTask()
-	 * @generated
-	 */
-	void setPreparatoryTask(boolean value);
+	EList<euaiactcompliance.Exception> getException();
 
 	/**
 	 * Returns the value of the '<em><b>Exception Justification</b></em>' attribute.
@@ -298,27 +245,5 @@ public interface BiometricCategorisation extends EObject {
 	 * @generated
 	 */
 	void setExceptionJustification(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Base Use Case</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Base Use Case</em>' reference.
-	 * @see #setBase_UseCase(UseCase)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getBiometricCategorisation_Base_UseCase()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	UseCase getBase_UseCase();
-
-	/**
-	 * Sets the value of the '{@link euaiactcompliance.BiometricCategorisation#getBase_UseCase <em>Base Use Case</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Base Use Case</em>' reference.
-	 * @see #getBase_UseCase()
-	 * @generated
-	 */
-	void setBase_UseCase(UseCase value);
 
 } // BiometricCategorisation

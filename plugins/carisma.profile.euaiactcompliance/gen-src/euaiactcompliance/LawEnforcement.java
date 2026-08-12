@@ -2,6 +2,8 @@
  */
 package euaiactcompliance;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 import org.eclipse.uml2.uml.UseCase;
@@ -20,13 +22,10 @@ import org.eclipse.uml2.uml.UseCase;
  *   <li>{@link euaiactcompliance.LawEnforcement#isEvidenceReliability <em>Evidence Reliability</em>}</li>
  *   <li>{@link euaiactcompliance.LawEnforcement#isOffendingRiskAssessment <em>Offending Risk Assessment</em>}</li>
  *   <li>{@link euaiactcompliance.LawEnforcement#isSolelyProfilingBased <em>Solely Profiling Based</em>}</li>
- *   <li>{@link euaiactcompliance.LawEnforcement#isNarrowProceduralTask <em>Narrow Procedural Task</em>}</li>
- *   <li>{@link euaiactcompliance.LawEnforcement#getExceptionJustification <em>Exception Justification</em>}</li>
- *   <li>{@link euaiactcompliance.LawEnforcement#isDecisionPatternDetection <em>Decision Pattern Detection</em>}</li>
- *   <li>{@link euaiactcompliance.LawEnforcement#isPreparatoryTask <em>Preparatory Task</em>}</li>
- *   <li>{@link euaiactcompliance.LawEnforcement#isImprovesHumanActivity <em>Improves Human Activity</em>}</li>
  *   <li>{@link euaiactcompliance.LawEnforcement#getBase_UseCase <em>Base Use Case</em>}</li>
  *   <li>{@link euaiactcompliance.LawEnforcement#isSupportsHumanAssessment <em>Supports Human Assessment</em>}</li>
+ *   <li>{@link euaiactcompliance.LawEnforcement#getExceptionJustification <em>Exception Justification</em>}</li>
+ *   <li>{@link euaiactcompliance.LawEnforcement#getException <em>Exception</em>}</li>
  * </ul>
  *
  * @see euaiactcompliance.EuaiactcompliancePackage#getLawEnforcement()
@@ -145,116 +144,6 @@ public interface LawEnforcement extends EObject {
 	void setSolelyProfilingBased(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Narrow Procedural Task</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Narrow Procedural Task</em>' attribute.
-	 * @see #setNarrowProceduralTask(boolean)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getLawEnforcement_NarrowProceduralTask()
-	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
-	 * @generated
-	 */
-	boolean isNarrowProceduralTask();
-
-	/**
-	 * Sets the value of the '{@link euaiactcompliance.LawEnforcement#isNarrowProceduralTask <em>Narrow Procedural Task</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Narrow Procedural Task</em>' attribute.
-	 * @see #isNarrowProceduralTask()
-	 * @generated
-	 */
-	void setNarrowProceduralTask(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Exception Justification</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Exception Justification</em>' attribute.
-	 * @see #setExceptionJustification(String)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getLawEnforcement_ExceptionJustification()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
-	 */
-	String getExceptionJustification();
-
-	/**
-	 * Sets the value of the '{@link euaiactcompliance.LawEnforcement#getExceptionJustification <em>Exception Justification</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Exception Justification</em>' attribute.
-	 * @see #getExceptionJustification()
-	 * @generated
-	 */
-	void setExceptionJustification(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Decision Pattern Detection</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Decision Pattern Detection</em>' attribute.
-	 * @see #setDecisionPatternDetection(boolean)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getLawEnforcement_DecisionPatternDetection()
-	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
-	 * @generated
-	 */
-	boolean isDecisionPatternDetection();
-
-	/**
-	 * Sets the value of the '{@link euaiactcompliance.LawEnforcement#isDecisionPatternDetection <em>Decision Pattern Detection</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Decision Pattern Detection</em>' attribute.
-	 * @see #isDecisionPatternDetection()
-	 * @generated
-	 */
-	void setDecisionPatternDetection(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Preparatory Task</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Preparatory Task</em>' attribute.
-	 * @see #setPreparatoryTask(boolean)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getLawEnforcement_PreparatoryTask()
-	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
-	 * @generated
-	 */
-	boolean isPreparatoryTask();
-
-	/**
-	 * Sets the value of the '{@link euaiactcompliance.LawEnforcement#isPreparatoryTask <em>Preparatory Task</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Preparatory Task</em>' attribute.
-	 * @see #isPreparatoryTask()
-	 * @generated
-	 */
-	void setPreparatoryTask(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Improves Human Activity</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Improves Human Activity</em>' attribute.
-	 * @see #setImprovesHumanActivity(boolean)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getLawEnforcement_ImprovesHumanActivity()
-	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
-	 * @generated
-	 */
-	boolean isImprovesHumanActivity();
-
-	/**
-	 * Sets the value of the '{@link euaiactcompliance.LawEnforcement#isImprovesHumanActivity <em>Improves Human Activity</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Improves Human Activity</em>' attribute.
-	 * @see #isImprovesHumanActivity()
-	 * @generated
-	 */
-	void setImprovesHumanActivity(boolean value);
-
-	/**
 	 * Returns the value of the '<em><b>Base Use Case</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -297,5 +186,41 @@ public interface LawEnforcement extends EObject {
 	 * @generated
 	 */
 	void setSupportsHumanAssessment(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Exception Justification</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Exception Justification</em>' attribute.
+	 * @see #setExceptionJustification(String)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getLawEnforcement_ExceptionJustification()
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @generated
+	 */
+	String getExceptionJustification();
+
+	/**
+	 * Sets the value of the '{@link euaiactcompliance.LawEnforcement#getExceptionJustification <em>Exception Justification</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Exception Justification</em>' attribute.
+	 * @see #getExceptionJustification()
+	 * @generated
+	 */
+	void setExceptionJustification(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Exception</b></em>' attribute list.
+	 * The list contents are of type {@link euaiactcompliance.Exception}.
+	 * The literals are from the enumeration {@link euaiactcompliance.Exception}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Exception</em>' attribute list.
+	 * @see euaiactcompliance.Exception
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getLawEnforcement_Exception()
+	 * @model ordered="false"
+	 * @generated
+	 */
+	EList<euaiactcompliance.Exception> getException();
 
 } // LawEnforcement

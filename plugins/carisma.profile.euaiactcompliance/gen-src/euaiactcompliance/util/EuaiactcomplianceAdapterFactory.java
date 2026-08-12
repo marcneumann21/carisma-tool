@@ -2,7 +2,34 @@
  */
 package euaiactcompliance.util;
 
-import euaiactcompliance.*;
+import euaiactcompliance.AISystem;
+import euaiactcompliance.BiometricCategorisation;
+import euaiactcompliance.BiometricIdentification;
+import euaiactcompliance.CriticalInfrastructure;
+import euaiactcompliance.Deepfake;
+import euaiactcompliance.Education;
+import euaiactcompliance.EmotionRecognition;
+import euaiactcompliance.EssentialService;
+import euaiactcompliance.EuaiactcompliancePackage;
+import euaiactcompliance.ExploitingHumanVulnerability;
+import euaiactcompliance.FacialImageScraping;
+import euaiactcompliance.HumanEmployment;
+import euaiactcompliance.HumanInteraction;
+import euaiactcompliance.JusticeDemocracyUseCase;
+import euaiactcompliance.LawEnforcement;
+import euaiactcompliance.ManipulativeBehaviour;
+import euaiactcompliance.MigrationBorder;
+import euaiactcompliance.ProductEmbedding;
+import euaiactcompliance.Profiling;
+import euaiactcompliance.Provider;
+import euaiactcompliance.Provides;
+import euaiactcompliance.PublicInterestText;
+import euaiactcompliance.RiskManagementSystem;
+import euaiactcompliance.SelfDevelopedModel;
+import euaiactcompliance.SocialScoring;
+import euaiactcompliance.SyntheticContent;
+import euaiactcompliance.ThirdPartyComponent;
+import euaiactcompliance.TrainingData;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -124,8 +151,8 @@ public class EuaiactcomplianceAdapterFactory extends AdapterFactoryImpl {
 				return createCriticalInfrastructureAdapter();
 			}
 			@Override
-			public Adapter caseMLModel(MLModel object) {
-				return createMLModelAdapter();
+			public Adapter caseSelfDevelopedModel(SelfDevelopedModel object) {
+				return createSelfDevelopedModelAdapter();
 			}
 			@Override
 			public Adapter caseEducation(Education object) {
@@ -172,8 +199,8 @@ public class EuaiactcomplianceAdapterFactory extends AdapterFactoryImpl {
 				return createEmotionRecognitionAdapter();
 			}
 			@Override
-			public Adapter caseRiskManagement(RiskManagement object) {
-				return createRiskManagementAdapter();
+			public Adapter caseRiskManagementSystem(RiskManagementSystem object) {
+				return createRiskManagementSystemAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -392,16 +419,16 @@ public class EuaiactcomplianceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.MLModel <em>ML Model</em>}'.
+	 * Creates a new adapter for an object of class '{@link euaiactcompliance.SelfDevelopedModel <em>Self Developed Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see euaiactcompliance.MLModel
+	 * @see euaiactcompliance.SelfDevelopedModel
 	 * @generated
 	 */
-	public Adapter createMLModelAdapter() {
+	public Adapter createSelfDevelopedModelAdapter() {
 		return null;
 	}
 
@@ -560,16 +587,16 @@ public class EuaiactcomplianceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.RiskManagement <em>Risk Management</em>}'.
+	 * Creates a new adapter for an object of class '{@link euaiactcompliance.RiskManagementSystem <em>Risk Management System</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see euaiactcompliance.RiskManagement
+	 * @see euaiactcompliance.RiskManagementSystem
 	 * @generated
 	 */
-	public Adapter createRiskManagementAdapter() {
+	public Adapter createRiskManagementSystemAdapter() {
 		return null;
 	}
 

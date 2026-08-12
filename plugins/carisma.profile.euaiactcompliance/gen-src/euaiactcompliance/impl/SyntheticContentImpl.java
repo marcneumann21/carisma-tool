@@ -24,6 +24,8 @@ import org.eclipse.uml2.uml.UseCase;
  * </p>
  * <ul>
  *   <li>{@link euaiactcompliance.impl.SyntheticContentImpl#getBase_UseCase <em>Base Use Case</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.SyntheticContentImpl#isLawEnforcementAuthorised <em>Law Enforcement Authorised</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.SyntheticContentImpl#isStandardEditingOnly <em>Standard Editing Only</em>}</li>
  * </ul>
  *
  * @generated
@@ -38,6 +40,46 @@ public class SyntheticContentImpl extends MinimalEObjectImpl.Container implement
 	 * @ordered
 	 */
 	protected UseCase base_UseCase;
+
+	/**
+	 * The default value of the '{@link #isLawEnforcementAuthorised() <em>Law Enforcement Authorised</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isLawEnforcementAuthorised()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean LAW_ENFORCEMENT_AUTHORISED_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isLawEnforcementAuthorised() <em>Law Enforcement Authorised</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isLawEnforcementAuthorised()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean lawEnforcementAuthorised = LAW_ENFORCEMENT_AUTHORISED_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isStandardEditingOnly() <em>Standard Editing Only</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isStandardEditingOnly()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean STANDARD_EDITING_ONLY_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isStandardEditingOnly() <em>Standard Editing Only</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isStandardEditingOnly()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean standardEditingOnly = STANDARD_EDITING_ONLY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -104,11 +146,61 @@ public class SyntheticContentImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
+	public boolean isLawEnforcementAuthorised() {
+		return lawEnforcementAuthorised;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLawEnforcementAuthorised(boolean newLawEnforcementAuthorised) {
+		boolean oldLawEnforcementAuthorised = lawEnforcementAuthorised;
+		lawEnforcementAuthorised = newLawEnforcementAuthorised;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.SYNTHETIC_CONTENT__LAW_ENFORCEMENT_AUTHORISED, oldLawEnforcementAuthorised, lawEnforcementAuthorised));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isStandardEditingOnly() {
+		return standardEditingOnly;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setStandardEditingOnly(boolean newStandardEditingOnly) {
+		boolean oldStandardEditingOnly = standardEditingOnly;
+		standardEditingOnly = newStandardEditingOnly;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.SYNTHETIC_CONTENT__STANDARD_EDITING_ONLY, oldStandardEditingOnly, standardEditingOnly));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case EuaiactcompliancePackage.SYNTHETIC_CONTENT__BASE_USE_CASE:
 				if (resolve) return getBase_UseCase();
 				return basicGetBase_UseCase();
+			case EuaiactcompliancePackage.SYNTHETIC_CONTENT__LAW_ENFORCEMENT_AUTHORISED:
+				return isLawEnforcementAuthorised();
+			case EuaiactcompliancePackage.SYNTHETIC_CONTENT__STANDARD_EDITING_ONLY:
+				return isStandardEditingOnly();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -123,6 +215,12 @@ public class SyntheticContentImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case EuaiactcompliancePackage.SYNTHETIC_CONTENT__BASE_USE_CASE:
 				setBase_UseCase((UseCase)newValue);
+				return;
+			case EuaiactcompliancePackage.SYNTHETIC_CONTENT__LAW_ENFORCEMENT_AUTHORISED:
+				setLawEnforcementAuthorised((Boolean)newValue);
+				return;
+			case EuaiactcompliancePackage.SYNTHETIC_CONTENT__STANDARD_EDITING_ONLY:
+				setStandardEditingOnly((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -139,6 +237,12 @@ public class SyntheticContentImpl extends MinimalEObjectImpl.Container implement
 			case EuaiactcompliancePackage.SYNTHETIC_CONTENT__BASE_USE_CASE:
 				setBase_UseCase((UseCase)null);
 				return;
+			case EuaiactcompliancePackage.SYNTHETIC_CONTENT__LAW_ENFORCEMENT_AUTHORISED:
+				setLawEnforcementAuthorised(LAW_ENFORCEMENT_AUTHORISED_EDEFAULT);
+				return;
+			case EuaiactcompliancePackage.SYNTHETIC_CONTENT__STANDARD_EDITING_ONLY:
+				setStandardEditingOnly(STANDARD_EDITING_ONLY_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -153,8 +257,30 @@ public class SyntheticContentImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case EuaiactcompliancePackage.SYNTHETIC_CONTENT__BASE_USE_CASE:
 				return base_UseCase != null;
+			case EuaiactcompliancePackage.SYNTHETIC_CONTENT__LAW_ENFORCEMENT_AUTHORISED:
+				return lawEnforcementAuthorised != LAW_ENFORCEMENT_AUTHORISED_EDEFAULT;
+			case EuaiactcompliancePackage.SYNTHETIC_CONTENT__STANDARD_EDITING_ONLY:
+				return standardEditingOnly != STANDARD_EDITING_ONLY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (LawEnforcementAuthorised: ");
+		result.append(lawEnforcementAuthorised);
+		result.append(", StandardEditingOnly: ");
+		result.append(standardEditingOnly);
+		result.append(')');
+		return result.toString();
 	}
 
 } //SyntheticContentImpl

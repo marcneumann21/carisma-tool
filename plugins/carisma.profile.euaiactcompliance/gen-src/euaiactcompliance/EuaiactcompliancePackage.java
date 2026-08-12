@@ -39,7 +39,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http:///euaiactcompliance.ecore";
+	String eNS_URI = "http://www.umlsec.de/profiles/UMLsec/euaiactcompliance.ecore";
 
 	/**
 	 * The package namespace name.
@@ -132,7 +132,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	int PRODUCT_EMBEDDING__THIRD_PARTY_CONFORMITY_ASSESSMENT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Product Category</b></em>' attribute.
+	 * The feature id for the '<em><b>Product Category</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -187,13 +187,40 @@ public interface EuaiactcompliancePackage extends EPackage {
 	int HUMAN_INTERACTION__BASE_USE_CASE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Law Enforcement Authorised</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HUMAN_INTERACTION__LAW_ENFORCEMENT_AUTHORISED = 1;
+
+	/**
+	 * The feature id for the '<em><b>Obvious AI Interaction</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HUMAN_INTERACTION__OBVIOUS_AI_INTERACTION = 2;
+
+	/**
+	 * The feature id for the '<em><b>Puplic Criminal Offence Report</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HUMAN_INTERACTION__PUPLIC_CRIMINAL_OFFENCE_REPORT = 3;
+
+	/**
 	 * The number of structural features of the '<em>Human Interaction</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HUMAN_INTERACTION_FEATURE_COUNT = 1;
+	int HUMAN_INTERACTION_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Human Interaction</em>' class.
@@ -224,13 +251,31 @@ public interface EuaiactcompliancePackage extends EPackage {
 	int SYNTHETIC_CONTENT__BASE_USE_CASE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Law Enforcement Authorised</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYNTHETIC_CONTENT__LAW_ENFORCEMENT_AUTHORISED = 1;
+
+	/**
+	 * The feature id for the '<em><b>Standard Editing Only</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYNTHETIC_CONTENT__STANDARD_EDITING_ONLY = 2;
+
+	/**
 	 * The number of structural features of the '<em>Synthetic Content</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYNTHETIC_CONTENT_FEATURE_COUNT = 1;
+	int SYNTHETIC_CONTENT_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Synthetic Content</em>' class.
@@ -270,13 +315,22 @@ public interface EuaiactcompliancePackage extends EPackage {
 	int DEEPFAKE__CREATIVE_WORK = 1;
 
 	/**
+	 * The feature id for the '<em><b>Law Enforcement Authorised</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEEPFAKE__LAW_ENFORCEMENT_AUTHORISED = 2;
+
+	/**
 	 * The number of structural features of the '<em>Deepfake</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DEEPFAKE_FEATURE_COUNT = 2;
+	int DEEPFAKE_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Deepfake</em>' class.
@@ -316,13 +370,22 @@ public interface EuaiactcompliancePackage extends EPackage {
 	int PUBLIC_INTEREST_TEXT__HUMAN_REVIEW = 1;
 
 	/**
+	 * The feature id for the '<em><b>Law Enforcement Authorised</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUBLIC_INTEREST_TEXT__LAW_ENFORCEMENT_AUTHORISED = 2;
+
+	/**
 	 * The number of structural features of the '<em>Public Interest Text</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PUBLIC_INTEREST_TEXT_FEATURE_COUNT = 2;
+	int PUBLIC_INTEREST_TEXT_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Public Interest Text</em>' class.
@@ -945,58 +1008,31 @@ public interface EuaiactcompliancePackage extends EPackage {
 	int CRITICAL_INFRASTRUCTURE__ELECTRICITY_SUPPLY = 5;
 
 	/**
-	 * The feature id for the '<em><b>Exception Justification</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CRITICAL_INFRASTRUCTURE__EXCEPTION_JUSTIFICATION = 6;
-
-	/**
-	 * The feature id for the '<em><b>Improves Human Activity</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CRITICAL_INFRASTRUCTURE__IMPROVES_HUMAN_ACTIVITY = 7;
-
-	/**
-	 * The feature id for the '<em><b>Narrow Procedural Task</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CRITICAL_INFRASTRUCTURE__NARROW_PROCEDURAL_TASK = 8;
-
-	/**
-	 * The feature id for the '<em><b>Preparatory Task</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CRITICAL_INFRASTRUCTURE__PREPARATORY_TASK = 9;
-
-	/**
-	 * The feature id for the '<em><b>Decision Pattern Detection</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CRITICAL_INFRASTRUCTURE__DECISION_PATTERN_DETECTION = 10;
-
-	/**
 	 * The feature id for the '<em><b>Base Use Case</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CRITICAL_INFRASTRUCTURE__BASE_USE_CASE = 11;
+	int CRITICAL_INFRASTRUCTURE__BASE_USE_CASE = 6;
+
+	/**
+	 * The feature id for the '<em><b>Exception Justification</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CRITICAL_INFRASTRUCTURE__EXCEPTION_JUSTIFICATION = 7;
+
+	/**
+	 * The feature id for the '<em><b>Exception</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CRITICAL_INFRASTRUCTURE__EXCEPTION = 8;
 
 	/**
 	 * The number of structural features of the '<em>Critical Infrastructure</em>' class.
@@ -1005,7 +1041,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CRITICAL_INFRASTRUCTURE_FEATURE_COUNT = 12;
+	int CRITICAL_INFRASTRUCTURE_FEATURE_COUNT = 9;
 
 	/**
 	 * The number of operations of the '<em>Critical Infrastructure</em>' class.
@@ -1017,14 +1053,14 @@ public interface EuaiactcompliancePackage extends EPackage {
 	int CRITICAL_INFRASTRUCTURE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link euaiactcompliance.impl.MLModelImpl <em>ML Model</em>}' class.
+	 * The meta object id for the '{@link euaiactcompliance.impl.SelfDevelopedModelImpl <em>Self Developed Model</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see euaiactcompliance.impl.MLModelImpl
-	 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getMLModel()
+	 * @see euaiactcompliance.impl.SelfDevelopedModelImpl
+	 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getSelfDevelopedModel()
 	 * @generated
 	 */
-	int ML_MODEL = 14;
+	int SELF_DEVELOPED_MODEL = 14;
 
 	/**
 	 * The feature id for the '<em><b>Parameter</b></em>' attribute.
@@ -1033,7 +1069,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ML_MODEL__PARAMETER = 0;
+	int SELF_DEVELOPED_MODEL__PARAMETER = 0;
 
 	/**
 	 * The feature id for the '<em><b>Training Methods</b></em>' attribute.
@@ -1042,7 +1078,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ML_MODEL__TRAINING_METHODS = 1;
+	int SELF_DEVELOPED_MODEL__TRAINING_METHODS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Objective</b></em>' attribute.
@@ -1051,7 +1087,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ML_MODEL__OBJECTIVE = 2;
+	int SELF_DEVELOPED_MODEL__OBJECTIVE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Validation Process</b></em>' attribute.
@@ -1060,7 +1096,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ML_MODEL__VALIDATION_PROCESS = 3;
+	int SELF_DEVELOPED_MODEL__VALIDATION_PROCESS = 3;
 
 	/**
 	 * The feature id for the '<em><b>Expected Output</b></em>' attribute.
@@ -1069,7 +1105,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ML_MODEL__EXPECTED_OUTPUT = 4;
+	int SELF_DEVELOPED_MODEL__EXPECTED_OUTPUT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Testing Process</b></em>' attribute.
@@ -1078,7 +1114,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ML_MODEL__TESTING_PROCESS = 5;
+	int SELF_DEVELOPED_MODEL__TESTING_PROCESS = 5;
 
 	/**
 	 * The feature id for the '<em><b>Accuracy</b></em>' attribute.
@@ -1087,7 +1123,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ML_MODEL__ACCURACY = 6;
+	int SELF_DEVELOPED_MODEL__ACCURACY = 6;
 
 	/**
 	 * The feature id for the '<em><b>Capabilities</b></em>' attribute.
@@ -1096,7 +1132,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ML_MODEL__CAPABILITIES = 7;
+	int SELF_DEVELOPED_MODEL__CAPABILITIES = 7;
 
 	/**
 	 * The feature id for the '<em><b>Test Reports</b></em>' attribute.
@@ -1105,7 +1141,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ML_MODEL__TEST_REPORTS = 8;
+	int SELF_DEVELOPED_MODEL__TEST_REPORTS = 8;
 
 	/**
 	 * The feature id for the '<em><b>Base Component</b></em>' reference.
@@ -1114,7 +1150,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ML_MODEL__BASE_COMPONENT = 9;
+	int SELF_DEVELOPED_MODEL__BASE_COMPONENT = 9;
 
 	/**
 	 * The feature id for the '<em><b>Input Specification</b></em>' attribute.
@@ -1123,25 +1159,25 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ML_MODEL__INPUT_SPECIFICATION = 10;
+	int SELF_DEVELOPED_MODEL__INPUT_SPECIFICATION = 10;
 
 	/**
-	 * The number of structural features of the '<em>ML Model</em>' class.
+	 * The number of structural features of the '<em>Self Developed Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ML_MODEL_FEATURE_COUNT = 11;
+	int SELF_DEVELOPED_MODEL_FEATURE_COUNT = 11;
 
 	/**
-	 * The number of operations of the '<em>ML Model</em>' class.
+	 * The number of operations of the '<em>Self Developed Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ML_MODEL_OPERATION_COUNT = 0;
+	int SELF_DEVELOPED_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link euaiactcompliance.impl.EducationImpl <em>Education</em>}' class.
@@ -1190,40 +1226,13 @@ public interface EuaiactcompliancePackage extends EPackage {
 	int EDUCATION__EXAM_MONITORING = 3;
 
 	/**
-	 * The feature id for the '<em><b>Narrow Procedural Task</b></em>' attribute.
+	 * The feature id for the '<em><b>Base Use Case</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDUCATION__NARROW_PROCEDURAL_TASK = 4;
-
-	/**
-	 * The feature id for the '<em><b>Improves Human Activity</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EDUCATION__IMPROVES_HUMAN_ACTIVITY = 5;
-
-	/**
-	 * The feature id for the '<em><b>Decision Pattern Detection</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EDUCATION__DECISION_PATTERN_DETECTION = 6;
-
-	/**
-	 * The feature id for the '<em><b>Preparatory Task</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EDUCATION__PREPARATORY_TASK = 7;
+	int EDUCATION__BASE_USE_CASE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Exception Justification</b></em>' attribute.
@@ -1232,16 +1241,16 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDUCATION__EXCEPTION_JUSTIFICATION = 8;
+	int EDUCATION__EXCEPTION_JUSTIFICATION = 5;
 
 	/**
-	 * The feature id for the '<em><b>Base Use Case</b></em>' reference.
+	 * The feature id for the '<em><b>Exception</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDUCATION__BASE_USE_CASE = 9;
+	int EDUCATION__EXCEPTION = 6;
 
 	/**
 	 * The number of structural features of the '<em>Education</em>' class.
@@ -1250,7 +1259,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDUCATION_FEATURE_COUNT = 10;
+	int EDUCATION_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Education</em>' class.
@@ -1290,31 +1299,22 @@ public interface EuaiactcompliancePackage extends EPackage {
 	int HUMAN_EMPLOYMENT__WORK_CONDITIONS_DECISIONS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Decision Pattern Detection</b></em>' attribute.
+	 * The feature id for the '<em><b>Base Use Case</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HUMAN_EMPLOYMENT__DECISION_PATTERN_DETECTION = 2;
+	int HUMAN_EMPLOYMENT__BASE_USE_CASE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Improves Human Activity</b></em>' attribute.
+	 * The feature id for the '<em><b>Exception</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HUMAN_EMPLOYMENT__IMPROVES_HUMAN_ACTIVITY = 3;
-
-	/**
-	 * The feature id for the '<em><b>Preparatory Task</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HUMAN_EMPLOYMENT__PREPARATORY_TASK = 4;
+	int HUMAN_EMPLOYMENT__EXCEPTION = 3;
 
 	/**
 	 * The feature id for the '<em><b>Exception Justification</b></em>' attribute.
@@ -1323,25 +1323,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HUMAN_EMPLOYMENT__EXCEPTION_JUSTIFICATION = 5;
-
-	/**
-	 * The feature id for the '<em><b>Narrow Procedural Task</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HUMAN_EMPLOYMENT__NARROW_PROCEDURAL_TASK = 6;
-
-	/**
-	 * The feature id for the '<em><b>Base Use Case</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HUMAN_EMPLOYMENT__BASE_USE_CASE = 7;
+	int HUMAN_EMPLOYMENT__EXCEPTION_JUSTIFICATION = 4;
 
 	/**
 	 * The number of structural features of the '<em>Human Employment</em>' class.
@@ -1350,7 +1332,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HUMAN_EMPLOYMENT_FEATURE_COUNT = 8;
+	int HUMAN_EMPLOYMENT_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Human Employment</em>' class.
@@ -1554,22 +1536,22 @@ public interface EuaiactcompliancePackage extends EPackage {
 	int ESSENTIAL_SERVICE__INSURANCE_RISK_PRICING = 3;
 
 	/**
-	 * The feature id for the '<em><b>Preparatory Task</b></em>' attribute.
+	 * The feature id for the '<em><b>Base Use Case</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ESSENTIAL_SERVICE__PREPARATORY_TASK = 4;
+	int ESSENTIAL_SERVICE__BASE_USE_CASE = 4;
 
 	/**
-	 * The feature id for the '<em><b>Narrow Procedural Task</b></em>' attribute.
+	 * The feature id for the '<em><b>Emergency</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ESSENTIAL_SERVICE__NARROW_PROCEDURAL_TASK = 5;
+	int ESSENTIAL_SERVICE__EMERGENCY = 5;
 
 	/**
 	 * The feature id for the '<em><b>Exception Justification</b></em>' attribute.
@@ -1581,40 +1563,13 @@ public interface EuaiactcompliancePackage extends EPackage {
 	int ESSENTIAL_SERVICE__EXCEPTION_JUSTIFICATION = 6;
 
 	/**
-	 * The feature id for the '<em><b>Improves Human Activity</b></em>' attribute.
+	 * The feature id for the '<em><b>Exception</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ESSENTIAL_SERVICE__IMPROVES_HUMAN_ACTIVITY = 7;
-
-	/**
-	 * The feature id for the '<em><b>Decision Pattern Detection</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESSENTIAL_SERVICE__DECISION_PATTERN_DETECTION = 8;
-
-	/**
-	 * The feature id for the '<em><b>Base Use Case</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESSENTIAL_SERVICE__BASE_USE_CASE = 9;
-
-	/**
-	 * The feature id for the '<em><b>Emergency</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESSENTIAL_SERVICE__EMERGENCY = 10;
+	int ESSENTIAL_SERVICE__EXCEPTION = 7;
 
 	/**
 	 * The number of structural features of the '<em>Essential Service</em>' class.
@@ -1623,7 +1578,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESSENTIAL_SERVICE_FEATURE_COUNT = 11;
+	int ESSENTIAL_SERVICE_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Essential Service</em>' class.
@@ -1690,58 +1645,13 @@ public interface EuaiactcompliancePackage extends EPackage {
 	int LAW_ENFORCEMENT__SOLELY_PROFILING_BASED = 4;
 
 	/**
-	 * The feature id for the '<em><b>Narrow Procedural Task</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAW_ENFORCEMENT__NARROW_PROCEDURAL_TASK = 5;
-
-	/**
-	 * The feature id for the '<em><b>Exception Justification</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAW_ENFORCEMENT__EXCEPTION_JUSTIFICATION = 6;
-
-	/**
-	 * The feature id for the '<em><b>Decision Pattern Detection</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAW_ENFORCEMENT__DECISION_PATTERN_DETECTION = 7;
-
-	/**
-	 * The feature id for the '<em><b>Preparatory Task</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAW_ENFORCEMENT__PREPARATORY_TASK = 8;
-
-	/**
-	 * The feature id for the '<em><b>Improves Human Activity</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAW_ENFORCEMENT__IMPROVES_HUMAN_ACTIVITY = 9;
-
-	/**
 	 * The feature id for the '<em><b>Base Use Case</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LAW_ENFORCEMENT__BASE_USE_CASE = 10;
+	int LAW_ENFORCEMENT__BASE_USE_CASE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Supports Human Assessment</b></em>' attribute.
@@ -1750,7 +1660,25 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAW_ENFORCEMENT__SUPPORTS_HUMAN_ASSESSMENT = 11;
+	int LAW_ENFORCEMENT__SUPPORTS_HUMAN_ASSESSMENT = 6;
+
+	/**
+	 * The feature id for the '<em><b>Exception Justification</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAW_ENFORCEMENT__EXCEPTION_JUSTIFICATION = 7;
+
+	/**
+	 * The feature id for the '<em><b>Exception</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAW_ENFORCEMENT__EXCEPTION = 8;
 
 	/**
 	 * The number of structural features of the '<em>Law Enforcement</em>' class.
@@ -1759,7 +1687,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAW_ENFORCEMENT_FEATURE_COUNT = 12;
+	int LAW_ENFORCEMENT_FEATURE_COUNT = 9;
 
 	/**
 	 * The number of operations of the '<em>Law Enforcement</em>' class.
@@ -1826,22 +1754,22 @@ public interface EuaiactcompliancePackage extends EPackage {
 	int MIGRATION_BORDER__PERSON_IDENTIFICATION = 4;
 
 	/**
-	 * The feature id for the '<em><b>Improves Human Activity</b></em>' attribute.
+	 * The feature id for the '<em><b>Base Use Case</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MIGRATION_BORDER__IMPROVES_HUMAN_ACTIVITY = 5;
+	int MIGRATION_BORDER__BASE_USE_CASE = 5;
 
 	/**
-	 * The feature id for the '<em><b>Narrow Procedural Task</b></em>' attribute.
+	 * The feature id for the '<em><b>Exception</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MIGRATION_BORDER__NARROW_PROCEDURAL_TASK = 6;
+	int MIGRATION_BORDER__EXCEPTION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Exception Justification</b></em>' attribute.
@@ -1853,40 +1781,13 @@ public interface EuaiactcompliancePackage extends EPackage {
 	int MIGRATION_BORDER__EXCEPTION_JUSTIFICATION = 7;
 
 	/**
-	 * The feature id for the '<em><b>Preparatory Task</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MIGRATION_BORDER__PREPARATORY_TASK = 8;
-
-	/**
-	 * The feature id for the '<em><b>Decision Pattern Detection</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MIGRATION_BORDER__DECISION_PATTERN_DETECTION = 9;
-
-	/**
-	 * The feature id for the '<em><b>Base Use Case</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MIGRATION_BORDER__BASE_USE_CASE = 10;
-
-	/**
 	 * The number of structural features of the '<em>Migration Border</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MIGRATION_BORDER_FEATURE_COUNT = 11;
+	int MIGRATION_BORDER_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Migration Border</em>' class.
@@ -1935,40 +1836,22 @@ public interface EuaiactcompliancePackage extends EPackage {
 	int JUSTICE_DEMOCRACY_USE_CASE__NO_DIRECT_EXPOSURE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Decision Pattern Detection</b></em>' attribute.
+	 * The feature id for the '<em><b>Base Use Case</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int JUSTICE_DEMOCRACY_USE_CASE__DECISION_PATTERN_DETECTION = 3;
+	int JUSTICE_DEMOCRACY_USE_CASE__BASE_USE_CASE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Improves Human Activity</b></em>' attribute.
+	 * The feature id for the '<em><b>Exception</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int JUSTICE_DEMOCRACY_USE_CASE__IMPROVES_HUMAN_ACTIVITY = 4;
-
-	/**
-	 * The feature id for the '<em><b>Preparatory Task</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JUSTICE_DEMOCRACY_USE_CASE__PREPARATORY_TASK = 5;
-
-	/**
-	 * The feature id for the '<em><b>Narrow Procedural Task</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JUSTICE_DEMOCRACY_USE_CASE__NARROW_PROCEDURAL_TASK = 6;
+	int JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION = 4;
 
 	/**
 	 * The feature id for the '<em><b>Exception Justification</b></em>' attribute.
@@ -1977,16 +1860,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION_JUSTIFICATION = 7;
-
-	/**
-	 * The feature id for the '<em><b>Base Use Case</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JUSTICE_DEMOCRACY_USE_CASE__BASE_USE_CASE = 8;
+	int JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION_JUSTIFICATION = 5;
 
 	/**
 	 * The number of structural features of the '<em>Justice Democracy Use Case</em>' class.
@@ -1995,7 +1869,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int JUSTICE_DEMOCRACY_USE_CASE_FEATURE_COUNT = 9;
+	int JUSTICE_DEMOCRACY_USE_CASE_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Justice Democracy Use Case</em>' class.
@@ -2080,40 +1954,22 @@ public interface EuaiactcompliancePackage extends EPackage {
 	int BIOMETRIC_IDENTIFICATION__SERIOUS_CRIME_SUSPECT_SEARCH = 6;
 
 	/**
-	 * The feature id for the '<em><b>Narrow Procedural Task</b></em>' attribute.
+	 * The feature id for the '<em><b>Base Use Case</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BIOMETRIC_IDENTIFICATION__NARROW_PROCEDURAL_TASK = 7;
+	int BIOMETRIC_IDENTIFICATION__BASE_USE_CASE = 7;
 
 	/**
-	 * The feature id for the '<em><b>Improves Human Activity</b></em>' attribute.
+	 * The feature id for the '<em><b>Exception</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BIOMETRIC_IDENTIFICATION__IMPROVES_HUMAN_ACTIVITY = 8;
-
-	/**
-	 * The feature id for the '<em><b>Decision Pattern Detection</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BIOMETRIC_IDENTIFICATION__DECISION_PATTERN_DETECTION = 9;
-
-	/**
-	 * The feature id for the '<em><b>Preparatory Task</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BIOMETRIC_IDENTIFICATION__PREPARATORY_TASK = 10;
+	int BIOMETRIC_IDENTIFICATION__EXCEPTION = 8;
 
 	/**
 	 * The feature id for the '<em><b>Exception Justification</b></em>' attribute.
@@ -2122,16 +1978,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BIOMETRIC_IDENTIFICATION__EXCEPTION_JUSTIFICATION = 11;
-
-	/**
-	 * The feature id for the '<em><b>Base Use Case</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BIOMETRIC_IDENTIFICATION__BASE_USE_CASE = 12;
+	int BIOMETRIC_IDENTIFICATION__EXCEPTION_JUSTIFICATION = 9;
 
 	/**
 	 * The number of structural features of the '<em>Biometric Identification</em>' class.
@@ -2140,7 +1987,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BIOMETRIC_IDENTIFICATION_FEATURE_COUNT = 13;
+	int BIOMETRIC_IDENTIFICATION_FEATURE_COUNT = 10;
 
 	/**
 	 * The number of operations of the '<em>Biometric Identification</em>' class.
@@ -2225,40 +2072,22 @@ public interface EuaiactcompliancePackage extends EPackage {
 	int BIOMETRIC_CATEGORISATION__LAW_ENFORCEMENT_CATEGORISATION = 6;
 
 	/**
-	 * The feature id for the '<em><b>Narrow Procedural Task</b></em>' attribute.
+	 * The feature id for the '<em><b>Base Use Case</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BIOMETRIC_CATEGORISATION__NARROW_PROCEDURAL_TASK = 7;
+	int BIOMETRIC_CATEGORISATION__BASE_USE_CASE = 7;
 
 	/**
-	 * The feature id for the '<em><b>Improves Human Activity</b></em>' attribute.
+	 * The feature id for the '<em><b>Exception</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BIOMETRIC_CATEGORISATION__IMPROVES_HUMAN_ACTIVITY = 8;
-
-	/**
-	 * The feature id for the '<em><b>Decision Pattern Detection</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BIOMETRIC_CATEGORISATION__DECISION_PATTERN_DETECTION = 9;
-
-	/**
-	 * The feature id for the '<em><b>Preparatory Task</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BIOMETRIC_CATEGORISATION__PREPARATORY_TASK = 10;
+	int BIOMETRIC_CATEGORISATION__EXCEPTION = 8;
 
 	/**
 	 * The feature id for the '<em><b>Exception Justification</b></em>' attribute.
@@ -2267,16 +2096,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BIOMETRIC_CATEGORISATION__EXCEPTION_JUSTIFICATION = 11;
-
-	/**
-	 * The feature id for the '<em><b>Base Use Case</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BIOMETRIC_CATEGORISATION__BASE_USE_CASE = 12;
+	int BIOMETRIC_CATEGORISATION__EXCEPTION_JUSTIFICATION = 9;
 
 	/**
 	 * The number of structural features of the '<em>Biometric Categorisation</em>' class.
@@ -2285,7 +2105,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BIOMETRIC_CATEGORISATION_FEATURE_COUNT = 13;
+	int BIOMETRIC_CATEGORISATION_FEATURE_COUNT = 10;
 
 	/**
 	 * The number of operations of the '<em>Biometric Categorisation</em>' class.
@@ -2334,58 +2154,31 @@ public interface EuaiactcompliancePackage extends EPackage {
 	int EMOTION_RECOGNITION__MEDICAL_OR_SAFETY_REASON = 2;
 
 	/**
-	 * The feature id for the '<em><b>Narrow Procedural Task</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMOTION_RECOGNITION__NARROW_PROCEDURAL_TASK = 3;
-
-	/**
-	 * The feature id for the '<em><b>Improves Human Activity</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMOTION_RECOGNITION__IMPROVES_HUMAN_ACTIVITY = 4;
-
-	/**
-	 * The feature id for the '<em><b>Decision Pattern Detection</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMOTION_RECOGNITION__DECISION_PATTERN_DETECTION = 5;
-
-	/**
-	 * The feature id for the '<em><b>Preparatory Task</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMOTION_RECOGNITION__PREPARATORY_TASK = 6;
-
-	/**
-	 * The feature id for the '<em><b>Exception Justification</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMOTION_RECOGNITION__EXCEPTION_JUSTIFICATION = 7;
-
-	/**
 	 * The feature id for the '<em><b>Base Use Case</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMOTION_RECOGNITION__BASE_USE_CASE = 8;
+	int EMOTION_RECOGNITION__BASE_USE_CASE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Exception Justificatio</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMOTION_RECOGNITION__EXCEPTION_JUSTIFICATIO = 4;
+
+	/**
+	 * The feature id for the '<em><b>Exception</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMOTION_RECOGNITION__EXCEPTION = 5;
 
 	/**
 	 * The number of structural features of the '<em>Emotion Recognition</em>' class.
@@ -2394,7 +2187,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMOTION_RECOGNITION_FEATURE_COUNT = 9;
+	int EMOTION_RECOGNITION_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Emotion Recognition</em>' class.
@@ -2406,14 +2199,14 @@ public interface EuaiactcompliancePackage extends EPackage {
 	int EMOTION_RECOGNITION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link euaiactcompliance.impl.RiskManagementImpl <em>Risk Management</em>}' class.
+	 * The meta object id for the '{@link euaiactcompliance.impl.RiskManagementSystemImpl <em>Risk Management System</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see euaiactcompliance.impl.RiskManagementImpl
-	 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getRiskManagement()
+	 * @see euaiactcompliance.impl.RiskManagementSystemImpl
+	 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getRiskManagementSystem()
 	 * @generated
 	 */
-	int RISK_MANAGEMENT = 26;
+	int RISK_MANAGEMENT_SYSTEM = 26;
 
 	/**
 	 * The feature id for the '<em><b>Risk Identification</b></em>' attribute.
@@ -2422,7 +2215,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RISK_MANAGEMENT__RISK_IDENTIFICATION = 0;
+	int RISK_MANAGEMENT_SYSTEM__RISK_IDENTIFICATION = 0;
 
 	/**
 	 * The feature id for the '<em><b>Risk Estimation</b></em>' attribute.
@@ -2431,7 +2224,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RISK_MANAGEMENT__RISK_ESTIMATION = 1;
+	int RISK_MANAGEMENT_SYSTEM__RISK_ESTIMATION = 1;
 
 	/**
 	 * The feature id for the '<em><b>Post Market Risk Evaluation</b></em>' attribute.
@@ -2440,7 +2233,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RISK_MANAGEMENT__POST_MARKET_RISK_EVALUATION = 2;
+	int RISK_MANAGEMENT_SYSTEM__POST_MARKET_RISK_EVALUATION = 2;
 
 	/**
 	 * The feature id for the '<em><b>Risk Mitigation</b></em>' attribute.
@@ -2449,7 +2242,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RISK_MANAGEMENT__RISK_MITIGATION = 3;
+	int RISK_MANAGEMENT_SYSTEM__RISK_MITIGATION = 3;
 
 	/**
 	 * The feature id for the '<em><b>Residual Risk</b></em>' attribute.
@@ -2458,7 +2251,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RISK_MANAGEMENT__RESIDUAL_RISK = 4;
+	int RISK_MANAGEMENT_SYSTEM__RESIDUAL_RISK = 4;
 
 	/**
 	 * The feature id for the '<em><b>Testing Procedure</b></em>' attribute.
@@ -2467,7 +2260,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RISK_MANAGEMENT__TESTING_PROCEDURE = 5;
+	int RISK_MANAGEMENT_SYSTEM__TESTING_PROCEDURE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Testing Metrics</b></em>' attribute.
@@ -2476,7 +2269,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RISK_MANAGEMENT__TESTING_METRICS = 6;
+	int RISK_MANAGEMENT_SYSTEM__TESTING_METRICS = 6;
 
 	/**
 	 * The feature id for the '<em><b>Vulnerable Groups Assessment</b></em>' attribute.
@@ -2485,7 +2278,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RISK_MANAGEMENT__VULNERABLE_GROUPS_ASSESSMENT = 7;
+	int RISK_MANAGEMENT_SYSTEM__VULNERABLE_GROUPS_ASSESSMENT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Base Artifact</b></em>' reference.
@@ -2494,35 +2287,35 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RISK_MANAGEMENT__BASE_ARTIFACT = 8;
+	int RISK_MANAGEMENT_SYSTEM__BASE_ARTIFACT = 8;
 
 	/**
-	 * The number of structural features of the '<em>Risk Management</em>' class.
+	 * The number of structural features of the '<em>Risk Management System</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RISK_MANAGEMENT_FEATURE_COUNT = 9;
+	int RISK_MANAGEMENT_SYSTEM_FEATURE_COUNT = 9;
 
 	/**
-	 * The number of operations of the '<em>Risk Management</em>' class.
+	 * The number of operations of the '<em>Risk Management System</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RISK_MANAGEMENT_OPERATION_COUNT = 0;
+	int RISK_MANAGEMENT_SYSTEM_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link euaiactcompliance.Category <em>Category</em>}' enum.
+	 * The meta object id for the '{@link euaiactcompliance.ProductCategory <em>Product Category</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see euaiactcompliance.Category
-	 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getCategory()
+	 * @see euaiactcompliance.ProductCategory
+	 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getProductCategory()
 	 * @generated
 	 */
-	int CATEGORY = 27;
+	int PRODUCT_CATEGORY = 27;
 
 	/**
 	 * The meta object id for the '{@link euaiactcompliance.Role <em>Role</em>}' enum.
@@ -2533,6 +2326,16 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 */
 	int ROLE = 28;
+
+	/**
+	 * The meta object id for the '{@link euaiactcompliance.Exception <em>Exception</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see euaiactcompliance.Exception
+	 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getException()
+	 * @generated
+	 */
+	int EXCEPTION = 29;
 
 
 	/**
@@ -2600,10 +2403,10 @@ public interface EuaiactcompliancePackage extends EPackage {
 	EAttribute getProductEmbedding_ThirdPartyConformityAssessment();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.ProductEmbedding#getProductCategory <em>Product Category</em>}'.
+	 * Returns the meta object for the attribute list '{@link euaiactcompliance.ProductEmbedding#getProductCategory <em>Product Category</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Product Category</em>'.
+	 * @return the meta object for the attribute list '<em>Product Category</em>'.
 	 * @see euaiactcompliance.ProductEmbedding#getProductCategory()
 	 * @see #getProductEmbedding()
 	 * @generated
@@ -2643,6 +2446,39 @@ public interface EuaiactcompliancePackage extends EPackage {
 	EReference getHumanInteraction_Base_UseCase();
 
 	/**
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.HumanInteraction#isLawEnforcementAuthorised <em>Law Enforcement Authorised</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Law Enforcement Authorised</em>'.
+	 * @see euaiactcompliance.HumanInteraction#isLawEnforcementAuthorised()
+	 * @see #getHumanInteraction()
+	 * @generated
+	 */
+	EAttribute getHumanInteraction_LawEnforcementAuthorised();
+
+	/**
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.HumanInteraction#isObviousAIInteraction <em>Obvious AI Interaction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Obvious AI Interaction</em>'.
+	 * @see euaiactcompliance.HumanInteraction#isObviousAIInteraction()
+	 * @see #getHumanInteraction()
+	 * @generated
+	 */
+	EAttribute getHumanInteraction_ObviousAIInteraction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.HumanInteraction#isPuplicCriminalOffenceReport <em>Puplic Criminal Offence Report</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Puplic Criminal Offence Report</em>'.
+	 * @see euaiactcompliance.HumanInteraction#isPuplicCriminalOffenceReport()
+	 * @see #getHumanInteraction()
+	 * @generated
+	 */
+	EAttribute getHumanInteraction_PuplicCriminalOffenceReport();
+
+	/**
 	 * Returns the meta object for class '{@link euaiactcompliance.SyntheticContent <em>Synthetic Content</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2662,6 +2498,28 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSyntheticContent_Base_UseCase();
+
+	/**
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.SyntheticContent#isLawEnforcementAuthorised <em>Law Enforcement Authorised</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Law Enforcement Authorised</em>'.
+	 * @see euaiactcompliance.SyntheticContent#isLawEnforcementAuthorised()
+	 * @see #getSyntheticContent()
+	 * @generated
+	 */
+	EAttribute getSyntheticContent_LawEnforcementAuthorised();
+
+	/**
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.SyntheticContent#isStandardEditingOnly <em>Standard Editing Only</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Standard Editing Only</em>'.
+	 * @see euaiactcompliance.SyntheticContent#isStandardEditingOnly()
+	 * @see #getSyntheticContent()
+	 * @generated
+	 */
+	EAttribute getSyntheticContent_StandardEditingOnly();
 
 	/**
 	 * Returns the meta object for class '{@link euaiactcompliance.Deepfake <em>Deepfake</em>}'.
@@ -2696,6 +2554,17 @@ public interface EuaiactcompliancePackage extends EPackage {
 	EAttribute getDeepfake_CreativeWork();
 
 	/**
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.Deepfake#isLawEnforcementAuthorised <em>Law Enforcement Authorised</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Law Enforcement Authorised</em>'.
+	 * @see euaiactcompliance.Deepfake#isLawEnforcementAuthorised()
+	 * @see #getDeepfake()
+	 * @generated
+	 */
+	EAttribute getDeepfake_LawEnforcementAuthorised();
+
+	/**
 	 * Returns the meta object for class '{@link euaiactcompliance.PublicInterestText <em>Public Interest Text</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2726,6 +2595,17 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getPublicInterestText_HumanReview();
+
+	/**
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.PublicInterestText#isLawEnforcementAuthorised <em>Law Enforcement Authorised</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Law Enforcement Authorised</em>'.
+	 * @see euaiactcompliance.PublicInterestText#isLawEnforcementAuthorised()
+	 * @see #getPublicInterestText()
+	 * @generated
+	 */
+	EAttribute getPublicInterestText_LawEnforcementAuthorised();
 
 	/**
 	 * Returns the meta object for class '{@link euaiactcompliance.ManipulativeBehaviour <em>Manipulative Behaviour</em>}'.
@@ -3303,61 +3183,6 @@ public interface EuaiactcompliancePackage extends EPackage {
 	EAttribute getCriticalInfrastructure_ElectricitySupply();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.CriticalInfrastructure#getExceptionJustification <em>Exception Justification</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Exception Justification</em>'.
-	 * @see euaiactcompliance.CriticalInfrastructure#getExceptionJustification()
-	 * @see #getCriticalInfrastructure()
-	 * @generated
-	 */
-	EAttribute getCriticalInfrastructure_ExceptionJustification();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.CriticalInfrastructure#isImprovesHumanActivity <em>Improves Human Activity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Improves Human Activity</em>'.
-	 * @see euaiactcompliance.CriticalInfrastructure#isImprovesHumanActivity()
-	 * @see #getCriticalInfrastructure()
-	 * @generated
-	 */
-	EAttribute getCriticalInfrastructure_ImprovesHumanActivity();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.CriticalInfrastructure#isNarrowProceduralTask <em>Narrow Procedural Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Narrow Procedural Task</em>'.
-	 * @see euaiactcompliance.CriticalInfrastructure#isNarrowProceduralTask()
-	 * @see #getCriticalInfrastructure()
-	 * @generated
-	 */
-	EAttribute getCriticalInfrastructure_NarrowProceduralTask();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.CriticalInfrastructure#isPreparatoryTask <em>Preparatory Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Preparatory Task</em>'.
-	 * @see euaiactcompliance.CriticalInfrastructure#isPreparatoryTask()
-	 * @see #getCriticalInfrastructure()
-	 * @generated
-	 */
-	EAttribute getCriticalInfrastructure_PreparatoryTask();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.CriticalInfrastructure#isDecisionPatternDetection <em>Decision Pattern Detection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Decision Pattern Detection</em>'.
-	 * @see euaiactcompliance.CriticalInfrastructure#isDecisionPatternDetection()
-	 * @see #getCriticalInfrastructure()
-	 * @generated
-	 */
-	EAttribute getCriticalInfrastructure_DecisionPatternDetection();
-
-	/**
 	 * Returns the meta object for the reference '{@link euaiactcompliance.CriticalInfrastructure#getBase_UseCase <em>Base Use Case</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3369,135 +3194,157 @@ public interface EuaiactcompliancePackage extends EPackage {
 	EReference getCriticalInfrastructure_Base_UseCase();
 
 	/**
-	 * Returns the meta object for class '{@link euaiactcompliance.MLModel <em>ML Model</em>}'.
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.CriticalInfrastructure#getExceptionJustification <em>Exception Justification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>ML Model</em>'.
-	 * @see euaiactcompliance.MLModel
+	 * @return the meta object for the attribute '<em>Exception Justification</em>'.
+	 * @see euaiactcompliance.CriticalInfrastructure#getExceptionJustification()
+	 * @see #getCriticalInfrastructure()
 	 * @generated
 	 */
-	EClass getMLModel();
+	EAttribute getCriticalInfrastructure_ExceptionJustification();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.MLModel#getParameter <em>Parameter</em>}'.
+	 * Returns the meta object for the attribute list '{@link euaiactcompliance.CriticalInfrastructure#getException <em>Exception</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Exception</em>'.
+	 * @see euaiactcompliance.CriticalInfrastructure#getException()
+	 * @see #getCriticalInfrastructure()
+	 * @generated
+	 */
+	EAttribute getCriticalInfrastructure_Exception();
+
+	/**
+	 * Returns the meta object for class '{@link euaiactcompliance.SelfDevelopedModel <em>Self Developed Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Self Developed Model</em>'.
+	 * @see euaiactcompliance.SelfDevelopedModel
+	 * @generated
+	 */
+	EClass getSelfDevelopedModel();
+
+	/**
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.SelfDevelopedModel#getParameter <em>Parameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Parameter</em>'.
-	 * @see euaiactcompliance.MLModel#getParameter()
-	 * @see #getMLModel()
+	 * @see euaiactcompliance.SelfDevelopedModel#getParameter()
+	 * @see #getSelfDevelopedModel()
 	 * @generated
 	 */
-	EAttribute getMLModel_Parameter();
+	EAttribute getSelfDevelopedModel_Parameter();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.MLModel#getTrainingMethods <em>Training Methods</em>}'.
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.SelfDevelopedModel#getTrainingMethods <em>Training Methods</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Training Methods</em>'.
-	 * @see euaiactcompliance.MLModel#getTrainingMethods()
-	 * @see #getMLModel()
+	 * @see euaiactcompliance.SelfDevelopedModel#getTrainingMethods()
+	 * @see #getSelfDevelopedModel()
 	 * @generated
 	 */
-	EAttribute getMLModel_TrainingMethods();
+	EAttribute getSelfDevelopedModel_TrainingMethods();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.MLModel#getObjective <em>Objective</em>}'.
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.SelfDevelopedModel#getObjective <em>Objective</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Objective</em>'.
-	 * @see euaiactcompliance.MLModel#getObjective()
-	 * @see #getMLModel()
+	 * @see euaiactcompliance.SelfDevelopedModel#getObjective()
+	 * @see #getSelfDevelopedModel()
 	 * @generated
 	 */
-	EAttribute getMLModel_Objective();
+	EAttribute getSelfDevelopedModel_Objective();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.MLModel#getValidationProcess <em>Validation Process</em>}'.
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.SelfDevelopedModel#getValidationProcess <em>Validation Process</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Validation Process</em>'.
-	 * @see euaiactcompliance.MLModel#getValidationProcess()
-	 * @see #getMLModel()
+	 * @see euaiactcompliance.SelfDevelopedModel#getValidationProcess()
+	 * @see #getSelfDevelopedModel()
 	 * @generated
 	 */
-	EAttribute getMLModel_ValidationProcess();
+	EAttribute getSelfDevelopedModel_ValidationProcess();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.MLModel#getExpectedOutput <em>Expected Output</em>}'.
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.SelfDevelopedModel#getExpectedOutput <em>Expected Output</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Expected Output</em>'.
-	 * @see euaiactcompliance.MLModel#getExpectedOutput()
-	 * @see #getMLModel()
+	 * @see euaiactcompliance.SelfDevelopedModel#getExpectedOutput()
+	 * @see #getSelfDevelopedModel()
 	 * @generated
 	 */
-	EAttribute getMLModel_ExpectedOutput();
+	EAttribute getSelfDevelopedModel_ExpectedOutput();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.MLModel#getTestingProcess <em>Testing Process</em>}'.
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.SelfDevelopedModel#getTestingProcess <em>Testing Process</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Testing Process</em>'.
-	 * @see euaiactcompliance.MLModel#getTestingProcess()
-	 * @see #getMLModel()
+	 * @see euaiactcompliance.SelfDevelopedModel#getTestingProcess()
+	 * @see #getSelfDevelopedModel()
 	 * @generated
 	 */
-	EAttribute getMLModel_TestingProcess();
+	EAttribute getSelfDevelopedModel_TestingProcess();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.MLModel#getAccuracy <em>Accuracy</em>}'.
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.SelfDevelopedModel#getAccuracy <em>Accuracy</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Accuracy</em>'.
-	 * @see euaiactcompliance.MLModel#getAccuracy()
-	 * @see #getMLModel()
+	 * @see euaiactcompliance.SelfDevelopedModel#getAccuracy()
+	 * @see #getSelfDevelopedModel()
 	 * @generated
 	 */
-	EAttribute getMLModel_Accuracy();
+	EAttribute getSelfDevelopedModel_Accuracy();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.MLModel#getCapabilities <em>Capabilities</em>}'.
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.SelfDevelopedModel#getCapabilities <em>Capabilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Capabilities</em>'.
-	 * @see euaiactcompliance.MLModel#getCapabilities()
-	 * @see #getMLModel()
+	 * @see euaiactcompliance.SelfDevelopedModel#getCapabilities()
+	 * @see #getSelfDevelopedModel()
 	 * @generated
 	 */
-	EAttribute getMLModel_Capabilities();
+	EAttribute getSelfDevelopedModel_Capabilities();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.MLModel#isTestReports <em>Test Reports</em>}'.
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.SelfDevelopedModel#isTestReports <em>Test Reports</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Test Reports</em>'.
-	 * @see euaiactcompliance.MLModel#isTestReports()
-	 * @see #getMLModel()
+	 * @see euaiactcompliance.SelfDevelopedModel#isTestReports()
+	 * @see #getSelfDevelopedModel()
 	 * @generated
 	 */
-	EAttribute getMLModel_TestReports();
+	EAttribute getSelfDevelopedModel_TestReports();
 
 	/**
-	 * Returns the meta object for the reference '{@link euaiactcompliance.MLModel#getBase_Component <em>Base Component</em>}'.
+	 * Returns the meta object for the reference '{@link euaiactcompliance.SelfDevelopedModel#getBase_Component <em>Base Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Base Component</em>'.
-	 * @see euaiactcompliance.MLModel#getBase_Component()
-	 * @see #getMLModel()
+	 * @see euaiactcompliance.SelfDevelopedModel#getBase_Component()
+	 * @see #getSelfDevelopedModel()
 	 * @generated
 	 */
-	EReference getMLModel_Base_Component();
+	EReference getSelfDevelopedModel_Base_Component();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.MLModel#getInputSpecification <em>Input Specification</em>}'.
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.SelfDevelopedModel#getInputSpecification <em>Input Specification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Input Specification</em>'.
-	 * @see euaiactcompliance.MLModel#getInputSpecification()
-	 * @see #getMLModel()
+	 * @see euaiactcompliance.SelfDevelopedModel#getInputSpecification()
+	 * @see #getSelfDevelopedModel()
 	 * @generated
 	 */
-	EAttribute getMLModel_InputSpecification();
+	EAttribute getSelfDevelopedModel_InputSpecification();
 
 	/**
 	 * Returns the meta object for class '{@link euaiactcompliance.Education <em>Education</em>}'.
@@ -3554,48 +3401,15 @@ public interface EuaiactcompliancePackage extends EPackage {
 	EAttribute getEducation_ExamMonitoring();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.Education#isNarrowProceduralTask <em>Narrow Procedural Task</em>}'.
+	 * Returns the meta object for the reference '{@link euaiactcompliance.Education#getBase_UseCase <em>Base Use Case</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Narrow Procedural Task</em>'.
-	 * @see euaiactcompliance.Education#isNarrowProceduralTask()
+	 * @return the meta object for the reference '<em>Base Use Case</em>'.
+	 * @see euaiactcompliance.Education#getBase_UseCase()
 	 * @see #getEducation()
 	 * @generated
 	 */
-	EAttribute getEducation_NarrowProceduralTask();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.Education#isImprovesHumanActivity <em>Improves Human Activity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Improves Human Activity</em>'.
-	 * @see euaiactcompliance.Education#isImprovesHumanActivity()
-	 * @see #getEducation()
-	 * @generated
-	 */
-	EAttribute getEducation_ImprovesHumanActivity();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.Education#isDecisionPatternDetection <em>Decision Pattern Detection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Decision Pattern Detection</em>'.
-	 * @see euaiactcompliance.Education#isDecisionPatternDetection()
-	 * @see #getEducation()
-	 * @generated
-	 */
-	EAttribute getEducation_DecisionPatternDetection();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.Education#isPreparatoryTask <em>Preparatory Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Preparatory Task</em>'.
-	 * @see euaiactcompliance.Education#isPreparatoryTask()
-	 * @see #getEducation()
-	 * @generated
-	 */
-	EAttribute getEducation_PreparatoryTask();
+	EReference getEducation_Base_UseCase();
 
 	/**
 	 * Returns the meta object for the attribute '{@link euaiactcompliance.Education#getExceptionJustification <em>Exception Justification</em>}'.
@@ -3609,15 +3423,15 @@ public interface EuaiactcompliancePackage extends EPackage {
 	EAttribute getEducation_ExceptionJustification();
 
 	/**
-	 * Returns the meta object for the reference '{@link euaiactcompliance.Education#getBase_UseCase <em>Base Use Case</em>}'.
+	 * Returns the meta object for the attribute list '{@link euaiactcompliance.Education#getException <em>Exception</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Use Case</em>'.
-	 * @see euaiactcompliance.Education#getBase_UseCase()
+	 * @return the meta object for the attribute list '<em>Exception</em>'.
+	 * @see euaiactcompliance.Education#getException()
 	 * @see #getEducation()
 	 * @generated
 	 */
-	EReference getEducation_Base_UseCase();
+	EAttribute getEducation_Exception();
 
 	/**
 	 * Returns the meta object for class '{@link euaiactcompliance.HumanEmployment <em>Human Employment</em>}'.
@@ -3652,37 +3466,26 @@ public interface EuaiactcompliancePackage extends EPackage {
 	EAttribute getHumanEmployment_WorkConditionsDecisions();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.HumanEmployment#isDecisionPatternDetection <em>Decision Pattern Detection</em>}'.
+	 * Returns the meta object for the reference '{@link euaiactcompliance.HumanEmployment#getBase_UseCase <em>Base Use Case</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Decision Pattern Detection</em>'.
-	 * @see euaiactcompliance.HumanEmployment#isDecisionPatternDetection()
+	 * @return the meta object for the reference '<em>Base Use Case</em>'.
+	 * @see euaiactcompliance.HumanEmployment#getBase_UseCase()
 	 * @see #getHumanEmployment()
 	 * @generated
 	 */
-	EAttribute getHumanEmployment_DecisionPatternDetection();
+	EReference getHumanEmployment_Base_UseCase();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.HumanEmployment#isImprovesHumanActivity <em>Improves Human Activity</em>}'.
+	 * Returns the meta object for the attribute list '{@link euaiactcompliance.HumanEmployment#getException <em>Exception</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Improves Human Activity</em>'.
-	 * @see euaiactcompliance.HumanEmployment#isImprovesHumanActivity()
+	 * @return the meta object for the attribute list '<em>Exception</em>'.
+	 * @see euaiactcompliance.HumanEmployment#getException()
 	 * @see #getHumanEmployment()
 	 * @generated
 	 */
-	EAttribute getHumanEmployment_ImprovesHumanActivity();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.HumanEmployment#isPreparatoryTask <em>Preparatory Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Preparatory Task</em>'.
-	 * @see euaiactcompliance.HumanEmployment#isPreparatoryTask()
-	 * @see #getHumanEmployment()
-	 * @generated
-	 */
-	EAttribute getHumanEmployment_PreparatoryTask();
+	EAttribute getHumanEmployment_Exception();
 
 	/**
 	 * Returns the meta object for the attribute '{@link euaiactcompliance.HumanEmployment#getExceptionJustification <em>Exception Justification</em>}'.
@@ -3694,28 +3497,6 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getHumanEmployment_ExceptionJustification();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.HumanEmployment#isNarrowProceduralTask <em>Narrow Procedural Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Narrow Procedural Task</em>'.
-	 * @see euaiactcompliance.HumanEmployment#isNarrowProceduralTask()
-	 * @see #getHumanEmployment()
-	 * @generated
-	 */
-	EAttribute getHumanEmployment_NarrowProceduralTask();
-
-	/**
-	 * Returns the meta object for the reference '{@link euaiactcompliance.HumanEmployment#getBase_UseCase <em>Base Use Case</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Use Case</em>'.
-	 * @see euaiactcompliance.HumanEmployment#getBase_UseCase()
-	 * @see #getHumanEmployment()
-	 * @generated
-	 */
-	EReference getHumanEmployment_Base_UseCase();
 
 	/**
 	 * Returns the meta object for class '{@link euaiactcompliance.TrainingData <em>Training Data</em>}'.
@@ -3902,61 +3683,6 @@ public interface EuaiactcompliancePackage extends EPackage {
 	EAttribute getEssentialService_InsuranceRiskPricing();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.EssentialService#isPreparatoryTask <em>Preparatory Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Preparatory Task</em>'.
-	 * @see euaiactcompliance.EssentialService#isPreparatoryTask()
-	 * @see #getEssentialService()
-	 * @generated
-	 */
-	EAttribute getEssentialService_PreparatoryTask();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.EssentialService#isNarrowProceduralTask <em>Narrow Procedural Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Narrow Procedural Task</em>'.
-	 * @see euaiactcompliance.EssentialService#isNarrowProceduralTask()
-	 * @see #getEssentialService()
-	 * @generated
-	 */
-	EAttribute getEssentialService_NarrowProceduralTask();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.EssentialService#getExceptionJustification <em>Exception Justification</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Exception Justification</em>'.
-	 * @see euaiactcompliance.EssentialService#getExceptionJustification()
-	 * @see #getEssentialService()
-	 * @generated
-	 */
-	EAttribute getEssentialService_ExceptionJustification();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.EssentialService#isImprovesHumanActivity <em>Improves Human Activity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Improves Human Activity</em>'.
-	 * @see euaiactcompliance.EssentialService#isImprovesHumanActivity()
-	 * @see #getEssentialService()
-	 * @generated
-	 */
-	EAttribute getEssentialService_ImprovesHumanActivity();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.EssentialService#isDecisionPatternDetection <em>Decision Pattern Detection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Decision Pattern Detection</em>'.
-	 * @see euaiactcompliance.EssentialService#isDecisionPatternDetection()
-	 * @see #getEssentialService()
-	 * @generated
-	 */
-	EAttribute getEssentialService_DecisionPatternDetection();
-
-	/**
 	 * Returns the meta object for the reference '{@link euaiactcompliance.EssentialService#getBase_UseCase <em>Base Use Case</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3977,6 +3703,28 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getEssentialService_Emergency();
+
+	/**
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.EssentialService#getExceptionJustification <em>Exception Justification</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Exception Justification</em>'.
+	 * @see euaiactcompliance.EssentialService#getExceptionJustification()
+	 * @see #getEssentialService()
+	 * @generated
+	 */
+	EAttribute getEssentialService_ExceptionJustification();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link euaiactcompliance.EssentialService#getException <em>Exception</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Exception</em>'.
+	 * @see euaiactcompliance.EssentialService#getException()
+	 * @see #getEssentialService()
+	 * @generated
+	 */
+	EAttribute getEssentialService_Exception();
 
 	/**
 	 * Returns the meta object for class '{@link euaiactcompliance.LawEnforcement <em>Law Enforcement</em>}'.
@@ -4044,61 +3792,6 @@ public interface EuaiactcompliancePackage extends EPackage {
 	EAttribute getLawEnforcement_SolelyProfilingBased();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.LawEnforcement#isNarrowProceduralTask <em>Narrow Procedural Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Narrow Procedural Task</em>'.
-	 * @see euaiactcompliance.LawEnforcement#isNarrowProceduralTask()
-	 * @see #getLawEnforcement()
-	 * @generated
-	 */
-	EAttribute getLawEnforcement_NarrowProceduralTask();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.LawEnforcement#getExceptionJustification <em>Exception Justification</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Exception Justification</em>'.
-	 * @see euaiactcompliance.LawEnforcement#getExceptionJustification()
-	 * @see #getLawEnforcement()
-	 * @generated
-	 */
-	EAttribute getLawEnforcement_ExceptionJustification();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.LawEnforcement#isDecisionPatternDetection <em>Decision Pattern Detection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Decision Pattern Detection</em>'.
-	 * @see euaiactcompliance.LawEnforcement#isDecisionPatternDetection()
-	 * @see #getLawEnforcement()
-	 * @generated
-	 */
-	EAttribute getLawEnforcement_DecisionPatternDetection();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.LawEnforcement#isPreparatoryTask <em>Preparatory Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Preparatory Task</em>'.
-	 * @see euaiactcompliance.LawEnforcement#isPreparatoryTask()
-	 * @see #getLawEnforcement()
-	 * @generated
-	 */
-	EAttribute getLawEnforcement_PreparatoryTask();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.LawEnforcement#isImprovesHumanActivity <em>Improves Human Activity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Improves Human Activity</em>'.
-	 * @see euaiactcompliance.LawEnforcement#isImprovesHumanActivity()
-	 * @see #getLawEnforcement()
-	 * @generated
-	 */
-	EAttribute getLawEnforcement_ImprovesHumanActivity();
-
-	/**
 	 * Returns the meta object for the reference '{@link euaiactcompliance.LawEnforcement#getBase_UseCase <em>Base Use Case</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4119,6 +3812,28 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getLawEnforcement_SupportsHumanAssessment();
+
+	/**
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.LawEnforcement#getExceptionJustification <em>Exception Justification</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Exception Justification</em>'.
+	 * @see euaiactcompliance.LawEnforcement#getExceptionJustification()
+	 * @see #getLawEnforcement()
+	 * @generated
+	 */
+	EAttribute getLawEnforcement_ExceptionJustification();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link euaiactcompliance.LawEnforcement#getException <em>Exception</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Exception</em>'.
+	 * @see euaiactcompliance.LawEnforcement#getException()
+	 * @see #getLawEnforcement()
+	 * @generated
+	 */
+	EAttribute getLawEnforcement_Exception();
 
 	/**
 	 * Returns the meta object for class '{@link euaiactcompliance.MigrationBorder <em>Migration Border</em>}'.
@@ -4186,26 +3901,26 @@ public interface EuaiactcompliancePackage extends EPackage {
 	EAttribute getMigrationBorder_PersonIdentification();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.MigrationBorder#isImprovesHumanActivity <em>Improves Human Activity</em>}'.
+	 * Returns the meta object for the reference '{@link euaiactcompliance.MigrationBorder#getBase_UseCase <em>Base Use Case</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Improves Human Activity</em>'.
-	 * @see euaiactcompliance.MigrationBorder#isImprovesHumanActivity()
+	 * @return the meta object for the reference '<em>Base Use Case</em>'.
+	 * @see euaiactcompliance.MigrationBorder#getBase_UseCase()
 	 * @see #getMigrationBorder()
 	 * @generated
 	 */
-	EAttribute getMigrationBorder_ImprovesHumanActivity();
+	EReference getMigrationBorder_Base_UseCase();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.MigrationBorder#isNarrowProceduralTask <em>Narrow Procedural Task</em>}'.
+	 * Returns the meta object for the attribute list '{@link euaiactcompliance.MigrationBorder#getException <em>Exception</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Narrow Procedural Task</em>'.
-	 * @see euaiactcompliance.MigrationBorder#isNarrowProceduralTask()
+	 * @return the meta object for the attribute list '<em>Exception</em>'.
+	 * @see euaiactcompliance.MigrationBorder#getException()
 	 * @see #getMigrationBorder()
 	 * @generated
 	 */
-	EAttribute getMigrationBorder_NarrowProceduralTask();
+	EAttribute getMigrationBorder_Exception();
 
 	/**
 	 * Returns the meta object for the attribute '{@link euaiactcompliance.MigrationBorder#getExceptionJustification <em>Exception Justification</em>}'.
@@ -4217,39 +3932,6 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMigrationBorder_ExceptionJustification();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.MigrationBorder#isPreparatoryTask <em>Preparatory Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Preparatory Task</em>'.
-	 * @see euaiactcompliance.MigrationBorder#isPreparatoryTask()
-	 * @see #getMigrationBorder()
-	 * @generated
-	 */
-	EAttribute getMigrationBorder_PreparatoryTask();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.MigrationBorder#isDecisionPatternDetection <em>Decision Pattern Detection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Decision Pattern Detection</em>'.
-	 * @see euaiactcompliance.MigrationBorder#isDecisionPatternDetection()
-	 * @see #getMigrationBorder()
-	 * @generated
-	 */
-	EAttribute getMigrationBorder_DecisionPatternDetection();
-
-	/**
-	 * Returns the meta object for the reference '{@link euaiactcompliance.MigrationBorder#getBase_UseCase <em>Base Use Case</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Use Case</em>'.
-	 * @see euaiactcompliance.MigrationBorder#getBase_UseCase()
-	 * @see #getMigrationBorder()
-	 * @generated
-	 */
-	EReference getMigrationBorder_Base_UseCase();
 
 	/**
 	 * Returns the meta object for class '{@link euaiactcompliance.JusticeDemocracyUseCase <em>Justice Democracy Use Case</em>}'.
@@ -4295,48 +3977,26 @@ public interface EuaiactcompliancePackage extends EPackage {
 	EAttribute getJusticeDemocracyUseCase_NoDirectExposure();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.JusticeDemocracyUseCase#isDecisionPatternDetection <em>Decision Pattern Detection</em>}'.
+	 * Returns the meta object for the reference '{@link euaiactcompliance.JusticeDemocracyUseCase#getBase_UseCase <em>Base Use Case</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Decision Pattern Detection</em>'.
-	 * @see euaiactcompliance.JusticeDemocracyUseCase#isDecisionPatternDetection()
+	 * @return the meta object for the reference '<em>Base Use Case</em>'.
+	 * @see euaiactcompliance.JusticeDemocracyUseCase#getBase_UseCase()
 	 * @see #getJusticeDemocracyUseCase()
 	 * @generated
 	 */
-	EAttribute getJusticeDemocracyUseCase_DecisionPatternDetection();
+	EReference getJusticeDemocracyUseCase_Base_UseCase();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.JusticeDemocracyUseCase#isImprovesHumanActivity <em>Improves Human Activity</em>}'.
+	 * Returns the meta object for the attribute list '{@link euaiactcompliance.JusticeDemocracyUseCase#getException <em>Exception</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Improves Human Activity</em>'.
-	 * @see euaiactcompliance.JusticeDemocracyUseCase#isImprovesHumanActivity()
+	 * @return the meta object for the attribute list '<em>Exception</em>'.
+	 * @see euaiactcompliance.JusticeDemocracyUseCase#getException()
 	 * @see #getJusticeDemocracyUseCase()
 	 * @generated
 	 */
-	EAttribute getJusticeDemocracyUseCase_ImprovesHumanActivity();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.JusticeDemocracyUseCase#isPreparatoryTask <em>Preparatory Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Preparatory Task</em>'.
-	 * @see euaiactcompliance.JusticeDemocracyUseCase#isPreparatoryTask()
-	 * @see #getJusticeDemocracyUseCase()
-	 * @generated
-	 */
-	EAttribute getJusticeDemocracyUseCase_PreparatoryTask();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.JusticeDemocracyUseCase#isNarrowProceduralTask <em>Narrow Procedural Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Narrow Procedural Task</em>'.
-	 * @see euaiactcompliance.JusticeDemocracyUseCase#isNarrowProceduralTask()
-	 * @see #getJusticeDemocracyUseCase()
-	 * @generated
-	 */
-	EAttribute getJusticeDemocracyUseCase_NarrowProceduralTask();
+	EAttribute getJusticeDemocracyUseCase_Exception();
 
 	/**
 	 * Returns the meta object for the attribute '{@link euaiactcompliance.JusticeDemocracyUseCase#getExceptionJustification <em>Exception Justification</em>}'.
@@ -4348,17 +4008,6 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getJusticeDemocracyUseCase_ExceptionJustification();
-
-	/**
-	 * Returns the meta object for the reference '{@link euaiactcompliance.JusticeDemocracyUseCase#getBase_UseCase <em>Base Use Case</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Use Case</em>'.
-	 * @see euaiactcompliance.JusticeDemocracyUseCase#getBase_UseCase()
-	 * @see #getJusticeDemocracyUseCase()
-	 * @generated
-	 */
-	EReference getJusticeDemocracyUseCase_Base_UseCase();
 
 	/**
 	 * Returns the meta object for class '{@link euaiactcompliance.BiometricIdentification <em>Biometric Identification</em>}'.
@@ -4448,48 +4097,26 @@ public interface EuaiactcompliancePackage extends EPackage {
 	EAttribute getBiometricIdentification_SeriousCrimeSuspectSearch();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.BiometricIdentification#isNarrowProceduralTask <em>Narrow Procedural Task</em>}'.
+	 * Returns the meta object for the reference '{@link euaiactcompliance.BiometricIdentification#getBase_UseCase <em>Base Use Case</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Narrow Procedural Task</em>'.
-	 * @see euaiactcompliance.BiometricIdentification#isNarrowProceduralTask()
+	 * @return the meta object for the reference '<em>Base Use Case</em>'.
+	 * @see euaiactcompliance.BiometricIdentification#getBase_UseCase()
 	 * @see #getBiometricIdentification()
 	 * @generated
 	 */
-	EAttribute getBiometricIdentification_NarrowProceduralTask();
+	EReference getBiometricIdentification_Base_UseCase();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.BiometricIdentification#isImprovesHumanActivity <em>Improves Human Activity</em>}'.
+	 * Returns the meta object for the attribute list '{@link euaiactcompliance.BiometricIdentification#getException <em>Exception</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Improves Human Activity</em>'.
-	 * @see euaiactcompliance.BiometricIdentification#isImprovesHumanActivity()
+	 * @return the meta object for the attribute list '<em>Exception</em>'.
+	 * @see euaiactcompliance.BiometricIdentification#getException()
 	 * @see #getBiometricIdentification()
 	 * @generated
 	 */
-	EAttribute getBiometricIdentification_ImprovesHumanActivity();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.BiometricIdentification#isDecisionPatternDetection <em>Decision Pattern Detection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Decision Pattern Detection</em>'.
-	 * @see euaiactcompliance.BiometricIdentification#isDecisionPatternDetection()
-	 * @see #getBiometricIdentification()
-	 * @generated
-	 */
-	EAttribute getBiometricIdentification_DecisionPatternDetection();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.BiometricIdentification#isPreparatoryTask <em>Preparatory Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Preparatory Task</em>'.
-	 * @see euaiactcompliance.BiometricIdentification#isPreparatoryTask()
-	 * @see #getBiometricIdentification()
-	 * @generated
-	 */
-	EAttribute getBiometricIdentification_PreparatoryTask();
+	EAttribute getBiometricIdentification_Exception();
 
 	/**
 	 * Returns the meta object for the attribute '{@link euaiactcompliance.BiometricIdentification#getExceptionJustification <em>Exception Justification</em>}'.
@@ -4501,17 +4128,6 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getBiometricIdentification_ExceptionJustification();
-
-	/**
-	 * Returns the meta object for the reference '{@link euaiactcompliance.BiometricIdentification#getBase_UseCase <em>Base Use Case</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Use Case</em>'.
-	 * @see euaiactcompliance.BiometricIdentification#getBase_UseCase()
-	 * @see #getBiometricIdentification()
-	 * @generated
-	 */
-	EReference getBiometricIdentification_Base_UseCase();
 
 	/**
 	 * Returns the meta object for class '{@link euaiactcompliance.BiometricCategorisation <em>Biometric Categorisation</em>}'.
@@ -4601,48 +4217,26 @@ public interface EuaiactcompliancePackage extends EPackage {
 	EAttribute getBiometricCategorisation_LawEnforcementCategorisation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.BiometricCategorisation#isNarrowProceduralTask <em>Narrow Procedural Task</em>}'.
+	 * Returns the meta object for the reference '{@link euaiactcompliance.BiometricCategorisation#getBase_UseCase <em>Base Use Case</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Narrow Procedural Task</em>'.
-	 * @see euaiactcompliance.BiometricCategorisation#isNarrowProceduralTask()
+	 * @return the meta object for the reference '<em>Base Use Case</em>'.
+	 * @see euaiactcompliance.BiometricCategorisation#getBase_UseCase()
 	 * @see #getBiometricCategorisation()
 	 * @generated
 	 */
-	EAttribute getBiometricCategorisation_NarrowProceduralTask();
+	EReference getBiometricCategorisation_Base_UseCase();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.BiometricCategorisation#isImprovesHumanActivity <em>Improves Human Activity</em>}'.
+	 * Returns the meta object for the attribute list '{@link euaiactcompliance.BiometricCategorisation#getException <em>Exception</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Improves Human Activity</em>'.
-	 * @see euaiactcompliance.BiometricCategorisation#isImprovesHumanActivity()
+	 * @return the meta object for the attribute list '<em>Exception</em>'.
+	 * @see euaiactcompliance.BiometricCategorisation#getException()
 	 * @see #getBiometricCategorisation()
 	 * @generated
 	 */
-	EAttribute getBiometricCategorisation_ImprovesHumanActivity();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.BiometricCategorisation#isDecisionPatternDetection <em>Decision Pattern Detection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Decision Pattern Detection</em>'.
-	 * @see euaiactcompliance.BiometricCategorisation#isDecisionPatternDetection()
-	 * @see #getBiometricCategorisation()
-	 * @generated
-	 */
-	EAttribute getBiometricCategorisation_DecisionPatternDetection();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.BiometricCategorisation#isPreparatoryTask <em>Preparatory Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Preparatory Task</em>'.
-	 * @see euaiactcompliance.BiometricCategorisation#isPreparatoryTask()
-	 * @see #getBiometricCategorisation()
-	 * @generated
-	 */
-	EAttribute getBiometricCategorisation_PreparatoryTask();
+	EAttribute getBiometricCategorisation_Exception();
 
 	/**
 	 * Returns the meta object for the attribute '{@link euaiactcompliance.BiometricCategorisation#getExceptionJustification <em>Exception Justification</em>}'.
@@ -4654,17 +4248,6 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getBiometricCategorisation_ExceptionJustification();
-
-	/**
-	 * Returns the meta object for the reference '{@link euaiactcompliance.BiometricCategorisation#getBase_UseCase <em>Base Use Case</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Use Case</em>'.
-	 * @see euaiactcompliance.BiometricCategorisation#getBase_UseCase()
-	 * @see #getBiometricCategorisation()
-	 * @generated
-	 */
-	EReference getBiometricCategorisation_Base_UseCase();
 
 	/**
 	 * Returns the meta object for class '{@link euaiactcompliance.EmotionRecognition <em>Emotion Recognition</em>}'.
@@ -4710,61 +4293,6 @@ public interface EuaiactcompliancePackage extends EPackage {
 	EAttribute getEmotionRecognition_MedicalOrSafetyReason();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.EmotionRecognition#isNarrowProceduralTask <em>Narrow Procedural Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Narrow Procedural Task</em>'.
-	 * @see euaiactcompliance.EmotionRecognition#isNarrowProceduralTask()
-	 * @see #getEmotionRecognition()
-	 * @generated
-	 */
-	EAttribute getEmotionRecognition_NarrowProceduralTask();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.EmotionRecognition#isImprovesHumanActivity <em>Improves Human Activity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Improves Human Activity</em>'.
-	 * @see euaiactcompliance.EmotionRecognition#isImprovesHumanActivity()
-	 * @see #getEmotionRecognition()
-	 * @generated
-	 */
-	EAttribute getEmotionRecognition_ImprovesHumanActivity();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.EmotionRecognition#isDecisionPatternDetection <em>Decision Pattern Detection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Decision Pattern Detection</em>'.
-	 * @see euaiactcompliance.EmotionRecognition#isDecisionPatternDetection()
-	 * @see #getEmotionRecognition()
-	 * @generated
-	 */
-	EAttribute getEmotionRecognition_DecisionPatternDetection();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.EmotionRecognition#isPreparatoryTask <em>Preparatory Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Preparatory Task</em>'.
-	 * @see euaiactcompliance.EmotionRecognition#isPreparatoryTask()
-	 * @see #getEmotionRecognition()
-	 * @generated
-	 */
-	EAttribute getEmotionRecognition_PreparatoryTask();
-
-	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.EmotionRecognition#getExceptionJustification <em>Exception Justification</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Exception Justification</em>'.
-	 * @see euaiactcompliance.EmotionRecognition#getExceptionJustification()
-	 * @see #getEmotionRecognition()
-	 * @generated
-	 */
-	EAttribute getEmotionRecognition_ExceptionJustification();
-
-	/**
 	 * Returns the meta object for the reference '{@link euaiactcompliance.EmotionRecognition#getBase_UseCase <em>Base Use Case</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4776,123 +4304,145 @@ public interface EuaiactcompliancePackage extends EPackage {
 	EReference getEmotionRecognition_Base_UseCase();
 
 	/**
-	 * Returns the meta object for class '{@link euaiactcompliance.RiskManagement <em>Risk Management</em>}'.
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.EmotionRecognition#getExceptionJustificatio <em>Exception Justificatio</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Risk Management</em>'.
-	 * @see euaiactcompliance.RiskManagement
+	 * @return the meta object for the attribute '<em>Exception Justificatio</em>'.
+	 * @see euaiactcompliance.EmotionRecognition#getExceptionJustificatio()
+	 * @see #getEmotionRecognition()
 	 * @generated
 	 */
-	EClass getRiskManagement();
+	EAttribute getEmotionRecognition_ExceptionJustificatio();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.RiskManagement#getRiskIdentification <em>Risk Identification</em>}'.
+	 * Returns the meta object for the attribute list '{@link euaiactcompliance.EmotionRecognition#getException <em>Exception</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Exception</em>'.
+	 * @see euaiactcompliance.EmotionRecognition#getException()
+	 * @see #getEmotionRecognition()
+	 * @generated
+	 */
+	EAttribute getEmotionRecognition_Exception();
+
+	/**
+	 * Returns the meta object for class '{@link euaiactcompliance.RiskManagementSystem <em>Risk Management System</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Risk Management System</em>'.
+	 * @see euaiactcompliance.RiskManagementSystem
+	 * @generated
+	 */
+	EClass getRiskManagementSystem();
+
+	/**
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.RiskManagementSystem#getRiskIdentification <em>Risk Identification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Risk Identification</em>'.
-	 * @see euaiactcompliance.RiskManagement#getRiskIdentification()
-	 * @see #getRiskManagement()
+	 * @see euaiactcompliance.RiskManagementSystem#getRiskIdentification()
+	 * @see #getRiskManagementSystem()
 	 * @generated
 	 */
-	EAttribute getRiskManagement_RiskIdentification();
+	EAttribute getRiskManagementSystem_RiskIdentification();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.RiskManagement#getRiskEstimation <em>Risk Estimation</em>}'.
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.RiskManagementSystem#getRiskEstimation <em>Risk Estimation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Risk Estimation</em>'.
-	 * @see euaiactcompliance.RiskManagement#getRiskEstimation()
-	 * @see #getRiskManagement()
+	 * @see euaiactcompliance.RiskManagementSystem#getRiskEstimation()
+	 * @see #getRiskManagementSystem()
 	 * @generated
 	 */
-	EAttribute getRiskManagement_RiskEstimation();
+	EAttribute getRiskManagementSystem_RiskEstimation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.RiskManagement#getPostMarketRiskEvaluation <em>Post Market Risk Evaluation</em>}'.
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.RiskManagementSystem#getPostMarketRiskEvaluation <em>Post Market Risk Evaluation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Post Market Risk Evaluation</em>'.
-	 * @see euaiactcompliance.RiskManagement#getPostMarketRiskEvaluation()
-	 * @see #getRiskManagement()
+	 * @see euaiactcompliance.RiskManagementSystem#getPostMarketRiskEvaluation()
+	 * @see #getRiskManagementSystem()
 	 * @generated
 	 */
-	EAttribute getRiskManagement_PostMarketRiskEvaluation();
+	EAttribute getRiskManagementSystem_PostMarketRiskEvaluation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.RiskManagement#getRiskMitigation <em>Risk Mitigation</em>}'.
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.RiskManagementSystem#getRiskMitigation <em>Risk Mitigation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Risk Mitigation</em>'.
-	 * @see euaiactcompliance.RiskManagement#getRiskMitigation()
-	 * @see #getRiskManagement()
+	 * @see euaiactcompliance.RiskManagementSystem#getRiskMitigation()
+	 * @see #getRiskManagementSystem()
 	 * @generated
 	 */
-	EAttribute getRiskManagement_RiskMitigation();
+	EAttribute getRiskManagementSystem_RiskMitigation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.RiskManagement#getResidualRisk <em>Residual Risk</em>}'.
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.RiskManagementSystem#getResidualRisk <em>Residual Risk</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Residual Risk</em>'.
-	 * @see euaiactcompliance.RiskManagement#getResidualRisk()
-	 * @see #getRiskManagement()
+	 * @see euaiactcompliance.RiskManagementSystem#getResidualRisk()
+	 * @see #getRiskManagementSystem()
 	 * @generated
 	 */
-	EAttribute getRiskManagement_ResidualRisk();
+	EAttribute getRiskManagementSystem_ResidualRisk();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.RiskManagement#getTestingProcedure <em>Testing Procedure</em>}'.
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.RiskManagementSystem#getTestingProcedure <em>Testing Procedure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Testing Procedure</em>'.
-	 * @see euaiactcompliance.RiskManagement#getTestingProcedure()
-	 * @see #getRiskManagement()
+	 * @see euaiactcompliance.RiskManagementSystem#getTestingProcedure()
+	 * @see #getRiskManagementSystem()
 	 * @generated
 	 */
-	EAttribute getRiskManagement_TestingProcedure();
+	EAttribute getRiskManagementSystem_TestingProcedure();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.RiskManagement#getTestingMetrics <em>Testing Metrics</em>}'.
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.RiskManagementSystem#getTestingMetrics <em>Testing Metrics</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Testing Metrics</em>'.
-	 * @see euaiactcompliance.RiskManagement#getTestingMetrics()
-	 * @see #getRiskManagement()
+	 * @see euaiactcompliance.RiskManagementSystem#getTestingMetrics()
+	 * @see #getRiskManagementSystem()
 	 * @generated
 	 */
-	EAttribute getRiskManagement_TestingMetrics();
+	EAttribute getRiskManagementSystem_TestingMetrics();
 
 	/**
-	 * Returns the meta object for the attribute '{@link euaiactcompliance.RiskManagement#getVulnerableGroupsAssessment <em>Vulnerable Groups Assessment</em>}'.
+	 * Returns the meta object for the attribute '{@link euaiactcompliance.RiskManagementSystem#getVulnerableGroupsAssessment <em>Vulnerable Groups Assessment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Vulnerable Groups Assessment</em>'.
-	 * @see euaiactcompliance.RiskManagement#getVulnerableGroupsAssessment()
-	 * @see #getRiskManagement()
+	 * @see euaiactcompliance.RiskManagementSystem#getVulnerableGroupsAssessment()
+	 * @see #getRiskManagementSystem()
 	 * @generated
 	 */
-	EAttribute getRiskManagement_VulnerableGroupsAssessment();
+	EAttribute getRiskManagementSystem_VulnerableGroupsAssessment();
 
 	/**
-	 * Returns the meta object for the reference '{@link euaiactcompliance.RiskManagement#getBase_Artifact <em>Base Artifact</em>}'.
+	 * Returns the meta object for the reference '{@link euaiactcompliance.RiskManagementSystem#getBase_Artifact <em>Base Artifact</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Base Artifact</em>'.
-	 * @see euaiactcompliance.RiskManagement#getBase_Artifact()
-	 * @see #getRiskManagement()
+	 * @see euaiactcompliance.RiskManagementSystem#getBase_Artifact()
+	 * @see #getRiskManagementSystem()
 	 * @generated
 	 */
-	EReference getRiskManagement_Base_Artifact();
+	EReference getRiskManagementSystem_Base_Artifact();
 
 	/**
-	 * Returns the meta object for enum '{@link euaiactcompliance.Category <em>Category</em>}'.
+	 * Returns the meta object for enum '{@link euaiactcompliance.ProductCategory <em>Product Category</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Category</em>'.
-	 * @see euaiactcompliance.Category
+	 * @return the meta object for enum '<em>Product Category</em>'.
+	 * @see euaiactcompliance.ProductCategory
 	 * @generated
 	 */
-	EEnum getCategory();
+	EEnum getProductCategory();
 
 	/**
 	 * Returns the meta object for enum '{@link euaiactcompliance.Role <em>Role</em>}'.
@@ -4903,6 +4453,16 @@ public interface EuaiactcompliancePackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getRole();
+
+	/**
+	 * Returns the meta object for enum '{@link euaiactcompliance.Exception <em>Exception</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Exception</em>'.
+	 * @see euaiactcompliance.Exception
+	 * @generated
+	 */
+	EEnum getException();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -4980,7 +4540,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 		EAttribute PRODUCT_EMBEDDING__THIRD_PARTY_CONFORMITY_ASSESSMENT = eINSTANCE.getProductEmbedding_ThirdPartyConformityAssessment();
 
 		/**
-		 * The meta object literal for the '<em><b>Product Category</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Product Category</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5014,6 +4574,30 @@ public interface EuaiactcompliancePackage extends EPackage {
 		EReference HUMAN_INTERACTION__BASE_USE_CASE = eINSTANCE.getHumanInteraction_Base_UseCase();
 
 		/**
+		 * The meta object literal for the '<em><b>Law Enforcement Authorised</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HUMAN_INTERACTION__LAW_ENFORCEMENT_AUTHORISED = eINSTANCE.getHumanInteraction_LawEnforcementAuthorised();
+
+		/**
+		 * The meta object literal for the '<em><b>Obvious AI Interaction</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HUMAN_INTERACTION__OBVIOUS_AI_INTERACTION = eINSTANCE.getHumanInteraction_ObviousAIInteraction();
+
+		/**
+		 * The meta object literal for the '<em><b>Puplic Criminal Offence Report</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HUMAN_INTERACTION__PUPLIC_CRIMINAL_OFFENCE_REPORT = eINSTANCE.getHumanInteraction_PuplicCriminalOffenceReport();
+
+		/**
 		 * The meta object literal for the '{@link euaiactcompliance.impl.SyntheticContentImpl <em>Synthetic Content</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5030,6 +4614,22 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * @generated
 		 */
 		EReference SYNTHETIC_CONTENT__BASE_USE_CASE = eINSTANCE.getSyntheticContent_Base_UseCase();
+
+		/**
+		 * The meta object literal for the '<em><b>Law Enforcement Authorised</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SYNTHETIC_CONTENT__LAW_ENFORCEMENT_AUTHORISED = eINSTANCE.getSyntheticContent_LawEnforcementAuthorised();
+
+		/**
+		 * The meta object literal for the '<em><b>Standard Editing Only</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SYNTHETIC_CONTENT__STANDARD_EDITING_ONLY = eINSTANCE.getSyntheticContent_StandardEditingOnly();
 
 		/**
 		 * The meta object literal for the '{@link euaiactcompliance.impl.DeepfakeImpl <em>Deepfake</em>}' class.
@@ -5058,6 +4658,14 @@ public interface EuaiactcompliancePackage extends EPackage {
 		EAttribute DEEPFAKE__CREATIVE_WORK = eINSTANCE.getDeepfake_CreativeWork();
 
 		/**
+		 * The meta object literal for the '<em><b>Law Enforcement Authorised</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DEEPFAKE__LAW_ENFORCEMENT_AUTHORISED = eINSTANCE.getDeepfake_LawEnforcementAuthorised();
+
+		/**
 		 * The meta object literal for the '{@link euaiactcompliance.impl.PublicInterestTextImpl <em>Public Interest Text</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5082,6 +4690,14 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PUBLIC_INTEREST_TEXT__HUMAN_REVIEW = eINSTANCE.getPublicInterestText_HumanReview();
+
+		/**
+		 * The meta object literal for the '<em><b>Law Enforcement Authorised</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PUBLIC_INTEREST_TEXT__LAW_ENFORCEMENT_AUTHORISED = eINSTANCE.getPublicInterestText_LawEnforcementAuthorised();
 
 		/**
 		 * The meta object literal for the '{@link euaiactcompliance.impl.ManipulativeBehaviourImpl <em>Manipulative Behaviour</em>}' class.
@@ -5524,46 +5140,6 @@ public interface EuaiactcompliancePackage extends EPackage {
 		EAttribute CRITICAL_INFRASTRUCTURE__ELECTRICITY_SUPPLY = eINSTANCE.getCriticalInfrastructure_ElectricitySupply();
 
 		/**
-		 * The meta object literal for the '<em><b>Exception Justification</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CRITICAL_INFRASTRUCTURE__EXCEPTION_JUSTIFICATION = eINSTANCE.getCriticalInfrastructure_ExceptionJustification();
-
-		/**
-		 * The meta object literal for the '<em><b>Improves Human Activity</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CRITICAL_INFRASTRUCTURE__IMPROVES_HUMAN_ACTIVITY = eINSTANCE.getCriticalInfrastructure_ImprovesHumanActivity();
-
-		/**
-		 * The meta object literal for the '<em><b>Narrow Procedural Task</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CRITICAL_INFRASTRUCTURE__NARROW_PROCEDURAL_TASK = eINSTANCE.getCriticalInfrastructure_NarrowProceduralTask();
-
-		/**
-		 * The meta object literal for the '<em><b>Preparatory Task</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CRITICAL_INFRASTRUCTURE__PREPARATORY_TASK = eINSTANCE.getCriticalInfrastructure_PreparatoryTask();
-
-		/**
-		 * The meta object literal for the '<em><b>Decision Pattern Detection</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CRITICAL_INFRASTRUCTURE__DECISION_PATTERN_DETECTION = eINSTANCE.getCriticalInfrastructure_DecisionPatternDetection();
-
-		/**
 		 * The meta object literal for the '<em><b>Base Use Case</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5572,14 +5148,30 @@ public interface EuaiactcompliancePackage extends EPackage {
 		EReference CRITICAL_INFRASTRUCTURE__BASE_USE_CASE = eINSTANCE.getCriticalInfrastructure_Base_UseCase();
 
 		/**
-		 * The meta object literal for the '{@link euaiactcompliance.impl.MLModelImpl <em>ML Model</em>}' class.
+		 * The meta object literal for the '<em><b>Exception Justification</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see euaiactcompliance.impl.MLModelImpl
-		 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getMLModel()
 		 * @generated
 		 */
-		EClass ML_MODEL = eINSTANCE.getMLModel();
+		EAttribute CRITICAL_INFRASTRUCTURE__EXCEPTION_JUSTIFICATION = eINSTANCE.getCriticalInfrastructure_ExceptionJustification();
+
+		/**
+		 * The meta object literal for the '<em><b>Exception</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CRITICAL_INFRASTRUCTURE__EXCEPTION = eINSTANCE.getCriticalInfrastructure_Exception();
+
+		/**
+		 * The meta object literal for the '{@link euaiactcompliance.impl.SelfDevelopedModelImpl <em>Self Developed Model</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see euaiactcompliance.impl.SelfDevelopedModelImpl
+		 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getSelfDevelopedModel()
+		 * @generated
+		 */
+		EClass SELF_DEVELOPED_MODEL = eINSTANCE.getSelfDevelopedModel();
 
 		/**
 		 * The meta object literal for the '<em><b>Parameter</b></em>' attribute feature.
@@ -5587,7 +5179,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ML_MODEL__PARAMETER = eINSTANCE.getMLModel_Parameter();
+		EAttribute SELF_DEVELOPED_MODEL__PARAMETER = eINSTANCE.getSelfDevelopedModel_Parameter();
 
 		/**
 		 * The meta object literal for the '<em><b>Training Methods</b></em>' attribute feature.
@@ -5595,7 +5187,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ML_MODEL__TRAINING_METHODS = eINSTANCE.getMLModel_TrainingMethods();
+		EAttribute SELF_DEVELOPED_MODEL__TRAINING_METHODS = eINSTANCE.getSelfDevelopedModel_TrainingMethods();
 
 		/**
 		 * The meta object literal for the '<em><b>Objective</b></em>' attribute feature.
@@ -5603,7 +5195,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ML_MODEL__OBJECTIVE = eINSTANCE.getMLModel_Objective();
+		EAttribute SELF_DEVELOPED_MODEL__OBJECTIVE = eINSTANCE.getSelfDevelopedModel_Objective();
 
 		/**
 		 * The meta object literal for the '<em><b>Validation Process</b></em>' attribute feature.
@@ -5611,7 +5203,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ML_MODEL__VALIDATION_PROCESS = eINSTANCE.getMLModel_ValidationProcess();
+		EAttribute SELF_DEVELOPED_MODEL__VALIDATION_PROCESS = eINSTANCE.getSelfDevelopedModel_ValidationProcess();
 
 		/**
 		 * The meta object literal for the '<em><b>Expected Output</b></em>' attribute feature.
@@ -5619,7 +5211,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ML_MODEL__EXPECTED_OUTPUT = eINSTANCE.getMLModel_ExpectedOutput();
+		EAttribute SELF_DEVELOPED_MODEL__EXPECTED_OUTPUT = eINSTANCE.getSelfDevelopedModel_ExpectedOutput();
 
 		/**
 		 * The meta object literal for the '<em><b>Testing Process</b></em>' attribute feature.
@@ -5627,7 +5219,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ML_MODEL__TESTING_PROCESS = eINSTANCE.getMLModel_TestingProcess();
+		EAttribute SELF_DEVELOPED_MODEL__TESTING_PROCESS = eINSTANCE.getSelfDevelopedModel_TestingProcess();
 
 		/**
 		 * The meta object literal for the '<em><b>Accuracy</b></em>' attribute feature.
@@ -5635,7 +5227,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ML_MODEL__ACCURACY = eINSTANCE.getMLModel_Accuracy();
+		EAttribute SELF_DEVELOPED_MODEL__ACCURACY = eINSTANCE.getSelfDevelopedModel_Accuracy();
 
 		/**
 		 * The meta object literal for the '<em><b>Capabilities</b></em>' attribute feature.
@@ -5643,7 +5235,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ML_MODEL__CAPABILITIES = eINSTANCE.getMLModel_Capabilities();
+		EAttribute SELF_DEVELOPED_MODEL__CAPABILITIES = eINSTANCE.getSelfDevelopedModel_Capabilities();
 
 		/**
 		 * The meta object literal for the '<em><b>Test Reports</b></em>' attribute feature.
@@ -5651,7 +5243,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ML_MODEL__TEST_REPORTS = eINSTANCE.getMLModel_TestReports();
+		EAttribute SELF_DEVELOPED_MODEL__TEST_REPORTS = eINSTANCE.getSelfDevelopedModel_TestReports();
 
 		/**
 		 * The meta object literal for the '<em><b>Base Component</b></em>' reference feature.
@@ -5659,7 +5251,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ML_MODEL__BASE_COMPONENT = eINSTANCE.getMLModel_Base_Component();
+		EReference SELF_DEVELOPED_MODEL__BASE_COMPONENT = eINSTANCE.getSelfDevelopedModel_Base_Component();
 
 		/**
 		 * The meta object literal for the '<em><b>Input Specification</b></em>' attribute feature.
@@ -5667,7 +5259,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ML_MODEL__INPUT_SPECIFICATION = eINSTANCE.getMLModel_InputSpecification();
+		EAttribute SELF_DEVELOPED_MODEL__INPUT_SPECIFICATION = eINSTANCE.getSelfDevelopedModel_InputSpecification();
 
 		/**
 		 * The meta object literal for the '{@link euaiactcompliance.impl.EducationImpl <em>Education</em>}' class.
@@ -5712,36 +5304,12 @@ public interface EuaiactcompliancePackage extends EPackage {
 		EAttribute EDUCATION__EXAM_MONITORING = eINSTANCE.getEducation_ExamMonitoring();
 
 		/**
-		 * The meta object literal for the '<em><b>Narrow Procedural Task</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Base Use Case</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EDUCATION__NARROW_PROCEDURAL_TASK = eINSTANCE.getEducation_NarrowProceduralTask();
-
-		/**
-		 * The meta object literal for the '<em><b>Improves Human Activity</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EDUCATION__IMPROVES_HUMAN_ACTIVITY = eINSTANCE.getEducation_ImprovesHumanActivity();
-
-		/**
-		 * The meta object literal for the '<em><b>Decision Pattern Detection</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EDUCATION__DECISION_PATTERN_DETECTION = eINSTANCE.getEducation_DecisionPatternDetection();
-
-		/**
-		 * The meta object literal for the '<em><b>Preparatory Task</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EDUCATION__PREPARATORY_TASK = eINSTANCE.getEducation_PreparatoryTask();
+		EReference EDUCATION__BASE_USE_CASE = eINSTANCE.getEducation_Base_UseCase();
 
 		/**
 		 * The meta object literal for the '<em><b>Exception Justification</b></em>' attribute feature.
@@ -5752,12 +5320,12 @@ public interface EuaiactcompliancePackage extends EPackage {
 		EAttribute EDUCATION__EXCEPTION_JUSTIFICATION = eINSTANCE.getEducation_ExceptionJustification();
 
 		/**
-		 * The meta object literal for the '<em><b>Base Use Case</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Exception</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EDUCATION__BASE_USE_CASE = eINSTANCE.getEducation_Base_UseCase();
+		EAttribute EDUCATION__EXCEPTION = eINSTANCE.getEducation_Exception();
 
 		/**
 		 * The meta object literal for the '{@link euaiactcompliance.impl.HumanEmploymentImpl <em>Human Employment</em>}' class.
@@ -5786,28 +5354,20 @@ public interface EuaiactcompliancePackage extends EPackage {
 		EAttribute HUMAN_EMPLOYMENT__WORK_CONDITIONS_DECISIONS = eINSTANCE.getHumanEmployment_WorkConditionsDecisions();
 
 		/**
-		 * The meta object literal for the '<em><b>Decision Pattern Detection</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Base Use Case</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute HUMAN_EMPLOYMENT__DECISION_PATTERN_DETECTION = eINSTANCE.getHumanEmployment_DecisionPatternDetection();
+		EReference HUMAN_EMPLOYMENT__BASE_USE_CASE = eINSTANCE.getHumanEmployment_Base_UseCase();
 
 		/**
-		 * The meta object literal for the '<em><b>Improves Human Activity</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Exception</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute HUMAN_EMPLOYMENT__IMPROVES_HUMAN_ACTIVITY = eINSTANCE.getHumanEmployment_ImprovesHumanActivity();
-
-		/**
-		 * The meta object literal for the '<em><b>Preparatory Task</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute HUMAN_EMPLOYMENT__PREPARATORY_TASK = eINSTANCE.getHumanEmployment_PreparatoryTask();
+		EAttribute HUMAN_EMPLOYMENT__EXCEPTION = eINSTANCE.getHumanEmployment_Exception();
 
 		/**
 		 * The meta object literal for the '<em><b>Exception Justification</b></em>' attribute feature.
@@ -5816,22 +5376,6 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute HUMAN_EMPLOYMENT__EXCEPTION_JUSTIFICATION = eINSTANCE.getHumanEmployment_ExceptionJustification();
-
-		/**
-		 * The meta object literal for the '<em><b>Narrow Procedural Task</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute HUMAN_EMPLOYMENT__NARROW_PROCEDURAL_TASK = eINSTANCE.getHumanEmployment_NarrowProceduralTask();
-
-		/**
-		 * The meta object literal for the '<em><b>Base Use Case</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference HUMAN_EMPLOYMENT__BASE_USE_CASE = eINSTANCE.getHumanEmployment_Base_UseCase();
 
 		/**
 		 * The meta object literal for the '{@link euaiactcompliance.impl.TrainingDataImpl <em>Training Data</em>}' class.
@@ -5976,46 +5520,6 @@ public interface EuaiactcompliancePackage extends EPackage {
 		EAttribute ESSENTIAL_SERVICE__INSURANCE_RISK_PRICING = eINSTANCE.getEssentialService_InsuranceRiskPricing();
 
 		/**
-		 * The meta object literal for the '<em><b>Preparatory Task</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ESSENTIAL_SERVICE__PREPARATORY_TASK = eINSTANCE.getEssentialService_PreparatoryTask();
-
-		/**
-		 * The meta object literal for the '<em><b>Narrow Procedural Task</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ESSENTIAL_SERVICE__NARROW_PROCEDURAL_TASK = eINSTANCE.getEssentialService_NarrowProceduralTask();
-
-		/**
-		 * The meta object literal for the '<em><b>Exception Justification</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ESSENTIAL_SERVICE__EXCEPTION_JUSTIFICATION = eINSTANCE.getEssentialService_ExceptionJustification();
-
-		/**
-		 * The meta object literal for the '<em><b>Improves Human Activity</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ESSENTIAL_SERVICE__IMPROVES_HUMAN_ACTIVITY = eINSTANCE.getEssentialService_ImprovesHumanActivity();
-
-		/**
-		 * The meta object literal for the '<em><b>Decision Pattern Detection</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ESSENTIAL_SERVICE__DECISION_PATTERN_DETECTION = eINSTANCE.getEssentialService_DecisionPatternDetection();
-
-		/**
 		 * The meta object literal for the '<em><b>Base Use Case</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6030,6 +5534,22 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ESSENTIAL_SERVICE__EMERGENCY = eINSTANCE.getEssentialService_Emergency();
+
+		/**
+		 * The meta object literal for the '<em><b>Exception Justification</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ESSENTIAL_SERVICE__EXCEPTION_JUSTIFICATION = eINSTANCE.getEssentialService_ExceptionJustification();
+
+		/**
+		 * The meta object literal for the '<em><b>Exception</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ESSENTIAL_SERVICE__EXCEPTION = eINSTANCE.getEssentialService_Exception();
 
 		/**
 		 * The meta object literal for the '{@link euaiactcompliance.impl.LawEnforcementImpl <em>Law Enforcement</em>}' class.
@@ -6082,46 +5602,6 @@ public interface EuaiactcompliancePackage extends EPackage {
 		EAttribute LAW_ENFORCEMENT__SOLELY_PROFILING_BASED = eINSTANCE.getLawEnforcement_SolelyProfilingBased();
 
 		/**
-		 * The meta object literal for the '<em><b>Narrow Procedural Task</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LAW_ENFORCEMENT__NARROW_PROCEDURAL_TASK = eINSTANCE.getLawEnforcement_NarrowProceduralTask();
-
-		/**
-		 * The meta object literal for the '<em><b>Exception Justification</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LAW_ENFORCEMENT__EXCEPTION_JUSTIFICATION = eINSTANCE.getLawEnforcement_ExceptionJustification();
-
-		/**
-		 * The meta object literal for the '<em><b>Decision Pattern Detection</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LAW_ENFORCEMENT__DECISION_PATTERN_DETECTION = eINSTANCE.getLawEnforcement_DecisionPatternDetection();
-
-		/**
-		 * The meta object literal for the '<em><b>Preparatory Task</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LAW_ENFORCEMENT__PREPARATORY_TASK = eINSTANCE.getLawEnforcement_PreparatoryTask();
-
-		/**
-		 * The meta object literal for the '<em><b>Improves Human Activity</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LAW_ENFORCEMENT__IMPROVES_HUMAN_ACTIVITY = eINSTANCE.getLawEnforcement_ImprovesHumanActivity();
-
-		/**
 		 * The meta object literal for the '<em><b>Base Use Case</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6136,6 +5616,22 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute LAW_ENFORCEMENT__SUPPORTS_HUMAN_ASSESSMENT = eINSTANCE.getLawEnforcement_SupportsHumanAssessment();
+
+		/**
+		 * The meta object literal for the '<em><b>Exception Justification</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LAW_ENFORCEMENT__EXCEPTION_JUSTIFICATION = eINSTANCE.getLawEnforcement_ExceptionJustification();
+
+		/**
+		 * The meta object literal for the '<em><b>Exception</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LAW_ENFORCEMENT__EXCEPTION = eINSTANCE.getLawEnforcement_Exception();
 
 		/**
 		 * The meta object literal for the '{@link euaiactcompliance.impl.MigrationBorderImpl <em>Migration Border</em>}' class.
@@ -6188,20 +5684,20 @@ public interface EuaiactcompliancePackage extends EPackage {
 		EAttribute MIGRATION_BORDER__PERSON_IDENTIFICATION = eINSTANCE.getMigrationBorder_PersonIdentification();
 
 		/**
-		 * The meta object literal for the '<em><b>Improves Human Activity</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Base Use Case</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MIGRATION_BORDER__IMPROVES_HUMAN_ACTIVITY = eINSTANCE.getMigrationBorder_ImprovesHumanActivity();
+		EReference MIGRATION_BORDER__BASE_USE_CASE = eINSTANCE.getMigrationBorder_Base_UseCase();
 
 		/**
-		 * The meta object literal for the '<em><b>Narrow Procedural Task</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Exception</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MIGRATION_BORDER__NARROW_PROCEDURAL_TASK = eINSTANCE.getMigrationBorder_NarrowProceduralTask();
+		EAttribute MIGRATION_BORDER__EXCEPTION = eINSTANCE.getMigrationBorder_Exception();
 
 		/**
 		 * The meta object literal for the '<em><b>Exception Justification</b></em>' attribute feature.
@@ -6210,30 +5706,6 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MIGRATION_BORDER__EXCEPTION_JUSTIFICATION = eINSTANCE.getMigrationBorder_ExceptionJustification();
-
-		/**
-		 * The meta object literal for the '<em><b>Preparatory Task</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MIGRATION_BORDER__PREPARATORY_TASK = eINSTANCE.getMigrationBorder_PreparatoryTask();
-
-		/**
-		 * The meta object literal for the '<em><b>Decision Pattern Detection</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MIGRATION_BORDER__DECISION_PATTERN_DETECTION = eINSTANCE.getMigrationBorder_DecisionPatternDetection();
-
-		/**
-		 * The meta object literal for the '<em><b>Base Use Case</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MIGRATION_BORDER__BASE_USE_CASE = eINSTANCE.getMigrationBorder_Base_UseCase();
 
 		/**
 		 * The meta object literal for the '{@link euaiactcompliance.impl.JusticeDemocracyUseCaseImpl <em>Justice Democracy Use Case</em>}' class.
@@ -6270,36 +5742,20 @@ public interface EuaiactcompliancePackage extends EPackage {
 		EAttribute JUSTICE_DEMOCRACY_USE_CASE__NO_DIRECT_EXPOSURE = eINSTANCE.getJusticeDemocracyUseCase_NoDirectExposure();
 
 		/**
-		 * The meta object literal for the '<em><b>Decision Pattern Detection</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Base Use Case</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute JUSTICE_DEMOCRACY_USE_CASE__DECISION_PATTERN_DETECTION = eINSTANCE.getJusticeDemocracyUseCase_DecisionPatternDetection();
+		EReference JUSTICE_DEMOCRACY_USE_CASE__BASE_USE_CASE = eINSTANCE.getJusticeDemocracyUseCase_Base_UseCase();
 
 		/**
-		 * The meta object literal for the '<em><b>Improves Human Activity</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Exception</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute JUSTICE_DEMOCRACY_USE_CASE__IMPROVES_HUMAN_ACTIVITY = eINSTANCE.getJusticeDemocracyUseCase_ImprovesHumanActivity();
-
-		/**
-		 * The meta object literal for the '<em><b>Preparatory Task</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute JUSTICE_DEMOCRACY_USE_CASE__PREPARATORY_TASK = eINSTANCE.getJusticeDemocracyUseCase_PreparatoryTask();
-
-		/**
-		 * The meta object literal for the '<em><b>Narrow Procedural Task</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute JUSTICE_DEMOCRACY_USE_CASE__NARROW_PROCEDURAL_TASK = eINSTANCE.getJusticeDemocracyUseCase_NarrowProceduralTask();
+		EAttribute JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION = eINSTANCE.getJusticeDemocracyUseCase_Exception();
 
 		/**
 		 * The meta object literal for the '<em><b>Exception Justification</b></em>' attribute feature.
@@ -6308,14 +5764,6 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION_JUSTIFICATION = eINSTANCE.getJusticeDemocracyUseCase_ExceptionJustification();
-
-		/**
-		 * The meta object literal for the '<em><b>Base Use Case</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference JUSTICE_DEMOCRACY_USE_CASE__BASE_USE_CASE = eINSTANCE.getJusticeDemocracyUseCase_Base_UseCase();
 
 		/**
 		 * The meta object literal for the '{@link euaiactcompliance.impl.BiometricIdentificationImpl <em>Biometric Identification</em>}' class.
@@ -6384,36 +5832,20 @@ public interface EuaiactcompliancePackage extends EPackage {
 		EAttribute BIOMETRIC_IDENTIFICATION__SERIOUS_CRIME_SUSPECT_SEARCH = eINSTANCE.getBiometricIdentification_SeriousCrimeSuspectSearch();
 
 		/**
-		 * The meta object literal for the '<em><b>Narrow Procedural Task</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Base Use Case</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BIOMETRIC_IDENTIFICATION__NARROW_PROCEDURAL_TASK = eINSTANCE.getBiometricIdentification_NarrowProceduralTask();
+		EReference BIOMETRIC_IDENTIFICATION__BASE_USE_CASE = eINSTANCE.getBiometricIdentification_Base_UseCase();
 
 		/**
-		 * The meta object literal for the '<em><b>Improves Human Activity</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Exception</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BIOMETRIC_IDENTIFICATION__IMPROVES_HUMAN_ACTIVITY = eINSTANCE.getBiometricIdentification_ImprovesHumanActivity();
-
-		/**
-		 * The meta object literal for the '<em><b>Decision Pattern Detection</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BIOMETRIC_IDENTIFICATION__DECISION_PATTERN_DETECTION = eINSTANCE.getBiometricIdentification_DecisionPatternDetection();
-
-		/**
-		 * The meta object literal for the '<em><b>Preparatory Task</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BIOMETRIC_IDENTIFICATION__PREPARATORY_TASK = eINSTANCE.getBiometricIdentification_PreparatoryTask();
+		EAttribute BIOMETRIC_IDENTIFICATION__EXCEPTION = eINSTANCE.getBiometricIdentification_Exception();
 
 		/**
 		 * The meta object literal for the '<em><b>Exception Justification</b></em>' attribute feature.
@@ -6422,14 +5854,6 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BIOMETRIC_IDENTIFICATION__EXCEPTION_JUSTIFICATION = eINSTANCE.getBiometricIdentification_ExceptionJustification();
-
-		/**
-		 * The meta object literal for the '<em><b>Base Use Case</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BIOMETRIC_IDENTIFICATION__BASE_USE_CASE = eINSTANCE.getBiometricIdentification_Base_UseCase();
 
 		/**
 		 * The meta object literal for the '{@link euaiactcompliance.impl.BiometricCategorisationImpl <em>Biometric Categorisation</em>}' class.
@@ -6498,36 +5922,20 @@ public interface EuaiactcompliancePackage extends EPackage {
 		EAttribute BIOMETRIC_CATEGORISATION__LAW_ENFORCEMENT_CATEGORISATION = eINSTANCE.getBiometricCategorisation_LawEnforcementCategorisation();
 
 		/**
-		 * The meta object literal for the '<em><b>Narrow Procedural Task</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Base Use Case</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BIOMETRIC_CATEGORISATION__NARROW_PROCEDURAL_TASK = eINSTANCE.getBiometricCategorisation_NarrowProceduralTask();
+		EReference BIOMETRIC_CATEGORISATION__BASE_USE_CASE = eINSTANCE.getBiometricCategorisation_Base_UseCase();
 
 		/**
-		 * The meta object literal for the '<em><b>Improves Human Activity</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Exception</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BIOMETRIC_CATEGORISATION__IMPROVES_HUMAN_ACTIVITY = eINSTANCE.getBiometricCategorisation_ImprovesHumanActivity();
-
-		/**
-		 * The meta object literal for the '<em><b>Decision Pattern Detection</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BIOMETRIC_CATEGORISATION__DECISION_PATTERN_DETECTION = eINSTANCE.getBiometricCategorisation_DecisionPatternDetection();
-
-		/**
-		 * The meta object literal for the '<em><b>Preparatory Task</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BIOMETRIC_CATEGORISATION__PREPARATORY_TASK = eINSTANCE.getBiometricCategorisation_PreparatoryTask();
+		EAttribute BIOMETRIC_CATEGORISATION__EXCEPTION = eINSTANCE.getBiometricCategorisation_Exception();
 
 		/**
 		 * The meta object literal for the '<em><b>Exception Justification</b></em>' attribute feature.
@@ -6536,14 +5944,6 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BIOMETRIC_CATEGORISATION__EXCEPTION_JUSTIFICATION = eINSTANCE.getBiometricCategorisation_ExceptionJustification();
-
-		/**
-		 * The meta object literal for the '<em><b>Base Use Case</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BIOMETRIC_CATEGORISATION__BASE_USE_CASE = eINSTANCE.getBiometricCategorisation_Base_UseCase();
 
 		/**
 		 * The meta object literal for the '{@link euaiactcompliance.impl.EmotionRecognitionImpl <em>Emotion Recognition</em>}' class.
@@ -6580,46 +5980,6 @@ public interface EuaiactcompliancePackage extends EPackage {
 		EAttribute EMOTION_RECOGNITION__MEDICAL_OR_SAFETY_REASON = eINSTANCE.getEmotionRecognition_MedicalOrSafetyReason();
 
 		/**
-		 * The meta object literal for the '<em><b>Narrow Procedural Task</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EMOTION_RECOGNITION__NARROW_PROCEDURAL_TASK = eINSTANCE.getEmotionRecognition_NarrowProceduralTask();
-
-		/**
-		 * The meta object literal for the '<em><b>Improves Human Activity</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EMOTION_RECOGNITION__IMPROVES_HUMAN_ACTIVITY = eINSTANCE.getEmotionRecognition_ImprovesHumanActivity();
-
-		/**
-		 * The meta object literal for the '<em><b>Decision Pattern Detection</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EMOTION_RECOGNITION__DECISION_PATTERN_DETECTION = eINSTANCE.getEmotionRecognition_DecisionPatternDetection();
-
-		/**
-		 * The meta object literal for the '<em><b>Preparatory Task</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EMOTION_RECOGNITION__PREPARATORY_TASK = eINSTANCE.getEmotionRecognition_PreparatoryTask();
-
-		/**
-		 * The meta object literal for the '<em><b>Exception Justification</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EMOTION_RECOGNITION__EXCEPTION_JUSTIFICATION = eINSTANCE.getEmotionRecognition_ExceptionJustification();
-
-		/**
 		 * The meta object literal for the '<em><b>Base Use Case</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6628,14 +5988,30 @@ public interface EuaiactcompliancePackage extends EPackage {
 		EReference EMOTION_RECOGNITION__BASE_USE_CASE = eINSTANCE.getEmotionRecognition_Base_UseCase();
 
 		/**
-		 * The meta object literal for the '{@link euaiactcompliance.impl.RiskManagementImpl <em>Risk Management</em>}' class.
+		 * The meta object literal for the '<em><b>Exception Justificatio</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see euaiactcompliance.impl.RiskManagementImpl
-		 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getRiskManagement()
 		 * @generated
 		 */
-		EClass RISK_MANAGEMENT = eINSTANCE.getRiskManagement();
+		EAttribute EMOTION_RECOGNITION__EXCEPTION_JUSTIFICATIO = eINSTANCE.getEmotionRecognition_ExceptionJustificatio();
+
+		/**
+		 * The meta object literal for the '<em><b>Exception</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EMOTION_RECOGNITION__EXCEPTION = eINSTANCE.getEmotionRecognition_Exception();
+
+		/**
+		 * The meta object literal for the '{@link euaiactcompliance.impl.RiskManagementSystemImpl <em>Risk Management System</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see euaiactcompliance.impl.RiskManagementSystemImpl
+		 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getRiskManagementSystem()
+		 * @generated
+		 */
+		EClass RISK_MANAGEMENT_SYSTEM = eINSTANCE.getRiskManagementSystem();
 
 		/**
 		 * The meta object literal for the '<em><b>Risk Identification</b></em>' attribute feature.
@@ -6643,7 +6019,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RISK_MANAGEMENT__RISK_IDENTIFICATION = eINSTANCE.getRiskManagement_RiskIdentification();
+		EAttribute RISK_MANAGEMENT_SYSTEM__RISK_IDENTIFICATION = eINSTANCE.getRiskManagementSystem_RiskIdentification();
 
 		/**
 		 * The meta object literal for the '<em><b>Risk Estimation</b></em>' attribute feature.
@@ -6651,7 +6027,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RISK_MANAGEMENT__RISK_ESTIMATION = eINSTANCE.getRiskManagement_RiskEstimation();
+		EAttribute RISK_MANAGEMENT_SYSTEM__RISK_ESTIMATION = eINSTANCE.getRiskManagementSystem_RiskEstimation();
 
 		/**
 		 * The meta object literal for the '<em><b>Post Market Risk Evaluation</b></em>' attribute feature.
@@ -6659,7 +6035,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RISK_MANAGEMENT__POST_MARKET_RISK_EVALUATION = eINSTANCE.getRiskManagement_PostMarketRiskEvaluation();
+		EAttribute RISK_MANAGEMENT_SYSTEM__POST_MARKET_RISK_EVALUATION = eINSTANCE.getRiskManagementSystem_PostMarketRiskEvaluation();
 
 		/**
 		 * The meta object literal for the '<em><b>Risk Mitigation</b></em>' attribute feature.
@@ -6667,7 +6043,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RISK_MANAGEMENT__RISK_MITIGATION = eINSTANCE.getRiskManagement_RiskMitigation();
+		EAttribute RISK_MANAGEMENT_SYSTEM__RISK_MITIGATION = eINSTANCE.getRiskManagementSystem_RiskMitigation();
 
 		/**
 		 * The meta object literal for the '<em><b>Residual Risk</b></em>' attribute feature.
@@ -6675,7 +6051,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RISK_MANAGEMENT__RESIDUAL_RISK = eINSTANCE.getRiskManagement_ResidualRisk();
+		EAttribute RISK_MANAGEMENT_SYSTEM__RESIDUAL_RISK = eINSTANCE.getRiskManagementSystem_ResidualRisk();
 
 		/**
 		 * The meta object literal for the '<em><b>Testing Procedure</b></em>' attribute feature.
@@ -6683,7 +6059,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RISK_MANAGEMENT__TESTING_PROCEDURE = eINSTANCE.getRiskManagement_TestingProcedure();
+		EAttribute RISK_MANAGEMENT_SYSTEM__TESTING_PROCEDURE = eINSTANCE.getRiskManagementSystem_TestingProcedure();
 
 		/**
 		 * The meta object literal for the '<em><b>Testing Metrics</b></em>' attribute feature.
@@ -6691,7 +6067,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RISK_MANAGEMENT__TESTING_METRICS = eINSTANCE.getRiskManagement_TestingMetrics();
+		EAttribute RISK_MANAGEMENT_SYSTEM__TESTING_METRICS = eINSTANCE.getRiskManagementSystem_TestingMetrics();
 
 		/**
 		 * The meta object literal for the '<em><b>Vulnerable Groups Assessment</b></em>' attribute feature.
@@ -6699,7 +6075,7 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RISK_MANAGEMENT__VULNERABLE_GROUPS_ASSESSMENT = eINSTANCE.getRiskManagement_VulnerableGroupsAssessment();
+		EAttribute RISK_MANAGEMENT_SYSTEM__VULNERABLE_GROUPS_ASSESSMENT = eINSTANCE.getRiskManagementSystem_VulnerableGroupsAssessment();
 
 		/**
 		 * The meta object literal for the '<em><b>Base Artifact</b></em>' reference feature.
@@ -6707,17 +6083,17 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RISK_MANAGEMENT__BASE_ARTIFACT = eINSTANCE.getRiskManagement_Base_Artifact();
+		EReference RISK_MANAGEMENT_SYSTEM__BASE_ARTIFACT = eINSTANCE.getRiskManagementSystem_Base_Artifact();
 
 		/**
-		 * The meta object literal for the '{@link euaiactcompliance.Category <em>Category</em>}' enum.
+		 * The meta object literal for the '{@link euaiactcompliance.ProductCategory <em>Product Category</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see euaiactcompliance.Category
-		 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getCategory()
+		 * @see euaiactcompliance.ProductCategory
+		 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getProductCategory()
 		 * @generated
 		 */
-		EEnum CATEGORY = eINSTANCE.getCategory();
+		EEnum PRODUCT_CATEGORY = eINSTANCE.getProductCategory();
 
 		/**
 		 * The meta object literal for the '{@link euaiactcompliance.Role <em>Role</em>}' enum.
@@ -6728,6 +6104,16 @@ public interface EuaiactcompliancePackage extends EPackage {
 		 * @generated
 		 */
 		EEnum ROLE = eINSTANCE.getRole();
+
+		/**
+		 * The meta object literal for the '{@link euaiactcompliance.Exception <em>Exception</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see euaiactcompliance.Exception
+		 * @see euaiactcompliance.impl.EuaiactcompliancePackageImpl#getException()
+		 * @generated
+		 */
+		EEnum EXCEPTION = eINSTANCE.getException();
 
 	}
 

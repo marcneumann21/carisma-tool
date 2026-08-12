@@ -148,13 +148,13 @@ public interface EuaiactcomplianceFactory extends EFactory {
 	CriticalInfrastructure createCriticalInfrastructure();
 
 	/**
-	 * Returns a new object of class '<em>ML Model</em>'.
+	 * Returns a new object of class '<em>Self Developed Model</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ML Model</em>'.
+	 * @return a new object of class '<em>Self Developed Model</em>'.
 	 * @generated
 	 */
-	MLModel createMLModel();
+	SelfDevelopedModel createSelfDevelopedModel();
 
 	/**
 	 * Returns a new object of class '<em>Education</em>'.
@@ -256,13 +256,13 @@ public interface EuaiactcomplianceFactory extends EFactory {
 	EmotionRecognition createEmotionRecognition();
 
 	/**
-	 * Returns a new object of class '<em>Risk Management</em>'.
+	 * Returns a new object of class '<em>Risk Management System</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Risk Management</em>'.
+	 * @return a new object of class '<em>Risk Management System</em>'.
 	 * @generated
 	 */
-	RiskManagement createRiskManagement();
+	RiskManagementSystem createRiskManagementSystem();
 
 	/**
 	 * Returns the package supported by this factory.

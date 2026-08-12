@@ -36,7 +36,7 @@ public class EUAIActDocumentationCheck extends AbstractEUAIActDocumentationCheck
 			return false;
 		}
 
-		addInfo("Your model contains " + aiSystems.size() + " AI system(s).");
+		addInfo("Your model contains " + aiSystems.size() + " AI systems.");
 
 		boolean completeDocumentation = true;
 		for (Component aiSystem : aiSystems) {
@@ -44,25 +44,28 @@ public class EUAIActDocumentationCheck extends AbstractEUAIActDocumentationCheck
 			EUAIActRiskClassificationResult result = classifier.classify();
 			EUAIActRiskClass riskClass = result.riskClass();
 
-			addInfo("Documentation for AI System '" + aiSystem.getName() + "' (" + riskClass + "):");
-
 			boolean highRisk = false;
 			if (riskClass == EUAIActRiskClass.Unacceptable) {
-				addWarning(
-						"No technical documentation is generated, because the AI system must not be placed on the market, put into service or used according to Article 5.");
+				addWarning("No technical documentation is generated, because the AI system '" + aiSystem.getName()
+						+ "' must not be placed on the market, put into service or used (Article 5).");
 				continue;
 			} else if (riskClass == EUAIActRiskClass.High) {
-				addInfo("The technical documentation according to Article 11 and Annex IV is mandatory for this AI system.");
+				addInfo("The Technical documentation is mandatory for the AI system '" + aiSystem.getName()
+						+ "' (Article 11 and Annex IV).");
 				highRisk = true;
 			} else if (riskClass == EUAIActRiskClass.Limited) {
-				addInfo("The technical documentation according to Article 11 and Annex IV is not mandatory for this AI system. The following documentation is listed for transparency purposes.");
+				addInfo("The Technical documentation is not mandatory for the AI system '" + aiSystem.getName()
+						+ "' (Article 11 and Annex IV). Therefore is the following documentation listed for transparency purposes only.");
 			} else if (riskClass == EUAIActRiskClass.Minimal) {
-				addInfo("No technical documentation is generated, because the AI system is classified as minimal risk.");
+				addWarning("No technical documentation is generated, because the AI system '" + aiSystem.getName()
+						+ "' is classified as minimal risk.");
 				continue;
 			} else {
-				addInfo("No technical documentation is generated, because the risk class of the AI system could not be determined. Assign at least one use case to the AI system.");
+				addWarning("No technical documentation is generated, because the risk class of the AI system '"
+						+ aiSystem.getName() + "' could not be determined.");
 				continue;
 			}
+			addInfo("");
 
 			EUAIActDocumentationGenerator generator = new EUAIActDocumentationGenerator(aiSystem, highRisk);
 			List<EUAIActDocumentationSectionResult> sections = generator.generate();
@@ -75,12 +78,12 @@ public class EUAIActDocumentationCheck extends AbstractEUAIActDocumentationCheck
 					continue;
 				}
 
-				addInfo("================================");
+				addInfo("=".repeat(50));
 				addInfo(section.sectionName().toString());
-				addInfo("================================");
+				addInfo("=".repeat(50));
 
-				addInfo("Found Documentation(s):");
-				addInfo("=========================");
+				addInfo("Documented:");
+				addInfo("---------");
 				if (section.foundDocumentation().isEmpty()) {
 					addInfo("None");
 				} else {
@@ -88,11 +91,12 @@ public class EUAIActDocumentationCheck extends AbstractEUAIActDocumentationCheck
 						addInfo(documentation);
 					}
 				}
+				
 				addInfo("");
 
 				if (riskClass == EUAIActRiskClass.High) {
-					addInfo("Missing Documentation(s):");
-					addInfo("=========================");
+					addInfo("Missing:");
+					addInfo("------");
 					if (section.missingDocumentation().isEmpty()) {
 						addInfo("None");
 					} else {
@@ -101,11 +105,12 @@ public class EUAIActDocumentationCheck extends AbstractEUAIActDocumentationCheck
 						}
 						completeDocumentation = false;
 					}
+					
 					addInfo("");
 				}
 
-				addInfo("Note(s):");
-				addInfo("===========");
+				addInfo("Notes:");
+				addInfo("-----");
 				if (section.notes().isEmpty()) {
 					addInfo("None");
 				} else {
@@ -113,6 +118,7 @@ public class EUAIActDocumentationCheck extends AbstractEUAIActDocumentationCheck
 						addInfo(note);
 					}
 				}
+				
 				addInfo("");
 			}
 		}

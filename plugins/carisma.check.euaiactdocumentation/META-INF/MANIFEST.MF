@@ -6,7 +6,7 @@ Bundle-Vendor: Marc Neumann
 Bundle-Version: 1.0.0.qualifier
 Automatic-Module-Name: carisma.check.euaiactdocumentation
 Bundle-RequiredExecutionEnvironment: JavaSE-21
-Require-Bundle: carisma.core;bundle-version="1.4.3",
- carisma.profile.euaiactcompliance;bundle-version="1.0.0"
+Require-Bundle: carisma.core,
+ carisma.profile.euaiactcompliance
 Import-Package: carisma.check.euaiactriskclassification.classification,
  carisma.check.euaiactriskclassification.riskclass

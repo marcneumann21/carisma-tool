@@ -2,6 +2,8 @@
  */
 package euaiactcompliance;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 import org.eclipse.uml2.uml.Component;
@@ -94,29 +96,18 @@ public interface ProductEmbedding extends EObject {
 	void setThirdPartyConformityAssessment(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Product Category</b></em>' attribute.
-	 * The literals are from the enumeration {@link euaiactcompliance.Category}.
+	 * Returns the value of the '<em><b>Product Category</b></em>' attribute list.
+	 * The list contents are of type {@link euaiactcompliance.ProductCategory}.
+	 * The literals are from the enumeration {@link euaiactcompliance.ProductCategory}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Product Category</em>' attribute.
-	 * @see euaiactcompliance.Category
-	 * @see #setProductCategory(Category)
+	 * @return the value of the '<em>Product Category</em>' attribute list.
+	 * @see euaiactcompliance.ProductCategory
 	 * @see euaiactcompliance.EuaiactcompliancePackage#getProductEmbedding_ProductCategory()
-	 * @model required="true" ordered="false"
+	 * @model unique="false" ordered="false"
 	 * @generated
 	 */
-	Category getProductCategory();
-
-	/**
-	 * Sets the value of the '{@link euaiactcompliance.ProductEmbedding#getProductCategory <em>Product Category</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Product Category</em>' attribute.
-	 * @see euaiactcompliance.Category
-	 * @see #getProductCategory()
-	 * @generated
-	 */
-	void setProductCategory(Category value);
+	EList<ProductCategory> getProductCategory();
 
 	/**
 	 * Returns the value of the '<em><b>Role</b></em>' attribute.
@@ -127,7 +118,7 @@ public interface ProductEmbedding extends EObject {
 	 * @see euaiactcompliance.Role
 	 * @see #setRole(Role)
 	 * @see euaiactcompliance.EuaiactcompliancePackage#getProductEmbedding_Role()
-	 * @model required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	Role getRole();

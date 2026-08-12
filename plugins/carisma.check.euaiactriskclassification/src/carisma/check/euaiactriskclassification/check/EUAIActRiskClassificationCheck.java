@@ -35,7 +35,7 @@ public class EUAIActRiskClassificationCheck extends AbstractEUAIActRiskClassific
 			addError("Your model does not contain any AI systems.");
 			return false;
 		}
-		
+
 		addInfo("Your model contains " + aiSystems.size() + " AI system(s).");
 
 		boolean noUnacceptableRisk = true;
@@ -46,35 +46,63 @@ public class EUAIActRiskClassificationCheck extends AbstractEUAIActRiskClassific
 			EUAIActRiskClass riskClass = result.riskClass();
 			List<String> reasons = result.reasons();
 			List<String> obligations = result.obligations();
+			List<String> additionalObligations = result.additionalObligations();
 			List<String> notes = result.notes();
 
-			addInfo("AI System '" + aiSystem.getName() + "' is classified as: " + riskClass);
-			addInfo("Reason(s):");
+			addInfo("The AI System '" + aiSystem.getName() + "' is classified as: " + riskClass);
+
+			addInfo("");
+
+			addInfo("Reasons:");
 			addInfo("=======");
 			for (String reason : reasons) {
 				addInfo(reason);
 			}
+
 			addInfo("");
 
 			if (riskClass == EUAIActRiskClass.Unacceptable) {
-				addWarning("No Obligations. The system must not be placed on the market, put into service or used according to Article 5.");
+				addWarning("No Obligations. The AI System '" + aiSystem.getName()
+						+ "' must not be placed on the market, put into service or used (Article 5).");
 				noUnacceptableRisk = false;
 				continue;
 			} else {
-				addInfo("Resulting Obligation(s):");
-				addInfo("================");
-				for (String obligation : obligations) {
-					addInfo(obligation);
+				addInfo("Obligations resulting from the risk class:");
+				addInfo("=================");
+				if (obligations.isEmpty()) {
+					addInfo("None");
+				} else {
+					for (String obligation : obligations) {
+						addInfo(obligation);
+					}
 				}
+
 				addInfo("");
-				addInfo("Note(s):");
-				addInfo("=======");
-				for (String note : notes) {
-					addInfo(note);
+
+				addInfo("Obligations resulting from the model:");
+				addInfo("=================");
+				if (additionalObligations.isEmpty()) {
+					addInfo("None");
+				} else {
+					for (String additionalObligation : additionalObligations) {
+						addInfo(additionalObligation);
+					}
+				}
+				
+				addInfo("");
+
+				addInfo("Notes:");
+				addInfo("======");
+				if (notes.isEmpty()) {
+					addInfo("None");
+				} else {
+					for (String note : notes) {
+						addInfo(note);
+					}
 				}
 				addInfo("");
 			}
-			
+
 		}
 		return noUnacceptableRisk;
 

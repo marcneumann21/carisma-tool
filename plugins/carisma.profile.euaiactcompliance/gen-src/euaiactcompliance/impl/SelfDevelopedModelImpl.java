@@ -3,7 +3,7 @@
 package euaiactcompliance.impl;
 
 import euaiactcompliance.EuaiactcompliancePackage;
-import euaiactcompliance.MLModel;
+import euaiactcompliance.SelfDevelopedModel;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -17,28 +17,28 @@ import org.eclipse.uml2.uml.Component;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>ML Model</b></em>'.
+ * An implementation of the model object '<em><b>Self Developed Model</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link euaiactcompliance.impl.MLModelImpl#getParameter <em>Parameter</em>}</li>
- *   <li>{@link euaiactcompliance.impl.MLModelImpl#getTrainingMethods <em>Training Methods</em>}</li>
- *   <li>{@link euaiactcompliance.impl.MLModelImpl#getObjective <em>Objective</em>}</li>
- *   <li>{@link euaiactcompliance.impl.MLModelImpl#getValidationProcess <em>Validation Process</em>}</li>
- *   <li>{@link euaiactcompliance.impl.MLModelImpl#getExpectedOutput <em>Expected Output</em>}</li>
- *   <li>{@link euaiactcompliance.impl.MLModelImpl#getTestingProcess <em>Testing Process</em>}</li>
- *   <li>{@link euaiactcompliance.impl.MLModelImpl#getAccuracy <em>Accuracy</em>}</li>
- *   <li>{@link euaiactcompliance.impl.MLModelImpl#getCapabilities <em>Capabilities</em>}</li>
- *   <li>{@link euaiactcompliance.impl.MLModelImpl#isTestReports <em>Test Reports</em>}</li>
- *   <li>{@link euaiactcompliance.impl.MLModelImpl#getBase_Component <em>Base Component</em>}</li>
- *   <li>{@link euaiactcompliance.impl.MLModelImpl#getInputSpecification <em>Input Specification</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getParameter <em>Parameter</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getTrainingMethods <em>Training Methods</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getObjective <em>Objective</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getValidationProcess <em>Validation Process</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getExpectedOutput <em>Expected Output</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getTestingProcess <em>Testing Process</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getAccuracy <em>Accuracy</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getCapabilities <em>Capabilities</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#isTestReports <em>Test Reports</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getBase_Component <em>Base Component</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getInputSpecification <em>Input Specification</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MLModelImpl extends MinimalEObjectImpl.Container implements MLModel {
+public class SelfDevelopedModelImpl extends MinimalEObjectImpl.Container implements SelfDevelopedModel {
 	/**
 	 * The default value of the '{@link #getParameter() <em>Parameter</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -254,7 +254,7 @@ public class MLModelImpl extends MinimalEObjectImpl.Container implements MLModel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MLModelImpl() {
+	protected SelfDevelopedModelImpl() {
 		super();
 	}
 
@@ -265,7 +265,7 @@ public class MLModelImpl extends MinimalEObjectImpl.Container implements MLModel
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EuaiactcompliancePackage.Literals.ML_MODEL;
+		return EuaiactcompliancePackage.Literals.SELF_DEVELOPED_MODEL;
 	}
 
 	/**
@@ -288,7 +288,7 @@ public class MLModelImpl extends MinimalEObjectImpl.Container implements MLModel
 		String oldParameter = parameter;
 		parameter = newParameter;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.ML_MODEL__PARAMETER, oldParameter, parameter));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__PARAMETER, oldParameter, parameter));
 	}
 
 	/**
@@ -311,7 +311,7 @@ public class MLModelImpl extends MinimalEObjectImpl.Container implements MLModel
 		String oldTrainingMethods = trainingMethods;
 		trainingMethods = newTrainingMethods;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.ML_MODEL__TRAINING_METHODS, oldTrainingMethods, trainingMethods));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TRAINING_METHODS, oldTrainingMethods, trainingMethods));
 	}
 
 	/**
@@ -334,7 +334,7 @@ public class MLModelImpl extends MinimalEObjectImpl.Container implements MLModel
 		String oldObjective = objective;
 		objective = newObjective;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.ML_MODEL__OBJECTIVE, oldObjective, objective));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__OBJECTIVE, oldObjective, objective));
 	}
 
 	/**
@@ -357,7 +357,7 @@ public class MLModelImpl extends MinimalEObjectImpl.Container implements MLModel
 		String oldValidationProcess = validationProcess;
 		validationProcess = newValidationProcess;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.ML_MODEL__VALIDATION_PROCESS, oldValidationProcess, validationProcess));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__VALIDATION_PROCESS, oldValidationProcess, validationProcess));
 	}
 
 	/**
@@ -380,7 +380,7 @@ public class MLModelImpl extends MinimalEObjectImpl.Container implements MLModel
 		String oldExpectedOutput = expectedOutput;
 		expectedOutput = newExpectedOutput;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.ML_MODEL__EXPECTED_OUTPUT, oldExpectedOutput, expectedOutput));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__EXPECTED_OUTPUT, oldExpectedOutput, expectedOutput));
 	}
 
 	/**
@@ -403,7 +403,7 @@ public class MLModelImpl extends MinimalEObjectImpl.Container implements MLModel
 		String oldTestingProcess = testingProcess;
 		testingProcess = newTestingProcess;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.ML_MODEL__TESTING_PROCESS, oldTestingProcess, testingProcess));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TESTING_PROCESS, oldTestingProcess, testingProcess));
 	}
 
 	/**
@@ -426,7 +426,7 @@ public class MLModelImpl extends MinimalEObjectImpl.Container implements MLModel
 		String oldAccuracy = accuracy;
 		accuracy = newAccuracy;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.ML_MODEL__ACCURACY, oldAccuracy, accuracy));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__ACCURACY, oldAccuracy, accuracy));
 	}
 
 	/**
@@ -449,7 +449,7 @@ public class MLModelImpl extends MinimalEObjectImpl.Container implements MLModel
 		String oldCapabilities = capabilities;
 		capabilities = newCapabilities;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.ML_MODEL__CAPABILITIES, oldCapabilities, capabilities));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__CAPABILITIES, oldCapabilities, capabilities));
 	}
 
 	/**
@@ -472,7 +472,7 @@ public class MLModelImpl extends MinimalEObjectImpl.Container implements MLModel
 		boolean oldTestReports = testReports;
 		testReports = newTestReports;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.ML_MODEL__TEST_REPORTS, oldTestReports, testReports));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TEST_REPORTS, oldTestReports, testReports));
 	}
 
 	/**
@@ -487,7 +487,7 @@ public class MLModelImpl extends MinimalEObjectImpl.Container implements MLModel
 			base_Component = (Component)eResolveProxy(oldBase_Component);
 			if (base_Component != oldBase_Component) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EuaiactcompliancePackage.ML_MODEL__BASE_COMPONENT, oldBase_Component, base_Component));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__BASE_COMPONENT, oldBase_Component, base_Component));
 			}
 		}
 		return base_Component;
@@ -512,7 +512,7 @@ public class MLModelImpl extends MinimalEObjectImpl.Container implements MLModel
 		Component oldBase_Component = base_Component;
 		base_Component = newBase_Component;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.ML_MODEL__BASE_COMPONENT, oldBase_Component, base_Component));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__BASE_COMPONENT, oldBase_Component, base_Component));
 	}
 
 	/**
@@ -535,7 +535,7 @@ public class MLModelImpl extends MinimalEObjectImpl.Container implements MLModel
 		String oldInputSpecification = inputSpecification;
 		inputSpecification = newInputSpecification;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.ML_MODEL__INPUT_SPECIFICATION, oldInputSpecification, inputSpecification));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__INPUT_SPECIFICATION, oldInputSpecification, inputSpecification));
 	}
 
 	/**
@@ -546,28 +546,28 @@ public class MLModelImpl extends MinimalEObjectImpl.Container implements MLModel
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EuaiactcompliancePackage.ML_MODEL__PARAMETER:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__PARAMETER:
 				return getParameter();
-			case EuaiactcompliancePackage.ML_MODEL__TRAINING_METHODS:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TRAINING_METHODS:
 				return getTrainingMethods();
-			case EuaiactcompliancePackage.ML_MODEL__OBJECTIVE:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__OBJECTIVE:
 				return getObjective();
-			case EuaiactcompliancePackage.ML_MODEL__VALIDATION_PROCESS:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__VALIDATION_PROCESS:
 				return getValidationProcess();
-			case EuaiactcompliancePackage.ML_MODEL__EXPECTED_OUTPUT:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__EXPECTED_OUTPUT:
 				return getExpectedOutput();
-			case EuaiactcompliancePackage.ML_MODEL__TESTING_PROCESS:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TESTING_PROCESS:
 				return getTestingProcess();
-			case EuaiactcompliancePackage.ML_MODEL__ACCURACY:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__ACCURACY:
 				return getAccuracy();
-			case EuaiactcompliancePackage.ML_MODEL__CAPABILITIES:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__CAPABILITIES:
 				return getCapabilities();
-			case EuaiactcompliancePackage.ML_MODEL__TEST_REPORTS:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TEST_REPORTS:
 				return isTestReports();
-			case EuaiactcompliancePackage.ML_MODEL__BASE_COMPONENT:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__BASE_COMPONENT:
 				if (resolve) return getBase_Component();
 				return basicGetBase_Component();
-			case EuaiactcompliancePackage.ML_MODEL__INPUT_SPECIFICATION:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__INPUT_SPECIFICATION:
 				return getInputSpecification();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -581,37 +581,37 @@ public class MLModelImpl extends MinimalEObjectImpl.Container implements MLModel
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EuaiactcompliancePackage.ML_MODEL__PARAMETER:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__PARAMETER:
 				setParameter((String)newValue);
 				return;
-			case EuaiactcompliancePackage.ML_MODEL__TRAINING_METHODS:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TRAINING_METHODS:
 				setTrainingMethods((String)newValue);
 				return;
-			case EuaiactcompliancePackage.ML_MODEL__OBJECTIVE:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__OBJECTIVE:
 				setObjective((String)newValue);
 				return;
-			case EuaiactcompliancePackage.ML_MODEL__VALIDATION_PROCESS:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__VALIDATION_PROCESS:
 				setValidationProcess((String)newValue);
 				return;
-			case EuaiactcompliancePackage.ML_MODEL__EXPECTED_OUTPUT:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__EXPECTED_OUTPUT:
 				setExpectedOutput((String)newValue);
 				return;
-			case EuaiactcompliancePackage.ML_MODEL__TESTING_PROCESS:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TESTING_PROCESS:
 				setTestingProcess((String)newValue);
 				return;
-			case EuaiactcompliancePackage.ML_MODEL__ACCURACY:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__ACCURACY:
 				setAccuracy((String)newValue);
 				return;
-			case EuaiactcompliancePackage.ML_MODEL__CAPABILITIES:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__CAPABILITIES:
 				setCapabilities((String)newValue);
 				return;
-			case EuaiactcompliancePackage.ML_MODEL__TEST_REPORTS:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TEST_REPORTS:
 				setTestReports((Boolean)newValue);
 				return;
-			case EuaiactcompliancePackage.ML_MODEL__BASE_COMPONENT:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__BASE_COMPONENT:
 				setBase_Component((Component)newValue);
 				return;
-			case EuaiactcompliancePackage.ML_MODEL__INPUT_SPECIFICATION:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__INPUT_SPECIFICATION:
 				setInputSpecification((String)newValue);
 				return;
 		}
@@ -626,37 +626,37 @@ public class MLModelImpl extends MinimalEObjectImpl.Container implements MLModel
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EuaiactcompliancePackage.ML_MODEL__PARAMETER:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__PARAMETER:
 				setParameter(PARAMETER_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.ML_MODEL__TRAINING_METHODS:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TRAINING_METHODS:
 				setTrainingMethods(TRAINING_METHODS_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.ML_MODEL__OBJECTIVE:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__OBJECTIVE:
 				setObjective(OBJECTIVE_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.ML_MODEL__VALIDATION_PROCESS:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__VALIDATION_PROCESS:
 				setValidationProcess(VALIDATION_PROCESS_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.ML_MODEL__EXPECTED_OUTPUT:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__EXPECTED_OUTPUT:
 				setExpectedOutput(EXPECTED_OUTPUT_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.ML_MODEL__TESTING_PROCESS:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TESTING_PROCESS:
 				setTestingProcess(TESTING_PROCESS_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.ML_MODEL__ACCURACY:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__ACCURACY:
 				setAccuracy(ACCURACY_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.ML_MODEL__CAPABILITIES:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__CAPABILITIES:
 				setCapabilities(CAPABILITIES_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.ML_MODEL__TEST_REPORTS:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TEST_REPORTS:
 				setTestReports(TEST_REPORTS_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.ML_MODEL__BASE_COMPONENT:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__BASE_COMPONENT:
 				setBase_Component((Component)null);
 				return;
-			case EuaiactcompliancePackage.ML_MODEL__INPUT_SPECIFICATION:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__INPUT_SPECIFICATION:
 				setInputSpecification(INPUT_SPECIFICATION_EDEFAULT);
 				return;
 		}
@@ -671,27 +671,27 @@ public class MLModelImpl extends MinimalEObjectImpl.Container implements MLModel
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EuaiactcompliancePackage.ML_MODEL__PARAMETER:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__PARAMETER:
 				return PARAMETER_EDEFAULT == null ? parameter != null : !PARAMETER_EDEFAULT.equals(parameter);
-			case EuaiactcompliancePackage.ML_MODEL__TRAINING_METHODS:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TRAINING_METHODS:
 				return TRAINING_METHODS_EDEFAULT == null ? trainingMethods != null : !TRAINING_METHODS_EDEFAULT.equals(trainingMethods);
-			case EuaiactcompliancePackage.ML_MODEL__OBJECTIVE:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__OBJECTIVE:
 				return OBJECTIVE_EDEFAULT == null ? objective != null : !OBJECTIVE_EDEFAULT.equals(objective);
-			case EuaiactcompliancePackage.ML_MODEL__VALIDATION_PROCESS:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__VALIDATION_PROCESS:
 				return VALIDATION_PROCESS_EDEFAULT == null ? validationProcess != null : !VALIDATION_PROCESS_EDEFAULT.equals(validationProcess);
-			case EuaiactcompliancePackage.ML_MODEL__EXPECTED_OUTPUT:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__EXPECTED_OUTPUT:
 				return EXPECTED_OUTPUT_EDEFAULT == null ? expectedOutput != null : !EXPECTED_OUTPUT_EDEFAULT.equals(expectedOutput);
-			case EuaiactcompliancePackage.ML_MODEL__TESTING_PROCESS:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TESTING_PROCESS:
 				return TESTING_PROCESS_EDEFAULT == null ? testingProcess != null : !TESTING_PROCESS_EDEFAULT.equals(testingProcess);
-			case EuaiactcompliancePackage.ML_MODEL__ACCURACY:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__ACCURACY:
 				return ACCURACY_EDEFAULT == null ? accuracy != null : !ACCURACY_EDEFAULT.equals(accuracy);
-			case EuaiactcompliancePackage.ML_MODEL__CAPABILITIES:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__CAPABILITIES:
 				return CAPABILITIES_EDEFAULT == null ? capabilities != null : !CAPABILITIES_EDEFAULT.equals(capabilities);
-			case EuaiactcompliancePackage.ML_MODEL__TEST_REPORTS:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TEST_REPORTS:
 				return testReports != TEST_REPORTS_EDEFAULT;
-			case EuaiactcompliancePackage.ML_MODEL__BASE_COMPONENT:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__BASE_COMPONENT:
 				return base_Component != null;
-			case EuaiactcompliancePackage.ML_MODEL__INPUT_SPECIFICATION:
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__INPUT_SPECIFICATION:
 				return INPUT_SPECIFICATION_EDEFAULT == null ? inputSpecification != null : !INPUT_SPECIFICATION_EDEFAULT.equals(inputSpecification);
 		}
 		return super.eIsSet(featureID);
@@ -731,4 +731,4 @@ public class MLModelImpl extends MinimalEObjectImpl.Container implements MLModel
 		return result.toString();
 	}
 
-} //MLModelImpl
+} //SelfDevelopedModelImpl

@@ -25,6 +25,7 @@ import org.eclipse.uml2.uml.UseCase;
  * <ul>
  *   <li>{@link euaiactcompliance.impl.PublicInterestTextImpl#getBase_UseCase <em>Base Use Case</em>}</li>
  *   <li>{@link euaiactcompliance.impl.PublicInterestTextImpl#isHumanReview <em>Human Review</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.PublicInterestTextImpl#isLawEnforcementAuthorised <em>Law Enforcement Authorised</em>}</li>
  * </ul>
  *
  * @generated
@@ -59,6 +60,26 @@ public class PublicInterestTextImpl extends MinimalEObjectImpl.Container impleme
 	 * @ordered
 	 */
 	protected boolean humanReview = HUMAN_REVIEW_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isLawEnforcementAuthorised() <em>Law Enforcement Authorised</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isLawEnforcementAuthorised()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean LAW_ENFORCEMENT_AUTHORISED_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isLawEnforcementAuthorised() <em>Law Enforcement Authorised</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isLawEnforcementAuthorised()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean lawEnforcementAuthorised = LAW_ENFORCEMENT_AUTHORISED_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -148,6 +169,29 @@ public class PublicInterestTextImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
+	public boolean isLawEnforcementAuthorised() {
+		return lawEnforcementAuthorised;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLawEnforcementAuthorised(boolean newLawEnforcementAuthorised) {
+		boolean oldLawEnforcementAuthorised = lawEnforcementAuthorised;
+		lawEnforcementAuthorised = newLawEnforcementAuthorised;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.PUBLIC_INTEREST_TEXT__LAW_ENFORCEMENT_AUTHORISED, oldLawEnforcementAuthorised, lawEnforcementAuthorised));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case EuaiactcompliancePackage.PUBLIC_INTEREST_TEXT__BASE_USE_CASE:
@@ -155,6 +199,8 @@ public class PublicInterestTextImpl extends MinimalEObjectImpl.Container impleme
 				return basicGetBase_UseCase();
 			case EuaiactcompliancePackage.PUBLIC_INTEREST_TEXT__HUMAN_REVIEW:
 				return isHumanReview();
+			case EuaiactcompliancePackage.PUBLIC_INTEREST_TEXT__LAW_ENFORCEMENT_AUTHORISED:
+				return isLawEnforcementAuthorised();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -172,6 +218,9 @@ public class PublicInterestTextImpl extends MinimalEObjectImpl.Container impleme
 				return;
 			case EuaiactcompliancePackage.PUBLIC_INTEREST_TEXT__HUMAN_REVIEW:
 				setHumanReview((Boolean)newValue);
+				return;
+			case EuaiactcompliancePackage.PUBLIC_INTEREST_TEXT__LAW_ENFORCEMENT_AUTHORISED:
+				setLawEnforcementAuthorised((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -191,6 +240,9 @@ public class PublicInterestTextImpl extends MinimalEObjectImpl.Container impleme
 			case EuaiactcompliancePackage.PUBLIC_INTEREST_TEXT__HUMAN_REVIEW:
 				setHumanReview(HUMAN_REVIEW_EDEFAULT);
 				return;
+			case EuaiactcompliancePackage.PUBLIC_INTEREST_TEXT__LAW_ENFORCEMENT_AUTHORISED:
+				setLawEnforcementAuthorised(LAW_ENFORCEMENT_AUTHORISED_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -207,6 +259,8 @@ public class PublicInterestTextImpl extends MinimalEObjectImpl.Container impleme
 				return base_UseCase != null;
 			case EuaiactcompliancePackage.PUBLIC_INTEREST_TEXT__HUMAN_REVIEW:
 				return humanReview != HUMAN_REVIEW_EDEFAULT;
+			case EuaiactcompliancePackage.PUBLIC_INTEREST_TEXT__LAW_ENFORCEMENT_AUTHORISED:
+				return lawEnforcementAuthorised != LAW_ENFORCEMENT_AUTHORISED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -223,6 +277,8 @@ public class PublicInterestTextImpl extends MinimalEObjectImpl.Container impleme
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (HumanReview: ");
 		result.append(humanReview);
+		result.append(", LawEnforcementAuthorised: ");
+		result.append(lawEnforcementAuthorised);
 		result.append(')');
 		return result.toString();
 	}

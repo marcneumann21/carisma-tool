@@ -7,7 +7,6 @@ import java.util.Set;
 import org.eclipse.uml2.uml.Artifact;
 import org.eclipse.uml2.uml.Component;
 import org.eclipse.uml2.uml.Element;
-import org.eclipse.uml2.uml.UseCase;
 
 import carisma.check.euaiactdocumentation.section.EUAIActDocumentationSection;
 import carisma.check.euaiactdocumentation.section.EUAIActDocumentationSectionResult;
@@ -19,8 +18,6 @@ public class EUAIActDocumentationGenerator {
 	private final Component aiSystem;
 	private final boolean highRisk;
 
-	private final List<EUAIActDocumentationSectionResult> sections = new ArrayList<>();
-
 	public EUAIActDocumentationGenerator(Component aiSystem, boolean highRisk) {
 		this.aiSystem = aiSystem;
 		this.highRisk = highRisk;
@@ -28,17 +25,17 @@ public class EUAIActDocumentationGenerator {
 
 	// TODO JavaDoc
 	public List<EUAIActDocumentationSectionResult> generate() {
-		this.sections.add(generateGeneralDescriptionAISystem());
-		this.sections.add(generateDetailedDescriptionAISystem());
-		this.sections.add(generateDetailedInformationAISystem());
-		this.sections.add(generateDescriptionPerformanceMetrics());
-		this.sections.add(generateDescriptionRiskManagement());
-		this.sections.add(generateDescriptionProviderRelevantChanges());
-		this.sections.add(generateListHarmonisedStandards());
-		this.sections.add(generateCopyEUConformityDeclaration());
-		this.sections.add(generateDescriptionAISystemPostMarketPhase());
-		this.sections.add(generateTransparencyObligations());
-		return this.sections;
+		final List<EUAIActDocumentationSectionResult> sections = new ArrayList<>();
+		sections.add(generateGeneralDescriptionAISystem());
+		sections.add(generateDetailedDescriptionAISystem());
+		sections.add(generateDetailedInformationAISystem());
+		sections.add(generateDescriptionPerformanceMetrics());
+		sections.add(generateDescriptionRiskManagement());
+		sections.add(generateDescriptionProviderRelevantChanges());
+		sections.add(generateListHarmonisedStandards());
+		sections.add(generateCopyEUConformityDeclaration());
+		sections.add(generateDescriptionAISystemPostMarketPhase());
+		return sections;
 	}
 
 	// TODO JavaDoc
@@ -56,16 +53,15 @@ public class EUAIActDocumentationGenerator {
 				EUAIActCompliance.Provider);
 		if (provider == null || provider.isBlank()) {
 			if (this.highRisk) {
-				addMissing(missingDocumentation, "Provider",
-						"not specified in the model. Add a provider actor and connect it to the AI system",
+				addToMissingDocumentation(missingDocumentation, "Provider",
+						"Not specified. Add a provider and connect it to the AI system.",
 						"Article 3(3), Annex IV(1)(a)");
 			} else {
-				addNote(notes, "Provider",
-						"not specified in the model. Add a provider actor and connect it to the AI system",
+				addToNotes(notes, "Provider", "Not specified. Add a provider and connect it to the AI system.",
 						"Article 3(3), Annex IV(1)(a)");
 			}
 		} else {
-			addFound(foundDocumentation, "Provider", provider, "Article 3(3), Annex IV(1)(a)");
+			addToFoundDocumentation(foundDocumentation, "Provider", provider, "Article 3(3), Annex IV(1)(a)");
 		}
 
 		// Annex IV(1)(a) version
@@ -94,9 +90,9 @@ public class EUAIActDocumentationGenerator {
 			documentMandatoryBoolean(foundDocumentation, missingDocumentation, notes, this.aiSystem,
 					EUAIActCompliance.AISystem, "VisualDocumentation", "Photographs or illustrations",
 					"Annex IV(1)(f)");
-		} else {
-			addNote(notes, "Photographs or illustrations",
-					"not applicable, because the AI system is not modelled as part of a product", "Annex IV(1)(f)");
+		} else if (this.highRisk) {
+			addToNotes(notes, "Photographs or illustrations",
+					"Not applicable, because the AI system is not modelled as part of a product.", "Annex IV(1)(f)");
 		}
 
 		// Annex IV(1)(g) ui
@@ -128,8 +124,8 @@ public class EUAIActDocumentationGenerator {
 		Set<Component> thirdPartyComponents = EUAIActComplianceUtil.getConnectedElements(this.aiSystem, Component.class,
 				EUAIActCompliance.ThirdPartyComponent);
 		if (thirdPartyComponents.isEmpty()) {
-			addNote(notes, "Third party components",
-					"none is contained in the AI system or connected to it by a dependency. If the AI system integrates third party tools, model them",
+			addToNotes(notes, "Third party components",
+					"Neither contained in nor connected to the AI system. If the AI system integrates third party tools, add them to the UML model.",
 					"Annex IV(2)(a)");
 		}
 		for (Component thirdParty : thirdPartyComponents) {
@@ -150,46 +146,78 @@ public class EUAIActDocumentationGenerator {
 				EUAIActCompliance.AISystem, "DesignTradeOffs", "Design trade-offs", "Annex IV(2)(b)");
 
 		// Annex IV(2)(b) ml models
-		Set<Component> mlModels = EUAIActComplianceUtil.getConnectedElements(this.aiSystem, Component.class,
-				EUAIActCompliance.MLModel);
-		if (mlModels.isEmpty()) {
-			addNote(notes, "ML Model",
-					"none is contained in the AI system or connected to it by a dependency. If the AI system is based on machine learning, model the ML models",
+		Set<Component> selfDevelopedModels = EUAIActComplianceUtil.getConnectedElements(this.aiSystem, Component.class,
+				EUAIActCompliance.SelfDevelopedModel);
+		if (selfDevelopedModels.isEmpty()) {
+			addToNotes(notes, "ML model",
+					"Neither contained in nor connected to the AI system. If the AI system is based on machine learning, add it to the UML model.",
 					"Annex IV(2)(b)");
 		}
-		for (Component mlModel : mlModels) {
-			documentMandatoryString(foundDocumentation, missingDocumentation, notes, mlModel, EUAIActCompliance.MLModel,
-					"Objective", "Objective of '" + mlModel.getName() + "'", "Annex IV(2)(b)");
-			documentMandatoryString(foundDocumentation, missingDocumentation, notes, mlModel, EUAIActCompliance.MLModel,
-					"ExpectedOutput", "Expected output of '" + mlModel.getName() + "'", "Annex IV(2)(b)");
-			documentMandatoryString(foundDocumentation, missingDocumentation, notes, mlModel, EUAIActCompliance.MLModel,
-					"Parameter", "Parameters of '" + mlModel.getName() + "'", "Annex IV(2)(b)");
-			documentMandatoryString(foundDocumentation, missingDocumentation, notes, mlModel, EUAIActCompliance.MLModel,
-					"TrainingMethods", "Training methods of '" + mlModel.getName() + "'", "Annex IV(2)(d)");
-			documentMandatoryString(foundDocumentation, missingDocumentation, notes, mlModel, EUAIActCompliance.MLModel,
-					"ValidationProcess", "Validation of '" + mlModel.getName() + "'", "Annex IV(2)(g)");
-			documentMandatoryString(foundDocumentation, missingDocumentation, notes, mlModel, EUAIActCompliance.MLModel,
-					"TestingProcess", "Testing of '" + mlModel.getName() + "'", "Annex IV(2)(g)");
-			documentMandatoryBoolean(foundDocumentation, missingDocumentation, notes, mlModel,
-					EUAIActCompliance.MLModel, "TestReports", "Test reports of '" + mlModel.getName() + "'",
+		for (Component mlModel : selfDevelopedModels) {
+			documentMandatoryString(foundDocumentation, missingDocumentation, notes, mlModel,
+					EUAIActCompliance.SelfDevelopedModel, "Objective", "Objective of '" + mlModel.getName() + "'",
+					"Annex IV(2)(b)");
+			documentMandatoryString(foundDocumentation, missingDocumentation, notes, mlModel,
+					EUAIActCompliance.SelfDevelopedModel, "ExpectedOutput",
+					"Expected output of '" + mlModel.getName() + "'", "Annex IV(2)(b)");
+			documentMandatoryString(foundDocumentation, missingDocumentation, notes, mlModel,
+					EUAIActCompliance.SelfDevelopedModel, "Parameter", "Parameters of '" + mlModel.getName() + "'",
+					"Annex IV(2)(b)");
+			documentMandatoryString(foundDocumentation, missingDocumentation, notes, mlModel,
+					EUAIActCompliance.SelfDevelopedModel, "TrainingMethods",
+					"Training methods of '" + mlModel.getName() + "'", "Annex IV(2)(d)");
+			documentMandatoryString(foundDocumentation, missingDocumentation, notes, mlModel,
+					EUAIActCompliance.SelfDevelopedModel, "ValidationProcess",
+					"Validation of '" + mlModel.getName() + "'", "Annex IV(2)(g)");
+			documentMandatoryString(foundDocumentation, missingDocumentation, notes, mlModel,
+					EUAIActCompliance.SelfDevelopedModel, "TestingProcess", "Testing of '" + mlModel.getName() + "'",
 					"Annex IV(2)(g)");
+			documentMandatoryBoolean(foundDocumentation, missingDocumentation, notes, mlModel,
+					EUAIActCompliance.SelfDevelopedModel, "TestReports", "Test reports of '" + mlModel.getName() + "'",
+					"Annex IV(2)(g)");
+
+			Set<Artifact> modelTrainingData = EUAIActComplianceUtil.getConnectedElements(mlModel, Artifact.class,
+					EUAIActCompliance.TrainingData);
+			if (modelTrainingData.isEmpty()) {
+				addToNotes(notes, "Training data of '" + mlModel.getName() + "'",
+						"No training data is connected to the model. If the model is trained with data, connect the training data to the model, e.g. via a <<use>> dependency.",
+						"Annex IV(2)(d)");
+			} else {
+				List<String> dataNames = new ArrayList<>();
+				for (Artifact data : modelTrainingData) {
+					dataNames.add("'" + data.getName() + "'");
+				}
+				addToFoundDocumentation(foundDocumentation, "Training data of '" + mlModel.getName() + "'",
+						"Trained with " + String.join(", ", dataNames) + ".", "Annex IV(2)(d)");
+			}
 		}
 
 		// Annex IV(2)(c) system architecture
-		List<String> architecture = EUAIActComplianceUtil.getAllConnectedElements(this.aiSystem);
-		if (architecture.isEmpty()) {
+		Set<Component> nestedComponents = EUAIActComplianceUtil.getNestedComponents(this.aiSystem);
+		Set<Component> dependencyComponents = EUAIActComplianceUtil.getDependencyComponents(this.aiSystem);
+		if (nestedComponents.isEmpty() && dependencyComponents.isEmpty()) {
 			if (this.highRisk) {
-				addMissing(missingDocumentation, "System architecture",
-						"the AI system has no connections to other components modeled. Model the software components and their interactions",
+				addToMissingDocumentation(missingDocumentation, "System architecture",
+						"The AI system has neither parts, nor dependencies in the model. Model the software components and their interactions.",
 						"Annex IV(2)(c)");
 			} else {
-				addNote(notes, "System architecture",
-						"the AI system has no connections to other components modeled. Model the software components and their interactions",
+				addToNotes(notes, "System architecture",
+						"The AI system has neither parts, nor dependencies in the model. Model the software components and their interactions.",
 						"Annex IV(2)(c)");
 			}
 		} else {
-			addFound(foundDocumentation, "System architecture", String.join("; ", architecture), "Annex IV(2)(c)");
+			List<String> relations = new ArrayList<>();
+			for (Component component : nestedComponents) {
+				relations.add("'" + this.aiSystem.getName() + "' contains '" + component.getName() + "'");
+			}
+			for (Component component : dependencyComponents) {
+				relations.add("'" + this.aiSystem.getName() + "' uses '" + component.getName() + "'");
+			}
+			addToFoundDocumentation(foundDocumentation, "System architecture", String.join("; ", relations),
+					"Annex IV(2)(c)");
 		}
+
+		// Annex IV(2)(c) resources
 		documentMandatoryString(foundDocumentation, missingDocumentation, notes, this.aiSystem,
 				EUAIActCompliance.AISystem, "Resources",
 				"Computational resources used to develop, train, test and validate", "Annex IV(2)(c)");
@@ -198,8 +226,8 @@ public class EUAIActDocumentationGenerator {
 		Set<Artifact> trainingData = EUAIActComplianceUtil.getConnectedElements(this.aiSystem, Artifact.class,
 				EUAIActCompliance.TrainingData);
 		if (trainingData.isEmpty()) {
-			addNote(notes, "Training data",
-					"no training data is documented for the AI system. If the AI system is trained with data, model the training data sets",
+			addToNotes(notes, "Training data",
+					"No training data iset is contained in the AI system or connected to it. If the AI system is trained with data, add it to the UML model.",
 					"Annex IV(2)(d)");
 		}
 		for (Artifact data : trainingData) {
@@ -216,13 +244,32 @@ public class EUAIActDocumentationGenerator {
 					EUAIActCompliance.TrainingData, "Labeling", "Labeling of '" + name + "'", "Annex IV(2)(d)");
 			documentMandatoryString(foundDocumentation, missingDocumentation, notes, data,
 					EUAIActCompliance.TrainingData, "Cleaning", "Cleaning of '" + name + "'", "Annex IV(2)(d)");
+
+			boolean assigned = false;
+			for (Component mlModel : selfDevelopedModels) {
+				if (EUAIActComplianceUtil.getConnectedElements(mlModel, Artifact.class, EUAIActCompliance.TrainingData)
+						.contains(data)) {
+					assigned = true;
+					break;
+				}
+			}
+			if (!assigned) {
+				addToNotes(notes, "Training data '" + name + "'",
+						"The training data set is not assigned to any model. Connect the training data set to the model that is trained with it, e.g. via a <<use>> dependency.",
+						"Annex IV(2)(d)");
+			}
 		}
 
+		// Annex IV(2)(e)
 		documentMandatoryString(foundDocumentation, missingDocumentation, notes, this.aiSystem,
 				EUAIActCompliance.AISystem, "HumanOversightPreAssessment", "Assessment of the human oversight measures",
 				"Annex IV(2)(e)");
+
+		// Annex IV(2)(f)
 		documentConditionalString(foundDocumentation, notes, this.aiSystem, EUAIActCompliance.AISystem,
 				"PlannedModification", "Predetermined changes", "Annex IV(2)(f)");
+
+		// Annex IV(2)(h)
 		documentMandatoryString(foundDocumentation, missingDocumentation, notes, this.aiSystem,
 				EUAIActCompliance.AISystem, "Cybersecurity", "Cybersecurity measures", "Annex IV(2)(h)");
 
@@ -238,19 +285,22 @@ public class EUAIActDocumentationGenerator {
 		List<String> notes = new ArrayList<>();
 
 		Set<Component> mlModels = EUAIActComplianceUtil.getConnectedElements(this.aiSystem, Component.class,
-				EUAIActCompliance.MLModel);
+				EUAIActCompliance.SelfDevelopedModel);
 		if (mlModels.isEmpty()) {
-			addNote(notes, "Capabilities, accuracy and input data",
-					"no ML model is contained in the AI system or connected to it by a dependency, therefore they cannot be derived from the model. If the AI system is not based on machine learning, describe them by other means",
+			addToNotes(notes, "Capabilities, accuracy and input data",
+					"No ML model is contained in the AI system or connected to it by a dependency, therefore they cannot be derived from the model. If the AI system is based on machine learning, add the models to the UML model.",
 					"Annex IV(3)");
 		}
 		for (Component mlModel : mlModels) {
-			documentMandatoryString(foundDocumentation, missingDocumentation, notes, mlModel, EUAIActCompliance.MLModel,
-					"Capabilities", "Capabilities of '" + mlModel.getName() + "'", "Annex IV(3)");
-			documentMandatoryString(foundDocumentation, missingDocumentation, notes, mlModel, EUAIActCompliance.MLModel,
-					"Accuracy", "Accuracy of '" + mlModel.getName() + "'", "Annex IV(3)");
-			documentMandatoryString(foundDocumentation, missingDocumentation, notes, mlModel, EUAIActCompliance.MLModel,
-					"InputSpecification", "Input data of '" + mlModel.getName() + "'", "Annex IV(3)");
+			documentMandatoryString(foundDocumentation, missingDocumentation, notes, mlModel,
+					EUAIActCompliance.SelfDevelopedModel, "Capabilities", "Capabilities of '" + mlModel.getName() + "'",
+					"Annex IV(3)");
+			documentMandatoryString(foundDocumentation, missingDocumentation, notes, mlModel,
+					EUAIActCompliance.SelfDevelopedModel, "Accuracy", "Accuracy of '" + mlModel.getName() + "'",
+					"Annex IV(3)");
+			documentMandatoryString(foundDocumentation, missingDocumentation, notes, mlModel,
+					EUAIActCompliance.SelfDevelopedModel, "InputSpecification",
+					"Input data of '" + mlModel.getName() + "'", "Annex IV(3)");
 		}
 
 		documentMandatoryString(foundDocumentation, missingDocumentation, notes, this.aiSystem,
@@ -286,52 +336,52 @@ public class EUAIActDocumentationGenerator {
 		List<String> notes = new ArrayList<>();
 
 		Set<Artifact> riskManagementSystems = EUAIActComplianceUtil.getConnectedElements(this.aiSystem, Artifact.class,
-				EUAIActCompliance.RiskManagement);
+				EUAIActCompliance.RiskManagementSystem);
 
 		if (riskManagementSystems.isEmpty()) {
 			if (this.highRisk) {
-				addMissing(missingDocumentation, "Risk management system",
-						"no risk management system is contained in the AI system or connected to it by a dependency",
+				addToMissingDocumentation(missingDocumentation, "Risk management system",
+						"No risk management system is contained in the AI system or connected to it by a dependency, add it to the UML model.",
 						"Annex IV(5), Article 9(1)");
 			} else {
-				addNote(notes, "Risk management system",
-						"no risk management system is contained in the AI system or connected to it by a dependency",
+				addToNotes(notes, "Risk management system",
+						"No risk management system is contained in the AI system or connected to it by a dependency.",
 						"Annex IV(5), Article 9(1)");
 			}
 			return new EUAIActDocumentationSectionResult(EUAIActDocumentationSection.DescriptionRiskManagement,
 					foundDocumentation, missingDocumentation, notes);
 		}
 		if (riskManagementSystems.size() > 1) {
-			addNote(notes, "Risk management system",
-					"more than one risk management system is connected to the AI system. One risk management system per high risk AI system is required",
+			addToNotes(notes, "Risk management system",
+					"More than one risk management system is connected to the AI system. One risk management system per high risk AI system is required.",
 					"Article 9(1)");
 		}
 
 		for (Artifact riskManagement : riskManagementSystems) {
 			String name = riskManagement.getName();
 			documentMandatoryString(foundDocumentation, missingDocumentation, notes, riskManagement,
-					EUAIActCompliance.RiskManagement, "RiskIdentification", "Risk identification of '" + name + "'",
-					"Annex IV(5), Article 9(2)(a)");
+					EUAIActCompliance.RiskManagementSystem, "RiskIdentification",
+					"Risk identification of '" + name + "'", "Annex IV(5), Article 9(2)(a)");
 			documentMandatoryString(foundDocumentation, missingDocumentation, notes, riskManagement,
-					EUAIActCompliance.RiskManagement, "RiskEstimation",
+					EUAIActCompliance.RiskManagementSystem, "RiskEstimation",
 					"Risk estimation and evaluation of '" + name + "'", "Annex IV(5), Article 9(2)(b)");
 			documentMandatoryString(foundDocumentation, missingDocumentation, notes, riskManagement,
-					EUAIActCompliance.RiskManagement, "PostMarketRiskEvaluation",
+					EUAIActCompliance.RiskManagementSystem, "PostMarketRiskEvaluation",
 					"Evaluation of post-market risks of '" + name + "'", "Annex IV(5), Article 9(2)(c)");
 			documentMandatoryString(foundDocumentation, missingDocumentation, notes, riskManagement,
-					EUAIActCompliance.RiskManagement, "RiskMitigation", "Risk management measures of '" + name + "'",
-					"Annex IV(5), Article 9(2)(d)");
+					EUAIActCompliance.RiskManagementSystem, "RiskMitigation",
+					"Risk management measures of '" + name + "'", "Annex IV(5), Article 9(2)(d)");
 			documentMandatoryString(foundDocumentation, missingDocumentation, notes, riskManagement,
-					EUAIActCompliance.RiskManagement, "ResidualRisk", "Residual risk of '" + name + "'",
+					EUAIActCompliance.RiskManagementSystem, "ResidualRisk", "Residual risk of '" + name + "'",
 					"Annex IV(5), Article 9(5)");
 			documentMandatoryString(foundDocumentation, missingDocumentation, notes, riskManagement,
-					EUAIActCompliance.RiskManagement, "TestingProcedure", "Testing procedure of '" + name + "'",
+					EUAIActCompliance.RiskManagementSystem, "TestingProcedure", "Testing procedure of '" + name + "'",
 					"Annex IV(5), Article 9(6), Article 9(7)");
 			documentMandatoryString(foundDocumentation, missingDocumentation, notes, riskManagement,
-					EUAIActCompliance.RiskManagement, "TestingMetrics",
+					EUAIActCompliance.RiskManagementSystem, "TestingMetrics",
 					"Testing metrics and thresholds of '" + name + "'", "Annex IV(5), Article 9(7)");
 			documentMandatoryString(foundDocumentation, missingDocumentation, notes, riskManagement,
-					EUAIActCompliance.RiskManagement, "VulnerableGroupsAssessment",
+					EUAIActCompliance.RiskManagementSystem, "VulnerableGroupsAssessment",
 					"Assessment of vulnerable groups of '" + name + "'", "Annex IV(5), Article 9(8)");
 		}
 
@@ -364,12 +414,12 @@ public class EUAIActDocumentationGenerator {
 				"HarmonisedStandards");
 		if (standards == null || standards.isBlank()) {
 			if (this.highRisk) {
-				addNote(notes, "Applied harmonised standards",
-						"none is specified. If no harmonised standard was applied, describe in this tag the solutions adopted to meet the requirements of Chapter III Section 2, including any other standards or technical specifications applied",
+				addToNotes(notes, "Applied harmonised standards",
+						"None is specified. If no harmonised standard was applied, describe in this tag the solutions adopted to meet the requirements of Chapter III Section 2, including any other standards or technical specifications applied.",
 						"Annex IV(7)");
 			}
 		} else {
-			addFound(foundDocumentation, "Applied harmonised standards", standards, "Annex IV(7)");
+			addToFoundDocumentation(foundDocumentation, "Applied harmonised standards", standards, "Annex IV(7)");
 		}
 
 		return new EUAIActDocumentationSectionResult(EUAIActDocumentationSection.ListHarmonisedStandards,
@@ -407,63 +457,17 @@ public class EUAIActDocumentationGenerator {
 	}
 
 	// TODO JavaDoc
-	// Article 50 transparency obligations
-	private EUAIActDocumentationSectionResult generateTransparencyObligations() {
-		List<String> foundDocumentation = new ArrayList<>();
-		List<String> missingDocumentation = new ArrayList<>();
-		List<String> notes = new ArrayList<>();
-
-		for (UseCase uc : this.aiSystem.getUseCases()) {
-			if (EUAIActComplianceUtil.hasStereotype(uc, EUAIActCompliance.HumanInteraction)) {
-				addFound(foundDocumentation, uc.getName(),
-						"the AI system interacts directly with natural persons. Design and develop the AI system in such a way that the natural persons concerned are informed that they are interacting with an AI system",
-						"Article 50(1)");
-			}
-			if (EUAIActComplianceUtil.hasStereotype(uc, EUAIActCompliance.SyntheticContent)) {
-				addFound(foundDocumentation, uc.getName(),
-						"the AI system generates synthetic audio, image, video or text content. Mark the output in a machine-readable format and make it detectable as artificially generated or manipulated",
-						"Article 50(2)");
-			}
-			if (EUAIActComplianceUtil.hasStereotype(uc, EUAIActCompliance.EmotionRecognition)
-					|| EUAIActComplianceUtil.hasStereotype(uc, EUAIActCompliance.BiometricCategorisation)) {
-				addFound(foundDocumentation, uc.getName(),
-						"the AI system exposes natural persons to emotion recognition or biometric categorisation. Inform the natural persons concerned about the operation of the AI system",
-						"Article 50(3)");
-			}
-			if (EUAIActComplianceUtil.hasStereotype(uc, EUAIActCompliance.Deepfake)) {
-				addFound(foundDocumentation, uc.getName(),
-						"the AI system generates or manipulates deep fake content. Disclose that the content has been artificially generated or manipulated",
-						"Article 50(4)");
-			}
-			if (EUAIActComplianceUtil.hasStereotype(uc, EUAIActCompliance.PublicInterestText)) {
-				addFound(foundDocumentation, uc.getName(),
-						"the AI system generates text which is published to inform the public on matters of public interest. Disclose that the text has been artificially generated or manipulated",
-						"Article 50(4)");
-			}
-		}
-
-		if (foundDocumentation.isEmpty()) {
-			addNote(notes, "Transparency obligations",
-					"no use case of the AI system is subject to a transparency obligation. If the AI system interacts with natural persons or generates content, model the use cases",
-					"Article 50");
-		}
-
-		return new EUAIActDocumentationSectionResult(EUAIActDocumentationSection.TransparencyObligations,
-				foundDocumentation, missingDocumentation, notes);
-	}
-
-	// TODO JavaDoc
 	private void documentMandatoryString(List<String> foundDocumentation, List<String> missingDocumentation,
 			List<String> notes, Element element, EUAIActCompliance stereotype, String tag, String label,
 			String reference) {
 		String value = EUAIActComplianceUtil.getStringValue(element, stereotype, tag);
 		if (value != null && !value.isBlank()) {
-			addFound(foundDocumentation, label, value, reference);
+			addToFoundDocumentation(foundDocumentation, label, value, reference);
 		} else {
 			if (this.highRisk) {
-				addMissing(missingDocumentation, label, "not specified in the model, specify", reference);
+				addToMissingDocumentation(missingDocumentation, label, "Not specified in the UML model.", reference);
 			} else {
-				addNote(notes, label, "not specified in the model, specify", reference);
+				addToNotes(notes, label, "Not specified in the UML model.", reference);
 			}
 		}
 	}
@@ -474,13 +478,13 @@ public class EUAIActDocumentationGenerator {
 			String reference) {
 		boolean value = EUAIActComplianceUtil.isTaggedValueTrue(element, stereotype, tag);
 		if (value) {
-			addFound(foundDocumentation, label, "confirmed to be part of the documentation", reference);
+			addToFoundDocumentation(foundDocumentation, label, "Confirmed to be part of the documentation.", reference);
 		} else {
 			if (this.highRisk) {
-				addMissing(missingDocumentation, label,
-						"not confirmed to be part of the documentation. Add in the model", reference);
+				addToMissingDocumentation(missingDocumentation, label, "Not confirmed. Set the tag in the UML model.",
+						reference);
 			} else {
-				addNote(notes, label, "not confirmed to be part of the documentation. Add in the model", reference);
+				addToNotes(notes, label, "Not confirmed. Set the tag in the UML model.", reference);
 			}
 		}
 	}
@@ -490,43 +494,30 @@ public class EUAIActDocumentationGenerator {
 			EUAIActCompliance stereotype, String tag, String label, String reference) {
 		String value = EUAIActComplianceUtil.getStringValue(element, stereotype, tag);
 		if (value != null && !value.isBlank()) {
-			addFound(foundDocumentation, label, value, reference);
+			addToFoundDocumentation(foundDocumentation, label, value, reference);
 		} else {
 			if (this.highRisk) {
-				addNote(notes, label,
-						"not specified in the model. If this does not apply to the AI system, dismiss this note else specify",
+				addToNotes(notes, label,
+						"Not specified in the UML model. Specify this information, or dismiss this note if it does not apply to the AI system.",
 						reference);
 			}
 		}
 	}
 
 	// TODO JavaDoc
-	private void documentConditionalBoolean(List<String> foundDocumentation, List<String> notes, Element element,
-			EUAIActCompliance stereotype, String tag, String label, String reference) {
-		boolean value = EUAIActComplianceUtil.isTaggedValueTrue(element, stereotype, tag);
-		if (value) {
-			addFound(foundDocumentation, label, "confirmed to be part of the documentation", reference);
-		} else {
-			if (this.highRisk) {
-				addNote(notes, label,
-						"not confirmed to be part of the documentation. If this does not apply to the AI system, dismiss this note else specify",
-						reference);
-			}
-		}
+	private void addToFoundDocumentation(List<String> foundDocumentation, String label, String value,
+			String reference) {
+		foundDocumentation.add(label + " (" + reference + "): " + value);
 	}
 
 	// TODO JavaDoc
-	private void addFound(List<String> foundDocumentation, String label, String value, String reference) {
-		foundDocumentation.add("'" + label + "': " + value + ", according to " + reference + ".");
+	private void addToMissingDocumentation(List<String> missingDocumentation, String label, String value,
+			String reference) {
+		missingDocumentation.add(label + " (" + reference + "): " + value);
 	}
 
 	// TODO JavaDoc
-	private void addMissing(List<String> missingDocumentation, String label, String description, String reference) {
-		missingDocumentation.add("'" + label + "': " + description + ", according to " + reference + ".");
-	}
-
-	// TODO JavaDoc
-	private void addNote(List<String> notes, String label, String description, String reference) {
-		notes.add("'" + label + "': " + description + ", according to " + reference + ".");
+	private void addToNotes(List<String> notes, String label, String value, String reference) {
+		notes.add(label + " (" + reference + "): " + value);
 	}
 }

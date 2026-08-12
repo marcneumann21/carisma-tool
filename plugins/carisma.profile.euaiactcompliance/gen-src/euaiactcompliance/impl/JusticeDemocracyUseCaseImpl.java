@@ -5,13 +5,19 @@ package euaiactcompliance.impl;
 import euaiactcompliance.EuaiactcompliancePackage;
 import euaiactcompliance.JusticeDemocracyUseCase;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 import org.eclipse.uml2.uml.UseCase;
 
@@ -26,12 +32,9 @@ import org.eclipse.uml2.uml.UseCase;
  *   <li>{@link euaiactcompliance.impl.JusticeDemocracyUseCaseImpl#isJudicialSupport <em>Judicial Support</em>}</li>
  *   <li>{@link euaiactcompliance.impl.JusticeDemocracyUseCaseImpl#isElectionInfluence <em>Election Influence</em>}</li>
  *   <li>{@link euaiactcompliance.impl.JusticeDemocracyUseCaseImpl#isNoDirectExposure <em>No Direct Exposure</em>}</li>
- *   <li>{@link euaiactcompliance.impl.JusticeDemocracyUseCaseImpl#isDecisionPatternDetection <em>Decision Pattern Detection</em>}</li>
- *   <li>{@link euaiactcompliance.impl.JusticeDemocracyUseCaseImpl#isImprovesHumanActivity <em>Improves Human Activity</em>}</li>
- *   <li>{@link euaiactcompliance.impl.JusticeDemocracyUseCaseImpl#isPreparatoryTask <em>Preparatory Task</em>}</li>
- *   <li>{@link euaiactcompliance.impl.JusticeDemocracyUseCaseImpl#isNarrowProceduralTask <em>Narrow Procedural Task</em>}</li>
- *   <li>{@link euaiactcompliance.impl.JusticeDemocracyUseCaseImpl#getExceptionJustification <em>Exception Justification</em>}</li>
  *   <li>{@link euaiactcompliance.impl.JusticeDemocracyUseCaseImpl#getBase_UseCase <em>Base Use Case</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.JusticeDemocracyUseCaseImpl#getException <em>Exception</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.JusticeDemocracyUseCaseImpl#getExceptionJustification <em>Exception Justification</em>}</li>
  * </ul>
  *
  * @generated
@@ -98,84 +101,24 @@ public class JusticeDemocracyUseCaseImpl extends MinimalEObjectImpl.Container im
 	protected boolean noDirectExposure = NO_DIRECT_EXPOSURE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isDecisionPatternDetection() <em>Decision Pattern Detection</em>}' attribute.
+	 * The cached value of the '{@link #getBase_UseCase() <em>Base Use Case</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isDecisionPatternDetection()
+	 * @see #getBase_UseCase()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean DECISION_PATTERN_DETECTION_EDEFAULT = false;
+	protected UseCase base_UseCase;
 
 	/**
-	 * The cached value of the '{@link #isDecisionPatternDetection() <em>Decision Pattern Detection</em>}' attribute.
+	 * The cached value of the '{@link #getException() <em>Exception</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isDecisionPatternDetection()
+	 * @see #getException()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean decisionPatternDetection = DECISION_PATTERN_DETECTION_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isImprovesHumanActivity() <em>Improves Human Activity</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isImprovesHumanActivity()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean IMPROVES_HUMAN_ACTIVITY_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isImprovesHumanActivity() <em>Improves Human Activity</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isImprovesHumanActivity()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean improvesHumanActivity = IMPROVES_HUMAN_ACTIVITY_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isPreparatoryTask() <em>Preparatory Task</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isPreparatoryTask()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean PREPARATORY_TASK_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isPreparatoryTask() <em>Preparatory Task</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isPreparatoryTask()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean preparatoryTask = PREPARATORY_TASK_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isNarrowProceduralTask() <em>Narrow Procedural Task</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isNarrowProceduralTask()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean NARROW_PROCEDURAL_TASK_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isNarrowProceduralTask() <em>Narrow Procedural Task</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isNarrowProceduralTask()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean narrowProceduralTask = NARROW_PROCEDURAL_TASK_EDEFAULT;
+	protected EList<euaiactcompliance.Exception> exception;
 
 	/**
 	 * The default value of the '{@link #getExceptionJustification() <em>Exception Justification</em>}' attribute.
@@ -196,16 +139,6 @@ public class JusticeDemocracyUseCaseImpl extends MinimalEObjectImpl.Container im
 	 * @ordered
 	 */
 	protected String exceptionJustification = EXCEPTION_JUSTIFICATION_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getBase_UseCase() <em>Base Use Case</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBase_UseCase()
-	 * @generated
-	 * @ordered
-	 */
-	protected UseCase base_UseCase;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -301,121 +234,6 @@ public class JusticeDemocracyUseCaseImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public boolean isDecisionPatternDetection() {
-		return decisionPatternDetection;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setDecisionPatternDetection(boolean newDecisionPatternDetection) {
-		boolean oldDecisionPatternDetection = decisionPatternDetection;
-		decisionPatternDetection = newDecisionPatternDetection;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__DECISION_PATTERN_DETECTION, oldDecisionPatternDetection, decisionPatternDetection));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isImprovesHumanActivity() {
-		return improvesHumanActivity;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setImprovesHumanActivity(boolean newImprovesHumanActivity) {
-		boolean oldImprovesHumanActivity = improvesHumanActivity;
-		improvesHumanActivity = newImprovesHumanActivity;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__IMPROVES_HUMAN_ACTIVITY, oldImprovesHumanActivity, improvesHumanActivity));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isPreparatoryTask() {
-		return preparatoryTask;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setPreparatoryTask(boolean newPreparatoryTask) {
-		boolean oldPreparatoryTask = preparatoryTask;
-		preparatoryTask = newPreparatoryTask;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__PREPARATORY_TASK, oldPreparatoryTask, preparatoryTask));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isNarrowProceduralTask() {
-		return narrowProceduralTask;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setNarrowProceduralTask(boolean newNarrowProceduralTask) {
-		boolean oldNarrowProceduralTask = narrowProceduralTask;
-		narrowProceduralTask = newNarrowProceduralTask;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__NARROW_PROCEDURAL_TASK, oldNarrowProceduralTask, narrowProceduralTask));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getExceptionJustification() {
-		return exceptionJustification;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setExceptionJustification(String newExceptionJustification) {
-		String oldExceptionJustification = exceptionJustification;
-		exceptionJustification = newExceptionJustification;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION_JUSTIFICATION, oldExceptionJustification, exceptionJustification));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public UseCase getBase_UseCase() {
 		if (base_UseCase != null && base_UseCase.eIsProxy()) {
 			InternalEObject oldBase_UseCase = (InternalEObject)base_UseCase;
@@ -456,6 +274,42 @@ public class JusticeDemocracyUseCaseImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
+	public EList<euaiactcompliance.Exception> getException() {
+		if (exception == null) {
+			exception = new EDataTypeUniqueEList<euaiactcompliance.Exception>(euaiactcompliance.Exception.class, this, EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION);
+		}
+		return exception;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getExceptionJustification() {
+		return exceptionJustification;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setExceptionJustification(String newExceptionJustification) {
+		String oldExceptionJustification = exceptionJustification;
+		exceptionJustification = newExceptionJustification;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION_JUSTIFICATION, oldExceptionJustification, exceptionJustification));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__JUDICIAL_SUPPORT:
@@ -464,19 +318,13 @@ public class JusticeDemocracyUseCaseImpl extends MinimalEObjectImpl.Container im
 				return isElectionInfluence();
 			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__NO_DIRECT_EXPOSURE:
 				return isNoDirectExposure();
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__DECISION_PATTERN_DETECTION:
-				return isDecisionPatternDetection();
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__IMPROVES_HUMAN_ACTIVITY:
-				return isImprovesHumanActivity();
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__PREPARATORY_TASK:
-				return isPreparatoryTask();
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__NARROW_PROCEDURAL_TASK:
-				return isNarrowProceduralTask();
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION_JUSTIFICATION:
-				return getExceptionJustification();
 			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__BASE_USE_CASE:
 				if (resolve) return getBase_UseCase();
 				return basicGetBase_UseCase();
+			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION:
+				return getException();
+			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION_JUSTIFICATION:
+				return getExceptionJustification();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -486,6 +334,7 @@ public class JusticeDemocracyUseCaseImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -498,23 +347,15 @@ public class JusticeDemocracyUseCaseImpl extends MinimalEObjectImpl.Container im
 			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__NO_DIRECT_EXPOSURE:
 				setNoDirectExposure((Boolean)newValue);
 				return;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__DECISION_PATTERN_DETECTION:
-				setDecisionPatternDetection((Boolean)newValue);
+			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__BASE_USE_CASE:
+				setBase_UseCase((UseCase)newValue);
 				return;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__IMPROVES_HUMAN_ACTIVITY:
-				setImprovesHumanActivity((Boolean)newValue);
-				return;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__PREPARATORY_TASK:
-				setPreparatoryTask((Boolean)newValue);
-				return;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__NARROW_PROCEDURAL_TASK:
-				setNarrowProceduralTask((Boolean)newValue);
+			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION:
+				getException().clear();
+				getException().addAll((Collection<? extends euaiactcompliance.Exception>)newValue);
 				return;
 			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION_JUSTIFICATION:
 				setExceptionJustification((String)newValue);
-				return;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__BASE_USE_CASE:
-				setBase_UseCase((UseCase)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -537,23 +378,14 @@ public class JusticeDemocracyUseCaseImpl extends MinimalEObjectImpl.Container im
 			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__NO_DIRECT_EXPOSURE:
 				setNoDirectExposure(NO_DIRECT_EXPOSURE_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__DECISION_PATTERN_DETECTION:
-				setDecisionPatternDetection(DECISION_PATTERN_DETECTION_EDEFAULT);
+			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__BASE_USE_CASE:
+				setBase_UseCase((UseCase)null);
 				return;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__IMPROVES_HUMAN_ACTIVITY:
-				setImprovesHumanActivity(IMPROVES_HUMAN_ACTIVITY_EDEFAULT);
-				return;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__PREPARATORY_TASK:
-				setPreparatoryTask(PREPARATORY_TASK_EDEFAULT);
-				return;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__NARROW_PROCEDURAL_TASK:
-				setNarrowProceduralTask(NARROW_PROCEDURAL_TASK_EDEFAULT);
+			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION:
+				getException().clear();
 				return;
 			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION_JUSTIFICATION:
 				setExceptionJustification(EXCEPTION_JUSTIFICATION_EDEFAULT);
-				return;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__BASE_USE_CASE:
-				setBase_UseCase((UseCase)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -573,18 +405,12 @@ public class JusticeDemocracyUseCaseImpl extends MinimalEObjectImpl.Container im
 				return electionInfluence != ELECTION_INFLUENCE_EDEFAULT;
 			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__NO_DIRECT_EXPOSURE:
 				return noDirectExposure != NO_DIRECT_EXPOSURE_EDEFAULT;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__DECISION_PATTERN_DETECTION:
-				return decisionPatternDetection != DECISION_PATTERN_DETECTION_EDEFAULT;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__IMPROVES_HUMAN_ACTIVITY:
-				return improvesHumanActivity != IMPROVES_HUMAN_ACTIVITY_EDEFAULT;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__PREPARATORY_TASK:
-				return preparatoryTask != PREPARATORY_TASK_EDEFAULT;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__NARROW_PROCEDURAL_TASK:
-				return narrowProceduralTask != NARROW_PROCEDURAL_TASK_EDEFAULT;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION_JUSTIFICATION:
-				return EXCEPTION_JUSTIFICATION_EDEFAULT == null ? exceptionJustification != null : !EXCEPTION_JUSTIFICATION_EDEFAULT.equals(exceptionJustification);
 			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__BASE_USE_CASE:
 				return base_UseCase != null;
+			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION:
+				return exception != null && !exception.isEmpty();
+			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION_JUSTIFICATION:
+				return EXCEPTION_JUSTIFICATION_EDEFAULT == null ? exceptionJustification != null : !EXCEPTION_JUSTIFICATION_EDEFAULT.equals(exceptionJustification);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -605,14 +431,8 @@ public class JusticeDemocracyUseCaseImpl extends MinimalEObjectImpl.Container im
 		result.append(electionInfluence);
 		result.append(", NoDirectExposure: ");
 		result.append(noDirectExposure);
-		result.append(", DecisionPatternDetection: ");
-		result.append(decisionPatternDetection);
-		result.append(", ImprovesHumanActivity: ");
-		result.append(improvesHumanActivity);
-		result.append(", PreparatoryTask: ");
-		result.append(preparatoryTask);
-		result.append(", NarrowProceduralTask: ");
-		result.append(narrowProceduralTask);
+		result.append(", Exception: ");
+		result.append(exception);
 		result.append(", ExceptionJustification: ");
 		result.append(exceptionJustification);
 		result.append(')');

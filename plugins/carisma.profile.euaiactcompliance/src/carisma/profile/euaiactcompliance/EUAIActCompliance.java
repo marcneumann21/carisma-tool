@@ -7,25 +7,22 @@ import carisma.modeltype.uml2.CarismaProfileDescriptor;
 public enum EUAIActCompliance {
 
 	// System elements
-	AISystem("AISystem"), MLModel("MLModel"), TrainingData("TrainingData"), ThirdPartyComponent("ThirdPartyComponent"),
-	ProductEmbedding("ProductEmbedding"),
+	AISystem("AISystem"), SelfDevelopedModel("SelfDevelopedModel"), TrainingData("TrainingData"),
+	ThirdPartyComponent("ThirdPartyComponent"), ProductEmbedding("ProductEmbedding"),
 
 	// Actors
-	Provider("Provider"),
-
-	// Actor associations
-	Provides("Provides"),
+	Provider("Provider"), Provides("Provides"),
 
 	// Unacceptable risk (Art. 5)
 	ManipulativeBehaviour("ManipulativeBehaviour"), ExploitingHumanVulnerability("ExploitingHumanVulnerability"),
 	SocialScoring("SocialScoring"), FacialImageScraping("FacialImageScraping"),
 
 	// High risk (Art. 6, Annex III)
-	AnnexIIIUseCase("AnnexIIIUseCase"), BiometricIdentification("BiometricIdentification"),
-	BiometricCategorisation("BiometricCategorisation"), EmotionRecognition("EmotionRecognition"),
-	CriticalInfrastructure("CriticalInfrastructure"), Education("Education"), HumanEmployment("HumanEmployment"),
-	EssentialService("EssentialService"), LawEnforcement("LawEnforcement"), MigrationBorder("MigrationBorder"),
-	JusticeDemocracyUseCase("JusticeDemocracyUseCase"), Profiling("Profiling"), RiskManagement("RiskManagement"),
+	BiometricIdentification("BiometricIdentification"), BiometricCategorisation("BiometricCategorisation"),
+	EmotionRecognition("EmotionRecognition"), CriticalInfrastructure("CriticalInfrastructure"), Education("Education"),
+	HumanEmployment("HumanEmployment"), EssentialService("EssentialService"), LawEnforcement("LawEnforcement"),
+	MigrationBorder("MigrationBorder"), JusticeDemocracyUseCase("JusticeDemocracyUseCase"), Profiling("Profiling"),
+	RiskManagementSystem("RiskManagementSystem"),
 
 	// Limited risk / transparency obligations (Art. 50)
 	HumanInteraction("HumanInteraction"), SyntheticContent("SyntheticContent"), Deepfake("Deepfake"),
@@ -33,7 +30,7 @@ public enum EUAIActCompliance {
 
 	private static final String PROFILE_NAME = "euaiactcompliance";
 	private static final String PROFILE_VERSION = "2";
-	private static final String PROFILE_URI = "platform:/carisma.profile.euaiactcompliance/profile/euaiactcompliance.profile.uml";
+	private static final String PROFILE_URI = "platform:/plugin/carisma.profile.euaiactcompliance/profile/euaiactcompliance.profile.uml";
 
 	public static final CarismaProfileDescriptor DESCRIPTOR = new CarismaProfileDescriptor(PROFILE_NAME,
 			PROFILE_VERSION, PROFILE_URI);

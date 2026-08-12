@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.uml2.uml.Actor;
 import org.eclipse.uml2.uml.Association;
 import org.eclipse.uml2.uml.Component;
@@ -203,15 +204,33 @@ public final class EUAIActComplianceUtil {
 		String enumValue = null;
 		List<Object> taggedValues = getTaggedValues(attribute, stereotype, element);
 		for (Object oj : taggedValues) {
-			if (oj instanceof EnumerationLiteral) {
+			if (oj instanceof Enumerator) {
+				enumValue = ((Enumerator) oj).getName();
+			} else if (oj instanceof EnumerationLiteral) {
 				enumValue = ((EnumerationLiteral) oj).getName();
 			}
 		}
 		return enumValue;
 	}
+	
+	// TODO JavaDoc
+	public static List<String> getEnumValues(final Element element, final EUAIActCompliance stereotype,
+			String attribute) {
+		List<String> enumValues = new ArrayList<>();
+		List<Object> taggedValues = getTaggedValues(attribute, stereotype, element);
+		for (Object oj : taggedValues) {
+			if (oj instanceof Enumerator) {
+				enumValues.add(((Enumerator) oj).getName());
+			} else if (oj instanceof EnumerationLiteral) {
+				enumValues.add(((EnumerationLiteral) oj).getName());
+			}
+		}
+		return enumValues;
+	}
 
 	// TODO JavaDoc
-	public static String getStringValue(Element element, EUAIActCompliance stereotype, String attribute) {
+	public static String getStringValue(final Element element, final EUAIActCompliance stereotype,
+			final String attribute) {
 		String stringValue = null;
 		List<Object> taggedValues = getTaggedValues(attribute, stereotype, element);
 		for (Object oj : taggedValues) {
@@ -223,7 +242,8 @@ public final class EUAIActComplianceUtil {
 	}
 
 	// TODO JavaDoc
-	public static Boolean getBooleanValue(Element element, EUAIActCompliance stereotype, String attribute) {
+	public static Boolean getBooleanValue(final Element element, final EUAIActCompliance stereotype,
+			final String attribute) {
 		Boolean booleanValue = null;
 		List<Object> taggedValues = getTaggedValues(attribute, stereotype, element);
 		for (Object oj : taggedValues) {
@@ -235,8 +255,8 @@ public final class EUAIActComplianceUtil {
 	}
 
 	// TODO JavaDoc
-	public static String getAssociationActorEnd(Component component, EUAIActCompliance associationStereotype,
-			EUAIActCompliance actorStereotype) {
+	public static String getAssociationActorEnd(final Component component,
+			final EUAIActCompliance associationStereotype, final EUAIActCompliance actorStereotype) {
 		for (Association ass : component.getAssociations()) {
 			if (!hasStereotype(ass, associationStereotype)) {
 				continue;
@@ -268,31 +288,28 @@ public final class EUAIActComplianceUtil {
 	}
 
 	// TODO JavaDoc
-	public static List<String> getAllConnectedElements(Component system) {
-		List<String> elements = new ArrayList<>();
+	public static Set<Component> getNestedComponents(Component system) {
+		Set<Component> components = new HashSet<Component>();
+		for (Element el : system.getOwnedElements()) {
+			if (el instanceof Component) {
+				components.add((Component) el);
+			}
+		}
+		
+		return components;
+	}
 
-		// nested components
-		for (Element element : system.getOwnedElements()) {
-			if (element instanceof Component) {
-				String relation = "'" + system.getName() + "' contains '" + ((Component) element).getName() + "'";
-				if (!elements.contains(relation)) {
-					elements.add(relation);
+	// TODO JavaDoc
+	public static Set<Component> getDependencyComponents(Component system) {
+		Set<Component> components = new HashSet<Component>();
+		for (Dependency dep : system.getClientDependencies()) {
+			for (NamedElement el : dep.getSuppliers()) {
+				if (el instanceof Component) {
+					components.add((Component) el);
 				}
 			}
 		}
-
-		// dependencies to other components
-		for (Dependency dependency : system.getClientDependencies()) {
-			for (NamedElement supplier : dependency.getSuppliers()) {
-				if (supplier instanceof Component) {
-					String relation = "'" + system.getName() + "' uses '" + supplier.getName() + "'";
-					if (!elements.contains(relation)) {
-						elements.add(relation);
-					}
-				}
-			}
-		}
-
-		return elements;
+		
+		return components;
 	}
 }

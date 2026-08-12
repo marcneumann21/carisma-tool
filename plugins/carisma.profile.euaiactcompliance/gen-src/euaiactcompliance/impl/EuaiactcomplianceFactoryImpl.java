@@ -2,7 +2,37 @@
  */
 package euaiactcompliance.impl;
 
-import euaiactcompliance.*;
+import euaiactcompliance.AISystem;
+import euaiactcompliance.BiometricCategorisation;
+import euaiactcompliance.BiometricIdentification;
+import euaiactcompliance.CriticalInfrastructure;
+import euaiactcompliance.Deepfake;
+import euaiactcompliance.Education;
+import euaiactcompliance.EmotionRecognition;
+import euaiactcompliance.EssentialService;
+import euaiactcompliance.EuaiactcomplianceFactory;
+import euaiactcompliance.EuaiactcompliancePackage;
+import euaiactcompliance.ExploitingHumanVulnerability;
+import euaiactcompliance.FacialImageScraping;
+import euaiactcompliance.HumanEmployment;
+import euaiactcompliance.HumanInteraction;
+import euaiactcompliance.JusticeDemocracyUseCase;
+import euaiactcompliance.LawEnforcement;
+import euaiactcompliance.ManipulativeBehaviour;
+import euaiactcompliance.MigrationBorder;
+import euaiactcompliance.ProductCategory;
+import euaiactcompliance.ProductEmbedding;
+import euaiactcompliance.Profiling;
+import euaiactcompliance.Provider;
+import euaiactcompliance.Provides;
+import euaiactcompliance.PublicInterestText;
+import euaiactcompliance.RiskManagementSystem;
+import euaiactcompliance.Role;
+import euaiactcompliance.SelfDevelopedModel;
+import euaiactcompliance.SocialScoring;
+import euaiactcompliance.SyntheticContent;
+import euaiactcompliance.ThirdPartyComponent;
+import euaiactcompliance.TrainingData;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -71,7 +101,7 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 			case EuaiactcompliancePackage.PROVIDER: return createProvider();
 			case EuaiactcompliancePackage.PROVIDES: return createProvides();
 			case EuaiactcompliancePackage.CRITICAL_INFRASTRUCTURE: return createCriticalInfrastructure();
-			case EuaiactcompliancePackage.ML_MODEL: return createMLModel();
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL: return createSelfDevelopedModel();
 			case EuaiactcompliancePackage.EDUCATION: return createEducation();
 			case EuaiactcompliancePackage.HUMAN_EMPLOYMENT: return createHumanEmployment();
 			case EuaiactcompliancePackage.TRAINING_DATA: return createTrainingData();
@@ -83,7 +113,7 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 			case EuaiactcompliancePackage.BIOMETRIC_IDENTIFICATION: return createBiometricIdentification();
 			case EuaiactcompliancePackage.BIOMETRIC_CATEGORISATION: return createBiometricCategorisation();
 			case EuaiactcompliancePackage.EMOTION_RECOGNITION: return createEmotionRecognition();
-			case EuaiactcompliancePackage.RISK_MANAGEMENT: return createRiskManagement();
+			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM: return createRiskManagementSystem();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -97,10 +127,12 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case EuaiactcompliancePackage.CATEGORY:
-				return createCategoryFromString(eDataType, initialValue);
+			case EuaiactcompliancePackage.PRODUCT_CATEGORY:
+				return createProductCategoryFromString(eDataType, initialValue);
 			case EuaiactcompliancePackage.ROLE:
 				return createRoleFromString(eDataType, initialValue);
+			case EuaiactcompliancePackage.EXCEPTION:
+				return createExceptionFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -114,10 +146,12 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case EuaiactcompliancePackage.CATEGORY:
-				return convertCategoryToString(eDataType, instanceValue);
+			case EuaiactcompliancePackage.PRODUCT_CATEGORY:
+				return convertProductCategoryToString(eDataType, instanceValue);
 			case EuaiactcompliancePackage.ROLE:
 				return convertRoleToString(eDataType, instanceValue);
+			case EuaiactcompliancePackage.EXCEPTION:
+				return convertExceptionToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -283,9 +317,9 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public MLModel createMLModel() {
-		MLModelImpl mlModel = new MLModelImpl();
-		return mlModel;
+	public SelfDevelopedModel createSelfDevelopedModel() {
+		SelfDevelopedModelImpl selfDevelopedModel = new SelfDevelopedModelImpl();
+		return selfDevelopedModel;
 	}
 
 	/**
@@ -415,9 +449,9 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public RiskManagement createRiskManagement() {
-		RiskManagementImpl riskManagement = new RiskManagementImpl();
-		return riskManagement;
+	public RiskManagementSystem createRiskManagementSystem() {
+		RiskManagementSystemImpl riskManagementSystem = new RiskManagementSystemImpl();
+		return riskManagementSystem;
 	}
 
 	/**
@@ -425,8 +459,8 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Category createCategoryFromString(EDataType eDataType, String initialValue) {
-		Category result = Category.get(initialValue);
+	public ProductCategory createProductCategoryFromString(EDataType eDataType, String initialValue) {
+		ProductCategory result = ProductCategory.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -436,7 +470,7 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertCategoryToString(EDataType eDataType, Object instanceValue) {
+	public String convertProductCategoryToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -457,6 +491,26 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 	 * @generated
 	 */
 	public String convertRoleToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public euaiactcompliance.Exception createExceptionFromString(EDataType eDataType, String initialValue) {
+		euaiactcompliance.Exception result = euaiactcompliance.Exception.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertExceptionToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
