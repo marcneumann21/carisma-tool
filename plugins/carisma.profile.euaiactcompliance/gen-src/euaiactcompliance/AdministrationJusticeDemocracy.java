@@ -10,40 +10,40 @@ import org.eclipse.uml2.uml.UseCase;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Justice Democracy Use Case</b></em>'.
+ * A representation of the model object '<em><b>Administration Justice Democracy</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link euaiactcompliance.JusticeDemocracyUseCase#isJudicialSupport <em>Judicial Support</em>}</li>
- *   <li>{@link euaiactcompliance.JusticeDemocracyUseCase#isElectionInfluence <em>Election Influence</em>}</li>
- *   <li>{@link euaiactcompliance.JusticeDemocracyUseCase#isNoDirectExposure <em>No Direct Exposure</em>}</li>
- *   <li>{@link euaiactcompliance.JusticeDemocracyUseCase#getBase_UseCase <em>Base Use Case</em>}</li>
- *   <li>{@link euaiactcompliance.JusticeDemocracyUseCase#getException <em>Exception</em>}</li>
- *   <li>{@link euaiactcompliance.JusticeDemocracyUseCase#getExceptionJustification <em>Exception Justification</em>}</li>
+ *   <li>{@link euaiactcompliance.AdministrationJusticeDemocracy#isJudicialSupport <em>Judicial Support</em>}</li>
+ *   <li>{@link euaiactcompliance.AdministrationJusticeDemocracy#isElectionInfluence <em>Election Influence</em>}</li>
+ *   <li>{@link euaiactcompliance.AdministrationJusticeDemocracy#isNoDirectExposure <em>No Direct Exposure</em>}</li>
+ *   <li>{@link euaiactcompliance.AdministrationJusticeDemocracy#getBase_UseCase <em>Base Use Case</em>}</li>
+ *   <li>{@link euaiactcompliance.AdministrationJusticeDemocracy#getException <em>Exception</em>}</li>
+ *   <li>{@link euaiactcompliance.AdministrationJusticeDemocracy#getExceptionJustification <em>Exception Justification</em>}</li>
  * </ul>
  *
- * @see euaiactcompliance.EuaiactcompliancePackage#getJusticeDemocracyUseCase()
+ * @see euaiactcompliance.EuaiactcompliancePackage#getAdministrationJusticeDemocracy()
  * @model
  * @generated
  */
-public interface JusticeDemocracyUseCase extends EObject {
+public interface AdministrationJusticeDemocracy extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Judicial Support</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Judicial Support</em>' attribute.
 	 * @see #setJudicialSupport(boolean)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getJusticeDemocracyUseCase_JudicialSupport()
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getAdministrationJusticeDemocracy_JudicialSupport()
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
 	 * @generated
 	 */
 	boolean isJudicialSupport();
 
 	/**
-	 * Sets the value of the '{@link euaiactcompliance.JusticeDemocracyUseCase#isJudicialSupport <em>Judicial Support</em>}' attribute.
+	 * Sets the value of the '{@link euaiactcompliance.AdministrationJusticeDemocracy#isJudicialSupport <em>Judicial Support</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Judicial Support</em>' attribute.
@@ -58,14 +58,14 @@ public interface JusticeDemocracyUseCase extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Election Influence</em>' attribute.
 	 * @see #setElectionInfluence(boolean)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getJusticeDemocracyUseCase_ElectionInfluence()
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getAdministrationJusticeDemocracy_ElectionInfluence()
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
 	 * @generated
 	 */
 	boolean isElectionInfluence();
 
 	/**
-	 * Sets the value of the '{@link euaiactcompliance.JusticeDemocracyUseCase#isElectionInfluence <em>Election Influence</em>}' attribute.
+	 * Sets the value of the '{@link euaiactcompliance.AdministrationJusticeDemocracy#isElectionInfluence <em>Election Influence</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Election Influence</em>' attribute.
@@ -80,14 +80,14 @@ public interface JusticeDemocracyUseCase extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>No Direct Exposure</em>' attribute.
 	 * @see #setNoDirectExposure(boolean)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getJusticeDemocracyUseCase_NoDirectExposure()
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getAdministrationJusticeDemocracy_NoDirectExposure()
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
 	 * @generated
 	 */
 	boolean isNoDirectExposure();
 
 	/**
-	 * Sets the value of the '{@link euaiactcompliance.JusticeDemocracyUseCase#isNoDirectExposure <em>No Direct Exposure</em>}' attribute.
+	 * Sets the value of the '{@link euaiactcompliance.AdministrationJusticeDemocracy#isNoDirectExposure <em>No Direct Exposure</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>No Direct Exposure</em>' attribute.
@@ -102,14 +102,14 @@ public interface JusticeDemocracyUseCase extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Base Use Case</em>' reference.
 	 * @see #setBase_UseCase(UseCase)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getJusticeDemocracyUseCase_Base_UseCase()
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getAdministrationJusticeDemocracy_Base_UseCase()
 	 * @model ordered="false"
 	 * @generated
 	 */
 	UseCase getBase_UseCase();
 
 	/**
-	 * Sets the value of the '{@link euaiactcompliance.JusticeDemocracyUseCase#getBase_UseCase <em>Base Use Case</em>}' reference.
+	 * Sets the value of the '{@link euaiactcompliance.AdministrationJusticeDemocracy#getBase_UseCase <em>Base Use Case</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Base Use Case</em>' reference.
@@ -126,7 +126,7 @@ public interface JusticeDemocracyUseCase extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Exception</em>' attribute list.
 	 * @see euaiactcompliance.Exception
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getJusticeDemocracyUseCase_Exception()
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getAdministrationJusticeDemocracy_Exception()
 	 * @model ordered="false"
 	 * @generated
 	 */
@@ -138,14 +138,14 @@ public interface JusticeDemocracyUseCase extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Exception Justification</em>' attribute.
 	 * @see #setExceptionJustification(String)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getJusticeDemocracyUseCase_ExceptionJustification()
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getAdministrationJusticeDemocracy_ExceptionJustification()
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
 	String getExceptionJustification();
 
 	/**
-	 * Sets the value of the '{@link euaiactcompliance.JusticeDemocracyUseCase#getExceptionJustification <em>Exception Justification</em>}' attribute.
+	 * Sets the value of the '{@link euaiactcompliance.AdministrationJusticeDemocracy#getExceptionJustification <em>Exception Justification</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Exception Justification</em>' attribute.
@@ -154,4 +154,4 @@ public interface JusticeDemocracyUseCase extends EObject {
 	 */
 	void setExceptionJustification(String value);
 
-} // JusticeDemocracyUseCase
+} // AdministrationJusticeDemocracy

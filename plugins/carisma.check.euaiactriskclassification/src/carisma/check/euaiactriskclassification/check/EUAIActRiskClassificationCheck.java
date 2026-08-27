@@ -37,6 +37,7 @@ public class EUAIActRiskClassificationCheck extends AbstractEUAIActRiskClassific
 		}
 
 		addInfo("Your model contains " + aiSystems.size() + " AI system(s).");
+		addInfo("");
 
 		boolean noUnacceptableRisk = true;
 		for (Component aiSystem : aiSystems) {
@@ -49,7 +50,9 @@ public class EUAIActRiskClassificationCheck extends AbstractEUAIActRiskClassific
 			List<String> additionalObligations = result.additionalObligations();
 			List<String> notes = result.notes();
 
+			addInfo("#".repeat(50));
 			addInfo("The AI System '" + aiSystem.getName() + "' is classified as: " + riskClass);
+			addInfo("#".repeat(50));
 
 			addInfo("");
 
@@ -66,8 +69,12 @@ public class EUAIActRiskClassificationCheck extends AbstractEUAIActRiskClassific
 						+ "' must not be placed on the market, put into service or used (Article 5).");
 				noUnacceptableRisk = false;
 				continue;
+			} else if (riskClass == EUAIActRiskClass.Undetermined) {
+				addWarning("No Obligations. The risk class of the AI system '" + aiSystem.getName()
+						+ "' could not be determined.");
+				continue;
 			} else {
-				addInfo("Obligations resulting from the risk class:");
+				addInfo("Risk Class Obligations:");
 				addInfo("=================");
 				if (obligations.isEmpty()) {
 					addInfo("None");
@@ -79,7 +86,7 @@ public class EUAIActRiskClassificationCheck extends AbstractEUAIActRiskClassific
 
 				addInfo("");
 
-				addInfo("Obligations resulting from the model:");
+				addInfo("Additional Obligations:");
 				addInfo("=================");
 				if (additionalObligations.isEmpty()) {
 					addInfo("None");
@@ -88,11 +95,11 @@ public class EUAIActRiskClassificationCheck extends AbstractEUAIActRiskClassific
 						addInfo(additionalObligation);
 					}
 				}
-				
+
 				addInfo("");
 
 				addInfo("Notes:");
-				addInfo("======");
+				addInfo("=====");
 				if (notes.isEmpty()) {
 					addInfo("None");
 				} else {
@@ -104,8 +111,8 @@ public class EUAIActRiskClassificationCheck extends AbstractEUAIActRiskClassific
 			}
 
 		}
+		
 		return noUnacceptableRisk;
-
 	}
 
 	@Override

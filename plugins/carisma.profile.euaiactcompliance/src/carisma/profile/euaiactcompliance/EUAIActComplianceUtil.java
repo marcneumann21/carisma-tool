@@ -7,22 +7,21 @@ import java.util.Set;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.Enumerator;
-import org.eclipse.uml2.uml.Actor;
-import org.eclipse.uml2.uml.Association;
 import org.eclipse.uml2.uml.Component;
 import org.eclipse.uml2.uml.Dependency;
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.EnumerationLiteral;
 import org.eclipse.uml2.uml.NamedElement;
 import org.eclipse.uml2.uml.Stereotype;
+import org.eclipse.uml2.uml.UseCase;
 
 import carisma.modeltype.uml2.StereotypeApplication;
 import carisma.modeltype.uml2.TaggedValue;
 import carisma.modeltype.uml2.UMLHelper;
 
 /**
- * The implementation of the UMLsec profile. Provides easy access to the
- * profile's stereotypes and to applications of those.
+ * The implementation of the EU AI Act compliance profile. Provides easy access
+ * to the profile's stereotypes and to applications of those.
  *
  */
 public final class EUAIActComplianceUtil {
@@ -167,7 +166,8 @@ public final class EUAIActComplianceUtil {
 	 * @param element    the element to look for the stereotype.
 	 * @param stereotype the stereotype containing the attributes of interest.
 	 * @param tags       the tags of interest.
-	 * @return true, if at least one of the attributes is set to 'true'.
+	 * @return {@code true}, if at least one of the attributes is set to
+	 *         {@code true}.
 	 */
 	public static boolean isAnyTaggedValueTrue(final Element element, final EUAIActCompliance stereotype,
 			final String[] tags) {
@@ -186,7 +186,7 @@ public final class EUAIActComplianceUtil {
 	 * @param element    the element to look for the stereotype.
 	 * @param stereotype the stereotype containing the attributes of interest.
 	 * @param tags       the tags of interest.
-	 * @return list of tag names whose value is 'true', empty otherwise.
+	 * @return list of tag names whose value is {@code true}, empty otherwise.
 	 */
 	public static List<String> getTrueTags(final Element element, final EUAIActCompliance stereotype,
 			final String[] tags) {
@@ -199,7 +199,16 @@ public final class EUAIActComplianceUtil {
 		return trueTags;
 	}
 
-	// TODO JavaDoc
+	/**
+	 * Returns the name of the enumeration literal that the given enumeration
+	 * attribute is set to.
+	 *
+	 * @param element    the element to look for the stereotype.
+	 * @param stereotype the stereotype containing the attribute of interest.
+	 * @param attribute  the attribute of interest.
+	 * @return the name of the enumeration literal, or {@code null} if the tag is
+	 *         not set.
+	 */
 	public static String getEnumValue(final Element element, final EUAIActCompliance stereotype, String attribute) {
 		String enumValue = null;
 		List<Object> taggedValues = getTaggedValues(attribute, stereotype, element);
@@ -212,8 +221,16 @@ public final class EUAIActComplianceUtil {
 		}
 		return enumValue;
 	}
-	
-	// TODO JavaDoc
+
+	/**
+	 * Returns the names of the enumeration literals that the given enumeration
+	 * attribute is set to.
+	 *
+	 * @param element    the element to look for the stereotype.
+	 * @param stereotype the stereotype containing the attribute of interest.
+	 * @param attribute  the attribute of interest.
+	 * @return the names of the enumeration literals, empty if the tag is not set.
+	 */
 	public static List<String> getEnumValues(final Element element, final EUAIActCompliance stereotype,
 			String attribute) {
 		List<String> enumValues = new ArrayList<>();
@@ -228,7 +245,14 @@ public final class EUAIActComplianceUtil {
 		return enumValues;
 	}
 
-	// TODO JavaDoc
+	/**
+	 * Returns the value of the given string tag.
+	 *
+	 * @param element    the element to look for the stereotype.
+	 * @param stereotype the stereotype containing the attribute of interest.
+	 * @param attribute  the attribute of interest.
+	 * @return the value of the tag, or {@code null} if the tag is not set.
+	 */
 	public static String getStringValue(final Element element, final EUAIActCompliance stereotype,
 			final String attribute) {
 		String stringValue = null;
@@ -241,7 +265,15 @@ public final class EUAIActComplianceUtil {
 		return stringValue;
 	}
 
-	// TODO JavaDoc
+	/**
+	 * Returns the value of the given boolean tag as a {@code Boolean}.
+	 *
+	 * @param element    the element to look for the stereotype.
+	 * @param stereotype the stereotype containing the attribute of interest.
+	 * @param attribute  the attribute of interest.
+	 * @return {@code Boolean.TRUE} or {@code Boolean.FALSE} if the tag is set,
+	 *         {@code null} if the tag is not set.
+	 */
 	public static Boolean getBooleanValue(final Element element, final EUAIActCompliance stereotype,
 			final String attribute) {
 		Boolean booleanValue = null;
@@ -254,23 +286,18 @@ public final class EUAIActComplianceUtil {
 		return booleanValue;
 	}
 
-	// TODO JavaDoc
-	public static String getAssociationActorEnd(final Component component,
-			final EUAIActCompliance associationStereotype, final EUAIActCompliance actorStereotype) {
-		for (Association ass : component.getAssociations()) {
-			if (!hasStereotype(ass, associationStereotype)) {
-				continue;
-			}
-			for (Element el : ass.getRelatedElements()) {
-				if ((el instanceof Actor) && hasStereotype(el, actorStereotype)) {
-					return ((NamedElement) el).getName();
-				}
-			}
-		}
-		return null;
-	}
 
-	// TODO JavaDoc
+	/**
+	 * Returns all elements of the given type and stereotype that belong to the
+	 * given system, either by containment or by a dependency.
+	 *
+	 * @param <T>        the type of the elements in the returned set.
+	 * @param system     the AI system or model element to start from.
+	 * @param type       the class (including subclasses) the returned elements are
+	 *                   instances of.
+	 * @param stereotype the stereotype the returned elements have to have.
+	 * @return set of connected elements, empty if none is found.
+	 */
 	public static <T extends Element> Set<T> getConnectedElements(Component system, Class<T> type,
 			EUAIActCompliance stereotype) {
 		Set<T> elements = new HashSet<T>(getStereotypedElements(system, type, stereotype));
@@ -287,7 +314,13 @@ public final class EUAIActComplianceUtil {
 		return elements;
 	}
 
-	// TODO JavaDoc
+	/**
+	 * Returns the components that are directly contained in the given system.
+	 *
+	 * @param system the AI system to inspect.
+	 * @return set of directly contained components, empty if the system has no
+	 *         parts.
+	 */
 	public static Set<Component> getNestedComponents(Component system) {
 		Set<Component> components = new HashSet<Component>();
 		for (Element el : system.getOwnedElements()) {
@@ -295,11 +328,18 @@ public final class EUAIActComplianceUtil {
 				components.add((Component) el);
 			}
 		}
-		
+
 		return components;
 	}
 
-	// TODO JavaDoc
+	/**
+	 * Returns the components that are connected via a dependency with the given
+	 * system.
+	 *
+	 * @param system the AI system to inspect.
+	 * @return set of components the system depends on, empty if the system has no
+	 *         dependencies.
+	 */
 	public static Set<Component> getDependencyComponents(Component system) {
 		Set<Component> components = new HashSet<Component>();
 		for (Dependency dep : system.getClientDependencies()) {
@@ -309,7 +349,33 @@ public final class EUAIActComplianceUtil {
 				}
 			}
 		}
-		
+
 		return components;
+	}
+
+	/**
+	 * Returns for each use case of the given AI system its name together with the
+	 * applied EU AI Act compliance stereotypes.
+	 *
+	 * @param system the AI system to inspect
+	 * @return list of descriptions, one per use case, empty if no use case is
+	 *         assigned
+	 */
+	public static List<String> getUseCasePurposes(final Component system) {
+		List<String> purposes = new ArrayList<>();
+		for (UseCase uc : system.getUseCases()) {
+			List<String> stereotypes = new ArrayList<>();
+			for (Stereotype stereo : uc.getAppliedStereotypes()) {
+				if (EUAIActCompliance.contains(stereo)) {
+					stereotypes.add(stereo.getName());
+				}
+			}
+			if (stereotypes.isEmpty()) {
+				purposes.add("'" + uc.getName() + "'");
+			} else {
+				purposes.add("'" + uc.getName() + "' (" + String.join(", ", stereotypes) + ")");
+			}
+		}
+		return purposes;
 	}
 }

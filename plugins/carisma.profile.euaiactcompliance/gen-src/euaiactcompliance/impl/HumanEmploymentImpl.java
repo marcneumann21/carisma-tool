@@ -34,6 +34,8 @@ import org.eclipse.uml2.uml.UseCase;
  *   <li>{@link euaiactcompliance.impl.HumanEmploymentImpl#getBase_UseCase <em>Base Use Case</em>}</li>
  *   <li>{@link euaiactcompliance.impl.HumanEmploymentImpl#getException <em>Exception</em>}</li>
  *   <li>{@link euaiactcompliance.impl.HumanEmploymentImpl#getExceptionJustification <em>Exception Justification</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.HumanEmploymentImpl#isPromotion <em>Promotion</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.HumanEmploymentImpl#isTermination <em>Termination</em>}</li>
  * </ul>
  *
  * @generated
@@ -118,6 +120,46 @@ public class HumanEmploymentImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected String exceptionJustification = EXCEPTION_JUSTIFICATION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isPromotion() <em>Promotion</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isPromotion()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean PROMOTION_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isPromotion() <em>Promotion</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isPromotion()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean promotion = PROMOTION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isTermination() <em>Termination</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isTermination()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean TERMINATION_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isTermination() <em>Termination</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isTermination()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean termination = TERMINATION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -266,6 +308,52 @@ public class HumanEmploymentImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
+	public boolean isPromotion() {
+		return promotion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setPromotion(boolean newPromotion) {
+		boolean oldPromotion = promotion;
+		promotion = newPromotion;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.HUMAN_EMPLOYMENT__PROMOTION, oldPromotion, promotion));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isTermination() {
+		return termination;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setTermination(boolean newTermination) {
+		boolean oldTermination = termination;
+		termination = newTermination;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.HUMAN_EMPLOYMENT__TERMINATION, oldTermination, termination));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case EuaiactcompliancePackage.HUMAN_EMPLOYMENT__RECRUITMENT:
@@ -279,6 +367,10 @@ public class HumanEmploymentImpl extends MinimalEObjectImpl.Container implements
 				return getException();
 			case EuaiactcompliancePackage.HUMAN_EMPLOYMENT__EXCEPTION_JUSTIFICATION:
 				return getExceptionJustification();
+			case EuaiactcompliancePackage.HUMAN_EMPLOYMENT__PROMOTION:
+				return isPromotion();
+			case EuaiactcompliancePackage.HUMAN_EMPLOYMENT__TERMINATION:
+				return isTermination();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -308,6 +400,12 @@ public class HumanEmploymentImpl extends MinimalEObjectImpl.Container implements
 			case EuaiactcompliancePackage.HUMAN_EMPLOYMENT__EXCEPTION_JUSTIFICATION:
 				setExceptionJustification((String)newValue);
 				return;
+			case EuaiactcompliancePackage.HUMAN_EMPLOYMENT__PROMOTION:
+				setPromotion((Boolean)newValue);
+				return;
+			case EuaiactcompliancePackage.HUMAN_EMPLOYMENT__TERMINATION:
+				setTermination((Boolean)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -335,6 +433,12 @@ public class HumanEmploymentImpl extends MinimalEObjectImpl.Container implements
 			case EuaiactcompliancePackage.HUMAN_EMPLOYMENT__EXCEPTION_JUSTIFICATION:
 				setExceptionJustification(EXCEPTION_JUSTIFICATION_EDEFAULT);
 				return;
+			case EuaiactcompliancePackage.HUMAN_EMPLOYMENT__PROMOTION:
+				setPromotion(PROMOTION_EDEFAULT);
+				return;
+			case EuaiactcompliancePackage.HUMAN_EMPLOYMENT__TERMINATION:
+				setTermination(TERMINATION_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -357,6 +461,10 @@ public class HumanEmploymentImpl extends MinimalEObjectImpl.Container implements
 				return exception != null && !exception.isEmpty();
 			case EuaiactcompliancePackage.HUMAN_EMPLOYMENT__EXCEPTION_JUSTIFICATION:
 				return EXCEPTION_JUSTIFICATION_EDEFAULT == null ? exceptionJustification != null : !EXCEPTION_JUSTIFICATION_EDEFAULT.equals(exceptionJustification);
+			case EuaiactcompliancePackage.HUMAN_EMPLOYMENT__PROMOTION:
+				return promotion != PROMOTION_EDEFAULT;
+			case EuaiactcompliancePackage.HUMAN_EMPLOYMENT__TERMINATION:
+				return termination != TERMINATION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -379,6 +487,10 @@ public class HumanEmploymentImpl extends MinimalEObjectImpl.Container implements
 		result.append(exception);
 		result.append(", ExceptionJustification: ");
 		result.append(exceptionJustification);
+		result.append(", Promotion: ");
+		result.append(promotion);
+		result.append(", Termination: ");
+		result.append(termination);
 		result.append(')');
 		return result.toString();
 	}

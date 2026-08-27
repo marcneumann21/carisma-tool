@@ -9,5 +9,8 @@ Require-Bundle: carisma.core;bundle-version="[1.4.0,2.0.0)",
 Automatic-Module-Name: carisma.check.riskclassification
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-21
-Export-Package: carisma.check.euaiactriskclassification.classification,
+Export-Package: carisma.check.euaiactriskclassification.check,
+ carisma.check.euaiactriskclassification.classification,
+ carisma.check.euaiactriskclassification.common,
+ carisma.check.euaiactriskclassification.obligation,
  carisma.check.euaiactriskclassification.riskclass

@@ -22,6 +22,8 @@ import org.eclipse.uml2.uml.UseCase;
  *   <li>{@link euaiactcompliance.HumanEmployment#getBase_UseCase <em>Base Use Case</em>}</li>
  *   <li>{@link euaiactcompliance.HumanEmployment#getException <em>Exception</em>}</li>
  *   <li>{@link euaiactcompliance.HumanEmployment#getExceptionJustification <em>Exception Justification</em>}</li>
+ *   <li>{@link euaiactcompliance.HumanEmployment#isPromotion <em>Promotion</em>}</li>
+ *   <li>{@link euaiactcompliance.HumanEmployment#isTermination <em>Termination</em>}</li>
  * </ul>
  *
  * @see euaiactcompliance.EuaiactcompliancePackage#getHumanEmployment()
@@ -130,5 +132,49 @@ public interface HumanEmployment extends EObject {
 	 * @generated
 	 */
 	void setExceptionJustification(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Promotion</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Promotion</em>' attribute.
+	 * @see #setPromotion(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getHumanEmployment_Promotion()
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isPromotion();
+
+	/**
+	 * Sets the value of the '{@link euaiactcompliance.HumanEmployment#isPromotion <em>Promotion</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Promotion</em>' attribute.
+	 * @see #isPromotion()
+	 * @generated
+	 */
+	void setPromotion(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Termination</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Termination</em>' attribute.
+	 * @see #setTermination(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getHumanEmployment_Termination()
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isTermination();
+
+	/**
+	 * Sets the value of the '{@link euaiactcompliance.HumanEmployment#isTermination <em>Termination</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Termination</em>' attribute.
+	 * @see #isTermination()
+	 * @generated
+	 */
+	void setTermination(boolean value);
 
 } // HumanEmployment

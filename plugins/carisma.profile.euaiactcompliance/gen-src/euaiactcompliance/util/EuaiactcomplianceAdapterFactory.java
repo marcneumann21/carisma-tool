@@ -3,6 +3,7 @@
 package euaiactcompliance.util;
 
 import euaiactcompliance.AISystem;
+import euaiactcompliance.AdministrationJusticeDemocracy;
 import euaiactcompliance.BiometricCategorisation;
 import euaiactcompliance.BiometricIdentification;
 import euaiactcompliance.CriticalInfrastructure;
@@ -15,14 +16,11 @@ import euaiactcompliance.ExploitingHumanVulnerability;
 import euaiactcompliance.FacialImageScraping;
 import euaiactcompliance.HumanEmployment;
 import euaiactcompliance.HumanInteraction;
-import euaiactcompliance.JusticeDemocracyUseCase;
 import euaiactcompliance.LawEnforcement;
 import euaiactcompliance.ManipulativeBehaviour;
 import euaiactcompliance.MigrationBorder;
 import euaiactcompliance.ProductEmbedding;
 import euaiactcompliance.Profiling;
-import euaiactcompliance.Provider;
-import euaiactcompliance.Provides;
 import euaiactcompliance.PublicInterestText;
 import euaiactcompliance.RiskManagementSystem;
 import euaiactcompliance.SelfDevelopedModel;
@@ -139,14 +137,6 @@ public class EuaiactcomplianceAdapterFactory extends AdapterFactoryImpl {
 				return createAISystemAdapter();
 			}
 			@Override
-			public Adapter caseProvider(Provider object) {
-				return createProviderAdapter();
-			}
-			@Override
-			public Adapter caseProvides(Provides object) {
-				return createProvidesAdapter();
-			}
-			@Override
 			public Adapter caseCriticalInfrastructure(CriticalInfrastructure object) {
 				return createCriticalInfrastructureAdapter();
 			}
@@ -183,8 +173,8 @@ public class EuaiactcomplianceAdapterFactory extends AdapterFactoryImpl {
 				return createMigrationBorderAdapter();
 			}
 			@Override
-			public Adapter caseJusticeDemocracyUseCase(JusticeDemocracyUseCase object) {
-				return createJusticeDemocracyUseCaseAdapter();
+			public Adapter caseAdministrationJusticeDemocracy(AdministrationJusticeDemocracy object) {
+				return createAdministrationJusticeDemocracyAdapter();
 			}
 			@Override
 			public Adapter caseBiometricIdentification(BiometricIdentification object) {
@@ -377,34 +367,6 @@ public class EuaiactcomplianceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.Provider <em>Provider</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see euaiactcompliance.Provider
-	 * @generated
-	 */
-	public Adapter createProviderAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.Provides <em>Provides</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see euaiactcompliance.Provides
-	 * @generated
-	 */
-	public Adapter createProvidesAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link euaiactcompliance.CriticalInfrastructure <em>Critical Infrastructure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -531,16 +493,16 @@ public class EuaiactcomplianceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.JusticeDemocracyUseCase <em>Justice Democracy Use Case</em>}'.
+	 * Creates a new adapter for an object of class '{@link euaiactcompliance.AdministrationJusticeDemocracy <em>Administration Justice Democracy</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see euaiactcompliance.JusticeDemocracyUseCase
+	 * @see euaiactcompliance.AdministrationJusticeDemocracy
 	 * @generated
 	 */
-	public Adapter createJusticeDemocracyUseCaseAdapter() {
+	public Adapter createAdministrationJusticeDemocracyAdapter() {
 		return null;
 	}
 

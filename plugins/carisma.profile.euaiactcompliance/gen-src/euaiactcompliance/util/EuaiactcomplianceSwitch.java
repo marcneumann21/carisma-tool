@@ -3,6 +3,7 @@
 package euaiactcompliance.util;
 
 import euaiactcompliance.AISystem;
+import euaiactcompliance.AdministrationJusticeDemocracy;
 import euaiactcompliance.BiometricCategorisation;
 import euaiactcompliance.BiometricIdentification;
 import euaiactcompliance.CriticalInfrastructure;
@@ -15,14 +16,11 @@ import euaiactcompliance.ExploitingHumanVulnerability;
 import euaiactcompliance.FacialImageScraping;
 import euaiactcompliance.HumanEmployment;
 import euaiactcompliance.HumanInteraction;
-import euaiactcompliance.JusticeDemocracyUseCase;
 import euaiactcompliance.LawEnforcement;
 import euaiactcompliance.ManipulativeBehaviour;
 import euaiactcompliance.MigrationBorder;
 import euaiactcompliance.ProductEmbedding;
 import euaiactcompliance.Profiling;
-import euaiactcompliance.Provider;
-import euaiactcompliance.Provides;
 import euaiactcompliance.PublicInterestText;
 import euaiactcompliance.RiskManagementSystem;
 import euaiactcompliance.SelfDevelopedModel;
@@ -159,18 +157,6 @@ public class EuaiactcomplianceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EuaiactcompliancePackage.PROVIDER: {
-				Provider provider = (Provider)theEObject;
-				T result = caseProvider(provider);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case EuaiactcompliancePackage.PROVIDES: {
-				Provides provides = (Provides)theEObject;
-				T result = caseProvides(provides);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case EuaiactcompliancePackage.CRITICAL_INFRASTRUCTURE: {
 				CriticalInfrastructure criticalInfrastructure = (CriticalInfrastructure)theEObject;
 				T result = caseCriticalInfrastructure(criticalInfrastructure);
@@ -225,9 +211,9 @@ public class EuaiactcomplianceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE: {
-				JusticeDemocracyUseCase justiceDemocracyUseCase = (JusticeDemocracyUseCase)theEObject;
-				T result = caseJusticeDemocracyUseCase(justiceDemocracyUseCase);
+			case EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY: {
+				AdministrationJusticeDemocracy administrationJusticeDemocracy = (AdministrationJusticeDemocracy)theEObject;
+				T result = caseAdministrationJusticeDemocracy(administrationJusticeDemocracy);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -425,36 +411,6 @@ public class EuaiactcomplianceSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Provider</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Provider</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseProvider(Provider object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Provides</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Provides</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseProvides(Provides object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Critical Infrastructure</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -590,17 +546,17 @@ public class EuaiactcomplianceSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Justice Democracy Use Case</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Administration Justice Democracy</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Justice Democracy Use Case</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Administration Justice Democracy</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseJusticeDemocracyUseCase(JusticeDemocracyUseCase object) {
+	public T caseAdministrationJusticeDemocracy(AdministrationJusticeDemocracy object) {
 		return null;
 	}
 

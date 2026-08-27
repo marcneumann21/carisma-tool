@@ -18,7 +18,7 @@ import org.eclipse.uml2.uml.UseCase;
  *   <li>{@link euaiactcompliance.HumanInteraction#getBase_UseCase <em>Base Use Case</em>}</li>
  *   <li>{@link euaiactcompliance.HumanInteraction#isLawEnforcementAuthorised <em>Law Enforcement Authorised</em>}</li>
  *   <li>{@link euaiactcompliance.HumanInteraction#isObviousAIInteraction <em>Obvious AI Interaction</em>}</li>
- *   <li>{@link euaiactcompliance.HumanInteraction#isPuplicCriminalOffenceReport <em>Puplic Criminal Offence Report</em>}</li>
+ *   <li>{@link euaiactcompliance.HumanInteraction#isPublicCriminalOffenceReport <em>Public Criminal Offence Report</em>}</li>
  * </ul>
  *
  * @see euaiactcompliance.EuaiactcompliancePackage#getHumanInteraction()
@@ -93,25 +93,25 @@ public interface HumanInteraction extends EObject {
 	void setObviousAIInteraction(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Puplic Criminal Offence Report</b></em>' attribute.
+	 * Returns the value of the '<em><b>Public Criminal Offence Report</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Puplic Criminal Offence Report</em>' attribute.
-	 * @see #setPuplicCriminalOffenceReport(boolean)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getHumanInteraction_PuplicCriminalOffenceReport()
+	 * @return the value of the '<em>Public Criminal Offence Report</em>' attribute.
+	 * @see #setPublicCriminalOffenceReport(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getHumanInteraction_PublicCriminalOffenceReport()
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
 	 * @generated
 	 */
-	boolean isPuplicCriminalOffenceReport();
+	boolean isPublicCriminalOffenceReport();
 
 	/**
-	 * Sets the value of the '{@link euaiactcompliance.HumanInteraction#isPuplicCriminalOffenceReport <em>Puplic Criminal Offence Report</em>}' attribute.
+	 * Sets the value of the '{@link euaiactcompliance.HumanInteraction#isPublicCriminalOffenceReport <em>Public Criminal Offence Report</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Puplic Criminal Offence Report</em>' attribute.
-	 * @see #isPuplicCriminalOffenceReport()
+	 * @param value the new value of the '<em>Public Criminal Offence Report</em>' attribute.
+	 * @see #isPublicCriminalOffenceReport()
 	 * @generated
 	 */
-	void setPuplicCriminalOffenceReport(boolean value);
+	void setPublicCriminalOffenceReport(boolean value);
 
 } // HumanInteraction

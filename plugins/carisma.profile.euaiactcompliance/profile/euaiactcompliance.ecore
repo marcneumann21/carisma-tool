@@ -16,12 +16,16 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ProductCategory" ordered="false"
         unique="false" upperBound="-1" eType="#//ProductCategory"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Role" ordered="false" unique="false"
-        lowerBound="1" eType="#//Role"/>
+        eType="#//Role"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ProductCategory">
     <eLiterals name="Machinery"/>
     <eLiterals name="Toy" value="1"/>
-    <eLiterals name="Elevator" value="2"/>
+    <eLiterals name="RecreationalCraft" value="2">
+      <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <details key="originalName" value="RecreationalCraft "/>
+      </eAnnotations>
+    </eLiterals>
     <eLiterals name="Medical" value="3"/>
     <eLiterals name="InVitroDiagnostics" value="4"/>
     <eLiterals name="PersonalProtection" value="5"/>
@@ -29,10 +33,16 @@
     <eLiterals name="RailSystem" value="7"/>
     <eLiterals name="Agricultural" value="8"/>
     <eLiterals name="TwoThreeWheelVehicle" value="9"/>
-    <eLiterals name="Marine" value="10"/>
-    <eLiterals name="UnmannedAircraft" value="11"/>
-    <eLiterals name="MotorVehicle" value="12"/>
-    <eLiterals name="MotorVehicleSafety" value="13"/>
+    <eLiterals name="MarineEquipment" value="10"/>
+    <eLiterals name="MotorVehicle" value="11"/>
+    <eLiterals name="MotorVehicleSafety" value="12"/>
+    <eLiterals name="Lift" value="13"/>
+    <eLiterals name="ExplosiveAtmosphere" value="14"/>
+    <eLiterals name="RadioEquipment" value="15"/>
+    <eLiterals name="PressureEquipment" value="16"/>
+    <eLiterals name="Cableway" value="17"/>
+    <eLiterals name="GasAppliance" value="18"/>
+    <eLiterals name="UnmannedAircraft" value="19"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Role">
     <eLiterals name="Component"/>
@@ -45,7 +55,7 @@
         ordered="false" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ObviousAIInteraction" ordered="false"
         lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="PuplicCriminalOffenceReport"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="PublicCriminalOffenceReport"
         ordered="false" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SyntheticContent">
@@ -107,8 +117,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="AISystem">
     <eStructuralFeatures xsi:type="ecore:EReference" name="base_Component" ordered="false"
         eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Component"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Purpose" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Version" ordered="false"
         lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"
         iD="true"/>
@@ -156,14 +164,10 @@
         ordered="false" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="PostMarketMonitoring" ordered="false"
         lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Provider">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Actor" ordered="false"
-        eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Actor"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Provides">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Association" ordered="false"
-        eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Association"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ProviderName" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ProviderContact" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CriticalInfrastructure">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="DigitalInfrastructure"
@@ -242,6 +246,10 @@
         upperBound="-1" eType="#//Exception"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ExceptionJustification"
         ordered="false" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Promotion" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Termination" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TrainingData">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Cleaning" ordered="false"
@@ -310,7 +318,7 @@
         lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="EntryRiskAssessment" ordered="false"
         lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="AsylumVisaResidencePermitsApplication"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="AsylumVisaOrResidence"
         ordered="false" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="TravelDocumentVerificationOnly"
         ordered="false" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
@@ -323,7 +331,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ExceptionJustification"
         ordered="false" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="JusticeDemocracyUseCase">
+  <eClassifiers xsi:type="ecore:EClass" name="AdministrationJusticeDemocracy">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="JudicialSupport" ordered="false"
         lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ElectionInfluence" ordered="false"
@@ -390,10 +398,12 @@
         ordered="false" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="base_UseCase" ordered="false"
         eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//UseCase"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ExceptionJustificatio"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ExceptionJustification"
         ordered="false" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Exception" ordered="false"
         upperBound="-1" eType="#//Exception"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="LawEnforcementAuthorised"
+        ordered="false" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RiskManagementSystem">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="RiskIdentification" ordered="false"

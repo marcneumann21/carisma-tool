@@ -11,8 +11,16 @@ public class EUAIActRiskClassificationObligation {
 	private EUAIActRiskClassificationObligation() {
 	}
 
-	public static List<String> getObligations(EUAIActRiskClass riskClass) {
+	public static List<String> getObligations(EUAIActRiskClass riskClass, boolean annexISectionB) {
 		List<String> obligations = new ArrayList<>();
+		
+		// Annex I Section B
+		if (annexISectionB) {
+			obligations.add(
+					"Only Article 6(1), Articles 102 to 109 and Article 112 apply (Article 2(2)).");
+			return obligations;
+		}
+		
 		switch (riskClass) {
 		case Unacceptable:
 			obligations.add(
@@ -40,7 +48,8 @@ public class EUAIActRiskClassificationObligation {
 			obligations
 					.add("Undergo the conformity assessment before placing the AI system on the market (Article 43).");
 			obligations.add("Draw up the EU declaration of conformity (Article 47).");
-			obligations.add("Ensure the CE marking is affixed visibly, legibly and indelibly to the AI system, its packaging or its accompanying documentation (Article 48).");
+			obligations.add(
+					"Ensure the CE marking is affixed visibly, legibly and indelibly to the AI system, its packaging or its accompanying documentation (Article 48).");
 			obligations.add("Establish a post-market monitoring system and plan (Article 72).");
 			obligations.add("Report serious incidents to the market surveillance authorities (Article 73).");
 			break;

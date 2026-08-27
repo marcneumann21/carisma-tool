@@ -29,11 +29,30 @@ public class EUAIActRiskClassifier {
 		boolean unacceptableRisk = false;
 		boolean highRisk = false;
 		boolean limitedRisk = false;
+		boolean annexISectionB = false;
 
 		// Annex I safety component according to Article 6(1)
 		if (EUAIActComplianceUtil.hasStereotype(this.aiSystem, EUAIActCompliance.ProductEmbedding)
 				&& checkSafetyComponent(reasons, additionalObligations, notes)) {
 			highRisk = true;
+
+			// Annex I Section B check according to Article 2(2)
+			List<String> productCategories = EUAIActComplianceUtil.getEnumValues(this.aiSystem,
+					EUAIActCompliance.ProductEmbedding, "ProductCategory");
+			List<String> annexISectionBList = Arrays.asList("CivilAviation", "TwoThreeWheelVehicle", "Agriculture",
+					"MarineEquipment", "RailSystem", "MotorVehicle", "MotorVehicleSafety", "UnmannedAircraft");
+			if (!productCategories.isEmpty()) {
+				if (annexISectionBList.containsAll(productCategories)) {
+					annexISectionB = true;
+					addToReasons(reasons, this.aiSystem.getName(),
+							"All product categories fall under Section B of Annex I, therefore only Article 6(1), Articles 102 to 109 and Article 112 of this Regulation apply.",
+							"Article 2(2)");
+				} else {
+					addToAdditionalObligations(additionalObligations, this.aiSystem.getName(),
+							"Undergo a third party conformity assessment before placing the AI system on the market.",
+							"Article 6(1)");
+				}
+			}
 		}
 
 		if (this.aiSystem.getUseCases().isEmpty() && !highRisk) {
@@ -42,7 +61,8 @@ public class EUAIActRiskClassifier {
 					"Article 3(12)");
 			addToNotes(notes, this.aiSystem.getName(), "Assign at least one use case to the AI system.",
 					"Article 3(12)");
-			return buildClassificationResult(EUAIActRiskClass.Undetermined, reasons, additionalObligations, notes);
+			return buildClassificationResult(EUAIActRiskClass.Undetermined, reasons, additionalObligations, notes,
+					annexISectionB);
 		}
 
 		for (UseCase uc : this.aiSystem.getUseCases()) {
@@ -64,20 +84,22 @@ public class EUAIActRiskClassifier {
 		}
 
 		if (unacceptableRisk) {
-			return buildClassificationResult(EUAIActRiskClass.Unacceptable, reasons, additionalObligations, notes);
+			return buildClassificationResult(EUAIActRiskClass.Unacceptable, reasons, additionalObligations, notes,
+					false);
 		}
 
 		if (highRisk) {
-			return buildClassificationResult(EUAIActRiskClass.High, reasons, additionalObligations, notes);
+			return buildClassificationResult(EUAIActRiskClass.High, reasons, additionalObligations, notes,
+					annexISectionB);
 		}
 
 		if (limitedRisk) {
-			return buildClassificationResult(EUAIActRiskClass.Limited, reasons, additionalObligations, notes);
+			return buildClassificationResult(EUAIActRiskClass.Limited, reasons, additionalObligations, notes, false);
 		}
 
 		addToReasons(reasons, this.aiSystem.getName(), "No signs of a higher risk class was found.",
 				"Article 5, Article 6, Article 50");
-		return buildClassificationResult(EUAIActRiskClass.Minimal, reasons, additionalObligations, notes);
+		return buildClassificationResult(EUAIActRiskClass.Minimal, reasons, additionalObligations, notes, false);
 
 	}
 
@@ -162,8 +184,6 @@ public class EUAIActRiskClassifier {
 			addToReasons(reasons, name, "The AI system is a safety component of a product of the category "
 					+ String.join(", ", productCategories) + " of Annex I.", "Article 6(1)");
 		}
-		addToAdditionalObligations(additionalObligations, name,
-				"The AI system has to undergo a third party conformity assessment.", "Article 6(1)");
 
 		return true;
 	}
@@ -317,13 +337,10 @@ public class EUAIActRiskClassifier {
 								+ String.join(", ", exceptions)
 								+ ", therefore it is not unacceptable risk, but is subject to the conditions of Article 5(2), Article 5(3), Article 5(4).",
 						"Article 5(1)(h)");
-				addToAdditionalObligations(additionalObligations, name,
-						"The deployer has to complete a fundamental rights impact assessment and has to register the AI system in the EU database before each use.",
-						"Article 5(2), Article 27, Article 49");
-				addToAdditionalObligations(additionalObligations, name,
+				addToNotes(notes, name,
 						"Each individual use has to be authorised in advance by a judicial authority or an independent administrative authority.",
 						"Article 5(3)");
-				addToAdditionalObligations(additionalObligations, name,
+				addToNotes(notes, name,
 						"Each individual use has to be notified to the relevant market surveillance authority and the national data protection authority.",
 						"Article 5(4)");
 			}
@@ -403,7 +420,7 @@ public class EUAIActRiskClassifier {
 		// Annex III(4) employment
 		if (EUAIActComplianceUtil.hasStereotype(uc, EUAIActCompliance.HumanEmployment)) {
 			List<String> trueAttributes = EUAIActComplianceUtil.getTrueTags(uc, EUAIActCompliance.HumanEmployment,
-					new String[] { "Recruitment", "WorkConditionsDecisions" });
+					new String[] { "Recruitment", "WorkConditionsDecisions", "Promotion", "Termination" });
 			if (!checkAnnexIIIException(uc, EUAIActCompliance.HumanEmployment, trueAttributes, "Annex III(4)",
 					profiling, false, reasons, additionalObligations, notes)) {
 				ucHighRisk = true;
@@ -433,8 +450,8 @@ public class EUAIActRiskClassifier {
 				ucHighRisk = true;
 				if (trueAttributes.contains("Creditworthiness") || trueAttributes.contains("InsuranceRiskPricing")) {
 					addToAdditionalObligations(additionalObligations, name,
-							"The deployer has to perform a fundamental rights impact assessment before putting the AI system into use.",
-							"Article 27(1)");
+							"Inform the deployer in the instructions for use that a fundamental rights impact assessment has to be performed before putting the AI system into use.",
+							"Article 13(3)(b), Article 27(1)");
 				}
 			}
 		}
@@ -456,7 +473,7 @@ public class EUAIActRiskClassifier {
 		// Annex III(7) migration, asylum and border control management
 		if (EUAIActComplianceUtil.hasStereotype(uc, EUAIActCompliance.MigrationBorder)) {
 			List<String> trueAttributes = EUAIActComplianceUtil.getTrueTags(uc, EUAIActCompliance.MigrationBorder,
-					new String[] { "LieDetection", "EntryRiskAssessment", "AsylumVisaResidencePermitsApplication",
+					new String[] { "LieDetection", "EntryRiskAssessment", "AsylumVisaOrResidence",
 							"PersonIdentification" });
 			boolean attributeRemoved = false;
 			if (EUAIActComplianceUtil.isTaggedValueTrue(uc, EUAIActCompliance.MigrationBorder,
@@ -479,11 +496,12 @@ public class EUAIActRiskClassifier {
 		}
 
 		// Annex III(8) administration of justice and democratic processes
-		if (EUAIActComplianceUtil.hasStereotype(uc, EUAIActCompliance.JusticeDemocracyUseCase)) {
+		if (EUAIActComplianceUtil.hasStereotype(uc, EUAIActCompliance.AdministrationJusticeDemocracy)) {
 			List<String> trueAttributes = EUAIActComplianceUtil.getTrueTags(uc,
-					EUAIActCompliance.JusticeDemocracyUseCase, new String[] { "JudicialSupport", "ElectionInfluence" });
+					EUAIActCompliance.AdministrationJusticeDemocracy,
+					new String[] { "JudicialSupport", "ElectionInfluence" });
 			boolean attributeRemoved = false;
-			if (EUAIActComplianceUtil.isTaggedValueTrue(uc, EUAIActCompliance.JusticeDemocracyUseCase,
+			if (EUAIActComplianceUtil.isTaggedValueTrue(uc, EUAIActCompliance.AdministrationJusticeDemocracy,
 					"NoDirectExposure")) {
 				attributeRemoved = trueAttributes.remove("ElectionInfluence");
 				if (attributeRemoved) {
@@ -496,8 +514,8 @@ public class EUAIActRiskClassifier {
 							"Annex III(8)(b)");
 				}
 			}
-			if (!checkAnnexIIIException(uc, EUAIActCompliance.JusticeDemocracyUseCase, trueAttributes, "Annex III(8)",
-					profiling, attributeRemoved, reasons, additionalObligations, notes)) {
+			if (!checkAnnexIIIException(uc, EUAIActCompliance.AdministrationJusticeDemocracy, trueAttributes,
+					"Annex III(8)", profiling, attributeRemoved, reasons, additionalObligations, notes)) {
 				ucHighRisk = true;
 			}
 		}
@@ -517,8 +535,9 @@ public class EUAIActRiskClassifier {
 			if (attributeRemoved) {
 				return true;
 			} else {
-				addToReasons(reasons, name, "The area of application of '" + stereotype.toString()
-						+ "' is not specified, therefore it is assumed to be high risk.", reference);
+				addToReasons(reasons, name, "The area of application under '" + stereotype.toString()
+						+ "' is not specified, therefore the intended purpose cannot be assessed and the AI system is assumed to be high risk.",
+						reference);
 				addToNotes(notes, name, "Set at least one area of application under '" + stereotype.toString() + "'.",
 						reference);
 				addToAdditionalObligations(additionalObligations, this.aiSystem.getName(),
@@ -529,8 +548,9 @@ public class EUAIActRiskClassifier {
 		}
 
 		if (profiling) {
-			addToReasons(reasons, name, "Area of application " + String.join(", ", trueAttributes)
-					+ ", and the AI system performs profiling of natural persons, therefore the exception of Article 6(3) does not apply.",
+			addToReasons(reasons, name, "The intended purpose falls under the area of application "
+					+ String.join(", ", trueAttributes)
+					+ " and the AI system performs profiling of natural persons, therefore the exception of Article 6(3) does not apply and the AI system is classified as high risk.",
 					"Article 6(2), Article 6(3), " + reference);
 			addToAdditionalObligations(additionalObligations, this.aiSystem.getName(),
 					"Register this AI system and the provider in the EU database before placing it on the market.",
@@ -540,12 +560,13 @@ public class EUAIActRiskClassifier {
 
 		List<String> exceptions = EUAIActComplianceUtil.getEnumValues(uc, stereotype, "Exception");
 		if (!exceptions.isEmpty()) {
-			addToReasons(reasons, name,
-					"Area of application " + String.join(", ", trueAttributes) + ", but covered by the exception "
-							+ String.join(", ", exceptions) + ", therefore it is not high risk.",
+			addToReasons(reasons, name, "The intended purpose falls under the area of application "
+					+ String.join(", ", trueAttributes) + ", but is covered by the exception "
+					+ String.join(", ", exceptions)
+					+ ", therefore the AI system does not pose a significant risk of harm and is not classified as high risk.",
 					"Article 6(3), " + reference);
 			addToAdditionalObligations(additionalObligations, name,
-					"The provider has to document the justification assessment before the AI system is placed on the market and has to register the AI system.",
+					"Document the justification assessment before the AI system is placed on the market and register the AI system.",
 					"Article 6(4), Article 49(2)");
 			String justification = EUAIActComplianceUtil.getStringValue(uc, stereotype, "ExceptionJustification");
 			if (justification == null || justification.isBlank()) {
@@ -557,7 +578,8 @@ public class EUAIActRiskClassifier {
 		}
 
 		addToReasons(reasons, name,
-				"Area of application " + String.join(", ", trueAttributes) + ", therefore high risk.",
+				"The intended purpose falls under the area of application " + String.join(", ", trueAttributes)
+						+ " and no exception applies, therefore the AI system is classified as high risk.",
 				"Article 6(2), " + reference);
 		addToAdditionalObligations(additionalObligations, this.aiSystem.getName(),
 				"Register this AI system and the provider in the EU database before placing it on the market.",
@@ -596,8 +618,7 @@ public class EUAIActRiskClassifier {
 						"Interacts directly with natural persons, therefore subject to the transparency obligation.",
 						"Article 50(1)");
 				addToAdditionalObligations(additionalObligations, name,
-						"The provider has to inform natural persons that they are interacting with an AI system.",
-						"Article 50(1)");
+						"Inform natural persons that they are interacting with an AI system.", "Article 50(1)");
 				ucLimitedRisk = true;
 			}
 		}
@@ -607,7 +628,7 @@ public class EUAIActRiskClassifier {
 			if (EUAIActComplianceUtil.isTaggedValueTrue(uc, EUAIActCompliance.SyntheticContent,
 					"StandardEditingOnly")) {
 				addToReasons(reasons, name,
-						"Generates synthetic content, but performs an assistive function for standard editing and does not substantially alter the input data provided by the deployer or its semantics, therefore not subject to the transparency obligation.",
+						"Generates synthetic content, but performs an assistive function for standard editing and does not substantially alter the input data or its semantics, therefore not subject to the transparency obligation.",
 						"Article 50(2)");
 			} else if (EUAIActComplianceUtil.isTaggedValueTrue(uc, EUAIActCompliance.SyntheticContent,
 					"LawEnforcementAuthorised")) {
@@ -618,32 +639,50 @@ public class EUAIActRiskClassifier {
 				addToReasons(reasons, name,
 						"Generates synthetic audio, image, video or text content, therefore subject to the transparency obligation.",
 						"Article 50(2)");
-				addToAdditionalObligations(additionalObligations, name,
-						"The provider has to mark the output in a machine-readable format.", "Article 50(2)");
+				addToAdditionalObligations(additionalObligations, name, "Mark the output in a machine-readable format.",
+						"Article 50(2)");
 				ucLimitedRisk = true;
 			}
 		}
 
-		// Article 50(3)
-		if (EUAIActComplianceUtil.hasStereotype(uc, EUAIActCompliance.EmotionRecognition)
-				|| EUAIActComplianceUtil.hasStereotype(uc, EUAIActCompliance.BiometricCategorisation)) {
+		// Article 50(3) emotion recognition
+		if (EUAIActComplianceUtil.hasStereotype(uc, EUAIActCompliance.EmotionRecognition)) {
 			if (EUAIActComplianceUtil.isTaggedValueTrue(uc, EUAIActCompliance.EmotionRecognition,
-					"LawEnforcementAuthorised")
-					|| EUAIActComplianceUtil.isTaggedValueTrue(uc, EUAIActCompliance.BiometricCategorisation,
-							"LawEnforcementAuthorised")) {
+					"LawEnforcementAuthorised")) {
 				addToReasons(reasons, name,
-						"Exposes natural persons to emotion recognition or biometric categorisation, but is permitted by law to detect, prevent or investigate criminal offences, therefore not subject to the transparency obligation.",
+						"Exposes natural persons to emotion recognition, but is permitted by law to detect, prevent or investigate criminal offences, therefore not subject to the transparency obligation.",
 						"Article 50(3)");
 				addToNotes(notes, name,
 						"Document the appropriate safeguards for the rights and freedoms of third parties.",
 						"Article 50(3)");
 			} else {
 				addToReasons(reasons, name,
-						"Exposes natural persons to emotion recognition or biometric categorisation, therefore subject to the transparency obligation.",
+						"Exposes natural persons to emotion recognition, therefore subject to the transparency obligation.",
 						"Article 50(3)");
 				addToAdditionalObligations(additionalObligations, name,
-						"The deployer has to inform the natural persons exposed to emotion recognition or biometric categorisation.",
+						"Inform the deployer in the instructions for use to inform natural persons about the exposition to emotion recognition or biometric categorisation.",
+						"Article 13(3)(b), Article 50(3)");
+				ucLimitedRisk = true;
+			}
+		}
+
+		// Article 50(3) biometric categorisation
+		if (EUAIActComplianceUtil.hasStereotype(uc, EUAIActCompliance.BiometricCategorisation)) {
+			if (EUAIActComplianceUtil.isTaggedValueTrue(uc, EUAIActCompliance.BiometricCategorisation,
+					"LawEnforcementAuthorised")) {
+				addToReasons(reasons, name,
+						"Exposes natural persons to biometric categorisation, but is permitted by law to detect, prevent or investigate criminal offences, therefore not subject to the transparency obligation.",
 						"Article 50(3)");
+				addToNotes(notes, name,
+						"Document the appropriate safeguards for the rights and freedoms of third parties.",
+						"Article 50(3)");
+			} else {
+				addToReasons(reasons, name,
+						"Exposes natural persons to biometric categorisation, therefore subject to the transparency obligation.",
+						"Article 50(3)");
+				addToAdditionalObligations(additionalObligations, name,
+						"Inform the deployer in the instructions for use to inform natural persons about the exposition to emotion recognition or biometric categorisation.",
+						"Article 13(3)(b), Article 50(3)");
 				ucLimitedRisk = true;
 			}
 		}
@@ -658,17 +697,21 @@ public class EUAIActRiskClassifier {
 				addToReasons(reasons, name,
 						"Generates or manipulates deep fake content as part of an artistic, creative, satirical or fictional work, therefore the disclosure is limited.",
 						"Article 50(4)");
+				addToAdditionalObligations(additionalObligations, name, "Mark the output in a machine-readable format.",
+						"Article 50(2)");
 				addToAdditionalObligations(additionalObligations, name,
-						"The deployer has to disclose the existence of the generated or manipulated content in an appropriate manner that does not hamper the display or enjoyment of the work.",
-						"Article 50(4)");
+						"Inform the deployer in the instructions for use that the artificial generation or manipulation has to be disclosed in a clear and distinguishable manner.",
+						"Article 13(3)(b), Article 50(4)");
 				ucLimitedRisk = true;
 			} else {
 				addToReasons(reasons, name,
 						"Generates or manipulates deep fake content, therefore subject to the transparency obligation.",
 						"Article 50(4)");
+				addToAdditionalObligations(additionalObligations, name, "Mark the output in a machine-readable format.",
+						"Article 50(2)");
 				addToAdditionalObligations(additionalObligations, name,
-						"The deployer has to disclose in a clear and distinguishable manner that the content has been artificially generated or manipulated, at the latest at the time of the first exposure.",
-						"Article 50(4), Article 50(5)");
+						"Inform the deployer in the instructions for use to disclose in a clear and distinguishable manner that the content has been artificially generated or manipulated.",
+						"Article 13(3)(b), Article 50(4), Article 50(5)");
 				ucLimitedRisk = true;
 			}
 		}
@@ -690,8 +733,8 @@ public class EUAIActRiskClassifier {
 						"Generates text which is published to inform the public on matters of public interest, therefore subject to the transparency obligation.",
 						"Article 50(4)");
 				addToAdditionalObligations(additionalObligations, name,
-						"The deployer has to disclose AI-generated text published to inform the public on matters of public interest.",
-						"Article 50(4)");
+						"Inform the deployer in the instructions for use to disclose AI-generated public interest text.",
+						"Article 13(3)(b), Article 50(4)");
 				ucLimitedRisk = true;
 			}
 		}
@@ -701,7 +744,7 @@ public class EUAIActRiskClassifier {
 
 	// TODO JavaDoc
 	private EUAIActRiskClassificationResult buildClassificationResult(EUAIActRiskClass riskClass, List<String> reasons,
-			List<String> additionalObligations, List<String> notes) {
+			List<String> additionalObligations, List<String> notes, boolean annexISectionB) {
 		List<String> distinctAdditionalObligations = new ArrayList<>();
 		for (String ob : additionalObligations) {
 			if (!distinctAdditionalObligations.contains(ob)) {
@@ -709,7 +752,8 @@ public class EUAIActRiskClassifier {
 			}
 		}
 		return new EUAIActRiskClassificationResult(riskClass, reasons,
-				EUAIActRiskClassificationObligation.getObligations(riskClass), distinctAdditionalObligations, notes);
+				EUAIActRiskClassificationObligation.getObligations(riskClass, annexISectionB),
+				distinctAdditionalObligations, notes, annexISectionB);
 	}
 
 	// TODO JavaDoc

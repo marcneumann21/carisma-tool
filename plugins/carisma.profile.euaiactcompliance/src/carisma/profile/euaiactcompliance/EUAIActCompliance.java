@@ -10,9 +10,6 @@ public enum EUAIActCompliance {
 	AISystem("AISystem"), SelfDevelopedModel("SelfDevelopedModel"), TrainingData("TrainingData"),
 	ThirdPartyComponent("ThirdPartyComponent"), ProductEmbedding("ProductEmbedding"),
 
-	// Actors
-	Provider("Provider"), Provides("Provides"),
-
 	// Unacceptable risk (Art. 5)
 	ManipulativeBehaviour("ManipulativeBehaviour"), ExploitingHumanVulnerability("ExploitingHumanVulnerability"),
 	SocialScoring("SocialScoring"), FacialImageScraping("FacialImageScraping"),
@@ -21,7 +18,7 @@ public enum EUAIActCompliance {
 	BiometricIdentification("BiometricIdentification"), BiometricCategorisation("BiometricCategorisation"),
 	EmotionRecognition("EmotionRecognition"), CriticalInfrastructure("CriticalInfrastructure"), Education("Education"),
 	HumanEmployment("HumanEmployment"), EssentialService("EssentialService"), LawEnforcement("LawEnforcement"),
-	MigrationBorder("MigrationBorder"), JusticeDemocracyUseCase("JusticeDemocracyUseCase"), Profiling("Profiling"),
+	MigrationBorder("MigrationBorder"), AdministrationJusticeDemocracy("AdministrationJusticeDemocracy"), Profiling("Profiling"),
 	RiskManagementSystem("RiskManagementSystem"),
 
 	// Limited risk / transparency obligations (Art. 50)

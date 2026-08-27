@@ -31,7 +31,7 @@ import org.eclipse.uml2.uml.UseCase;
  * <ul>
  *   <li>{@link euaiactcompliance.impl.MigrationBorderImpl#isLieDetection <em>Lie Detection</em>}</li>
  *   <li>{@link euaiactcompliance.impl.MigrationBorderImpl#isEntryRiskAssessment <em>Entry Risk Assessment</em>}</li>
- *   <li>{@link euaiactcompliance.impl.MigrationBorderImpl#isAsylumVisaResidencePermitsApplication <em>Asylum Visa Residence Permits Application</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.MigrationBorderImpl#isAsylumVisaOrResidence <em>Asylum Visa Or Residence</em>}</li>
  *   <li>{@link euaiactcompliance.impl.MigrationBorderImpl#isTravelDocumentVerificationOnly <em>Travel Document Verification Only</em>}</li>
  *   <li>{@link euaiactcompliance.impl.MigrationBorderImpl#isPersonIdentification <em>Person Identification</em>}</li>
  *   <li>{@link euaiactcompliance.impl.MigrationBorderImpl#getBase_UseCase <em>Base Use Case</em>}</li>
@@ -83,24 +83,24 @@ public class MigrationBorderImpl extends MinimalEObjectImpl.Container implements
 	protected boolean entryRiskAssessment = ENTRY_RISK_ASSESSMENT_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isAsylumVisaResidencePermitsApplication() <em>Asylum Visa Residence Permits Application</em>}' attribute.
+	 * The default value of the '{@link #isAsylumVisaOrResidence() <em>Asylum Visa Or Residence</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isAsylumVisaResidencePermitsApplication()
+	 * @see #isAsylumVisaOrResidence()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean ASYLUM_VISA_RESIDENCE_PERMITS_APPLICATION_EDEFAULT = false;
+	protected static final boolean ASYLUM_VISA_OR_RESIDENCE_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #isAsylumVisaResidencePermitsApplication() <em>Asylum Visa Residence Permits Application</em>}' attribute.
+	 * The cached value of the '{@link #isAsylumVisaOrResidence() <em>Asylum Visa Or Residence</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isAsylumVisaResidencePermitsApplication()
+	 * @see #isAsylumVisaOrResidence()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean asylumVisaResidencePermitsApplication = ASYLUM_VISA_RESIDENCE_PERMITS_APPLICATION_EDEFAULT;
+	protected boolean asylumVisaOrResidence = ASYLUM_VISA_OR_RESIDENCE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isTravelDocumentVerificationOnly() <em>Travel Document Verification Only</em>}' attribute.
@@ -253,8 +253,8 @@ public class MigrationBorderImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public boolean isAsylumVisaResidencePermitsApplication() {
-		return asylumVisaResidencePermitsApplication;
+	public boolean isAsylumVisaOrResidence() {
+		return asylumVisaOrResidence;
 	}
 
 	/**
@@ -263,11 +263,11 @@ public class MigrationBorderImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public void setAsylumVisaResidencePermitsApplication(boolean newAsylumVisaResidencePermitsApplication) {
-		boolean oldAsylumVisaResidencePermitsApplication = asylumVisaResidencePermitsApplication;
-		asylumVisaResidencePermitsApplication = newAsylumVisaResidencePermitsApplication;
+	public void setAsylumVisaOrResidence(boolean newAsylumVisaOrResidence) {
+		boolean oldAsylumVisaOrResidence = asylumVisaOrResidence;
+		asylumVisaOrResidence = newAsylumVisaOrResidence;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.MIGRATION_BORDER__ASYLUM_VISA_RESIDENCE_PERMITS_APPLICATION, oldAsylumVisaResidencePermitsApplication, asylumVisaResidencePermitsApplication));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.MIGRATION_BORDER__ASYLUM_VISA_OR_RESIDENCE, oldAsylumVisaOrResidence, asylumVisaOrResidence));
 	}
 
 	/**
@@ -404,8 +404,8 @@ public class MigrationBorderImpl extends MinimalEObjectImpl.Container implements
 				return isLieDetection();
 			case EuaiactcompliancePackage.MIGRATION_BORDER__ENTRY_RISK_ASSESSMENT:
 				return isEntryRiskAssessment();
-			case EuaiactcompliancePackage.MIGRATION_BORDER__ASYLUM_VISA_RESIDENCE_PERMITS_APPLICATION:
-				return isAsylumVisaResidencePermitsApplication();
+			case EuaiactcompliancePackage.MIGRATION_BORDER__ASYLUM_VISA_OR_RESIDENCE:
+				return isAsylumVisaOrResidence();
 			case EuaiactcompliancePackage.MIGRATION_BORDER__TRAVEL_DOCUMENT_VERIFICATION_ONLY:
 				return isTravelDocumentVerificationOnly();
 			case EuaiactcompliancePackage.MIGRATION_BORDER__PERSON_IDENTIFICATION:
@@ -436,8 +436,8 @@ public class MigrationBorderImpl extends MinimalEObjectImpl.Container implements
 			case EuaiactcompliancePackage.MIGRATION_BORDER__ENTRY_RISK_ASSESSMENT:
 				setEntryRiskAssessment((Boolean)newValue);
 				return;
-			case EuaiactcompliancePackage.MIGRATION_BORDER__ASYLUM_VISA_RESIDENCE_PERMITS_APPLICATION:
-				setAsylumVisaResidencePermitsApplication((Boolean)newValue);
+			case EuaiactcompliancePackage.MIGRATION_BORDER__ASYLUM_VISA_OR_RESIDENCE:
+				setAsylumVisaOrResidence((Boolean)newValue);
 				return;
 			case EuaiactcompliancePackage.MIGRATION_BORDER__TRAVEL_DOCUMENT_VERIFICATION_ONLY:
 				setTravelDocumentVerificationOnly((Boolean)newValue);
@@ -473,8 +473,8 @@ public class MigrationBorderImpl extends MinimalEObjectImpl.Container implements
 			case EuaiactcompliancePackage.MIGRATION_BORDER__ENTRY_RISK_ASSESSMENT:
 				setEntryRiskAssessment(ENTRY_RISK_ASSESSMENT_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.MIGRATION_BORDER__ASYLUM_VISA_RESIDENCE_PERMITS_APPLICATION:
-				setAsylumVisaResidencePermitsApplication(ASYLUM_VISA_RESIDENCE_PERMITS_APPLICATION_EDEFAULT);
+			case EuaiactcompliancePackage.MIGRATION_BORDER__ASYLUM_VISA_OR_RESIDENCE:
+				setAsylumVisaOrResidence(ASYLUM_VISA_OR_RESIDENCE_EDEFAULT);
 				return;
 			case EuaiactcompliancePackage.MIGRATION_BORDER__TRAVEL_DOCUMENT_VERIFICATION_ONLY:
 				setTravelDocumentVerificationOnly(TRAVEL_DOCUMENT_VERIFICATION_ONLY_EDEFAULT);
@@ -507,8 +507,8 @@ public class MigrationBorderImpl extends MinimalEObjectImpl.Container implements
 				return lieDetection != LIE_DETECTION_EDEFAULT;
 			case EuaiactcompliancePackage.MIGRATION_BORDER__ENTRY_RISK_ASSESSMENT:
 				return entryRiskAssessment != ENTRY_RISK_ASSESSMENT_EDEFAULT;
-			case EuaiactcompliancePackage.MIGRATION_BORDER__ASYLUM_VISA_RESIDENCE_PERMITS_APPLICATION:
-				return asylumVisaResidencePermitsApplication != ASYLUM_VISA_RESIDENCE_PERMITS_APPLICATION_EDEFAULT;
+			case EuaiactcompliancePackage.MIGRATION_BORDER__ASYLUM_VISA_OR_RESIDENCE:
+				return asylumVisaOrResidence != ASYLUM_VISA_OR_RESIDENCE_EDEFAULT;
 			case EuaiactcompliancePackage.MIGRATION_BORDER__TRAVEL_DOCUMENT_VERIFICATION_ONLY:
 				return travelDocumentVerificationOnly != TRAVEL_DOCUMENT_VERIFICATION_ONLY_EDEFAULT;
 			case EuaiactcompliancePackage.MIGRATION_BORDER__PERSON_IDENTIFICATION:
@@ -537,8 +537,8 @@ public class MigrationBorderImpl extends MinimalEObjectImpl.Container implements
 		result.append(lieDetection);
 		result.append(", EntryRiskAssessment: ");
 		result.append(entryRiskAssessment);
-		result.append(", AsylumVisaResidencePermitsApplication: ");
-		result.append(asylumVisaResidencePermitsApplication);
+		result.append(", AsylumVisaOrResidence: ");
+		result.append(asylumVisaOrResidence);
 		result.append(", TravelDocumentVerificationOnly: ");
 		result.append(travelDocumentVerificationOnly);
 		result.append(", PersonIdentification: ");

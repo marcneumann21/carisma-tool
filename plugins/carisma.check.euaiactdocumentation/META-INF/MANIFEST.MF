@@ -4,6 +4,10 @@ Bundle-Name: EU AI Act Documentation Checks
 Bundle-SymbolicName: carisma.check.euaiactdocumentation;singleton:=true
 Bundle-Vendor: Marc Neumann
 Bundle-Version: 1.0.0.qualifier
+Export-Package: carisma.check.euaiactdocumentation.check,
+ carisma.check.euaiactdocumentation.common,
+ carisma.check.euaiactdocumentation.generation,
+ carisma.check.euaiactdocumentation.section
 Automatic-Module-Name: carisma.check.euaiactdocumentation
 Bundle-RequiredExecutionEnvironment: JavaSE-21
 Require-Bundle: carisma.core,

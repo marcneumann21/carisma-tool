@@ -21,8 +21,9 @@ import org.eclipse.uml2.uml.UseCase;
  *   <li>{@link euaiactcompliance.EmotionRecognition#isWorkplace <em>Workplace</em>}</li>
  *   <li>{@link euaiactcompliance.EmotionRecognition#isMedicalOrSafetyReason <em>Medical Or Safety Reason</em>}</li>
  *   <li>{@link euaiactcompliance.EmotionRecognition#getBase_UseCase <em>Base Use Case</em>}</li>
- *   <li>{@link euaiactcompliance.EmotionRecognition#getExceptionJustificatio <em>Exception Justificatio</em>}</li>
+ *   <li>{@link euaiactcompliance.EmotionRecognition#getExceptionJustification <em>Exception Justification</em>}</li>
  *   <li>{@link euaiactcompliance.EmotionRecognition#getException <em>Exception</em>}</li>
+ *   <li>{@link euaiactcompliance.EmotionRecognition#isLawEnforcementAuthorised <em>Law Enforcement Authorised</em>}</li>
  * </ul>
  *
  * @see euaiactcompliance.EuaiactcompliancePackage#getEmotionRecognition()
@@ -119,26 +120,26 @@ public interface EmotionRecognition extends EObject {
 	void setBase_UseCase(UseCase value);
 
 	/**
-	 * Returns the value of the '<em><b>Exception Justificatio</b></em>' attribute.
+	 * Returns the value of the '<em><b>Exception Justification</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Exception Justificatio</em>' attribute.
-	 * @see #setExceptionJustificatio(String)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getEmotionRecognition_ExceptionJustificatio()
+	 * @return the value of the '<em>Exception Justification</em>' attribute.
+	 * @see #setExceptionJustification(String)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getEmotionRecognition_ExceptionJustification()
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getExceptionJustificatio();
+	String getExceptionJustification();
 
 	/**
-	 * Sets the value of the '{@link euaiactcompliance.EmotionRecognition#getExceptionJustificatio <em>Exception Justificatio</em>}' attribute.
+	 * Sets the value of the '{@link euaiactcompliance.EmotionRecognition#getExceptionJustification <em>Exception Justification</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Exception Justificatio</em>' attribute.
-	 * @see #getExceptionJustificatio()
+	 * @param value the new value of the '<em>Exception Justification</em>' attribute.
+	 * @see #getExceptionJustification()
 	 * @generated
 	 */
-	void setExceptionJustificatio(String value);
+	void setExceptionJustification(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Exception</b></em>' attribute list.
@@ -153,5 +154,27 @@ public interface EmotionRecognition extends EObject {
 	 * @generated
 	 */
 	EList<euaiactcompliance.Exception> getException();
+
+	/**
+	 * Returns the value of the '<em><b>Law Enforcement Authorised</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Law Enforcement Authorised</em>' attribute.
+	 * @see #setLawEnforcementAuthorised(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getEmotionRecognition_LawEnforcementAuthorised()
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isLawEnforcementAuthorised();
+
+	/**
+	 * Sets the value of the '{@link euaiactcompliance.EmotionRecognition#isLawEnforcementAuthorised <em>Law Enforcement Authorised</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Law Enforcement Authorised</em>' attribute.
+	 * @see #isLawEnforcementAuthorised()
+	 * @generated
+	 */
+	void setLawEnforcementAuthorised(boolean value);
 
 } // EmotionRecognition

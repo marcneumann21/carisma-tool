@@ -121,24 +121,6 @@ public interface EuaiactcomplianceFactory extends EFactory {
 	AISystem createAISystem();
 
 	/**
-	 * Returns a new object of class '<em>Provider</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Provider</em>'.
-	 * @generated
-	 */
-	Provider createProvider();
-
-	/**
-	 * Returns a new object of class '<em>Provides</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Provides</em>'.
-	 * @generated
-	 */
-	Provides createProvides();
-
-	/**
 	 * Returns a new object of class '<em>Critical Infrastructure</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -220,13 +202,13 @@ public interface EuaiactcomplianceFactory extends EFactory {
 	MigrationBorder createMigrationBorder();
 
 	/**
-	 * Returns a new object of class '<em>Justice Democracy Use Case</em>'.
+	 * Returns a new object of class '<em>Administration Justice Democracy</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Justice Democracy Use Case</em>'.
+	 * @return a new object of class '<em>Administration Justice Democracy</em>'.
 	 * @generated
 	 */
-	JusticeDemocracyUseCase createJusticeDemocracyUseCase();
+	AdministrationJusticeDemocracy createAdministrationJusticeDemocracy();
 
 	/**
 	 * Returns a new object of class '<em>Biometric Identification</em>'.

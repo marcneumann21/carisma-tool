@@ -33,8 +33,9 @@ import org.eclipse.uml2.uml.UseCase;
  *   <li>{@link euaiactcompliance.impl.EmotionRecognitionImpl#isWorkplace <em>Workplace</em>}</li>
  *   <li>{@link euaiactcompliance.impl.EmotionRecognitionImpl#isMedicalOrSafetyReason <em>Medical Or Safety Reason</em>}</li>
  *   <li>{@link euaiactcompliance.impl.EmotionRecognitionImpl#getBase_UseCase <em>Base Use Case</em>}</li>
- *   <li>{@link euaiactcompliance.impl.EmotionRecognitionImpl#getExceptionJustificatio <em>Exception Justificatio</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.EmotionRecognitionImpl#getExceptionJustification <em>Exception Justification</em>}</li>
  *   <li>{@link euaiactcompliance.impl.EmotionRecognitionImpl#getException <em>Exception</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.EmotionRecognitionImpl#isLawEnforcementAuthorised <em>Law Enforcement Authorised</em>}</li>
  * </ul>
  *
  * @generated
@@ -111,24 +112,24 @@ public class EmotionRecognitionImpl extends MinimalEObjectImpl.Container impleme
 	protected UseCase base_UseCase;
 
 	/**
-	 * The default value of the '{@link #getExceptionJustificatio() <em>Exception Justificatio</em>}' attribute.
+	 * The default value of the '{@link #getExceptionJustification() <em>Exception Justification</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getExceptionJustificatio()
+	 * @see #getExceptionJustification()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String EXCEPTION_JUSTIFICATIO_EDEFAULT = null;
+	protected static final String EXCEPTION_JUSTIFICATION_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getExceptionJustificatio() <em>Exception Justificatio</em>}' attribute.
+	 * The cached value of the '{@link #getExceptionJustification() <em>Exception Justification</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getExceptionJustificatio()
+	 * @see #getExceptionJustification()
 	 * @generated
 	 * @ordered
 	 */
-	protected String exceptionJustificatio = EXCEPTION_JUSTIFICATIO_EDEFAULT;
+	protected String exceptionJustification = EXCEPTION_JUSTIFICATION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getException() <em>Exception</em>}' attribute list.
@@ -139,6 +140,26 @@ public class EmotionRecognitionImpl extends MinimalEObjectImpl.Container impleme
 	 * @ordered
 	 */
 	protected EList<euaiactcompliance.Exception> exception;
+
+	/**
+	 * The default value of the '{@link #isLawEnforcementAuthorised() <em>Law Enforcement Authorised</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isLawEnforcementAuthorised()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean LAW_ENFORCEMENT_AUTHORISED_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isLawEnforcementAuthorised() <em>Law Enforcement Authorised</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isLawEnforcementAuthorised()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean lawEnforcementAuthorised = LAW_ENFORCEMENT_AUTHORISED_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -274,8 +295,8 @@ public class EmotionRecognitionImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public String getExceptionJustificatio() {
-		return exceptionJustificatio;
+	public String getExceptionJustification() {
+		return exceptionJustification;
 	}
 
 	/**
@@ -284,11 +305,11 @@ public class EmotionRecognitionImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public void setExceptionJustificatio(String newExceptionJustificatio) {
-		String oldExceptionJustificatio = exceptionJustificatio;
-		exceptionJustificatio = newExceptionJustificatio;
+	public void setExceptionJustification(String newExceptionJustification) {
+		String oldExceptionJustification = exceptionJustification;
+		exceptionJustification = newExceptionJustification;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.EMOTION_RECOGNITION__EXCEPTION_JUSTIFICATIO, oldExceptionJustificatio, exceptionJustificatio));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.EMOTION_RECOGNITION__EXCEPTION_JUSTIFICATION, oldExceptionJustification, exceptionJustification));
 	}
 
 	/**
@@ -310,6 +331,29 @@ public class EmotionRecognitionImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
+	public boolean isLawEnforcementAuthorised() {
+		return lawEnforcementAuthorised;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLawEnforcementAuthorised(boolean newLawEnforcementAuthorised) {
+		boolean oldLawEnforcementAuthorised = lawEnforcementAuthorised;
+		lawEnforcementAuthorised = newLawEnforcementAuthorised;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.EMOTION_RECOGNITION__LAW_ENFORCEMENT_AUTHORISED, oldLawEnforcementAuthorised, lawEnforcementAuthorised));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case EuaiactcompliancePackage.EMOTION_RECOGNITION__EDUCATION:
@@ -321,10 +365,12 @@ public class EmotionRecognitionImpl extends MinimalEObjectImpl.Container impleme
 			case EuaiactcompliancePackage.EMOTION_RECOGNITION__BASE_USE_CASE:
 				if (resolve) return getBase_UseCase();
 				return basicGetBase_UseCase();
-			case EuaiactcompliancePackage.EMOTION_RECOGNITION__EXCEPTION_JUSTIFICATIO:
-				return getExceptionJustificatio();
+			case EuaiactcompliancePackage.EMOTION_RECOGNITION__EXCEPTION_JUSTIFICATION:
+				return getExceptionJustification();
 			case EuaiactcompliancePackage.EMOTION_RECOGNITION__EXCEPTION:
 				return getException();
+			case EuaiactcompliancePackage.EMOTION_RECOGNITION__LAW_ENFORCEMENT_AUTHORISED:
+				return isLawEnforcementAuthorised();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -350,12 +396,15 @@ public class EmotionRecognitionImpl extends MinimalEObjectImpl.Container impleme
 			case EuaiactcompliancePackage.EMOTION_RECOGNITION__BASE_USE_CASE:
 				setBase_UseCase((UseCase)newValue);
 				return;
-			case EuaiactcompliancePackage.EMOTION_RECOGNITION__EXCEPTION_JUSTIFICATIO:
-				setExceptionJustificatio((String)newValue);
+			case EuaiactcompliancePackage.EMOTION_RECOGNITION__EXCEPTION_JUSTIFICATION:
+				setExceptionJustification((String)newValue);
 				return;
 			case EuaiactcompliancePackage.EMOTION_RECOGNITION__EXCEPTION:
 				getException().clear();
 				getException().addAll((Collection<? extends euaiactcompliance.Exception>)newValue);
+				return;
+			case EuaiactcompliancePackage.EMOTION_RECOGNITION__LAW_ENFORCEMENT_AUTHORISED:
+				setLawEnforcementAuthorised((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -381,11 +430,14 @@ public class EmotionRecognitionImpl extends MinimalEObjectImpl.Container impleme
 			case EuaiactcompliancePackage.EMOTION_RECOGNITION__BASE_USE_CASE:
 				setBase_UseCase((UseCase)null);
 				return;
-			case EuaiactcompliancePackage.EMOTION_RECOGNITION__EXCEPTION_JUSTIFICATIO:
-				setExceptionJustificatio(EXCEPTION_JUSTIFICATIO_EDEFAULT);
+			case EuaiactcompliancePackage.EMOTION_RECOGNITION__EXCEPTION_JUSTIFICATION:
+				setExceptionJustification(EXCEPTION_JUSTIFICATION_EDEFAULT);
 				return;
 			case EuaiactcompliancePackage.EMOTION_RECOGNITION__EXCEPTION:
 				getException().clear();
+				return;
+			case EuaiactcompliancePackage.EMOTION_RECOGNITION__LAW_ENFORCEMENT_AUTHORISED:
+				setLawEnforcementAuthorised(LAW_ENFORCEMENT_AUTHORISED_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -407,10 +459,12 @@ public class EmotionRecognitionImpl extends MinimalEObjectImpl.Container impleme
 				return medicalOrSafetyReason != MEDICAL_OR_SAFETY_REASON_EDEFAULT;
 			case EuaiactcompliancePackage.EMOTION_RECOGNITION__BASE_USE_CASE:
 				return base_UseCase != null;
-			case EuaiactcompliancePackage.EMOTION_RECOGNITION__EXCEPTION_JUSTIFICATIO:
-				return EXCEPTION_JUSTIFICATIO_EDEFAULT == null ? exceptionJustificatio != null : !EXCEPTION_JUSTIFICATIO_EDEFAULT.equals(exceptionJustificatio);
+			case EuaiactcompliancePackage.EMOTION_RECOGNITION__EXCEPTION_JUSTIFICATION:
+				return EXCEPTION_JUSTIFICATION_EDEFAULT == null ? exceptionJustification != null : !EXCEPTION_JUSTIFICATION_EDEFAULT.equals(exceptionJustification);
 			case EuaiactcompliancePackage.EMOTION_RECOGNITION__EXCEPTION:
 				return exception != null && !exception.isEmpty();
+			case EuaiactcompliancePackage.EMOTION_RECOGNITION__LAW_ENFORCEMENT_AUTHORISED:
+				return lawEnforcementAuthorised != LAW_ENFORCEMENT_AUTHORISED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -431,10 +485,12 @@ public class EmotionRecognitionImpl extends MinimalEObjectImpl.Container impleme
 		result.append(workplace);
 		result.append(", MedicalOrSafetyReason: ");
 		result.append(medicalOrSafetyReason);
-		result.append(", ExceptionJustificatio: ");
-		result.append(exceptionJustificatio);
+		result.append(", ExceptionJustification: ");
+		result.append(exceptionJustification);
 		result.append(", Exception: ");
 		result.append(exception);
+		result.append(", LawEnforcementAuthorised: ");
+		result.append(lawEnforcementAuthorised);
 		result.append(')');
 		return result.toString();
 	}

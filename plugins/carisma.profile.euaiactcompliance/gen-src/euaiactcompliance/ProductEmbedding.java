@@ -118,7 +118,7 @@ public interface ProductEmbedding extends EObject {
 	 * @see euaiactcompliance.Role
 	 * @see #setRole(Role)
 	 * @see euaiactcompliance.EuaiactcompliancePackage#getProductEmbedding_Role()
-	 * @model unique="false" required="true" ordered="false"
+	 * @model unique="false" ordered="false"
 	 * @generated
 	 */
 	Role getRole();

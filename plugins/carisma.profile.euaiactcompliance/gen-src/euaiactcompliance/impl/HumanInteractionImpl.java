@@ -26,7 +26,7 @@ import org.eclipse.uml2.uml.UseCase;
  *   <li>{@link euaiactcompliance.impl.HumanInteractionImpl#getBase_UseCase <em>Base Use Case</em>}</li>
  *   <li>{@link euaiactcompliance.impl.HumanInteractionImpl#isLawEnforcementAuthorised <em>Law Enforcement Authorised</em>}</li>
  *   <li>{@link euaiactcompliance.impl.HumanInteractionImpl#isObviousAIInteraction <em>Obvious AI Interaction</em>}</li>
- *   <li>{@link euaiactcompliance.impl.HumanInteractionImpl#isPuplicCriminalOffenceReport <em>Puplic Criminal Offence Report</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.HumanInteractionImpl#isPublicCriminalOffenceReport <em>Public Criminal Offence Report</em>}</li>
  * </ul>
  *
  * @generated
@@ -83,24 +83,24 @@ public class HumanInteractionImpl extends MinimalEObjectImpl.Container implement
 	protected boolean obviousAIInteraction = OBVIOUS_AI_INTERACTION_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isPuplicCriminalOffenceReport() <em>Puplic Criminal Offence Report</em>}' attribute.
+	 * The default value of the '{@link #isPublicCriminalOffenceReport() <em>Public Criminal Offence Report</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isPuplicCriminalOffenceReport()
+	 * @see #isPublicCriminalOffenceReport()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean PUPLIC_CRIMINAL_OFFENCE_REPORT_EDEFAULT = false;
+	protected static final boolean PUBLIC_CRIMINAL_OFFENCE_REPORT_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #isPuplicCriminalOffenceReport() <em>Puplic Criminal Offence Report</em>}' attribute.
+	 * The cached value of the '{@link #isPublicCriminalOffenceReport() <em>Public Criminal Offence Report</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isPuplicCriminalOffenceReport()
+	 * @see #isPublicCriminalOffenceReport()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean puplicCriminalOffenceReport = PUPLIC_CRIMINAL_OFFENCE_REPORT_EDEFAULT;
+	protected boolean publicCriminalOffenceReport = PUBLIC_CRIMINAL_OFFENCE_REPORT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -213,8 +213,8 @@ public class HumanInteractionImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public boolean isPuplicCriminalOffenceReport() {
-		return puplicCriminalOffenceReport;
+	public boolean isPublicCriminalOffenceReport() {
+		return publicCriminalOffenceReport;
 	}
 
 	/**
@@ -223,11 +223,11 @@ public class HumanInteractionImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public void setPuplicCriminalOffenceReport(boolean newPuplicCriminalOffenceReport) {
-		boolean oldPuplicCriminalOffenceReport = puplicCriminalOffenceReport;
-		puplicCriminalOffenceReport = newPuplicCriminalOffenceReport;
+	public void setPublicCriminalOffenceReport(boolean newPublicCriminalOffenceReport) {
+		boolean oldPublicCriminalOffenceReport = publicCriminalOffenceReport;
+		publicCriminalOffenceReport = newPublicCriminalOffenceReport;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.HUMAN_INTERACTION__PUPLIC_CRIMINAL_OFFENCE_REPORT, oldPuplicCriminalOffenceReport, puplicCriminalOffenceReport));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.HUMAN_INTERACTION__PUBLIC_CRIMINAL_OFFENCE_REPORT, oldPublicCriminalOffenceReport, publicCriminalOffenceReport));
 	}
 
 	/**
@@ -245,8 +245,8 @@ public class HumanInteractionImpl extends MinimalEObjectImpl.Container implement
 				return isLawEnforcementAuthorised();
 			case EuaiactcompliancePackage.HUMAN_INTERACTION__OBVIOUS_AI_INTERACTION:
 				return isObviousAIInteraction();
-			case EuaiactcompliancePackage.HUMAN_INTERACTION__PUPLIC_CRIMINAL_OFFENCE_REPORT:
-				return isPuplicCriminalOffenceReport();
+			case EuaiactcompliancePackage.HUMAN_INTERACTION__PUBLIC_CRIMINAL_OFFENCE_REPORT:
+				return isPublicCriminalOffenceReport();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -268,8 +268,8 @@ public class HumanInteractionImpl extends MinimalEObjectImpl.Container implement
 			case EuaiactcompliancePackage.HUMAN_INTERACTION__OBVIOUS_AI_INTERACTION:
 				setObviousAIInteraction((Boolean)newValue);
 				return;
-			case EuaiactcompliancePackage.HUMAN_INTERACTION__PUPLIC_CRIMINAL_OFFENCE_REPORT:
-				setPuplicCriminalOffenceReport((Boolean)newValue);
+			case EuaiactcompliancePackage.HUMAN_INTERACTION__PUBLIC_CRIMINAL_OFFENCE_REPORT:
+				setPublicCriminalOffenceReport((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -292,8 +292,8 @@ public class HumanInteractionImpl extends MinimalEObjectImpl.Container implement
 			case EuaiactcompliancePackage.HUMAN_INTERACTION__OBVIOUS_AI_INTERACTION:
 				setObviousAIInteraction(OBVIOUS_AI_INTERACTION_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.HUMAN_INTERACTION__PUPLIC_CRIMINAL_OFFENCE_REPORT:
-				setPuplicCriminalOffenceReport(PUPLIC_CRIMINAL_OFFENCE_REPORT_EDEFAULT);
+			case EuaiactcompliancePackage.HUMAN_INTERACTION__PUBLIC_CRIMINAL_OFFENCE_REPORT:
+				setPublicCriminalOffenceReport(PUBLIC_CRIMINAL_OFFENCE_REPORT_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -313,8 +313,8 @@ public class HumanInteractionImpl extends MinimalEObjectImpl.Container implement
 				return lawEnforcementAuthorised != LAW_ENFORCEMENT_AUTHORISED_EDEFAULT;
 			case EuaiactcompliancePackage.HUMAN_INTERACTION__OBVIOUS_AI_INTERACTION:
 				return obviousAIInteraction != OBVIOUS_AI_INTERACTION_EDEFAULT;
-			case EuaiactcompliancePackage.HUMAN_INTERACTION__PUPLIC_CRIMINAL_OFFENCE_REPORT:
-				return puplicCriminalOffenceReport != PUPLIC_CRIMINAL_OFFENCE_REPORT_EDEFAULT;
+			case EuaiactcompliancePackage.HUMAN_INTERACTION__PUBLIC_CRIMINAL_OFFENCE_REPORT:
+				return publicCriminalOffenceReport != PUBLIC_CRIMINAL_OFFENCE_REPORT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -333,8 +333,8 @@ public class HumanInteractionImpl extends MinimalEObjectImpl.Container implement
 		result.append(lawEnforcementAuthorised);
 		result.append(", ObviousAIInteraction: ");
 		result.append(obviousAIInteraction);
-		result.append(", PuplicCriminalOffenceReport: ");
-		result.append(puplicCriminalOffenceReport);
+		result.append(", PublicCriminalOffenceReport: ");
+		result.append(publicCriminalOffenceReport);
 		result.append(')');
 		return result.toString();
 	}

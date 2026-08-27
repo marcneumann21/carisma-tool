@@ -39,14 +39,14 @@ public enum ProductCategory implements Enumerator {
 	TOY(1, "Toy", "Toy"),
 
 	/**
-	 * The '<em><b>Elevator</b></em>' literal object.
+	 * The '<em><b>Recreational Craft</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ELEVATOR_VALUE
+	 * @see #RECREATIONAL_CRAFT_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ELEVATOR(2, "Elevator", "Elevator"),
+	RECREATIONAL_CRAFT(2, "RecreationalCraft", "RecreationalCraft"),
 
 	/**
 	 * The '<em><b>Medical</b></em>' literal object.
@@ -119,24 +119,14 @@ public enum ProductCategory implements Enumerator {
 	TWO_THREE_WHEEL_VEHICLE(9, "TwoThreeWheelVehicle", "TwoThreeWheelVehicle"),
 
 	/**
-	 * The '<em><b>Marine</b></em>' literal object.
+	 * The '<em><b>Marine Equipment</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #MARINE_VALUE
+	 * @see #MARINE_EQUIPMENT_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	MARINE(10, "Marine", "Marine"),
-
-	/**
-	 * The '<em><b>Unmanned Aircraft</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #UNMANNED_AIRCRAFT_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	UNMANNED_AIRCRAFT(11, "UnmannedAircraft", "UnmannedAircraft"),
+	MARINE_EQUIPMENT(10, "MarineEquipment", "MarineEquipment"),
 
 	/**
 	 * The '<em><b>Motor Vehicle</b></em>' literal object.
@@ -146,7 +136,7 @@ public enum ProductCategory implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MOTOR_VEHICLE(12, "MotorVehicle", "MotorVehicle"),
+	MOTOR_VEHICLE(11, "MotorVehicle", "MotorVehicle"),
 
 	/**
 	 * The '<em><b>Motor Vehicle Safety</b></em>' literal object.
@@ -156,7 +146,77 @@ public enum ProductCategory implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MOTOR_VEHICLE_SAFETY(13, "MotorVehicleSafety", "MotorVehicleSafety");
+	MOTOR_VEHICLE_SAFETY(12, "MotorVehicleSafety", "MotorVehicleSafety"),
+
+	/**
+	 * The '<em><b>Lift</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #LIFT_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	LIFT(13, "Lift", "Lift"),
+
+	/**
+	 * The '<em><b>Explosive Atmosphere</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #EXPLOSIVE_ATMOSPHERE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	EXPLOSIVE_ATMOSPHERE(14, "ExplosiveAtmosphere", "ExplosiveAtmosphere"),
+
+	/**
+	 * The '<em><b>Radio Equipment</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #RADIO_EQUIPMENT_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	RADIO_EQUIPMENT(15, "RadioEquipment", "RadioEquipment"),
+
+	/**
+	 * The '<em><b>Pressure Equipment</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #PRESSURE_EQUIPMENT_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	PRESSURE_EQUIPMENT(16, "PressureEquipment", "PressureEquipment"),
+
+	/**
+	 * The '<em><b>Cableway</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #CABLEWAY_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	CABLEWAY(17, "Cableway", "Cableway"),
+
+	/**
+	 * The '<em><b>Gas Appliance</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #GAS_APPLIANCE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	GAS_APPLIANCE(18, "GasAppliance", "GasAppliance"),
+
+	/**
+	 * The '<em><b>Unmanned Aircraft</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UNMANNED_AIRCRAFT_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	UNMANNED_AIRCRAFT(19, "UnmannedAircraft", "UnmannedAircraft");
 
 	/**
 	 * The '<em><b>Machinery</b></em>' literal value.
@@ -181,15 +241,16 @@ public enum ProductCategory implements Enumerator {
 	public static final int TOY_VALUE = 1;
 
 	/**
-	 * The '<em><b>Elevator</b></em>' literal value.
+	 * The '<em><b>Recreational Craft</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ELEVATOR
-	 * @model name="Elevator"
+	 * @see #RECREATIONAL_CRAFT
+	 * @model name="RecreationalCraft"
+	 *        annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='RecreationalCraft '"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ELEVATOR_VALUE = 2;
+	public static final int RECREATIONAL_CRAFT_VALUE = 2;
 
 	/**
 	 * The '<em><b>Medical</b></em>' literal value.
@@ -269,26 +330,15 @@ public enum ProductCategory implements Enumerator {
 	public static final int TWO_THREE_WHEEL_VEHICLE_VALUE = 9;
 
 	/**
-	 * The '<em><b>Marine</b></em>' literal value.
+	 * The '<em><b>Marine Equipment</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #MARINE
-	 * @model name="Marine"
+	 * @see #MARINE_EQUIPMENT
+	 * @model name="MarineEquipment"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int MARINE_VALUE = 10;
-
-	/**
-	 * The '<em><b>Unmanned Aircraft</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #UNMANNED_AIRCRAFT
-	 * @model name="UnmannedAircraft"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int UNMANNED_AIRCRAFT_VALUE = 11;
+	public static final int MARINE_EQUIPMENT_VALUE = 10;
 
 	/**
 	 * The '<em><b>Motor Vehicle</b></em>' literal value.
@@ -299,7 +349,7 @@ public enum ProductCategory implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int MOTOR_VEHICLE_VALUE = 12;
+	public static final int MOTOR_VEHICLE_VALUE = 11;
 
 	/**
 	 * The '<em><b>Motor Vehicle Safety</b></em>' literal value.
@@ -310,7 +360,84 @@ public enum ProductCategory implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int MOTOR_VEHICLE_SAFETY_VALUE = 13;
+	public static final int MOTOR_VEHICLE_SAFETY_VALUE = 12;
+
+	/**
+	 * The '<em><b>Lift</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #LIFT
+	 * @model name="Lift"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int LIFT_VALUE = 13;
+
+	/**
+	 * The '<em><b>Explosive Atmosphere</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #EXPLOSIVE_ATMOSPHERE
+	 * @model name="ExplosiveAtmosphere"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EXPLOSIVE_ATMOSPHERE_VALUE = 14;
+
+	/**
+	 * The '<em><b>Radio Equipment</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #RADIO_EQUIPMENT
+	 * @model name="RadioEquipment"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int RADIO_EQUIPMENT_VALUE = 15;
+
+	/**
+	 * The '<em><b>Pressure Equipment</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #PRESSURE_EQUIPMENT
+	 * @model name="PressureEquipment"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int PRESSURE_EQUIPMENT_VALUE = 16;
+
+	/**
+	 * The '<em><b>Cableway</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #CABLEWAY
+	 * @model name="Cableway"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int CABLEWAY_VALUE = 17;
+
+	/**
+	 * The '<em><b>Gas Appliance</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #GAS_APPLIANCE
+	 * @model name="GasAppliance"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int GAS_APPLIANCE_VALUE = 18;
+
+	/**
+	 * The '<em><b>Unmanned Aircraft</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UNMANNED_AIRCRAFT
+	 * @model name="UnmannedAircraft"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int UNMANNED_AIRCRAFT_VALUE = 19;
 
 	/**
 	 * An array of all the '<em><b>Product Category</b></em>' enumerators.
@@ -322,7 +449,7 @@ public enum ProductCategory implements Enumerator {
 		new ProductCategory[] {
 			MACHINERY,
 			TOY,
-			ELEVATOR,
+			RECREATIONAL_CRAFT,
 			MEDICAL,
 			IN_VITRO_DIAGNOSTICS,
 			PERSONAL_PROTECTION,
@@ -330,10 +457,16 @@ public enum ProductCategory implements Enumerator {
 			RAIL_SYSTEM,
 			AGRICULTURAL,
 			TWO_THREE_WHEEL_VEHICLE,
-			MARINE,
-			UNMANNED_AIRCRAFT,
+			MARINE_EQUIPMENT,
 			MOTOR_VEHICLE,
 			MOTOR_VEHICLE_SAFETY,
+			LIFT,
+			EXPLOSIVE_ATMOSPHERE,
+			RADIO_EQUIPMENT,
+			PRESSURE_EQUIPMENT,
+			CABLEWAY,
+			GAS_APPLIANCE,
+			UNMANNED_AIRCRAFT,
 		};
 
 	/**
@@ -392,7 +525,7 @@ public enum ProductCategory implements Enumerator {
 		switch (value) {
 			case MACHINERY_VALUE: return MACHINERY;
 			case TOY_VALUE: return TOY;
-			case ELEVATOR_VALUE: return ELEVATOR;
+			case RECREATIONAL_CRAFT_VALUE: return RECREATIONAL_CRAFT;
 			case MEDICAL_VALUE: return MEDICAL;
 			case IN_VITRO_DIAGNOSTICS_VALUE: return IN_VITRO_DIAGNOSTICS;
 			case PERSONAL_PROTECTION_VALUE: return PERSONAL_PROTECTION;
@@ -400,10 +533,16 @@ public enum ProductCategory implements Enumerator {
 			case RAIL_SYSTEM_VALUE: return RAIL_SYSTEM;
 			case AGRICULTURAL_VALUE: return AGRICULTURAL;
 			case TWO_THREE_WHEEL_VEHICLE_VALUE: return TWO_THREE_WHEEL_VEHICLE;
-			case MARINE_VALUE: return MARINE;
-			case UNMANNED_AIRCRAFT_VALUE: return UNMANNED_AIRCRAFT;
+			case MARINE_EQUIPMENT_VALUE: return MARINE_EQUIPMENT;
 			case MOTOR_VEHICLE_VALUE: return MOTOR_VEHICLE;
 			case MOTOR_VEHICLE_SAFETY_VALUE: return MOTOR_VEHICLE_SAFETY;
+			case LIFT_VALUE: return LIFT;
+			case EXPLOSIVE_ATMOSPHERE_VALUE: return EXPLOSIVE_ATMOSPHERE;
+			case RADIO_EQUIPMENT_VALUE: return RADIO_EQUIPMENT;
+			case PRESSURE_EQUIPMENT_VALUE: return PRESSURE_EQUIPMENT;
+			case CABLEWAY_VALUE: return CABLEWAY;
+			case GAS_APPLIANCE_VALUE: return GAS_APPLIANCE;
+			case UNMANNED_AIRCRAFT_VALUE: return UNMANNED_AIRCRAFT;
 		}
 		return null;
 	}

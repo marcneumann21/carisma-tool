@@ -3,6 +3,7 @@
 package euaiactcompliance.impl;
 
 import euaiactcompliance.AISystem;
+import euaiactcompliance.AdministrationJusticeDemocracy;
 import euaiactcompliance.BiometricCategorisation;
 import euaiactcompliance.BiometricIdentification;
 import euaiactcompliance.CriticalInfrastructure;
@@ -16,15 +17,12 @@ import euaiactcompliance.ExploitingHumanVulnerability;
 import euaiactcompliance.FacialImageScraping;
 import euaiactcompliance.HumanEmployment;
 import euaiactcompliance.HumanInteraction;
-import euaiactcompliance.JusticeDemocracyUseCase;
 import euaiactcompliance.LawEnforcement;
 import euaiactcompliance.ManipulativeBehaviour;
 import euaiactcompliance.MigrationBorder;
 import euaiactcompliance.ProductCategory;
 import euaiactcompliance.ProductEmbedding;
 import euaiactcompliance.Profiling;
-import euaiactcompliance.Provider;
-import euaiactcompliance.Provides;
 import euaiactcompliance.PublicInterestText;
 import euaiactcompliance.RiskManagementSystem;
 import euaiactcompliance.Role;
@@ -136,20 +134,6 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass providerEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass providesEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass criticalInfrastructureEClass = null;
 
 	/**
@@ -213,7 +197,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass justiceDemocracyUseCaseEClass = null;
+	private EClass administrationJusticeDemocracyEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -455,7 +439,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getHumanInteraction_PuplicCriminalOffenceReport() {
+	public EAttribute getHumanInteraction_PublicCriminalOffenceReport() {
 		return (EAttribute)humanInteractionEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -765,7 +749,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_Purpose() {
+	public EAttribute getAISystem_Version() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -775,7 +759,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_Version() {
+	public EAttribute getAISystem_ExternalInteraction() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -785,7 +769,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_ExternalInteraction() {
+	public EAttribute getAISystem_MarketPlacementForm() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -795,7 +779,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_MarketPlacementForm() {
+	public EAttribute getAISystem_Hardware() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -805,7 +789,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_Hardware() {
+	public EAttribute getAISystem_VisualDocumentation() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -815,7 +799,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_VisualDocumentation() {
+	public EAttribute getAISystem_UserInterface() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -825,7 +809,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_UserInterface() {
+	public EAttribute getAISystem_Instructions() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -835,7 +819,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_Instructions() {
+	public EAttribute getAISystem_DevelopmentProcess() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -845,7 +829,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_DevelopmentProcess() {
+	public EAttribute getAISystem_DesignSpecification() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -855,7 +839,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_DesignSpecification() {
+	public EAttribute getAISystem_DesignDecision() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -865,7 +849,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_DesignDecision() {
+	public EAttribute getAISystem_DesignTradeOffs() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -875,7 +859,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_DesignTradeOffs() {
+	public EAttribute getAISystem_Resources() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -885,7 +869,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_Resources() {
+	public EAttribute getAISystem_HumanOversightPreAssessment() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(13);
 	}
 
@@ -895,7 +879,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_HumanOversightPreAssessment() {
+	public EAttribute getAISystem_PlannedModification() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(14);
 	}
 
@@ -905,7 +889,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_PlannedModification() {
+	public EAttribute getAISystem_Cybersecurity() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(15);
 	}
 
@@ -915,7 +899,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_Cybersecurity() {
+	public EAttribute getAISystem_HumanOversightPostAssessment() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(16);
 	}
 
@@ -925,7 +909,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_HumanOversightPostAssessment() {
+	public EAttribute getAISystem_UpdateRequirements() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(17);
 	}
 
@@ -935,7 +919,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_UpdateRequirements() {
+	public EAttribute getAISystem_PredictableRisks() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(18);
 	}
 
@@ -945,7 +929,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_PredictableRisks() {
+	public EAttribute getAISystem_PerformanceMetricsSuitability() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(19);
 	}
 
@@ -955,7 +939,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_PerformanceMetricsSuitability() {
+	public EAttribute getAISystem_RelevantChanges() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(20);
 	}
 
@@ -965,7 +949,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_RelevantChanges() {
+	public EAttribute getAISystem_HarmonisedStandards() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(21);
 	}
 
@@ -975,7 +959,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_HarmonisedStandards() {
+	public EAttribute getAISystem_CopyEUConformityDeclaration() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(22);
 	}
 
@@ -985,7 +969,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_CopyEUConformityDeclaration() {
+	public EAttribute getAISystem_PostMarketMonitoring() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(23);
 	}
 
@@ -995,7 +979,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAISystem_PostMarketMonitoring() {
+	public EAttribute getAISystem_ProviderName() {
 		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(24);
 	}
 
@@ -1005,38 +989,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EClass getProvider() {
-		return providerEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getProvider_Base_Actor() {
-		return (EReference)providerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getProvides() {
-		return providesEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getProvides_Base_Association() {
-		return (EReference)providesEClass.getEStructuralFeatures().get(0);
+	public EAttribute getAISystem_ProviderContact() {
+		return (EAttribute)aiSystemEClass.getEStructuralFeatures().get(25);
 	}
 
 	/**
@@ -1405,6 +1359,26 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
+	public EAttribute getHumanEmployment_Promotion() {
+		return (EAttribute)humanEmploymentEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getHumanEmployment_Termination() {
+		return (EAttribute)humanEmploymentEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getTrainingData() {
 		return trainingDataEClass;
 	}
@@ -1745,7 +1719,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getMigrationBorder_AsylumVisaResidencePermitsApplication() {
+	public EAttribute getMigrationBorder_AsylumVisaOrResidence() {
 		return (EAttribute)migrationBorderEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1805,8 +1779,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EClass getJusticeDemocracyUseCase() {
-		return justiceDemocracyUseCaseEClass;
+	public EClass getAdministrationJusticeDemocracy() {
+		return administrationJusticeDemocracyEClass;
 	}
 
 	/**
@@ -1815,8 +1789,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getJusticeDemocracyUseCase_JudicialSupport() {
-		return (EAttribute)justiceDemocracyUseCaseEClass.getEStructuralFeatures().get(0);
+	public EAttribute getAdministrationJusticeDemocracy_JudicialSupport() {
+		return (EAttribute)administrationJusticeDemocracyEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1825,8 +1799,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getJusticeDemocracyUseCase_ElectionInfluence() {
-		return (EAttribute)justiceDemocracyUseCaseEClass.getEStructuralFeatures().get(1);
+	public EAttribute getAdministrationJusticeDemocracy_ElectionInfluence() {
+		return (EAttribute)administrationJusticeDemocracyEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1835,8 +1809,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getJusticeDemocracyUseCase_NoDirectExposure() {
-		return (EAttribute)justiceDemocracyUseCaseEClass.getEStructuralFeatures().get(2);
+	public EAttribute getAdministrationJusticeDemocracy_NoDirectExposure() {
+		return (EAttribute)administrationJusticeDemocracyEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1845,8 +1819,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EReference getJusticeDemocracyUseCase_Base_UseCase() {
-		return (EReference)justiceDemocracyUseCaseEClass.getEStructuralFeatures().get(3);
+	public EReference getAdministrationJusticeDemocracy_Base_UseCase() {
+		return (EReference)administrationJusticeDemocracyEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1855,8 +1829,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getJusticeDemocracyUseCase_Exception() {
-		return (EAttribute)justiceDemocracyUseCaseEClass.getEStructuralFeatures().get(4);
+	public EAttribute getAdministrationJusticeDemocracy_Exception() {
+		return (EAttribute)administrationJusticeDemocracyEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1865,8 +1839,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getJusticeDemocracyUseCase_ExceptionJustification() {
-		return (EAttribute)justiceDemocracyUseCaseEClass.getEStructuralFeatures().get(5);
+	public EAttribute getAdministrationJusticeDemocracy_ExceptionJustification() {
+		return (EAttribute)administrationJusticeDemocracyEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -2145,7 +2119,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEmotionRecognition_ExceptionJustificatio() {
+	public EAttribute getEmotionRecognition_ExceptionJustification() {
 		return (EAttribute)emotionRecognitionEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -2157,6 +2131,16 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 	@Override
 	public EAttribute getEmotionRecognition_Exception() {
 		return (EAttribute)emotionRecognitionEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEmotionRecognition_LawEnforcementAuthorised() {
+		return (EAttribute)emotionRecognitionEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -2332,7 +2316,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		createEReference(humanInteractionEClass, HUMAN_INTERACTION__BASE_USE_CASE);
 		createEAttribute(humanInteractionEClass, HUMAN_INTERACTION__LAW_ENFORCEMENT_AUTHORISED);
 		createEAttribute(humanInteractionEClass, HUMAN_INTERACTION__OBVIOUS_AI_INTERACTION);
-		createEAttribute(humanInteractionEClass, HUMAN_INTERACTION__PUPLIC_CRIMINAL_OFFENCE_REPORT);
+		createEAttribute(humanInteractionEClass, HUMAN_INTERACTION__PUBLIC_CRIMINAL_OFFENCE_REPORT);
 
 		syntheticContentEClass = createEClass(SYNTHETIC_CONTENT);
 		createEReference(syntheticContentEClass, SYNTHETIC_CONTENT__BASE_USE_CASE);
@@ -2371,7 +2355,6 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 
 		aiSystemEClass = createEClass(AI_SYSTEM);
 		createEReference(aiSystemEClass, AI_SYSTEM__BASE_COMPONENT);
-		createEAttribute(aiSystemEClass, AI_SYSTEM__PURPOSE);
 		createEAttribute(aiSystemEClass, AI_SYSTEM__VERSION);
 		createEAttribute(aiSystemEClass, AI_SYSTEM__EXTERNAL_INTERACTION);
 		createEAttribute(aiSystemEClass, AI_SYSTEM__MARKET_PLACEMENT_FORM);
@@ -2395,12 +2378,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		createEAttribute(aiSystemEClass, AI_SYSTEM__HARMONISED_STANDARDS);
 		createEAttribute(aiSystemEClass, AI_SYSTEM__COPY_EU_CONFORMITY_DECLARATION);
 		createEAttribute(aiSystemEClass, AI_SYSTEM__POST_MARKET_MONITORING);
-
-		providerEClass = createEClass(PROVIDER);
-		createEReference(providerEClass, PROVIDER__BASE_ACTOR);
-
-		providesEClass = createEClass(PROVIDES);
-		createEReference(providesEClass, PROVIDES__BASE_ASSOCIATION);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__PROVIDER_NAME);
+		createEAttribute(aiSystemEClass, AI_SYSTEM__PROVIDER_CONTACT);
 
 		criticalInfrastructureEClass = createEClass(CRITICAL_INFRASTRUCTURE);
 		createEAttribute(criticalInfrastructureEClass, CRITICAL_INFRASTRUCTURE__DIGITAL_INFRASTRUCTURE);
@@ -2441,6 +2420,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		createEReference(humanEmploymentEClass, HUMAN_EMPLOYMENT__BASE_USE_CASE);
 		createEAttribute(humanEmploymentEClass, HUMAN_EMPLOYMENT__EXCEPTION);
 		createEAttribute(humanEmploymentEClass, HUMAN_EMPLOYMENT__EXCEPTION_JUSTIFICATION);
+		createEAttribute(humanEmploymentEClass, HUMAN_EMPLOYMENT__PROMOTION);
+		createEAttribute(humanEmploymentEClass, HUMAN_EMPLOYMENT__TERMINATION);
 
 		trainingDataEClass = createEClass(TRAINING_DATA);
 		createEAttribute(trainingDataEClass, TRAINING_DATA__CLEANING);
@@ -2480,20 +2461,20 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		migrationBorderEClass = createEClass(MIGRATION_BORDER);
 		createEAttribute(migrationBorderEClass, MIGRATION_BORDER__LIE_DETECTION);
 		createEAttribute(migrationBorderEClass, MIGRATION_BORDER__ENTRY_RISK_ASSESSMENT);
-		createEAttribute(migrationBorderEClass, MIGRATION_BORDER__ASYLUM_VISA_RESIDENCE_PERMITS_APPLICATION);
+		createEAttribute(migrationBorderEClass, MIGRATION_BORDER__ASYLUM_VISA_OR_RESIDENCE);
 		createEAttribute(migrationBorderEClass, MIGRATION_BORDER__TRAVEL_DOCUMENT_VERIFICATION_ONLY);
 		createEAttribute(migrationBorderEClass, MIGRATION_BORDER__PERSON_IDENTIFICATION);
 		createEReference(migrationBorderEClass, MIGRATION_BORDER__BASE_USE_CASE);
 		createEAttribute(migrationBorderEClass, MIGRATION_BORDER__EXCEPTION);
 		createEAttribute(migrationBorderEClass, MIGRATION_BORDER__EXCEPTION_JUSTIFICATION);
 
-		justiceDemocracyUseCaseEClass = createEClass(JUSTICE_DEMOCRACY_USE_CASE);
-		createEAttribute(justiceDemocracyUseCaseEClass, JUSTICE_DEMOCRACY_USE_CASE__JUDICIAL_SUPPORT);
-		createEAttribute(justiceDemocracyUseCaseEClass, JUSTICE_DEMOCRACY_USE_CASE__ELECTION_INFLUENCE);
-		createEAttribute(justiceDemocracyUseCaseEClass, JUSTICE_DEMOCRACY_USE_CASE__NO_DIRECT_EXPOSURE);
-		createEReference(justiceDemocracyUseCaseEClass, JUSTICE_DEMOCRACY_USE_CASE__BASE_USE_CASE);
-		createEAttribute(justiceDemocracyUseCaseEClass, JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION);
-		createEAttribute(justiceDemocracyUseCaseEClass, JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION_JUSTIFICATION);
+		administrationJusticeDemocracyEClass = createEClass(ADMINISTRATION_JUSTICE_DEMOCRACY);
+		createEAttribute(administrationJusticeDemocracyEClass, ADMINISTRATION_JUSTICE_DEMOCRACY__JUDICIAL_SUPPORT);
+		createEAttribute(administrationJusticeDemocracyEClass, ADMINISTRATION_JUSTICE_DEMOCRACY__ELECTION_INFLUENCE);
+		createEAttribute(administrationJusticeDemocracyEClass, ADMINISTRATION_JUSTICE_DEMOCRACY__NO_DIRECT_EXPOSURE);
+		createEReference(administrationJusticeDemocracyEClass, ADMINISTRATION_JUSTICE_DEMOCRACY__BASE_USE_CASE);
+		createEAttribute(administrationJusticeDemocracyEClass, ADMINISTRATION_JUSTICE_DEMOCRACY__EXCEPTION);
+		createEAttribute(administrationJusticeDemocracyEClass, ADMINISTRATION_JUSTICE_DEMOCRACY__EXCEPTION_JUSTIFICATION);
 
 		biometricIdentificationEClass = createEClass(BIOMETRIC_IDENTIFICATION);
 		createEAttribute(biometricIdentificationEClass, BIOMETRIC_IDENTIFICATION__VERIFICATION_ONLY);
@@ -2524,8 +2505,9 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		createEAttribute(emotionRecognitionEClass, EMOTION_RECOGNITION__WORKPLACE);
 		createEAttribute(emotionRecognitionEClass, EMOTION_RECOGNITION__MEDICAL_OR_SAFETY_REASON);
 		createEReference(emotionRecognitionEClass, EMOTION_RECOGNITION__BASE_USE_CASE);
-		createEAttribute(emotionRecognitionEClass, EMOTION_RECOGNITION__EXCEPTION_JUSTIFICATIO);
+		createEAttribute(emotionRecognitionEClass, EMOTION_RECOGNITION__EXCEPTION_JUSTIFICATION);
 		createEAttribute(emotionRecognitionEClass, EMOTION_RECOGNITION__EXCEPTION);
+		createEAttribute(emotionRecognitionEClass, EMOTION_RECOGNITION__LAW_ENFORCEMENT_AUTHORISED);
 
 		riskManagementSystemEClass = createEClass(RISK_MANAGEMENT_SYSTEM);
 		createEAttribute(riskManagementSystemEClass, RISK_MANAGEMENT_SYSTEM__RISK_IDENTIFICATION);
@@ -2586,13 +2568,13 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		initEAttribute(getProductEmbedding_FailureEndangerSafety(), theTypesPackage.getBoolean(), "FailureEndangerSafety", null, 1, 1, ProductEmbedding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getProductEmbedding_ThirdPartyConformityAssessment(), theTypesPackage.getBoolean(), "ThirdPartyConformityAssessment", null, 1, 1, ProductEmbedding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getProductEmbedding_ProductCategory(), this.getProductCategory(), "ProductCategory", null, 0, -1, ProductEmbedding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getProductEmbedding_Role(), this.getRole(), "Role", null, 1, 1, ProductEmbedding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getProductEmbedding_Role(), this.getRole(), "Role", null, 0, 1, ProductEmbedding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(humanInteractionEClass, HumanInteraction.class, "HumanInteraction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getHumanInteraction_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, HumanInteraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getHumanInteraction_LawEnforcementAuthorised(), theTypesPackage.getBoolean(), "LawEnforcementAuthorised", null, 1, 1, HumanInteraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getHumanInteraction_ObviousAIInteraction(), theTypesPackage.getBoolean(), "ObviousAIInteraction", null, 1, 1, HumanInteraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getHumanInteraction_PuplicCriminalOffenceReport(), theTypesPackage.getBoolean(), "PuplicCriminalOffenceReport", null, 1, 1, HumanInteraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getHumanInteraction_PublicCriminalOffenceReport(), theTypesPackage.getBoolean(), "PublicCriminalOffenceReport", null, 1, 1, HumanInteraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(syntheticContentEClass, SyntheticContent.class, "SyntheticContent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSyntheticContent_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, SyntheticContent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -2631,7 +2613,6 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 
 		initEClass(aiSystemEClass, AISystem.class, "AISystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAISystem_Base_Component(), theUMLPackage.getComponent(), null, "base_Component", null, 0, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAISystem_Purpose(), theTypesPackage.getString(), "Purpose", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAISystem_Version(), theTypesPackage.getString(), "Version", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAISystem_ExternalInteraction(), theTypesPackage.getString(), "ExternalInteraction", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAISystem_MarketPlacementForm(), theTypesPackage.getString(), "MarketPlacementForm", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -2655,12 +2636,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		initEAttribute(getAISystem_HarmonisedStandards(), theTypesPackage.getString(), "HarmonisedStandards", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAISystem_CopyEUConformityDeclaration(), theTypesPackage.getBoolean(), "CopyEUConformityDeclaration", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAISystem_PostMarketMonitoring(), theTypesPackage.getString(), "PostMarketMonitoring", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(providerEClass, Provider.class, "Provider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getProvider_Base_Actor(), theUMLPackage.getActor(), null, "base_Actor", null, 0, 1, Provider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(providesEClass, Provides.class, "Provides", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getProvides_Base_Association(), theUMLPackage.getAssociation(), null, "base_Association", null, 0, 1, Provides.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_ProviderName(), theTypesPackage.getString(), "ProviderName", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAISystem_ProviderContact(), theTypesPackage.getString(), "ProviderContact", null, 1, 1, AISystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(criticalInfrastructureEClass, CriticalInfrastructure.class, "CriticalInfrastructure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCriticalInfrastructure_DigitalInfrastructure(), theTypesPackage.getBoolean(), "DigitalInfrastructure", null, 1, 1, CriticalInfrastructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -2701,6 +2678,8 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		initEReference(getHumanEmployment_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, HumanEmployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getHumanEmployment_Exception(), this.getException(), "Exception", null, 0, -1, HumanEmployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getHumanEmployment_ExceptionJustification(), theTypesPackage.getString(), "ExceptionJustification", null, 1, 1, HumanEmployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getHumanEmployment_Promotion(), theTypesPackage.getBoolean(), "Promotion", null, 1, 1, HumanEmployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getHumanEmployment_Termination(), theTypesPackage.getBoolean(), "Termination", null, 1, 1, HumanEmployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(trainingDataEClass, TrainingData.class, "TrainingData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTrainingData_Cleaning(), theTypesPackage.getString(), "Cleaning", null, 1, 1, TrainingData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -2740,20 +2719,20 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		initEClass(migrationBorderEClass, MigrationBorder.class, "MigrationBorder", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMigrationBorder_LieDetection(), theTypesPackage.getBoolean(), "LieDetection", null, 1, 1, MigrationBorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getMigrationBorder_EntryRiskAssessment(), theTypesPackage.getBoolean(), "EntryRiskAssessment", null, 1, 1, MigrationBorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getMigrationBorder_AsylumVisaResidencePermitsApplication(), theTypesPackage.getBoolean(), "AsylumVisaResidencePermitsApplication", null, 1, 1, MigrationBorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getMigrationBorder_AsylumVisaOrResidence(), theTypesPackage.getBoolean(), "AsylumVisaOrResidence", null, 1, 1, MigrationBorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getMigrationBorder_TravelDocumentVerificationOnly(), theTypesPackage.getBoolean(), "TravelDocumentVerificationOnly", null, 1, 1, MigrationBorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getMigrationBorder_PersonIdentification(), theTypesPackage.getBoolean(), "PersonIdentification", null, 1, 1, MigrationBorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getMigrationBorder_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, MigrationBorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getMigrationBorder_Exception(), this.getException(), "Exception", null, 0, -1, MigrationBorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getMigrationBorder_ExceptionJustification(), theTypesPackage.getString(), "ExceptionJustification", null, 1, 1, MigrationBorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(justiceDemocracyUseCaseEClass, JusticeDemocracyUseCase.class, "JusticeDemocracyUseCase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getJusticeDemocracyUseCase_JudicialSupport(), theTypesPackage.getBoolean(), "JudicialSupport", null, 1, 1, JusticeDemocracyUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getJusticeDemocracyUseCase_ElectionInfluence(), theTypesPackage.getBoolean(), "ElectionInfluence", null, 1, 1, JusticeDemocracyUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getJusticeDemocracyUseCase_NoDirectExposure(), theTypesPackage.getBoolean(), "NoDirectExposure", null, 1, 1, JusticeDemocracyUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getJusticeDemocracyUseCase_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, JusticeDemocracyUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getJusticeDemocracyUseCase_Exception(), this.getException(), "Exception", null, 0, -1, JusticeDemocracyUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getJusticeDemocracyUseCase_ExceptionJustification(), theTypesPackage.getString(), "ExceptionJustification", null, 1, 1, JusticeDemocracyUseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEClass(administrationJusticeDemocracyEClass, AdministrationJusticeDemocracy.class, "AdministrationJusticeDemocracy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAdministrationJusticeDemocracy_JudicialSupport(), theTypesPackage.getBoolean(), "JudicialSupport", null, 1, 1, AdministrationJusticeDemocracy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAdministrationJusticeDemocracy_ElectionInfluence(), theTypesPackage.getBoolean(), "ElectionInfluence", null, 1, 1, AdministrationJusticeDemocracy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAdministrationJusticeDemocracy_NoDirectExposure(), theTypesPackage.getBoolean(), "NoDirectExposure", null, 1, 1, AdministrationJusticeDemocracy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getAdministrationJusticeDemocracy_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, AdministrationJusticeDemocracy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAdministrationJusticeDemocracy_Exception(), this.getException(), "Exception", null, 0, -1, AdministrationJusticeDemocracy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAdministrationJusticeDemocracy_ExceptionJustification(), theTypesPackage.getString(), "ExceptionJustification", null, 1, 1, AdministrationJusticeDemocracy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(biometricIdentificationEClass, BiometricIdentification.class, "BiometricIdentification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBiometricIdentification_VerificationOnly(), theTypesPackage.getBoolean(), "VerificationOnly", null, 1, 1, BiometricIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -2784,8 +2763,9 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		initEAttribute(getEmotionRecognition_Workplace(), theTypesPackage.getBoolean(), "Workplace", null, 1, 1, EmotionRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getEmotionRecognition_MedicalOrSafetyReason(), theTypesPackage.getBoolean(), "MedicalOrSafetyReason", null, 1, 1, EmotionRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getEmotionRecognition_Base_UseCase(), theUMLPackage.getUseCase(), null, "base_UseCase", null, 0, 1, EmotionRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getEmotionRecognition_ExceptionJustificatio(), theTypesPackage.getString(), "ExceptionJustificatio", null, 1, 1, EmotionRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEmotionRecognition_ExceptionJustification(), theTypesPackage.getString(), "ExceptionJustification", null, 1, 1, EmotionRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getEmotionRecognition_Exception(), this.getException(), "Exception", null, 0, -1, EmotionRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEmotionRecognition_LawEnforcementAuthorised(), theTypesPackage.getBoolean(), "LawEnforcementAuthorised", null, 1, 1, EmotionRecognition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(riskManagementSystemEClass, RiskManagementSystem.class, "RiskManagementSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRiskManagementSystem_RiskIdentification(), theTypesPackage.getString(), "RiskIdentification", null, 1, 1, RiskManagementSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -2802,7 +2782,7 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		initEEnum(productCategoryEEnum, ProductCategory.class, "ProductCategory");
 		addEEnumLiteral(productCategoryEEnum, ProductCategory.MACHINERY);
 		addEEnumLiteral(productCategoryEEnum, ProductCategory.TOY);
-		addEEnumLiteral(productCategoryEEnum, ProductCategory.ELEVATOR);
+		addEEnumLiteral(productCategoryEEnum, ProductCategory.RECREATIONAL_CRAFT);
 		addEEnumLiteral(productCategoryEEnum, ProductCategory.MEDICAL);
 		addEEnumLiteral(productCategoryEEnum, ProductCategory.IN_VITRO_DIAGNOSTICS);
 		addEEnumLiteral(productCategoryEEnum, ProductCategory.PERSONAL_PROTECTION);
@@ -2810,10 +2790,16 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 		addEEnumLiteral(productCategoryEEnum, ProductCategory.RAIL_SYSTEM);
 		addEEnumLiteral(productCategoryEEnum, ProductCategory.AGRICULTURAL);
 		addEEnumLiteral(productCategoryEEnum, ProductCategory.TWO_THREE_WHEEL_VEHICLE);
-		addEEnumLiteral(productCategoryEEnum, ProductCategory.MARINE);
-		addEEnumLiteral(productCategoryEEnum, ProductCategory.UNMANNED_AIRCRAFT);
+		addEEnumLiteral(productCategoryEEnum, ProductCategory.MARINE_EQUIPMENT);
 		addEEnumLiteral(productCategoryEEnum, ProductCategory.MOTOR_VEHICLE);
 		addEEnumLiteral(productCategoryEEnum, ProductCategory.MOTOR_VEHICLE_SAFETY);
+		addEEnumLiteral(productCategoryEEnum, ProductCategory.LIFT);
+		addEEnumLiteral(productCategoryEEnum, ProductCategory.EXPLOSIVE_ATMOSPHERE);
+		addEEnumLiteral(productCategoryEEnum, ProductCategory.RADIO_EQUIPMENT);
+		addEEnumLiteral(productCategoryEEnum, ProductCategory.PRESSURE_EQUIPMENT);
+		addEEnumLiteral(productCategoryEEnum, ProductCategory.CABLEWAY);
+		addEEnumLiteral(productCategoryEEnum, ProductCategory.GAS_APPLIANCE);
+		addEEnumLiteral(productCategoryEEnum, ProductCategory.UNMANNED_AIRCRAFT);
 
 		initEEnum(roleEEnum, Role.class, "Role");
 		addEEnumLiteral(roleEEnum, Role.COMPONENT);
@@ -2827,6 +2813,26 @@ public class EuaiactcompliancePackageImpl extends EPackageImpl implements Euaiac
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http://www.eclipse.org/uml2/2.0.0/UML
+		createUMLAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/uml2/2.0.0/UML</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createUMLAnnotations() {
+		String source = "http://www.eclipse.org/uml2/2.0.0/UML";
+		addAnnotation
+		  (productCategoryEEnum.getELiterals().get(2),
+		   source,
+		   new String[] {
+			   "originalName", "RecreationalCraft "
+		   });
 	}
 
 } //EuaiactcompliancePackageImpl

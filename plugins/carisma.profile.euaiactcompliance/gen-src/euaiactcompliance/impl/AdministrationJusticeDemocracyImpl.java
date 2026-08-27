@@ -2,8 +2,8 @@
  */
 package euaiactcompliance.impl;
 
+import euaiactcompliance.AdministrationJusticeDemocracy;
 import euaiactcompliance.EuaiactcompliancePackage;
-import euaiactcompliance.JusticeDemocracyUseCase;
 
 import java.util.Collection;
 
@@ -23,23 +23,23 @@ import org.eclipse.uml2.uml.UseCase;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Justice Democracy Use Case</b></em>'.
+ * An implementation of the model object '<em><b>Administration Justice Democracy</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link euaiactcompliance.impl.JusticeDemocracyUseCaseImpl#isJudicialSupport <em>Judicial Support</em>}</li>
- *   <li>{@link euaiactcompliance.impl.JusticeDemocracyUseCaseImpl#isElectionInfluence <em>Election Influence</em>}</li>
- *   <li>{@link euaiactcompliance.impl.JusticeDemocracyUseCaseImpl#isNoDirectExposure <em>No Direct Exposure</em>}</li>
- *   <li>{@link euaiactcompliance.impl.JusticeDemocracyUseCaseImpl#getBase_UseCase <em>Base Use Case</em>}</li>
- *   <li>{@link euaiactcompliance.impl.JusticeDemocracyUseCaseImpl#getException <em>Exception</em>}</li>
- *   <li>{@link euaiactcompliance.impl.JusticeDemocracyUseCaseImpl#getExceptionJustification <em>Exception Justification</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.AdministrationJusticeDemocracyImpl#isJudicialSupport <em>Judicial Support</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.AdministrationJusticeDemocracyImpl#isElectionInfluence <em>Election Influence</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.AdministrationJusticeDemocracyImpl#isNoDirectExposure <em>No Direct Exposure</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.AdministrationJusticeDemocracyImpl#getBase_UseCase <em>Base Use Case</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.AdministrationJusticeDemocracyImpl#getException <em>Exception</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.AdministrationJusticeDemocracyImpl#getExceptionJustification <em>Exception Justification</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class JusticeDemocracyUseCaseImpl extends MinimalEObjectImpl.Container implements JusticeDemocracyUseCase {
+public class AdministrationJusticeDemocracyImpl extends MinimalEObjectImpl.Container implements AdministrationJusticeDemocracy {
 	/**
 	 * The default value of the '{@link #isJudicialSupport() <em>Judicial Support</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -145,7 +145,7 @@ public class JusticeDemocracyUseCaseImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected JusticeDemocracyUseCaseImpl() {
+	protected AdministrationJusticeDemocracyImpl() {
 		super();
 	}
 
@@ -156,7 +156,7 @@ public class JusticeDemocracyUseCaseImpl extends MinimalEObjectImpl.Container im
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EuaiactcompliancePackage.Literals.JUSTICE_DEMOCRACY_USE_CASE;
+		return EuaiactcompliancePackage.Literals.ADMINISTRATION_JUSTICE_DEMOCRACY;
 	}
 
 	/**
@@ -179,7 +179,7 @@ public class JusticeDemocracyUseCaseImpl extends MinimalEObjectImpl.Container im
 		boolean oldJudicialSupport = judicialSupport;
 		judicialSupport = newJudicialSupport;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__JUDICIAL_SUPPORT, oldJudicialSupport, judicialSupport));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__JUDICIAL_SUPPORT, oldJudicialSupport, judicialSupport));
 	}
 
 	/**
@@ -202,7 +202,7 @@ public class JusticeDemocracyUseCaseImpl extends MinimalEObjectImpl.Container im
 		boolean oldElectionInfluence = electionInfluence;
 		electionInfluence = newElectionInfluence;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__ELECTION_INFLUENCE, oldElectionInfluence, electionInfluence));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__ELECTION_INFLUENCE, oldElectionInfluence, electionInfluence));
 	}
 
 	/**
@@ -225,7 +225,7 @@ public class JusticeDemocracyUseCaseImpl extends MinimalEObjectImpl.Container im
 		boolean oldNoDirectExposure = noDirectExposure;
 		noDirectExposure = newNoDirectExposure;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__NO_DIRECT_EXPOSURE, oldNoDirectExposure, noDirectExposure));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__NO_DIRECT_EXPOSURE, oldNoDirectExposure, noDirectExposure));
 	}
 
 	/**
@@ -240,7 +240,7 @@ public class JusticeDemocracyUseCaseImpl extends MinimalEObjectImpl.Container im
 			base_UseCase = (UseCase)eResolveProxy(oldBase_UseCase);
 			if (base_UseCase != oldBase_UseCase) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__BASE_USE_CASE, oldBase_UseCase, base_UseCase));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__BASE_USE_CASE, oldBase_UseCase, base_UseCase));
 			}
 		}
 		return base_UseCase;
@@ -265,7 +265,7 @@ public class JusticeDemocracyUseCaseImpl extends MinimalEObjectImpl.Container im
 		UseCase oldBase_UseCase = base_UseCase;
 		base_UseCase = newBase_UseCase;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__BASE_USE_CASE, oldBase_UseCase, base_UseCase));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__BASE_USE_CASE, oldBase_UseCase, base_UseCase));
 	}
 
 	/**
@@ -276,7 +276,7 @@ public class JusticeDemocracyUseCaseImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public EList<euaiactcompliance.Exception> getException() {
 		if (exception == null) {
-			exception = new EDataTypeUniqueEList<euaiactcompliance.Exception>(euaiactcompliance.Exception.class, this, EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION);
+			exception = new EDataTypeUniqueEList<euaiactcompliance.Exception>(euaiactcompliance.Exception.class, this, EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__EXCEPTION);
 		}
 		return exception;
 	}
@@ -301,7 +301,7 @@ public class JusticeDemocracyUseCaseImpl extends MinimalEObjectImpl.Container im
 		String oldExceptionJustification = exceptionJustification;
 		exceptionJustification = newExceptionJustification;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION_JUSTIFICATION, oldExceptionJustification, exceptionJustification));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__EXCEPTION_JUSTIFICATION, oldExceptionJustification, exceptionJustification));
 	}
 
 	/**
@@ -312,18 +312,18 @@ public class JusticeDemocracyUseCaseImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__JUDICIAL_SUPPORT:
+			case EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__JUDICIAL_SUPPORT:
 				return isJudicialSupport();
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__ELECTION_INFLUENCE:
+			case EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__ELECTION_INFLUENCE:
 				return isElectionInfluence();
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__NO_DIRECT_EXPOSURE:
+			case EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__NO_DIRECT_EXPOSURE:
 				return isNoDirectExposure();
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__BASE_USE_CASE:
+			case EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__BASE_USE_CASE:
 				if (resolve) return getBase_UseCase();
 				return basicGetBase_UseCase();
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION:
+			case EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__EXCEPTION:
 				return getException();
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION_JUSTIFICATION:
+			case EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__EXCEPTION_JUSTIFICATION:
 				return getExceptionJustification();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -338,23 +338,23 @@ public class JusticeDemocracyUseCaseImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__JUDICIAL_SUPPORT:
+			case EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__JUDICIAL_SUPPORT:
 				setJudicialSupport((Boolean)newValue);
 				return;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__ELECTION_INFLUENCE:
+			case EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__ELECTION_INFLUENCE:
 				setElectionInfluence((Boolean)newValue);
 				return;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__NO_DIRECT_EXPOSURE:
+			case EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__NO_DIRECT_EXPOSURE:
 				setNoDirectExposure((Boolean)newValue);
 				return;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__BASE_USE_CASE:
+			case EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__BASE_USE_CASE:
 				setBase_UseCase((UseCase)newValue);
 				return;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION:
+			case EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__EXCEPTION:
 				getException().clear();
 				getException().addAll((Collection<? extends euaiactcompliance.Exception>)newValue);
 				return;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION_JUSTIFICATION:
+			case EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__EXCEPTION_JUSTIFICATION:
 				setExceptionJustification((String)newValue);
 				return;
 		}
@@ -369,22 +369,22 @@ public class JusticeDemocracyUseCaseImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__JUDICIAL_SUPPORT:
+			case EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__JUDICIAL_SUPPORT:
 				setJudicialSupport(JUDICIAL_SUPPORT_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__ELECTION_INFLUENCE:
+			case EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__ELECTION_INFLUENCE:
 				setElectionInfluence(ELECTION_INFLUENCE_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__NO_DIRECT_EXPOSURE:
+			case EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__NO_DIRECT_EXPOSURE:
 				setNoDirectExposure(NO_DIRECT_EXPOSURE_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__BASE_USE_CASE:
+			case EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__BASE_USE_CASE:
 				setBase_UseCase((UseCase)null);
 				return;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION:
+			case EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__EXCEPTION:
 				getException().clear();
 				return;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION_JUSTIFICATION:
+			case EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__EXCEPTION_JUSTIFICATION:
 				setExceptionJustification(EXCEPTION_JUSTIFICATION_EDEFAULT);
 				return;
 		}
@@ -399,17 +399,17 @@ public class JusticeDemocracyUseCaseImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__JUDICIAL_SUPPORT:
+			case EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__JUDICIAL_SUPPORT:
 				return judicialSupport != JUDICIAL_SUPPORT_EDEFAULT;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__ELECTION_INFLUENCE:
+			case EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__ELECTION_INFLUENCE:
 				return electionInfluence != ELECTION_INFLUENCE_EDEFAULT;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__NO_DIRECT_EXPOSURE:
+			case EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__NO_DIRECT_EXPOSURE:
 				return noDirectExposure != NO_DIRECT_EXPOSURE_EDEFAULT;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__BASE_USE_CASE:
+			case EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__BASE_USE_CASE:
 				return base_UseCase != null;
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION:
+			case EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__EXCEPTION:
 				return exception != null && !exception.isEmpty();
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE__EXCEPTION_JUSTIFICATION:
+			case EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY__EXCEPTION_JUSTIFICATION:
 				return EXCEPTION_JUSTIFICATION_EDEFAULT == null ? exceptionJustification != null : !EXCEPTION_JUSTIFICATION_EDEFAULT.equals(exceptionJustification);
 		}
 		return super.eIsSet(featureID);
@@ -439,4 +439,4 @@ public class JusticeDemocracyUseCaseImpl extends MinimalEObjectImpl.Container im
 		return result.toString();
 	}
 
-} //JusticeDemocracyUseCaseImpl
+} //AdministrationJusticeDemocracyImpl

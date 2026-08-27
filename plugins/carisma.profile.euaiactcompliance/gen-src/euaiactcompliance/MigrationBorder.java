@@ -19,7 +19,7 @@ import org.eclipse.uml2.uml.UseCase;
  * <ul>
  *   <li>{@link euaiactcompliance.MigrationBorder#isLieDetection <em>Lie Detection</em>}</li>
  *   <li>{@link euaiactcompliance.MigrationBorder#isEntryRiskAssessment <em>Entry Risk Assessment</em>}</li>
- *   <li>{@link euaiactcompliance.MigrationBorder#isAsylumVisaResidencePermitsApplication <em>Asylum Visa Residence Permits Application</em>}</li>
+ *   <li>{@link euaiactcompliance.MigrationBorder#isAsylumVisaOrResidence <em>Asylum Visa Or Residence</em>}</li>
  *   <li>{@link euaiactcompliance.MigrationBorder#isTravelDocumentVerificationOnly <em>Travel Document Verification Only</em>}</li>
  *   <li>{@link euaiactcompliance.MigrationBorder#isPersonIdentification <em>Person Identification</em>}</li>
  *   <li>{@link euaiactcompliance.MigrationBorder#getBase_UseCase <em>Base Use Case</em>}</li>
@@ -77,26 +77,26 @@ public interface MigrationBorder extends EObject {
 	void setEntryRiskAssessment(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Asylum Visa Residence Permits Application</b></em>' attribute.
+	 * Returns the value of the '<em><b>Asylum Visa Or Residence</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Asylum Visa Residence Permits Application</em>' attribute.
-	 * @see #setAsylumVisaResidencePermitsApplication(boolean)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getMigrationBorder_AsylumVisaResidencePermitsApplication()
+	 * @return the value of the '<em>Asylum Visa Or Residence</em>' attribute.
+	 * @see #setAsylumVisaOrResidence(boolean)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getMigrationBorder_AsylumVisaOrResidence()
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
 	 * @generated
 	 */
-	boolean isAsylumVisaResidencePermitsApplication();
+	boolean isAsylumVisaOrResidence();
 
 	/**
-	 * Sets the value of the '{@link euaiactcompliance.MigrationBorder#isAsylumVisaResidencePermitsApplication <em>Asylum Visa Residence Permits Application</em>}' attribute.
+	 * Sets the value of the '{@link euaiactcompliance.MigrationBorder#isAsylumVisaOrResidence <em>Asylum Visa Or Residence</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Asylum Visa Residence Permits Application</em>' attribute.
-	 * @see #isAsylumVisaResidencePermitsApplication()
+	 * @param value the new value of the '<em>Asylum Visa Or Residence</em>' attribute.
+	 * @see #isAsylumVisaOrResidence()
 	 * @generated
 	 */
-	void setAsylumVisaResidencePermitsApplication(boolean value);
+	void setAsylumVisaOrResidence(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Travel Document Verification Only</b></em>' attribute.

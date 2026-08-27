@@ -3,6 +3,7 @@
 package euaiactcompliance.impl;
 
 import euaiactcompliance.AISystem;
+import euaiactcompliance.AdministrationJusticeDemocracy;
 import euaiactcompliance.BiometricCategorisation;
 import euaiactcompliance.BiometricIdentification;
 import euaiactcompliance.CriticalInfrastructure;
@@ -16,15 +17,12 @@ import euaiactcompliance.ExploitingHumanVulnerability;
 import euaiactcompliance.FacialImageScraping;
 import euaiactcompliance.HumanEmployment;
 import euaiactcompliance.HumanInteraction;
-import euaiactcompliance.JusticeDemocracyUseCase;
 import euaiactcompliance.LawEnforcement;
 import euaiactcompliance.ManipulativeBehaviour;
 import euaiactcompliance.MigrationBorder;
 import euaiactcompliance.ProductCategory;
 import euaiactcompliance.ProductEmbedding;
 import euaiactcompliance.Profiling;
-import euaiactcompliance.Provider;
-import euaiactcompliance.Provides;
 import euaiactcompliance.PublicInterestText;
 import euaiactcompliance.RiskManagementSystem;
 import euaiactcompliance.Role;
@@ -98,8 +96,6 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 			case EuaiactcompliancePackage.SOCIAL_SCORING: return createSocialScoring();
 			case EuaiactcompliancePackage.FACIAL_IMAGE_SCRAPING: return createFacialImageScraping();
 			case EuaiactcompliancePackage.AI_SYSTEM: return createAISystem();
-			case EuaiactcompliancePackage.PROVIDER: return createProvider();
-			case EuaiactcompliancePackage.PROVIDES: return createProvides();
 			case EuaiactcompliancePackage.CRITICAL_INFRASTRUCTURE: return createCriticalInfrastructure();
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL: return createSelfDevelopedModel();
 			case EuaiactcompliancePackage.EDUCATION: return createEducation();
@@ -109,7 +105,7 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 			case EuaiactcompliancePackage.ESSENTIAL_SERVICE: return createEssentialService();
 			case EuaiactcompliancePackage.LAW_ENFORCEMENT: return createLawEnforcement();
 			case EuaiactcompliancePackage.MIGRATION_BORDER: return createMigrationBorder();
-			case EuaiactcompliancePackage.JUSTICE_DEMOCRACY_USE_CASE: return createJusticeDemocracyUseCase();
+			case EuaiactcompliancePackage.ADMINISTRATION_JUSTICE_DEMOCRACY: return createAdministrationJusticeDemocracy();
 			case EuaiactcompliancePackage.BIOMETRIC_IDENTIFICATION: return createBiometricIdentification();
 			case EuaiactcompliancePackage.BIOMETRIC_CATEGORISATION: return createBiometricCategorisation();
 			case EuaiactcompliancePackage.EMOTION_RECOGNITION: return createEmotionRecognition();
@@ -284,28 +280,6 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public Provider createProvider() {
-		ProviderImpl provider = new ProviderImpl();
-		return provider;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Provides createProvides() {
-		ProvidesImpl provides = new ProvidesImpl();
-		return provides;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public CriticalInfrastructure createCriticalInfrastructure() {
 		CriticalInfrastructureImpl criticalInfrastructure = new CriticalInfrastructureImpl();
 		return criticalInfrastructure;
@@ -405,9 +379,9 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 	 * @generated
 	 */
 	@Override
-	public JusticeDemocracyUseCase createJusticeDemocracyUseCase() {
-		JusticeDemocracyUseCaseImpl justiceDemocracyUseCase = new JusticeDemocracyUseCaseImpl();
-		return justiceDemocracyUseCase;
+	public AdministrationJusticeDemocracy createAdministrationJusticeDemocracy() {
+		AdministrationJusticeDemocracyImpl administrationJusticeDemocracy = new AdministrationJusticeDemocracyImpl();
+		return administrationJusticeDemocracy;
 	}
 
 	/**
