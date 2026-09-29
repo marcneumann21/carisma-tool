@@ -33,7 +33,7 @@ import org.eclipse.uml2.uml.Component;
  *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getCapabilities <em>Capabilities</em>}</li>
  *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#isTestReports <em>Test Reports</em>}</li>
  *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getBase_Component <em>Base Component</em>}</li>
- *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getInputSpecification <em>Input Specification</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getInputData <em>Input Data</em>}</li>
  * </ul>
  *
  * @generated
@@ -230,24 +230,24 @@ public class SelfDevelopedModelImpl extends MinimalEObjectImpl.Container impleme
 	protected Component base_Component;
 
 	/**
-	 * The default value of the '{@link #getInputSpecification() <em>Input Specification</em>}' attribute.
+	 * The default value of the '{@link #getInputData() <em>Input Data</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInputSpecification()
+	 * @see #getInputData()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INPUT_SPECIFICATION_EDEFAULT = null;
+	protected static final String INPUT_DATA_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getInputSpecification() <em>Input Specification</em>}' attribute.
+	 * The cached value of the '{@link #getInputData() <em>Input Data</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInputSpecification()
+	 * @see #getInputData()
 	 * @generated
 	 * @ordered
 	 */
-	protected String inputSpecification = INPUT_SPECIFICATION_EDEFAULT;
+	protected String inputData = INPUT_DATA_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -521,8 +521,8 @@ public class SelfDevelopedModelImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public String getInputSpecification() {
-		return inputSpecification;
+	public String getInputData() {
+		return inputData;
 	}
 
 	/**
@@ -531,11 +531,11 @@ public class SelfDevelopedModelImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public void setInputSpecification(String newInputSpecification) {
-		String oldInputSpecification = inputSpecification;
-		inputSpecification = newInputSpecification;
+	public void setInputData(String newInputData) {
+		String oldInputData = inputData;
+		inputData = newInputData;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__INPUT_SPECIFICATION, oldInputSpecification, inputSpecification));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__INPUT_DATA, oldInputData, inputData));
 	}
 
 	/**
@@ -567,8 +567,8 @@ public class SelfDevelopedModelImpl extends MinimalEObjectImpl.Container impleme
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__BASE_COMPONENT:
 				if (resolve) return getBase_Component();
 				return basicGetBase_Component();
-			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__INPUT_SPECIFICATION:
-				return getInputSpecification();
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__INPUT_DATA:
+				return getInputData();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -611,8 +611,8 @@ public class SelfDevelopedModelImpl extends MinimalEObjectImpl.Container impleme
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__BASE_COMPONENT:
 				setBase_Component((Component)newValue);
 				return;
-			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__INPUT_SPECIFICATION:
-				setInputSpecification((String)newValue);
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__INPUT_DATA:
+				setInputData((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -656,8 +656,8 @@ public class SelfDevelopedModelImpl extends MinimalEObjectImpl.Container impleme
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__BASE_COMPONENT:
 				setBase_Component((Component)null);
 				return;
-			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__INPUT_SPECIFICATION:
-				setInputSpecification(INPUT_SPECIFICATION_EDEFAULT);
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__INPUT_DATA:
+				setInputData(INPUT_DATA_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -691,8 +691,8 @@ public class SelfDevelopedModelImpl extends MinimalEObjectImpl.Container impleme
 				return testReports != TEST_REPORTS_EDEFAULT;
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__BASE_COMPONENT:
 				return base_Component != null;
-			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__INPUT_SPECIFICATION:
-				return INPUT_SPECIFICATION_EDEFAULT == null ? inputSpecification != null : !INPUT_SPECIFICATION_EDEFAULT.equals(inputSpecification);
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__INPUT_DATA:
+				return INPUT_DATA_EDEFAULT == null ? inputData != null : !INPUT_DATA_EDEFAULT.equals(inputData);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -725,8 +725,8 @@ public class SelfDevelopedModelImpl extends MinimalEObjectImpl.Container impleme
 		result.append(capabilities);
 		result.append(", TestReports: ");
 		result.append(testReports);
-		result.append(", InputSpecification: ");
-		result.append(inputSpecification);
+		result.append(", InputData: ");
+		result.append(inputData);
 		result.append(')');
 		return result.toString();
 	}

@@ -13,14 +13,13 @@ public class EUAIActRiskClassificationObligation {
 
 	public static List<String> getObligations(EUAIActRiskClass riskClass, boolean annexISectionB) {
 		List<String> obligations = new ArrayList<>();
-		
+
 		// Annex I Section B
 		if (annexISectionB) {
-			obligations.add(
-					"Only Article 6(1), Articles 102 to 109 and Article 112 apply (Article 2(2)).");
+			obligations.add("Only Article 6(1), Articles 102 to 109 and Article 112 apply (Article 2(2)).");
 			return obligations;
 		}
-		
+
 		switch (riskClass) {
 		case Unacceptable:
 			obligations.add(
@@ -30,7 +29,8 @@ public class EUAIActRiskClassificationObligation {
 			obligations.add(
 					"Ensure a sufficient level of AI literacy of the staff and other persons dealing with the operation and use of this AI system (Article 4).");
 			obligations.add("Establish of a continuous risk management system (Article 9).");
-			obligations.add("Apply data and data governance practices (Article 10).");
+			obligations.add(
+					"Apply data governance and management practices to the training, validation and testing data sets (Article 10).");
 			obligations.add("Create a technical documentation (Article 11). => run EU AI Act Documentation Check");
 			obligations.add("Enable automatic record keeping (Article 12).");
 			obligations.add("Provide transparent information to deployers (Article 13).");
@@ -56,13 +56,13 @@ public class EUAIActRiskClassificationObligation {
 		case Limited:
 			obligations.add(
 					"Ensure a sufficient level of AI literacy of the staff and other persons dealing with the operation and use of this AI system (Article 4).");
-			// the Article 50 obligations are collected per use case in the function
+			// the Article 50(1) and Article50(2) obligations are collected per use case in
 			// EUAIActRiskClassifier.checkLimitedRisk()
 			break;
 		case Minimal:
 			obligations.add(
 					"Ensure a sufficient level of AI literacy of the staff and other persons dealing with the operation and use of this AI system (Article 4).");
-			obligations.add("No further obligations. Voluntary codes of conduct possible (Article 95).");
+			obligations.add("Voluntary codes of conduct possible (Article 95).");
 			break;
 		default:
 			obligations.add("Classification not possible.");

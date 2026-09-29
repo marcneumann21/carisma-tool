@@ -7,7 +7,6 @@ import euaiactcompliance.AdministrationJusticeDemocracy;
 import euaiactcompliance.BiometricCategorisation;
 import euaiactcompliance.BiometricIdentification;
 import euaiactcompliance.CriticalInfrastructure;
-import euaiactcompliance.Deepfake;
 import euaiactcompliance.Education;
 import euaiactcompliance.EmotionRecognition;
 import euaiactcompliance.EssentialService;
@@ -21,7 +20,6 @@ import euaiactcompliance.ManipulativeBehaviour;
 import euaiactcompliance.MigrationBorder;
 import euaiactcompliance.ProductEmbedding;
 import euaiactcompliance.Profiling;
-import euaiactcompliance.PublicInterestText;
 import euaiactcompliance.RiskManagementSystem;
 import euaiactcompliance.SelfDevelopedModel;
 import euaiactcompliance.SocialScoring;
@@ -107,14 +105,6 @@ public class EuaiactcomplianceAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseSyntheticContent(SyntheticContent object) {
 				return createSyntheticContentAdapter();
-			}
-			@Override
-			public Adapter caseDeepfake(Deepfake object) {
-				return createDeepfakeAdapter();
-			}
-			@Override
-			public Adapter casePublicInterestText(PublicInterestText object) {
-				return createPublicInterestTextAdapter();
 			}
 			@Override
 			public Adapter caseManipulativeBehaviour(ManipulativeBehaviour object) {
@@ -265,34 +255,6 @@ public class EuaiactcomplianceAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSyntheticContentAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.Deepfake <em>Deepfake</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see euaiactcompliance.Deepfake
-	 * @generated
-	 */
-	public Adapter createDeepfakeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link euaiactcompliance.PublicInterestText <em>Public Interest Text</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see euaiactcompliance.PublicInterestText
-	 * @generated
-	 */
-	public Adapter createPublicInterestTextAdapter() {
 		return null;
 	}
 

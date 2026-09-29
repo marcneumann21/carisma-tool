@@ -52,6 +52,15 @@ public class EUAIActDocumentationCheck extends AbstractEUAIActDocumentationCheck
 			addInfo("#".repeat(50));
 			addInfo("Generated documentation of the AI system '" + aiSystem.getName() + "':");
 
+			// the AI system and its ML model are separate elements, otherwise the model
+			// tags cannot be assigned to the model
+			if (EUAIActComplianceUtil.hasStereotype(aiSystem, EUAIActCompliance.SelfDevelopedModel)) {
+				addError("The component '" + aiSystem.getName()
+						+ "' has both 'AISystem' and 'SelfDevelopedModel' applied. Model the ML model as a separate component and connect it to the AI system.");
+				completeDocumentation = false;
+				continue;
+			}
+
 			if (riskClass == EUAIActRiskClass.Unacceptable) {
 				addWarning("No technical documentation is generated, because the AI system '" + aiSystem.getName()
 						+ "' must not be placed on the market, put into service or used (Article 5).");
@@ -64,7 +73,7 @@ public class EUAIActDocumentationCheck extends AbstractEUAIActDocumentationCheck
 					addInfo("#".repeat(50));
 					continue;
 				}
-				addInfo("The Technical documentation is mandatory for the AI system '" + aiSystem.getName()
+				addInfo("The technical documentation is mandatory for the AI system '" + aiSystem.getName()
 						+ "' (Article 11 and Annex IV).");
 				highRisk = true;
 				addInfo("#".repeat(50));
@@ -87,7 +96,7 @@ public class EUAIActDocumentationCheck extends AbstractEUAIActDocumentationCheck
 			addInfo("");
 
 			EUAIActDocumentationGenerator generator = new EUAIActDocumentationGenerator(aiSystem, highRisk);
-			List<EUAIActDocumentationSectionResult> sections = generator.generate();
+			List<EUAIActDocumentationSectionResult> sections = generator.generateDocumentation();
 			for (EUAIActDocumentationSectionResult section : sections) {
 
 				// for not high risk systems only sections with content are printed,

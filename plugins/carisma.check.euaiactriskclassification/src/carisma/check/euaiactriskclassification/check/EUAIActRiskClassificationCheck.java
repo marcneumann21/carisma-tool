@@ -36,7 +36,7 @@ public class EUAIActRiskClassificationCheck extends AbstractEUAIActRiskClassific
 			return false;
 		}
 
-		addInfo("Your model contains " + aiSystems.size() + " AI system(s).");
+		addInfo("Your model contains " + aiSystems.size() + " AI systems.");
 		addInfo("");
 
 		boolean noUnacceptableRisk = true;

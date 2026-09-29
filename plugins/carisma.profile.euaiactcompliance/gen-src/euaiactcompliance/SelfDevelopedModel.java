@@ -25,7 +25,7 @@ import org.eclipse.uml2.uml.Component;
  *   <li>{@link euaiactcompliance.SelfDevelopedModel#getCapabilities <em>Capabilities</em>}</li>
  *   <li>{@link euaiactcompliance.SelfDevelopedModel#isTestReports <em>Test Reports</em>}</li>
  *   <li>{@link euaiactcompliance.SelfDevelopedModel#getBase_Component <em>Base Component</em>}</li>
- *   <li>{@link euaiactcompliance.SelfDevelopedModel#getInputSpecification <em>Input Specification</em>}</li>
+ *   <li>{@link euaiactcompliance.SelfDevelopedModel#getInputData <em>Input Data</em>}</li>
  * </ul>
  *
  * @see euaiactcompliance.EuaiactcompliancePackage#getSelfDevelopedModel()
@@ -254,25 +254,25 @@ public interface SelfDevelopedModel extends EObject {
 	void setBase_Component(Component value);
 
 	/**
-	 * Returns the value of the '<em><b>Input Specification</b></em>' attribute.
+	 * Returns the value of the '<em><b>Input Data</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input Specification</em>' attribute.
-	 * @see #setInputSpecification(String)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getSelfDevelopedModel_InputSpecification()
+	 * @return the value of the '<em>Input Data</em>' attribute.
+	 * @see #setInputData(String)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getSelfDevelopedModel_InputData()
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getInputSpecification();
+	String getInputData();
 
 	/**
-	 * Sets the value of the '{@link euaiactcompliance.SelfDevelopedModel#getInputSpecification <em>Input Specification</em>}' attribute.
+	 * Sets the value of the '{@link euaiactcompliance.SelfDevelopedModel#getInputData <em>Input Data</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Input Specification</em>' attribute.
-	 * @see #getInputSpecification()
+	 * @param value the new value of the '<em>Input Data</em>' attribute.
+	 * @see #getInputData()
 	 * @generated
 	 */
-	void setInputSpecification(String value);
+	void setInputData(String value);
 
 } // SelfDevelopedModel

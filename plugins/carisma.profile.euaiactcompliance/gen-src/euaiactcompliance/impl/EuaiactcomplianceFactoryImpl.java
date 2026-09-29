@@ -7,7 +7,6 @@ import euaiactcompliance.AdministrationJusticeDemocracy;
 import euaiactcompliance.BiometricCategorisation;
 import euaiactcompliance.BiometricIdentification;
 import euaiactcompliance.CriticalInfrastructure;
-import euaiactcompliance.Deepfake;
 import euaiactcompliance.Education;
 import euaiactcompliance.EmotionRecognition;
 import euaiactcompliance.EssentialService;
@@ -23,7 +22,6 @@ import euaiactcompliance.MigrationBorder;
 import euaiactcompliance.ProductCategory;
 import euaiactcompliance.ProductEmbedding;
 import euaiactcompliance.Profiling;
-import euaiactcompliance.PublicInterestText;
 import euaiactcompliance.RiskManagementSystem;
 import euaiactcompliance.Role;
 import euaiactcompliance.SelfDevelopedModel;
@@ -89,8 +87,6 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 			case EuaiactcompliancePackage.PRODUCT_EMBEDDING: return createProductEmbedding();
 			case EuaiactcompliancePackage.HUMAN_INTERACTION: return createHumanInteraction();
 			case EuaiactcompliancePackage.SYNTHETIC_CONTENT: return createSyntheticContent();
-			case EuaiactcompliancePackage.DEEPFAKE: return createDeepfake();
-			case EuaiactcompliancePackage.PUBLIC_INTEREST_TEXT: return createPublicInterestText();
 			case EuaiactcompliancePackage.MANIPULATIVE_BEHAVIOUR: return createManipulativeBehaviour();
 			case EuaiactcompliancePackage.EXPLOITING_HUMAN_VULNERABILITY: return createExploitingHumanVulnerability();
 			case EuaiactcompliancePackage.SOCIAL_SCORING: return createSocialScoring();
@@ -195,28 +191,6 @@ public class EuaiactcomplianceFactoryImpl extends EFactoryImpl implements Euaiac
 	public SyntheticContent createSyntheticContent() {
 		SyntheticContentImpl syntheticContent = new SyntheticContentImpl();
 		return syntheticContent;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Deepfake createDeepfake() {
-		DeepfakeImpl deepfake = new DeepfakeImpl();
-		return deepfake;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public PublicInterestText createPublicInterestText() {
-		PublicInterestTextImpl publicInterestText = new PublicInterestTextImpl();
-		return publicInterestText;
 	}
 
 	/**

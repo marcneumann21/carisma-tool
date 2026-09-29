@@ -17,11 +17,8 @@ import org.eclipse.uml2.uml.Artifact;
  * <ul>
  *   <li>{@link euaiactcompliance.RiskManagementSystem#getRiskIdentification <em>Risk Identification</em>}</li>
  *   <li>{@link euaiactcompliance.RiskManagementSystem#getRiskEstimation <em>Risk Estimation</em>}</li>
- *   <li>{@link euaiactcompliance.RiskManagementSystem#getPostMarketRiskEvaluation <em>Post Market Risk Evaluation</em>}</li>
  *   <li>{@link euaiactcompliance.RiskManagementSystem#getRiskMitigation <em>Risk Mitigation</em>}</li>
  *   <li>{@link euaiactcompliance.RiskManagementSystem#getResidualRisk <em>Residual Risk</em>}</li>
- *   <li>{@link euaiactcompliance.RiskManagementSystem#getTestingProcedure <em>Testing Procedure</em>}</li>
- *   <li>{@link euaiactcompliance.RiskManagementSystem#getTestingMetrics <em>Testing Metrics</em>}</li>
  *   <li>{@link euaiactcompliance.RiskManagementSystem#getVulnerableGroupsAssessment <em>Vulnerable Groups Assessment</em>}</li>
  *   <li>{@link euaiactcompliance.RiskManagementSystem#getBase_Artifact <em>Base Artifact</em>}</li>
  * </ul>
@@ -76,28 +73,6 @@ public interface RiskManagementSystem extends EObject {
 	void setRiskEstimation(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Post Market Risk Evaluation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Post Market Risk Evaluation</em>' attribute.
-	 * @see #setPostMarketRiskEvaluation(String)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getRiskManagementSystem_PostMarketRiskEvaluation()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
-	 */
-	String getPostMarketRiskEvaluation();
-
-	/**
-	 * Sets the value of the '{@link euaiactcompliance.RiskManagementSystem#getPostMarketRiskEvaluation <em>Post Market Risk Evaluation</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Post Market Risk Evaluation</em>' attribute.
-	 * @see #getPostMarketRiskEvaluation()
-	 * @generated
-	 */
-	void setPostMarketRiskEvaluation(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Risk Mitigation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -140,50 +115,6 @@ public interface RiskManagementSystem extends EObject {
 	 * @generated
 	 */
 	void setResidualRisk(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Testing Procedure</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Testing Procedure</em>' attribute.
-	 * @see #setTestingProcedure(String)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getRiskManagementSystem_TestingProcedure()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
-	 */
-	String getTestingProcedure();
-
-	/**
-	 * Sets the value of the '{@link euaiactcompliance.RiskManagementSystem#getTestingProcedure <em>Testing Procedure</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Testing Procedure</em>' attribute.
-	 * @see #getTestingProcedure()
-	 * @generated
-	 */
-	void setTestingProcedure(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Testing Metrics</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Testing Metrics</em>' attribute.
-	 * @see #setTestingMetrics(String)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getRiskManagementSystem_TestingMetrics()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
-	 */
-	String getTestingMetrics();
-
-	/**
-	 * Sets the value of the '{@link euaiactcompliance.RiskManagementSystem#getTestingMetrics <em>Testing Metrics</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Testing Metrics</em>' attribute.
-	 * @see #getTestingMetrics()
-	 * @generated
-	 */
-	void setTestingMetrics(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Vulnerable Groups Assessment</b></em>' attribute.

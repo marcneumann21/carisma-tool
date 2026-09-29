@@ -27,28 +27,29 @@ import org.eclipse.uml2.uml.Component;
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getVersion <em>Version</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getExternalInteraction <em>External Interaction</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getMarketPlacementForm <em>Market Placement Form</em>}</li>
- *   <li>{@link euaiactcompliance.impl.AISystemImpl#getHardware <em>Hardware</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.AISystemImpl#getHardwareDescription <em>Hardware Description</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#isVisualDocumentation <em>Visual Documentation</em>}</li>
- *   <li>{@link euaiactcompliance.impl.AISystemImpl#getUserInterface <em>User Interface</em>}</li>
- *   <li>{@link euaiactcompliance.impl.AISystemImpl#getInstructions <em>Instructions</em>}</li>
- *   <li>{@link euaiactcompliance.impl.AISystemImpl#getDevelopmentProcess <em>Development Process</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.AISystemImpl#getUserInterfaceDescription <em>User Interface Description</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.AISystemImpl#getInstructionsForUse <em>Instructions For Use</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.AISystemImpl#getDevelopmentSteps <em>Development Steps</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getDesignSpecification <em>Design Specification</em>}</li>
- *   <li>{@link euaiactcompliance.impl.AISystemImpl#getDesignDecision <em>Design Decision</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.AISystemImpl#getKeyDesignDecision <em>Key Design Decision</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getDesignTradeOffs <em>Design Trade Offs</em>}</li>
- *   <li>{@link euaiactcompliance.impl.AISystemImpl#getResources <em>Resources</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.AISystemImpl#getDevelopementResources <em>Developement Resources</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getHumanOversightPreAssessment <em>Human Oversight Pre Assessment</em>}</li>
- *   <li>{@link euaiactcompliance.impl.AISystemImpl#getPlannedModification <em>Planned Modification</em>}</li>
- *   <li>{@link euaiactcompliance.impl.AISystemImpl#getCybersecurity <em>Cybersecurity</em>}</li>
- *   <li>{@link euaiactcompliance.impl.AISystemImpl#getHumanOversightPostAssessment <em>Human Oversight Post Assessment</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.AISystemImpl#getPredeterminedChanges <em>Predetermined Changes</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.AISystemImpl#getCybersecurityMeasures <em>Cybersecurity Measures</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.AISystemImpl#getHumanOversightMeasures <em>Human Oversight Measures</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getUpdateRequirements <em>Update Requirements</em>}</li>
- *   <li>{@link euaiactcompliance.impl.AISystemImpl#getPredictableRisks <em>Predictable Risks</em>}</li>
- *   <li>{@link euaiactcompliance.impl.AISystemImpl#getPerformanceMetricsSuitability <em>Performance Metrics Suitability</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.AISystemImpl#getForseeableRisks <em>Forseeable Risks</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.AISystemImpl#getPerformanceMetricsAppropriateness <em>Performance Metrics Appropriateness</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getRelevantChanges <em>Relevant Changes</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getHarmonisedStandards <em>Harmonised Standards</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#isCopyEUConformityDeclaration <em>Copy EU Conformity Declaration</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getPostMarketMonitoring <em>Post Market Monitoring</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getProviderName <em>Provider Name</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getProviderContact <em>Provider Contact</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.AISystemImpl#getAffectedPersons <em>Affected Persons</em>}</li>
  * </ul>
  *
  * @generated
@@ -125,24 +126,24 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	protected String marketPlacementForm = MARKET_PLACEMENT_FORM_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getHardware() <em>Hardware</em>}' attribute.
+	 * The default value of the '{@link #getHardwareDescription() <em>Hardware Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getHardware()
+	 * @see #getHardwareDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String HARDWARE_EDEFAULT = null;
+	protected static final String HARDWARE_DESCRIPTION_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getHardware() <em>Hardware</em>}' attribute.
+	 * The cached value of the '{@link #getHardwareDescription() <em>Hardware Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getHardware()
+	 * @see #getHardwareDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected String hardware = HARDWARE_EDEFAULT;
+	protected String hardwareDescription = HARDWARE_DESCRIPTION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isVisualDocumentation() <em>Visual Documentation</em>}' attribute.
@@ -165,64 +166,64 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	protected boolean visualDocumentation = VISUAL_DOCUMENTATION_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getUserInterface() <em>User Interface</em>}' attribute.
+	 * The default value of the '{@link #getUserInterfaceDescription() <em>User Interface Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUserInterface()
+	 * @see #getUserInterfaceDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String USER_INTERFACE_EDEFAULT = null;
+	protected static final String USER_INTERFACE_DESCRIPTION_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getUserInterface() <em>User Interface</em>}' attribute.
+	 * The cached value of the '{@link #getUserInterfaceDescription() <em>User Interface Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUserInterface()
+	 * @see #getUserInterfaceDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected String userInterface = USER_INTERFACE_EDEFAULT;
+	protected String userInterfaceDescription = USER_INTERFACE_DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getInstructions() <em>Instructions</em>}' attribute.
+	 * The default value of the '{@link #getInstructionsForUse() <em>Instructions For Use</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInstructions()
+	 * @see #getInstructionsForUse()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INSTRUCTIONS_EDEFAULT = null;
+	protected static final String INSTRUCTIONS_FOR_USE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getInstructions() <em>Instructions</em>}' attribute.
+	 * The cached value of the '{@link #getInstructionsForUse() <em>Instructions For Use</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInstructions()
+	 * @see #getInstructionsForUse()
 	 * @generated
 	 * @ordered
 	 */
-	protected String instructions = INSTRUCTIONS_EDEFAULT;
+	protected String instructionsForUse = INSTRUCTIONS_FOR_USE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getDevelopmentProcess() <em>Development Process</em>}' attribute.
+	 * The default value of the '{@link #getDevelopmentSteps() <em>Development Steps</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDevelopmentProcess()
+	 * @see #getDevelopmentSteps()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DEVELOPMENT_PROCESS_EDEFAULT = null;
+	protected static final String DEVELOPMENT_STEPS_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getDevelopmentProcess() <em>Development Process</em>}' attribute.
+	 * The cached value of the '{@link #getDevelopmentSteps() <em>Development Steps</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDevelopmentProcess()
+	 * @see #getDevelopmentSteps()
 	 * @generated
 	 * @ordered
 	 */
-	protected String developmentProcess = DEVELOPMENT_PROCESS_EDEFAULT;
+	protected String developmentSteps = DEVELOPMENT_STEPS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDesignSpecification() <em>Design Specification</em>}' attribute.
@@ -245,24 +246,24 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	protected String designSpecification = DESIGN_SPECIFICATION_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getDesignDecision() <em>Design Decision</em>}' attribute.
+	 * The default value of the '{@link #getKeyDesignDecision() <em>Key Design Decision</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDesignDecision()
+	 * @see #getKeyDesignDecision()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DESIGN_DECISION_EDEFAULT = null;
+	protected static final String KEY_DESIGN_DECISION_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getDesignDecision() <em>Design Decision</em>}' attribute.
+	 * The cached value of the '{@link #getKeyDesignDecision() <em>Key Design Decision</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDesignDecision()
+	 * @see #getKeyDesignDecision()
 	 * @generated
 	 * @ordered
 	 */
-	protected String designDecision = DESIGN_DECISION_EDEFAULT;
+	protected String keyDesignDecision = KEY_DESIGN_DECISION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDesignTradeOffs() <em>Design Trade Offs</em>}' attribute.
@@ -285,24 +286,24 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	protected String designTradeOffs = DESIGN_TRADE_OFFS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getResources() <em>Resources</em>}' attribute.
+	 * The default value of the '{@link #getDevelopementResources() <em>Developement Resources</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getResources()
+	 * @see #getDevelopementResources()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String RESOURCES_EDEFAULT = null;
+	protected static final String DEVELOPEMENT_RESOURCES_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getResources() <em>Resources</em>}' attribute.
+	 * The cached value of the '{@link #getDevelopementResources() <em>Developement Resources</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getResources()
+	 * @see #getDevelopementResources()
 	 * @generated
 	 * @ordered
 	 */
-	protected String resources = RESOURCES_EDEFAULT;
+	protected String developementResources = DEVELOPEMENT_RESOURCES_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getHumanOversightPreAssessment() <em>Human Oversight Pre Assessment</em>}' attribute.
@@ -325,64 +326,64 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	protected String humanOversightPreAssessment = HUMAN_OVERSIGHT_PRE_ASSESSMENT_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getPlannedModification() <em>Planned Modification</em>}' attribute.
+	 * The default value of the '{@link #getPredeterminedChanges() <em>Predetermined Changes</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPlannedModification()
+	 * @see #getPredeterminedChanges()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String PLANNED_MODIFICATION_EDEFAULT = null;
+	protected static final String PREDETERMINED_CHANGES_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getPlannedModification() <em>Planned Modification</em>}' attribute.
+	 * The cached value of the '{@link #getPredeterminedChanges() <em>Predetermined Changes</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPlannedModification()
+	 * @see #getPredeterminedChanges()
 	 * @generated
 	 * @ordered
 	 */
-	protected String plannedModification = PLANNED_MODIFICATION_EDEFAULT;
+	protected String predeterminedChanges = PREDETERMINED_CHANGES_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCybersecurity() <em>Cybersecurity</em>}' attribute.
+	 * The default value of the '{@link #getCybersecurityMeasures() <em>Cybersecurity Measures</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCybersecurity()
+	 * @see #getCybersecurityMeasures()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CYBERSECURITY_EDEFAULT = null;
+	protected static final String CYBERSECURITY_MEASURES_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getCybersecurity() <em>Cybersecurity</em>}' attribute.
+	 * The cached value of the '{@link #getCybersecurityMeasures() <em>Cybersecurity Measures</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCybersecurity()
+	 * @see #getCybersecurityMeasures()
 	 * @generated
 	 * @ordered
 	 */
-	protected String cybersecurity = CYBERSECURITY_EDEFAULT;
+	protected String cybersecurityMeasures = CYBERSECURITY_MEASURES_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getHumanOversightPostAssessment() <em>Human Oversight Post Assessment</em>}' attribute.
+	 * The default value of the '{@link #getHumanOversightMeasures() <em>Human Oversight Measures</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getHumanOversightPostAssessment()
+	 * @see #getHumanOversightMeasures()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String HUMAN_OVERSIGHT_POST_ASSESSMENT_EDEFAULT = null;
+	protected static final String HUMAN_OVERSIGHT_MEASURES_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getHumanOversightPostAssessment() <em>Human Oversight Post Assessment</em>}' attribute.
+	 * The cached value of the '{@link #getHumanOversightMeasures() <em>Human Oversight Measures</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getHumanOversightPostAssessment()
+	 * @see #getHumanOversightMeasures()
 	 * @generated
 	 * @ordered
 	 */
-	protected String humanOversightPostAssessment = HUMAN_OVERSIGHT_POST_ASSESSMENT_EDEFAULT;
+	protected String humanOversightMeasures = HUMAN_OVERSIGHT_MEASURES_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getUpdateRequirements() <em>Update Requirements</em>}' attribute.
@@ -405,44 +406,44 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	protected String updateRequirements = UPDATE_REQUIREMENTS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getPredictableRisks() <em>Predictable Risks</em>}' attribute.
+	 * The default value of the '{@link #getForseeableRisks() <em>Forseeable Risks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPredictableRisks()
+	 * @see #getForseeableRisks()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String PREDICTABLE_RISKS_EDEFAULT = null;
+	protected static final String FORSEEABLE_RISKS_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getPredictableRisks() <em>Predictable Risks</em>}' attribute.
+	 * The cached value of the '{@link #getForseeableRisks() <em>Forseeable Risks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPredictableRisks()
+	 * @see #getForseeableRisks()
 	 * @generated
 	 * @ordered
 	 */
-	protected String predictableRisks = PREDICTABLE_RISKS_EDEFAULT;
+	protected String forseeableRisks = FORSEEABLE_RISKS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getPerformanceMetricsSuitability() <em>Performance Metrics Suitability</em>}' attribute.
+	 * The default value of the '{@link #getPerformanceMetricsAppropriateness() <em>Performance Metrics Appropriateness</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPerformanceMetricsSuitability()
+	 * @see #getPerformanceMetricsAppropriateness()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String PERFORMANCE_METRICS_SUITABILITY_EDEFAULT = null;
+	protected static final String PERFORMANCE_METRICS_APPROPRIATENESS_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getPerformanceMetricsSuitability() <em>Performance Metrics Suitability</em>}' attribute.
+	 * The cached value of the '{@link #getPerformanceMetricsAppropriateness() <em>Performance Metrics Appropriateness</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPerformanceMetricsSuitability()
+	 * @see #getPerformanceMetricsAppropriateness()
 	 * @generated
 	 * @ordered
 	 */
-	protected String performanceMetricsSuitability = PERFORMANCE_METRICS_SUITABILITY_EDEFAULT;
+	protected String performanceMetricsAppropriateness = PERFORMANCE_METRICS_APPROPRIATENESS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getRelevantChanges() <em>Relevant Changes</em>}' attribute.
@@ -563,6 +564,26 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @ordered
 	 */
 	protected String providerContact = PROVIDER_CONTACT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAffectedPersons() <em>Affected Persons</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAffectedPersons()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String AFFECTED_PERSONS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAffectedPersons() <em>Affected Persons</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAffectedPersons()
+	 * @generated
+	 * @ordered
+	 */
+	protected String affectedPersons = AFFECTED_PERSONS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -698,8 +719,8 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
-	public String getHardware() {
-		return hardware;
+	public String getHardwareDescription() {
+		return hardwareDescription;
 	}
 
 	/**
@@ -708,11 +729,11 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
-	public void setHardware(String newHardware) {
-		String oldHardware = hardware;
-		hardware = newHardware;
+	public void setHardwareDescription(String newHardwareDescription) {
+		String oldHardwareDescription = hardwareDescription;
+		hardwareDescription = newHardwareDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__HARDWARE, oldHardware, hardware));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__HARDWARE_DESCRIPTION, oldHardwareDescription, hardwareDescription));
 	}
 
 	/**
@@ -744,8 +765,8 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
-	public String getUserInterface() {
-		return userInterface;
+	public String getUserInterfaceDescription() {
+		return userInterfaceDescription;
 	}
 
 	/**
@@ -754,11 +775,11 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
-	public void setUserInterface(String newUserInterface) {
-		String oldUserInterface = userInterface;
-		userInterface = newUserInterface;
+	public void setUserInterfaceDescription(String newUserInterfaceDescription) {
+		String oldUserInterfaceDescription = userInterfaceDescription;
+		userInterfaceDescription = newUserInterfaceDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__USER_INTERFACE, oldUserInterface, userInterface));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__USER_INTERFACE_DESCRIPTION, oldUserInterfaceDescription, userInterfaceDescription));
 	}
 
 	/**
@@ -767,8 +788,8 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
-	public String getInstructions() {
-		return instructions;
+	public String getInstructionsForUse() {
+		return instructionsForUse;
 	}
 
 	/**
@@ -777,11 +798,11 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
-	public void setInstructions(String newInstructions) {
-		String oldInstructions = instructions;
-		instructions = newInstructions;
+	public void setInstructionsForUse(String newInstructionsForUse) {
+		String oldInstructionsForUse = instructionsForUse;
+		instructionsForUse = newInstructionsForUse;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__INSTRUCTIONS, oldInstructions, instructions));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__INSTRUCTIONS_FOR_USE, oldInstructionsForUse, instructionsForUse));
 	}
 
 	/**
@@ -790,8 +811,8 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
-	public String getDevelopmentProcess() {
-		return developmentProcess;
+	public String getDevelopmentSteps() {
+		return developmentSteps;
 	}
 
 	/**
@@ -800,11 +821,11 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
-	public void setDevelopmentProcess(String newDevelopmentProcess) {
-		String oldDevelopmentProcess = developmentProcess;
-		developmentProcess = newDevelopmentProcess;
+	public void setDevelopmentSteps(String newDevelopmentSteps) {
+		String oldDevelopmentSteps = developmentSteps;
+		developmentSteps = newDevelopmentSteps;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__DEVELOPMENT_PROCESS, oldDevelopmentProcess, developmentProcess));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__DEVELOPMENT_STEPS, oldDevelopmentSteps, developmentSteps));
 	}
 
 	/**
@@ -836,8 +857,8 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
-	public String getDesignDecision() {
-		return designDecision;
+	public String getKeyDesignDecision() {
+		return keyDesignDecision;
 	}
 
 	/**
@@ -846,11 +867,11 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
-	public void setDesignDecision(String newDesignDecision) {
-		String oldDesignDecision = designDecision;
-		designDecision = newDesignDecision;
+	public void setKeyDesignDecision(String newKeyDesignDecision) {
+		String oldKeyDesignDecision = keyDesignDecision;
+		keyDesignDecision = newKeyDesignDecision;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__DESIGN_DECISION, oldDesignDecision, designDecision));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__KEY_DESIGN_DECISION, oldKeyDesignDecision, keyDesignDecision));
 	}
 
 	/**
@@ -882,8 +903,8 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
-	public String getResources() {
-		return resources;
+	public String getDevelopementResources() {
+		return developementResources;
 	}
 
 	/**
@@ -892,11 +913,11 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
-	public void setResources(String newResources) {
-		String oldResources = resources;
-		resources = newResources;
+	public void setDevelopementResources(String newDevelopementResources) {
+		String oldDevelopementResources = developementResources;
+		developementResources = newDevelopementResources;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__RESOURCES, oldResources, resources));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__DEVELOPEMENT_RESOURCES, oldDevelopementResources, developementResources));
 	}
 
 	/**
@@ -928,8 +949,8 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
-	public String getPlannedModification() {
-		return plannedModification;
+	public String getPredeterminedChanges() {
+		return predeterminedChanges;
 	}
 
 	/**
@@ -938,11 +959,11 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
-	public void setPlannedModification(String newPlannedModification) {
-		String oldPlannedModification = plannedModification;
-		plannedModification = newPlannedModification;
+	public void setPredeterminedChanges(String newPredeterminedChanges) {
+		String oldPredeterminedChanges = predeterminedChanges;
+		predeterminedChanges = newPredeterminedChanges;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__PLANNED_MODIFICATION, oldPlannedModification, plannedModification));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__PREDETERMINED_CHANGES, oldPredeterminedChanges, predeterminedChanges));
 	}
 
 	/**
@@ -951,8 +972,8 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
-	public String getCybersecurity() {
-		return cybersecurity;
+	public String getCybersecurityMeasures() {
+		return cybersecurityMeasures;
 	}
 
 	/**
@@ -961,11 +982,11 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
-	public void setCybersecurity(String newCybersecurity) {
-		String oldCybersecurity = cybersecurity;
-		cybersecurity = newCybersecurity;
+	public void setCybersecurityMeasures(String newCybersecurityMeasures) {
+		String oldCybersecurityMeasures = cybersecurityMeasures;
+		cybersecurityMeasures = newCybersecurityMeasures;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__CYBERSECURITY, oldCybersecurity, cybersecurity));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__CYBERSECURITY_MEASURES, oldCybersecurityMeasures, cybersecurityMeasures));
 	}
 
 	/**
@@ -974,8 +995,8 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
-	public String getHumanOversightPostAssessment() {
-		return humanOversightPostAssessment;
+	public String getHumanOversightMeasures() {
+		return humanOversightMeasures;
 	}
 
 	/**
@@ -984,11 +1005,11 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
-	public void setHumanOversightPostAssessment(String newHumanOversightPostAssessment) {
-		String oldHumanOversightPostAssessment = humanOversightPostAssessment;
-		humanOversightPostAssessment = newHumanOversightPostAssessment;
+	public void setHumanOversightMeasures(String newHumanOversightMeasures) {
+		String oldHumanOversightMeasures = humanOversightMeasures;
+		humanOversightMeasures = newHumanOversightMeasures;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__HUMAN_OVERSIGHT_POST_ASSESSMENT, oldHumanOversightPostAssessment, humanOversightPostAssessment));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__HUMAN_OVERSIGHT_MEASURES, oldHumanOversightMeasures, humanOversightMeasures));
 	}
 
 	/**
@@ -1020,8 +1041,8 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
-	public String getPredictableRisks() {
-		return predictableRisks;
+	public String getForseeableRisks() {
+		return forseeableRisks;
 	}
 
 	/**
@@ -1030,11 +1051,11 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
-	public void setPredictableRisks(String newPredictableRisks) {
-		String oldPredictableRisks = predictableRisks;
-		predictableRisks = newPredictableRisks;
+	public void setForseeableRisks(String newForseeableRisks) {
+		String oldForseeableRisks = forseeableRisks;
+		forseeableRisks = newForseeableRisks;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__PREDICTABLE_RISKS, oldPredictableRisks, predictableRisks));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__FORSEEABLE_RISKS, oldForseeableRisks, forseeableRisks));
 	}
 
 	/**
@@ -1043,8 +1064,8 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
-	public String getPerformanceMetricsSuitability() {
-		return performanceMetricsSuitability;
+	public String getPerformanceMetricsAppropriateness() {
+		return performanceMetricsAppropriateness;
 	}
 
 	/**
@@ -1053,11 +1074,11 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
-	public void setPerformanceMetricsSuitability(String newPerformanceMetricsSuitability) {
-		String oldPerformanceMetricsSuitability = performanceMetricsSuitability;
-		performanceMetricsSuitability = newPerformanceMetricsSuitability;
+	public void setPerformanceMetricsAppropriateness(String newPerformanceMetricsAppropriateness) {
+		String oldPerformanceMetricsAppropriateness = performanceMetricsAppropriateness;
+		performanceMetricsAppropriateness = newPerformanceMetricsAppropriateness;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__PERFORMANCE_METRICS_SUITABILITY, oldPerformanceMetricsSuitability, performanceMetricsSuitability));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__PERFORMANCE_METRICS_APPROPRIATENESS, oldPerformanceMetricsAppropriateness, performanceMetricsAppropriateness));
 	}
 
 	/**
@@ -1204,6 +1225,29 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
+	public String getAffectedPersons() {
+		return affectedPersons;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAffectedPersons(String newAffectedPersons) {
+		String oldAffectedPersons = affectedPersons;
+		affectedPersons = newAffectedPersons;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__AFFECTED_PERSONS, oldAffectedPersons, affectedPersons));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case EuaiactcompliancePackage.AI_SYSTEM__BASE_COMPONENT:
@@ -1215,38 +1259,38 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 				return getExternalInteraction();
 			case EuaiactcompliancePackage.AI_SYSTEM__MARKET_PLACEMENT_FORM:
 				return getMarketPlacementForm();
-			case EuaiactcompliancePackage.AI_SYSTEM__HARDWARE:
-				return getHardware();
+			case EuaiactcompliancePackage.AI_SYSTEM__HARDWARE_DESCRIPTION:
+				return getHardwareDescription();
 			case EuaiactcompliancePackage.AI_SYSTEM__VISUAL_DOCUMENTATION:
 				return isVisualDocumentation();
-			case EuaiactcompliancePackage.AI_SYSTEM__USER_INTERFACE:
-				return getUserInterface();
-			case EuaiactcompliancePackage.AI_SYSTEM__INSTRUCTIONS:
-				return getInstructions();
-			case EuaiactcompliancePackage.AI_SYSTEM__DEVELOPMENT_PROCESS:
-				return getDevelopmentProcess();
+			case EuaiactcompliancePackage.AI_SYSTEM__USER_INTERFACE_DESCRIPTION:
+				return getUserInterfaceDescription();
+			case EuaiactcompliancePackage.AI_SYSTEM__INSTRUCTIONS_FOR_USE:
+				return getInstructionsForUse();
+			case EuaiactcompliancePackage.AI_SYSTEM__DEVELOPMENT_STEPS:
+				return getDevelopmentSteps();
 			case EuaiactcompliancePackage.AI_SYSTEM__DESIGN_SPECIFICATION:
 				return getDesignSpecification();
-			case EuaiactcompliancePackage.AI_SYSTEM__DESIGN_DECISION:
-				return getDesignDecision();
+			case EuaiactcompliancePackage.AI_SYSTEM__KEY_DESIGN_DECISION:
+				return getKeyDesignDecision();
 			case EuaiactcompliancePackage.AI_SYSTEM__DESIGN_TRADE_OFFS:
 				return getDesignTradeOffs();
-			case EuaiactcompliancePackage.AI_SYSTEM__RESOURCES:
-				return getResources();
+			case EuaiactcompliancePackage.AI_SYSTEM__DEVELOPEMENT_RESOURCES:
+				return getDevelopementResources();
 			case EuaiactcompliancePackage.AI_SYSTEM__HUMAN_OVERSIGHT_PRE_ASSESSMENT:
 				return getHumanOversightPreAssessment();
-			case EuaiactcompliancePackage.AI_SYSTEM__PLANNED_MODIFICATION:
-				return getPlannedModification();
-			case EuaiactcompliancePackage.AI_SYSTEM__CYBERSECURITY:
-				return getCybersecurity();
-			case EuaiactcompliancePackage.AI_SYSTEM__HUMAN_OVERSIGHT_POST_ASSESSMENT:
-				return getHumanOversightPostAssessment();
+			case EuaiactcompliancePackage.AI_SYSTEM__PREDETERMINED_CHANGES:
+				return getPredeterminedChanges();
+			case EuaiactcompliancePackage.AI_SYSTEM__CYBERSECURITY_MEASURES:
+				return getCybersecurityMeasures();
+			case EuaiactcompliancePackage.AI_SYSTEM__HUMAN_OVERSIGHT_MEASURES:
+				return getHumanOversightMeasures();
 			case EuaiactcompliancePackage.AI_SYSTEM__UPDATE_REQUIREMENTS:
 				return getUpdateRequirements();
-			case EuaiactcompliancePackage.AI_SYSTEM__PREDICTABLE_RISKS:
-				return getPredictableRisks();
-			case EuaiactcompliancePackage.AI_SYSTEM__PERFORMANCE_METRICS_SUITABILITY:
-				return getPerformanceMetricsSuitability();
+			case EuaiactcompliancePackage.AI_SYSTEM__FORSEEABLE_RISKS:
+				return getForseeableRisks();
+			case EuaiactcompliancePackage.AI_SYSTEM__PERFORMANCE_METRICS_APPROPRIATENESS:
+				return getPerformanceMetricsAppropriateness();
 			case EuaiactcompliancePackage.AI_SYSTEM__RELEVANT_CHANGES:
 				return getRelevantChanges();
 			case EuaiactcompliancePackage.AI_SYSTEM__HARMONISED_STANDARDS:
@@ -1259,6 +1303,8 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 				return getProviderName();
 			case EuaiactcompliancePackage.AI_SYSTEM__PROVIDER_CONTACT:
 				return getProviderContact();
+			case EuaiactcompliancePackage.AI_SYSTEM__AFFECTED_PERSONS:
+				return getAffectedPersons();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -1283,53 +1329,53 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 			case EuaiactcompliancePackage.AI_SYSTEM__MARKET_PLACEMENT_FORM:
 				setMarketPlacementForm((String)newValue);
 				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__HARDWARE:
-				setHardware((String)newValue);
+			case EuaiactcompliancePackage.AI_SYSTEM__HARDWARE_DESCRIPTION:
+				setHardwareDescription((String)newValue);
 				return;
 			case EuaiactcompliancePackage.AI_SYSTEM__VISUAL_DOCUMENTATION:
 				setVisualDocumentation((Boolean)newValue);
 				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__USER_INTERFACE:
-				setUserInterface((String)newValue);
+			case EuaiactcompliancePackage.AI_SYSTEM__USER_INTERFACE_DESCRIPTION:
+				setUserInterfaceDescription((String)newValue);
 				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__INSTRUCTIONS:
-				setInstructions((String)newValue);
+			case EuaiactcompliancePackage.AI_SYSTEM__INSTRUCTIONS_FOR_USE:
+				setInstructionsForUse((String)newValue);
 				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__DEVELOPMENT_PROCESS:
-				setDevelopmentProcess((String)newValue);
+			case EuaiactcompliancePackage.AI_SYSTEM__DEVELOPMENT_STEPS:
+				setDevelopmentSteps((String)newValue);
 				return;
 			case EuaiactcompliancePackage.AI_SYSTEM__DESIGN_SPECIFICATION:
 				setDesignSpecification((String)newValue);
 				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__DESIGN_DECISION:
-				setDesignDecision((String)newValue);
+			case EuaiactcompliancePackage.AI_SYSTEM__KEY_DESIGN_DECISION:
+				setKeyDesignDecision((String)newValue);
 				return;
 			case EuaiactcompliancePackage.AI_SYSTEM__DESIGN_TRADE_OFFS:
 				setDesignTradeOffs((String)newValue);
 				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__RESOURCES:
-				setResources((String)newValue);
+			case EuaiactcompliancePackage.AI_SYSTEM__DEVELOPEMENT_RESOURCES:
+				setDevelopementResources((String)newValue);
 				return;
 			case EuaiactcompliancePackage.AI_SYSTEM__HUMAN_OVERSIGHT_PRE_ASSESSMENT:
 				setHumanOversightPreAssessment((String)newValue);
 				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__PLANNED_MODIFICATION:
-				setPlannedModification((String)newValue);
+			case EuaiactcompliancePackage.AI_SYSTEM__PREDETERMINED_CHANGES:
+				setPredeterminedChanges((String)newValue);
 				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__CYBERSECURITY:
-				setCybersecurity((String)newValue);
+			case EuaiactcompliancePackage.AI_SYSTEM__CYBERSECURITY_MEASURES:
+				setCybersecurityMeasures((String)newValue);
 				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__HUMAN_OVERSIGHT_POST_ASSESSMENT:
-				setHumanOversightPostAssessment((String)newValue);
+			case EuaiactcompliancePackage.AI_SYSTEM__HUMAN_OVERSIGHT_MEASURES:
+				setHumanOversightMeasures((String)newValue);
 				return;
 			case EuaiactcompliancePackage.AI_SYSTEM__UPDATE_REQUIREMENTS:
 				setUpdateRequirements((String)newValue);
 				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__PREDICTABLE_RISKS:
-				setPredictableRisks((String)newValue);
+			case EuaiactcompliancePackage.AI_SYSTEM__FORSEEABLE_RISKS:
+				setForseeableRisks((String)newValue);
 				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__PERFORMANCE_METRICS_SUITABILITY:
-				setPerformanceMetricsSuitability((String)newValue);
+			case EuaiactcompliancePackage.AI_SYSTEM__PERFORMANCE_METRICS_APPROPRIATENESS:
+				setPerformanceMetricsAppropriateness((String)newValue);
 				return;
 			case EuaiactcompliancePackage.AI_SYSTEM__RELEVANT_CHANGES:
 				setRelevantChanges((String)newValue);
@@ -1348,6 +1394,9 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 				return;
 			case EuaiactcompliancePackage.AI_SYSTEM__PROVIDER_CONTACT:
 				setProviderContact((String)newValue);
+				return;
+			case EuaiactcompliancePackage.AI_SYSTEM__AFFECTED_PERSONS:
+				setAffectedPersons((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -1373,53 +1422,53 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 			case EuaiactcompliancePackage.AI_SYSTEM__MARKET_PLACEMENT_FORM:
 				setMarketPlacementForm(MARKET_PLACEMENT_FORM_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__HARDWARE:
-				setHardware(HARDWARE_EDEFAULT);
+			case EuaiactcompliancePackage.AI_SYSTEM__HARDWARE_DESCRIPTION:
+				setHardwareDescription(HARDWARE_DESCRIPTION_EDEFAULT);
 				return;
 			case EuaiactcompliancePackage.AI_SYSTEM__VISUAL_DOCUMENTATION:
 				setVisualDocumentation(VISUAL_DOCUMENTATION_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__USER_INTERFACE:
-				setUserInterface(USER_INTERFACE_EDEFAULT);
+			case EuaiactcompliancePackage.AI_SYSTEM__USER_INTERFACE_DESCRIPTION:
+				setUserInterfaceDescription(USER_INTERFACE_DESCRIPTION_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__INSTRUCTIONS:
-				setInstructions(INSTRUCTIONS_EDEFAULT);
+			case EuaiactcompliancePackage.AI_SYSTEM__INSTRUCTIONS_FOR_USE:
+				setInstructionsForUse(INSTRUCTIONS_FOR_USE_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__DEVELOPMENT_PROCESS:
-				setDevelopmentProcess(DEVELOPMENT_PROCESS_EDEFAULT);
+			case EuaiactcompliancePackage.AI_SYSTEM__DEVELOPMENT_STEPS:
+				setDevelopmentSteps(DEVELOPMENT_STEPS_EDEFAULT);
 				return;
 			case EuaiactcompliancePackage.AI_SYSTEM__DESIGN_SPECIFICATION:
 				setDesignSpecification(DESIGN_SPECIFICATION_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__DESIGN_DECISION:
-				setDesignDecision(DESIGN_DECISION_EDEFAULT);
+			case EuaiactcompliancePackage.AI_SYSTEM__KEY_DESIGN_DECISION:
+				setKeyDesignDecision(KEY_DESIGN_DECISION_EDEFAULT);
 				return;
 			case EuaiactcompliancePackage.AI_SYSTEM__DESIGN_TRADE_OFFS:
 				setDesignTradeOffs(DESIGN_TRADE_OFFS_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__RESOURCES:
-				setResources(RESOURCES_EDEFAULT);
+			case EuaiactcompliancePackage.AI_SYSTEM__DEVELOPEMENT_RESOURCES:
+				setDevelopementResources(DEVELOPEMENT_RESOURCES_EDEFAULT);
 				return;
 			case EuaiactcompliancePackage.AI_SYSTEM__HUMAN_OVERSIGHT_PRE_ASSESSMENT:
 				setHumanOversightPreAssessment(HUMAN_OVERSIGHT_PRE_ASSESSMENT_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__PLANNED_MODIFICATION:
-				setPlannedModification(PLANNED_MODIFICATION_EDEFAULT);
+			case EuaiactcompliancePackage.AI_SYSTEM__PREDETERMINED_CHANGES:
+				setPredeterminedChanges(PREDETERMINED_CHANGES_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__CYBERSECURITY:
-				setCybersecurity(CYBERSECURITY_EDEFAULT);
+			case EuaiactcompliancePackage.AI_SYSTEM__CYBERSECURITY_MEASURES:
+				setCybersecurityMeasures(CYBERSECURITY_MEASURES_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__HUMAN_OVERSIGHT_POST_ASSESSMENT:
-				setHumanOversightPostAssessment(HUMAN_OVERSIGHT_POST_ASSESSMENT_EDEFAULT);
+			case EuaiactcompliancePackage.AI_SYSTEM__HUMAN_OVERSIGHT_MEASURES:
+				setHumanOversightMeasures(HUMAN_OVERSIGHT_MEASURES_EDEFAULT);
 				return;
 			case EuaiactcompliancePackage.AI_SYSTEM__UPDATE_REQUIREMENTS:
 				setUpdateRequirements(UPDATE_REQUIREMENTS_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__PREDICTABLE_RISKS:
-				setPredictableRisks(PREDICTABLE_RISKS_EDEFAULT);
+			case EuaiactcompliancePackage.AI_SYSTEM__FORSEEABLE_RISKS:
+				setForseeableRisks(FORSEEABLE_RISKS_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__PERFORMANCE_METRICS_SUITABILITY:
-				setPerformanceMetricsSuitability(PERFORMANCE_METRICS_SUITABILITY_EDEFAULT);
+			case EuaiactcompliancePackage.AI_SYSTEM__PERFORMANCE_METRICS_APPROPRIATENESS:
+				setPerformanceMetricsAppropriateness(PERFORMANCE_METRICS_APPROPRIATENESS_EDEFAULT);
 				return;
 			case EuaiactcompliancePackage.AI_SYSTEM__RELEVANT_CHANGES:
 				setRelevantChanges(RELEVANT_CHANGES_EDEFAULT);
@@ -1438,6 +1487,9 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 				return;
 			case EuaiactcompliancePackage.AI_SYSTEM__PROVIDER_CONTACT:
 				setProviderContact(PROVIDER_CONTACT_EDEFAULT);
+				return;
+			case EuaiactcompliancePackage.AI_SYSTEM__AFFECTED_PERSONS:
+				setAffectedPersons(AFFECTED_PERSONS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -1459,38 +1511,38 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 				return EXTERNAL_INTERACTION_EDEFAULT == null ? externalInteraction != null : !EXTERNAL_INTERACTION_EDEFAULT.equals(externalInteraction);
 			case EuaiactcompliancePackage.AI_SYSTEM__MARKET_PLACEMENT_FORM:
 				return MARKET_PLACEMENT_FORM_EDEFAULT == null ? marketPlacementForm != null : !MARKET_PLACEMENT_FORM_EDEFAULT.equals(marketPlacementForm);
-			case EuaiactcompliancePackage.AI_SYSTEM__HARDWARE:
-				return HARDWARE_EDEFAULT == null ? hardware != null : !HARDWARE_EDEFAULT.equals(hardware);
+			case EuaiactcompliancePackage.AI_SYSTEM__HARDWARE_DESCRIPTION:
+				return HARDWARE_DESCRIPTION_EDEFAULT == null ? hardwareDescription != null : !HARDWARE_DESCRIPTION_EDEFAULT.equals(hardwareDescription);
 			case EuaiactcompliancePackage.AI_SYSTEM__VISUAL_DOCUMENTATION:
 				return visualDocumentation != VISUAL_DOCUMENTATION_EDEFAULT;
-			case EuaiactcompliancePackage.AI_SYSTEM__USER_INTERFACE:
-				return USER_INTERFACE_EDEFAULT == null ? userInterface != null : !USER_INTERFACE_EDEFAULT.equals(userInterface);
-			case EuaiactcompliancePackage.AI_SYSTEM__INSTRUCTIONS:
-				return INSTRUCTIONS_EDEFAULT == null ? instructions != null : !INSTRUCTIONS_EDEFAULT.equals(instructions);
-			case EuaiactcompliancePackage.AI_SYSTEM__DEVELOPMENT_PROCESS:
-				return DEVELOPMENT_PROCESS_EDEFAULT == null ? developmentProcess != null : !DEVELOPMENT_PROCESS_EDEFAULT.equals(developmentProcess);
+			case EuaiactcompliancePackage.AI_SYSTEM__USER_INTERFACE_DESCRIPTION:
+				return USER_INTERFACE_DESCRIPTION_EDEFAULT == null ? userInterfaceDescription != null : !USER_INTERFACE_DESCRIPTION_EDEFAULT.equals(userInterfaceDescription);
+			case EuaiactcompliancePackage.AI_SYSTEM__INSTRUCTIONS_FOR_USE:
+				return INSTRUCTIONS_FOR_USE_EDEFAULT == null ? instructionsForUse != null : !INSTRUCTIONS_FOR_USE_EDEFAULT.equals(instructionsForUse);
+			case EuaiactcompliancePackage.AI_SYSTEM__DEVELOPMENT_STEPS:
+				return DEVELOPMENT_STEPS_EDEFAULT == null ? developmentSteps != null : !DEVELOPMENT_STEPS_EDEFAULT.equals(developmentSteps);
 			case EuaiactcompliancePackage.AI_SYSTEM__DESIGN_SPECIFICATION:
 				return DESIGN_SPECIFICATION_EDEFAULT == null ? designSpecification != null : !DESIGN_SPECIFICATION_EDEFAULT.equals(designSpecification);
-			case EuaiactcompliancePackage.AI_SYSTEM__DESIGN_DECISION:
-				return DESIGN_DECISION_EDEFAULT == null ? designDecision != null : !DESIGN_DECISION_EDEFAULT.equals(designDecision);
+			case EuaiactcompliancePackage.AI_SYSTEM__KEY_DESIGN_DECISION:
+				return KEY_DESIGN_DECISION_EDEFAULT == null ? keyDesignDecision != null : !KEY_DESIGN_DECISION_EDEFAULT.equals(keyDesignDecision);
 			case EuaiactcompliancePackage.AI_SYSTEM__DESIGN_TRADE_OFFS:
 				return DESIGN_TRADE_OFFS_EDEFAULT == null ? designTradeOffs != null : !DESIGN_TRADE_OFFS_EDEFAULT.equals(designTradeOffs);
-			case EuaiactcompliancePackage.AI_SYSTEM__RESOURCES:
-				return RESOURCES_EDEFAULT == null ? resources != null : !RESOURCES_EDEFAULT.equals(resources);
+			case EuaiactcompliancePackage.AI_SYSTEM__DEVELOPEMENT_RESOURCES:
+				return DEVELOPEMENT_RESOURCES_EDEFAULT == null ? developementResources != null : !DEVELOPEMENT_RESOURCES_EDEFAULT.equals(developementResources);
 			case EuaiactcompliancePackage.AI_SYSTEM__HUMAN_OVERSIGHT_PRE_ASSESSMENT:
 				return HUMAN_OVERSIGHT_PRE_ASSESSMENT_EDEFAULT == null ? humanOversightPreAssessment != null : !HUMAN_OVERSIGHT_PRE_ASSESSMENT_EDEFAULT.equals(humanOversightPreAssessment);
-			case EuaiactcompliancePackage.AI_SYSTEM__PLANNED_MODIFICATION:
-				return PLANNED_MODIFICATION_EDEFAULT == null ? plannedModification != null : !PLANNED_MODIFICATION_EDEFAULT.equals(plannedModification);
-			case EuaiactcompliancePackage.AI_SYSTEM__CYBERSECURITY:
-				return CYBERSECURITY_EDEFAULT == null ? cybersecurity != null : !CYBERSECURITY_EDEFAULT.equals(cybersecurity);
-			case EuaiactcompliancePackage.AI_SYSTEM__HUMAN_OVERSIGHT_POST_ASSESSMENT:
-				return HUMAN_OVERSIGHT_POST_ASSESSMENT_EDEFAULT == null ? humanOversightPostAssessment != null : !HUMAN_OVERSIGHT_POST_ASSESSMENT_EDEFAULT.equals(humanOversightPostAssessment);
+			case EuaiactcompliancePackage.AI_SYSTEM__PREDETERMINED_CHANGES:
+				return PREDETERMINED_CHANGES_EDEFAULT == null ? predeterminedChanges != null : !PREDETERMINED_CHANGES_EDEFAULT.equals(predeterminedChanges);
+			case EuaiactcompliancePackage.AI_SYSTEM__CYBERSECURITY_MEASURES:
+				return CYBERSECURITY_MEASURES_EDEFAULT == null ? cybersecurityMeasures != null : !CYBERSECURITY_MEASURES_EDEFAULT.equals(cybersecurityMeasures);
+			case EuaiactcompliancePackage.AI_SYSTEM__HUMAN_OVERSIGHT_MEASURES:
+				return HUMAN_OVERSIGHT_MEASURES_EDEFAULT == null ? humanOversightMeasures != null : !HUMAN_OVERSIGHT_MEASURES_EDEFAULT.equals(humanOversightMeasures);
 			case EuaiactcompliancePackage.AI_SYSTEM__UPDATE_REQUIREMENTS:
 				return UPDATE_REQUIREMENTS_EDEFAULT == null ? updateRequirements != null : !UPDATE_REQUIREMENTS_EDEFAULT.equals(updateRequirements);
-			case EuaiactcompliancePackage.AI_SYSTEM__PREDICTABLE_RISKS:
-				return PREDICTABLE_RISKS_EDEFAULT == null ? predictableRisks != null : !PREDICTABLE_RISKS_EDEFAULT.equals(predictableRisks);
-			case EuaiactcompliancePackage.AI_SYSTEM__PERFORMANCE_METRICS_SUITABILITY:
-				return PERFORMANCE_METRICS_SUITABILITY_EDEFAULT == null ? performanceMetricsSuitability != null : !PERFORMANCE_METRICS_SUITABILITY_EDEFAULT.equals(performanceMetricsSuitability);
+			case EuaiactcompliancePackage.AI_SYSTEM__FORSEEABLE_RISKS:
+				return FORSEEABLE_RISKS_EDEFAULT == null ? forseeableRisks != null : !FORSEEABLE_RISKS_EDEFAULT.equals(forseeableRisks);
+			case EuaiactcompliancePackage.AI_SYSTEM__PERFORMANCE_METRICS_APPROPRIATENESS:
+				return PERFORMANCE_METRICS_APPROPRIATENESS_EDEFAULT == null ? performanceMetricsAppropriateness != null : !PERFORMANCE_METRICS_APPROPRIATENESS_EDEFAULT.equals(performanceMetricsAppropriateness);
 			case EuaiactcompliancePackage.AI_SYSTEM__RELEVANT_CHANGES:
 				return RELEVANT_CHANGES_EDEFAULT == null ? relevantChanges != null : !RELEVANT_CHANGES_EDEFAULT.equals(relevantChanges);
 			case EuaiactcompliancePackage.AI_SYSTEM__HARMONISED_STANDARDS:
@@ -1503,6 +1555,8 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 				return PROVIDER_NAME_EDEFAULT == null ? providerName != null : !PROVIDER_NAME_EDEFAULT.equals(providerName);
 			case EuaiactcompliancePackage.AI_SYSTEM__PROVIDER_CONTACT:
 				return PROVIDER_CONTACT_EDEFAULT == null ? providerContact != null : !PROVIDER_CONTACT_EDEFAULT.equals(providerContact);
+			case EuaiactcompliancePackage.AI_SYSTEM__AFFECTED_PERSONS:
+				return AFFECTED_PERSONS_EDEFAULT == null ? affectedPersons != null : !AFFECTED_PERSONS_EDEFAULT.equals(affectedPersons);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1523,38 +1577,38 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 		result.append(externalInteraction);
 		result.append(", MarketPlacementForm: ");
 		result.append(marketPlacementForm);
-		result.append(", Hardware: ");
-		result.append(hardware);
+		result.append(", HardwareDescription: ");
+		result.append(hardwareDescription);
 		result.append(", VisualDocumentation: ");
 		result.append(visualDocumentation);
-		result.append(", UserInterface: ");
-		result.append(userInterface);
-		result.append(", Instructions: ");
-		result.append(instructions);
-		result.append(", DevelopmentProcess: ");
-		result.append(developmentProcess);
+		result.append(", UserInterfaceDescription: ");
+		result.append(userInterfaceDescription);
+		result.append(", InstructionsForUse: ");
+		result.append(instructionsForUse);
+		result.append(", DevelopmentSteps: ");
+		result.append(developmentSteps);
 		result.append(", DesignSpecification: ");
 		result.append(designSpecification);
-		result.append(", DesignDecision: ");
-		result.append(designDecision);
+		result.append(", KeyDesignDecision: ");
+		result.append(keyDesignDecision);
 		result.append(", DesignTradeOffs: ");
 		result.append(designTradeOffs);
-		result.append(", Resources: ");
-		result.append(resources);
+		result.append(", DevelopementResources: ");
+		result.append(developementResources);
 		result.append(", HumanOversightPreAssessment: ");
 		result.append(humanOversightPreAssessment);
-		result.append(", PlannedModification: ");
-		result.append(plannedModification);
-		result.append(", Cybersecurity: ");
-		result.append(cybersecurity);
-		result.append(", HumanOversightPostAssessment: ");
-		result.append(humanOversightPostAssessment);
+		result.append(", PredeterminedChanges: ");
+		result.append(predeterminedChanges);
+		result.append(", CybersecurityMeasures: ");
+		result.append(cybersecurityMeasures);
+		result.append(", HumanOversightMeasures: ");
+		result.append(humanOversightMeasures);
 		result.append(", UpdateRequirements: ");
 		result.append(updateRequirements);
-		result.append(", PredictableRisks: ");
-		result.append(predictableRisks);
-		result.append(", PerformanceMetricsSuitability: ");
-		result.append(performanceMetricsSuitability);
+		result.append(", ForseeableRisks: ");
+		result.append(forseeableRisks);
+		result.append(", PerformanceMetricsAppropriateness: ");
+		result.append(performanceMetricsAppropriateness);
 		result.append(", RelevantChanges: ");
 		result.append(relevantChanges);
 		result.append(", HarmonisedStandards: ");
@@ -1567,6 +1621,8 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 		result.append(providerName);
 		result.append(", ProviderContact: ");
 		result.append(providerContact);
+		result.append(", AffectedPersons: ");
+		result.append(affectedPersons);
 		result.append(')');
 		return result.toString();
 	}

@@ -21,12 +21,11 @@ public enum EUAIActCompliance {
 	MigrationBorder("MigrationBorder"), AdministrationJusticeDemocracy("AdministrationJusticeDemocracy"), Profiling("Profiling"),
 	RiskManagementSystem("RiskManagementSystem"),
 
-	// Limited risk / transparency obligations (Art. 50)
-	HumanInteraction("HumanInteraction"), SyntheticContent("SyntheticContent"), Deepfake("Deepfake"),
-	PublicInterestText("PublicInterestText");
+	// Limited risk / transparency obligations only for provider (Art. 50)
+	HumanInteraction("HumanInteraction"), SyntheticContent("SyntheticContent");
 
 	private static final String PROFILE_NAME = "euaiactcompliance";
-	private static final String PROFILE_VERSION = "2";
+	private static final String PROFILE_VERSION = "1";
 	private static final String PROFILE_URI = "platform:/plugin/carisma.profile.euaiactcompliance/profile/euaiactcompliance.profile.uml";
 
 	public static final CarismaProfileDescriptor DESCRIPTOR = new CarismaProfileDescriptor(PROFILE_NAME,

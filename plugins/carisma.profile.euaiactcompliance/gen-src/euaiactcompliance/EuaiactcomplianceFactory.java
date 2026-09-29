@@ -58,24 +58,6 @@ public interface EuaiactcomplianceFactory extends EFactory {
 	SyntheticContent createSyntheticContent();
 
 	/**
-	 * Returns a new object of class '<em>Deepfake</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Deepfake</em>'.
-	 * @generated
-	 */
-	Deepfake createDeepfake();
-
-	/**
-	 * Returns a new object of class '<em>Public Interest Text</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Public Interest Text</em>'.
-	 * @generated
-	 */
-	PublicInterestText createPublicInterestText();
-
-	/**
 	 * Returns a new object of class '<em>Manipulative Behaviour</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

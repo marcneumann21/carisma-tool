@@ -25,11 +25,8 @@ import org.eclipse.uml2.uml.Artifact;
  * <ul>
  *   <li>{@link euaiactcompliance.impl.RiskManagementSystemImpl#getRiskIdentification <em>Risk Identification</em>}</li>
  *   <li>{@link euaiactcompliance.impl.RiskManagementSystemImpl#getRiskEstimation <em>Risk Estimation</em>}</li>
- *   <li>{@link euaiactcompliance.impl.RiskManagementSystemImpl#getPostMarketRiskEvaluation <em>Post Market Risk Evaluation</em>}</li>
  *   <li>{@link euaiactcompliance.impl.RiskManagementSystemImpl#getRiskMitigation <em>Risk Mitigation</em>}</li>
  *   <li>{@link euaiactcompliance.impl.RiskManagementSystemImpl#getResidualRisk <em>Residual Risk</em>}</li>
- *   <li>{@link euaiactcompliance.impl.RiskManagementSystemImpl#getTestingProcedure <em>Testing Procedure</em>}</li>
- *   <li>{@link euaiactcompliance.impl.RiskManagementSystemImpl#getTestingMetrics <em>Testing Metrics</em>}</li>
  *   <li>{@link euaiactcompliance.impl.RiskManagementSystemImpl#getVulnerableGroupsAssessment <em>Vulnerable Groups Assessment</em>}</li>
  *   <li>{@link euaiactcompliance.impl.RiskManagementSystemImpl#getBase_Artifact <em>Base Artifact</em>}</li>
  * </ul>
@@ -78,26 +75,6 @@ public class RiskManagementSystemImpl extends MinimalEObjectImpl.Container imple
 	protected String riskEstimation = RISK_ESTIMATION_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getPostMarketRiskEvaluation() <em>Post Market Risk Evaluation</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPostMarketRiskEvaluation()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String POST_MARKET_RISK_EVALUATION_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getPostMarketRiskEvaluation() <em>Post Market Risk Evaluation</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPostMarketRiskEvaluation()
-	 * @generated
-	 * @ordered
-	 */
-	protected String postMarketRiskEvaluation = POST_MARKET_RISK_EVALUATION_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getRiskMitigation() <em>Risk Mitigation</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -136,46 +113,6 @@ public class RiskManagementSystemImpl extends MinimalEObjectImpl.Container imple
 	 * @ordered
 	 */
 	protected String residualRisk = RESIDUAL_RISK_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTestingProcedure() <em>Testing Procedure</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTestingProcedure()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TESTING_PROCEDURE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTestingProcedure() <em>Testing Procedure</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTestingProcedure()
-	 * @generated
-	 * @ordered
-	 */
-	protected String testingProcedure = TESTING_PROCEDURE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTestingMetrics() <em>Testing Metrics</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTestingMetrics()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TESTING_METRICS_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTestingMetrics() <em>Testing Metrics</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTestingMetrics()
-	 * @generated
-	 * @ordered
-	 */
-	protected String testingMetrics = TESTING_METRICS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getVulnerableGroupsAssessment() <em>Vulnerable Groups Assessment</em>}' attribute.
@@ -278,29 +215,6 @@ public class RiskManagementSystemImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 */
 	@Override
-	public String getPostMarketRiskEvaluation() {
-		return postMarketRiskEvaluation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setPostMarketRiskEvaluation(String newPostMarketRiskEvaluation) {
-		String oldPostMarketRiskEvaluation = postMarketRiskEvaluation;
-		postMarketRiskEvaluation = newPostMarketRiskEvaluation;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__POST_MARKET_RISK_EVALUATION, oldPostMarketRiskEvaluation, postMarketRiskEvaluation));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getRiskMitigation() {
 		return riskMitigation;
 	}
@@ -339,52 +253,6 @@ public class RiskManagementSystemImpl extends MinimalEObjectImpl.Container imple
 		residualRisk = newResidualRisk;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RESIDUAL_RISK, oldResidualRisk, residualRisk));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getTestingProcedure() {
-		return testingProcedure;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setTestingProcedure(String newTestingProcedure) {
-		String oldTestingProcedure = testingProcedure;
-		testingProcedure = newTestingProcedure;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__TESTING_PROCEDURE, oldTestingProcedure, testingProcedure));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getTestingMetrics() {
-		return testingMetrics;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setTestingMetrics(String newTestingMetrics) {
-		String oldTestingMetrics = testingMetrics;
-		testingMetrics = newTestingMetrics;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__TESTING_METRICS, oldTestingMetrics, testingMetrics));
 	}
 
 	/**
@@ -462,16 +330,10 @@ public class RiskManagementSystemImpl extends MinimalEObjectImpl.Container imple
 				return getRiskIdentification();
 			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RISK_ESTIMATION:
 				return getRiskEstimation();
-			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__POST_MARKET_RISK_EVALUATION:
-				return getPostMarketRiskEvaluation();
 			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RISK_MITIGATION:
 				return getRiskMitigation();
 			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RESIDUAL_RISK:
 				return getResidualRisk();
-			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__TESTING_PROCEDURE:
-				return getTestingProcedure();
-			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__TESTING_METRICS:
-				return getTestingMetrics();
 			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__VULNERABLE_GROUPS_ASSESSMENT:
 				return getVulnerableGroupsAssessment();
 			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__BASE_ARTIFACT:
@@ -495,20 +357,11 @@ public class RiskManagementSystemImpl extends MinimalEObjectImpl.Container imple
 			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RISK_ESTIMATION:
 				setRiskEstimation((String)newValue);
 				return;
-			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__POST_MARKET_RISK_EVALUATION:
-				setPostMarketRiskEvaluation((String)newValue);
-				return;
 			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RISK_MITIGATION:
 				setRiskMitigation((String)newValue);
 				return;
 			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RESIDUAL_RISK:
 				setResidualRisk((String)newValue);
-				return;
-			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__TESTING_PROCEDURE:
-				setTestingProcedure((String)newValue);
-				return;
-			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__TESTING_METRICS:
-				setTestingMetrics((String)newValue);
 				return;
 			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__VULNERABLE_GROUPS_ASSESSMENT:
 				setVulnerableGroupsAssessment((String)newValue);
@@ -534,20 +387,11 @@ public class RiskManagementSystemImpl extends MinimalEObjectImpl.Container imple
 			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RISK_ESTIMATION:
 				setRiskEstimation(RISK_ESTIMATION_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__POST_MARKET_RISK_EVALUATION:
-				setPostMarketRiskEvaluation(POST_MARKET_RISK_EVALUATION_EDEFAULT);
-				return;
 			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RISK_MITIGATION:
 				setRiskMitigation(RISK_MITIGATION_EDEFAULT);
 				return;
 			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RESIDUAL_RISK:
 				setResidualRisk(RESIDUAL_RISK_EDEFAULT);
-				return;
-			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__TESTING_PROCEDURE:
-				setTestingProcedure(TESTING_PROCEDURE_EDEFAULT);
-				return;
-			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__TESTING_METRICS:
-				setTestingMetrics(TESTING_METRICS_EDEFAULT);
 				return;
 			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__VULNERABLE_GROUPS_ASSESSMENT:
 				setVulnerableGroupsAssessment(VULNERABLE_GROUPS_ASSESSMENT_EDEFAULT);
@@ -571,16 +415,10 @@ public class RiskManagementSystemImpl extends MinimalEObjectImpl.Container imple
 				return RISK_IDENTIFICATION_EDEFAULT == null ? riskIdentification != null : !RISK_IDENTIFICATION_EDEFAULT.equals(riskIdentification);
 			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RISK_ESTIMATION:
 				return RISK_ESTIMATION_EDEFAULT == null ? riskEstimation != null : !RISK_ESTIMATION_EDEFAULT.equals(riskEstimation);
-			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__POST_MARKET_RISK_EVALUATION:
-				return POST_MARKET_RISK_EVALUATION_EDEFAULT == null ? postMarketRiskEvaluation != null : !POST_MARKET_RISK_EVALUATION_EDEFAULT.equals(postMarketRiskEvaluation);
 			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RISK_MITIGATION:
 				return RISK_MITIGATION_EDEFAULT == null ? riskMitigation != null : !RISK_MITIGATION_EDEFAULT.equals(riskMitigation);
 			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__RESIDUAL_RISK:
 				return RESIDUAL_RISK_EDEFAULT == null ? residualRisk != null : !RESIDUAL_RISK_EDEFAULT.equals(residualRisk);
-			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__TESTING_PROCEDURE:
-				return TESTING_PROCEDURE_EDEFAULT == null ? testingProcedure != null : !TESTING_PROCEDURE_EDEFAULT.equals(testingProcedure);
-			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__TESTING_METRICS:
-				return TESTING_METRICS_EDEFAULT == null ? testingMetrics != null : !TESTING_METRICS_EDEFAULT.equals(testingMetrics);
 			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__VULNERABLE_GROUPS_ASSESSMENT:
 				return VULNERABLE_GROUPS_ASSESSMENT_EDEFAULT == null ? vulnerableGroupsAssessment != null : !VULNERABLE_GROUPS_ASSESSMENT_EDEFAULT.equals(vulnerableGroupsAssessment);
 			case EuaiactcompliancePackage.RISK_MANAGEMENT_SYSTEM__BASE_ARTIFACT:
@@ -603,16 +441,10 @@ public class RiskManagementSystemImpl extends MinimalEObjectImpl.Container imple
 		result.append(riskIdentification);
 		result.append(", RiskEstimation: ");
 		result.append(riskEstimation);
-		result.append(", PostMarketRiskEvaluation: ");
-		result.append(postMarketRiskEvaluation);
 		result.append(", RiskMitigation: ");
 		result.append(riskMitigation);
 		result.append(", ResidualRisk: ");
 		result.append(residualRisk);
-		result.append(", TestingProcedure: ");
-		result.append(testingProcedure);
-		result.append(", TestingMetrics: ");
-		result.append(testingMetrics);
 		result.append(", VulnerableGroupsAssessment: ");
 		result.append(vulnerableGroupsAssessment);
 		result.append(')');

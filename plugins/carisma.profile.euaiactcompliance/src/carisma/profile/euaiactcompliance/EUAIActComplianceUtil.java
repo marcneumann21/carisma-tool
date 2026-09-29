@@ -1,7 +1,7 @@
 package carisma.profile.euaiactcompliance;
 
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -9,8 +9,10 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.uml2.uml.Component;
 import org.eclipse.uml2.uml.Dependency;
+import org.eclipse.uml2.uml.DirectedRelationship;
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.EnumerationLiteral;
+import org.eclipse.uml2.uml.Manifestation;
 import org.eclipse.uml2.uml.NamedElement;
 import org.eclipse.uml2.uml.Stereotype;
 import org.eclipse.uml2.uml.UseCase;
@@ -69,7 +71,7 @@ public final class EUAIActComplianceUtil {
 	 */
 	public static <T extends Element> Set<T> getStereotypedElements(final Element model, final Class<T> type,
 			final EUAIActCompliance stereo) {
-		Set<T> elements = new HashSet<T>(UMLHelper.getAllElementsOfType(model, type));
+		Set<T> elements = new LinkedHashSet<T>(UMLHelper.getAllElementsOfType(model, type));
 		elements.removeIf(e -> !(hasStereotype(e, stereo)));
 		if ((type.isInstance(model)) && hasStereotype(model, stereo)) {
 			elements.add(type.cast(model));
@@ -209,7 +211,8 @@ public final class EUAIActComplianceUtil {
 	 * @return the name of the enumeration literal, or {@code null} if the tag is
 	 *         not set.
 	 */
-	public static String getEnumValue(final Element element, final EUAIActCompliance stereotype, String attribute) {
+	public static String getEnumValue(final Element element, final EUAIActCompliance stereotype,
+			final String attribute) {
 		String enumValue = null;
 		List<Object> taggedValues = getTaggedValues(attribute, stereotype, element);
 		for (Object oj : taggedValues) {
@@ -266,30 +269,8 @@ public final class EUAIActComplianceUtil {
 	}
 
 	/**
-	 * Returns the value of the given boolean tag as a {@code Boolean}.
-	 *
-	 * @param element    the element to look for the stereotype.
-	 * @param stereotype the stereotype containing the attribute of interest.
-	 * @param attribute  the attribute of interest.
-	 * @return {@code Boolean.TRUE} or {@code Boolean.FALSE} if the tag is set,
-	 *         {@code null} if the tag is not set.
-	 */
-	public static Boolean getBooleanValue(final Element element, final EUAIActCompliance stereotype,
-			final String attribute) {
-		Boolean booleanValue = null;
-		List<Object> taggedValues = getTaggedValues(attribute, stereotype, element);
-		for (Object oj : taggedValues) {
-			if (oj instanceof Boolean) {
-				booleanValue = (Boolean) oj;
-			}
-		}
-		return booleanValue;
-	}
-
-
-	/**
 	 * Returns all elements of the given type and stereotype that belong to the
-	 * given system, either by containment or by a dependency.
+	 * given system, either by containment, by a dependency or manifestation.
 	 *
 	 * @param <T>        the type of the elements in the returned set.
 	 * @param system     the AI system or model element to start from.
@@ -298,9 +279,9 @@ public final class EUAIActComplianceUtil {
 	 * @param stereotype the stereotype the returned elements have to have.
 	 * @return set of connected elements, empty if none is found.
 	 */
-	public static <T extends Element> Set<T> getConnectedElements(Component system, Class<T> type,
-			EUAIActCompliance stereotype) {
-		Set<T> elements = new HashSet<T>(getStereotypedElements(system, type, stereotype));
+	public static <T extends Element> Set<T> getConnectedElements(final Component system, final Class<T> type,
+			final EUAIActCompliance stereotype) {
+		Set<T> elements = new LinkedHashSet<T>(getStereotypedElements(system, type, stereotype));
 		elements.remove(system);
 
 		for (Dependency dep : system.getClientDependencies()) {
@@ -311,7 +292,17 @@ public final class EUAIActComplianceUtil {
 			}
 		}
 
-		return elements;
+	    for (DirectedRelationship rel : system.getTargetDirectedRelationships()) {
+	        if (rel instanceof Manifestation) {
+	            for (Element el : ((Manifestation) rel).getSources()) {
+	                if (type.isInstance(el) && hasStereotype(el, stereotype)) {
+	                    elements.add(type.cast(el));
+	                }
+	            }
+	        }
+	    }
+
+	    return elements;
 	}
 
 	/**
@@ -321,8 +312,8 @@ public final class EUAIActComplianceUtil {
 	 * @return set of directly contained components, empty if the system has no
 	 *         parts.
 	 */
-	public static Set<Component> getNestedComponents(Component system) {
-		Set<Component> components = new HashSet<Component>();
+	public static Set<Component> getNestedComponents(final Component system) {
+		Set<Component> components = new LinkedHashSet<Component>();
 		for (Element el : system.getOwnedElements()) {
 			if (el instanceof Component) {
 				components.add((Component) el);
@@ -340,8 +331,8 @@ public final class EUAIActComplianceUtil {
 	 * @return set of components the system depends on, empty if the system has no
 	 *         dependencies.
 	 */
-	public static Set<Component> getDependencyComponents(Component system) {
-		Set<Component> components = new HashSet<Component>();
+	public static Set<Component> getDependencyComponents(final Component system) {
+		Set<Component> components = new LinkedHashSet<Component>();
 		for (Dependency dep : system.getClientDependencies()) {
 			for (NamedElement el : dep.getSuppliers()) {
 				if (el instanceof Component) {
@@ -354,7 +345,7 @@ public final class EUAIActComplianceUtil {
 	}
 
 	/**
-	 * Returns for each use case of the given AI system its name together with the
+	 * Returns for each use case in the given AI system its name together with the
 	 * applied EU AI Act compliance stereotypes.
 	 *
 	 * @param system the AI system to inspect

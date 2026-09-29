@@ -7,7 +7,6 @@ import euaiactcompliance.AdministrationJusticeDemocracy;
 import euaiactcompliance.BiometricCategorisation;
 import euaiactcompliance.BiometricIdentification;
 import euaiactcompliance.CriticalInfrastructure;
-import euaiactcompliance.Deepfake;
 import euaiactcompliance.Education;
 import euaiactcompliance.EmotionRecognition;
 import euaiactcompliance.EssentialService;
@@ -21,7 +20,6 @@ import euaiactcompliance.ManipulativeBehaviour;
 import euaiactcompliance.MigrationBorder;
 import euaiactcompliance.ProductEmbedding;
 import euaiactcompliance.Profiling;
-import euaiactcompliance.PublicInterestText;
 import euaiactcompliance.RiskManagementSystem;
 import euaiactcompliance.SelfDevelopedModel;
 import euaiactcompliance.SocialScoring;
@@ -112,18 +110,6 @@ public class EuaiactcomplianceSwitch<T> extends Switch<T> {
 			case EuaiactcompliancePackage.SYNTHETIC_CONTENT: {
 				SyntheticContent syntheticContent = (SyntheticContent)theEObject;
 				T result = caseSyntheticContent(syntheticContent);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case EuaiactcompliancePackage.DEEPFAKE: {
-				Deepfake deepfake = (Deepfake)theEObject;
-				T result = caseDeepfake(deepfake);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case EuaiactcompliancePackage.PUBLIC_INTEREST_TEXT: {
-				PublicInterestText publicInterestText = (PublicInterestText)theEObject;
-				T result = casePublicInterestText(publicInterestText);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -302,36 +288,6 @@ public class EuaiactcomplianceSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSyntheticContent(SyntheticContent object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Deepfake</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Deepfake</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDeepfake(Deepfake object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Public Interest Text</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Public Interest Text</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePublicInterestText(PublicInterestText object) {
 		return null;
 	}
 
