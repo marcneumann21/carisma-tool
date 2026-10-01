@@ -35,7 +35,6 @@ import org.eclipse.uml2.uml.UseCase;
  *   <li>{@link euaiactcompliance.impl.EmotionRecognitionImpl#getBase_UseCase <em>Base Use Case</em>}</li>
  *   <li>{@link euaiactcompliance.impl.EmotionRecognitionImpl#getExceptionJustification <em>Exception Justification</em>}</li>
  *   <li>{@link euaiactcompliance.impl.EmotionRecognitionImpl#getException <em>Exception</em>}</li>
- *   <li>{@link euaiactcompliance.impl.EmotionRecognitionImpl#isLawEnforcementAuthorised <em>Law Enforcement Authorised</em>}</li>
  * </ul>
  *
  * @generated
@@ -140,26 +139,6 @@ public class EmotionRecognitionImpl extends MinimalEObjectImpl.Container impleme
 	 * @ordered
 	 */
 	protected EList<euaiactcompliance.Exception> exception;
-
-	/**
-	 * The default value of the '{@link #isLawEnforcementAuthorised() <em>Law Enforcement Authorised</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isLawEnforcementAuthorised()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean LAW_ENFORCEMENT_AUTHORISED_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isLawEnforcementAuthorised() <em>Law Enforcement Authorised</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isLawEnforcementAuthorised()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean lawEnforcementAuthorised = LAW_ENFORCEMENT_AUTHORISED_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -331,29 +310,6 @@ public class EmotionRecognitionImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public boolean isLawEnforcementAuthorised() {
-		return lawEnforcementAuthorised;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setLawEnforcementAuthorised(boolean newLawEnforcementAuthorised) {
-		boolean oldLawEnforcementAuthorised = lawEnforcementAuthorised;
-		lawEnforcementAuthorised = newLawEnforcementAuthorised;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.EMOTION_RECOGNITION__LAW_ENFORCEMENT_AUTHORISED, oldLawEnforcementAuthorised, lawEnforcementAuthorised));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case EuaiactcompliancePackage.EMOTION_RECOGNITION__EDUCATION:
@@ -369,8 +325,6 @@ public class EmotionRecognitionImpl extends MinimalEObjectImpl.Container impleme
 				return getExceptionJustification();
 			case EuaiactcompliancePackage.EMOTION_RECOGNITION__EXCEPTION:
 				return getException();
-			case EuaiactcompliancePackage.EMOTION_RECOGNITION__LAW_ENFORCEMENT_AUTHORISED:
-				return isLawEnforcementAuthorised();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -403,9 +357,6 @@ public class EmotionRecognitionImpl extends MinimalEObjectImpl.Container impleme
 				getException().clear();
 				getException().addAll((Collection<? extends euaiactcompliance.Exception>)newValue);
 				return;
-			case EuaiactcompliancePackage.EMOTION_RECOGNITION__LAW_ENFORCEMENT_AUTHORISED:
-				setLawEnforcementAuthorised((Boolean)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -436,9 +387,6 @@ public class EmotionRecognitionImpl extends MinimalEObjectImpl.Container impleme
 			case EuaiactcompliancePackage.EMOTION_RECOGNITION__EXCEPTION:
 				getException().clear();
 				return;
-			case EuaiactcompliancePackage.EMOTION_RECOGNITION__LAW_ENFORCEMENT_AUTHORISED:
-				setLawEnforcementAuthorised(LAW_ENFORCEMENT_AUTHORISED_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -463,8 +411,6 @@ public class EmotionRecognitionImpl extends MinimalEObjectImpl.Container impleme
 				return EXCEPTION_JUSTIFICATION_EDEFAULT == null ? exceptionJustification != null : !EXCEPTION_JUSTIFICATION_EDEFAULT.equals(exceptionJustification);
 			case EuaiactcompliancePackage.EMOTION_RECOGNITION__EXCEPTION:
 				return exception != null && !exception.isEmpty();
-			case EuaiactcompliancePackage.EMOTION_RECOGNITION__LAW_ENFORCEMENT_AUTHORISED:
-				return lawEnforcementAuthorised != LAW_ENFORCEMENT_AUTHORISED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -489,8 +435,6 @@ public class EmotionRecognitionImpl extends MinimalEObjectImpl.Container impleme
 		result.append(exceptionJustification);
 		result.append(", Exception: ");
 		result.append(exception);
-		result.append(", LawEnforcementAuthorised: ");
-		result.append(lawEnforcementAuthorised);
 		result.append(')');
 		return result.toString();
 	}

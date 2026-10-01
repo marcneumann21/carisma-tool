@@ -23,22 +23,72 @@ import org.eclipse.uml2.uml.Component;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getObjective <em>Objective</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getBase_Component <em>Base Component</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getExpectedOutput <em>Expected Output</em>}</li>
  *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getParameter <em>Parameter</em>}</li>
  *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getTrainingMethods <em>Training Methods</em>}</li>
- *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getObjective <em>Objective</em>}</li>
  *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getValidationProcess <em>Validation Process</em>}</li>
- *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getExpectedOutput <em>Expected Output</em>}</li>
  *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getTestingProcess <em>Testing Process</em>}</li>
- *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getAccuracy <em>Accuracy</em>}</li>
- *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getCapabilities <em>Capabilities</em>}</li>
  *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#isTestReports <em>Test Reports</em>}</li>
- *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getBase_Component <em>Base Component</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getCapabilities <em>Capabilities</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getAccuracy <em>Accuracy</em>}</li>
  *   <li>{@link euaiactcompliance.impl.SelfDevelopedModelImpl#getInputData <em>Input Data</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class SelfDevelopedModelImpl extends MinimalEObjectImpl.Container implements SelfDevelopedModel {
+	/**
+	 * The default value of the '{@link #getObjective() <em>Objective</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getObjective()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String OBJECTIVE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getObjective() <em>Objective</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getObjective()
+	 * @generated
+	 * @ordered
+	 */
+	protected String objective = OBJECTIVE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getBase_Component() <em>Base Component</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBase_Component()
+	 * @generated
+	 * @ordered
+	 */
+	protected Component base_Component;
+
+	/**
+	 * The default value of the '{@link #getExpectedOutput() <em>Expected Output</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExpectedOutput()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String EXPECTED_OUTPUT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getExpectedOutput() <em>Expected Output</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExpectedOutput()
+	 * @generated
+	 * @ordered
+	 */
+	protected String expectedOutput = EXPECTED_OUTPUT_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getParameter() <em>Parameter</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -80,26 +130,6 @@ public class SelfDevelopedModelImpl extends MinimalEObjectImpl.Container impleme
 	protected String trainingMethods = TRAINING_METHODS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getObjective() <em>Objective</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getObjective()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String OBJECTIVE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getObjective() <em>Objective</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getObjective()
-	 * @generated
-	 * @ordered
-	 */
-	protected String objective = OBJECTIVE_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getValidationProcess() <em>Validation Process</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -118,26 +148,6 @@ public class SelfDevelopedModelImpl extends MinimalEObjectImpl.Container impleme
 	 * @ordered
 	 */
 	protected String validationProcess = VALIDATION_PROCESS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getExpectedOutput() <em>Expected Output</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExpectedOutput()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String EXPECTED_OUTPUT_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getExpectedOutput() <em>Expected Output</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExpectedOutput()
-	 * @generated
-	 * @ordered
-	 */
-	protected String expectedOutput = EXPECTED_OUTPUT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getTestingProcess() <em>Testing Process</em>}' attribute.
@@ -160,24 +170,24 @@ public class SelfDevelopedModelImpl extends MinimalEObjectImpl.Container impleme
 	protected String testingProcess = TESTING_PROCESS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getAccuracy() <em>Accuracy</em>}' attribute.
+	 * The default value of the '{@link #isTestReports() <em>Test Reports</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAccuracy()
+	 * @see #isTestReports()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ACCURACY_EDEFAULT = null;
+	protected static final boolean TEST_REPORTS_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getAccuracy() <em>Accuracy</em>}' attribute.
+	 * The cached value of the '{@link #isTestReports() <em>Test Reports</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAccuracy()
+	 * @see #isTestReports()
 	 * @generated
 	 * @ordered
 	 */
-	protected String accuracy = ACCURACY_EDEFAULT;
+	protected boolean testReports = TEST_REPORTS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getCapabilities() <em>Capabilities</em>}' attribute.
@@ -200,34 +210,24 @@ public class SelfDevelopedModelImpl extends MinimalEObjectImpl.Container impleme
 	protected String capabilities = CAPABILITIES_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isTestReports() <em>Test Reports</em>}' attribute.
+	 * The default value of the '{@link #getAccuracy() <em>Accuracy</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isTestReports()
+	 * @see #getAccuracy()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean TEST_REPORTS_EDEFAULT = false;
+	protected static final String ACCURACY_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #isTestReports() <em>Test Reports</em>}' attribute.
+	 * The cached value of the '{@link #getAccuracy() <em>Accuracy</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isTestReports()
+	 * @see #getAccuracy()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean testReports = TEST_REPORTS_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getBase_Component() <em>Base Component</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBase_Component()
-	 * @generated
-	 * @ordered
-	 */
-	protected Component base_Component;
+	protected String accuracy = ACCURACY_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getInputData() <em>Input Data</em>}' attribute.
@@ -266,6 +266,92 @@ public class SelfDevelopedModelImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	protected EClass eStaticClass() {
 		return EuaiactcompliancePackage.Literals.SELF_DEVELOPED_MODEL;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getObjective() {
+		return objective;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setObjective(String newObjective) {
+		String oldObjective = objective;
+		objective = newObjective;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__OBJECTIVE, oldObjective, objective));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Component getBase_Component() {
+		if (base_Component != null && base_Component.eIsProxy()) {
+			InternalEObject oldBase_Component = (InternalEObject)base_Component;
+			base_Component = (Component)eResolveProxy(oldBase_Component);
+			if (base_Component != oldBase_Component) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__BASE_COMPONENT, oldBase_Component, base_Component));
+			}
+		}
+		return base_Component;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Component basicGetBase_Component() {
+		return base_Component;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setBase_Component(Component newBase_Component) {
+		Component oldBase_Component = base_Component;
+		base_Component = newBase_Component;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__BASE_COMPONENT, oldBase_Component, base_Component));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getExpectedOutput() {
+		return expectedOutput;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setExpectedOutput(String newExpectedOutput) {
+		String oldExpectedOutput = expectedOutput;
+		expectedOutput = newExpectedOutput;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__EXPECTED_OUTPUT, oldExpectedOutput, expectedOutput));
 	}
 
 	/**
@@ -320,29 +406,6 @@ public class SelfDevelopedModelImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public String getObjective() {
-		return objective;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setObjective(String newObjective) {
-		String oldObjective = objective;
-		objective = newObjective;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__OBJECTIVE, oldObjective, objective));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getValidationProcess() {
 		return validationProcess;
 	}
@@ -358,29 +421,6 @@ public class SelfDevelopedModelImpl extends MinimalEObjectImpl.Container impleme
 		validationProcess = newValidationProcess;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__VALIDATION_PROCESS, oldValidationProcess, validationProcess));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getExpectedOutput() {
-		return expectedOutput;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setExpectedOutput(String newExpectedOutput) {
-		String oldExpectedOutput = expectedOutput;
-		expectedOutput = newExpectedOutput;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__EXPECTED_OUTPUT, oldExpectedOutput, expectedOutput));
 	}
 
 	/**
@@ -412,8 +452,8 @@ public class SelfDevelopedModelImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public String getAccuracy() {
-		return accuracy;
+	public boolean isTestReports() {
+		return testReports;
 	}
 
 	/**
@@ -422,11 +462,11 @@ public class SelfDevelopedModelImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public void setAccuracy(String newAccuracy) {
-		String oldAccuracy = accuracy;
-		accuracy = newAccuracy;
+	public void setTestReports(boolean newTestReports) {
+		boolean oldTestReports = testReports;
+		testReports = newTestReports;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__ACCURACY, oldAccuracy, accuracy));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TEST_REPORTS, oldTestReports, testReports));
 	}
 
 	/**
@@ -458,8 +498,8 @@ public class SelfDevelopedModelImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public boolean isTestReports() {
-		return testReports;
+	public String getAccuracy() {
+		return accuracy;
 	}
 
 	/**
@@ -468,51 +508,11 @@ public class SelfDevelopedModelImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public void setTestReports(boolean newTestReports) {
-		boolean oldTestReports = testReports;
-		testReports = newTestReports;
+	public void setAccuracy(String newAccuracy) {
+		String oldAccuracy = accuracy;
+		accuracy = newAccuracy;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TEST_REPORTS, oldTestReports, testReports));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Component getBase_Component() {
-		if (base_Component != null && base_Component.eIsProxy()) {
-			InternalEObject oldBase_Component = (InternalEObject)base_Component;
-			base_Component = (Component)eResolveProxy(oldBase_Component);
-			if (base_Component != oldBase_Component) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__BASE_COMPONENT, oldBase_Component, base_Component));
-			}
-		}
-		return base_Component;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Component basicGetBase_Component() {
-		return base_Component;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setBase_Component(Component newBase_Component) {
-		Component oldBase_Component = base_Component;
-		base_Component = newBase_Component;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__BASE_COMPONENT, oldBase_Component, base_Component));
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__ACCURACY, oldAccuracy, accuracy));
 	}
 
 	/**
@@ -546,27 +546,27 @@ public class SelfDevelopedModelImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__OBJECTIVE:
+				return getObjective();
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__BASE_COMPONENT:
+				if (resolve) return getBase_Component();
+				return basicGetBase_Component();
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__EXPECTED_OUTPUT:
+				return getExpectedOutput();
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__PARAMETER:
 				return getParameter();
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TRAINING_METHODS:
 				return getTrainingMethods();
-			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__OBJECTIVE:
-				return getObjective();
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__VALIDATION_PROCESS:
 				return getValidationProcess();
-			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__EXPECTED_OUTPUT:
-				return getExpectedOutput();
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TESTING_PROCESS:
 				return getTestingProcess();
-			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__ACCURACY:
-				return getAccuracy();
-			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__CAPABILITIES:
-				return getCapabilities();
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TEST_REPORTS:
 				return isTestReports();
-			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__BASE_COMPONENT:
-				if (resolve) return getBase_Component();
-				return basicGetBase_Component();
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__CAPABILITIES:
+				return getCapabilities();
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__ACCURACY:
+				return getAccuracy();
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__INPUT_DATA:
 				return getInputData();
 		}
@@ -581,35 +581,35 @@ public class SelfDevelopedModelImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__OBJECTIVE:
+				setObjective((String)newValue);
+				return;
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__BASE_COMPONENT:
+				setBase_Component((Component)newValue);
+				return;
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__EXPECTED_OUTPUT:
+				setExpectedOutput((String)newValue);
+				return;
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__PARAMETER:
 				setParameter((String)newValue);
 				return;
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TRAINING_METHODS:
 				setTrainingMethods((String)newValue);
 				return;
-			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__OBJECTIVE:
-				setObjective((String)newValue);
-				return;
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__VALIDATION_PROCESS:
 				setValidationProcess((String)newValue);
-				return;
-			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__EXPECTED_OUTPUT:
-				setExpectedOutput((String)newValue);
 				return;
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TESTING_PROCESS:
 				setTestingProcess((String)newValue);
 				return;
-			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__ACCURACY:
-				setAccuracy((String)newValue);
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TEST_REPORTS:
+				setTestReports((Boolean)newValue);
 				return;
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__CAPABILITIES:
 				setCapabilities((String)newValue);
 				return;
-			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TEST_REPORTS:
-				setTestReports((Boolean)newValue);
-				return;
-			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__BASE_COMPONENT:
-				setBase_Component((Component)newValue);
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__ACCURACY:
+				setAccuracy((String)newValue);
 				return;
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__INPUT_DATA:
 				setInputData((String)newValue);
@@ -626,35 +626,35 @@ public class SelfDevelopedModelImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__OBJECTIVE:
+				setObjective(OBJECTIVE_EDEFAULT);
+				return;
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__BASE_COMPONENT:
+				setBase_Component((Component)null);
+				return;
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__EXPECTED_OUTPUT:
+				setExpectedOutput(EXPECTED_OUTPUT_EDEFAULT);
+				return;
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__PARAMETER:
 				setParameter(PARAMETER_EDEFAULT);
 				return;
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TRAINING_METHODS:
 				setTrainingMethods(TRAINING_METHODS_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__OBJECTIVE:
-				setObjective(OBJECTIVE_EDEFAULT);
-				return;
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__VALIDATION_PROCESS:
 				setValidationProcess(VALIDATION_PROCESS_EDEFAULT);
-				return;
-			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__EXPECTED_OUTPUT:
-				setExpectedOutput(EXPECTED_OUTPUT_EDEFAULT);
 				return;
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TESTING_PROCESS:
 				setTestingProcess(TESTING_PROCESS_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__ACCURACY:
-				setAccuracy(ACCURACY_EDEFAULT);
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TEST_REPORTS:
+				setTestReports(TEST_REPORTS_EDEFAULT);
 				return;
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__CAPABILITIES:
 				setCapabilities(CAPABILITIES_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TEST_REPORTS:
-				setTestReports(TEST_REPORTS_EDEFAULT);
-				return;
-			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__BASE_COMPONENT:
-				setBase_Component((Component)null);
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__ACCURACY:
+				setAccuracy(ACCURACY_EDEFAULT);
 				return;
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__INPUT_DATA:
 				setInputData(INPUT_DATA_EDEFAULT);
@@ -671,26 +671,26 @@ public class SelfDevelopedModelImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__OBJECTIVE:
+				return OBJECTIVE_EDEFAULT == null ? objective != null : !OBJECTIVE_EDEFAULT.equals(objective);
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__BASE_COMPONENT:
+				return base_Component != null;
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__EXPECTED_OUTPUT:
+				return EXPECTED_OUTPUT_EDEFAULT == null ? expectedOutput != null : !EXPECTED_OUTPUT_EDEFAULT.equals(expectedOutput);
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__PARAMETER:
 				return PARAMETER_EDEFAULT == null ? parameter != null : !PARAMETER_EDEFAULT.equals(parameter);
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TRAINING_METHODS:
 				return TRAINING_METHODS_EDEFAULT == null ? trainingMethods != null : !TRAINING_METHODS_EDEFAULT.equals(trainingMethods);
-			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__OBJECTIVE:
-				return OBJECTIVE_EDEFAULT == null ? objective != null : !OBJECTIVE_EDEFAULT.equals(objective);
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__VALIDATION_PROCESS:
 				return VALIDATION_PROCESS_EDEFAULT == null ? validationProcess != null : !VALIDATION_PROCESS_EDEFAULT.equals(validationProcess);
-			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__EXPECTED_OUTPUT:
-				return EXPECTED_OUTPUT_EDEFAULT == null ? expectedOutput != null : !EXPECTED_OUTPUT_EDEFAULT.equals(expectedOutput);
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TESTING_PROCESS:
 				return TESTING_PROCESS_EDEFAULT == null ? testingProcess != null : !TESTING_PROCESS_EDEFAULT.equals(testingProcess);
-			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__ACCURACY:
-				return ACCURACY_EDEFAULT == null ? accuracy != null : !ACCURACY_EDEFAULT.equals(accuracy);
-			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__CAPABILITIES:
-				return CAPABILITIES_EDEFAULT == null ? capabilities != null : !CAPABILITIES_EDEFAULT.equals(capabilities);
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__TEST_REPORTS:
 				return testReports != TEST_REPORTS_EDEFAULT;
-			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__BASE_COMPONENT:
-				return base_Component != null;
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__CAPABILITIES:
+				return CAPABILITIES_EDEFAULT == null ? capabilities != null : !CAPABILITIES_EDEFAULT.equals(capabilities);
+			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__ACCURACY:
+				return ACCURACY_EDEFAULT == null ? accuracy != null : !ACCURACY_EDEFAULT.equals(accuracy);
 			case EuaiactcompliancePackage.SELF_DEVELOPED_MODEL__INPUT_DATA:
 				return INPUT_DATA_EDEFAULT == null ? inputData != null : !INPUT_DATA_EDEFAULT.equals(inputData);
 		}
@@ -707,24 +707,24 @@ public class SelfDevelopedModelImpl extends MinimalEObjectImpl.Container impleme
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (Parameter: ");
+		result.append(" (Objective: ");
+		result.append(objective);
+		result.append(", ExpectedOutput: ");
+		result.append(expectedOutput);
+		result.append(", Parameter: ");
 		result.append(parameter);
 		result.append(", TrainingMethods: ");
 		result.append(trainingMethods);
-		result.append(", Objective: ");
-		result.append(objective);
 		result.append(", ValidationProcess: ");
 		result.append(validationProcess);
-		result.append(", ExpectedOutput: ");
-		result.append(expectedOutput);
 		result.append(", TestingProcess: ");
 		result.append(testingProcess);
-		result.append(", Accuracy: ");
-		result.append(accuracy);
-		result.append(", Capabilities: ");
-		result.append(capabilities);
 		result.append(", TestReports: ");
 		result.append(testReports);
+		result.append(", Capabilities: ");
+		result.append(capabilities);
+		result.append(", Accuracy: ");
+		result.append(accuracy);
 		result.append(", InputData: ");
 		result.append(inputData);
 		result.append(')');

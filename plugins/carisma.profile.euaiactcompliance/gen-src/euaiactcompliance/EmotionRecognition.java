@@ -23,7 +23,6 @@ import org.eclipse.uml2.uml.UseCase;
  *   <li>{@link euaiactcompliance.EmotionRecognition#getBase_UseCase <em>Base Use Case</em>}</li>
  *   <li>{@link euaiactcompliance.EmotionRecognition#getExceptionJustification <em>Exception Justification</em>}</li>
  *   <li>{@link euaiactcompliance.EmotionRecognition#getException <em>Exception</em>}</li>
- *   <li>{@link euaiactcompliance.EmotionRecognition#isLawEnforcementAuthorised <em>Law Enforcement Authorised</em>}</li>
  * </ul>
  *
  * @see euaiactcompliance.EuaiactcompliancePackage#getEmotionRecognition()
@@ -154,27 +153,5 @@ public interface EmotionRecognition extends EObject {
 	 * @generated
 	 */
 	EList<euaiactcompliance.Exception> getException();
-
-	/**
-	 * Returns the value of the '<em><b>Law Enforcement Authorised</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Law Enforcement Authorised</em>' attribute.
-	 * @see #setLawEnforcementAuthorised(boolean)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getEmotionRecognition_LawEnforcementAuthorised()
-	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
-	 * @generated
-	 */
-	boolean isLawEnforcementAuthorised();
-
-	/**
-	 * Sets the value of the '{@link euaiactcompliance.EmotionRecognition#isLawEnforcementAuthorised <em>Law Enforcement Authorised</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Law Enforcement Authorised</em>' attribute.
-	 * @see #isLawEnforcementAuthorised()
-	 * @generated
-	 */
-	void setLawEnforcementAuthorised(boolean value);
 
 } // EmotionRecognition

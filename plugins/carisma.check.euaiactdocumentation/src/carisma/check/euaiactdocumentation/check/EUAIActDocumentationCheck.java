@@ -1,6 +1,10 @@
 package carisma.check.euaiactdocumentation.check;
 
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.eclipse.uml2.uml.Component;
@@ -36,7 +40,7 @@ public class EUAIActDocumentationCheck extends AbstractEUAIActDocumentationCheck
 			return false;
 		}
 
-		addInfo("Your model contains " + aiSystems.size() + " AI systems.");
+		addInfo("Your model contains " + aiSystems.size() + (aiSystems.size() > 1 ? "AI Systems" : "AI System"));
 		addInfo("");
 
 		boolean completeDocumentation = true;
@@ -58,6 +62,7 @@ public class EUAIActDocumentationCheck extends AbstractEUAIActDocumentationCheck
 				addError("The component '" + aiSystem.getName()
 						+ "' has both 'AISystem' and 'SelfDevelopedModel' applied. Model the ML model as a separate component and connect it to the AI system.");
 				completeDocumentation = false;
+				addInfo("#".repeat(50));
 				continue;
 			}
 
@@ -97,21 +102,23 @@ public class EUAIActDocumentationCheck extends AbstractEUAIActDocumentationCheck
 
 			EUAIActDocumentationGenerator generator = new EUAIActDocumentationGenerator(aiSystem, highRisk);
 			List<EUAIActDocumentationSectionResult> sections = generator.generateDocumentation();
+
+			addInfo("=".repeat(50));
+			addInfo("DOCUMENTED");
+			addInfo("=".repeat(50));
+			addInfo("");
+
 			for (EUAIActDocumentationSectionResult section : sections) {
 
 				// for not high risk systems only sections with content are printed,
 				// because Annex IV is not mandatory for them
-				if (riskClass != EUAIActRiskClass.High && section.foundDocumentation().isEmpty()
-						&& section.notes().isEmpty()) {
+				if (riskClass != EUAIActRiskClass.High && section.foundDocumentation().isEmpty()) {
 					continue;
 				}
 
-				addInfo("=".repeat(50));
+				addInfo("-".repeat(50));
 				addInfo(section.sectionName().toString());
-				addInfo("=".repeat(50));
-
-				addInfo("Documented:");
-				addInfo("----------------");
+				addInfo("-".repeat(50));
 				if (section.foundDocumentation().isEmpty()) {
 					addInfo("None");
 				} else {
@@ -119,40 +126,84 @@ public class EUAIActDocumentationCheck extends AbstractEUAIActDocumentationCheck
 						addInfo(documentation);
 					}
 				}
-
 				addInfo("");
 
-				if (riskClass == EUAIActRiskClass.High) {
-					addInfo("Missing:");
-					addInfo("----------");
-					if (section.missingDocumentation().isEmpty()) {
-						addInfo("None");
-					} else {
-						for (String documentation : section.missingDocumentation()) {
-							addInfo(documentation);
-						}
-						completeDocumentation = false;
-					}
+			}
 
+			addInfo("=".repeat(50));
+			if (riskClass == EUAIActRiskClass.High) {
+				addInfo("MISSING & NOTES");
+			} else {
+				addInfo("NOTES");
+			}
+			addInfo("=".repeat(50));
+			addInfo("");
+
+			// group missing documentation and notes by model element
+			Map<String, List<String>> missingPerElement = new LinkedHashMap<>();
+			Map<String, List<String>> notesPerElement = new LinkedHashMap<>();
+			Set<String> elementNames = new LinkedHashSet<>();
+			for (EUAIActDocumentationSectionResult section : sections) {
+
+				for (String line : section.missingDocumentation()) {
+					int end = line.indexOf("' (") + 1;
+					String elementName = line.substring(0, end);
+					String text = line.substring(end + 1);
+					elementNames.add(elementName);
+					if (!missingPerElement.containsKey(elementName)) {
+						missingPerElement.put(elementName, new ArrayList<>());
+					}
+					missingPerElement.get(elementName).add(text);
+				}
+
+				for (String line : section.notes()) {
+					int end = line.indexOf("' (") + 1;
+					String elementName = line.substring(0, end);
+					String text = line.substring(end + 1);
+					elementNames.add(elementName);
+					if (!notesPerElement.containsKey(elementName)) {
+						notesPerElement.put(elementName, new ArrayList<>());
+					}
+					notesPerElement.get(elementName).add(text);
+				}
+
+			}
+
+			// if no section has missing documentation or notes, print "None"
+			if (elementNames.isEmpty()) {
+				addInfo("None");
+				addInfo("");
+			}
+
+			for (String elementName : elementNames) {
+				List<String> missing = missingPerElement.get(elementName);
+				List<String> notes = notesPerElement.get(elementName);
+
+				addInfo("-".repeat(50));
+				addInfo(elementName);
+				addInfo("-".repeat(50));
+
+				if (riskClass == EUAIActRiskClass.High && missing != null) {
+					addInfo("Missing:");
+					for (String documentation : missing) {
+						addInfo(documentation);
+					}
+					completeDocumentation = false;
 					addInfo("");
 				}
 
-				addInfo("Notes:");
-				addInfo("--------");
-				if (section.notes().isEmpty()) {
-					addInfo("None");
-				} else {
-					for (String note : section.notes()) {
+				if (notes != null) {
+					addInfo("Notes:");
+					for (String note : notes) {
 						addInfo(note);
 					}
-				}
+					addInfo("");
 
-				addInfo("");
+				}
 			}
 		}
 
 		return completeDocumentation;
-
 	}
 
 	@Override

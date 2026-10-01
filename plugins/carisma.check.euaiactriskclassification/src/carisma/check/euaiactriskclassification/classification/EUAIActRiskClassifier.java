@@ -602,7 +602,7 @@ public class EUAIActRiskClassifier {
 		}
 		addToAdditionalObligations(additionalObligations, this.aiSystem.getName(),
 				"Register this AI system and the provider in the EU database before placing it on the market.",
-				"Article 49(2)");		
+				"Article 49(2)");
 		return true;
 	}
 
@@ -711,6 +711,12 @@ public class EUAIActRiskClassifier {
 			List<String> additionalObligations, List<String> notes, boolean annexISectionB) {
 		List<String> distinctAdditionalObligations = new ArrayList<>();
 		for (String ob : additionalObligations) {
+			// Article 49(2) and Article 6(4) only apply if the AI system is not high risk
+			if (riskClass == EUAIActRiskClass.High
+					&& (ob.contains("(Article 49(2))") || ob.contains("(Article 6(4))"))) {
+				continue;
+			}
+
 			if (!distinctAdditionalObligations.contains(ob)) {
 				distinctAdditionalObligations.add(ob);
 			}

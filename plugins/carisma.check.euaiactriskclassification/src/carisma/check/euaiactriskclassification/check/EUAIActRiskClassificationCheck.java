@@ -84,6 +84,11 @@ public class EUAIActRiskClassificationCheck extends AbstractEUAIActRiskClassific
 					}
 				}
 
+				if (riskClass == EUAIActRiskClass.High && !result.annexISectionB()) {
+					addWarning(
+							"Run the EU AI Act Documentation Check to generate the technical documentation (Article 11).");
+				}
+
 				addInfo("");
 
 				addInfo("Additional Obligations:");
@@ -111,7 +116,7 @@ public class EUAIActRiskClassificationCheck extends AbstractEUAIActRiskClassific
 			}
 
 		}
-		
+
 		return noUnacceptableRisk;
 	}
 

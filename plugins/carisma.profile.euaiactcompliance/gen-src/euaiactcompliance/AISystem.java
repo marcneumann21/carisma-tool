@@ -16,6 +16,8 @@ import org.eclipse.uml2.uml.Component;
  * </p>
  * <ul>
  *   <li>{@link euaiactcompliance.AISystem#getBase_Component <em>Base Component</em>}</li>
+ *   <li>{@link euaiactcompliance.AISystem#getProviderName <em>Provider Name</em>}</li>
+ *   <li>{@link euaiactcompliance.AISystem#getProviderContact <em>Provider Contact</em>}</li>
  *   <li>{@link euaiactcompliance.AISystem#getVersion <em>Version</em>}</li>
  *   <li>{@link euaiactcompliance.AISystem#getExternalInteraction <em>External Interaction</em>}</li>
  *   <li>{@link euaiactcompliance.AISystem#getMarketPlacementForm <em>Market Placement Form</em>}</li>
@@ -26,6 +28,7 @@ import org.eclipse.uml2.uml.Component;
  *   <li>{@link euaiactcompliance.AISystem#getDevelopmentSteps <em>Development Steps</em>}</li>
  *   <li>{@link euaiactcompliance.AISystem#getDesignSpecification <em>Design Specification</em>}</li>
  *   <li>{@link euaiactcompliance.AISystem#getKeyDesignDecision <em>Key Design Decision</em>}</li>
+ *   <li>{@link euaiactcompliance.AISystem#getAffectedPersons <em>Affected Persons</em>}</li>
  *   <li>{@link euaiactcompliance.AISystem#getDesignTradeOffs <em>Design Trade Offs</em>}</li>
  *   <li>{@link euaiactcompliance.AISystem#getDevelopementResources <em>Developement Resources</em>}</li>
  *   <li>{@link euaiactcompliance.AISystem#getHumanOversightPreAssessment <em>Human Oversight Pre Assessment</em>}</li>
@@ -39,9 +42,6 @@ import org.eclipse.uml2.uml.Component;
  *   <li>{@link euaiactcompliance.AISystem#getHarmonisedStandards <em>Harmonised Standards</em>}</li>
  *   <li>{@link euaiactcompliance.AISystem#isCopyEUConformityDeclaration <em>Copy EU Conformity Declaration</em>}</li>
  *   <li>{@link euaiactcompliance.AISystem#getPostMarketMonitoring <em>Post Market Monitoring</em>}</li>
- *   <li>{@link euaiactcompliance.AISystem#getProviderName <em>Provider Name</em>}</li>
- *   <li>{@link euaiactcompliance.AISystem#getProviderContact <em>Provider Contact</em>}</li>
- *   <li>{@link euaiactcompliance.AISystem#getAffectedPersons <em>Affected Persons</em>}</li>
  * </ul>
  *
  * @see euaiactcompliance.EuaiactcompliancePackage#getAISystem()
@@ -70,6 +70,50 @@ public interface AISystem extends EObject {
 	 * @generated
 	 */
 	void setBase_Component(Component value);
+
+	/**
+	 * Returns the value of the '<em><b>Provider Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Provider Name</em>' attribute.
+	 * @see #setProviderName(String)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getAISystem_ProviderName()
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @generated
+	 */
+	String getProviderName();
+
+	/**
+	 * Sets the value of the '{@link euaiactcompliance.AISystem#getProviderName <em>Provider Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Provider Name</em>' attribute.
+	 * @see #getProviderName()
+	 * @generated
+	 */
+	void setProviderName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Provider Contact</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Provider Contact</em>' attribute.
+	 * @see #setProviderContact(String)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getAISystem_ProviderContact()
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @generated
+	 */
+	String getProviderContact();
+
+	/**
+	 * Sets the value of the '{@link euaiactcompliance.AISystem#getProviderContact <em>Provider Contact</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Provider Contact</em>' attribute.
+	 * @see #getProviderContact()
+	 * @generated
+	 */
+	void setProviderContact(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Version</b></em>' attribute.
@@ -290,6 +334,28 @@ public interface AISystem extends EObject {
 	 * @generated
 	 */
 	void setKeyDesignDecision(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Affected Persons</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Affected Persons</em>' attribute.
+	 * @see #setAffectedPersons(String)
+	 * @see euaiactcompliance.EuaiactcompliancePackage#getAISystem_AffectedPersons()
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @generated
+	 */
+	String getAffectedPersons();
+
+	/**
+	 * Sets the value of the '{@link euaiactcompliance.AISystem#getAffectedPersons <em>Affected Persons</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Affected Persons</em>' attribute.
+	 * @see #getAffectedPersons()
+	 * @generated
+	 */
+	void setAffectedPersons(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Design Trade Offs</b></em>' attribute.
@@ -576,71 +642,5 @@ public interface AISystem extends EObject {
 	 * @generated
 	 */
 	void setPostMarketMonitoring(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Provider Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Provider Name</em>' attribute.
-	 * @see #setProviderName(String)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getAISystem_ProviderName()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
-	 */
-	String getProviderName();
-
-	/**
-	 * Sets the value of the '{@link euaiactcompliance.AISystem#getProviderName <em>Provider Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Provider Name</em>' attribute.
-	 * @see #getProviderName()
-	 * @generated
-	 */
-	void setProviderName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Provider Contact</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Provider Contact</em>' attribute.
-	 * @see #setProviderContact(String)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getAISystem_ProviderContact()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
-	 */
-	String getProviderContact();
-
-	/**
-	 * Sets the value of the '{@link euaiactcompliance.AISystem#getProviderContact <em>Provider Contact</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Provider Contact</em>' attribute.
-	 * @see #getProviderContact()
-	 * @generated
-	 */
-	void setProviderContact(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Affected Persons</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Affected Persons</em>' attribute.
-	 * @see #setAffectedPersons(String)
-	 * @see euaiactcompliance.EuaiactcompliancePackage#getAISystem_AffectedPersons()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
-	 */
-	String getAffectedPersons();
-
-	/**
-	 * Sets the value of the '{@link euaiactcompliance.AISystem#getAffectedPersons <em>Affected Persons</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Affected Persons</em>' attribute.
-	 * @see #getAffectedPersons()
-	 * @generated
-	 */
-	void setAffectedPersons(String value);
 
 } // AISystem

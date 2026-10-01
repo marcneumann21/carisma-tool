@@ -24,6 +24,8 @@ import org.eclipse.uml2.uml.Component;
  * </p>
  * <ul>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getBase_Component <em>Base Component</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.AISystemImpl#getProviderName <em>Provider Name</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.AISystemImpl#getProviderContact <em>Provider Contact</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getVersion <em>Version</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getExternalInteraction <em>External Interaction</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getMarketPlacementForm <em>Market Placement Form</em>}</li>
@@ -34,6 +36,7 @@ import org.eclipse.uml2.uml.Component;
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getDevelopmentSteps <em>Development Steps</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getDesignSpecification <em>Design Specification</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getKeyDesignDecision <em>Key Design Decision</em>}</li>
+ *   <li>{@link euaiactcompliance.impl.AISystemImpl#getAffectedPersons <em>Affected Persons</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getDesignTradeOffs <em>Design Trade Offs</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getDevelopementResources <em>Developement Resources</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getHumanOversightPreAssessment <em>Human Oversight Pre Assessment</em>}</li>
@@ -47,9 +50,6 @@ import org.eclipse.uml2.uml.Component;
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getHarmonisedStandards <em>Harmonised Standards</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#isCopyEUConformityDeclaration <em>Copy EU Conformity Declaration</em>}</li>
  *   <li>{@link euaiactcompliance.impl.AISystemImpl#getPostMarketMonitoring <em>Post Market Monitoring</em>}</li>
- *   <li>{@link euaiactcompliance.impl.AISystemImpl#getProviderName <em>Provider Name</em>}</li>
- *   <li>{@link euaiactcompliance.impl.AISystemImpl#getProviderContact <em>Provider Contact</em>}</li>
- *   <li>{@link euaiactcompliance.impl.AISystemImpl#getAffectedPersons <em>Affected Persons</em>}</li>
  * </ul>
  *
  * @generated
@@ -64,6 +64,46 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @ordered
 	 */
 	protected Component base_Component;
+
+	/**
+	 * The default value of the '{@link #getProviderName() <em>Provider Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProviderName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PROVIDER_NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getProviderName() <em>Provider Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProviderName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String providerName = PROVIDER_NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getProviderContact() <em>Provider Contact</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProviderContact()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PROVIDER_CONTACT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getProviderContact() <em>Provider Contact</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProviderContact()
+	 * @generated
+	 * @ordered
+	 */
+	protected String providerContact = PROVIDER_CONTACT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getVersion() <em>Version</em>}' attribute.
@@ -264,6 +304,26 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @ordered
 	 */
 	protected String keyDesignDecision = KEY_DESIGN_DECISION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAffectedPersons() <em>Affected Persons</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAffectedPersons()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String AFFECTED_PERSONS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAffectedPersons() <em>Affected Persons</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAffectedPersons()
+	 * @generated
+	 * @ordered
+	 */
+	protected String affectedPersons = AFFECTED_PERSONS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDesignTradeOffs() <em>Design Trade Offs</em>}' attribute.
@@ -526,66 +586,6 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	protected String postMarketMonitoring = POST_MARKET_MONITORING_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getProviderName() <em>Provider Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProviderName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String PROVIDER_NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getProviderName() <em>Provider Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProviderName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String providerName = PROVIDER_NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getProviderContact() <em>Provider Contact</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProviderContact()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String PROVIDER_CONTACT_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getProviderContact() <em>Provider Contact</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProviderContact()
-	 * @generated
-	 * @ordered
-	 */
-	protected String providerContact = PROVIDER_CONTACT_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getAffectedPersons() <em>Affected Persons</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAffectedPersons()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String AFFECTED_PERSONS_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getAffectedPersons() <em>Affected Persons</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAffectedPersons()
-	 * @generated
-	 * @ordered
-	 */
-	protected String affectedPersons = AFFECTED_PERSONS_EDEFAULT;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -642,6 +642,52 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 		base_Component = newBase_Component;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__BASE_COMPONENT, oldBase_Component, base_Component));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getProviderName() {
+		return providerName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setProviderName(String newProviderName) {
+		String oldProviderName = providerName;
+		providerName = newProviderName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__PROVIDER_NAME, oldProviderName, providerName));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getProviderContact() {
+		return providerContact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setProviderContact(String newProviderContact) {
+		String oldProviderContact = providerContact;
+		providerContact = newProviderContact;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__PROVIDER_CONTACT, oldProviderContact, providerContact));
 	}
 
 	/**
@@ -872,6 +918,29 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 		keyDesignDecision = newKeyDesignDecision;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__KEY_DESIGN_DECISION, oldKeyDesignDecision, keyDesignDecision));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getAffectedPersons() {
+		return affectedPersons;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAffectedPersons(String newAffectedPersons) {
+		String oldAffectedPersons = affectedPersons;
+		affectedPersons = newAffectedPersons;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__AFFECTED_PERSONS, oldAffectedPersons, affectedPersons));
 	}
 
 	/**
@@ -1179,80 +1248,15 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 	 * @generated
 	 */
 	@Override
-	public String getProviderName() {
-		return providerName;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setProviderName(String newProviderName) {
-		String oldProviderName = providerName;
-		providerName = newProviderName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__PROVIDER_NAME, oldProviderName, providerName));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getProviderContact() {
-		return providerContact;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setProviderContact(String newProviderContact) {
-		String oldProviderContact = providerContact;
-		providerContact = newProviderContact;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__PROVIDER_CONTACT, oldProviderContact, providerContact));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getAffectedPersons() {
-		return affectedPersons;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setAffectedPersons(String newAffectedPersons) {
-		String oldAffectedPersons = affectedPersons;
-		affectedPersons = newAffectedPersons;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EuaiactcompliancePackage.AI_SYSTEM__AFFECTED_PERSONS, oldAffectedPersons, affectedPersons));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case EuaiactcompliancePackage.AI_SYSTEM__BASE_COMPONENT:
 				if (resolve) return getBase_Component();
 				return basicGetBase_Component();
+			case EuaiactcompliancePackage.AI_SYSTEM__PROVIDER_NAME:
+				return getProviderName();
+			case EuaiactcompliancePackage.AI_SYSTEM__PROVIDER_CONTACT:
+				return getProviderContact();
 			case EuaiactcompliancePackage.AI_SYSTEM__VERSION:
 				return getVersion();
 			case EuaiactcompliancePackage.AI_SYSTEM__EXTERNAL_INTERACTION:
@@ -1273,6 +1277,8 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 				return getDesignSpecification();
 			case EuaiactcompliancePackage.AI_SYSTEM__KEY_DESIGN_DECISION:
 				return getKeyDesignDecision();
+			case EuaiactcompliancePackage.AI_SYSTEM__AFFECTED_PERSONS:
+				return getAffectedPersons();
 			case EuaiactcompliancePackage.AI_SYSTEM__DESIGN_TRADE_OFFS:
 				return getDesignTradeOffs();
 			case EuaiactcompliancePackage.AI_SYSTEM__DEVELOPEMENT_RESOURCES:
@@ -1299,12 +1305,6 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 				return isCopyEUConformityDeclaration();
 			case EuaiactcompliancePackage.AI_SYSTEM__POST_MARKET_MONITORING:
 				return getPostMarketMonitoring();
-			case EuaiactcompliancePackage.AI_SYSTEM__PROVIDER_NAME:
-				return getProviderName();
-			case EuaiactcompliancePackage.AI_SYSTEM__PROVIDER_CONTACT:
-				return getProviderContact();
-			case EuaiactcompliancePackage.AI_SYSTEM__AFFECTED_PERSONS:
-				return getAffectedPersons();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -1319,6 +1319,12 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 		switch (featureID) {
 			case EuaiactcompliancePackage.AI_SYSTEM__BASE_COMPONENT:
 				setBase_Component((Component)newValue);
+				return;
+			case EuaiactcompliancePackage.AI_SYSTEM__PROVIDER_NAME:
+				setProviderName((String)newValue);
+				return;
+			case EuaiactcompliancePackage.AI_SYSTEM__PROVIDER_CONTACT:
+				setProviderContact((String)newValue);
 				return;
 			case EuaiactcompliancePackage.AI_SYSTEM__VERSION:
 				setVersion((String)newValue);
@@ -1349,6 +1355,9 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 				return;
 			case EuaiactcompliancePackage.AI_SYSTEM__KEY_DESIGN_DECISION:
 				setKeyDesignDecision((String)newValue);
+				return;
+			case EuaiactcompliancePackage.AI_SYSTEM__AFFECTED_PERSONS:
+				setAffectedPersons((String)newValue);
 				return;
 			case EuaiactcompliancePackage.AI_SYSTEM__DESIGN_TRADE_OFFS:
 				setDesignTradeOffs((String)newValue);
@@ -1389,15 +1398,6 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 			case EuaiactcompliancePackage.AI_SYSTEM__POST_MARKET_MONITORING:
 				setPostMarketMonitoring((String)newValue);
 				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__PROVIDER_NAME:
-				setProviderName((String)newValue);
-				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__PROVIDER_CONTACT:
-				setProviderContact((String)newValue);
-				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__AFFECTED_PERSONS:
-				setAffectedPersons((String)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -1412,6 +1412,12 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 		switch (featureID) {
 			case EuaiactcompliancePackage.AI_SYSTEM__BASE_COMPONENT:
 				setBase_Component((Component)null);
+				return;
+			case EuaiactcompliancePackage.AI_SYSTEM__PROVIDER_NAME:
+				setProviderName(PROVIDER_NAME_EDEFAULT);
+				return;
+			case EuaiactcompliancePackage.AI_SYSTEM__PROVIDER_CONTACT:
+				setProviderContact(PROVIDER_CONTACT_EDEFAULT);
 				return;
 			case EuaiactcompliancePackage.AI_SYSTEM__VERSION:
 				setVersion(VERSION_EDEFAULT);
@@ -1442,6 +1448,9 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 				return;
 			case EuaiactcompliancePackage.AI_SYSTEM__KEY_DESIGN_DECISION:
 				setKeyDesignDecision(KEY_DESIGN_DECISION_EDEFAULT);
+				return;
+			case EuaiactcompliancePackage.AI_SYSTEM__AFFECTED_PERSONS:
+				setAffectedPersons(AFFECTED_PERSONS_EDEFAULT);
 				return;
 			case EuaiactcompliancePackage.AI_SYSTEM__DESIGN_TRADE_OFFS:
 				setDesignTradeOffs(DESIGN_TRADE_OFFS_EDEFAULT);
@@ -1482,15 +1491,6 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 			case EuaiactcompliancePackage.AI_SYSTEM__POST_MARKET_MONITORING:
 				setPostMarketMonitoring(POST_MARKET_MONITORING_EDEFAULT);
 				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__PROVIDER_NAME:
-				setProviderName(PROVIDER_NAME_EDEFAULT);
-				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__PROVIDER_CONTACT:
-				setProviderContact(PROVIDER_CONTACT_EDEFAULT);
-				return;
-			case EuaiactcompliancePackage.AI_SYSTEM__AFFECTED_PERSONS:
-				setAffectedPersons(AFFECTED_PERSONS_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1505,6 +1505,10 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 		switch (featureID) {
 			case EuaiactcompliancePackage.AI_SYSTEM__BASE_COMPONENT:
 				return base_Component != null;
+			case EuaiactcompliancePackage.AI_SYSTEM__PROVIDER_NAME:
+				return PROVIDER_NAME_EDEFAULT == null ? providerName != null : !PROVIDER_NAME_EDEFAULT.equals(providerName);
+			case EuaiactcompliancePackage.AI_SYSTEM__PROVIDER_CONTACT:
+				return PROVIDER_CONTACT_EDEFAULT == null ? providerContact != null : !PROVIDER_CONTACT_EDEFAULT.equals(providerContact);
 			case EuaiactcompliancePackage.AI_SYSTEM__VERSION:
 				return VERSION_EDEFAULT == null ? version != null : !VERSION_EDEFAULT.equals(version);
 			case EuaiactcompliancePackage.AI_SYSTEM__EXTERNAL_INTERACTION:
@@ -1525,6 +1529,8 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 				return DESIGN_SPECIFICATION_EDEFAULT == null ? designSpecification != null : !DESIGN_SPECIFICATION_EDEFAULT.equals(designSpecification);
 			case EuaiactcompliancePackage.AI_SYSTEM__KEY_DESIGN_DECISION:
 				return KEY_DESIGN_DECISION_EDEFAULT == null ? keyDesignDecision != null : !KEY_DESIGN_DECISION_EDEFAULT.equals(keyDesignDecision);
+			case EuaiactcompliancePackage.AI_SYSTEM__AFFECTED_PERSONS:
+				return AFFECTED_PERSONS_EDEFAULT == null ? affectedPersons != null : !AFFECTED_PERSONS_EDEFAULT.equals(affectedPersons);
 			case EuaiactcompliancePackage.AI_SYSTEM__DESIGN_TRADE_OFFS:
 				return DESIGN_TRADE_OFFS_EDEFAULT == null ? designTradeOffs != null : !DESIGN_TRADE_OFFS_EDEFAULT.equals(designTradeOffs);
 			case EuaiactcompliancePackage.AI_SYSTEM__DEVELOPEMENT_RESOURCES:
@@ -1551,12 +1557,6 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 				return copyEUConformityDeclaration != COPY_EU_CONFORMITY_DECLARATION_EDEFAULT;
 			case EuaiactcompliancePackage.AI_SYSTEM__POST_MARKET_MONITORING:
 				return POST_MARKET_MONITORING_EDEFAULT == null ? postMarketMonitoring != null : !POST_MARKET_MONITORING_EDEFAULT.equals(postMarketMonitoring);
-			case EuaiactcompliancePackage.AI_SYSTEM__PROVIDER_NAME:
-				return PROVIDER_NAME_EDEFAULT == null ? providerName != null : !PROVIDER_NAME_EDEFAULT.equals(providerName);
-			case EuaiactcompliancePackage.AI_SYSTEM__PROVIDER_CONTACT:
-				return PROVIDER_CONTACT_EDEFAULT == null ? providerContact != null : !PROVIDER_CONTACT_EDEFAULT.equals(providerContact);
-			case EuaiactcompliancePackage.AI_SYSTEM__AFFECTED_PERSONS:
-				return AFFECTED_PERSONS_EDEFAULT == null ? affectedPersons != null : !AFFECTED_PERSONS_EDEFAULT.equals(affectedPersons);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1571,7 +1571,11 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (Version: ");
+		result.append(" (ProviderName: ");
+		result.append(providerName);
+		result.append(", ProviderContact: ");
+		result.append(providerContact);
+		result.append(", Version: ");
 		result.append(version);
 		result.append(", ExternalInteraction: ");
 		result.append(externalInteraction);
@@ -1591,6 +1595,8 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 		result.append(designSpecification);
 		result.append(", KeyDesignDecision: ");
 		result.append(keyDesignDecision);
+		result.append(", AffectedPersons: ");
+		result.append(affectedPersons);
 		result.append(", DesignTradeOffs: ");
 		result.append(designTradeOffs);
 		result.append(", DevelopementResources: ");
@@ -1617,12 +1623,6 @@ public class AISystemImpl extends MinimalEObjectImpl.Container implements AISyst
 		result.append(copyEUConformityDeclaration);
 		result.append(", PostMarketMonitoring: ");
 		result.append(postMarketMonitoring);
-		result.append(", ProviderName: ");
-		result.append(providerName);
-		result.append(", ProviderContact: ");
-		result.append(providerContact);
-		result.append(", AffectedPersons: ");
-		result.append(affectedPersons);
 		result.append(')');
 		return result.toString();
 	}

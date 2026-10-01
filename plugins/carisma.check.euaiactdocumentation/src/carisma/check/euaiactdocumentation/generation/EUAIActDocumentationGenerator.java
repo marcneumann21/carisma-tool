@@ -234,9 +234,9 @@ public class EUAIActDocumentationGenerator {
 			documentMandatoryString(foundDocumentation, missingDocumentation, mlModel,
 					EUAIActCompliance.SelfDevelopedModel, "TrainingMethods", "Training methods", "Annex IV(2)(d)");
 			documentMandatoryString(foundDocumentation, missingDocumentation, mlModel,
-					EUAIActCompliance.SelfDevelopedModel, "ValidationProcess", "Validation", "Annex IV(2)(g)");
+					EUAIActCompliance.SelfDevelopedModel, "ValidationProcess", "Validation process", "Annex IV(2)(g)");
 			documentMandatoryString(foundDocumentation, missingDocumentation, mlModel,
-					EUAIActCompliance.SelfDevelopedModel, "TestingProcess", "Testing", "Annex IV(2)(g)");
+					EUAIActCompliance.SelfDevelopedModel, "TestingProcess", "Testing process", "Annex IV(2)(g)");
 			documentMandatoryBoolean(foundDocumentation, missingDocumentation, mlModel,
 					EUAIActCompliance.SelfDevelopedModel, "TestReports", "Test reports", "Annex IV(2)(g)");
 
