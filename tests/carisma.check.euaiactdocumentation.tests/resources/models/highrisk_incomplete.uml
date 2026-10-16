@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:euaiactcompliance="http://www.umlsec.de/profiles/UMLsec/euaiactcompliance.ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_el2nsMlUEfGp78qYXhMFAA" name="highrisk_incomplete">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_emwmoMlUEfGp78qYXhMFAA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Component" xmi:id="_gO9TgMlUEfGp78qYXhMFAA" name="Component2" useCase="_uXLLYMlUEfGp78qYXhMFAA">
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_uXLLYMlUEfGp78qYXhMFAA" name="UseCase1" subject="_gO9TgMlUEfGp78qYXhMFAA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_T0GDYMlWEfGIW_pnqAUvPw" name="Artifact4">
+      <manifestation xmi:type="uml:Manifestation" xmi:id="_WXsBgMlWEfGIW_pnqAUvPw" client="_T0GDYMlWEfGIW_pnqAUvPw" supplier="_gO9TgMlUEfGp78qYXhMFAA" utilizedElement="_gO9TgMlUEfGp78qYXhMFAA"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_h5osoMlUEfGp78qYXhMFAA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_h5qh0MlUEfGp78qYXhMFAA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.umlsec.de/profiles/UMLsec/euaiactcompliance.ecore#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UMLsec/euaiactcompliance.uml#_INSeoINVEfG2M-ml6d0mJw"/>
+    </profileApplication>
+  </uml:Model>
+  <euaiactcompliance:AISystem xmi:id="_j6ZDcMlUEfGp78qYXhMFAA" base_Component="_gO9TgMlUEfGp78qYXhMFAA" ProviderName="test" ProviderContact="test" Version="test" MarketPlacementForm="test" HardwareDescription="test"/>
+  <euaiactcompliance:Education xmi:id="_wV0pYMlUEfGp78qYXhMFAA" AccessAdmission="true" base_UseCase="_uXLLYMlUEfGp78qYXhMFAA"/>
+  <euaiactcompliance:RiskManagementSystem xmi:id="_VTW2sMlWEfGIW_pnqAUvPw" base_Artifact="_T0GDYMlWEfGIW_pnqAUvPw"/>
+</xmi:XMI>

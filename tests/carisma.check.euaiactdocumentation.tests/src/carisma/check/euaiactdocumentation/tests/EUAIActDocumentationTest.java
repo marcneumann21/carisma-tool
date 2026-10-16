@@ -116,8 +116,8 @@ public class EUAIActDocumentationTest {
 				EUAIActDocumentationSection.GeneralDescriptionAISystem);
 		EUAIActDocumentationSectionResult riskManagement = getSection(sections,
 				EUAIActDocumentationSection.DescriptionRiskManagement);
-		assertTrue(containsReference(general.missingDocumentation(), "Annex IV(1)(a)"));
-		assertTrue(containsReference(riskManagement.missingDocumentation(), "Article 9(1)"));
+		assertTrue(containsReference(general.missingDocumentation(), "Annex IV(1)(g)"));
+		assertTrue(containsReference(riskManagement.missingDocumentation(), "Article 9(2)"));
 		EUAIActDocumentationCheck check = new EUAIActDocumentationCheck();
 		TestHost analysisHost = new TestHost(this.modelres);
 		assertFalse(check.perform(null, analysisHost));

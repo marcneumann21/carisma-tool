@@ -4,7 +4,7 @@ Bundle-Name: Tests
 Bundle-SymbolicName: carisma.check.euaiactriskclassification.tests
 Bundle-Version: 1.0.0.qualifier
 Require-Bundle: carisma.core;bundle-version="1.4.3",
- org.eclipse.uml2.uml;bundle-version="5.6.0",
+ org.eclipse.uml2.uml;bundle-version="5.5.0",
  carisma.modeltype.uml2;bundle-version="1.1.4",
  carisma.check.euaiactriskclassification;bundle-version="1.0.0",
  carisma.profile.euaiactcompliance;bundle-version="1.0.0",
