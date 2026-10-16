@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/gmfdiag/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_0JhccMCsEfGfDvVIUdhx2g" type="UseCase" name="NewUseCaseDiagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_023DkMCsEfGfDvVIUdhx2g" type="Classifier_SubjectShape">
+    <children xmi:type="notation:DecorationNode" xmi:id="_023qoMCsEfGfDvVIUdhx2g" type="Classifier_NameLabel"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_023qocCsEfGfDvVIUdhx2g" type="Classifier_FloatingNameLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_023qosCsEfGfDvVIUdhx2g" y="15"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_023qo8CsEfGfDvVIUdhx2g" type="Classifier_UseCaseCompartment">
+      <children xmi:type="notation:Shape" xmi:id="_1RTj4MCsEfGfDvVIUdhx2g" type="UseCase_Shape_CCN">
+        <children xmi:type="notation:DecorationNode" xmi:id="_1RTj4sCsEfGfDvVIUdhx2g" type="UseCase_NameLabel_CCN"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_1RTj48CsEfGfDvVIUdhx2g" type="UseCase_FloatingNameLabel_CCN">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_1RTj5MCsEfGfDvVIUdhx2g" y="15"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_1RTj5cCsEfGfDvVIUdhx2g" type="UseCase_ExtensionPointCompartment_CCN">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_1RTj5sCsEfGfDvVIUdhx2g"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_1RTj58CsEfGfDvVIUdhx2g"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1RTj6MCsEfGfDvVIUdhx2g"/>
+        </children>
+        <element xmi:type="uml:UseCase" href="noaisystem.uml#_1RNdQMCsEfGfDvVIUdhx2g"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1RTj4cCsEfGfDvVIUdhx2g" x="42" y="122"/>
+      </children>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_023qpMCsEfGfDvVIUdhx2g"/>
+    </children>
+    <element xmi:type="uml:Component" href="noaisystem.uml#_020nUMCsEfGfDvVIUdhx2g"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_023DkcCsEfGfDvVIUdhx2g" x="400" y="120"/>
+  </children>
+  <styles xmi:type="notation:StringValueStyle" xmi:id="_0JhcccCsEfGfDvVIUdhx2g" name="diagram_compatibility_version" stringValue="1.4.0"/>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_0JhccsCsEfGfDvVIUdhx2g"/>
+  <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_0Jhcc8CsEfGfDvVIUdhx2g" diagramKindId="org.eclipse.papyrus.uml.diagram.useCase">
+    <owner xmi:type="uml:Model" href="noaisystem.uml#_zA948MCsEfGfDvVIUdhx2g"/>
+  </styles>
+  <element xmi:type="uml:Model" href="noaisystem.uml#_zA948MCsEfGfDvVIUdhx2g"/>
+</notation:Diagram>

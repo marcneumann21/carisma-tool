@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:euaiactcompliance="http://www.umlsec.de/profiles/UMLsec/euaiactcompliance.ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.umlsec.de/profiles/UMLsec/euaiactcompliance.ecore ../../../carisma.profile.euaiactcompliance/profile/euaiactcompliance.profile.uml#_dhMXMKBLEfGSDoVkuQMGhA">
+  <uml:Model xmi:id="_n4PGQMCGEfGyo5jrjrfl0Q" name="minimalrisk">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_n5S2MMCGEfGyo5jrjrfl0Q">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Component" xmi:id="_M4gpEMCJEfGyo5jrjrfl0Q" name="Component2" useCase="_N2QqwMCJEfGyo5jrjrfl0Q">
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_N2QqwMCJEfGyo5jrjrfl0Q" name="Filter mails" subject="_M4gpEMCJEfGyo5jrjrfl0Q"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_DT46kMC9EfGfDvVIUdhx2g">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DT5hoMC9EfGfDvVIUdhx2g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../../../carisma.profile.euaiactcompliance/profile/euaiactcompliance.profile.uml#_dhMXMKBLEfGSDoVkuQMGhA"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="../../../carisma.profile.euaiactcompliance/profile/euaiactcompliance.profile.uml#_INSeoINVEfG2M-ml6d0mJw"/>
+    </profileApplication>
+  </uml:Model>
+  <euaiactcompliance:AISystem xmi:id="_D6SMMMC9EfGfDvVIUdhx2g" base_Component="_M4gpEMCJEfGyo5jrjrfl0Q"/>
+</xmi:XMI>

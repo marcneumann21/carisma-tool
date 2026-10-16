@@ -7,8 +7,9 @@ Require-Bundle: carisma.core;bundle-version="1.4.3",
  org.eclipse.uml2.uml;bundle-version="5.6.0",
  org.junit;bundle-version="4.13.2",
  carisma.modeltype.uml2;bundle-version="1.1.4",
- carisma.profile.euaiactcompliance;bundle-version="1.0.0",
  carisma.check.euaiactdocumentation;bundle-version="1.0.0",
- carisma.tests.modelutils.uml;bundle-version="1.0.1"
+ carisma.tests.modelutils.uml;bundle-version="1.0.1",
+ carisma.check.euaiactriskclassification;bundle-version="1.0.0",
+ carisma.profile.euaiactcompliance;bundle-version="1.0.0"
 Automatic-Module-Name: carisma.check.euaiactdocumentation.tests
 Bundle-RequiredExecutionEnvironment: JavaSE-21

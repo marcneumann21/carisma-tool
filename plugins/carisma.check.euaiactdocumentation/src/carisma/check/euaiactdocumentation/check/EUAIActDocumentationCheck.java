@@ -40,7 +40,7 @@ public class EUAIActDocumentationCheck extends AbstractEUAIActDocumentationCheck
 			return false;
 		}
 
-		addInfo("Your model contains " + aiSystems.size() + (aiSystems.size() > 1 ? "AI Systems" : "AI System"));
+		addInfo("Your model contains " + aiSystems.size() + (aiSystems.size() > 1 ? " AI Systems" : " AI System"));
 		addInfo("");
 
 		boolean completeDocumentation = true;
@@ -53,7 +53,7 @@ public class EUAIActDocumentationCheck extends AbstractEUAIActDocumentationCheck
 
 			addInfo("");
 
-			addInfo("#".repeat(50));
+			addInfo("#".repeat(57));
 			addInfo("Generated documentation of the AI system '" + aiSystem.getName() + "':");
 
 			// the AI system and its ML model are separate elements, otherwise the model
@@ -62,39 +62,39 @@ public class EUAIActDocumentationCheck extends AbstractEUAIActDocumentationCheck
 				addError("The component '" + aiSystem.getName()
 						+ "' has both 'AISystem' and 'SelfDevelopedModel' applied. Model the ML model as a separate component and connect it to the AI system.");
 				completeDocumentation = false;
-				addInfo("#".repeat(50));
+				addInfo("#".repeat(57));
 				continue;
 			}
 
 			if (riskClass == EUAIActRiskClass.Unacceptable) {
 				addWarning("No technical documentation is generated, because the AI system '" + aiSystem.getName()
 						+ "' must not be placed on the market, put into service or used (Article 5).");
-				addInfo("#".repeat(50));
+				addInfo("#".repeat(57));
 				continue;
 			} else if (riskClass == EUAIActRiskClass.High) {
 				if (result.annexISectionB()) {
 					addWarning("No technical documentation is generated, because the AI system '" + aiSystem.getName()
 							+ "' falls under Section B of Annex I. Article 11 and Annex IV do not apply (Article 2(2)).");
-					addInfo("#".repeat(50));
+					addInfo("#".repeat(57));
 					continue;
 				}
 				addInfo("The technical documentation is mandatory for the AI system '" + aiSystem.getName()
 						+ "' (Article 11 and Annex IV).");
 				highRisk = true;
-				addInfo("#".repeat(50));
+				addInfo("#".repeat(57));
 			} else if (riskClass == EUAIActRiskClass.Limited) {
 				addInfo("The technical documentation is not mandatory for the AI system '" + aiSystem.getName()
 						+ "' (Article 11). The following information is for transparency purposes.");
-				addInfo("#".repeat(50));
+				addInfo("#".repeat(57));
 			} else if (riskClass == EUAIActRiskClass.Minimal) {
 				addInfo("No technical documentation is required, because the AI system '" + aiSystem.getName()
 						+ "' is classified as minimal risk.");
-				addInfo("#".repeat(50));
+				addInfo("#".repeat(57));
 				continue;
 			} else {
 				addWarning("No technical documentation is generated, because the risk class of the AI system '"
 						+ aiSystem.getName() + "' could not be determined.");
-				addInfo("#".repeat(50));
+				addInfo("#".repeat(57));
 				continue;
 			}
 
@@ -116,9 +116,9 @@ public class EUAIActDocumentationCheck extends AbstractEUAIActDocumentationCheck
 					continue;
 				}
 
-				addInfo("-".repeat(50));
+				addInfo("-".repeat(70));
 				addInfo(section.sectionName().toString());
-				addInfo("-".repeat(50));
+				addInfo("-".repeat(70));
 				if (section.foundDocumentation().isEmpty()) {
 					addInfo("None");
 				} else {
@@ -179,9 +179,9 @@ public class EUAIActDocumentationCheck extends AbstractEUAIActDocumentationCheck
 				List<String> missing = missingPerElement.get(elementName);
 				List<String> notes = notesPerElement.get(elementName);
 
-				addInfo("-".repeat(50));
+				addInfo("-".repeat(70));
 				addInfo(elementName);
-				addInfo("-".repeat(50));
+				addInfo("-".repeat(70));
 
 				if (riskClass == EUAIActRiskClass.High && missing != null) {
 					addInfo("Missing:");

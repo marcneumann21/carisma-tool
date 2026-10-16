@@ -31,7 +31,7 @@ public class EUAIActRiskClassificationObligation {
 			obligations.add("Establish of a continuous risk management system (Article 9).");
 			obligations.add(
 					"Apply data governance and management practices to the training, validation and testing data sets (Article 10).");
-			obligations.add("Create a technical documentation (Article 11).");
+			obligations.add("Create a technical documentation (Article 11). -> run the EU AI ACT DOCUMENTATION CHECK");
 			obligations.add("Enable automatic record keeping (Article 12).");
 			obligations.add("Provide transparent information to deployers (Article 13).");
 			obligations.add("Enable human oversight (Article 14).");

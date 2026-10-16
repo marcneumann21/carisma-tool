@@ -244,7 +244,7 @@ public class EUAIActDocumentationGenerator {
 					EUAIActCompliance.TrainingData);
 			if (modelTrainingData.isEmpty()) {
 				addToNotes(notes, mlModelName, "Training data",
-						"No training data is connected to the model. If the model is trained with data, connect the training data to the model, e.g. via a <<use>> dependency.",
+						"No training data is connected to the model. If the model is trained with data, connect the training data to the model.",
 						"Annex IV(2)(d)");
 			} else {
 				List<String> dataNames = new ArrayList<>();
@@ -317,8 +317,8 @@ public class EUAIActDocumentationGenerator {
 				}
 			}
 			if (!assigned) {
-				addToNotes(notes, dataName, "Assignment to a model",
-						"The training data set is not assigned to any model. Connect the training data set to the model that is trained with it, e.g. via a <<use>> dependency.",
+				addToMissingDocumentation(missingDocumentation, dataName, "Assignment to a model",
+						"No model is connected to the training data set. Connect the training data set to the model that is trained with it.",
 						"Annex IV(2)(d)");
 			}
 		}
@@ -404,11 +404,11 @@ public class EUAIActDocumentationGenerator {
 		if (riskManagementSystems.isEmpty()) {
 			if (this.highRisk) {
 				addToMissingDocumentation(missingDocumentation, aiSystemName, "Risk management system",
-						"No risk management system is contained in the AI system or connected to it by a dependency, add it to the UML model.",
+						"No risk management system is contained in the AI system or connected to it, add it to the UML model.",
 						"Annex IV(5), Article 9(1)");
 			} else {
 				addToNotes(notes, aiSystemName, "Risk management system",
-						"No risk management system is contained in the AI system or connected to it by a dependency.",
+						"No risk management system is contained in the AI system or connected to it.",
 						"Annex IV(5), Article 9(1)");
 			}
 			return new EUAIActDocumentationSectionResult(EUAIActDocumentationSection.DescriptionRiskManagement,

@@ -36,7 +36,7 @@ public class EUAIActRiskClassificationCheck extends AbstractEUAIActRiskClassific
 			return false;
 		}
 
-		addInfo("Your model contains " + aiSystems.size() + " AI systems.");
+		addInfo("Your model contains " + aiSystems.size() + (aiSystems.size() > 1 ? " AI Systems" : " AI System"));
 		addInfo("");
 
 		boolean noUnacceptableRisk = true;
@@ -50,14 +50,22 @@ public class EUAIActRiskClassificationCheck extends AbstractEUAIActRiskClassific
 			List<String> additionalObligations = result.additionalObligations();
 			List<String> notes = result.notes();
 
-			addInfo("#".repeat(50));
-			addInfo("The AI System '" + aiSystem.getName() + "' is classified as: " + riskClass);
-			addInfo("#".repeat(50));
-
 			addInfo("");
 
-			addInfo("Reasons:");
-			addInfo("=======");
+			addInfo("#".repeat(57));
+			if (riskClass == EUAIActRiskClass.Undetermined) {
+				addInfo("The AI System '" + aiSystem.getName() + "' could not be classified: " + riskClass);
+			} else {
+				addInfo("The AI System '" + aiSystem.getName() + "' is classified as: " + riskClass);
+			}
+			addInfo("#".repeat(57));
+
+			addInfo("");
+			
+			addInfo("=".repeat(50));
+			addInfo("REASONS");
+			addInfo("=".repeat(50));
+			
 			for (String reason : reasons) {
 				addInfo(reason);
 			}
@@ -74,8 +82,9 @@ public class EUAIActRiskClassificationCheck extends AbstractEUAIActRiskClassific
 						+ "' could not be determined.");
 				continue;
 			} else {
-				addInfo("Risk Class Obligations:");
-				addInfo("=================");
+				addInfo("=".repeat(50));
+				addInfo("RISK CLASS OBLIGATIONS");
+				addInfo("=".repeat(50));
 				if (obligations.isEmpty()) {
 					addInfo("None");
 				} else {
@@ -84,15 +93,11 @@ public class EUAIActRiskClassificationCheck extends AbstractEUAIActRiskClassific
 					}
 				}
 
-				if (riskClass == EUAIActRiskClass.High && !result.annexISectionB()) {
-					addWarning(
-							"Run the EU AI Act Documentation Check to generate the technical documentation (Article 11).");
-				}
-
 				addInfo("");
 
-				addInfo("Additional Obligations:");
-				addInfo("=================");
+				addInfo("=".repeat(50));
+				addInfo("ADDITIONAL OBLIGATIONS");
+				addInfo("=".repeat(50));
 				if (additionalObligations.isEmpty()) {
 					addInfo("None");
 				} else {
@@ -103,8 +108,9 @@ public class EUAIActRiskClassificationCheck extends AbstractEUAIActRiskClassific
 
 				addInfo("");
 
-				addInfo("Notes:");
-				addInfo("=====");
+				addInfo("=".repeat(50));
+				addInfo("NOTES");
+				addInfo("=".repeat(50));
 				if (notes.isEmpty()) {
 					addInfo("None");
 				} else {
