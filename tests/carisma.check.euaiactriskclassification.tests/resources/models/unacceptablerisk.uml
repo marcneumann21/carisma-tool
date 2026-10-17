@@ -4,8 +4,13 @@
     <packageImport xmi:type="uml:PackageImport" xmi:id="_jtYPYMCGEfGyo5jrjrfl0Q">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
     </packageImport>
-    <packagedElement xmi:type="uml:Component" xmi:id="_A9NKIMCIEfGyo5jrjrfl0Q" name="Component2" useCase="_Bvj0IMCIEfGyo5jrjrfl0Q">
+    <packagedElement xmi:type="uml:Component" xmi:id="_A9NKIMCIEfGyo5jrjrfl0Q" name="Component2" useCase="_Bvj0IMCIEfGyo5jrjrfl0Q _8PmhQMn4EfGfme4E4LpMmA _-wGvIMn4EfGfme4E4LpMmA _BlnjsMn5EfGfme4E4LpMmA _DcMq0Mn5EfGfme4E4LpMmA _FesHAMn5EfGfme4E4LpMmA">
       <ownedUseCase xmi:type="uml:UseCase" xmi:id="_Bvj0IMCIEfGyo5jrjrfl0Q" name="UseCase1" subject="_A9NKIMCIEfGyo5jrjrfl0Q"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_8PmhQMn4EfGfme4E4LpMmA" name="UseCase2" subject="_A9NKIMCIEfGyo5jrjrfl0Q"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_-wGvIMn4EfGfme4E4LpMmA" name="UseCase3" subject="_A9NKIMCIEfGyo5jrjrfl0Q"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_BlnjsMn5EfGfme4E4LpMmA" name="UseCase4" subject="_A9NKIMCIEfGyo5jrjrfl0Q"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_DcMq0Mn5EfGfme4E4LpMmA" name="UseCase5" subject="_A9NKIMCIEfGyo5jrjrfl0Q"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_FesHAMn5EfGfme4E4LpMmA" name="UseCase6" subject="_A9NKIMCIEfGyo5jrjrfl0Q"/>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_MNt1EMCIEfGyo5jrjrfl0Q">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_MNwRUMCIEfGyo5jrjrfl0Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
@@ -16,4 +21,9 @@
   </uml:Model>
   <euaiactcompliance:AISystem xmi:id="_OW5vIMCIEfGyo5jrjrfl0Q" base_Component="_A9NKIMCIEfGyo5jrjrfl0Q"/>
   <euaiactcompliance:SocialScoring xmi:id="_PN4acMCIEfGyo5jrjrfl0Q" base_UseCase="_Bvj0IMCIEfGyo5jrjrfl0Q"/>
+  <euaiactcompliance:ManipulativeBehaviour xmi:id="_-ZcioMn4EfGfme4E4LpMmA" SubliminalTechniques="true" base_UseCase="_8PmhQMn4EfGfme4E4LpMmA"/>
+  <euaiactcompliance:ExploitingHumanVulnerability xmi:id="_AWMjMMn5EfGfme4E4LpMmA" base_UseCase="_-wGvIMn4EfGfme4E4LpMmA"/>
+  <euaiactcompliance:LawEnforcement xmi:id="_CqgIIMn5EfGfme4E4LpMmA" OffendingRiskAssessment="true" SolelyProfilingBased="true" base_UseCase="_BlnjsMn5EfGfme4E4LpMmA"/>
+  <euaiactcompliance:FacialImageScraping xmi:id="_E-5zsMn5EfGfme4E4LpMmA" Internet="true" base_UseCase="_DcMq0Mn5EfGfme4E4LpMmA"/>
+  <euaiactcompliance:EmotionRecognition xmi:id="_GFscoMn5EfGfme4E4LpMmA" Workplace="true" base_UseCase="_FesHAMn5EfGfme4E4LpMmA"/>
 </xmi:XMI>

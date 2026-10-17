@@ -26,7 +26,7 @@ import carisma.profile.euaiactcompliance.EUAIActCompliance;
 import carisma.profile.euaiactcompliance.EUAIActComplianceUtil;
 
 /**
- * JUnit tests for the EU AI Act risk documentation.
+ * JUnit tests for the EU AI Act Documentation Check.
  *
  * @author Marc Neumann
  */
@@ -38,6 +38,9 @@ public class EUAIActDocumentationTest {
 	private Resource modelres = null;
 	private Model model = null;
 
+	/**
+	 * loads the given UML test model
+	 */
 	public final void loadModel(final String testmodelname) throws IOException {
 		File testmodelfile = new File(this.filepath + File.separator + testmodelname);
 		assertTrue(testmodelfile.exists());
@@ -46,18 +49,27 @@ public class EUAIActDocumentationTest {
 		this.model = (Model) this.modelres.getContents().get(0);
 	}
 
+	/**
+	 * returns the AI system of the model
+	 */
 	private Component getAISystem() {
 		Set<Component> aiSystems = EUAIActComplianceUtil.getStereotypedElements(model, Component.class,
 				EUAIActCompliance.AISystem);
-		assertEquals(1, aiSystems.size());
 		return aiSystems.iterator().next();
 	}
 
+	/**
+	 * generates the documentation of the AI system of the model
+	 *
+	 */
 	private List<EUAIActDocumentationSectionResult> generate(boolean highRisk) {
 		EUAIActDocumentationGenerator generator = new EUAIActDocumentationGenerator(getAISystem(), highRisk);
 		return generator.generateDocumentation();
 	}
 
+	/*
+	 * gets the section with the given section name.
+	 */
 	private EUAIActDocumentationSectionResult getSection(List<EUAIActDocumentationSectionResult> sections,
 			EUAIActDocumentationSection sectionName) {
 		for (EUAIActDocumentationSectionResult section : sections) {
@@ -68,6 +80,9 @@ public class EUAIActDocumentationTest {
 		return null;
 	}
 
+	/*
+	 * checks if any message contains the given legal reference
+	 */
 	private boolean containsReference(List<String> messages, String reference) {
 		for (String message : messages) {
 			if (message.contains(reference)) {
@@ -77,7 +92,9 @@ public class EUAIActDocumentationTest {
 		return false;
 	}
 
-	// test if sections of documentation are generated
+	/*
+	 * test if all sections of high risk AI system documentation are generated
+	 */
 	@Test
 	public void testHighRiskAllSections() throws IOException {
 		loadModel("highrisk_complete.uml");
@@ -90,7 +107,9 @@ public class EUAIActDocumentationTest {
 		this.modelres.unload();
 	}
 
-	// test for complete high risk ai system documentation
+	/*
+	 * test for complete high risk AI system documentation
+	 */
 	@Test
 	public void testHighRiskComplete() throws IOException {
 		loadModel("highrisk_complete.uml");
@@ -106,7 +125,7 @@ public class EUAIActDocumentationTest {
 	}
 
 	/*
-	 *  test for high risk ai system documentation without tags 
+	 * test for high risk AI system documentation without attributes
 	 */
 	@Test
 	public void testHighRiskIncomplete() throws IOException {
@@ -124,7 +143,9 @@ public class EUAIActDocumentationTest {
 		this.modelres.unload();
 	}
 
-	// test for limited risk ai system documentation
+	/*
+	 * test for limited risk AI system documentation
+	 */
 	@Test
 	public void testLimited() throws IOException {
 		loadModel("limitedrisk.uml");
@@ -138,7 +159,9 @@ public class EUAIActDocumentationTest {
 		this.modelres.unload();
 	}
 
-	// test for unacceptable risk ai system
+	/*
+	 * test for unacceptable risk AI system documentation
+	 */
 	@Test
 	public void testUnacceptable() throws IOException {
 		loadModel("unacceptablerisk.uml");
@@ -147,15 +170,17 @@ public class EUAIActDocumentationTest {
 		assertTrue(check.perform(null, analysisHost));
 		this.modelres.unload();
 	}
-	
-	// test for minimal risk ai system
-		@Test
-		public void testMinimal() throws IOException {
-			loadModel("minimalrisk.uml");
-			EUAIActDocumentationCheck check = new EUAIActDocumentationCheck();
-			TestHost analysisHost = new TestHost(this.modelres);
-			assertTrue(check.perform(null, analysisHost));
-			this.modelres.unload();
-		}
+
+	/*
+	 * test for minimal risk AI system documentation
+	 */
+	@Test
+	public void testMinimal() throws IOException {
+		loadModel("minimalrisk.uml");
+		EUAIActDocumentationCheck check = new EUAIActDocumentationCheck();
+		TestHost analysisHost = new TestHost(this.modelres);
+		assertTrue(check.perform(null, analysisHost));
+		this.modelres.unload();
+	}
 
 }

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:euaiactcompliance="http://www.umlsec.de/profiles/UMLsec/euaiactcompliance.ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.umlsec.de/profiles/UMLsec/euaiactcompliance.ecore platform:/../carisma.profile.euaiactcompliance/profile/euaiactcompliance.profile.uml">
+  <uml:Model xmi:id="_l4cckMn5EfGfme4E4LpMmA" name="highrisk_annexiii">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_l5dJMMn5EfGfme4E4LpMmA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Component" xmi:id="_pWQnQMn5EfGfme4E4LpMmA" name="Component2" useCase="_3W_XEMn5EfGkdaJFRfYyoA _3nKhEMn5EfGkdaJFRfYyoA _4MCIsMn5EfGkdaJFRfYyoA _-f7IoMn5EfGkdaJFRfYyoA _AXcq8Mn6EfGkdaJFRfYyoA _ApHNQMn7EfGkdaJFRfYyoA _D82qYMoFEfGkdaJFRfYyoA _K5RC4MoFEfGkdaJFRfYyoA _RRmd8MoFEfGkdaJFRfYyoA _VFvd8MoFEfGkdaJFRfYyoA">
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_3W_XEMn5EfGkdaJFRfYyoA" name="UseCase1" subject="_pWQnQMn5EfGfme4E4LpMmA"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_3nKhEMn5EfGkdaJFRfYyoA" name="UseCase2" subject="_pWQnQMn5EfGfme4E4LpMmA"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_4MCIsMn5EfGkdaJFRfYyoA" name="UseCase3" subject="_pWQnQMn5EfGfme4E4LpMmA"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_-f7IoMn5EfGkdaJFRfYyoA" name="UseCase4" subject="_pWQnQMn5EfGfme4E4LpMmA"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_AXcq8Mn6EfGkdaJFRfYyoA" name="UseCase5" subject="_pWQnQMn5EfGfme4E4LpMmA"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_ApHNQMn7EfGkdaJFRfYyoA" name="UseCase6" subject="_pWQnQMn5EfGfme4E4LpMmA"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_D82qYMoFEfGkdaJFRfYyoA" name="UseCase8" subject="_pWQnQMn5EfGfme4E4LpMmA"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_K5RC4MoFEfGkdaJFRfYyoA" name="UseCase7" subject="_pWQnQMn5EfGfme4E4LpMmA"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_RRmd8MoFEfGkdaJFRfYyoA" name="UseCase9" subject="_pWQnQMn5EfGfme4E4LpMmA"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_VFvd8MoFEfGkdaJFRfYyoA" name="UseCase10" subject="_pWQnQMn5EfGfme4E4LpMmA"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_q4To0Mn5EfGfme4E4LpMmA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0vYboMn5EfGkdaJFRfYyoA" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0vYbocn5EfGkdaJFRfYyoA" key="Version" value="0.0.29"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0vYbosn5EfGkdaJFRfYyoA" key="Comment" value="remove 'Purpose' attribute"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0vYbo8n5EfGkdaJFRfYyoA" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0vYbpMn5EfGkdaJFRfYyoA" key="Date" value="2026-08-25"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0vYbpcn5EfGkdaJFRfYyoA" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0vV_YMn5EfGkdaJFRfYyoA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/../carisma.profile.euaiactcompliance/profile/euaiactcompliance.profile.uml#_dhMXMKBLEfGSDoVkuQMGhA"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="platform:/../carisma.profile.euaiactcompliance/profile/euaiactcompliance.profile.uml#_INSeoINVEfG2M-ml6d0mJw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_jgDjsMoLEfG4cPiDDhKoDQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jgH1IMoLEfG4cPiDDhKoDQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.umlsec.de/profiles/UMLsec/euaiactcompliance.ecore#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="platform:/plugin/carisma.profile.euaiactcompliance/profile/euaiactcompliance.profile.uml#_INSeoINVEfG2M-ml6d0mJw"/>
+    </profileApplication>
+  </uml:Model>
+  <euaiactcompliance:AISystem xmi:id="_2zhdoMn5EfGkdaJFRfYyoA" base_Component="_pWQnQMn5EfGfme4E4LpMmA"/>
+  <euaiactcompliance:LawEnforcement xmi:id="_6vp8AMn5EfGkdaJFRfYyoA" OffendingRiskAssessment="true" SolelyProfilingBased="true" base_UseCase="_3W_XEMn5EfGkdaJFRfYyoA" SupportsHumanAssessment="true"/>
+  <euaiactcompliance:EmotionRecognition xmi:id="_8DF50Mn5EfGkdaJFRfYyoA" Workplace="true" MedicalOrSafetyReason="true" base_UseCase="_3nKhEMn5EfGkdaJFRfYyoA"/>
+  <euaiactcompliance:CriticalInfrastructure xmi:id="_9n9l4Mn5EfGkdaJFRfYyoA" WaterSupply="true" base_UseCase="_4MCIsMn5EfGkdaJFRfYyoA"/>
+  <euaiactcompliance:HumanEmployment xmi:id="__7txMMn5EfGkdaJFRfYyoA" Recruitment="true" base_UseCase="_-f7IoMn5EfGkdaJFRfYyoA" ExceptionJustification="test">
+    <Exception>NarrowProceduralTask</Exception>
+  </euaiactcompliance:HumanEmployment>
+  <euaiactcompliance:Education xmi:id="_B558MMn6EfGkdaJFRfYyoA" AccessAdmission="true" base_UseCase="_AXcq8Mn6EfGkdaJFRfYyoA" ExceptionJustification="test">
+    <Exception>PrepatoryTask</Exception>
+  </euaiactcompliance:Education>
+  <euaiactcompliance:Profiling xmi:id="_HIb2kMn6EfGkdaJFRfYyoA" base_UseCase="_AXcq8Mn6EfGkdaJFRfYyoA"/>
+  <euaiactcompliance:Education xmi:id="_XA0PEMn7EfGkdaJFRfYyoA" base_UseCase="_ApHNQMn7EfGkdaJFRfYyoA"/>
+  <euaiactcompliance:BiometricCategorisation xmi:id="_G-JRIMoFEfGkdaJFRfYyoA" DeduceRace="true" LawfulDatasetLabeling="true" base_UseCase="_D82qYMoFEfGkdaJFRfYyoA"/>
+  <euaiactcompliance:EssentialService xmi:id="_MAgXwMoFEfGkdaJFRfYyoA" FraudDetectionOnly="true" InsuranceRiskPricing="true" base_UseCase="_K5RC4MoFEfGkdaJFRfYyoA"/>
+  <euaiactcompliance:MigrationBorder xmi:id="_ScZdIMoFEfGkdaJFRfYyoA" EntryRiskAssessment="true" TravelDocumentVerificationOnly="true" base_UseCase="_RRmd8MoFEfGkdaJFRfYyoA"/>
+  <euaiactcompliance:JusticeDemocracyUseCase xmi:id="_WzRWwMoFEfGkdaJFRfYyoA" ElectionInfluence="true" NoDirectExposure="true" base_UseCase="_VFvd8MoFEfGkdaJFRfYyoA"/>
+  <euaiactcompliance:AdministrationJusticeDemocracy xmi:id="_lJnigMoLEfG4cPiDDhKoDQ" JudicialSupport="true" NoDirectExposure="true" base_UseCase="_VFvd8MoFEfGkdaJFRfYyoA"/>
+</xmi:XMI>

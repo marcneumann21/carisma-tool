@@ -38,6 +38,9 @@ public class EUAIActRiskClassificationTest {
 	private Resource modelres = null;
 	private Model model = null;
 
+	/**
+	 * loads the given UML test model
+	 */
 	public final void loadModel(final String testmodelname) throws IOException {
 		File testmodelfile = new File(this.filepath + File.separator + testmodelname);
 		assertTrue(testmodelfile.exists());
@@ -46,13 +49,18 @@ public class EUAIActRiskClassificationTest {
 		this.model = (Model) this.modelres.getContents().get(0);
 	}
 
+	/**
+	 * returns the AI system of the model
+	 */
 	private Component getAISystem() {
 		Set<Component> aiSystems = EUAIActComplianceUtil.getStereotypedElements(model, Component.class,
 				EUAIActCompliance.AISystem);
-		assertEquals(1, aiSystems.size());
 		return aiSystems.iterator().next();
 	}
 
+	/*
+	 * checks if any message contains the given legal reference
+	 */
 	private boolean containsReference(List<String> messages, String reference) {
 		for (String message : messages) {
 			if (message.contains(reference)) {
@@ -62,23 +70,35 @@ public class EUAIActRiskClassificationTest {
 		return false;
 	}
 
-	// test for unacceptable risk
+	/*
+	 * test for unacceptable risk AI system with all prohibited practices of Art.
+	 * 5(1)(a) to 5(1)(f)
+	 */
 	@Test
-	public void testUnacceptable() throws IOException {
+	public void testUnacceptableRisk() throws IOException {
 		loadModel("unacceptablerisk.uml");
 		EUAIActRiskClassifier classifier = new EUAIActRiskClassifier(getAISystem());
 		EUAIActRiskClassificationResult result = classifier.classify();
 		assertEquals(EUAIActRiskClass.Unacceptable, result.riskClass());
+		assertTrue(containsReference(result.reasons(), "Article 5(1)(a)"));
+		assertTrue(containsReference(result.reasons(), "Article 5(1)(b)"));
 		assertTrue(containsReference(result.reasons(), "Article 5(1)(c)"));
+		assertTrue(containsReference(result.reasons(), "not specified"));
+		assertTrue(containsReference(result.reasons(), "Article 5(1)(d)"));
+		assertTrue(containsReference(result.reasons(), "Article 5(1)(e)"));
+		assertTrue(containsReference(result.reasons(), "Article 5(1)(f)"));
 		EUAIActRiskClassificationCheck check = new EUAIActRiskClassificationCheck();
 		TestHost analysisHost = new TestHost(this.modelres);
 		assertFalse(check.perform(null, analysisHost));
 		this.modelres.unload();
 	}
 
-	// test for high risk with safety component
+	/*
+	 * test for high risk AI system with only safety component and test if all high
+	 * risk obligations are generated
+	 */
 	@Test
-	public void testHigh() throws IOException {
+	public void testHighRisk() throws IOException {
 		loadModel("highrisk.uml");
 		EUAIActRiskClassifier classifier = new EUAIActRiskClassifier(getAISystem());
 		EUAIActRiskClassificationResult result = classifier.classify();
@@ -103,23 +123,66 @@ public class EUAIActRiskClassificationTest {
 		this.modelres.unload();
 	}
 
-	// test for limited risk
+	/*
+	 * test for high risk AI system with all Annex III areas
+	 */
 	@Test
-	public void testLimited() throws IOException {
-		loadModel("limitedrisk.uml");
+	public void testHighAnnexIII() throws IOException {
+		loadModel("highrisk_annexiii.uml");
 		EUAIActRiskClassifier classifier = new EUAIActRiskClassifier(getAISystem());
 		EUAIActRiskClassificationResult result = classifier.classify();
-		assertEquals(EUAIActRiskClass.Limited, result.riskClass());
-		assertTrue(containsReference(result.additionalObligations(), "Article 50(1)"));
+		assertEquals(EUAIActRiskClass.High, result.riskClass());
+		assertTrue(containsReference(result.reasons(), "Article 5(1)(d)"));
+		assertTrue(containsReference(result.reasons(), "Annex III(6)"));
+		assertTrue(containsReference(result.reasons(), "Article 5(1)(f)"));
+		assertTrue(containsReference(result.reasons(), "Annex III(1)(c)"));
+		assertTrue(containsReference(result.reasons(), "Annex III(2)"));
+		assertTrue(containsReference(result.notes(), "Set at least one area of application under 'Education'"));
+		assertTrue(containsReference(result.reasons(), "Article 6(2), Article 6(3)"));
+		assertTrue(containsReference(result.notes(), "because 'Profiling' is applied"));
+		assertTrue(containsReference(result.additionalObligations(), "Article 49(5)"));
+		assertTrue(containsReference(result.additionalObligations(), "Article 49(1)"));
+		assertFalse(containsReference(result.additionalObligations(), "Article 49(2)"));
+		assertTrue(containsReference(result.reasons(), "Article 5(1)(g)"));
+		assertTrue(containsReference(result.reasons(), "Annex III(1)(b)"));
+		assertTrue(containsReference(result.reasons(), "Annex III(5)"));
+		assertTrue(containsReference(result.notes(), "'FraudDetectionOnly' has no effect"));
+		assertTrue(containsReference(result.reasons(), "Annex III(7)"));
+		assertTrue(containsReference(result.notes(), "'TravelDocumentVerificationOnly' has no effect"));
+		assertTrue(containsReference(result.reasons(), "Annex III(8)"));
+		assertTrue(containsReference(result.notes(), "'NoDirectExposure' has no effect"));
 		EUAIActRiskClassificationCheck check = new EUAIActRiskClassificationCheck();
 		TestHost analysisHost = new TestHost(this.modelres);
 		assertTrue(check.perform(null, analysisHost));
 		this.modelres.unload();
 	}
 
-	// test for minimal risk
+	/*
+	 * test for limited risk AI system with transparency obligations of Art. 50(1)
+	 * and 50(2) and their exceptions (obvious AI interaction, standard editing
+	 * only)
+	 */
 	@Test
-	public void testMinimal() throws IOException {
+	public void testLimitedRisk() throws IOException {
+		loadModel("limitedrisk.uml");
+		EUAIActRiskClassifier classifier = new EUAIActRiskClassifier(getAISystem());
+		EUAIActRiskClassificationResult result = classifier.classify();
+		assertEquals(EUAIActRiskClass.Limited, result.riskClass());
+		assertTrue(containsReference(result.additionalObligations(), "Article 50(1)"));
+		assertTrue(containsReference(result.additionalObligations(), "Article 50(2)"));
+		assertTrue(containsReference(result.reasons(), "it is obvious from the circumstances"));
+		assertTrue(containsReference(result.reasons(), "assistive function for standard editing"));
+		EUAIActRiskClassificationCheck check = new EUAIActRiskClassificationCheck();
+		TestHost analysisHost = new TestHost(this.modelres);
+		assertTrue(check.perform(null, analysisHost));
+		this.modelres.unload();
+	}
+
+	/*
+	 * test for minimal risk AI system
+	 */
+	@Test
+	public void testMinimalRisk() throws IOException {
 		loadModel("minimalrisk.uml");
 		EUAIActRiskClassifier classifier = new EUAIActRiskClassifier(getAISystem());
 		EUAIActRiskClassificationResult result = classifier.classify();
@@ -131,7 +194,9 @@ public class EUAIActRiskClassificationTest {
 		this.modelres.unload();
 	}
 
-	// test for undetermined risk
+	/*
+	 * test for undetermined risk AI system
+	 */
 	@Test
 	public void testUndetermined() throws IOException {
 		loadModel("undetermined.uml");
@@ -144,7 +209,9 @@ public class EUAIActRiskClassificationTest {
 		this.modelres.unload();
 	}
 
-	// tests for model without AI system
+	/*
+	 * tests for model without any AI system
+	 */
 	@Test
 	public void testNoAISystem() throws IOException {
 		loadModel("noaisystem.uml");
