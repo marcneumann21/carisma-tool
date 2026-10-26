@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:euaiactcompliance="http://www.umlsec.de/profiles/UMLsec/euaiactcompliance.ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_CDz2QNB1EfG6V7UuNTSPNA" name="TaggedValues">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_CE2YENB1EfG6V7UuNTSPNA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Component" xmi:id="_FsLEENB1EfG6V7UuNTSPNA" name="FullSystem"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_SQ5v8NB1EfG6V7UuNTSPNA" name="EmptySystem"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_UirlUNB1EfG6V7UuNTSPNA" name="NoSystem"/>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_GnUdsNB1EfG6V7UuNTSPNA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GnUdsdB1EfG6V7UuNTSPNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.umlsec.de/profiles/UMLsec/euaiactcompliance.ecore#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UMLsec/euaiactcompliance.uml#_INSeoINVEfG2M-ml6d0mJw"/>
+    </profileApplication>
+  </uml:Model>
+  <euaiactcompliance:AISystem xmi:id="_HPG2cNB1EfG6V7UuNTSPNA" base_Component="_FsLEENB1EfG6V7UuNTSPNA" ProviderName="test" CopyEUConformityDeclaration="true"/>
+  <euaiactcompliance:AISystem xmi:id="_Tvgb8NB1EfG6V7UuNTSPNA" base_Component="_SQ5v8NB1EfG6V7UuNTSPNA"/>
+  <euaiactcompliance:ProductEmbedding xmi:id="_ZVqMINB1EfG6V7UuNTSPNA" base_Component="_FsLEENB1EfG6V7UuNTSPNA">
+    <ProductCategory>Machinery</ProductCategory>
+    <ProductCategory>Toy</ProductCategory>
+  </euaiactcompliance:ProductEmbedding>
+</xmi:XMI>

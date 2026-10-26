@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:euaiactcompliance="http://www.umlsec.de/profiles/UMLsec/euaiactcompliance.ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_G0VwkNB2EfG6V7UuNTSPNA" name="UseCases">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_G1yiENB2EfG6V7UuNTSPNA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Component" xmi:id="_JONK8NB2EfG6V7UuNTSPNA" name="FullSystem" useCase="_MgpMENB2EfG6V7UuNTSPNA _OvNVYNB2EfG6V7UuNTSPNA">
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_MgpMENB2EfG6V7UuNTSPNA" name="EssentialServiceUseCase" subject="_JONK8NB2EfG6V7UuNTSPNA"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_OvNVYNB2EfG6V7UuNTSPNA" name="Plain" subject="_JONK8NB2EfG6V7UuNTSPNA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_XDv-cNB2EfG6V7UuNTSPNA" name="EmptySystem"/>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_K-PlMNB2EfG6V7UuNTSPNA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_K-PlMdB2EfG6V7UuNTSPNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.umlsec.de/profiles/UMLsec/euaiactcompliance.ecore#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UMLsec/euaiactcompliance.uml#_INSeoINVEfG2M-ml6d0mJw"/>
+    </profileApplication>
+  </uml:Model>
+  <euaiactcompliance:AISystem xmi:id="_LlB4YNB2EfG6V7UuNTSPNA" base_Component="_JONK8NB2EfG6V7UuNTSPNA" CopyEUConformityDeclaration="true"/>
+  <euaiactcompliance:EssentialService xmi:id="_NCBa0NB2EfG6V7UuNTSPNA" base_UseCase="_MgpMENB2EfG6V7UuNTSPNA"/>
+  <euaiactcompliance:AISystem xmi:id="_r5qQANC7EfG6V7UuNTSPNA" base_Component="_XDv-cNB2EfG6V7UuNTSPNA"/>
+</xmi:XMI>

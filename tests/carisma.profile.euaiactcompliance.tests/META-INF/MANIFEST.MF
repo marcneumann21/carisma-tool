@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Tests
+Bundle-SymbolicName: carisma.profile.euaiactcompliance.tests
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.jface,
+ carisma.core;bundle-version="1.4.3",
+ org.eclipse.uml2.uml;bundle-version="5.5.0",
+ carisma.profile.euaiactcompliance;bundle-version="1.0.0",
+ org.junit;bundle-version="4.13.2"
+Automatic-Module-Name: carisma.profile.euaiactcompliance.tests
+Bundle-RequiredExecutionEnvironment: JavaSE-21

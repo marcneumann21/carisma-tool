@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:euaiactcompliance="http://www.umlsec.de/profiles/UMLsec/euaiactcompliance.ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_gb9gcNB1EfG6V7UuNTSPNA" name="Structure">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_gc8X4NB1EfG6V7UuNTSPNA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Component" xmi:id="_ip9pENB1EfG6V7UuNTSPNA" name="FullSystem">
+      <packagedElement xmi:type="uml:Component" xmi:id="_klm2YNB1EfG6V7UuNTSPNA" name="Model"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_pOgUINB1EfG6V7UuNTSPNA" name="Plain"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_P7fZINC0EfG6V7UuNTSPNA" client="_ip9pENB1EfG6V7UuNTSPNA" supplier="_u2XUgNB1EfG6V7UuNTSPNA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_u2XUgNB1EfG6V7UuNTSPNA" name="ThirdPartyComponent"/>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_2EXMQNB1EfG6V7UuNTSPNA" name="PlainArtifact">
+      <manifestation xmi:type="uml:Manifestation" xmi:id="_4YLB8NB1EfG6V7UuNTSPNA" client="_2EXMQNB1EfG6V7UuNTSPNA" supplier="_ip9pENB1EfG6V7UuNTSPNA" utilizedElement="_ip9pENB1EfG6V7UuNTSPNA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_8ZCPUNB1EfG6V7UuNTSPNA" name="TrainingData">
+      <manifestation xmi:type="uml:Manifestation" xmi:id="_-XCNENB1EfG6V7UuNTSPNA" client="_8ZCPUNB1EfG6V7UuNTSPNA" supplier="_ip9pENB1EfG6V7UuNTSPNA" utilizedElement="_ip9pENB1EfG6V7UuNTSPNA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_4ilOQNCNEfG6V7UuNTSPNA" name="EmptySystem"/>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_kLNZYNB1EfG6V7UuNTSPNA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kLOAcNB1EfG6V7UuNTSPNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.umlsec.de/profiles/UMLsec/euaiactcompliance.ecore#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UMLsec/euaiactcompliance.uml#_INSeoINVEfG2M-ml6d0mJw"/>
+    </profileApplication>
+  </uml:Model>
+  <euaiactcompliance:SelfDevelopedModel xmi:id="_lR4GgNB1EfG6V7UuNTSPNA" base_Component="_klm2YNB1EfG6V7UuNTSPNA"/>
+  <euaiactcompliance:AISystem xmi:id="_lvcMQNB1EfG6V7UuNTSPNA" base_Component="_ip9pENB1EfG6V7UuNTSPNA"/>
+  <euaiactcompliance:TrainingData xmi:id="__FTBQNB1EfG6V7UuNTSPNA" base_Artifact="_8ZCPUNB1EfG6V7UuNTSPNA"/>
+  <euaiactcompliance:AISystem xmi:id="_88-9ANCNEfG6V7UuNTSPNA" base_Component="_4ilOQNCNEfG6V7UuNTSPNA"/>
+  <euaiactcompliance:ThirdPartyComponent xmi:id="_R44A8NC2EfG6V7UuNTSPNA" base_Component="_u2XUgNB1EfG6V7UuNTSPNA"/>
+</xmi:XMI>
