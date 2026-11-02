@@ -496,7 +496,7 @@ public class EUAIActDocumentationGenerator {
 	}
 
 	// TODO JavaDoc
-	// Annex IV(9) system to evaluate the performance in the post-market phase
+	// Annex IV(9) system to evalate the performance in the post market phase
 	private EUAIActDocumentationSectionResult generateDescriptionAISystemPostMarketPhase() {
 		List<String> foundDocumentation = new ArrayList<>();
 		List<String> missingDocumentation = new ArrayList<>();

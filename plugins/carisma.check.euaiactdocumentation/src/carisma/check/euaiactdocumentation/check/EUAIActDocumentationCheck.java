@@ -7,15 +7,21 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.uml2.uml.Component;
+import org.eclipse.uml2.uml.Model;
 
-import carisma.check.euaiactdocumentation.common.AbstractEUAIActDocumentationCheck;
 import carisma.check.euaiactdocumentation.generation.EUAIActDocumentationGenerator;
 import carisma.check.euaiactdocumentation.section.EUAIActDocumentationSectionResult;
 import carisma.check.euaiactriskclassification.classification.EUAIActRiskClassificationResult;
 import carisma.check.euaiactriskclassification.classification.EUAIActRiskClassifier;
 import carisma.check.euaiactriskclassification.riskclass.EUAIActRiskClass;
+import carisma.core.analysis.AnalysisHost;
+import carisma.core.analysis.DummyHost;
+import carisma.core.analysis.result.AnalysisResultMessage;
+import carisma.core.analysis.result.StatusType;
 import carisma.core.checks.CarismaCheckWithID;
+import carisma.core.checks.CheckParameter;
 import carisma.profile.euaiactcompliance.EUAIActCompliance;
 import carisma.profile.euaiactcompliance.EUAIActComplianceUtil;
 
@@ -25,12 +31,45 @@ import carisma.profile.euaiactcompliance.EUAIActComplianceUtil;
  * @author Marc Neumann
  *
  */
-public class EUAIActDocumentationCheck extends AbstractEUAIActDocumentationCheck implements CarismaCheckWithID {
+public class EUAIActDocumentationCheck implements CarismaCheckWithID {
 
 	public static final String CHECK_ID = "carisma.check.euaiactdocumentation";
 	public static final String CHECK_NAME = "EU AI Act Documentation Check";
 
+	/**
+	 * the model to check.
+	 */
+	private Model model = null;
+
+	/**
+	 * AnalysisHost for report.
+	 */
+	private AnalysisHost analysisHost;
+
 	@Override
+	public boolean perform(final Map<String, CheckParameter> parameters, final AnalysisHost newHost) {
+		if (newHost != null) {
+			this.analysisHost = newHost;
+		} else {
+			this.analysisHost = new DummyHost(true);
+		}
+
+		Resource currentModel = this.analysisHost.getAnalyzedModel();
+		if (currentModel.getContents().isEmpty()) {
+			addError("Empty model");
+			this.analysisHost.appendLineToReport("Empty model");
+			return false;
+		}
+		if (!(currentModel.getContents().get(0) instanceof Model)) {
+			addError("Content is not a model!");
+			this.analysisHost.appendLineToReport("Content is not a model!");
+			return false;
+		}
+
+		this.model = (Model) currentModel.getContents().get(0);
+		return runCheck();
+	}
+
 	public boolean runCheck() {
 		Set<Component> aiSystems = EUAIActComplianceUtil.getStereotypedElements(model, Component.class,
 				EUAIActCompliance.AISystem);
@@ -204,6 +243,18 @@ public class EUAIActDocumentationCheck extends AbstractEUAIActDocumentationCheck
 		}
 
 		return completeDocumentation;
+	}
+
+	private void addInfo(String message) {
+		this.analysisHost.addResultMessage(new AnalysisResultMessage(StatusType.INFO, message));
+	}
+
+	private void addWarning(String message) {
+		this.analysisHost.addResultMessage(new AnalysisResultMessage(StatusType.WARNING, message));
+	}
+
+	private void addError(String message) {
+		this.analysisHost.addResultMessage(new AnalysisResultMessage(StatusType.ERROR, message));
 	}
 
 	@Override

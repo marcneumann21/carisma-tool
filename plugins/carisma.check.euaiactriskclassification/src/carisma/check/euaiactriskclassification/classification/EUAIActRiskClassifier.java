@@ -155,7 +155,7 @@ public class EUAIActRiskClassifier {
 		}
 
 		// Article 5(1)(d) predicting criminal offences solely based on profiling of a
-		// natural person
+		// naturale person
 		if (EUAIActComplianceUtil.hasStereotype(uc, EUAIActCompliance.LawEnforcement)
 				&& EUAIActComplianceUtil.isTaggedValueTrue(uc, EUAIActCompliance.LawEnforcement,
 						"OffendingRiskAssessment")
@@ -530,8 +530,8 @@ public class EUAIActRiskClassifier {
 	}
 
 	// TODO JavaDoc
-	// true if exception hit, so not high risk
-	// false if exception not hit, so high risk
+	// true if exception hit -> not high risk
+	// false if exception does not hit -> high risk
 	private boolean checkAnnexIIIException(UseCase uc, EUAIActCompliance stereotype, List<String> trueAttributes,
 			String reference, boolean profiling, boolean attributeRemoved, List<String> reasons,
 			List<String> additionalObligations, List<String> notes) {
@@ -554,9 +554,9 @@ public class EUAIActRiskClassifier {
 		String areas = "'" + String.join("', '", trueAttributes) + "'";
 
 		String justification = EUAIActComplianceUtil.getStringValue(uc, stereotype, "ExceptionJustification");
-		boolean HasJustification = false;
+		boolean hasJustification = false;
 		if (justification != null && !justification.isBlank()) {
-			HasJustification = true;
+			hasJustification = true;
 		}
 
 		List<String> exceptions = EUAIActComplianceUtil.getEnumValues(uc, stereotype, "Exception");
@@ -564,7 +564,12 @@ public class EUAIActRiskClassifier {
 			addToReasons(reasons, name, "The intended purpose falls under the area of application " + areas
 					+ " and no exception applies, therefore high risk.", "Article 6(2), " + reference);
 			addRegistrationObligation(additionalObligations, stereotype);
-			if (HasJustification) {
+			if (profiling && stereotype != EUAIActCompliance.LawEnforcement) {
+				addToNotes(notes, name,
+						"'Profiling' has no effect, because no 'Exception' is set and the AI system is already high risk",
+						"Article 6(3)");
+			}
+			if (hasJustification) {
 				addToNotes(notes, name, "The 'ExceptionJustification' (\"" + justification
 						+ "\") has no effect, because no 'Exception' is set. Set 'Exception' or remove 'ExceptionJustification'.",
 						"Article 6(3)");
@@ -583,7 +588,7 @@ public class EUAIActRiskClassifier {
 					"The exceptions: " + appliedExceptions + " have no effect, because 'Profiling' is applied.",
 					"Article 6(3)");
 			addRegistrationObligation(additionalObligations, stereotype);
-			if (HasJustification) {
+			if (hasJustification) {
 				addToNotes(notes, name, "The 'ExceptionJustification' (\"" + justification
 						+ "\") has no effect, because 'Profiling' is applied.", "Article 6(3)");
 			}
@@ -594,7 +599,7 @@ public class EUAIActRiskClassifier {
 				+ ", but is covered by the exceptions: " + appliedExceptions
 				+ ", therefore the AI system does not pose a significant risk of harm to the health, safety or fundamental rights of natural persons and it is not high risk.",
 				"Article 6(3), " + reference);
-		if (HasJustification) {
+		if (hasJustification) {
 			addToReasons(reasons, name, "Justification of the exception: " + justification, "Article 6(4)");
 		} else {
 			addToNotes(notes, name, "Document the assessment of the exception in 'ExceptionJustification'.",

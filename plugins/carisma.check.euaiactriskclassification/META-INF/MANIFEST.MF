@@ -11,6 +11,5 @@ Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-21
 Export-Package: carisma.check.euaiactriskclassification.check,
  carisma.check.euaiactriskclassification.classification,
- carisma.check.euaiactriskclassification.common,
  carisma.check.euaiactriskclassification.obligation,
  carisma.check.euaiactriskclassification.riskclass
