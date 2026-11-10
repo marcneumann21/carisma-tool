@@ -72,7 +72,7 @@ public class EUAIActRiskClassificationTest {
 
 	/*
 	 * test for unacceptable risk AI system with all prohibited practices of Art.
-	 * 5(1)(a) to 5(1)(f)
+	 * 5(1)(a) to 5(1)(f) and not specified
 	 */
 	@Test
 	public void testUnacceptableRisk() throws IOException {

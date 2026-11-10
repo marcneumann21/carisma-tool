@@ -12,15 +12,27 @@ import carisma.check.euaiactriskclassification.riskclass.EUAIActRiskClass;
 import carisma.profile.euaiactcompliance.EUAIActCompliance;
 import carisma.profile.euaiactcompliance.EUAIActComplianceUtil;
 
+/**
+ * Classifies an AI system into a risk class of the EU AI Act.
+ */
 public class EUAIActRiskClassifier {
 
 	private final Component aiSystem;
 
+	/**
+	 * Creates the classifier for one AI system.
+	 *
+	 * @param aiSystem the component with the stereotype <<AISystem>>
+	 */
 	public EUAIActRiskClassifier(Component aiSystem) {
 		this.aiSystem = aiSystem;
 	}
 
-	// TODO JavaDoc
+	/**
+	 * Classifies the AI system into a risk class of the EU AI Act.
+	 *
+	 * @return the result of the risk classification
+	 */
 	public EUAIActRiskClassificationResult classify() {
 		final List<String> reasons = new ArrayList<>();
 		final List<String> additionalObligations = new ArrayList<>();
@@ -105,7 +117,16 @@ public class EUAIActRiskClassifier {
 
 	}
 
-	// TODO JavaDoc
+	/**
+	 * Checks whether the use case is a prohibited AI practice according to Article
+	 * 5.
+	 *
+	 * @param uc                    the use case that is checked
+	 * @param reasons               list of the reasons for the classification
+	 * @param additionalObligations list of the additional obligations
+	 * @param notes                 list of the notes
+	 * @return true if the use case is unacceptable risk
+	 */
 	private boolean checkUnacceptableRisk(UseCase uc, List<String> reasons, List<String> additionalObligations,
 			List<String> notes) {
 		boolean ucUnacceptableRisk = false;
@@ -270,7 +291,16 @@ public class EUAIActRiskClassifier {
 		return ucUnacceptableRisk;
 	}
 
-	// TODO JavaDoc
+	/**
+	 * Checks whether the use case is high risk according to Article 6(2) and Annex
+	 * III.
+	 *
+	 * @param uc                    the use case that is checked
+	 * @param reasons               list of the reasons for the classification
+	 * @param additionalObligations list of the additional obligations
+	 * @param notes                 list of the notes
+	 * @return true if the use case is high risk
+	 */
 	private boolean checkHighRisk(UseCase uc, List<String> reasons, List<String> additionalObligations,
 			List<String> notes) {
 		boolean ucHighRisk = false;
@@ -462,9 +492,15 @@ public class EUAIActRiskClassifier {
 		return ucHighRisk;
 	}
 
-	// TODO JavaDoc
-	// true if safetyComponent or not provided, so high risk
-	// false if not safetyComponent, so not high risk
+	/**
+	 * Checks whether the AI system is high risk according to Article 6(1) and Annex
+	 * I.
+	 *
+	 * @param reasons               list of the reasons for the classification
+	 * @param additionalObligations list of the additional obligations
+	 * @param notes                 list of the notes
+	 * @return true if it is high risk, false if not
+	 */
 	private boolean checkSafetyComponent(List<String> reasons, List<String> additionalObligations, List<String> notes) {
 		String name = this.aiSystem.getName();
 		String role = EUAIActComplianceUtil.getEnumValue(this.aiSystem, EUAIActCompliance.ProductEmbedding, "Role");
@@ -529,9 +565,23 @@ public class EUAIActRiskClassifier {
 		return true;
 	}
 
-	// TODO JavaDoc
-	// true if exception hit -> not high risk
-	// false if exception does not hit -> high risk
+	/**
+	 * Checks whether an exception of Article 6(3) is in the area of application of
+	 * Annex III.
+	 *
+	 * @param uc                    the use case that is checked
+	 * @param stereotype            the Annex III stereotype of the use case
+	 * @param trueAttributes        the areas of application that are set
+	 * @param reference             the reference to Annex III
+	 * @param profiling             true if the use case performs profiling
+	 * @param attributeRemoved      true if an area was removed by a specific
+	 *                              exception
+	 * @param reasons               list of the reasons for the classification
+	 * @param additionalObligations list of the additional obligations
+	 * @param notes                 list of the notes
+	 * @return true if an exception applies (not high risk), false otherwise (high
+	 *         risk)
+	 */
 	private boolean checkAnnexIIIException(UseCase uc, EUAIActCompliance stereotype, List<String> trueAttributes,
 			String reference, boolean profiling, boolean attributeRemoved, List<String> reasons,
 			List<String> additionalObligations, List<String> notes) {
@@ -611,7 +661,16 @@ public class EUAIActRiskClassifier {
 		return true;
 	}
 
-	// TODO JavaDoc
+	/**
+	 * Checks whether the use case is subject to the transparency obligations of
+	 * Article 50.
+	 *
+	 * @param uc                    the use case that is checked
+	 * @param reasons               list of the reasons for the classification
+	 * @param additionalObligations list of the additional obligations
+	 * @param notes                 list of the notes
+	 * @return true if the use case is limited risk
+	 */
 	private boolean checkLimitedRisk(UseCase uc, List<String> reasons, List<String> additionalObligations,
 			List<String> notes) {
 		boolean ucLimitedRisk = false;
@@ -676,30 +735,17 @@ public class EUAIActRiskClassifier {
 		return ucLimitedRisk;
 	}
 
-	// TODO JavaDoc
-	private void addToReasons(List<String> reasons, String elementName, String value, String reference) {
-		reasons.add("'" + elementName + "' (" + reference + "): " + value);
-
-	}
-
-	// TODO JavaDoc
-	private void addToAdditionalObligations(List<String> additionalObligations, String elementName, String value,
-			String reference) {
-		additionalObligations.add("'" + elementName + "' (" + reference + "): " + value);
-
-	}
-
-	// TODO JavaDoc
-	private void addToNotes(List<String> notes, String elementName, String value, String reference) {
-		notes.add("'" + elementName + "' (" + reference + "): " + value);
-
-	}
-
-	// Article 49(1): high-risk AI systems are registered at the EU database
-	// vs
-	// Article 49(5): high-risk AI systems under Annex III(2) (critical
-	// infrastructure) are registered at national level
+	/**
+	 * Adds the registration obligation according to Article 49.
+	 *
+	 * @param additionalObligations list of the additional obligations
+	 * @param stereotype            the Annex III stereotype of the use case
+	 */
 	private void addRegistrationObligation(List<String> additionalObligations, EUAIActCompliance stereotype) {
+		// Article 49(1): high-risk AI systems are registered at the EU database
+		// vs
+		// Article 49(5): high-risk AI systems under Annex III(2) (critical
+		// infrastructure) are registered at national level
 		if (stereotype == EUAIActCompliance.CriticalInfrastructure) {
 			addToAdditionalObligations(additionalObligations, this.aiSystem.getName(),
 					"Register this AI system and the provider at national level before placing it on the market.",
@@ -711,7 +757,17 @@ public class EUAIActRiskClassifier {
 		}
 	}
 
-	// TODO JavaDoc
+	/**
+	 * Builds the result and removes duplicate and not applicable additional
+	 * obligations.
+	 *
+	 * @param riskClass             the determined risk class
+	 * @param reasons               list of the reasons for the classification
+	 * @param additionalObligations list of the additional obligations
+	 * @param notes                 list of the notes
+	 * @param annexISectionB        true if only Section B of Annex I applies
+	 * @return the result of the risk classification
+	 */
 	private EUAIActRiskClassificationResult buildResult(EUAIActRiskClass riskClass, List<String> reasons,
 			List<String> additionalObligations, List<String> notes, boolean annexISectionB) {
 		List<String> distinctAdditionalObligations = new ArrayList<>();
@@ -729,6 +785,22 @@ public class EUAIActRiskClassifier {
 		return new EUAIActRiskClassificationResult(riskClass, reasons,
 				EUAIActRiskClassificationObligation.getObligations(riskClass, annexISectionB),
 				distinctAdditionalObligations, notes, annexISectionB);
+	}
+
+	private void addToReasons(List<String> reasons, String elementName, String value, String reference) {
+		reasons.add("'" + elementName + "' (" + reference + "): " + value);
+
+	}
+
+	private void addToAdditionalObligations(List<String> additionalObligations, String elementName, String value,
+			String reference) {
+		additionalObligations.add("'" + elementName + "' (" + reference + "): " + value);
+
+	}
+
+	private void addToNotes(List<String> notes, String elementName, String value, String reference) {
+		notes.add("'" + elementName + "' (" + reference + "): " + value);
+
 	}
 
 }

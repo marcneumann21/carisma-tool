@@ -13,17 +13,30 @@ import carisma.check.euaiactdocumentation.section.EUAIActDocumentationSectionRes
 import carisma.profile.euaiactcompliance.EUAIActCompliance;
 import carisma.profile.euaiactcompliance.EUAIActComplianceUtil;
 
+/**
+ * Generates the technical documentation of an AI system according to Annex IV.
+ */
 public class EUAIActDocumentationGenerator {
 
 	private final Component aiSystem;
 	private final boolean highRisk;
 
+	/**
+	 * Creates the generator for one AI system.
+	 *
+	 * @param aiSystem the component with the stereotype AISystem
+	 * @param highRisk true if the AI system is high risk
+	 */
 	public EUAIActDocumentationGenerator(Component aiSystem, boolean highRisk) {
 		this.aiSystem = aiSystem;
 		this.highRisk = highRisk;
 	}
 
-	// TODO JavaDoc
+	/**
+	 * Generates all sections of the technical documentation according to Annex IV
+	 *
+	 * @return the results of all sections
+	 */
 	public List<EUAIActDocumentationSectionResult> generateDocumentation() {
 		final List<EUAIActDocumentationSectionResult> sections = new ArrayList<>();
 		sections.add(generateGeneralDescriptionAISystem());
@@ -38,7 +51,11 @@ public class EUAIActDocumentationGenerator {
 		return sections;
 	}
 
-	// TODO JavaDoc
+	/**
+	 * Generates the Annex IV(1) section: The general description of the AI system.
+	 *
+	 * @return the result of the section
+	 */
 	private EUAIActDocumentationSectionResult generateGeneralDescriptionAISystem() {
 		String aiSystemName = this.aiSystem.getName();
 		List<String> foundDocumentation = new ArrayList<>();
@@ -83,20 +100,6 @@ public class EUAIActDocumentationGenerator {
 			addToFoundDocumentation(foundDocumentation, aiSystemName, "Purpose", String.join(", ", purposes),
 					"Annex IV(1)(a)");
 		}
-
-		/*
-		 * // Annex IV(1)(a) provider String provider =
-		 * EUAIActComplianceUtil.getAssociationActorEnd(this.aiSystem,
-		 * EUAIActCompliance.Provides, EUAIActCompliance.Provider); if (provider == null
-		 * || provider.isBlank()) { if (this.highRisk) {
-		 * addToMissingDocumentation(missingDocumentation, "Provider",
-		 * "Not specified. Add a provider and connect it to the AI system.",
-		 * "Article 3(3), Annex IV(1)(a)"); } else { addToNotes(notes, "Provider",
-		 * "Not specified. Add a provider and connect it to the AI system.",
-		 * "Article 3(3), Annex IV(1)(a)"); } } else {
-		 * addToFoundDocumentation(foundDocumentation, "Provider", provider,
-		 * "Article 3(3), Annex IV(1)(a)"); }
-		 */
 
 		// Annex IV(1)(a) provider name
 		String providerName = EUAIActComplianceUtil.getStringValue(this.aiSystem, EUAIActCompliance.AISystem,
@@ -177,7 +180,12 @@ public class EUAIActDocumentationGenerator {
 
 	}
 
-	// TODO JavaDoc
+	/**
+	 * Generates the Annex IV(2) section: The detailed description of the elements
+	 * of the AI system and of its development process.
+	 *
+	 * @return the result of the section
+	 */
 	private EUAIActDocumentationSectionResult generateDetailedDescriptionAISystem() {
 		String aiSystemName = this.aiSystem.getName();
 		List<String> foundDocumentation = new ArrayList<>();
@@ -283,7 +291,8 @@ public class EUAIActDocumentationGenerator {
 
 		// Annex IV(2)(c) resources
 		documentMandatoryString(foundDocumentation, missingDocumentation, this.aiSystem, EUAIActCompliance.AISystem,
-				"DevelopementResources", "Computational resources used to develop, train, test and validate", "Annex IV(2)(c)");
+				"DevelopementResources", "Computational resources used to develop, train, test and validate",
+				"Annex IV(2)(c)");
 
 		// Annex IV(2)(d) training data sets
 		Set<Artifact> trainingData = EUAIActComplianceUtil.getConnectedElements(this.aiSystem, Artifact.class,
@@ -341,8 +350,12 @@ public class EUAIActDocumentationGenerator {
 				foundDocumentation, missingDocumentation, notes);
 	}
 
-	// TODO JavaDoc
-	// Annex IV(3) detailed information about monitoring, functioning and control
+	/**
+	 * Generates the Annex IV(3) section:  The detailed information about the
+	 * monitoring, functioning and control of the AI system.
+	 *
+	 * @return the result of the section
+	 */
 	private EUAIActDocumentationSectionResult generateDetailedInformationAISystem() {
 		String aiSystemName = this.aiSystem.getName();
 		List<String> foundDocumentation = new ArrayList<>();
@@ -370,14 +383,20 @@ public class EUAIActDocumentationGenerator {
 				"Foreseeable unintended outcomes and sources of risks to health and safety, fundamental rights and discrimination in view of the intended purpose of the AI system",
 				"Annex IV(3)");
 		documentMandatoryString(foundDocumentation, missingDocumentation, this.aiSystem, EUAIActCompliance.AISystem,
-				"HumanOversightMeasures", "Human oversight measures in place, including technical measures for output interpretation", "Annex IV(3)");
+				"HumanOversightMeasures",
+				"Human oversight measures in place, including technical measures for output interpretation",
+				"Annex IV(3)");
 
 		return new EUAIActDocumentationSectionResult(EUAIActDocumentationSection.DetailedInformationAISystem,
 				foundDocumentation, missingDocumentation, notes);
 	}
 
-	// TODO JavaDoc
-	// Annex IV(4) appropriateness of the performance metrics
+	/**
+	 * Generates the Annex IV(4) section: The appropriateness of the performance
+	 * metrics.
+	 *
+	 * @return the result of the section
+	 */
 	private EUAIActDocumentationSectionResult generateDescriptionPerformanceMetrics() {
 		List<String> foundDocumentation = new ArrayList<>();
 		List<String> missingDocumentation = new ArrayList<>();
@@ -390,8 +409,12 @@ public class EUAIActDocumentationGenerator {
 				foundDocumentation, missingDocumentation, notes);
 	}
 
-	// TODO JavaDoc
-	// Annex IV(5) risk management system according to Article 9
+	/**
+	 * Generates the Annex IV(5) section: The risk management system according to
+	 * Article 9.
+	 *
+	 * @return the result of the section
+	 */
 	private EUAIActDocumentationSectionResult generateDescriptionRiskManagement() {
 		String aiSystemName = this.aiSystem.getName();
 		List<String> foundDocumentation = new ArrayList<>();
@@ -442,8 +465,12 @@ public class EUAIActDocumentationGenerator {
 				foundDocumentation, missingDocumentation, notes);
 	}
 
-	// TODO JavaDoc
-	// Annex IV(6) relevant changes made by the provider through the lifecycle
+	/**
+	 * Generates the Annex IV(6)  section: The relevant changes made by the
+	 * provider through the lifecycle.
+	 *
+	 * @return the result of the section
+	 */
 	private EUAIActDocumentationSectionResult generateDescriptionProviderRelevantChanges() {
 		List<String> foundDocumentation = new ArrayList<>();
 		List<String> missingDocumentation = new ArrayList<>();
@@ -456,8 +483,12 @@ public class EUAIActDocumentationGenerator {
 				foundDocumentation, missingDocumentation, notes);
 	}
 
-	// TODO JavaDoc
-	// Annex IV(7) list of the applied harmonised standards
+	/**
+	 * Generates the Annex IV(7) section: The list of the applied harmonised
+	 * standards.
+	 *
+	 * @return the result of the section
+	 */
 	private EUAIActDocumentationSectionResult generateListHarmonisedStandards() {
 		String aiSystemName = this.aiSystem.getName();
 		List<String> foundDocumentation = new ArrayList<>();
@@ -481,8 +512,12 @@ public class EUAIActDocumentationGenerator {
 				foundDocumentation, missingDocumentation, notes);
 	}
 
-	// TODO JavaDoc
-	// Annex IV(8) copy of the EU declaration of conformity according to Article 47
+	/**
+	 * Generates the Annex IV(8) section: The copy of the EU declaration of
+	 * conformity according to Article 47.
+	 *
+	 * @return the result of the section
+	 */
 	private EUAIActDocumentationSectionResult generateCopyEUConformityDeclaration() {
 		List<String> foundDocumentation = new ArrayList<>();
 		List<String> missingDocumentation = new ArrayList<>();
@@ -495,8 +530,12 @@ public class EUAIActDocumentationGenerator {
 				foundDocumentation, missingDocumentation, notes);
 	}
 
-	// TODO JavaDoc
-	// Annex IV(9) system to evalate the performance in the post market phase
+	/**
+	 * Generates the Annex IV(9) section: The system to evaluate the performance
+	 * in the post-market phase.
+	 *
+	 * @return the result of the section
+	 */
 	private EUAIActDocumentationSectionResult generateDescriptionAISystemPostMarketPhase() {
 		List<String> foundDocumentation = new ArrayList<>();
 		List<String> missingDocumentation = new ArrayList<>();
@@ -509,7 +548,6 @@ public class EUAIActDocumentationGenerator {
 				foundDocumentation, missingDocumentation, notes);
 	}
 
-	// TODO JavaDoc
 	private void documentMandatoryString(List<String> foundDocumentation, List<String> missingDocumentation,
 			NamedElement element, EUAIActCompliance stereotype, String tag, String label, String reference) {
 		String value = EUAIActComplianceUtil.getStringValue(element, stereotype, tag);
@@ -523,7 +561,6 @@ public class EUAIActDocumentationGenerator {
 		}
 	}
 
-	// TODO JavaDoc
 	private void documentMandatoryBoolean(List<String> foundDocumentation, List<String> missingDocumentation,
 			NamedElement element, EUAIActCompliance stereotype, String tag, String label, String reference) {
 		boolean value = EUAIActComplianceUtil.isTaggedValueTrue(element, stereotype, tag);
@@ -538,7 +575,6 @@ public class EUAIActDocumentationGenerator {
 		}
 	}
 
-	// TODO JavaDoc
 	private void documentConditionalString(List<String> foundDocumentation, List<String> notes, NamedElement element,
 			EUAIActCompliance stereotype, String tag, String label, String reference) {
 		String value = EUAIActComplianceUtil.getStringValue(element, stereotype, tag);
@@ -553,20 +589,17 @@ public class EUAIActDocumentationGenerator {
 		}
 	}
 
-	// TODO JavaDoc
 	private void addToFoundDocumentation(List<String> foundDocumentation, String elementName, String label,
 			String value, String reference) {
 		foundDocumentation.add("'" + elementName + "' (" + reference + "): " + label + ": " + value);
 	}
 
-	// TODO JavaDoc
 	private void addToMissingDocumentation(List<String> missingDocumentation, String elementName, String label,
 			String value, String reference) {
 		missingDocumentation.add("'" + elementName + "' (" + reference + "): " + label + ": " + value);
 	}
 
-	// TODO JavaDoc
-	private void addToNotes(List<String> notes, String elementName, String label, String value, String reference) {
+	void addToNotes(List<String> notes, String elementName, String label, String value, String reference) {
 		notes.add("'" + elementName + "' (" + reference + "): " + label + ": " + value);
 	}
 }

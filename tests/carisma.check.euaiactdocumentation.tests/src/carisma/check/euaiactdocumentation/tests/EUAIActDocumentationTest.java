@@ -96,7 +96,7 @@ public class EUAIActDocumentationTest {
 	 * test if all sections of high risk AI system documentation are generated
 	 */
 	@Test
-	public void testHighRiskAllSections() throws IOException {
+	public void testHighRiskAllSectionsGenerate() throws IOException {
 		loadModel("highrisk_complete.uml");
 		List<EUAIActDocumentationSectionResult> sections = generate(true);
 		EUAIActDocumentationSection[] expectedSections = EUAIActDocumentationSection.values();
@@ -147,7 +147,7 @@ public class EUAIActDocumentationTest {
 	 * test for limited risk AI system documentation
 	 */
 	@Test
-	public void testLimited() throws IOException {
+	public void testLimitedRisk() throws IOException {
 		loadModel("limitedrisk.uml");
 		List<EUAIActDocumentationSectionResult> sections = generate(false);
 		for (EUAIActDocumentationSectionResult section : sections) {
@@ -163,7 +163,7 @@ public class EUAIActDocumentationTest {
 	 * test for unacceptable risk AI system documentation
 	 */
 	@Test
-	public void testUnacceptable() throws IOException {
+	public void testUnacceptableRisk() throws IOException {
 		loadModel("unacceptablerisk.uml");
 		EUAIActDocumentationCheck check = new EUAIActDocumentationCheck();
 		TestHost analysisHost = new TestHost(this.modelres);
@@ -175,7 +175,7 @@ public class EUAIActDocumentationTest {
 	 * test for minimal risk AI system documentation
 	 */
 	@Test
-	public void testMinimal() throws IOException {
+	public void testMinimalRisk() throws IOException {
 		loadModel("minimalrisk.uml");
 		EUAIActDocumentationCheck check = new EUAIActDocumentationCheck();
 		TestHost analysisHost = new TestHost(this.modelres);

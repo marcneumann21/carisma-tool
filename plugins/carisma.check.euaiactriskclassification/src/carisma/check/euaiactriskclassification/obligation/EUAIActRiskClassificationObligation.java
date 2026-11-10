@@ -5,12 +5,21 @@ import java.util.List;
 
 import carisma.check.euaiactriskclassification.riskclass.EUAIActRiskClass;
 
-// TODO JavaDoc
+/**
+ * Provides the obligations of the provider for each risk class.
+ */
 public class EUAIActRiskClassificationObligation {
 
 	private EUAIActRiskClassificationObligation() {
 	}
 
+	/**
+	 * Returns the obligations of the provider for the given risk class.
+	 *
+	 * @param riskClass      the determined risk class
+	 * @param annexISectionB true if only Section B of Annex I applies
+	 * @return list of the obligations
+	 */
 	public static List<String> getObligations(EUAIActRiskClass riskClass, boolean annexISectionB) {
 		List<String> obligations = new ArrayList<>();
 
