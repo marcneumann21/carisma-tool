@@ -220,7 +220,7 @@ public class EUAIActComplianceUtilTest {
 	 */
 	@Test
 	public void testGetUseCasePurposes() throws IOException {
-		loadModel("UseCases.uml");
+		loadModel("usecases.uml");
 		Component fullSystem = getElement("FullSystem", Component.class, EUAIActCompliance.AISystem);
 		Component emptySystem = getElement("EmptySystem", Component.class, EUAIActCompliance.AISystem);
 

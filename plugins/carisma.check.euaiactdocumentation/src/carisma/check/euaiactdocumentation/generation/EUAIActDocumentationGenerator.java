@@ -146,7 +146,6 @@ public class EUAIActDocumentationGenerator {
 				"UpdateRequirements", "Update requirements", "Annex IV(1)(c)");
 
 		// Annex IV(1)(d) market placement form
-		// EmbeddedInHardware, Download, API
 		documentMandatoryString(foundDocumentation, missingDocumentation, this.aiSystem, EUAIActCompliance.AISystem,
 				"MarketPlacementForm", "Form of placing on the market", "Annex IV(1)(d)");
 
@@ -351,7 +350,7 @@ public class EUAIActDocumentationGenerator {
 	}
 
 	/**
-	 * Generates the Annex IV(3) section:  The detailed information about the
+	 * Generates the Annex IV(3) section: The detailed information about the
 	 * monitoring, functioning and control of the AI system.
 	 *
 	 * @return the result of the section
@@ -466,8 +465,8 @@ public class EUAIActDocumentationGenerator {
 	}
 
 	/**
-	 * Generates the Annex IV(6)  section: The relevant changes made by the
-	 * provider through the lifecycle.
+	 * Generates the Annex IV(6) section: The relevant changes made by the provider
+	 * through the lifecycle.
 	 *
 	 * @return the result of the section
 	 */
@@ -531,8 +530,8 @@ public class EUAIActDocumentationGenerator {
 	}
 
 	/**
-	 * Generates the Annex IV(9) section: The system to evaluate the performance
-	 * in the post-market phase.
+	 * Generates the Annex IV(9) section: The system to evaluate the performance in
+	 * the post-market phase.
 	 *
 	 * @return the result of the section
 	 */

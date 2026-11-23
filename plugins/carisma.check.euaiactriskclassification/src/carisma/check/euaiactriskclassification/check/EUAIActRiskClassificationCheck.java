@@ -79,6 +79,7 @@ public class EUAIActRiskClassificationCheck implements CarismaCheckWithID {
 		addInfo("");
 
 		boolean noUnacceptableRisk = true;
+		boolean allUndetermined = true;
 		for (Component aiSystem : aiSystems) {
 			EUAIActRiskClassifier classifier = new EUAIActRiskClassifier(aiSystem);
 			EUAIActRiskClassificationResult result = classifier.classify();
@@ -96,6 +97,7 @@ public class EUAIActRiskClassificationCheck implements CarismaCheckWithID {
 				addInfo("The AI System '" + aiSystem.getName() + "' could not be classified: " + riskClass);
 			} else {
 				addInfo("The AI System '" + aiSystem.getName() + "' is classified as: " + riskClass);
+				allUndetermined = false;
 			}
 			addInfo("#".repeat(57));
 
@@ -161,8 +163,15 @@ public class EUAIActRiskClassificationCheck implements CarismaCheckWithID {
 			}
 
 		}
+		
+		if (allUndetermined) {
+			addInfo("");
+		    addError("None of the AI systems could be classified.");
+			addInfo("");
 
-		return noUnacceptableRisk;
+		}
+
+		return noUnacceptableRisk && !allUndetermined;
 	}
 	
 	private void addInfo(String message) {
