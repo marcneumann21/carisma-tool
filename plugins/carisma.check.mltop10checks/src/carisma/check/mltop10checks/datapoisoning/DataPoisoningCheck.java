@@ -59,10 +59,14 @@ public class DataPoisoningCheck extends AbstractMLTop10Check implements CarismaC
 		// 1. Data validation and verification
 		for (Artifact el : trainingdata) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.TrainingData, "Validation")) {
-				this.addWarning("1. Training Data '" + el.getName() + "' does not check for validation.");
+				this.addWarning("1. Training Data '" + el.getName() + "' is not validated.");
+			} else {
+				this.addInfo("1. Training Data '" + el.getName() + "' is validated.");
 			}
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.TrainingData, "Verification")) {
-				this.addWarning("2. Training Data '" + el.getName() + "' does not check for verification.");
+				this.addWarning("2. Training Data '" + el.getName() + "' is not verified.");
+			} else {
+				this.addInfo("2. Training Data '" + el.getName() + "' is verified.");
 			}
 		}
 
@@ -71,6 +75,8 @@ public class DataPoisoningCheck extends AbstractMLTop10Check implements CarismaC
 		for (Node el : trainingdataserver) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.TrainingDataServer, "SecureDataStorage")) {
 				this.addWarning("3. Training Data Server '" + el.getName() + "' does not have a secure data storage.");
+			} else {
+				this.addInfo("3. Training Data Server '" + el.getName() + "' has a secure data storage.");
 			}
 		}
 
@@ -82,6 +88,8 @@ public class DataPoisoningCheck extends AbstractMLTop10Check implements CarismaC
 
 			if (isTrainingData && isMLModel) {
 				this.addWarning("4. Artifact '" + el.getName() + "' does not isolate Training Data and ML Model.");
+			} else {
+				this.addInfo("4. Artifact '" + el.getName() + "' isolates Training Data and ML Model.");
 			}
 		}
 
@@ -89,7 +97,9 @@ public class DataPoisoningCheck extends AbstractMLTop10Check implements CarismaC
 		// 4. Access Control
 		for (Artifact el : trainingdata) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.TrainingData, "AccessControl")) {
-				this.addWarning("5. Training Data  '" + el.getName() + "' does not have access control.");
+				this.addWarning("5. There is no access control for Training Data  '" + el.getName() + "'.");
+			} else {
+				this.addInfo("5. There is access control for Training Data '" + el.getName() + "'.");
 			}
 		}
 
@@ -97,7 +107,9 @@ public class DataPoisoningCheck extends AbstractMLTop10Check implements CarismaC
 		// 5. Monitoring and auditing
 		for (Artifact el : trainingdata) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.TrainingData, "RegularAuditAndMonitoring")) {
-				this.addWarning("6. Training Data  '" + el.getName() + "' does not do regular auditing and monitoring.");
+				this.addWarning("6. Training Data  '" + el.getName() + "' is not regular audited and monitored.");
+			} else {
+				this.addInfo("6. Training Data '" + el.getName() + "' is regular audited and monitored.");
 			}
 		}
 
@@ -105,7 +117,9 @@ public class DataPoisoningCheck extends AbstractMLTop10Check implements CarismaC
 		// 6. Model validation
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "Validation")) {
-				this.addWarning("7. ML Model  '" + el.getName() + "' does not check for validation.");
+				this.addWarning("7. ML Model  '" + el.getName() + "' is not validated.");
+			} else {
+				this.addInfo("7. ML Model '" + el.getName() + "' is validated.");
 			}
 		}
 
@@ -114,6 +128,8 @@ public class DataPoisoningCheck extends AbstractMLTop10Check implements CarismaC
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "EnsembleModel")) {
 				this.addWarning("8. ML Model  '" + el.getName() + "' is not an ensemble model.");
+			} else {
+				this.addInfo("8. ML Model '" + el.getName() + "' is an ensemble model.");
 			}
 		}
 
@@ -121,7 +137,9 @@ public class DataPoisoningCheck extends AbstractMLTop10Check implements CarismaC
 		// 8. Anomaly detection
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "AnomalyDetection")) {
-				this.addWarning("9. ML Model  '" + el.getName() + "' does not have an anomaly detection.");
+				this.addWarning("9. ML Model  '" + el.getName() + "' does not have an anomaly detection mechanism.");
+			} else {
+				this.addInfo("9. ML Model '" + el.getName() + "' has an anomaly detection mechanism.");
 			}
 		}
 

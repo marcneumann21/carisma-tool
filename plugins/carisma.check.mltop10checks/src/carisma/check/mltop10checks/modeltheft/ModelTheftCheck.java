@@ -111,17 +111,23 @@ public class ModelTheftCheck extends AbstractMLTop10Check implements CarismaChec
 		// 2. Access Control
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "AccessControl")) {
-				this.addWarning("2. ML Model '" + el.getName() + "' does not implement access control.");
+				this.addWarning("2. There is no access control implemented for ML Model '" + el.getName() + "'.");
+			} else {
+				this.addInfo("2. There is access control implemented for ML Model '" + el.getName() + "'.");
 			}
 		}
 		for (Artifact el : aialgorithms) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.AIAlgorithm, "AccessControl")) {
-				this.addWarning("2. AI Algorithm '" + el.getName() + "' does not implement access control.");
+				this.addWarning("2. There is no access control implemented for AI Algorithm '" + el.getName() + "'.");
+			} else {
+				this.addInfo("2. There is access control implemented for AI Algorithm '" + el.getName() + "'.");
 			}
 		}
 		for (Artifact el : trainingdatas) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.TrainingData, "AccessControl")) {
-				this.addWarning("2. Training Data '" + el.getName() + "' does not implement access control.");
+				this.addWarning("2. There is no access control implemented for Training Data '" + el.getName() + "'.");
+			} else {
+				this.addInfo("2. There is access control implemented for Training Data '" + el.getName() + "'.");
 			}
 		}
 
@@ -129,12 +135,16 @@ public class ModelTheftCheck extends AbstractMLTop10Check implements CarismaChec
 		// 3. Regular backups
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "RegularBackup")) {
-				this.addWarning("3. ML Model '" + el.getName() + "' does not do regular backups.");
+				this.addWarning("3. ML Model '" + el.getName() + "' is not regularly backuped.");
+			} else {
+				this.addInfo("3. ML Model '" + el.getName() + "' is regularly backuped.");
 			}
 		}
 		for (Artifact el : trainingdatas) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.TrainingData, "RegularBackup")) {
-				this.addWarning("3. Training Data '" + el.getName() + "' does not do regular backups.");
+				this.addWarning("3. Training Data '" + el.getName() + "' is not regularly backuped.");
+			} else {
+				this.addInfo("3. Training Data '" + el.getName() + "' is regularly backuped.");
 			}
 		}
 
@@ -143,6 +153,8 @@ public class ModelTheftCheck extends AbstractMLTop10Check implements CarismaChec
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "Obfuscation")) {
 				this.addWarning("4. ML Model '" + el.getName() + "' is not obfuscated.");
+			} else {
+				this.addInfo("4. ML Model '" + el.getName() + "' is obfuscated.");
 			}
 		}
 
@@ -151,6 +163,8 @@ public class ModelTheftCheck extends AbstractMLTop10Check implements CarismaChec
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "Watermarking")) {
 				this.addWarning("5. ML Model '" + el.getName() + "' is not watermarked.");
+			} else {
+				this.addInfo("5. ML Model '" + el.getName() + "' is watermarked.");
 			}
 		}
 
@@ -159,6 +173,8 @@ public class ModelTheftCheck extends AbstractMLTop10Check implements CarismaChec
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "LegalProtection")) {
 				this.addWarning("6. ML Model '" + el.getName() + "' is not legally protected.");
+			} else {
+				this.addInfo("3. ML Model '" + el.getName() + "' is legally protected.");
 			}
 		}
 
@@ -167,6 +183,8 @@ public class ModelTheftCheck extends AbstractMLTop10Check implements CarismaChec
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "RegularAuditAndMonitoring")) {
 				this.addWarning("7. ML Model '" + el.getName() + "' is not regulary audited and monitored.");
+			} else {
+				this.addInfo("7. ML Model '" + el.getName() + "' is regularly audited and monitored.");
 			}
 		}
 

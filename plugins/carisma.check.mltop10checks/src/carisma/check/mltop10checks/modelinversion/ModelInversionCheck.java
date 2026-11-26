@@ -98,6 +98,8 @@ public class ModelInversionCheck extends AbstractMLTop10Check implements Carisma
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "AccessControl")) {
 				this.addWarning("1. ML Model '" + el.getName() + "' does not have any access control implemented.");
+			} else {
+				this.addInfo("1. ML Model '" + el.getName() + "' has access control implemented.");
 			}
 		}
 
@@ -107,6 +109,8 @@ public class ModelInversionCheck extends AbstractMLTop10Check implements Carisma
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.AIApplication, "InputValidation")) {
 				this.addWarning(
 						"2. AI Application '" + el.getName() + "' does not have any input validation implemented.");
+			} else {
+				this.addInfo("2. AI Application '" + el.getName() + "' has input validation implemented.");
 			}
 		}
 
@@ -115,6 +119,8 @@ public class ModelInversionCheck extends AbstractMLTop10Check implements Carisma
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "Transparency")) {
 				this.addWarning("3. ML Model '" + el.getName() + "' is not transparent.");
+			} else {
+				this.addInfo("3. ML Model '" + el.getName() + "' is transparent.");
 			}
 		}
 
@@ -123,6 +129,8 @@ public class ModelInversionCheck extends AbstractMLTop10Check implements Carisma
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "AnomalyDetection")) {
 				this.addWarning("4. ML Model '" + el.getName() + "' does not have any anomaly detection implemented.");
+			} else {
+				this.addInfo("4. ML Model '" + el.getName() + "' has anomaly detection implemented.");
 			}
 		}
 
@@ -131,6 +139,8 @@ public class ModelInversionCheck extends AbstractMLTop10Check implements Carisma
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "RegularRetraining")) {
 				this.addWarning("5. ML Model '" + el.getName() + "' does not perform regular retraining.");
+			} else {
+				this.addInfo("5. ML Model '" + el.getName() + "' performs regular retraining.");
 			}
 		}
 

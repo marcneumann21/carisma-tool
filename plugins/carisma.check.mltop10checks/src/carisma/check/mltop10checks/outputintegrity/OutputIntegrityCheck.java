@@ -74,7 +74,9 @@ public class OutputIntegrityCheck extends AbstractMLTop10Check implements Carism
 		// 1. Using Cryptographic Methods
 		for (Artifact el : aiapplications) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.AIApplication, "CheckModelResultAuthenticity")) {
-				this.addWarning("1: AI Application '" + el.getName() + "' does not check for model result authenticity.");
+				this.addWarning("1. AI Application '" + el.getName() + "' does not check for model's result authenticity.");
+			} else {
+				this.addInfo("1. AI Application '" + el.getName() + "' is checks for the model's result authenticity.");
 			}
 		}
 
@@ -116,7 +118,9 @@ public class OutputIntegrityCheck extends AbstractMLTop10Check implements Carism
 		// 3. Input Validation
 		for (Artifact el : aiapplications) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.AIApplication, "InputValidation")) {
-				this.addWarning("3: AI Application '" + el.getName() + "' does not perform input validation.");
+				this.addWarning("3. AI Application '" + el.getName() + "' does not perform input validation.");
+			} else {
+				this.addInfo("3. AI Application '" + el.getName() + "' performs input validation.");
 			}
 		}
 
@@ -124,7 +128,9 @@ public class OutputIntegrityCheck extends AbstractMLTop10Check implements Carism
 		// 4. Tamper-evident Logs
 		for (Artifact el : aiapplications) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.AIApplication, "TamperEvidentLogging")) {
-				this.addWarning("4: AI Application '" + el.getName() + "' does not perform tamper evident logging.");
+				this.addWarning("4. AI Application '" + el.getName() + "' does not perform tamper evident logging.");
+			} else {
+				this.addInfo("4. AI Application '" + el.getName() + "' performs tamper evident logging.");
 			}
 		}
 
@@ -132,7 +138,9 @@ public class OutputIntegrityCheck extends AbstractMLTop10Check implements Carism
 		// 5. Regular Software Updates
 		for (NamedElement el : aiscenarios) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.SecureAIService, "RegularPackageUpdates")) {
-				this.addWarning("5: Packages in Secure AI Scenario '" + el.getName() + "' are not kept up to date.");
+				this.addWarning("5. Packages in Secure AI Service '" + el.getName() + "' are not kept up to date.");
+			} else {
+				this.addInfo("5. Packages in Secure AI Service '" + el.getName() + "' are kept up to date.");
 			}
 		}
 
@@ -140,7 +148,9 @@ public class OutputIntegrityCheck extends AbstractMLTop10Check implements Carism
 		// 6. Monitoring and Auditing
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "RegularAuditAndMonitoring")) {
-				this.addWarning("6: ML Model '" + el.getName() + "' is not regularly audited and monitored.");
+				this.addWarning("6. ML Model '" + el.getName() + "' is not regularly audited and monitored.");
+			} else {
+				this.addInfo("6. ML Model '" + el.getName() + "' is regularly audited and monitored.");
 			}
 		}
 

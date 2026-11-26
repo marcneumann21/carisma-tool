@@ -102,6 +102,8 @@ public class MembershipInferenceCheck extends AbstractMLTop10Check implements Ca
 		for (Artifact el : aialgorithms) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.AIAlgorithm, "Randomize")) {
 				this.addWarning("1. AI Algorithm '" + el.getName() + "' does not randomize during training.");
+			} else {
+				this.addInfo("1. AI Algorithm '" + el.getName() + "' randomizes during training.");
 			}
 		}
 
@@ -110,6 +112,8 @@ public class MembershipInferenceCheck extends AbstractMLTop10Check implements Ca
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "Obfuscation")) {
 				this.addWarning("2. ML Model '" + el.getName() + "' does not obfuscate its predictions.");
+			} else {
+				this.addInfo("2. ML Model '" + el.getName() + "' obfuscates its predictions.");
 			}
 		}
 
@@ -118,6 +122,8 @@ public class MembershipInferenceCheck extends AbstractMLTop10Check implements Ca
 		for (Artifact el : aialgorithms) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.AIAlgorithm, "Regularisation")) {
 				this.addWarning("3. AI Algorithm '" + el.getName() + "' does not use regularizaiton techniques.");
+			} else {
+				this.addInfo("3. AI Algorithm '" + el.getName() + "' uses regularization techniques.");
 			}
 		}
 
@@ -126,6 +132,8 @@ public class MembershipInferenceCheck extends AbstractMLTop10Check implements Ca
 		for (Artifact el : trainingdatas) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.TrainingData, "Reduced")) {
 				this.addWarning("4. Training Data '" + el.getName() + "' is not reduced.");
+			} else {
+				this.addInfo("4. Training Data '" + el.getName() + "' is reduced.");
 			}
 		}
 
@@ -134,6 +142,8 @@ public class MembershipInferenceCheck extends AbstractMLTop10Check implements Ca
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "RegularTestingAndMonitoring")) {
 				this.addWarning("5. ML Model '" + el.getName() + "' is not regularly tested and monitored.");
+			} else {
+				this.addInfo("5. ML Model '" + el.getName() + "' is regularly tested and monitored.");
 			}
 		}
 

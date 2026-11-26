@@ -55,6 +55,8 @@ public class InputManipulationCheck extends AbstractMLTop10Check implements Cari
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "AdversarialTraining")) {
 				this.addWarning("1. ML Model '" + el.getName() + "' does not do adversarial training.");
+			} else {
+				this.addInfo("1. ML Model '" + el.getName() + "' does adversarial training.");
 			}
 		}
 
@@ -63,6 +65,8 @@ public class InputManipulationCheck extends AbstractMLTop10Check implements Cari
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "DefenseMechanism")) {
 				this.addWarning("2. ML Model '" + el.getName() + "' does not implement defense mechanisms.");
+			} else {
+				this.addInfo("2. ML Model '" + el.getName() + "' implements defense mechanisms.");
 			}
 		}
 
@@ -71,6 +75,8 @@ public class InputManipulationCheck extends AbstractMLTop10Check implements Cari
 		for (Artifact el : aiapplications) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.AIApplication, "InputValidation")) {
 				this.addWarning("3. AI Application '" + el.getName() + "' does not implement input validation.");
+			} else {
+				this.addInfo("3. AI Application '" + el.getName() + "' implements an input validation.");
 			}
 		}
 

@@ -53,6 +53,8 @@ public class ModelPoisoningCheck extends AbstractMLTop10Check implements Carisma
 		for (Artifact el : aialgorithms) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.AIAlgorithm, "Regularisation")) {
 				this.addWarning("1. AI Algorithm '" + el.getName() + "' does not use any regularisation techniques.");
+			} else {
+				this.addInfo("1. AI Algorithm '" + el.getName() + "' uses regularisation techniques.");
 			}
 		}
 
@@ -61,6 +63,8 @@ public class ModelPoisoningCheck extends AbstractMLTop10Check implements Carisma
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "RobustModelDesign")) {
 				this.addWarning("2. ML Model '" + el.getName() + "' does not have a robust architecture.");
+			} else {
+				this.addInfo("2. ML Model '" + el.getName() + "' has a robust architecture.");
 			}
 		}
 
@@ -69,6 +73,8 @@ public class ModelPoisoningCheck extends AbstractMLTop10Check implements Carisma
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "CryptographicallySecured")) {
 				this.addWarning("3. ML Model '" + el.getName() + "' does not use any cryptographic techniques.");
+			} else {
+				this.addInfo("3. ML Model '" + el.getName() + "' uses cryptographic techniques.");
 			}
 		}
 

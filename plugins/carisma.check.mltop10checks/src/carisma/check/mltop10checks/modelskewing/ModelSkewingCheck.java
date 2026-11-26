@@ -54,12 +54,16 @@ public class ModelSkewingCheck extends AbstractMLTop10Check implements CarismaCh
 		// 1. Implement robust access controls
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "AccessControl")) {
-				this.addWarning("1. ML Model '" + el.getName() + "' does not implement access control.");
+				this.addWarning("1. ML Model '" + el.getName() + "' does not have access control implemented.");
+			} else {
+				this.addInfo("1. ML Model '" + el.getName() + "' has access control implemented.");
 			}
 		}
 		for (Artifact el : feedbackdatas) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.FeedbackData, "AccessControl")) {
-				this.addWarning("1. Feedback Data '" + el.getName() + "' does not implement access control.");
+				this.addWarning("1. There is no access control for Feedback Data '" + el.getName() + "'.");
+			} else {
+				this.addInfo("1. There is access control for Feedback Data '" + el.getName() + "'.");
 			}
 		}
 
@@ -68,6 +72,8 @@ public class ModelSkewingCheck extends AbstractMLTop10Check implements CarismaCh
 		for (Artifact el : feedbackdatas) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.FeedbackData, "AuthenticityVerified")) {
 				this.addWarning("2. Feedback Data '" + el.getName() + "'s' authenticity is not verified.");
+			} else {
+				this.addInfo("2. Feedback Data '" + el.getName() + "'s' authenticity is verified.");
 			}
 		}
 
@@ -76,11 +82,15 @@ public class ModelSkewingCheck extends AbstractMLTop10Check implements CarismaCh
 		for (Artifact el : feedbackdatas) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.FeedbackData, "Validation")) {
 				this.addWarning("3. Feedback Data '" + el.getName() + "' is not validated.");
+			} else {
+				this.addInfo("3. Feedback Data '" + el.getName() + "' is validated.");
 			}
 		}
 		for (Artifact el : feedbackdatas) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.FeedbackData, "Cleaning")) {
 				this.addWarning("3. Feedback Data '" + el.getName() + "' is not cleaned.");
+			} else {
+				this.addInfo("3. Feedback Data '" + el.getName() + "' is cleaned.");
 			}
 		}
 
@@ -88,7 +98,9 @@ public class ModelSkewingCheck extends AbstractMLTop10Check implements CarismaCh
 		// 4. Implement anomaly detection
 		for (Artifact el : feedbackdatas) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.FeedbackData, "AnomalyDetection")) {
-				this.addWarning("4. Feedback Data '" + el.getName() + "' does not implement anomaly detection.");
+				this.addWarning("4. There is no anomaly detection for Feedback Data '" + el.getName() + "'.");
+			} else {
+				this.addInfo("4. There is anomaly detection for Feedback Data '" + el.getName() + "'.");
 			}
 		}
 
@@ -96,7 +108,9 @@ public class ModelSkewingCheck extends AbstractMLTop10Check implements CarismaCh
 		// 5. Regularly monitor the model’s performance
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "RegularPerformanceMonitoring")) {
-				this.addWarning("5. ML Model '" + el.getName() + "' does not perform a regular performance monitoring.");
+				this.addWarning("5. There is no regular performance monitoring for ML Model '" + el.getName() + "'.");
+			} else {
+				this.addInfo("5. There is regular performance monitoring for ML Model '" + el.getName() + "'.");
 			}
 		}
 
@@ -105,6 +119,8 @@ public class ModelSkewingCheck extends AbstractMLTop10Check implements CarismaCh
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "RegularRetraining")) {
 				this.addWarning("6. ML Model '" + el.getName() + "' is not regularly retrained.");
+			} else {
+				this.addInfo("6. ML Model '" + el.getName() + "' is regularly retrained.");
 			}
 		}
 

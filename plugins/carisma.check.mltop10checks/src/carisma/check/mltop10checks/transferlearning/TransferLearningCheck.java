@@ -70,6 +70,8 @@ public class TransferLearningCheck extends AbstractMLTop10Check implements Caris
 		for (Artifact el : trainingdatas) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.TrainingData, "RegularUpdatesAndTraining")) {
 				this.addWarning("1. Training Data '" + el.getName() + "' is not regularly monitored and updated.");
+			} else {
+				this.addInfo("1. Training Data '" + el.getName() + "' is regularly monitored and updated.");
 			}
 		}
 
@@ -78,6 +80,8 @@ public class TransferLearningCheck extends AbstractMLTop10Check implements Caris
 		for (Artifact el : trainingdatas) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.TrainingData, "Trusted")) {
 				this.addWarning("2. Training Data '" + el.getName() + "' is not trusted.");
+			} else {
+				this.addInfo("2. Training Data '" + el.getName() + "' is trusted.");
 			}
 		}
 
@@ -99,6 +103,8 @@ public class TransferLearningCheck extends AbstractMLTop10Check implements Caris
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "DifferentialPrivacy")) {
 				this.addWarning("4. ML Model '" + el.getName() + "' does not implement differential privacy.");
+			} else {
+				this.addInfo("4. ML Model '" + el.getName() + "' implements differential privacy.");
 			}
 		}
 
@@ -107,7 +113,9 @@ public class TransferLearningCheck extends AbstractMLTop10Check implements Caris
 		for (NamedElement el : aiscenarios) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.SecureAIService, "RegularSecurityAudits")) {
 				this.addWarning(
-						"5. Secure AI Scenario '" + el.getName() + "' does not implement regular security audits.");
+						"5. Secure AI Service '" + el.getName() + "' does not implement regular security audits.");
+			} else {
+				this.addInfo("5. Secure AI Service '" + el.getName() + "' implements regualr security audits.");
 			}
 		}
 
