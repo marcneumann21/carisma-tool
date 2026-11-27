@@ -17,15 +17,19 @@ Sometimes it can happen that the target platform configuration is broken. To fix
 
 
 # Creating a Plugin Project containing CARiSMA Checks
+This step requires a plugin of CARiSMA to be installed (in contrast to what we wrote in the previous section).
+
+1. Install CARiSMA (see installation.md)
 1. Create a new Plug-in Project: New → Other → Plug-in Development → Plug-in Project
-2. Enter your plugin name. The convention is **"carisma.check.[pluginName]"**.
-3. Set output folder to `target`.
-5. Click *Next*.
-6. Enter the metadata for your plugin.
-7. Click *Next*.
-8. Select the *CARiSMA UML2 Check Template*.
-9. Click *Next*.
-10. Fill out the missing fields.
+1. Enter your plugin name. The convention is **"carisma.check.[pluginName]"**.
+1. Set output folder to `target`.
+1. Click *Next*.
+1. Enter the metadata for your plugin.
+1. Under *Options*, check the box for *Generate an activator*.
+1. Click *Next*.
+1. Select the *CARiSMA UML2 Check Template*.
+1. Click *Next*.
+1. Fill out the missing fields.
     * *Check ID* is a unique ID for your Check. You may choose the package name as the Check ID.
     * *Package Name* is the name of your Package.
     * *Class Name* is the name of your Java class implementing the check.
@@ -33,10 +37,12 @@ Sometimes it can happen that the target platform configuration is broken. To fix
     * *Check Description* is the description of the CARiSMA check.
     * *Publisher* should be your name or the name of your company.
     * *Target Model Type* is the Model-Type your check will work with.
-11. Click *Next*.
-12. If you want to create a preference page containing check-wide settings, check the corresponding option *Create a Preference Page*.
-13. Select a *Page name*. *Class Name* and *Package Name* are the java Class Name/Package Name.
-14. Click *Finish* to create your first CARiSMA check!
+1. Click *Next*.
+1. If you want to create a preference page containing check-wide settings, check the corresponding option *Create a Preference Page*.
+1. Select a *Page name*. *Class Name* and *Package Name* are the java Class Name/Package Name.
+1. Click *Finish* to create your first CARiSMA check!
+1. (Optional) If you create a plug-in to test your checks, follow the naming convention **"carisma.check.[pluginName].tests"**. Make sure CARiSMA is installed when running the *JUnit Plug-in Tests*.
+1. After you created all plugins you want to create, it's recommended to uninstall CARiSMA again. Otherwise Eclipse could mix installed CARiSMA plugins (downloaded binaries) with workspace plugins (compiled from source) in the Eclipse instance (so called runtime Eclipse instance) you start from your development instance.
 
 # The CARiSMA Tool Architecture
 CARiSMA is implemented as an Eclipse-based plugin while itself has a plugin architecture to be easily extensible.
@@ -271,23 +277,25 @@ We recommend using the report for more detailed messages regarding the check.
       - Search and select `ActivityPartition`.
       - Drag and drop `Stereotype` from the **Nodes** palette and name it (e.g., `test`).
       - Use `Extension` from the **Edges** palette to connect the stereotype to the metaclass.
-    - To add a property to a stereotype, drag and drop a **Property** node from the **Nodes** palette to the properties area of the stereotype (e.g., `test`) on the canvas and edit the property's properties (name, type, multiplicty etc.) of the **Property** node in the property view (bottom of the screen). For example, to set the type of a property to `Boolean`, select "..." under "Type" in the "Main" tab of the property view, navigate to `pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml` -> `<<EPackage, ModelLibrary>> <Model> PrimitiveTypes`, then select `<<EDataType>> <PrimitiveType> Boolean` and click "Finish"
-8. Save the profile and provide dynamic definition details (date, author, version). Update the dynamic definition with every change.
+    - To add a property to a stereotype, drag and drop a **Property** node from the **Nodes** palette to the properties area of the stereotype (e.g., `test`) on the canvas and edit the property's properties (name, type, multiplicty etc.) of the **Property** node in the property view (bottom of the screen). For example, to set the type of a property to `Boolean`, select "..." under "Type" in the "Main" tab of the property view, navigate to `pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml` -> `<<EPackage, ModelLibrary>> <Model> UML PrimitiveTypes`, then select `<<EDataType>> <PrimitiveType> Boolean` and click "Finish"
+8. Set the URI of the package in the "Main" tab of the property view, e.g., `http://www.umlsec.de/profiles/UMLsec/<profilename>.ecore`
+9. Save the profile and provide dynamic definition details (date, author, version). Update the dynamic definition with every change.
 
 ---
 
 ## 2. Create Ecore Model from the Profile
 
 1. Right-click on the UML file under `<profilename>.profile` and select `New > Other > Eclipse Modeling Framework > EMF Generator Model`.
-2. Set the parent folder and file name: `<profilename>.profile.genmodel`.
+2. Set the parent folder and file name: `<profilename>.profile.genmodel`, click `Next`.
 3. Select `UML Model` as the Model Importer and click `Next`.
-4. Ensure the Model URI is correct, click `Load`, and then `Next`.
-5. Under **Root Packages**, select `<profilename>` package and set the file name to `<profilename>.profile.ecore`.
+4. Ensure the Model URI is correct, e.g., `http://www.umlsec.de/profiles/UMLsec/<profilename>.uml`, click `Load` (possible problems can be ignored), and then click `Next`.
+5. Under **Root Packages**, select `<profilename>` package.
 6. Under **Referenced generator models**, select `Ecore`, `Types`, and `UML` (if present).
 7. Click `Finish`.
-8. Right-click the generated `.genmodel` file, open it with `EMF Generator`, right-click the root package `<profilename>`, and select `Generate Model Code`.
-9. Refactor the generated `src` package to `gen-src` and rename packages to `carisma.profile.<profilename>`.
-10. Create a new `src` package and set it up as a source folder in the Java Build Path.
+8. Set the output folder for the generated Java source files to `gen-src` by one of the following procedures:
+   - Alternative a: Set the Model Directory to `gen-src` in the property tree of the genmodel in the section "Model".
+   - Alternative b: Right-click the generated `.genmodel` file, open it with `EMF Generator`, right-click the root package `<profilename>`, and select `Generate Model Code`. Finally, Refactor the generated `src` package to `gen-src` and rename packages to `carisma.profile.<profilename>`.
+9. Create a new `src` package and set it up as a source folder in the Java Build Path.
 
 ---
 
@@ -323,23 +331,23 @@ We recommend using the report for more detailed messages regarding the check.
             - Name: `UMLsec.<profilename>`
             - Path: `pathmap://UMLsec/<profilename>.uml`
             - IconPath: Path to the CARiSMA logo file.
-        - `org.eclipse.emf.ecore.generated_package`
+        - `org.eclipse.emf.ecore.generated_package`, e.g.
             - URI: `http://www.umlsec.de/profiles/UMLsec/<profilename>.ecore`
             - Class: `carisma.profile.umlsec.<profilename>.<Profilename>Package`
             - GenModel: `profile/<profilename>.profile.genmodel`
 3. Edit the `build.properties` file:
     ```
-    source. = gen-src/,\
-    src/
-    output. = target/classes/
-    bin.includes = META-INF/,\
-    .,\
-    plugin.xml,\
-    profile/,\
-    plugin.properties,\
-    src/,\
-    gen-src/
-    src.includes = profile/
+    source.. = src/,gen-src/
+	output.. = target/classes/
+	bin.includes = .,\
+	META-INF/,\
+	profile/,\
+	plugin.xml,\
+	plugin.properties,\
+	gen-src/,\
+	src/,\
+	               
+	jars.compile.order = .
     ```
 4. Import the project into the plugin directory of the CARiSMA tool project.
 5. Edit `pom.xml` in the CARiSMA tool project and add:

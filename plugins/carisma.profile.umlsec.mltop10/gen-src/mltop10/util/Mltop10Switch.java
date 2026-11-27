@@ -96,9 +96,9 @@ public class Mltop10Switch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Mltop10Package.SECURE_AI_SCENARIO: {
-				SecureAIScenario secureAIScenario = (SecureAIScenario)theEObject;
-				T result = caseSecureAIScenario(secureAIScenario);
+			case Mltop10Package.SECURE_AI_SERVICE: {
+				SecureAIService secureAIService = (SecureAIService)theEObject;
+				T result = caseSecureAIService(secureAIService);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -111,6 +111,12 @@ public class Mltop10Switch<T> extends Switch<T> {
 			case Mltop10Package.SECURE_COMM_PATH: {
 				SecureCommPath secureCommPath = (SecureCommPath)theEObject;
 				T result = caseSecureCommPath(secureCommPath);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Mltop10Package.THREAT_COMMENTS: {
+				ThreatComments threatComments = (ThreatComments)theEObject;
+				T result = caseThreatComments(threatComments);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -194,17 +200,17 @@ public class Mltop10Switch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Secure AI Scenario</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Secure AI Service</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Secure AI Scenario</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Secure AI Service</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSecureAIScenario(SecureAIScenario object) {
+	public T caseSecureAIService(SecureAIService object) {
 		return null;
 	}
 
@@ -235,6 +241,21 @@ public class Mltop10Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSecureCommPath(SecureCommPath object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Threat Comments</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Threat Comments</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseThreatComments(ThreatComments object) {
 		return null;
 	}
 

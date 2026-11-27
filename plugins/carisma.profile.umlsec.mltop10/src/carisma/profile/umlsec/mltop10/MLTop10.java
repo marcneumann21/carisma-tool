@@ -7,8 +7,8 @@ import carisma.modeltype.uml2.CarismaProfileDescriptor;
 public enum MLTop10 {
 
 	MLModel("MLModel"), AIApplication("AIApplication"), TrainingData("TrainingData"), FeedbackData("FeedbackData"),
-	AIAlgorithm("AIAlgorithm"), SecureAIScenario("SecureAIScenario"), TrainingDataServer("TrainingDataServer"),
-	Integrity("integrity"), Secrecy("secrecy"), SecureCommPath("SecureCommPath");
+	AIAlgorithm("AIAlgorithm"), SecureAIService("SecureAIService"), TrainingDataServer("TrainingDataServer"),
+	Integrity("integrity"), Secrecy("secrecy"), SecureCommPath("SecureCommPath"), ThreatComments("ThreatComments");
 
 	private static final String PROFILE_NAME = "mltop10";
 	private static final String PROFILE_VERSION = "1";

@@ -26,6 +26,8 @@ public class ModelTheftCheck extends AbstractMLTop10Check implements CarismaChec
 
 	public static final String CHECK_ID = "carisma.check.mltop10checks.modeltheft";
 	public static final String CHECK_NAME = "MLTop10 Model Theft Attack Check";
+	public static final String THREAT_COMMENT_ATTRIBUTE = "ModelTheft";
+	public static final String THREAT_NAME = "MLTop10 Model Theft Attack";
 
 	@Override
 	public boolean runCheck() {
@@ -44,15 +46,15 @@ public class ModelTheftCheck extends AbstractMLTop10Check implements CarismaChec
 		this.addInfo("Your model contains " + trainingdatas.size() + " Training Data(s), " + mlmodels.size()
 				+ " ML Model(s) and " + aialgorithms.size() + " AI Algorithm(s).");
 		if (mlmodels.isEmpty()) {
-			this.addWarning(
+			this.addInfo(
 					"Your model does not contain any information on the ML Model. Therefore, it cannot be ensured that your scenario contains mitigations against the threat 'Model Theft Attack'.");
 		}
 		if (aialgorithms.isEmpty()) {
-			this.addWarning(
+			this.addInfo(
 					"Your model does not contain any information on the AI Algorithm. Therefore, it cannot be ensured that your scenario contains mitigations against 'Model Theft Attack'.");
 		}
 		if (trainingdatas.isEmpty()) {
-			this.addWarning(
+			this.addInfo(
 					"Your model does not contain any information on the Training Data. Therefore, it cannot be ensured that your scenario contains mitigations against 'Model Theft Attack'.");
 		}
 
@@ -64,17 +66,17 @@ public class ModelTheftCheck extends AbstractMLTop10Check implements CarismaChec
 		// Pre Check. Public model, training data and algorithm
 		for (Artifact el : mlmodels) {
 			if (MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "Public")) {
-				this.addError("Pre Check. ML Model '" + el.getName() + "' is public.");
+				this.addWarning("Pre Check. ML Model '" + el.getName() + "' is public.");
 			}
 		}
 		for (Artifact el : aialgorithms) {
 			if (MLTop10Util.isTaggedValueTrue(el, MLTop10.AIAlgorithm, "Public")) {
-				this.addError("Pre Check. AI Algorithm '" + el.getName() + "' is public.");
+				this.addWarning("Pre Check. AI Algorithm '" + el.getName() + "' is public.");
 			}
 		}
 		for (Artifact el : trainingdatas) {
 			if (MLTop10Util.isTaggedValueTrue(el, MLTop10.TrainingData, "Public")) {
-				this.addError("Pre Check. Training Data '" + el.getName() + "' is public.");
+				this.addWarning("Pre Check. Training Data '" + el.getName() + "' is public.");
 			}
 		}
 
@@ -97,7 +99,7 @@ public class ModelTheftCheck extends AbstractMLTop10Check implements CarismaChec
 					if (MLTop10Util.getMemberNodes(path).containsAll(Arrays.asList(fromNode, toNode))) {
 						// secrecy on relevant paths?
 						if (!MLTop10Util.isTaggedValueTrue(path, MLTop10.SecureCommPath, "ConfidelityPreserving")) {
-							this.addError("1. There is a dependency between " + from.getName() + " and " + to.getName()
+							this.addWarning("1. There is a dependency between " + from.getName() + " and " + to.getName()
 									+ ", but the communication path between the nodes these artifacts are deployed to, does not fulfill 'secrecy'.");
 						}
 					}
@@ -109,17 +111,23 @@ public class ModelTheftCheck extends AbstractMLTop10Check implements CarismaChec
 		// 2. Access Control
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "AccessControl")) {
-				this.addError("2. ML Model '" + el.getName() + "' does not implement access control.");
+				this.addWarning("2. There is no access control implemented for ML Model '" + el.getName() + "'.");
+			} else {
+				this.addInfo("2. There is access control implemented for ML Model '" + el.getName() + "'.");
 			}
 		}
 		for (Artifact el : aialgorithms) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.AIAlgorithm, "AccessControl")) {
-				this.addError("2. AI Algorithm '" + el.getName() + "' does not implement access control.");
+				this.addWarning("2. There is no access control implemented for AI Algorithm '" + el.getName() + "'.");
+			} else {
+				this.addInfo("2. There is access control implemented for AI Algorithm '" + el.getName() + "'.");
 			}
 		}
 		for (Artifact el : trainingdatas) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.TrainingData, "AccessControl")) {
-				this.addError("2. Training Data '" + el.getName() + "' does not implement access control.");
+				this.addWarning("2. There is no access control implemented for Training Data '" + el.getName() + "'.");
+			} else {
+				this.addInfo("2. There is access control implemented for Training Data '" + el.getName() + "'.");
 			}
 		}
 
@@ -127,12 +135,16 @@ public class ModelTheftCheck extends AbstractMLTop10Check implements CarismaChec
 		// 3. Regular backups
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "RegularBackup")) {
-				this.addError("3. ML Model '" + el.getName() + "' does not do regular backups.");
+				this.addWarning("3. ML Model '" + el.getName() + "' is not regularly backuped.");
+			} else {
+				this.addInfo("3. ML Model '" + el.getName() + "' is regularly backuped.");
 			}
 		}
 		for (Artifact el : trainingdatas) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.TrainingData, "RegularBackup")) {
-				this.addError("3. Training Data '" + el.getName() + "' does not do regular backups.");
+				this.addWarning("3. Training Data '" + el.getName() + "' is not regularly backuped.");
+			} else {
+				this.addInfo("3. Training Data '" + el.getName() + "' is regularly backuped.");
 			}
 		}
 
@@ -140,7 +152,9 @@ public class ModelTheftCheck extends AbstractMLTop10Check implements CarismaChec
 		// 4. Model Obfuscation
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "Obfuscation")) {
-				this.addError("4. ML Model '" + el.getName() + "' is not obfuscated.");
+				this.addWarning("4. ML Model '" + el.getName() + "' is not obfuscated.");
+			} else {
+				this.addInfo("4. ML Model '" + el.getName() + "' is obfuscated.");
 			}
 		}
 
@@ -148,7 +162,9 @@ public class ModelTheftCheck extends AbstractMLTop10Check implements CarismaChec
 		// 5. Watermarking
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "Watermarking")) {
-				this.addError("5. ML Model '" + el.getName() + "' is not watermarked.");
+				this.addWarning("5. ML Model '" + el.getName() + "' is not watermarked.");
+			} else {
+				this.addInfo("5. ML Model '" + el.getName() + "' is watermarked.");
 			}
 		}
 
@@ -156,7 +172,9 @@ public class ModelTheftCheck extends AbstractMLTop10Check implements CarismaChec
 		// 6. Legal protection
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "LegalProtection")) {
-				this.addError("6. ML Model '" + el.getName() + "' is not legally protected.");
+				this.addWarning("6. ML Model '" + el.getName() + "' is not legally protected.");
+			} else {
+				this.addInfo("3. ML Model '" + el.getName() + "' is legally protected.");
 			}
 		}
 
@@ -164,17 +182,15 @@ public class ModelTheftCheck extends AbstractMLTop10Check implements CarismaChec
 		// 7. Monitoring and auditing
 		for (Artifact el : mlmodels) {
 			if (!MLTop10Util.isTaggedValueTrue(el, MLTop10.MLModel, "RegularAuditAndMonitoring")) {
-				this.addError("7. ML Model '" + el.getName() + "' is not regulary audited and monitored.");
+				this.addWarning("7. ML Model '" + el.getName() + "' is not regulary audited and monitored.");
+			} else {
+				this.addInfo("7. ML Model '" + el.getName() + "' is regularly audited and monitored.");
 			}
 		}
 
 		// ---------------------------------------------------------
 		// Overall result
-		if (this.errorDetected) {
-			this.addError("=> A Model Theft Attack is potentially possible!");
-			return false;
-		}
-		this.addInfo("=> No vulnerabilities for Model Theft Attacks detected.");
+
 		return true;
 	}
 
@@ -186,6 +202,16 @@ public class ModelTheftCheck extends AbstractMLTop10Check implements CarismaChec
 	@Override
 	public String getName() {
 		return CHECK_NAME;
+	}
+
+	@Override
+	public String getThreatCommentAttribute() {
+		return THREAT_COMMENT_ATTRIBUTE;
+	}
+	
+	@Override
+	public String getThreatName() {
+		return THREAT_NAME;
 	}
 
 }

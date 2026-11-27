@@ -67,13 +67,13 @@ public interface Mltop10Factory extends EFactory {
 	TrainingDataServer createTrainingDataServer();
 
 	/**
-	 * Returns a new object of class '<em>Secure AI Scenario</em>'.
+	 * Returns a new object of class '<em>Secure AI Service</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Secure AI Scenario</em>'.
+	 * @return a new object of class '<em>Secure AI Service</em>'.
 	 * @generated
 	 */
-	SecureAIScenario createSecureAIScenario();
+	SecureAIService createSecureAIService();
 
 	/**
 	 * Returns a new object of class '<em>Feedback Data</em>'.
@@ -92,6 +92,15 @@ public interface Mltop10Factory extends EFactory {
 	 * @generated
 	 */
 	SecureCommPath createSecureCommPath();
+
+	/**
+	 * Returns a new object of class '<em>Threat Comments</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Threat Comments</em>'.
+	 * @generated
+	 */
+	ThreatComments createThreatComments();
 
 	/**
 	 * Returns the package supported by this factory.

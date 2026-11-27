@@ -38,7 +38,7 @@ public interface Mltop10Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http:///mltop10.ecore";
+	String eNS_URI = "http://www.umlsec.de/profiles/UMLsec/mltop10.ecore";
 
 	/**
 	 * The package namespace name.
@@ -184,13 +184,13 @@ public interface Mltop10Package extends EPackage {
 	int ML_MODEL__REGULAR_RETRAINING = 12;
 
 	/**
-	 * The feature id for the '<em><b>Robust Activation Function</b></em>' attribute.
+	 * The feature id for the '<em><b>Robust Model Design</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ML_MODEL__ROBUST_ACTIVATION_FUNCTION = 13;
+	int ML_MODEL__ROBUST_MODEL_DESIGN = 13;
 
 	/**
 	 * The feature id for the '<em><b>Robust Architecture</b></em>' attribute.
@@ -602,14 +602,14 @@ public interface Mltop10Package extends EPackage {
 	int TRAINING_DATA_SERVER_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link mltop10.impl.SecureAIScenarioImpl <em>Secure AI Scenario</em>}' class.
+	 * The meta object id for the '{@link mltop10.impl.SecureAIServiceImpl <em>Secure AI Service</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see mltop10.impl.SecureAIScenarioImpl
-	 * @see mltop10.impl.Mltop10PackageImpl#getSecureAIScenario()
+	 * @see mltop10.impl.SecureAIServiceImpl
+	 * @see mltop10.impl.Mltop10PackageImpl#getSecureAIService()
 	 * @generated
 	 */
-	int SECURE_AI_SCENARIO = 5;
+	int SECURE_AI_SERVICE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Package Integrity Verified</b></em>' attribute.
@@ -618,7 +618,7 @@ public interface Mltop10Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SECURE_AI_SCENARIO__PACKAGE_INTEGRITY_VERIFIED = 0;
+	int SECURE_AI_SERVICE__PACKAGE_INTEGRITY_VERIFIED = 0;
 
 	/**
 	 * The feature id for the '<em><b>Packages From Secure Sources</b></em>' attribute.
@@ -627,7 +627,7 @@ public interface Mltop10Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SECURE_AI_SCENARIO__PACKAGES_FROM_SECURE_SOURCES = 1;
+	int SECURE_AI_SERVICE__PACKAGES_FROM_SECURE_SOURCES = 1;
 
 	/**
 	 * The feature id for the '<em><b>Regular Security Audits</b></em>' attribute.
@@ -636,7 +636,7 @@ public interface Mltop10Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SECURE_AI_SCENARIO__REGULAR_SECURITY_AUDITS = 2;
+	int SECURE_AI_SERVICE__REGULAR_SECURITY_AUDITS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Regular Package Updates</b></em>' attribute.
@@ -645,7 +645,7 @@ public interface Mltop10Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SECURE_AI_SCENARIO__REGULAR_PACKAGE_UPDATES = 3;
+	int SECURE_AI_SERVICE__REGULAR_PACKAGE_UPDATES = 3;
 
 	/**
 	 * The feature id for the '<em><b>Secure Deployment</b></em>' attribute.
@@ -654,7 +654,7 @@ public interface Mltop10Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SECURE_AI_SCENARIO__SECURE_DEPLOYMENT = 4;
+	int SECURE_AI_SERVICE__SECURE_DEPLOYMENT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Base Package</b></em>' reference.
@@ -663,7 +663,7 @@ public interface Mltop10Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SECURE_AI_SCENARIO__BASE_PACKAGE = 5;
+	int SECURE_AI_SERVICE__BASE_PACKAGE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Base Model</b></em>' reference.
@@ -672,25 +672,25 @@ public interface Mltop10Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SECURE_AI_SCENARIO__BASE_MODEL = 6;
+	int SECURE_AI_SERVICE__BASE_MODEL = 6;
 
 	/**
-	 * The number of structural features of the '<em>Secure AI Scenario</em>' class.
+	 * The number of structural features of the '<em>Secure AI Service</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SECURE_AI_SCENARIO_FEATURE_COUNT = 7;
+	int SECURE_AI_SERVICE_FEATURE_COUNT = 7;
 
 	/**
-	 * The number of operations of the '<em>Secure AI Scenario</em>' class.
+	 * The number of operations of the '<em>Secure AI Service</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SECURE_AI_SCENARIO_OPERATION_COUNT = 0;
+	int SECURE_AI_SERVICE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link mltop10.impl.FeedbackDataImpl <em>Feedback Data</em>}' class.
@@ -794,13 +794,13 @@ public interface Mltop10Package extends EPackage {
 	int SECURE_COMM_PATH__BASE_COMMUNICATION_PATH = 0;
 
 	/**
-	 * The feature id for the '<em><b>Confidelity Preserving</b></em>' attribute.
+	 * The feature id for the '<em><b>Confidentiality Preserving</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SECURE_COMM_PATH__CONFIDELITY_PRESERVING = 1;
+	int SECURE_COMM_PATH__CONFIDENTIALITY_PRESERVING = 1;
 
 	/**
 	 * The feature id for the '<em><b>Integrity Preserving</b></em>' attribute.
@@ -828,6 +828,142 @@ public interface Mltop10Package extends EPackage {
 	 * @ordered
 	 */
 	int SECURE_COMM_PATH_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link mltop10.impl.ThreatCommentsImpl <em>Threat Comments</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mltop10.impl.ThreatCommentsImpl
+	 * @see mltop10.impl.Mltop10PackageImpl#getThreatComments()
+	 * @generated
+	 */
+	int THREAT_COMMENTS = 8;
+
+	/**
+	 * The feature id for the '<em><b>Input Manipulation</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THREAT_COMMENTS__INPUT_MANIPULATION = 0;
+
+	/**
+	 * The feature id for the '<em><b>Base Package</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THREAT_COMMENTS__BASE_PACKAGE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Base Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THREAT_COMMENTS__BASE_MODEL = 2;
+
+	/**
+	 * The feature id for the '<em><b>AI Supply Chain</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THREAT_COMMENTS__AI_SUPPLY_CHAIN = 3;
+
+	/**
+	 * The feature id for the '<em><b>Data Poisoning</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THREAT_COMMENTS__DATA_POISONING = 4;
+
+	/**
+	 * The feature id for the '<em><b>Membership Inference</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THREAT_COMMENTS__MEMBERSHIP_INFERENCE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Model Inversion</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THREAT_COMMENTS__MODEL_INVERSION = 6;
+
+	/**
+	 * The feature id for the '<em><b>Model Poisoning</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THREAT_COMMENTS__MODEL_POISONING = 7;
+
+	/**
+	 * The feature id for the '<em><b>Model Skewing</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THREAT_COMMENTS__MODEL_SKEWING = 8;
+
+	/**
+	 * The feature id for the '<em><b>Model Theft</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THREAT_COMMENTS__MODEL_THEFT = 9;
+
+	/**
+	 * The feature id for the '<em><b>Output Integrity</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THREAT_COMMENTS__OUTPUT_INTEGRITY = 10;
+
+	/**
+	 * The feature id for the '<em><b>Transfer Learning</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THREAT_COMMENTS__TRANSFER_LEARNING = 11;
+
+	/**
+	 * The number of structural features of the '<em>Threat Comments</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THREAT_COMMENTS_FEATURE_COUNT = 12;
+
+	/**
+	 * The number of operations of the '<em>Threat Comments</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THREAT_COMMENTS_OPERATION_COUNT = 0;
 
 
 	/**
@@ -984,15 +1120,15 @@ public interface Mltop10Package extends EPackage {
 	EAttribute getMLModel_RegularRetraining();
 
 	/**
-	 * Returns the meta object for the attribute '{@link mltop10.MLModel#isRobustActivationFunction <em>Robust Activation Function</em>}'.
+	 * Returns the meta object for the attribute '{@link mltop10.MLModel#isRobustModelDesign <em>Robust Model Design</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Robust Activation Function</em>'.
-	 * @see mltop10.MLModel#isRobustActivationFunction()
+	 * @return the meta object for the attribute '<em>Robust Model Design</em>'.
+	 * @see mltop10.MLModel#isRobustModelDesign()
 	 * @see #getMLModel()
 	 * @generated
 	 */
-	EAttribute getMLModel_RobustActivationFunction();
+	EAttribute getMLModel_RobustModelDesign();
 
 	/**
 	 * Returns the meta object for the attribute '{@link mltop10.MLModel#isRobustArchitecture <em>Robust Architecture</em>}'.
@@ -1376,91 +1512,91 @@ public interface Mltop10Package extends EPackage {
 	EAttribute getTrainingDataServer_SecureDataStorage();
 
 	/**
-	 * Returns the meta object for class '{@link mltop10.SecureAIScenario <em>Secure AI Scenario</em>}'.
+	 * Returns the meta object for class '{@link mltop10.SecureAIService <em>Secure AI Service</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Secure AI Scenario</em>'.
-	 * @see mltop10.SecureAIScenario
+	 * @return the meta object for class '<em>Secure AI Service</em>'.
+	 * @see mltop10.SecureAIService
 	 * @generated
 	 */
-	EClass getSecureAIScenario();
+	EClass getSecureAIService();
 
 	/**
-	 * Returns the meta object for the attribute '{@link mltop10.SecureAIScenario#isPackageIntegrityVerified <em>Package Integrity Verified</em>}'.
+	 * Returns the meta object for the attribute '{@link mltop10.SecureAIService#isPackageIntegrityVerified <em>Package Integrity Verified</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Package Integrity Verified</em>'.
-	 * @see mltop10.SecureAIScenario#isPackageIntegrityVerified()
-	 * @see #getSecureAIScenario()
+	 * @see mltop10.SecureAIService#isPackageIntegrityVerified()
+	 * @see #getSecureAIService()
 	 * @generated
 	 */
-	EAttribute getSecureAIScenario_PackageIntegrityVerified();
+	EAttribute getSecureAIService_PackageIntegrityVerified();
 
 	/**
-	 * Returns the meta object for the attribute '{@link mltop10.SecureAIScenario#isPackagesFromSecureSources <em>Packages From Secure Sources</em>}'.
+	 * Returns the meta object for the attribute '{@link mltop10.SecureAIService#isPackagesFromSecureSources <em>Packages From Secure Sources</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Packages From Secure Sources</em>'.
-	 * @see mltop10.SecureAIScenario#isPackagesFromSecureSources()
-	 * @see #getSecureAIScenario()
+	 * @see mltop10.SecureAIService#isPackagesFromSecureSources()
+	 * @see #getSecureAIService()
 	 * @generated
 	 */
-	EAttribute getSecureAIScenario_PackagesFromSecureSources();
+	EAttribute getSecureAIService_PackagesFromSecureSources();
 
 	/**
-	 * Returns the meta object for the attribute '{@link mltop10.SecureAIScenario#isRegularSecurityAudits <em>Regular Security Audits</em>}'.
+	 * Returns the meta object for the attribute '{@link mltop10.SecureAIService#isRegularSecurityAudits <em>Regular Security Audits</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Regular Security Audits</em>'.
-	 * @see mltop10.SecureAIScenario#isRegularSecurityAudits()
-	 * @see #getSecureAIScenario()
+	 * @see mltop10.SecureAIService#isRegularSecurityAudits()
+	 * @see #getSecureAIService()
 	 * @generated
 	 */
-	EAttribute getSecureAIScenario_RegularSecurityAudits();
+	EAttribute getSecureAIService_RegularSecurityAudits();
 
 	/**
-	 * Returns the meta object for the attribute '{@link mltop10.SecureAIScenario#isRegularPackageUpdates <em>Regular Package Updates</em>}'.
+	 * Returns the meta object for the attribute '{@link mltop10.SecureAIService#isRegularPackageUpdates <em>Regular Package Updates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Regular Package Updates</em>'.
-	 * @see mltop10.SecureAIScenario#isRegularPackageUpdates()
-	 * @see #getSecureAIScenario()
+	 * @see mltop10.SecureAIService#isRegularPackageUpdates()
+	 * @see #getSecureAIService()
 	 * @generated
 	 */
-	EAttribute getSecureAIScenario_RegularPackageUpdates();
+	EAttribute getSecureAIService_RegularPackageUpdates();
 
 	/**
-	 * Returns the meta object for the attribute '{@link mltop10.SecureAIScenario#isSecureDeployment <em>Secure Deployment</em>}'.
+	 * Returns the meta object for the attribute '{@link mltop10.SecureAIService#isSecureDeployment <em>Secure Deployment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Secure Deployment</em>'.
-	 * @see mltop10.SecureAIScenario#isSecureDeployment()
-	 * @see #getSecureAIScenario()
+	 * @see mltop10.SecureAIService#isSecureDeployment()
+	 * @see #getSecureAIService()
 	 * @generated
 	 */
-	EAttribute getSecureAIScenario_SecureDeployment();
+	EAttribute getSecureAIService_SecureDeployment();
 
 	/**
-	 * Returns the meta object for the reference '{@link mltop10.SecureAIScenario#getBase_Package <em>Base Package</em>}'.
+	 * Returns the meta object for the reference '{@link mltop10.SecureAIService#getBase_Package <em>Base Package</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Base Package</em>'.
-	 * @see mltop10.SecureAIScenario#getBase_Package()
-	 * @see #getSecureAIScenario()
+	 * @see mltop10.SecureAIService#getBase_Package()
+	 * @see #getSecureAIService()
 	 * @generated
 	 */
-	EReference getSecureAIScenario_Base_Package();
+	EReference getSecureAIService_Base_Package();
 
 	/**
-	 * Returns the meta object for the reference '{@link mltop10.SecureAIScenario#getBase_Model <em>Base Model</em>}'.
+	 * Returns the meta object for the reference '{@link mltop10.SecureAIService#getBase_Model <em>Base Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Base Model</em>'.
-	 * @see mltop10.SecureAIScenario#getBase_Model()
-	 * @see #getSecureAIScenario()
+	 * @see mltop10.SecureAIService#getBase_Model()
+	 * @see #getSecureAIService()
 	 * @generated
 	 */
-	EReference getSecureAIScenario_Base_Model();
+	EReference getSecureAIService_Base_Model();
 
 	/**
 	 * Returns the meta object for class '{@link mltop10.FeedbackData <em>Feedback Data</em>}'.
@@ -1560,15 +1696,15 @@ public interface Mltop10Package extends EPackage {
 	EReference getSecureCommPath_Base_CommunicationPath();
 
 	/**
-	 * Returns the meta object for the attribute '{@link mltop10.SecureCommPath#isConfidelityPreserving <em>Confidelity Preserving</em>}'.
+	 * Returns the meta object for the attribute '{@link mltop10.SecureCommPath#isConfidentialityPreserving <em>Confidentiality Preserving</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Confidelity Preserving</em>'.
-	 * @see mltop10.SecureCommPath#isConfidelityPreserving()
+	 * @return the meta object for the attribute '<em>Confidentiality Preserving</em>'.
+	 * @see mltop10.SecureCommPath#isConfidentialityPreserving()
 	 * @see #getSecureCommPath()
 	 * @generated
 	 */
-	EAttribute getSecureCommPath_ConfidelityPreserving();
+	EAttribute getSecureCommPath_ConfidentialityPreserving();
 
 	/**
 	 * Returns the meta object for the attribute '{@link mltop10.SecureCommPath#isIntegrityPreserving <em>Integrity Preserving</em>}'.
@@ -1580,6 +1716,148 @@ public interface Mltop10Package extends EPackage {
 	 * @generated
 	 */
 	EAttribute getSecureCommPath_IntegrityPreserving();
+
+	/**
+	 * Returns the meta object for class '{@link mltop10.ThreatComments <em>Threat Comments</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Threat Comments</em>'.
+	 * @see mltop10.ThreatComments
+	 * @generated
+	 */
+	EClass getThreatComments();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link mltop10.ThreatComments#getInputManipulation <em>Input Manipulation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Input Manipulation</em>'.
+	 * @see mltop10.ThreatComments#getInputManipulation()
+	 * @see #getThreatComments()
+	 * @generated
+	 */
+	EAttribute getThreatComments_InputManipulation();
+
+	/**
+	 * Returns the meta object for the reference '{@link mltop10.ThreatComments#getBase_Package <em>Base Package</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Base Package</em>'.
+	 * @see mltop10.ThreatComments#getBase_Package()
+	 * @see #getThreatComments()
+	 * @generated
+	 */
+	EReference getThreatComments_Base_Package();
+
+	/**
+	 * Returns the meta object for the reference '{@link mltop10.ThreatComments#getBase_Model <em>Base Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Base Model</em>'.
+	 * @see mltop10.ThreatComments#getBase_Model()
+	 * @see #getThreatComments()
+	 * @generated
+	 */
+	EReference getThreatComments_Base_Model();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link mltop10.ThreatComments#getAISupplyChain <em>AI Supply Chain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>AI Supply Chain</em>'.
+	 * @see mltop10.ThreatComments#getAISupplyChain()
+	 * @see #getThreatComments()
+	 * @generated
+	 */
+	EAttribute getThreatComments_AISupplyChain();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link mltop10.ThreatComments#getDataPoisoning <em>Data Poisoning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Data Poisoning</em>'.
+	 * @see mltop10.ThreatComments#getDataPoisoning()
+	 * @see #getThreatComments()
+	 * @generated
+	 */
+	EAttribute getThreatComments_DataPoisoning();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link mltop10.ThreatComments#getMembershipInference <em>Membership Inference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Membership Inference</em>'.
+	 * @see mltop10.ThreatComments#getMembershipInference()
+	 * @see #getThreatComments()
+	 * @generated
+	 */
+	EAttribute getThreatComments_MembershipInference();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link mltop10.ThreatComments#getModelInversion <em>Model Inversion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Model Inversion</em>'.
+	 * @see mltop10.ThreatComments#getModelInversion()
+	 * @see #getThreatComments()
+	 * @generated
+	 */
+	EAttribute getThreatComments_ModelInversion();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link mltop10.ThreatComments#getModelPoisoning <em>Model Poisoning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Model Poisoning</em>'.
+	 * @see mltop10.ThreatComments#getModelPoisoning()
+	 * @see #getThreatComments()
+	 * @generated
+	 */
+	EAttribute getThreatComments_ModelPoisoning();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link mltop10.ThreatComments#getModelSkewing <em>Model Skewing</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Model Skewing</em>'.
+	 * @see mltop10.ThreatComments#getModelSkewing()
+	 * @see #getThreatComments()
+	 * @generated
+	 */
+	EAttribute getThreatComments_ModelSkewing();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link mltop10.ThreatComments#getModelTheft <em>Model Theft</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Model Theft</em>'.
+	 * @see mltop10.ThreatComments#getModelTheft()
+	 * @see #getThreatComments()
+	 * @generated
+	 */
+	EAttribute getThreatComments_ModelTheft();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link mltop10.ThreatComments#getOutputIntegrity <em>Output Integrity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Output Integrity</em>'.
+	 * @see mltop10.ThreatComments#getOutputIntegrity()
+	 * @see #getThreatComments()
+	 * @generated
+	 */
+	EAttribute getThreatComments_OutputIntegrity();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link mltop10.ThreatComments#getTransferLearning <em>Transfer Learning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Transfer Learning</em>'.
+	 * @see mltop10.ThreatComments#getTransferLearning()
+	 * @see #getThreatComments()
+	 * @generated
+	 */
+	EAttribute getThreatComments_TransferLearning();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1719,12 +1997,12 @@ public interface Mltop10Package extends EPackage {
 		EAttribute ML_MODEL__REGULAR_RETRAINING = eINSTANCE.getMLModel_RegularRetraining();
 
 		/**
-		 * The meta object literal for the '<em><b>Robust Activation Function</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Robust Model Design</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ML_MODEL__ROBUST_ACTIVATION_FUNCTION = eINSTANCE.getMLModel_RobustActivationFunction();
+		EAttribute ML_MODEL__ROBUST_MODEL_DESIGN = eINSTANCE.getMLModel_RobustModelDesign();
 
 		/**
 		 * The meta object literal for the '<em><b>Robust Architecture</b></em>' attribute feature.
@@ -2015,14 +2293,14 @@ public interface Mltop10Package extends EPackage {
 		EAttribute TRAINING_DATA_SERVER__SECURE_DATA_STORAGE = eINSTANCE.getTrainingDataServer_SecureDataStorage();
 
 		/**
-		 * The meta object literal for the '{@link mltop10.impl.SecureAIScenarioImpl <em>Secure AI Scenario</em>}' class.
+		 * The meta object literal for the '{@link mltop10.impl.SecureAIServiceImpl <em>Secure AI Service</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see mltop10.impl.SecureAIScenarioImpl
-		 * @see mltop10.impl.Mltop10PackageImpl#getSecureAIScenario()
+		 * @see mltop10.impl.SecureAIServiceImpl
+		 * @see mltop10.impl.Mltop10PackageImpl#getSecureAIService()
 		 * @generated
 		 */
-		EClass SECURE_AI_SCENARIO = eINSTANCE.getSecureAIScenario();
+		EClass SECURE_AI_SERVICE = eINSTANCE.getSecureAIService();
 
 		/**
 		 * The meta object literal for the '<em><b>Package Integrity Verified</b></em>' attribute feature.
@@ -2030,7 +2308,7 @@ public interface Mltop10Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SECURE_AI_SCENARIO__PACKAGE_INTEGRITY_VERIFIED = eINSTANCE.getSecureAIScenario_PackageIntegrityVerified();
+		EAttribute SECURE_AI_SERVICE__PACKAGE_INTEGRITY_VERIFIED = eINSTANCE.getSecureAIService_PackageIntegrityVerified();
 
 		/**
 		 * The meta object literal for the '<em><b>Packages From Secure Sources</b></em>' attribute feature.
@@ -2038,7 +2316,7 @@ public interface Mltop10Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SECURE_AI_SCENARIO__PACKAGES_FROM_SECURE_SOURCES = eINSTANCE.getSecureAIScenario_PackagesFromSecureSources();
+		EAttribute SECURE_AI_SERVICE__PACKAGES_FROM_SECURE_SOURCES = eINSTANCE.getSecureAIService_PackagesFromSecureSources();
 
 		/**
 		 * The meta object literal for the '<em><b>Regular Security Audits</b></em>' attribute feature.
@@ -2046,7 +2324,7 @@ public interface Mltop10Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SECURE_AI_SCENARIO__REGULAR_SECURITY_AUDITS = eINSTANCE.getSecureAIScenario_RegularSecurityAudits();
+		EAttribute SECURE_AI_SERVICE__REGULAR_SECURITY_AUDITS = eINSTANCE.getSecureAIService_RegularSecurityAudits();
 
 		/**
 		 * The meta object literal for the '<em><b>Regular Package Updates</b></em>' attribute feature.
@@ -2054,7 +2332,7 @@ public interface Mltop10Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SECURE_AI_SCENARIO__REGULAR_PACKAGE_UPDATES = eINSTANCE.getSecureAIScenario_RegularPackageUpdates();
+		EAttribute SECURE_AI_SERVICE__REGULAR_PACKAGE_UPDATES = eINSTANCE.getSecureAIService_RegularPackageUpdates();
 
 		/**
 		 * The meta object literal for the '<em><b>Secure Deployment</b></em>' attribute feature.
@@ -2062,7 +2340,7 @@ public interface Mltop10Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SECURE_AI_SCENARIO__SECURE_DEPLOYMENT = eINSTANCE.getSecureAIScenario_SecureDeployment();
+		EAttribute SECURE_AI_SERVICE__SECURE_DEPLOYMENT = eINSTANCE.getSecureAIService_SecureDeployment();
 
 		/**
 		 * The meta object literal for the '<em><b>Base Package</b></em>' reference feature.
@@ -2070,7 +2348,7 @@ public interface Mltop10Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SECURE_AI_SCENARIO__BASE_PACKAGE = eINSTANCE.getSecureAIScenario_Base_Package();
+		EReference SECURE_AI_SERVICE__BASE_PACKAGE = eINSTANCE.getSecureAIService_Base_Package();
 
 		/**
 		 * The meta object literal for the '<em><b>Base Model</b></em>' reference feature.
@@ -2078,7 +2356,7 @@ public interface Mltop10Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SECURE_AI_SCENARIO__BASE_MODEL = eINSTANCE.getSecureAIScenario_Base_Model();
+		EReference SECURE_AI_SERVICE__BASE_MODEL = eINSTANCE.getSecureAIService_Base_Model();
 
 		/**
 		 * The meta object literal for the '{@link mltop10.impl.FeedbackDataImpl <em>Feedback Data</em>}' class.
@@ -2157,12 +2435,12 @@ public interface Mltop10Package extends EPackage {
 		EReference SECURE_COMM_PATH__BASE_COMMUNICATION_PATH = eINSTANCE.getSecureCommPath_Base_CommunicationPath();
 
 		/**
-		 * The meta object literal for the '<em><b>Confidelity Preserving</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Confidentiality Preserving</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SECURE_COMM_PATH__CONFIDELITY_PRESERVING = eINSTANCE.getSecureCommPath_ConfidelityPreserving();
+		EAttribute SECURE_COMM_PATH__CONFIDENTIALITY_PRESERVING = eINSTANCE.getSecureCommPath_ConfidentialityPreserving();
 
 		/**
 		 * The meta object literal for the '<em><b>Integrity Preserving</b></em>' attribute feature.
@@ -2171,6 +2449,112 @@ public interface Mltop10Package extends EPackage {
 		 * @generated
 		 */
 		EAttribute SECURE_COMM_PATH__INTEGRITY_PRESERVING = eINSTANCE.getSecureCommPath_IntegrityPreserving();
+
+		/**
+		 * The meta object literal for the '{@link mltop10.impl.ThreatCommentsImpl <em>Threat Comments</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see mltop10.impl.ThreatCommentsImpl
+		 * @see mltop10.impl.Mltop10PackageImpl#getThreatComments()
+		 * @generated
+		 */
+		EClass THREAT_COMMENTS = eINSTANCE.getThreatComments();
+
+		/**
+		 * The meta object literal for the '<em><b>Input Manipulation</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute THREAT_COMMENTS__INPUT_MANIPULATION = eINSTANCE.getThreatComments_InputManipulation();
+
+		/**
+		 * The meta object literal for the '<em><b>Base Package</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference THREAT_COMMENTS__BASE_PACKAGE = eINSTANCE.getThreatComments_Base_Package();
+
+		/**
+		 * The meta object literal for the '<em><b>Base Model</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference THREAT_COMMENTS__BASE_MODEL = eINSTANCE.getThreatComments_Base_Model();
+
+		/**
+		 * The meta object literal for the '<em><b>AI Supply Chain</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute THREAT_COMMENTS__AI_SUPPLY_CHAIN = eINSTANCE.getThreatComments_AISupplyChain();
+
+		/**
+		 * The meta object literal for the '<em><b>Data Poisoning</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute THREAT_COMMENTS__DATA_POISONING = eINSTANCE.getThreatComments_DataPoisoning();
+
+		/**
+		 * The meta object literal for the '<em><b>Membership Inference</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute THREAT_COMMENTS__MEMBERSHIP_INFERENCE = eINSTANCE.getThreatComments_MembershipInference();
+
+		/**
+		 * The meta object literal for the '<em><b>Model Inversion</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute THREAT_COMMENTS__MODEL_INVERSION = eINSTANCE.getThreatComments_ModelInversion();
+
+		/**
+		 * The meta object literal for the '<em><b>Model Poisoning</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute THREAT_COMMENTS__MODEL_POISONING = eINSTANCE.getThreatComments_ModelPoisoning();
+
+		/**
+		 * The meta object literal for the '<em><b>Model Skewing</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute THREAT_COMMENTS__MODEL_SKEWING = eINSTANCE.getThreatComments_ModelSkewing();
+
+		/**
+		 * The meta object literal for the '<em><b>Model Theft</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute THREAT_COMMENTS__MODEL_THEFT = eINSTANCE.getThreatComments_ModelTheft();
+
+		/**
+		 * The meta object literal for the '<em><b>Output Integrity</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute THREAT_COMMENTS__OUTPUT_INTEGRITY = eINSTANCE.getThreatComments_OutputIntegrity();
+
+		/**
+		 * The meta object literal for the '<em><b>Transfer Learning</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute THREAT_COMMENTS__TRANSFER_LEARNING = eINSTANCE.getThreatComments_TransferLearning();
 
 	}
 
